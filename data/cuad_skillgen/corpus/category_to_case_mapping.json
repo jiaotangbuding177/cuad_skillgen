@@ -1,0 +1,61 @@
+{
+  "contract_basic_info": [
+    "Document Name",
+    "Parties",
+    "Agreement Date",
+    "Effective Date",
+    "Expiration Date"
+  ],
+  "term_and_termination": [
+    "Renewal Term",
+    "Notice Period to Terminate Renewal",
+    "Termination for Convenience"
+  ],
+  "legal_governance": [
+    "Governing Law",
+    "Audit Rights",
+    "Insurance"
+  ],
+  "ip_and_license": [
+    "License Grant",
+    "Non-Transferable License",
+    "Affiliate License-Licensor",
+    "Affiliate License-Licensee",
+    "Unlimited/All-You-Can-Eat-License",
+    "Irrevocable or Perpetual License",
+    "Source Code Escrow",
+    "Post-Termination Services"
+  ],
+  "competition_restrictions": [
+    "Most Favored Nation",
+    "Non-Compete",
+    "Exclusivity",
+    "No-Solicit of Customers",
+    "Competitive Restriction Exception",
+    "No-Solicit of Employees",
+    "Non-Disparagement"
+  ],
+  "liability_and_indemnity": [
+    "Cap on Liability",
+    "Uncapped Liability",
+    "Liquidated Damages",
+    "Warranty Duration"
+  ],
+  "assignment_and_control": [
+    "Anti-Assignment",
+    "Change of Control"
+  ],
+  "revenue_and_commercial_terms": [
+    "Revenue/Profit Sharing",
+    "Price Restrictions",
+    "Minimum Commitment",
+    "Volume Restriction"
+  ],
+  "operational_rights": [
+    "IP Ownership Assignment",
+    "Joint IP Ownership",
+    "Covenant Not to Sue",
+    "Rofr/Rofo/Rofn",
+    "Third Party Beneficiary"
+  ]
+}

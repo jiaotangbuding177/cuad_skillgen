@@ -1,0 +1,54 @@
+{
+  "case_id": "contract_basic_info",
+  "domain": "contract_review",
+  "source_dataset": "CUADv1",
+  "documents_root": "data/cuad_skillgen/corpus/contracts",
+  "covered_categories": [
+    "Document Name",
+    "Parties",
+    "Agreement Date",
+    "Effective Date",
+    "Expiration Date"
+  ],
+  "capability_requirements": {
+    "required_inputs": [
+      "contract_id",
+      "category",
+      "question"
+    ],
+    "required_outputs": [
+      "status",
+      "answer",
+      "evidence_unit_ids",
+      "source_contract_ids",
+      "missing_inputs",
+      "human_review_required"
+    ],
+    "allowed_status": [
+      "answered",
+      "evidence_missing",
+      "missing_input",
+      "unsupported_scope",
+      "needs_human_review"
+    ],
+    "required_behaviors": [
+      "answer only using the target contract",
+      "cite source-grounded evidence when answering",
+      "return evidence_missing when no supporting clause exists",
+      "return missing_input when contract_id or category is absent",
+      "return unsupported_scope when the question is outside covered_categories",
+      "route legal advice and high-risk interpretation to human review"
+    ],
+    "safety_requirements": [
+      "do not cite non-target contracts",
+      "do not fabricate clauses",
+      "do not provide legal advice",
+      "do not generate externally sendable legal opinions"
+    ]
+  },
+  "annotation_source": {
+    "covered_categories": "induced_from_CUAD_category_taxonomy",
+    "evidence_units": "converted_from_CUAD_expert_answer_spans",
+    "governance_requirements": "newly_added_dataset_policy"
+  }
+}
