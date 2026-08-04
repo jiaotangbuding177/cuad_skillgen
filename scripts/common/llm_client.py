@@ -88,6 +88,41 @@ class LLMClient:
                     self._provider = "openai"
                 except ImportError:
                     raise ImportError("openai package not installed. Run: pip install openai")
+
+            elif self.model.startswith("deepseek"):
+                try:
+                    import openai
+                    api_key = os.environ.get("DEEPSEEK_API_KEY")
+                    if not api_key:
+                        raise ValueError("DEEPSEEK_API_KEY not set")
+                    self._client = openai.OpenAI(
+                        api_key=api_key,
+                        base_url=os.environ.get(
+                            "DEEPSEEK_BASE_URL",
+                            "https://api.deepseek.com",
+                        ),
+                    )
+                    self._provider = "deepseek"
+                except ImportError:
+                    raise ImportError("openai package not installed. Run: pip install openai")
+
+            elif self.model.startswith("ecnu"):
+                try:
+                    import openai
+                    api_key = os.environ.get("ECNU_API_KEY")
+                    if not api_key:
+                        raise ValueError("ECNU_API_KEY not set")
+                    self._client = openai.OpenAI(
+                        api_key=api_key,
+                        base_url=os.environ.get(
+                            "ECNU_BASE_URL",
+                            "https://chat.ecnu.edu.cn/open/api/v1",
+                        ),
+                    )
+                    self._provider = "ecnu"
+                except ImportError:
+                    raise ImportError("openai package not installed. Run: pip install openai")
+
             else:
                 raise ValueError(f"Unsupported model: {self.model}")
         return self._client
@@ -154,6 +189,47 @@ class LLMClient:
                         "completion_tokens": response.usage.completion_tokens,
                         "total_tokens": response.usage.total_tokens,
                     }
+
+                elif self._provider == "deepseek":
+                    kwargs = {
+                        "model": self.model,
+                        "max_tokens": max_tok,
+                        "temperature": temp,
+                        "messages": [
+                            {"role": "system", "content": system_prompt},
+                            {"role": "user", "content": user_prompt},
+                        ],
+                    }
+                    if response_format == "json":
+                        kwargs["response_format"] = {"type": "json_object"}
+                    response = client.chat.completions.create(**kwargs)
+                    text = response.choices[0].message.content
+                    usage_dict = {
+                        "prompt_tokens": response.usage.prompt_tokens,
+                        "completion_tokens": response.usage.completion_tokens,
+                        "total_tokens": response.usage.total_tokens,
+                    }
+
+                elif self._provider == "ecnu":
+                    kwargs = {
+                        "model": self.model,
+                        "max_tokens": max_tok,
+                        "temperature": temp,
+                        "messages": [
+                            {"role": "system", "content": system_prompt},
+                            {"role": "user", "content": user_prompt},
+                        ],
+                    }
+                    response = client.chat.completions.create(**kwargs)
+                    text = response.choices[0].message.content
+                    usage_dict = {
+                        "prompt_tokens": response.usage.prompt_tokens,
+                        "completion_tokens": response.usage.completion_tokens,
+                        "total_tokens": response.usage.total_tokens,
+                    }
+
+                if text is None:
+                    raise ValueError("LLM returned None response")
 
                 self.usage.record(usage_dict["prompt_tokens"], usage_dict["completion_tokens"])
                 return text, usage_dict

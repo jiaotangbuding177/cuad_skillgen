@@ -24,6 +24,14 @@ from common.llm_client import LLMClient, estimate_tokens, truncate_to_tokens
 
 METHOD_NAME = "document_tool_maker"
 MAX_CONTRACT_TOKENS = 13000
+REQUIRED_OUTPUT_FILES = (
+    "SKILL.md",
+    "skill_manifest.json",
+    "evidence_index.json",
+    "security_policy.json",
+    "generation_log.json",
+    "tool_manifest.json",
+)
 
 
 EXTRACT_SYSTEM = """You are a contract review tool designer. From the following contract, extract reusable review tools (callable functions).
@@ -143,6 +151,53 @@ What the skill should and should not do.
 Write clear, actionable tool descriptions. Reference the examples from real contracts."""
 
 
+def _output_complete(output_dir: str) -> bool:
+    return all(
+        os.path.isfile(os.path.join(output_dir, name))
+        and os.path.getsize(os.path.join(output_dir, name)) > 0
+        for name in REQUIRED_OUTPUT_FILES
+    )
+
+
+def _load_step1_checkpoint(path: str, case_id: str, model: str) -> dict:
+    latest = {}
+    if not os.path.exists(path):
+        return latest
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            if record.get("type") == "metadata":
+                if record.get("case_id") != case_id or record.get("model") != model:
+                    raise RuntimeError(
+                        f"Checkpoint {path} belongs to a different case or model. "
+                        "Use --overwrite to start a new generation."
+                    )
+            elif record.get("contract_id"):
+                latest[record["contract_id"]] = record
+    return latest
+
+
+def _initialize_step1_checkpoint(path: str, case_id: str, model: str) -> None:
+    if os.path.exists(path):
+        return
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(json.dumps({
+            "type": "metadata",
+            "version": 1,
+            "case_id": case_id,
+            "model": model,
+        }, ensure_ascii=False) + "\n")
+        f.flush()
+
+
+def _append_checkpoint(path: str, record: dict) -> None:
+    with open(path, "a", encoding="utf-8", buffering=1) as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+        f.flush()
+
+
 def build_generate_user_prompt(merged_tools: dict, case_json: dict,
                                 category_descriptions: list) -> str:
     parts = []
@@ -169,9 +224,13 @@ def generate_skill_for_case(
 ) -> dict:
     writer = SkillOutputWriter(results_root, METHOD_NAME, case_id)
 
-    if writer.output_exists() and not overwrite:
+    if _output_complete(writer.output_dir) and not overwrite:
         print(f"  [{case_id}] Output already exists, skipping")
         return {"skipped": True}
+
+    checkpoint_path = os.path.join(writer.output_dir, "step1_checkpoint.jsonl")
+    if overwrite and os.path.exists(checkpoint_path):
+        os.remove(checkpoint_path)
 
     start_time = time.time()
 
@@ -182,58 +241,161 @@ def generate_skill_for_case(
 
     # ─── Step 1: Extract tool specs from each contract ───
     print(f"  [{case_id}] Step 1: Extracting tool specs from {len(train_cids)} contracts...")
-    all_tools = []  # list of (contract_id, tools_list)
-    step1_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+    checkpoint = _load_step1_checkpoint(checkpoint_path, case_id, llm.model)
+    _initialize_step1_checkpoint(checkpoint_path, case_id, llm.model)
+    successful = sum(1 for item in checkpoint.values() if item.get("status") == "ok")
+    failed = sum(1 for item in checkpoint.values() if item.get("status") == "error")
+    if checkpoint:
+        print(
+            f"    Resuming checkpoint: successful={successful}, failed={failed}, "
+            f"pending={len(train_cids) - successful}"
+        )
 
     for i, cid in enumerate(train_cids):
+        previous = checkpoint.get(cid)
+        if previous and previous.get("status") == "ok":
+            continue
         contract_text = loader.load_contract_text(cid)
         user_prompt = build_extract_user_prompt(cid, contract_text, cat_descs)
         try:
             tools, usage = llm.call_json(EXTRACT_SYSTEM, user_prompt)
             if isinstance(tools, list):
-                all_tools.append({"contract_id": cid, "tools": tools})
+                normalized_tools = tools
             elif isinstance(tools, dict) and "tools" in tools:
-                all_tools.append({"contract_id": cid, "tools": tools["tools"]})
+                normalized_tools = tools["tools"]
             else:
-                all_tools.append({"contract_id": cid, "tools": []})
-            for k in step1_usage:
-                step1_usage[k] += usage[k]
+                normalized_tools = []
+            record = {
+                "contract_id": cid,
+                "status": "ok",
+                "tools": normalized_tools,
+                "usage": usage,
+            }
         except Exception as e:
             print(f"    Warning: Contract {cid[:40]}... failed: {e}")
-            all_tools.append({"contract_id": cid, "tools": []})
+            record = {
+                "contract_id": cid,
+                "status": "error",
+                "tools": [],
+                "usage": {},
+                "error": str(e),
+            }
+        checkpoint[cid] = record
+        _append_checkpoint(checkpoint_path, record)
 
         if (i + 1) % 50 == 0:
             print(f"    Progress: {i+1}/{len(train_cids)}")
 
+    failed_contracts = [
+        cid for cid in train_cids
+        if checkpoint.get(cid, {}).get("status") != "ok"
+    ]
+    if failed_contracts:
+        raise RuntimeError(
+            f"Step 1 incomplete for {len(failed_contracts)} contracts. "
+            f"Re-run the same command to retry only failed contracts. "
+            f"Checkpoint: {checkpoint_path}"
+        )
+
+    all_tools = [
+        {"contract_id": cid, "tools": checkpoint[cid].get("tools", [])}
+        for cid in train_cids
+    ]
+    step1_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+    for cid in train_cids:
+        usage = checkpoint[cid].get("usage", {})
+        for key in step1_usage:
+            step1_usage[key] += usage.get(key, 0)
+
     total_tools_extracted = sum(len(t["tools"]) for t in all_tools)
     print(f"    Step 1 done: {total_tools_extracted} tools from {len(all_tools)} contracts, {step1_usage['total_tokens']} tokens")
 
-    # ─── Step 2: Merge tool specs ───
-    print(f"  [{case_id}] Step 2: Merging tool specs...")
-    # For large numbers of contracts, we need to batch the merge
-    # Send all tools but truncate examples to keep prompt manageable
-    tools_for_merge = []
+    # ??? Step 2: Merge tool specs (by category to avoid truncation) ???
+    print(f"  [{case_id}] Step 2: Merging tool specs by category...")
+    
+    # Collect all tools and group by category
+    tools_by_category = {}
     for t in all_tools:
         if t["tools"]:
-            # Keep only essential fields for merge
-            trimmed = []
             for tool in t["tools"]:
-                trimmed.append({
+                cat = tool.get("category", "Unknown")
+                if cat not in tools_by_category:
+                    tools_by_category[cat] = []
+                tools_by_category[cat].append({
                     "name": tool.get("name", ""),
-                    "category": tool.get("category", ""),
+                    "category": cat,
                     "description": tool.get("description", ""),
                     "contract_id": t["contract_id"],
                 })
-            tools_for_merge.append(trimmed)
-
-    user_prompt = build_merge_user_prompt(tools_for_merge)
-    merged, step2_usage = llm.call_json(MERGE_SYSTEM, user_prompt)
-    print(f"    Step 2 done: {step2_usage['total_tokens']} tokens")
+    
+    # Merge each category separately
+    all_merged_tools = []
+    step2_total_usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+    
+    for category, tools in tools_by_category.items():
+        print(f"      Merging {category}: {len(tools)} tools...")
+        
+        # If too many tools in one category, batch them
+        BATCH_SIZE = 100
+        if len(tools) > BATCH_SIZE:
+            # Split into batches
+            batches = [tools[i:i+BATCH_SIZE] for i in range(0, len(tools), BATCH_SIZE)]
+            category_merged = []
+            
+            for batch_idx, batch in enumerate(batches):
+                tools_for_merge = [batch]  # Wrap in list for build_merge_user_prompt
+                user_prompt = build_merge_user_prompt(tools_for_merge)
+                try:
+                    merged_batch, usage = llm.call_json(MERGE_SYSTEM, user_prompt)
+                    for k in step2_total_usage:
+                        step2_total_usage[k] += usage.get(k, 0)
+                    category_merged.extend(merged_batch.get("merged_tools", []))
+                except Exception as e:
+                    print(f"        Warning: Batch {batch_idx+1} failed: {e}")
+            
+            # Final merge of all batches for this category
+            if len(category_merged) > BATCH_SIZE:
+                tools_for_merge = [category_merged]
+                user_prompt = build_merge_user_prompt(tools_for_merge)
+                try:
+                    merged_category, usage = llm.call_json(MERGE_SYSTEM, user_prompt)
+                    for k in step2_total_usage:
+                        step2_total_usage[k] += usage.get(k, 0)
+                    all_merged_tools.extend(merged_category.get("merged_tools", []))
+                except Exception as e:
+                    print(f"        Warning: Final merge for {category} failed: {e}")
+                    all_merged_tools.extend(category_merged)
+            else:
+                all_merged_tools.extend(category_merged)
+        else:
+            # Small category, merge directly
+            tools_for_merge = [tools]
+            user_prompt = build_merge_user_prompt(tools_for_merge)
+            try:
+                merged_category, usage = llm.call_json(MERGE_SYSTEM, user_prompt)
+                for k in step2_total_usage:
+                    step2_total_usage[k] += usage.get(k, 0)
+                all_merged_tools.extend(merged_category.get("merged_tools", []))
+            except Exception as e:
+                print(f"        Warning: Merge for {category} failed: {e}")
+    
+    # Build final merged result
+    merged = {
+        "merged_tools": all_merged_tools,
+        "tool_stats": {
+            "total_unique_tools": len(all_merged_tools),
+            "tools_by_category": {cat: len([t for t in all_merged_tools if t.get("category") == cat]) for cat in tools_by_category.keys()}
+        }
+    }
+    step2_usage = step2_total_usage
+    print(f"    Step 2 done: {len(all_merged_tools)} unique tools, {step2_usage['total_tokens']} tokens")
 
     # ─── Step 3: Generate SKILL.md ───
     print(f"  [{case_id}] Step 3: Generating SKILL.md...")
     user_prompt = build_generate_user_prompt(merged, case_json, cat_descs)
     skill_md, step3_usage = llm.call(GENERATE_SYSTEM, user_prompt)
+    if not isinstance(skill_md, str) or not skill_md.strip():
+        raise RuntimeError("Step 3 returned an empty SKILL.md")
     print(f"    Step 3 done: {step3_usage['total_tokens']} tokens")
 
     duration = time.time() - start_time
@@ -305,6 +467,14 @@ def generate_skill_for_case(
             "total_tools": len(merged_tools_list),
             "tools": merged_tools_list,
         }, f, indent=2, ensure_ascii=False)
+
+    if not _output_complete(writer.output_dir):
+        missing = [
+            name for name in REQUIRED_OUTPUT_FILES
+            if not os.path.isfile(os.path.join(writer.output_dir, name))
+            or os.path.getsize(os.path.join(writer.output_dir, name)) == 0
+        ]
+        raise RuntimeError(f"Generated package is incomplete: {missing}")
 
     print(f"  [{case_id}] Done in {duration:.1f}s, {total_usage['total_tokens']} total tokens, {len(merged_tools_list)} unique tools")
     return {"skipped": False, "usage": total_usage, "duration": duration}
