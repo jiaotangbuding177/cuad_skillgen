@@ -1,0 +1,87 @@
+[
+  {
+    "method": "native_prompt_skill",
+    "gold_answered_tasks": 1447,
+    "candidate_answered_with_verified_evidence": 1297,
+    "judged_tasks": 1297,
+    "judge_coverage": 1.0,
+    "label_counts": {
+      "ambiguous": 8,
+      "invalid": 94,
+      "partial": 38,
+      "valid": 1157
+    },
+    "semantic_evidence_validity_conditional": 0.8921,
+    "semantic_evidence_validity_end_to_end": 0.7996,
+    "semantic_evidence_validity_weighted_conditional": 0.9067,
+    "semantic_evidence_validity_weighted_end_to_end": 0.8127
+  },
+  {
+    "method": "schema_prompt_skill",
+    "gold_answered_tasks": 1447,
+    "candidate_answered_with_verified_evidence": 1288,
+    "judged_tasks": 1288,
+    "judge_coverage": 1.0,
+    "label_counts": {
+      "ambiguous": 11,
+      "invalid": 115,
+      "partial": 58,
+      "valid": 1104
+    },
+    "semantic_evidence_validity_conditional": 0.8571,
+    "semantic_evidence_validity_end_to_end": 0.763,
+    "semantic_evidence_validity_weighted_conditional": 0.8797,
+    "semantic_evidence_validity_weighted_end_to_end": 0.783
+  },
+  {
+    "method": "summary2skill",
+    "gold_answered_tasks": 1447,
+    "candidate_answered_with_verified_evidence": 1317,
+    "judged_tasks": 1317,
+    "judge_coverage": 1.0,
+    "label_counts": {
+      "ambiguous": 11,
+      "invalid": 36,
+      "partial": 14,
+      "valid": 1256
+    },
+    "semantic_evidence_validity_conditional": 0.9537,
+    "semantic_evidence_validity_end_to_end": 0.868,
+    "semantic_evidence_validity_weighted_conditional": 0.959,
+    "semantic_evidence_validity_weighted_end_to_end": 0.8728
+  },
+  {
+    "method": "document_tool_maker",
+    "gold_answered_tasks": 1447,
+    "candidate_answered_with_verified_evidence": 1286,
+    "judged_tasks": 1286,
+    "judge_coverage": 1.0,
+    "label_counts": {
+      "ambiguous": 12,
+      "invalid": 57,
+      "partial": 29,
+      "valid": 1188
+    },
+    "semantic_evidence_validity_conditional": 0.9238,
+    "semantic_evidence_validity_end_to_end": 0.821,
+    "semantic_evidence_validity_weighted_conditional": 0.9351,
+    "semantic_evidence_validity_weighted_end_to_end": 0.831
+  },
+  {
+    "method": "evoskill_compiler",
+    "gold_answered_tasks": 1447,
+    "candidate_answered_with_verified_evidence": 1306,
+    "judged_tasks": 1306,
+    "judge_coverage": 1.0,
+    "label_counts": {
+      "ambiguous": 10,
+      "invalid": 53,
+      "partial": 26,
+      "valid": 1217
+    },
+    "semantic_evidence_validity_conditional": 0.9319,
+    "semantic_evidence_validity_end_to_end": 0.8411,
+    "semantic_evidence_validity_weighted_conditional": 0.9418,
+    "semantic_evidence_validity_weighted_end_to_end": 0.85
+  }
+]

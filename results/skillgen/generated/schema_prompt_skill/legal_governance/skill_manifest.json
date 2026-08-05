@@ -1,0 +1,37 @@
+{
+  "method": "schema_prompt_skill",
+  "case_id": "legal_governance",
+  "model": "deepseek-chat",
+  "schema_sections": [
+    "Covered Categories",
+    "Review Checklist",
+    "Evidence Extraction Rules",
+    "Output Format",
+    "Boundary Rules"
+  ],
+  "input_summary": {
+    "contracts_sampled": 10,
+    "sampled_contract_ids": [
+      "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT_AGREEMENT",
+      "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+      "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+      "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing_Agreement__Supply_Agreement",
+      "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT",
+      "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+      "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+      "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+      "ATHENSBANCSHARESCORP_11_02_2009-EX-1.2-AGENCY_AGREEMENT_,_2009",
+      "INTRICONCORP_03_10_2009-EX-10.22-Strategic_Alliance_Agreement"
+    ],
+    "contracts_with_evidence_count": 263,
+    "category_count": 3,
+    "estimated_input_tokens": 88504
+  },
+  "usage": {
+    "prompt_tokens": 72023,
+    "completion_tokens": 1367,
+    "total_tokens": 73390
+  },
+  "duration_seconds": 16.03,
+  "created_at": "2026-07-15T13:21:24.869297+00:00"
+}

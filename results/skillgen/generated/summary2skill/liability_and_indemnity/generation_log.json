@@ -1,0 +1,293 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "Uncapped Liability",
+          "found": true,
+          "summary": "The contract explicitly excludes the limitation on liability for breaches of the Confidential Information section, effectively uncapping liability for such breaches.",
+          "key_terms": [
+            "EXCEPT IN THE EVENT OF A BREACH OF SECTION 11",
+            "LIMITATION ON LIABILITY",
+            "CONFIDENTIAL INFORMATION"
+          ],
+          "source_paragraph": "10. LIMITATION ON LIABILITY.  EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES."
+        },
+        {
+          "category": "Cap on Liability",
+          "found": true,
+          "summary": "The contract caps liability by excluding special, incidental, or consequential damages and lost profits, except in the event of a breach of confidentiality.",
+          "key_terms": [
+            "NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS",
+            "LIMITATION ON LIABILITY"
+          ],
+          "source_paragraph": "10. LIMITATION ON LIABILITY.  EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES."
+        },
+        {
+          "category": "Liquidated Damages",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Warranty Duration",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Uncapped Liability",
+          "found": true,
+          "summary": "The contract does not specify a monetary cap on liability, leaving the Provider's indemnification obligations for losses arising from negligence, willful misconduct, or breach uncapped.",
+          "key_terms": [
+            "indemnify",
+            "defend",
+            "hold harmless",
+            "Losses",
+            "any and all losses"
+          ],
+          "source_paragraph": "Provider shall indemnify, defend, and hold harmless Recipient and its officers, directors, employees, agents, affiliates, successors, and permitted assigns (collectively, \"Indemnified Party\") against any and all losses, damages, liabilities, deficiencies, claims, actions, judgments, settlements, interest, awards, penalties, fines, costs, or expenses of whatever kind, including attorneys' fees, fees and the cost of enforcing any right to indemnification under this Agreement, and the cost of pursuing any insurance providers, incurred by Indemnified Party or awarded against Indemnified Party (collectively, \"Losses\"), relating to/arising out of or resulting from any claim of a third party or Recipient arising out of or occurring in connection with Provider's negligence, willful misconduct, or breach of this Agreement."
+        },
+        {
+          "category": "Cap on Liability",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Liquidated Damages",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Warranty Duration",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Uncapped Liability",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Cap on Liability",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Liquidated Damages",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Warranty Duration",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "Uncapped Liability",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Cap on Liability",
+          "found": true,
+          "summary": "The contract amends Section 6.5 to establish a specific monetary cap on aggregate damages for which ADMA is liable to Sanofi Pasteur, excluding claims for personal injury resulting from gross negligence or willful misconduct.",
+          "key_terms": [
+            "Limitation of Liability",
+            "aggregate damages",
+            "gross negligence",
+            "willful misconduct",
+            "Section 6.5"
+          ],
+          "source_paragraph": "6.5 Limitation of Liability: In no event shall either party be liable to the other party for incidental, indirect, special and consequential or punitive damages, including without limitation any claims for damages based upon lost profits or lost business opportunity. Except for the obligation of indemnity as set forth in Section 6.1 (c) with respect to claims by third parties for personal injury, illness or death (but not including property damage) resulting from the manufacture of the Product by BPC, aggregate damages for which ADMA shall be liable to Sanofi Pasteur hereunder, including without limitation costs of Source Plasma yield loss and/or rejected Batches, shall not exceed [***]. All claims by Sanofi Pasteur for breach or default under this Agreement shall be brought within [***] year after the cause of action comes into existence or otherwise shall be waived. This limitation of liability will not apply for damages that result from the gross negligence or the willful misconduct of a Party."
+        },
+        {
+          "category": "Liquidated Damages",
+          "found": true,
+          "summary": "The contract specifies liquidated damages amounts payable by ADMA to Sanofi Pasteur if ADMA fails to meet the Minimum Volume commitment or fails to meet the Updated Supply Plan quantities.",
+          "key_terms": [
+            "liquidated damages",
+            "Minimum Volume",
+            "Updated Supply Plan",
+            "not a penalty"
+          ],
+          "source_paragraph": "Should ADMA fail to supply a minimum of [***] Batches of Product (the \"Minimum Volume\") of Product during the time period as specified in this Amendment #3, ADMA agrees that Sanofi Pasteur shall be entitled to obtain from ADMA as liquidated damages, and not a penalty, amounting to $[***] ([***]) USD. ... In addition to the Minimum Volume of Product to be manufactured by ADMA, should ADMA deliver the Minimum Volume of Product but fail to meet the Updated Supply Plan as provided in Exhibit A as attached hereto and made an integral part hereof, then it is agreed upon by the Parties that ADMA shall pay to Sanofi Pasteur an amount equal to $[***] ([***]) USD for each Batch of Product that is less than the agreed upon quantity in Exhibit A, as liquidated damages, and not as a penalty."
+        },
+        {
+          "category": "Warranty Duration",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Uncapped Liability",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Cap on Liability",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Liquidated Damages",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Warranty Duration",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "Uncapped Liability": {
+      "found_count": 80,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Explicit exclusion of indemnification obligations from general liability caps.",
+        "Statutory or legal mandates preventing caps on liability for personal injury, death, or specific regulatory violations.",
+        "Absence of any limitation of liability clause in the contract, implying uncapped exposure for breaches.",
+        "Exclusion of liability for breach of confidentiality, fraud, willful misconduct, or gross negligence.",
+        "Exclusion of liability for bodily injury, death, or property damage caused by negligence."
+      ],
+      "example_extractions": [
+        "The contract does not specify a monetary cap on liability, leaving the Provider's indemnification obligations for losses arising from negligence, willful misconduct, or breach uncapped.",
+        "The contract explicitly excludes the limitation on liability for breaches of the Confidential Information section, effectively uncapping liability for such breaches.",
+        "The contract explicitly excludes liability caps for cases of gross negligence, willful misconduct, fraud, indemnification claims, and breaches of specific sections regarding trademarks, confidentiality, and agency relationships.",
+        "The contract includes mutual indemnification clauses that hold parties harmless from 'any and all direct or indirect liabilities or losses' without specifying a monetary cap.",
+        "The contract explicitly excludes liability for indemnification and breach of confidentiality from the general limitation of liability clause, effectively leaving these liabilities uncapped.",
+        "The contract does not contain a general limitation of liability clause, meaning liability for breaches is uncapped, although it specifies minimum insurance amounts for product liability."
+      ],
+      "variations": [
+        "Some contracts cap general liability but explicitly carve out indemnification obligations, making them uncapped.",
+        "Some contracts have no liability clause at all, resulting in default uncapped liability under applicable law.",
+        "Redacted sections in limitation clauses often imply uncapped liability for the redacted exceptions (e.g., indemnification)."
+      ]
+    },
+    "Cap on Liability": {
+      "found_count": 114,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Fixed monetary maximums (e.g., $1 million, $5 million, $500,000).",
+        "Fixed monetary caps (e.g., $500,000, $2,000,000).",
+        "Liability limited to insurance coverage amounts.",
+        "Exclusion of consequential, indirect, special, incidental, punitive, or exemplary damages.",
+        "Statute of limitations or time bars for bringing claims (e.g., 1 year, 2 years)."
+      ],
+      "example_extractions": [
+        "The contract caps liability by excluding special, incidental, or consequential damages and lost profits, except in the event of a breach of confidentiality.",
+        "The contract explicitly caps Galaxy's liability for products at the purchase price and for services at the fees paid during the relevant month, while also excluding consequential damages.",
+        "The contract limits liability by excluding special, indirect, consequential, or punitive damages and lost profits for general breaches, except in cases of gross negligence, fraud, or specific section breaches.",
+        "The contract caps the Company's aggregate liability to the amount paid by the Company to the Consultant for the services giving rise to the liability.",
+        "The contract caps liability by excluding consequential, incidental, indirect, punitive, special, or other similar damages, and includes a one-year statute of limitations for bringing actions.",
+        "The contract caps Lucid's aggregate liability to the total amount actually paid by the Distributor for the specific products that caused the damage or loss."
+      ],
+      "variations": [
+        "Caps may be per-occurrence or aggregate.",
+        "Caps may be asymmetric, applying only to one party (e.g., the service provider).",
+        "Some caps are defined as a percentage of the contract value or loss value (e.g., 75% of crude value).",
+        "Some contracts limit liability by imposing strict time bars for filing claims rather than monetary caps."
+      ]
+    },
+    "Liquidated Damages": {
+      "found_count": 36,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Penalties for late delivery or performance failures (e.g., % per day/week).",
+        "Specific multipliers for breach of exclusivity or non-solicitation (e.g., 2x or 3x salary/payments).",
+        "Fixed fees or penalties for late payments or failure to meet performance metrics.",
+        "Termination fees or buyout prices for early termination or breach.",
+        "Termination fees or acceleration of payments upon early termination for cause."
+      ],
+      "example_extractions": [
+        "The contract specifies liquidated damages amounts payable by ADMA to Sanofi Pasteur if ADMA fails to meet the Minimum Volume commitment or fails to meet the Updated Supply Plan quantities.",
+        "The contract includes a termination fee provision requiring MICOA to purchase the Agency's ownership interest in expirations at a price equal to two times the Agency's commissions on business produced during the last 12 months.",
+        "The contract defines a 'Liquidated Damages Amount' payable by NAI to Co-Host in the event of termination due to a material default by NAI, calculated based on the difference between fees paid and revenue targets.",
+        "The contract specifies a daily penalty of 0.05% of the overdue payment if Party B fails to pay the energy saving service fee within 60 days.",
+        "The contract specifies a liquidated damages clause for late delivery, charging a penalty of 0.5% for every seven days, capped at 5% of the goods' value.",
+        "The contract specifies that upon termination by ABG for cause, Papa John's must immediately pay all unpaid cash payments and RSU values for the subsequent 18 months or remainder of the term, functioning as a termination fee."
+      ],
+      "variations": [
+        "Some liquidated damages are calculated as a percentage of contract value or salary.",
+        "Some are fixed flat fees (e.g., $30,000, $50/day).",
+        "Some function as forfeiture of non-refundable fees upon termination."
+      ]
+    },
+    "Warranty Duration": {
+      "found_count": 52,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Survival clauses for representations and warranties post-closing or post-termination.",
+        "Bug fixing or defect correction periods post-delivery.",
+        "Warranties lasting for the 'reasonable shelf life' or 'term of the agreement'.",
+        "Warranties lasting for the term of the agreement.",
+        "Warranties surviving termination for a specific period."
+      ],
+      "example_extractions": [
+        "The Company warrants that products will have a remaining shelf life of at least twelve months at the time of shipment.",
+        "The Warranty Period for each Bloom System lasts for twenty-one years from the date of Commencement of Operations.",
+        "The contract specifies a warranty period of one hundred twenty (120) days for the software to perform in substantial accordance with the documentation.",
+        "The representations and warranties survive the delivery of shares and payment, remaining in full force and effect regardless of any termination or cancellation of the agreement.",
+        "SIERRA warrants that the Product shall be free from defects in material and workmanship for the reasonable shelf life of the Product.",
+        "The contract provides a warranty duration of twelve months for defects in media and performance of the Licensed Products."
+      ],
+      "variations": [
+        "Some contracts explicitly disclaim all warranties ('AS IS'), resulting in zero duration.",
+        "Some warranties are conditional on proper use or maintenance.",
+        "Some warranties are limited to defects in materials and workmanship only."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md: Liability and Indemnity Review\n\n## Covered Categories\n\nBased on the analysis of 306 contracts, the following categories are covered with their respective discovery frequencies and common patterns:\n\n1.  **Uncapped Liability** (26.1% of contracts)\n    *   **Common Patterns:** Explicit exclusions of indemnification/confidentiality from general caps; statutory mandates preventing caps for personal injury/death; absence of any limitation clause; exclusions for fraud, willful misconduct, or gross negligence.\n2.  **Cap on Liability** (37.3% of contracts)\n    *   **Common Patterns:** Fixed monetary maximums (e.g., $1M, fees paid); exclusion of consequential/indirect damages; liability limited to insurance coverage amounts; statute of limitations/time bars for claims.\n3.  **Liquidated Damages** (11.8% of contracts)\n    *   **Common Patterns:** Penalties for late delivery/performance failures (% per day/week); multipliers for breach of exclusivity/non-solicitation; fixed fees for late payments; termination fees/buyout prices for early termination.\n4.  **Warranty Duration** (17.0% of contracts)\n    *   **Common Patterns:** Survival clauses for reps/warranties post-closing/termination; bug fixing/defect correction periods; warranties lasting for \"reasonable shelf life\" or the \"term of the agreement.\"\n\n## Common Patterns\n\n### Uncapped Liability\n*   **Explicit Carve-outs:** The contract establishes a general liability cap but explicitly excludes specific obligations (e.g., indemnification, confidentiality, IP infringement) from that cap.\n    *   *Example Phrasing:* \"The limitations of liability in this Section shall not apply to any liability arising out of or relating to a breach of Confidentiality or Indemnification obligations.\"\n*   **Total Absence of Limitation:** The contract contains no \"Limitation of Liability\" clause, implying default uncapped exposure under applicable law for all breaches.\n    *   *Example Phrasing:* (No clause found) \"The contract does not specify a monetary cap on liability, leaving the Provider's indemnification obligations... uncapped.\"\n*   **Statutory/Conduct-Based Exclusions:** Liability is uncapped for specific severe conduct or statutory violations.\n    *   *Example Phrasing:* \"Liability shall not be limited for cases of gross negligence, willful misconduct, fraud, or bodily injury/death.\"\n\n### Cap on Liability\n*   **Monetary Caps Tied to Fees:** Liability is capped at a specific monetary amount or a multiple of fees paid during a specific period.\n    *   *Example Phrasing:* \"The Company's aggregate liability is capped to the total amount actually paid by the Distributor for the specific products that caused the damage.\"\n*   **Exclusion of Consequential Damages:** The primary mechanism for capping exposure is the exclusion of indirect, special, incidental, or punitive damages.\n    *   *Example Phrasing:* \"Neither party shall be liable for any special, indirect, consequential, or punitive damages, including lost profits.\"\n*   **Time-Based Caps (Statute of Limitations):** Liability is effectively capped by restricting the time window in which claims can be brought.\n    *   *Example Phrasing:* \"Any claim must be brought within one (1) year of the occurrence of the event giving rise to such claim.\"\n\n### Liquidated Damages\n*   **Performance/Delivery Penalties:** Specific financial penalties calculated as a percentage of value or fixed fee for failing to meet delivery or performance metrics.\n    *   *Example Phrasing:* \"A penalty of 0.5% for every seven days of late delivery, capped at 5% of the goods' value.\"\n*   **Termination Fees/Buyouts:** Fixed fees or accelerated payments required upon early termination or breach of exclusivity.\n    *   *Example Phrasing:* \"Upon termination for cause, Party B must pay a termination fee equal to two times the commissions on business produced during the last 12 months.\"\n*   **Late Payment Interest/Fees:** Fixed fees or daily percentages for overdue payments.\n    *   *Example Phrasing:* \"A daily penalty of 0.05% of the overdue payment if Party B fails to pay within 60 days.\"\n\n### Warranty Duration\n*   **Fixed Periods:** Warranties defined by a specific number of days, months, or years from delivery or commencement.\n    *   *Example Phrasing:* \"The Warranty Period lasts for twenty-one (21) years from the date of Commencement of Operations.\"\n*   **Shelf Life/Quality Standards:** Warranties tied to the physical lifespan or quality of the product at the time of shipment.\n    *   *Example Phrasing:* \"Products will have a remaining shelf life of at least twelve months at the time of shipment.\"\n*   **Survival Clauses:** Representations and warranties that survive the termination or closing of the agreement for a specified period or indefinitely.\n    *   *Example Phrasing:* \"Representations and warranties survive the delivery of shares and payment, remaining in full force and effect regardless of any termination.\"\n\n## Review Checklist\n\n*   **Uncapped Liability:**\n    *   [ ] Does the contract contain a \"Limitation of Liability\" clause? If not, flag as potentially uncapped.\n    *   [ ] Are indemnification, confidentiality, IP infringement, or gross negligence/willful misconduct explicitly excluded from any liability caps?\n    *   [ ] Are there statutory mandates (e.g., personal injury) that prevent capping?\n*   **Cap on Liability:**\n    *   [ ] Is there a defined monetary cap (fixed amount or formula based on fees paid)?\n    *   [ ] Are consequential, indirect, special, or punitive damages excluded?\n    *   [ ] Is there a statute of limitations or time bar for bringing claims?\n    *   [ ] Is the cap symmetric (applies to both parties) or asymmetric (applies only to one)?\n*   **Liquidated Damages:**\n    *   [ ] Are there specific penalties for late delivery, performance failures, or late payments?\n    *   [ ] Are there termination fees, buyout prices, or accelerated payment clauses upon early termination?\n    *   [ ] Are there multipliers for breach of exclusivity or non-solicitation?\n*   **Warranty Duration:**\n    *   [ ] Is there a defined warranty period for products/services (e.g., 12 months, 21 years)?\n    *   [ ] Do representations and warranties survive termination/closing? If so, for how long?\n    *   [ ] Are warranties disclaimed entirely (\"AS IS\")?\n\n## Evidence Extraction Rules\n\n1.  **Locate Clauses:** Search for sections titled \"Limitation of Liability,\" \"Indemnification,\" \"Liquidated Damages,\" \"Warranties,\" \"Survival,\" or \"Termination.\"\n2.  **Extract Monetary Values:** For \"Cap on Liability,\" extract specific dollar amounts, percentages, or formulas (e.g., \"fees paid in the preceding 12 months\").\n3.  **Identify Exceptions:** For \"Uncapped Liability,\" extract text that explicitly excludes certain obligations (indemnity, confidentiality, fraud) from the general cap.\n4.  **Capture Timeframes:** For \"Warranty Duration\" and \"Cap on Liability\" (time bars), extract specific durations (e.g., \"120 days,\" \"1 year,\" \"reasonable shelf life\").\n5.  **Note Penalties:** For \"Liquidated Damages,\" extract the calculation method (e.g., \"0.5% per week,\" \"2x commissions\") and the triggering event (e.g., \"late delivery,\" \"termination for cause\").\n6.  **Handle Absence:** If no \"Limitation of Liability\" clause is found, note the absence as evidence for \"Uncapped Liability.\" If no warranty period is defined, note if warranties are disclaimed or implied.\n\n## Output Format\n\n```json\n{\n  \"status\": \"success|error\",\n  \"answer\": {\n    \"uncapped_liability\": {\n      \"is_uncapped\": true|false,\n      \"reason\": \"string describing why (e.g., 'Explicit exclusion of indemnification from cap', 'No limitation clause found')\",\n      \"excluded_categories\": [\"indemnification\", \"confidentiality\", \"gross negligence\"]\n    },\n    \"cap_on_liability\": {\n      \"has_cap\": true|false,\n      \"cap_type\": \"monetary|time_based|exclusion_only\",\n      \"cap_value\": \"string (e.g., '$1,000,000', 'Fees paid in last 12 months', '1 year')\",\n      \"excluded_damages\": [\"consequential\", \"indirect\", \"punitive\"]\n    },\n    \"liquidated_damages\": {\n      \"has_ld\": true|false,\n      \"triggers\": [\"late_delivery\", \"termination_for_cause\", \"late_payment\"],\n      \"calculation\": \"string (e.g., '0.5% per week', '2x commissions')\",\n      \"cap_on_ld\": \"string or null\"\n    },\n    \"warranty_duration\": {\n      \"has_warranty\": true|false,\n      \"duration\": \"string (e.g., '12 months', '21 years', 'reasonable shelf life')\",\n      \"survival_period\": \"string or null\",\n      \"disclaimer\": true|false\n    }\n  },\n  \"evidence_unit_ids\": [\"string\", \"string\"],\n  \"source_contract_ids\": [\"string\"],\n  \"missing_inputs\": [\"string\"],\n  \"human_review_required\": true|false\n}\n```\n\n## Boundary Rules\n\n*   **Do Not Infer Caps from Silence:** If a contract lacks a \"Limitation of Liability\" clause, do not assume a cap exists. Flag as \"Uncapped Liability\" due to absence.\n*   **Distinguish Between Cap and Exclusion:** A clause that only excludes consequential damages but has no monetary cap is still a \"Cap on Liability\" (via exclusion), but the `cap_value` should reflect the exclusion nature, not a monetary figure.\n*   **Ignore Standard Interest:** Do not classify standard late payment interest (e.g., \"prime rate + 2%\") as \"Liquidated Damages\" unless it is a fixed penalty fee or significantly punitive. Focus on explicit \"Liquidated Damages\" or \"Penalty\" clauses.\n*   **Separate Warranty from SLA:** Do not confuse Service Level Agreement (SLA) credits with \"Warranty Duration.\" Warranties relate to defects/errors in technology/products; SLAs relate to performance metrics.\n*   **Handle Redactions:** If a limitation clause is redacted, assume the redacted portion may contain exceptions (uncapped liability) and flag for human review."
+}

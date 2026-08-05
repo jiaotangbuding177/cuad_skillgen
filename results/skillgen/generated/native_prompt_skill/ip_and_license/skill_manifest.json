@@ -1,0 +1,34 @@
+{
+  "method": "native_prompt_skill",
+  "case_id": "ip_and_license",
+  "model": "deepseek-chat",
+  "input_summary": {
+    "contracts_sampled": 10,
+    "sampled_contract_ids": [
+      "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+      "ConformisInc_20191101_10-Q_EX-10.6_11861402_EX-10.6_Development_Agreement",
+      "BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY_AGREEMENT",
+      "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+      "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION_AGREEMENT",
+      "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+      "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark_License_Agreement",
+      "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark_License_Agreement",
+      "MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT_VENTURE_AGREEMENT",
+      "BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE_AGREEMENT"
+    ],
+    "contracts_with_evidence_count": 177,
+    "category_count": 8,
+    "estimated_input_tokens": 99485
+  },
+  "output_summary": {
+    "skill_md_chars": 12276,
+    "skill_md_estimated_tokens": 3069
+  },
+  "usage": {
+    "prompt_tokens": 82905,
+    "completion_tokens": 2736,
+    "total_tokens": 85641
+  },
+  "duration_seconds": 29.63,
+  "created_at": "2026-07-14T16:21:50.125800+00:00"
+}

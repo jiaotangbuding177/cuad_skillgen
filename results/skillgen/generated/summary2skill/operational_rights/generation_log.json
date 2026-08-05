@@ -1,0 +1,329 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "Rofr/Rofo/Rofn",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "IP Ownership Assignment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Joint IP Ownership",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Covenant Not to Sue",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Third Party Beneficiary",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Rofr/Rofo/Rofn",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "IP Ownership Assignment",
+          "found": true,
+          "summary": "The Provider irrevocably assigns all rights, title, and interest in inventions, techniques, and works of authorship created during the performance of services to the Recipient.",
+          "key_terms": [
+            "irrevocably assigns",
+            "rights, title, and interest",
+            "works made for hire",
+            "exclusive property",
+            "Recipient shall own"
+          ],
+          "source_paragraph": "1.4 Intellectual Property. (a) Recipient shall own, and Provider hereby irrevocably assigns to the Recipient, all rights, title, and interest in any invention, technique, process, device, discovery, improvement, or know-how... (c) All writings or works of authorship... are works made for hire and the exclusive property of the Recipient."
+        },
+        {
+          "category": "Joint IP Ownership",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Covenant Not to Sue",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Third Party Beneficiary",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Rofr/Rofo/Rofn",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "IP Ownership Assignment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Joint IP Ownership",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Covenant Not to Sue",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Third Party Beneficiary",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "Rofr/Rofo/Rofn",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "IP Ownership Assignment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Joint IP Ownership",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Covenant Not to Sue",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Third Party Beneficiary",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Rofr/Rofo/Rofn",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "IP Ownership Assignment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Joint IP Ownership",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Covenant Not to Sue",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Third Party Beneficiary",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "Rofr/Rofo/Rofn": {
+      "found_count": 36,
+      "total_contracts": 306,
+      "common_patterns": [
+        "These clauses often include specific timeframes for exercise (e.g., 30 days, 60 days) and conditions such as 'good faith' negotiation.",
+        "Rights of First Negotiation (ROFN) are common in strategic alliances and licensing deals regarding new products, properties, or commercial rights outside specific territories.",
+        "Rights of First Offer (ROFO) appear in content licensing and joint venture contexts, giving one party the first chance to create or license new works before third parties are approached.",
+        "Rights are frequently tied to specific business operations, such as manufacturing requests, product lines, or territory expansion.",
+        "Exclusivity or priority rights for new products or services are common in distribution and co-branding agreements."
+      ],
+      "example_extractions": [
+        "The contract grants Ceres a first option to commercialize results of IGER's internal research activities involving Collaboration Crops if Ceres exercises this option within thirty days of IGER's notice.",
+        "The contract grants Dialog a right of first negotiation to add new products developed by Energous to the agreement before Energous can market them to third parties.",
+        "The contract grants eDiets a right of first refusal to participate in diet and diet-counseling related promotion opportunities created by Women.com after the effective date.",
+        "The Company holds a right of first refusal regarding the transfer of interests in the Franchise Owner, as detailed in Section 14.6.",
+        "The contract grants Lightbridge a right of first refusal to participate as a subcontractor on projects where Lloyds acts as the prime contractor.",
+        "LKPL is granted the first right of refusal on all Requests for Manufacture (RFM) for AMR hardware issued by Axiometric."
+      ],
+      "variations": [
+        "Some contracts grant preemptive rights for specific services (e.g., mobile game services) rather than standard purchase or license options.",
+        "In franchise agreements, the ROFR is often acknowledged as a retained right of the Franchisor under the individual franchise agreements, binding the Developer."
+      ]
+    },
+    "IP Ownership Assignment": {
+      "found_count": 91,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Work-for-hire clauses are prevalent, where all work product created by a contractor or employee is deemed the exclusive property of the hiring party.",
+        "Separation and spin-off agreements frequently mandate the execution of specific assignment documents (patents, trademarks, copyrights) to transfer IP between the parent and spin-off entities.",
+        "License agreements often include clauses stating that the licensee acquires no interest in the licensor's trademarks or IP, and all goodwill inures to the licensor.",
+        "Collaboration agreements often define ownership based on inventorship: sole inventions belong to the inventing party, while joint inventions are jointly owned.",
+        "Work-for-hire provisions are standard in services, consulting, and development agreements, where the client/recipient owns all inventions, code, or materials created."
+      ],
+      "example_extractions": [
+        "The Provider irrevocably assigns all rights, title, and interest in inventions, techniques, and works of authorship created during the performance of services to the Recipient.",
+        "The contract explicitly states that Telnet acquires no interest in Galaxy's trademarks and proprietary rights, and Galaxy retains ownership of all records and confidential information.",
+        "The contract requires the parties to execute assignment agreements to record the transfer of intellectual property rights between the Nuance Group and SpinCo Group as allocated in the Separation Agreement.",
+        "The contract stipulates that all innovations created by the Consultant in connection with the services are works made for hire and the sole exclusive property of the Company.",
+        "The agreement stipulates that all Work Product and associated Intellectual Property Rights created by Turpin are the exclusive property of the Company, with Turpin assigning all rights to the Company upon creation.",
+        "The contract stipulates that all materials produced in connection with the agreement are deemed works made for hire and owned exclusively by Papa John's, with any rights not qualifying as work-for-hire assigned to Papa John's."
+      ],
+      "variations": [
+        "Some agreements assign ownership of specific types of data (e.g., Usage Data) jointly, while other data (e.g., Web Indexing Data) remains solely with one party.",
+        "In some cases, improvements or modifications made by a licensee or distributor must be assigned back to the licensor/manufacturer.",
+        "Certain contracts specify that if one party has no interest in patenting a joint invention, they must transfer their share to the other party free of charge."
+      ]
+    },
+    "Joint IP Ownership": {
+      "found_count": 21,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Joint ownership of data (e.g., user data, transactional data) is common in co-branding and platform agreements.",
+        "Royalties or benefits from jointly owned IP are often shared equitably or according to a predefined split.",
+        "Joint ownership is typically defined for IP created through the cooperation of both parties during the term of the agreement.",
+        "Joint ownership is less common than sole ownership, often appearing in strategic alliances, joint ventures, or co-branding agreements.",
+        "Joint ownership is typically triggered by joint inventorship or joint creation of materials in collaboration agreements."
+      ],
+      "example_extractions": [
+        "The contract explicitly states that intellectual property or patentable inventions discovered or invented jointly by the Principal Investigator and ArTara shall be considered Joint Intellectual Property and jointly owned.",
+        "The contract establishes that Ceres and IGER shall have an undivided interest in Joint Intellectual Property, and any patent or plant variety rights applications covering such property shall be assigned jointly to both parties.",
+        "The agreement explicitly states that inventions invented jointly by employees or agents of both Theravance and GSK shall be owned jointly by the parties.",
+        "The contract specifies that Payment-Eligible User Data and Transactional Data collected through the Co-Branded Application are jointly owned by the parties.",
+        "The contract explicitly provides that New Amorphous Alloy Technologies developed through the cooperation of both parties shall be jointly and equally owned by them.",
+        "The parties agree that any Know-How developed or shared under the agreement shall be jointly owned by both parties."
+      ],
+      "variations": [
+        "Some agreements define joint ownership shares explicitly (e.g., 50/50) but allow for modification based on actual contribution.",
+        "In some cases, joint ownership is conditional, such as ownership of works created jointly being decided at the commencement of joint efforts."
+      ]
+    },
+    "Covenant Not to Sue": {
+      "found_count": 30,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Licensees are frequently required to covenant not to challenge, contest, or attack the validity, ownership, or enforceability of the licensor's trademarks, patents, or domain names.",
+        "It may include a prohibition on assisting third parties in challenging the IP.",
+        "This covenant often extends to trademarks, patents, and copyrights.",
+        "In separation/spin-off agreements, parties often mutually covenant not to sue each other for infringement of pre-existing IP for a specified period (e.g., 5 years).",
+        "Parties agree not to contest, challenge, or dispute the validity, ownership, or enforceability of the other party's intellectual property rights."
+      ],
+      "example_extractions": [
+        "The Licensee agrees not to challenge or contest the Licensor's exclusive ownership rights of the Licensed Mark.",
+        "SpinCo covenants not to oppose, challenge, or contest any application or registration by Nuance for Nuance IP, and Nuance covenants not to oppose, challenge, or contest any application or registration by SpinCo for SpinCo IP.",
+        "The Licensee is restricted from contesting, challenging, or making any claim adverse to the Licensor's interest in the Licensed Domain Names.",
+        "The contract explicitly prohibits either party from attacking, challenging, or filing applications regarding the other party's trademarks during the term of the agreement or thereafter.",
+        "Turpin covenants that he will not directly or indirectly contest or assist any third party in contesting the Company's right, title, and interest in the Work Product or Intellectual Property Rights.",
+        "Each party agrees not to contest the validity of the other party's ownership of its intellectual property, except in specific infringement proceedings."
+      ],
+      "variations": [
+        "Some covenants are limited to specific types of IP (e.g., only trademarks or only domain names).",
+        "Exceptions may exist, such as allowing a challenge if the licensee is sued for infringement by the licensor."
+      ]
+    },
+    "Third Party Beneficiary": {
+      "found_count": 54,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Exceptions often include indemnification clauses that extend benefits to officers, directors, affiliates, and controlling persons.",
+        "Some contracts grant specific rights to customers or end-users regarding warranties or service levels.",
+        "Most contracts explicitly state that there are NO third-party beneficiaries, meaning only the signing parties can enforce the agreement.",
+        "Many contracts explicitly state that there are NO third-party beneficiaries, limiting enforcement rights to the contracting parties and their successors/assigns.",
+        "When third-party beneficiaries are designated, they are often specific entities like affiliates, investment advisors, or customers."
+      ],
+      "example_extractions": [
+        "The contract explicitly states that it is solely for the benefit of the parties and does not confer rights on any third persons.",
+        "The contract explicitly designates the Agent as a third-party beneficiary with the authority to enforce the provisions of the agreement.",
+        "The contract includes indemnification clauses that extend to officers, directors, agents, representatives, affiliates, and controlling persons of both the Company and the Agent.",
+        "The contract explicitly names Mediacom, LLC (the Customer) as an additional insured under the insurance policies and includes them in the indemnification clause, granting them enforceable rights against the Subcontractor.",
+        "The contract explicitly states that it is intended for the sole and exclusive benefit of the parties and does not confer rights on any third party.",
+        "The Investment Advisor is designated as a third-party beneficiary with the rights and protections provided to the Licensee under the agreement."
+      ],
+      "variations": [
+        "Some contracts grant specific rights to third parties, such as access to books and records for account owners.",
+        "In some cases, successors and assigns are explicitly named as beneficiaries, while all other third parties are excluded."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md: Operational Rights & IP Governance Review\n\n## Covered Categories\n\nThis skill analyzes contracts for specific operational rights, intellectual property (IP) ownership structures, and third-party enforcement rights.\n\n1.  **Rofr/Rofo/Rofn** (Right of First Refusal/Offer/Negotiation)\n    *   **Discovery Frequency:** ~12% of contracts (36/306).\n    *   **Common Patterns:** Clauses granting preemptive rights to purchase, license, or negotiate for new products, services, or equity interests before third parties are approached. Often tied to specific timeframes (e.g., 30-60 days) and \"good faith\" negotiation requirements.\n\n2.  **IP Ownership Assignment**\n    *   **Discovery Frequency:** ~30% of contracts (91/306).\n    *   **Common Patterns:** \"Work-for-hire\" provisions where the hiring party owns all created IP; explicit assignment clauses transferring rights upon creation; separation/spin-off mandates requiring execution of assignment documents; license agreements stating licensee acquires no ownership interest.\n\n3.  **Joint IP Ownership**\n    *   **Discovery Frequency:** ~7% of contracts (21/306).\n    *   **Common Patterns:** Shared ownership of IP created through joint inventorship or cooperation; equitable sharing of royalties/benefits; specific definitions for \"Joint Intellectual Property\" in strategic alliances or co-branding deals.\n\n4.  **Covenant Not to Sue**\n    *   **Discovery Frequency:** ~10% of contracts (30/306).\n    *   **Common Patterns:** Prohibitions on challenging the validity, ownership, or enforceability of the counterparty’s IP (trademarks, patents, domain names); mutual covenants in spin-offs not to sue for pre-existing IP infringement; restrictions on assisting third parties in such challenges.\n\n5.  **Third Party Beneficiary**\n    *   **Discovery Frequency:** ~18% of contracts (54/306).\n    *   **Common Patterns:** Explicit statements that there are **no** third-party beneficiaries (limiting enforcement to signing parties); exceptions granting enforcement rights to affiliates, officers, directors, or specific customers (e.g., in indemnification or insurance clauses).\n\n---\n\n## Common Patterns\n\n### Rofr/Rofo/Rofn\n*   **Time-Bound Exercise:** Rights are frequently exercisable within a specific window (e.g., \"within thirty days of notice\").\n    *   *Example:* \"Ceres exercises this option within thirty days of IGER's notice.\"\n*   **Scope-Specific Triggers:** Rights apply to specific business activities like new product development, territory expansion, or manufacturing requests.\n    *   *Example:* \"Right of first negotiation to add new products developed by Energous... before Energous can market them to third parties.\"\n*   **Good Faith Requirement:** ROFN clauses often mandate negotiations in good faith before the right can be declined or exercised.\n\n### IP Ownership Assignment\n*   **Work-for-Hire Default:** Standard in services/consulting agreements where all work product is deemed the exclusive property of the client.\n    *   *Example:* \"All innovations created by the Consultant... are works made for hire and the sole exclusive property of the Company.\"\n*   **No Interest in License:** License agreements explicitly state the licensee gains no ownership, and goodwill inures to the licensor.\n    *   *Example:* \"Telnet acquires no interest in Galaxy's trademarks... Galaxy retains ownership of all records.\"\n*   **Mandatory Assignment Execution:** In spin-offs or collaborations, parties must execute specific documents to formalize IP transfer.\n    *   *Example:* \"Parties to execute assignment agreements to record the transfer of intellectual property rights... as allocated in the Separation Agreement.\"\n\n### Joint IP Ownership\n*   **Joint Inventorship Trigger:** Ownership is shared only if both parties contribute to the invention/creation.\n    *   *Example:* \"Inventions invented jointly by employees or agents of both Theravance and GSK shall be owned jointly.\"\n*   **Undivided Interest:** Joint IP is often held as an undivided interest, with joint assignment of patent applications.\n    *   *Example:* \"Ceres and IGER shall have an undivided interest in Joint Intellectual Property... applications... assigned jointly.\"\n*   **Data Sharing:** Joint ownership often extends to specific data sets (e.g., user data, transactional data) in platform/co-branding agreements.\n\n### Covenant Not to Sue\n*   **Validity Challenge Prohibition:** Licensees are barred from contesting the validity of the licensor’s IP.\n    *   *Example:* \"Licensee agrees not to challenge or contest the Licensor's exclusive ownership rights of the Licensed Mark.\"\n*   **Mutual Non-Disparagement of IP:** In separation agreements, both parties agree not to challenge each other’s IP registrations.\n    *   *Example:* \"SpinCo covenants not to oppose... any application... by Nuance... and Nuance covenants not to oppose... by SpinCo.\"\n*   **Third-Party Assistance Ban:** Prohibition on helping others challenge the IP.\n    *   *Example:* \"Turpin covenants that he will not... assist any third party in contesting the Company's right... in the Work Product.\"\n\n### Third Party Beneficiary\n*   **Explicit Exclusion:** Most common pattern is a clause stating no third parties have rights.\n    *   *Example:* \"Contract... does not confer rights on any third persons.\"\n*   **Indemnification Exceptions:** Specific groups (officers, directors, affiliates) are granted beneficiary status for indemnification purposes.\n    *   *Example:* \"Indemnification clauses that extend to officers, directors, agents... of both the Company and the Agent.\"\n*   **Customer/End-User Rights:** Specific customers may be named as beneficiaries for warranty or insurance enforcement.\n    *   *Example:* \"Mediacom, LLC (the Customer)... included in the indemnification clause, granting them enforceable rights.\"\n\n---\n\n## Review Checklist\n\n### Rofr/Rofo/Rofn\n- [ ] Does the contract grant a Right of First Refusal (ROFR), Offer (ROFO), or Negotiation (ROFN)?\n- [ ] What specific assets, products, or equity interests are covered?\n- [ ] What is the timeframe for exercising the right (e.g., 30 days)?\n- [ ] Are there conditions for exercise (e.g., good faith negotiation, matching terms)?\n\n### IP Ownership Assignment\n- [ ] Is there a \"Work-for-Hire\" clause assigning all created IP to the hiring party?\n- [ ] Does the contract require the execution of separate assignment documents for IP transfer?\n- [ ] Does the contract explicitly state that the licensee acquires **no** ownership interest in the licensor's IP?\n- [ ] Are improvements or modifications created by one party assigned back to the other?\n\n### Joint IP Ownership\n- [ ] Is there a definition of \"Joint Intellectual Property\" or \"Joint Inventions\"?\n- [ ] How is ownership shared (e.g., 50/50, undivided interest)?\n- [ ] Are royalties or benefits from joint IP shared, and if so, how?\n- [ ] Does joint ownership apply to specific data types (e.g., user data)?\n\n### Covenant Not to Sue\n- [ ] Is a party prohibited from challenging the validity, ownership, or enforceability of the other party’s IP?\n- [ ] Does the covenant extend to trademarks, patents, copyrights, and domain names?\n- [ ] Is there a prohibition on assisting third parties in challenging the IP?\n- [ ] Are there exceptions (e.g., if sued for infringement)?\n\n### Third Party Beneficiary\n- [ ] Does the contract explicitly state there are **no** third-party beneficiaries?\n- [ ] Are there exceptions for affiliates, officers, directors, or controlling persons?\n- [ ] Are specific customers or end-users designated as beneficiaries with enforcement rights?\n- [ ] Do indemnification or insurance clauses extend benefits to non-signing parties?\n\n---\n\n## Evidence Extraction Rules\n\n1.  **Locate Keywords:** Search for terms like \"Right of First Refusal,\" \"Right of First Offer,\" \"Right of First Negotiation,\" \"Work for Hire,\" \"Assignment,\" \"Joint Ownership,\" \"Covenant Not to Sue,\" \"Challenge,\" \"Validity,\" \"Third Party Beneficiary,\" \"No Third Party Rights.\"\n2.  **Extract Context:**\n    *   For **Rofr/Rofo/Rofn**: Extract the specific right granted, the subject matter (product/equity), the exercise period, and any conditions (good faith).\n    *   For **IP Assignment**: Extract clauses stating ownership of work product, assignment obligations, or explicit denials of licensee ownership.\n    *   For **Joint IP**: Extract definitions of joint IP, ownership percentages/shares, and royalty sharing mechanisms.\n    *   For **Covenant Not to Sue**: Extract prohibitions on challenging IP validity, ownership, or enforceability, and any bans on assisting third parties.\n    *   For **Third Party Beneficiary**: Extract clauses stating \"no third-party beneficiaries\" or explicitly naming beneficiaries (affiliates, customers, officers) and the scope of their rights (indemnification, enforcement).\n3.  **Verify Scope:** Ensure the extracted clause applies to the relevant parties and assets defined in the case definition.\n\n---\n\n## Output Format\n\n```json\n{\n  \"status\": \"completed\",\n  \"answer\": {\n    \"rofr_rofo_rofn\": {\n      \"present\": true,\n      \"type\": \"ROFR\",\n      \"subject\": \"New products developed by Energous\",\n      \"exercise_period\": \"30 days\",\n      \"conditions\": \"Good faith negotiation\"\n    },\n    \"ip_ownership_assignment\": {\n      \"present\": true,\n      \"mechanism\": \"Work-for-hire\",\n      \"owner\": \"Company\",\n      \"assignment_required\": false\n    },\n    \"joint_ip_ownership\": {\n      \"present\": false,\n      \"details\": null\n    },\n    \"covenant_not_to_sue\": {\n      \"present\": true,\n      \"scope\": \"Trademarks and Domain Names\",\n      \"third_party_assistance_banned\": true\n    },\n    \"third_party_beneficiary\": {\n      \"present\": true,\n      \"beneficiaries\": [\"Officers\", \"Directors\", \"Affiliates\"],\n      \"scope\": \"Indemnification only\"\n    }\n  },\n  \"evidence_unit_ids\": [\"clause_12_3\", \"clause_14_6\", \"clause_8_1\"],\n  \"source_contract_ids\": [\"contract_001\"],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n---\n\n## Boundary Rules\n\n*   **Do Not Infer Ownership:** If a contract is silent on IP ownership, do not assume work-for-hire or joint ownership. Mark as \"not found\" or \"ambiguous\" requiring human review if critical.\n*   **Distinguish ROFR vs. ROFO:** Clearly differentiate between Right of First Refusal (reactive to a third-party offer) and Right of First Offer (proactive offer before third-party engagement).\n*   **Exclude Standard Indemnities:** For Third Party Beneficiary analysis, only flag beneficiaries if they have explicit enforcement rights or are named as additional insureds/beneficiaries beyond standard indemnification language that merely protects them. However, if the indemnification clause explicitly names non-signing parties (officers, affiliates) as protected parties with rights, this counts as a third-party beneficiary exception.\n*   **Covenant Scope:** Only flag \"Covenant Not to Sue\" if it specifically relates to IP validity/ownership challenges. General non-disparagement or non-compete clauses are out of scope.\n*   **Joint IP Definition:** Ensure \"Joint IP\" is explicitly defined or clearly implied by joint inventorship clauses. Mere collaboration does not automatically imply joint ownership unless stated."
+}

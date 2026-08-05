@@ -1,0 +1,722 @@
+{
+  "step1_tools_sample": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_license_grant",
+          "description": "Identifies clauses where one party grants intellectual property or content usage rights to the other party.",
+          "category": "License Grant",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether a license grant was found",
+            "extracted_text": "string - The exact text of the license grant",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Summary of the granted rights"
+          },
+          "example": {
+            "input": "Section 6.1 CONTENT. 2TheMart hereby grants to i-Escrow a worldwide, non-exclusive right to use, reproduce, distribute, publicly perform, publicly display and digitally perform the 2TheMart Content...",
+            "output": {
+              "found": true,
+              "extracted_text": "2TheMart hereby grants to i-Escrow a worldwide, non-exclusive right to use, reproduce, distribute, publicly perform, publicly display and digitally perform the 2TheMart Content soley with respect to and in conjunction with the Co-Branded Site all with the prior written consent of 2TheMart, for the term of this Agreement.",
+              "confidence": 1.0,
+              "explanation": "The contract contains explicit mutual license grants for content usage between 2TheMart and i-Escrow."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_non_transferable_license",
+          "description": "Checks if the contract explicitly restricts the transferability or assignability of granted licenses or rights.",
+          "category": "Non-Transferable License",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether a non-transferability restriction was found",
+            "extracted_text": "string - The exact text restricting transfer",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Explanation of the restriction scope"
+          },
+          "example": {
+            "input": "Section 6.3 TRADEMARKS... (a) i-Escrow hereby grants to 2TheMart a non-exclusive, nontransferable right to use the i-Escrow Marks...",
+            "output": {
+              "found": true,
+              "extracted_text": "i-Escrow hereby grants to 2TheMart a non-exclusive, nontransferable right to use the i-Escrow Marks",
+              "confidence": 1.0,
+              "explanation": "The trademark license granted by i-Escrow is explicitly defined as nontransferable."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_post_termination_services",
+          "description": "Identifies obligations that survive termination or expiration, such as wind-down activities, final payments, or completion of pending transactions.",
+          "category": "Post-Termination Services",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether post-termination obligations were found",
+            "extracted_text": "string - The exact text describing post-termination duties",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Summary of post-termination requirements"
+          },
+          "example": {
+            "input": "Section 8.5 EFFECTS OF TERMINATION... Notwithstanding the foregoing, unless this Agreement was terminated for a material breach, all provisions of this Agreement shall survive to the extent necessary for i-Escrow to complete any Customer transactions which are pending at the time of expiration or termination.",
+            "output": {
+              "found": true,
+              "extracted_text": "all provisions of this Agreement shall survive to the extent necessary for i-Escrow to complete any Customer transactions which are pending at the time of expiration or termination.",
+              "confidence": 0.95,
+              "explanation": "The contract requires i-Escrow to complete pending customer transactions even after termination, constituting a post-termination service obligation."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_license_grant",
+          "description": "Identifies if the contract contains a license grant or assignment of intellectual property rights from one party to another.",
+          "category": "License Grant",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 1.4 Intellectual Property",
+            "output": {
+              "found": true,
+              "extracted_text": "Recipient shall own, and Provider hereby irrevocably assigns to the Recipient, all rights, title, and interest in any invention... which relate to, is suggested by, or results from the Services.",
+              "confidence": 0.98,
+              "explanation": "The contract explicitly assigns all IP rights resulting from services to the Recipient, constituting a broad license/assignment grant."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_non_transferable_license",
+          "description": "Checks for restrictions on the ability of a party to transfer, assign, or sublicense rights granted under the agreement.",
+          "category": "Non-Transferable License",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 6.2 Succession and Assignment",
+            "output": {
+              "found": true,
+              "extracted_text": "Provider may not assign, delegate or otherwise transfer either this Agreement or any of its rights, interests, or obligations hereunder without the prior written approval of Recipient.",
+              "confidence": 0.95,
+              "explanation": "The Provider is restricted from transferring rights or obligations without prior written approval, indicating non-transferability constraints."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_affiliate_license_licensee",
+          "description": "Determines if the license grant or rights extend to the affiliates of the licensee/recipient.",
+          "category": "Affiliate License-Licensee",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 1.1(b)",
+            "output": {
+              "found": true,
+              "extracted_text": "Recipient may freely assign its rights under this Agreement to receive the Services to any of its affiliates.",
+              "confidence": 0.92,
+              "explanation": "The Recipient is explicitly permitted to assign its rights to receive services to its affiliates, extending the benefit to them."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_irrevocable_or_perpetual_license",
+          "description": "Checks if the license grant or IP assignment is stated to be irrevocable or perpetual in nature.",
+          "category": "Irrevocable or Perpetual License",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 1.4(a)",
+            "output": {
+              "found": true,
+              "extracted_text": "Provider hereby irrevocably assigns to the Recipient, all rights, title, and interest in any invention...",
+              "confidence": 0.99,
+              "explanation": "The assignment of intellectual property rights is explicitly described as 'irrevocable'."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_post_termination_services",
+          "description": "Identifies obligations that survive termination or expiration, such as return of materials, data deletion, or wind-down activities.",
+          "category": "Post-Termination Services",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 3.6",
+            "output": {
+              "found": true,
+              "extracted_text": "Upon expiration or termination of the Agreement for any reason, Provider shall promptly: (a) Deliver to Recipient all documents... (f) Permanently erase all of Recipient's Confidential Information from its computer systems. (g) Certify in writing to Recipient that it has complied with the requirements of this Section 3.6",
+              "confidence": 0.97,
+              "explanation": "The contract details specific post-termination obligations including delivery of work product, return of property, and erasure of confidential information."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_license_grant",
+          "description": "Checks if the contract contains a license granted by one party to its counterparty regarding intellectual property or branded assets.",
+          "category": "License Grant",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 2(b) and Exhibit A Item 1",
+            "output": {
+              "found": true,
+              "extracted_text": "(b) The acquisition of a license(s) permitting the use of selected images in the Products; ... Collectible Concepts Group will: 1) Obtain any licenses deemed by the Joint Venturers to add value in the marketing of the Products",
+              "confidence": 0.95,
+              "explanation": "The contract explicitly mentions the acquisition of licenses for images and assigns responsibility to CCGI to obtain licenses, indicating a license grant mechanism is central to the venture."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_non_transferable_license",
+          "description": "Checks if the contract limits the ability of a party to transfer their interest or associated rights/licenses to a third party without consent.",
+          "category": "Non-Transferable License",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 12",
+            "output": {
+              "found": true,
+              "extracted_text": "No Joint Venturer shall be authorized or empowered to mortgage, hypothecate, pledge, sell, or transfer, an interest in the Joint Venture, nor confer on any successor or assignee the right to become a Joint Venturer without the consent of the other Joint Venturer.",
+              "confidence": 0.98,
+              "explanation": "Section 12 explicitly prohibits the transfer of interest or conferring rights to successors/assignees without consent, effectively making the interests and associated rights non-transferable."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_post_termination_services",
+          "description": "Checks if there are obligations regarding asset distribution, debt payment, or wind-down procedures after the termination of the agreement.",
+          "category": "Post-Termination Services",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 11",
+            "output": {
+              "found": true,
+              "extracted_text": "On any termination of the Joint Venture, its debt shall be paid or provided for in a manner satisfactory to the Joint Venturers. Then, any unexpended portion of Joint Venture funds shall be distributed to the Joint Venturers in accordance with their prorata ownership in the Joint Venture and all other assets of the Joint Venture shall be distributed as undivided interests to the Joint Venturers ratably according to their prorata interests in the Joint Venture as set forth in Section 6.",
+              "confidence": 0.97,
+              "explanation": "Section 11 details the specific procedures for liquidation, debt payment, and asset distribution upon termination, constituting post-termination obligations."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "merged_tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_license_grant",
+        "category": "License Grant",
+        "description": "Identifies if the contract contains a license granted by one party to its counterparty regarding intellectual property, trademarks, software, or other rights, including the scope and limitations of such grants.",
+        "source_contracts": [
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Section 3. License Grant. Licensor hereby grants to Licensee a non-exclusive, non-transferable, royalty-free license to use the Licensor's trademarks, logos, and brand materials solely for the purpose of promoting the Products as described in Exhibit A.",
+          "output": {
+            "found": true,
+            "extracted_text": "Licensor hereby grants to Licensee a non-exclusive, non-transferable, royalty-free license to use the Licensor's trademarks, logos, and brand materials solely for the purpose of promoting the Products as described in Exhibit A.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_non_transferable_license",
+        "category": "Non-Transferable License",
+        "description": "Determines if the contract restricts the licensee from transferring, sublicensing, or assigning the granted license to third parties.",
+        "source_contracts": [
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "The License granted herein is non-transferable and may not be assigned, sublicensed, or transferred to any third party without the prior written consent of Licensor.",
+          "output": {
+            "found": true,
+            "extracted_text": "The License granted herein is non-transferable and may not be assigned, sublicensed, or transferred to any third party without the prior written consent of Licensor.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_affiliate_license_licensee",
+        "category": "Affiliate License-Licensee",
+        "description": "Determines if the license grant extends to the licensee and its affiliates, or if the licensee is permitted to sublicense to its affiliates.",
+        "source_contracts": [
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Licensee shall have the right to grant sublicenses to its Affiliates for the purpose of internal use only.",
+          "output": {
+            "found": true,
+            "extracted_text": "Licensee shall have the right to grant sublicenses to its Affiliates for the purpose of internal use only.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_irrevocable_or_perpetual_license",
+        "category": "Irrevocable or Perpetual License",
+        "description": "Identifies if the license grant is stated as irrevocable or perpetual, or if it lacks a defined termination mechanism, by looking for keywords like 'irrevocable', 'perpetual', or 'indefinite'.",
+        "source_contracts": [
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Section 3. License Grant. Licensor hereby grants to Licensee a worldwide, non-exclusive, irrevocable, perpetual, royalty-free license to use, reproduce, and distribute the Software.",
+          "output": {
+            "found": true,
+            "extracted_text": "irrevocable, perpetual",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_affiliate_license_licensor",
+        "category": "Affiliate License-Licensor",
+        "description": "Checks if the license grant extends to affiliates of the licensor or includes IP owned by affiliates of the licensor.",
+        "source_contracts": [
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "The Licensor hereby grants to Licensee a non-exclusive license to use the Licensed Technology, including any improvements thereto, and such license shall extend to affiliates of the Licensor.",
+          "output": {
+            "found": true,
+            "extracted_text": "such license shall extend to affiliates of the Licensor",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_unlimited_license",
+        "category": "Unlimited/All-You-Can-Eat-License",
+        "description": "Identifies if the contract grants an unlimited, enterprise-wide, or 'all-you-can-eat' usage license without specific quantity, scope, or volume caps.",
+        "source_contracts": [
+          "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content_License_Agreement",
+          "BANGIINC_05_25_2005-EX-10-Premium_Managed_Hosting_Agreement",
+          "BizzingoInc_20120322_8-K_EX-10.17_7504499_EX-10.17_Endorsement_Agreement",
+          "CHANGEPOINTCORP_03_08_2000-EX-10.6-LICENSE_AND_HOSTING_AGREEMENT",
+          "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT",
+          "CHIPMOSTECHNOLOGIESBERMUDALTD_04_18_2016-EX-4.72-Strategic_Alliance_Agreement",
+          "COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic_Alliance_Agreement",
+          "CORIOINC_07_20_2000-EX-10.5-LICENSE_AND_HOSTING_AGREEMENT",
+          "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING_AGREEMENT",
+          "DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUTSOURCING_AGREEMENT",
+          "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT",
+          "DYNTEKINC_07_30_1999-EX-10-ONLINE_HOSTING_AGREEMENT",
+          "ENERGYXXILTD_05_08_2015-EX-10.13-Transportation_AGREEMENT",
+          "FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY_AGREEMENT",
+          "FulucaiProductionsLtd_20131223_10-Q_EX-10.9_8368347_EX-10.9_Content_License_Agreement",
+          "GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY_AGREEMENT",
+          "HC2HOLDINGS,INC_05_14_2020-EX-10.1-COOPERATION_AGREEMENT",
+          "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "HPILHOLDING_01_07_2015-EX-99.1-COOPERATION_AGREEMENT",
+          "HertzGroupRealtyTrustInc_20190920_S-11A_EX-10.8_11816941_EX-10.8_Trademark_License_Agreement",
+          "INTERSECTENT,INC_05_11_2020-EX-10.1-SUPPLY_AGREEMENT",
+          "IbioInc_20200313_8-K_EX-10.1_12052678_EX-10.1_Development_Agreement",
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement",
+          "LECLANCHÉ_S.A._-_JOINT_DEVELOPMENT_AND_MARKETING_AGREEMENT",
+          "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR_AGREEMENT",
+          "LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET_CHANNEL_COOPERATION_AGREEMENT",
+          "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement",
+          "LifewayFoodsInc_20160316_10-K_EX-10.24_9489766_EX-10.24_Endorsement_Agreement",
+          "LinkPlusCorp_20050802_8-K_EX-10_3240252_EX-10_Affiliate_Agreement",
+          "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC_ALLIANCE_AGREEMENT",
+          "MARSHALLHOLDINGSINTERNATIONAL,INC_04_14_2004-EX-10.15-ENDORSEMENT_AGREEMENT",
+          "MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION_AGREEMENT",
+          "MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT_VENTURE_AGREEMENT",
+          "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC_ALLIANCE_AGREEMENT",
+          "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+          "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller_Agreement_Premier_Addendum",
+          "Magenta_Therapeutics,_Inc._-_Master_Development_and_Manufacturing_Agreement",
+          "Monsanto_Company_-_SECOND_A_R_EXCLUSIVE_AGENCY_AND_MARKETING_AGREEMENT_",
+          "MusclepharmCorp_20170208_10-KA_EX-10.38_9893581_EX-10.38_Co-Branding_Agreement",
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "NUVEEN_-_REMARKETING_AGREEMENT",
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+          "OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services_Agreement",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+          "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR_AGREEMENT",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark_License_Agreement",
+          "ParatekPharmaceuticalsInc_20170505_10-KA_EX-10.29_10323872_EX-10.29_Outsourcing_Agreement",
+          "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development_Agreement1",
+          "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development_Agreement",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "License Grant. Licensor hereby grants to Licensee a non-exclusive, worldwide, royalty-free, unlimited, enterprise-wide license to use, reproduce, and distribute the Licensed Materials for any and all purposes without restriction on the number of users, servers, or installations.",
+          "output": {
+            "found": true,
+            "extracted_text": "unlimited, enterprise-wide license... without restriction on the number of users, servers, or installations",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_source_code_escrow",
+        "category": "Source Code Escrow",
+        "description": "Determines if one party is required to deposit its source code into escrow with a third party, which can be released to the counterparty upon the occurrence of certain events (bankruptcy, insolvency, etc.).",
+        "source_contracts": [
+          "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content_License_Agreement",
+          "BANGIINC_05_25_2005-EX-10-Premium_Managed_Hosting_Agreement",
+          "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT",
+          "CHIPMOSTECHNOLOGIESBERMUDALTD_04_18_2016-EX-4.72-Strategic_Alliance_Agreement",
+          "COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic_Alliance_Agreement",
+          "CORIOINC_07_20_2000-EX-10.5-LICENSE_AND_HOSTING_AGREEMENT",
+          "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING_AGREEMENT",
+          "CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Maintenance_Agreement1",
+          "CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Maintenance_Agreement4",
+          "CerenceInc_20191002_8-K_EX-10.4_11827494_EX-10.4_Intellectual_Property_Agreement",
+          "DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUTSOURCING_AGREEMENT",
+          "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT",
+          "DYNTEKINC_07_30_1999-EX-10-ONLINE_HOSTING_AGREEMENT",
+          "ENERGYXXILTD_05_08_2015-EX-10.13-Transportation_AGREEMENT",
+          "FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY_AGREEMENT",
+          "GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY_AGREEMENT",
+          "HC2HOLDINGS,INC_05_14_2020-EX-10.1-COOPERATION_AGREEMENT",
+          "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING_AND_MANAGEMENT_AGREEMENT_(1)",
+          "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "HPILHOLDING_01_07_2015-EX-99.1-COOPERATION_AGREEMENT",
+          "HertzGroupRealtyTrustInc_20190920_S-11A_EX-10.8_11816941_EX-10.8_Trademark_License_Agreement",
+          "INTERSECTENT,INC_05_11_2020-EX-10.1-SUPPLY_AGREEMENT",
+          "IbioInc_20200313_8-K_EX-10.1_12052678_EX-10.1_Development_Agreement",
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement",
+          "LECLANCHÉ_S.A._-_JOINT_DEVELOPMENT_AND_MARKETING_AGREEMENT",
+          "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR_AGREEMENT",
+          "LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET_CHANNEL_COOPERATION_AGREEMENT",
+          "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement",
+          "LinkPlusCorp_20050802_8-K_EX-10_3240252_EX-10_Affiliate_Agreement",
+          "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC_ALLIANCE_AGREEMENT",
+          "MARSHALLHOLDINGSINTERNATIONAL,INC_04_14_2004-EX-10.15-ENDORSEMENT_AGREEMENT",
+          "MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION_AGREEMENT",
+          "MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT_VENTURE_AGREEMENT",
+          "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC_ALLIANCE_AGREEMENT",
+          "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+          "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller_Agreement_Premier_Addendum",
+          "Magenta_Therapeutics,_Inc._-_Master_Development_and_Manufacturing_Agreement",
+          "Monsanto_Company_-_SECOND_A_R_EXCLUSIVE_AGENCY_AND_MARKETING_AGREEMENT_",
+          "MusclepharmCorp_20170208_10-KA_EX-10.38_9893581_EX-10.38_Co-Branding_Agreement",
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "NUVEEN_-_REMARKETING_AGREEMENT",
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+          "OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services_Agreement",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR_AGREEMENT",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark_License_Agreement",
+          "ParatekPharmaceuticalsInc_20170505_10-KA_EX-10.29_10323872_EX-10.29_Outsourcing_Agreement",
+          "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development_Agreement1",
+          "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development_Agreement",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "In the event of a material breach by Licensor or the filing of bankruptcy proceedings against Licensor, Licensee shall have the right to receive the source code from the Escrow Agent.",
+          "output": {
+            "found": true,
+            "extracted_text": "In the event of a material breach by Licensor or the filing of bankruptcy proceedings against Licensor, Licensee shall have the right to receive the source code from the Escrow Agent.",
+            "confidence": 0.98
+          }
+        }
+      }
+    ],
+    "tool_stats": {
+      "total_unique_tools": 7,
+      "tools_by_category": {
+        "License Grant": 1,
+        "Non-Transferable License": 1,
+        "Post-Termination Services": 0,
+        "Affiliate License-Licensee": 1,
+        "Irrevocable or Perpetual License": 1,
+        "Affiliate License-Licensor": 1,
+        "Unlimited/All-You-Can-Eat-License": 1,
+        "Source Code Escrow": 1
+      }
+    }
+  },
+  "step3_skill_md": "# SKILL.md\n\n## Overview\nThis skill is designed to analyze commercial contracts for specific Intellectual Property (IP) and Licensing provisions. It identifies the existence, scope, and limitations of license grants, including restrictions on transferability, affiliate usage, duration (perpetual/irrevocable), volume (unlimited), and risk mitigation mechanisms like source code escrow.\n\nThe skill utilizes a suite of specialized tools to extract precise clauses and determine compliance with standard licensing frameworks.\n\n## Available Tools\n\n### 1. check_license_grant\n*   **Category:** License Grant\n*   **Description:** Identifies if the contract contains a license granted by one party to its counterparty regarding intellectual property, trademarks, software, or other rights. It extracts the scope and limitations of such grants.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean indicating if a license grant was identified.\n    *   `extracted_text`: The specific clause defining the license.\n    *   `confidence`: Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Use this as the primary entry point. If no license grant is found, subsequent license-specific tools may return false negatives or irrelevant results.\n*   **Example:**\n    *   *Input:* \"Section 3. License Grant. Licensor hereby grants to Licensee a non-exclusive, non-transferable, royalty-free license to use the Licensor's trademarks...\"\n    *   *Output:* `found: true`, `extracted_text: \"Licensor hereby grants to Licensee a non-exclusive, non-transferable, royalty-free license...\"`\n\n### 2. check_non_transferable_license\n*   **Category:** Non-Transferable License\n*   **Description:** Determines if the contract restricts the licensee from transferring, sublicensing, or assigning the granted license to third parties.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean indicating if transfer restrictions exist.\n    *   `extracted_text`: The clause restricting transfer/assignment.\n    *   `confidence`: Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Look for keywords like \"non-transferable,\" \"may not be assigned,\" \"no sublicense,\" or \"without prior written consent.\"\n*   **Example:**\n    *   *Input:* \"The License granted herein is non-transferable and may not be assigned, sublicensed, or transferred to any third party without the prior written consent of Licensor.\"\n    *   *Output:* `found: true`, `extracted_text: \"The License granted herein is non-transferable and may not be assigned...\"`\n\n### 3. check_affiliate_license_licensee\n*   **Category:** Affiliate License-Licensee\n*   **Description:** Determines if the license grant extends to the licensee and its affiliates, or if the licensee is permitted to sublicense to its affiliates.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean indicating if affiliate rights are granted to the licensee.\n    *   `extracted_text`: The clause permitting affiliate use or sublicensing.\n    *   `confidence`: Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Distinguish between general \"affiliates\" and specific \"subsidiaries.\" Look for phrases like \"Licensee and its Affiliates\" or \"right to grant sublicenses to its Affiliates.\"\n*   **Example:**\n    *   *Input:* \"Licensee shall have the right to grant sublicenses to its Affiliates for the purpose of internal use only.\"\n    *   *Output:* `found: true`, `extracted_text: \"Licensee shall have the right to grant sublicenses to its Affiliates...\"`\n\n### 4. check_irrevocable_or_perpetual_license\n*   **Category:** Irrevocable or Perpetual License\n*   **Description:** Identifies if the license grant is stated as irrevocable or perpetual, or if it lacks a defined termination mechanism.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean indicating if the license is perpetual/irrevocable.\n    *   `extracted_text`: The clause stating the duration or irrevocability.\n    *   `confidence`: Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Look for keywords like \"irrevocable,\" \"perpetual,\" \"indefinite,\" or \"shall survive termination.\"\n*   **Example:**\n    *   *Input:* \"Licensor hereby grants to Licensee a worldwide, non-exclusive, irrevocable, perpetual, royalty-free license...\"\n    *   *Output:* `found: true`, `extracted_text: \"irrevocable, perpetual\"`\n\n### 5. check_affiliate_license_licensor\n*   **Category:** Affiliate License-Licensor\n*   **Description:** Checks if the license grant extends to affiliates of the licensor or includes IP owned by affiliates of the licensor.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean indicating if licensor affiliates are included.\n    *   `extracted_text`: The clause extending rights to licensor affiliates.\n    *   `confidence`: Confidence score (0.0 - 1.0).\n*   **Usage Notes:** This is distinct from licensee affiliate rights. Look for \"Licensor and its Affiliates\" or \"IP owned by Licensor's affiliates.\"\n*   **Example:**\n    *   *Input:* \"The Licensor hereby grants to Licensee a non-exclusive license... and such license shall extend to affiliates of the Licensor.\"\n    *   *Output:* `found: true`, `extracted_text: \"such license shall extend to affiliates of the Licensor\"`\n\n### 6. check_unlimited_license\n*   **Category:** Unlimited/All-You-Can-Eat-License\n*   **Description:** Identifies if the contract grants an unlimited, enterprise-wide, or 'all-you-can-eat' usage license without specific quantity, scope, or volume caps.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean indicating if the license is unlimited.\n    *   `extracted_text`: The clause defining the unlimited scope.\n    *   `confidence`: Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Look for \"unlimited,\" \"enterprise-wide,\" \"without restriction on the number of users,\" or \"all-you-can-eat.\"\n*   **Example:**\n    *   *Input:* \"Licensor hereby grants to Licensee a non-exclusive, worldwide, royalty-free, unlimited, enterprise-wide license... without restriction on the number of users...\"\n    *   *Output:* `found: true`, `extracted_text: \"unlimited, enterprise-wide license... without restriction on the number of users...\"`\n\n### 7. check_source_code_escrow\n*   **Category:** Source Code Escrow\n*   **Description:** Determines if one party is required to deposit its source code into escrow with a third party, which can be released to the counterparty upon the occurrence of certain events (bankruptcy, insolvency, etc.).\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean indicating if escrow provisions exist.\n    *   `extracted_text`: The clause detailing the escrow arrangement.\n    *   `confidence`: Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Look for \"Escrow Agent,\" \"source code deposit,\" \"bankruptcy,\" \"insolvency,\" or \"release conditions.\"\n*   **Example:**\n    *   *Input:* \"In the event of a material breach by Licensor or the filing of bankruptcy proceedings against Licensor, Licensee shall have the right to receive the source code from the Escrow Agent.\"\n    *   *Output:* `found: true`, `extracted_text: \"In the event of a material breach... Licensee shall have the right to receive the source code from the Escrow Agent.\"`\n\n## Review Workflow\n\n1.  **Initial Scan (License Grant):**\n    *   Run `check_license_grant` first.\n    *   If `found` is `false`, the contract likely does not contain a standard IP license. You may skip subsequent license-specific checks unless the user specifically requests a search for implied licenses or other IP transfers.\n    *   If `found` is `true`, proceed to step 2.\n\n2.  **Scope and Limitation Analysis:**\n    *   Run `check_non_transferable_license` to identify assignment restrictions.\n    *   Run `check_affiliate_license_licensee` to see if the licensee can share rights with their group.\n    *   Run `check_affiliate_license_licensor` to see if the licensor's group IP is included.\n    *   Run `check_unlimited_license` to check for volume caps.\n    *   Run `check_irrevocable_or_perpetual_license` to determine duration risks.\n\n3.  **Risk Mitigation Check:**\n    *   Run `check_source_code_escrow` to identify if source code protection mechanisms are in place.\n\n4.  **Synthesis:**\n    *   Aggregate the results from all tools.\n    *   If multiple tools return `found: true`, compile the extracted texts into the final evidence list.\n    *   If a tool returns `found: false`, note that the specific provision was not explicitly found (though it may be implied by general terms, the tool focuses on explicit clauses).\n\n## Output Format\n\nThe final output must be a JSON object conforming to the following schema:\n\n```json\n{\n  \"status\": \"success\",\n  \"answer\": {\n    \"license_grant\": {\n      \"found\": true,\n      \"extracted_text\": \"Licensor hereby grants to Licensee a non-exclusive...\",\n      \"confidence\": 0.98\n    },\n    \"non_transferable\": {\n      \"found\": true,\n      \"extracted_text\": \"The License granted herein is non-transferable...\",\n      \"confidence\": 0.98\n    },\n    \"affiliate_licensee\": {\n      \"found\": false,\n      \"extracted_text\": null,\n      \"confidence\": 0.0\n    },\n    \"affiliate_licensor\": {\n      \"found\": false,\n      \"extracted_text\": null,\n      \"confidence\": 0.0\n    },\n    \"unlimited_license\": {\n      \"found\": false,\n      \"extracted_text\": null,\n      \"confidence\": 0.0\n    },\n    \"irrevocable_perpetual\": {\n      \"found\": false,\n      \"extracted_text\": null,\n      \"confidence\": 0.0\n    },\n    \"source_code_escrow\": {\n      \"found\": false,\n      \"extracted_text\": null,\n      \"confidence\": 0.0\n    }\n  },\n  \"evidence_unit_ids\": [\"tool_001\", \"tool_002\"],\n  \"source_contract_ids\": [\"CONTRACT_ID_123\"],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n*   **status**: \"success\" if the analysis completed, \"error\" if inputs were invalid.\n*   **answer**: An object containing the results for each category. Each category object contains `found` (boolean), `extracted_text` (string or null), and `confidence` (float).\n*   **evidence_unit_ids**: List of tool IDs that returned `found: true`.\n*   **source_contract_ids**: List of contract IDs analyzed.\n*   **missing_inputs**: List of any required inputs that were missing (e.g., if contract text was empty).\n*   **human_review_required**: Boolean indicating if the confidence scores were low or if conflicting clauses were detected.\n\n## Boundary Rules\n\n*   **Do Not Infer:** Do not infer license grants or restrictions if they are not explicitly stated in the text. If the contract is silent on transferability, `check_non_transferable_license` should return `found: false` (or indicate \"not specified\" if the schema allows, but based on the tool spec, it returns `found: false` if the restriction clause is not found).\n*   **Affiliate Distinction:** Strictly distinguish between `check_affiliate_license_licensee` (Licensee's affiliates) and `check_affiliate_license_licensor` (Licensor's affiliates). Do not mix these results.\n*   **Perpetual vs. Term:** A license with a long term (e.g., 10 years) is not \"perpetual.\" Only mark `check_irrevocable_or_perpetual_license` as `found: true` if the text explicitly uses \"perpetual,\" \"irrevocable,\" or \"indefinite.\"\n*   **Unlimited vs. Enterprise:** \"Enterprise-wide\" is often synonymous with \"unlimited\" in this context. If the text says \"enterprise-wide\" without user caps, treat it as unlimited.\n*   **Escrow Specificity:** Only mark `check_source_code_escrow` as `found: true` if there is a mention of a third-party escrow agent or a specific mechanism for releasing source code upon trigger events. General \"source code access\" clauses without escrow mechanics should not trigger this tool."
+}

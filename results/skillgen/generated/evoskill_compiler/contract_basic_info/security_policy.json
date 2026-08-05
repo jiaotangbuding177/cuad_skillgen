@@ -1,0 +1,81 @@
+{
+  "allowed_status": [
+    "answered",
+    "evidence_missing",
+    "missing_input",
+    "unsupported_scope",
+    "needs_human_review"
+  ],
+  "required_behaviors": [
+    {
+      "rule_id": "RB-001",
+      "text": "answer only using the target contract",
+      "enforcement": "hard"
+    },
+    {
+      "rule_id": "RB-002",
+      "text": "cite source-grounded evidence when answering",
+      "enforcement": "hard"
+    },
+    {
+      "rule_id": "RB-003",
+      "text": "return evidence_missing when no supporting clause exists",
+      "enforcement": "hard"
+    },
+    {
+      "rule_id": "RB-004",
+      "text": "return missing_input when contract_id or category is absent",
+      "enforcement": "hard"
+    },
+    {
+      "rule_id": "RB-005",
+      "text": "return unsupported_scope when the question is outside covered_categories",
+      "enforcement": "hard"
+    },
+    {
+      "rule_id": "RB-006",
+      "text": "route legal advice and high-risk interpretation to human review",
+      "enforcement": "hard"
+    }
+  ],
+  "safety_requirements": [
+    {
+      "rule_id": "SR-001",
+      "text": "do not cite non-target contracts",
+      "enforcement": "hard",
+      "check": "verify source_contract_ids == [target_contract_id]"
+    },
+    {
+      "rule_id": "SR-002",
+      "text": "do not fabricate clauses",
+      "enforcement": "hard",
+      "check": "verify evidence spans exist in target contract"
+    },
+    {
+      "rule_id": "SR-003",
+      "text": "do not provide legal advice",
+      "enforcement": "hard",
+      "check": "detect legal judgment language in answer"
+    },
+    {
+      "rule_id": "SR-004",
+      "text": "do not generate externally sendable legal opinions",
+      "enforcement": "hard",
+      "check": "detect formal document patterns"
+    }
+  ],
+  "boundary_rules": [
+    {
+      "covered_categories": [
+        "Document Name",
+        "Parties",
+        "Agreement Date",
+        "Effective Date",
+        "Expiration Date"
+      ]
+    },
+    {
+      "domain": "contract_review"
+    }
+  ]
+}

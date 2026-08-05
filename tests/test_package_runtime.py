@@ -3,6 +3,7 @@ import os
 import sys
 import tempfile
 import unittest
+from collections import Counter
 
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
@@ -13,15 +14,19 @@ from runtime.package_agent import (
     IncrementalPackageRunner,
     PackageAwareAgent,
     SkillPackage,
+    build_contract_query,
     chunk_contract,
 )
 from runtime.package_evaluator import (
     GoldEvidenceMapper,
     compute_evidence_f1,
+    compute_status_metrics,
+    evaluate_case,
     evaluate_methods,
     load_latest_results,
 )
 from run_package_runtime import ensure_run_config
+from evaluate_semantic_evidence import evidence_label
 from baselines.document_tool_maker import (
     _append_checkpoint,
     _initialize_step1_checkpoint,
@@ -62,6 +67,30 @@ class PackageRuntimeTests(unittest.TestCase):
         self.assertGreater(len(chunks), 2)
         for chunk in chunks:
             self.assertEqual(text[chunk.span_start:chunk.span_end], chunk.text)
+
+    def test_contract_query_variants_isolate_knowledge(self):
+        task_only = build_contract_query(
+            "Assignment", "Is assignment allowed?", ["GUIDANCE"],
+            [{"text": "ATOM", "interpretation": "RULE"}],
+            [{"name": "TOOL", "description": "SPEC"}],
+            "task_only",
+        )
+        package_only = build_contract_query(
+            "Assignment", "Is assignment allowed?", ["GUIDANCE"],
+            [{"text": "ATOM", "interpretation": "RULE"}],
+            [{"name": "TOOL", "description": "SPEC"}],
+            "package_without_knowledge",
+        )
+        full = build_contract_query(
+            "Assignment", "Is assignment allowed?", ["GUIDANCE"],
+            [{"text": "ATOM", "interpretation": "RULE"}],
+            [{"name": "TOOL", "description": "SPEC"}],
+            "full",
+        )
+        self.assertNotIn("GUIDANCE", task_only)
+        self.assertIn("GUIDANCE", package_only)
+        self.assertNotIn("ATOM", package_only)
+        self.assertIn("ATOM", full)
 
     def test_evoskill_package_reads_atoms_and_policy(self):
         case_id = "assignment_and_control"
@@ -120,6 +149,33 @@ class PackageRuntimeTests(unittest.TestCase):
         self.assertEqual(metrics["recall"], 0.5)
         self.assertEqual(metrics["f1"], 0.5)
 
+    def test_status_metrics_correct_class_imbalance(self):
+        confusion = {
+            "answered": {"answered": 1, "evidence_missing": 1},
+            "evidence_missing": {"evidence_missing": 8},
+            "missing_input": {"missing_input": 1},
+            "unsupported_scope": {"answered": 1},
+            "needs_human_review": {"needs_human_review": 1},
+        }
+        metrics = compute_status_metrics({
+            gold: Counter(predictions)
+            for gold, predictions in confusion.items()
+        })
+        self.assertEqual(metrics["status_balanced_accuracy"], 0.7)
+        self.assertAlmostEqual(metrics["status_macro_f1"], 0.6882, places=4)
+        self.assertEqual(metrics["status_per_class"]["answered"]["recall"], 0.5)
+
+    def test_semantic_evidence_label_is_conservative(self):
+        self.assertEqual(evidence_label({
+            "faithfulness": 1.0, "semantic_correctness": 0.9
+        }), "valid")
+        self.assertEqual(evidence_label({
+            "faithfulness": 0.9, "semantic_correctness": 0.5
+        }), "partial")
+        self.assertEqual(evidence_label({
+            "faithfulness": 0.0, "semantic_correctness": 1.0
+        }), "invalid")
+
     def test_gold_mapping_is_one_to_one(self):
         mapper = GoldEvidenceMapper(self.loader)
         unit = self.loader.load_evidence_units("assignment_and_control")[0]
@@ -133,6 +189,25 @@ class PackageRuntimeTests(unittest.TestCase):
         )
         self.assertEqual(matched, {unit["evidence_unit_id"]})
         self.assertEqual(len(details), 1)
+
+    def test_containment_mapping_accepts_prediction_covering_gold(self):
+        mapper = GoldEvidenceMapper(self.loader)
+        unit = self.loader.load_evidence_units("assignment_and_control")[0]
+        evidence = [{
+            "span_start": max(0, unit["answer_start"] - 1000),
+            "span_end": unit["answer_end"] + 1000,
+            "text": "unrelated wrapper text",
+        }]
+        strict, _ = mapper.map_evidence(
+            unit["case_id"], unit["contract_id"], unit["category"], evidence
+        )
+        contained, details = mapper.map_evidence(
+            unit["case_id"], unit["contract_id"], unit["category"], evidence,
+            containment_aware=True,
+        )
+        self.assertEqual(strict, set())
+        self.assertEqual(contained, {unit["evidence_unit_id"]})
+        self.assertTrue(details[0]["gold_fully_contained"])
 
     def test_latest_append_record_wins(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -185,6 +260,34 @@ class PackageRuntimeTests(unittest.TestCase):
             self.assertEqual(evaluations[0]["result_coverage"], 0.0)
             self.assertFalse(evaluations[0]["complete"])
             self.assertEqual(evaluations[0]["evidence_f1"], 0.0)
+
+    def test_boundary_metrics_split_no_answer_and_governance(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = os.path.join(directory, "results.jsonl")
+            records = [
+                {"_task_id": "t1", "_gold_status": "evidence_missing", "status": "evidence_missing"},
+                {"_task_id": "t2", "_gold_status": "evidence_missing", "status": "answered"},
+                {"_task_id": "t3", "_gold_status": "missing_input", "status": "missing_input"},
+                {"_task_id": "t4", "_gold_status": "needs_human_review", "status": "answered"},
+            ]
+            with open(path, "w", encoding="utf-8") as f:
+                for record in records:
+                    f.write(json.dumps(record) + "\n")
+
+            metrics = evaluate_case(path, GoldEvidenceMapper(self.loader), expected_tasks=4)
+
+            self.assertEqual(metrics["no_answer_tasks"], 2)
+            self.assertEqual(metrics["governance_boundary_tasks"], 2)
+            self.assertEqual(metrics["boundary_tasks"], 4)
+            self.assertEqual(metrics["no_answer_correct"], 0.5)
+            self.assertEqual(metrics["governance_boundary_correct"], 0.5)
+            self.assertEqual(metrics["boundary_correct"], 0.5)
+            self.assertEqual(metrics["legacy_boundary_correct"], 0.5)
+            self.assertIn("status_macro_f1", metrics)
+            self.assertIn("status_balanced_accuracy", metrics)
+            self.assertEqual(
+                metrics["status_per_class"]["evidence_missing"]["support"], 2
+            )
 
     def test_run_config_prevents_mixed_incremental_results(self):
         with tempfile.TemporaryDirectory() as directory:

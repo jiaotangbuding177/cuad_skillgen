@@ -1,0 +1,97 @@
+{
+  "method": "document_tool_maker",
+  "case_id": "contract_basic_info",
+  "total_tools": 4,
+  "tools": [
+    {
+      "tool_id": "tool_001",
+      "name": "check_document_name",
+      "category": "Document Name",
+      "description": "Extracts the formal title or name of the agreement from the document header or introductory clauses.",
+      "source_contracts": [
+        "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+        "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+        "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+        "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+        "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+      ],
+      "best_example": {
+        "input": "CONTENT LICENSE AGREEMENT\n\nThis Content License Agreement (the \"Agreement\") is entered into as of September 8, 2005...",
+        "output": {
+          "found": true,
+          "extracted_text": "CONTENT LICENSE AGREEMENT",
+          "confidence": 0.98
+        }
+      }
+    },
+    {
+      "tool_id": "tool_001",
+      "name": "check_parties",
+      "category": "Parties",
+      "description": "Identifies the legal entities or individuals entering into the agreement, including their roles, corporate structure, jurisdiction, and defined short names.",
+      "source_contracts": [
+        "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+        "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+        "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+        "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+        "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+        "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+        "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+        "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+        "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+        "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+        "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+        "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+        "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+        "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+        "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+      ],
+      "best_example": {
+        "input": "This Agreement is entered into by and between Virgin Galactic Holdings, Inc., a Delaware corporation, and [Counterparty Name], a [Jurisdiction] entity.",
+        "output": {
+          "found": true,
+          "extracted_text": "Virgin Galactic Holdings, Inc., a Delaware corporation; [Counterparty Name], a [Jurisdiction] entity",
+          "confidence": 0.98
+        }
+      }
+    },
+    {
+      "tool_id": "tool_001",
+      "name": "check_agreement_date",
+      "category": "Agreement Date",
+      "description": "Extracts the date on which the contract or amendment was made and entered into.",
+      "source_contracts": [
+        "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+        "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+      ],
+      "best_example": {
+        "input": "This Agreement is entered into as of April 16, 2014.",
+        "output": {
+          "found": true,
+          "extracted_text": "April 16, 2014",
+          "confidence": 0.98
+        }
+      }
+    },
+    {
+      "tool_id": "tool_001",
+      "name": "check_expiration_date",
+      "category": "Expiration Date",
+      "description": "Determines the expiration date of the initial term or identifies if the agreement is perpetual, often found in amendment sections modifying term dates.",
+      "source_contracts": [
+        "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+        "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+      ],
+      "best_example": {
+        "input": "The Initial Term of this Agreement shall commence on the Effective Date and shall expire on December 31, 2025, unless earlier terminated in accordance with Section 8.",
+        "output": {
+          "found": true,
+          "extracted_text": "December 31, 2025",
+          "confidence": 0.98
+        }
+      }
+    }
+  ]
+}

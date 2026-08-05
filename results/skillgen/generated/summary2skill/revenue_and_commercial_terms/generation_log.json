@@ -1,0 +1,287 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "Revenue/Profit Sharing",
+          "found": true,
+          "summary": "i-Escrow is required to pay 2TheMart advertising fees calculated as a percentage of the average transaction value for each transaction inquiry generated.",
+          "key_terms": [
+            "advertising fees",
+            "Transaction Inquiries",
+            "0.025%",
+            "average Transaction"
+          ],
+          "source_paragraph": "5.1 ADVERTISING FEES.  After the Launch Date, i-Escrow shall pay 2TheMart advertising fees based on the number of Transaction Inquiries. This advertising fees shall consist of a per Transaction Inquiry amount calculated by multiplying 0.025% by the amount of the average Transaction from all Customers in the preceding quarter."
+        },
+        {
+          "category": "Price Restrictions",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Minimum Commitment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Volume Restriction",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Revenue/Profit Sharing",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Price Restrictions",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Minimum Commitment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Volume Restriction",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Revenue/Profit Sharing",
+          "found": true,
+          "summary": "The agreement specifies that all income, credits, losses, and deductions are shared equally (50/50) between the two joint venturers.",
+          "key_terms": [
+            "Division of Income and Losses",
+            "50% to Collectible Concepts Group, Inc.",
+            "50% to Pivotal Self Service Tech, Inc.",
+            "shared among the Joint Venturers"
+          ],
+          "source_paragraph": "6.   Division of Income and Losses. All income and credits, and all losses and      deductions shall be owned and shared among the Joint Venturers as follows:     50% to Collectible Concepts Group, Inc.     50% to Pivotal Self Service Tech, Inc."
+        },
+        {
+          "category": "Price Restrictions",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Minimum Commitment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Volume Restriction",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "Revenue/Profit Sharing",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Price Restrictions",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Minimum Commitment",
+          "found": true,
+          "summary": "ADMA is obligated to supply a minimum number of batches of Product during the specified period, with liquidated damages applied for failure to meet this volume.",
+          "key_terms": [
+            "Minimum Volume",
+            "Batches of Product",
+            "liquidated damages",
+            "Updated Supply Plan"
+          ],
+          "source_paragraph": "The Parties agree to amend the Agreement to impose on ADMA an obligation to supply a minimum of [***] Batches of Product for that period stalling from Q4 2018 up to Q4 2019, as further specified in Exhibit A attached hereto. Should ADMA fail to supply a minimum of [***] Batches of Product (the \"Minimum Volume\") of Product during the time period as specified in this Amendment #3, ADMA agrees that Sanofi Pasteur shall be entitled to obtain from ADMA as liquidated damages, and not a penalty, amounting to $[***] ([***]) USD."
+        },
+        {
+          "category": "Volume Restriction",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Revenue/Profit Sharing",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Price Restrictions",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Minimum Commitment",
+          "found": true,
+          "summary": "The agreement stipulates that if the Company fails to sell a minimum of 708,050 Shares, the agreement shall terminate and subscriptions must be refunded.",
+          "key_terms": [
+            "minimum of 708,050 Shares",
+            "terminate",
+            "refund"
+          ],
+          "source_paragraph": "In the event the Company is unable to sell a minimum of 708,050 Shares within the period herein provided, this Agreement shall terminate and the Company shall refund to any persons who have subscribed for any of the Shares, the full amount which it may have received from them plus accrued interest as set forth in the Prospectus; and none of the parties to this Agreement shall have any obligation to the other parties hereunder, except as set forth in this Section 2 and in Sections 6, 8 and 9 hereof."
+        },
+        {
+          "category": "Volume Restriction",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "Revenue/Profit Sharing": {
+      "found_count": 86,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Revenue sharing splits (e.g., 50/50, tiered percentages) for joint ventures, co-branding, or collaborative development.",
+        "Commission structures for sales, referrals, or lead generation.",
+        "Royalty payments calculated as a percentage of Net Sales or Gross Receipts, common in licensing and distribution agreements.",
+        "Fixed fees or bounties per transaction or unit sold.",
+        "Minimum guarantees or advances that are recoupable against future royalties or revenue shares."
+      ],
+      "example_extractions": [
+        "Zynga is required to pay WPT a royalty equal to ten percent of the cumulative Net Revenue generated from the WPT-branded Zynga Poker Tournament Mode.",
+        "The agreement specifies that all income, credits, losses, and deductions are shared equally (50/50) between the two joint venturers.",
+        "The franchisee is required to pay a monthly continuing fee equal to 5% of Gross Sales and contribute 3% of Gross Sales to an advertising fund.",
+        "Capsugel is required to pay Cardax a royalty based on Adjusted Net Sales, and the parties share costs associated with marketing activities.",
+        "The Franchisee is required to pay a continuing royalty of 7% of Net Revenues and an Advertising Fund Fee of 1% of Net Revenues to Pretzel Time.",
+        "The contract establishes a revenue sharing model where Kubient and the Customer share revenue generated from consumer offerings based on specific thresholds and percentages defined in Schedule 1."
+      ],
+      "variations": [
+        "Some agreements define revenue sharing based on 'Gross Profit' rather than Gross Sales or Net Sales.",
+        "Certain contracts include complex tiered structures where the percentage increases or decreases based on volume thresholds (e.g., subscriber counts or cumulative sales).",
+        "Some agreements involve sharing of specific types of revenue only, such as advertising revenue, policy rebates, or damages from enforcement actions."
+      ]
+    },
+    "Price Restrictions": {
+      "found_count": 57,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Tying price increases to external indices such as CPI, Retail Price Index, or commodity prices (e.g., Brent crude oil).",
+        "Requirements for advance written notice (e.g., 30, 90 days) before implementing price increases.",
+        "Most Favored Nation (MFN) clauses ensuring prices are not less favorable than those offered to other partners.",
+        "Requirements for mutual agreement or good faith negotiation for price changes.",
+        "Mandates for mutual agreement or good faith negotiation before prices can be changed."
+      ],
+      "example_extractions": [
+        "The contract restricts the purchase price of equipment by requiring it to not exceed the then-current Fair Market Value.",
+        "The contract restricts TrueLink from increasing hosting service costs for one year and mandates that rates charged to the Client do not exceed those charged to any other party.",
+        "The contract restricts VIP's ability to increase hourly rates for additional services by capping annual increases at ten percent and requiring thirty days' prior notice.",
+        "The contract restricts price adjustments to specific triggers, such as changes in the Consumer Price Index (CPI) or raw material costs, requiring mutual written agreement and prior notice for any modifications to the pricing model.",
+        "The contract restricts the manufacturer's ability to raise prices by limiting adjustments to no more than once per year and requiring advance notice.",
+        "The contract grants NETGEAR the unilateral right to modify the Price List and product prices, subject to providing Distributor with thirty days' written notice for price increases or product deletions."
+      ],
+      "variations": [
+        "Some contracts allow unilateral price changes at the provider's sole discretion, provided notice is given.",
+        "Certain agreements tie price adjustments to specific cost drivers, such as raw material fluctuations exceeding a certain percentage.",
+        "Some contracts restrict the buyer's ability to resell at prices other than the manufacturer's suggested retail price."
+      ]
+    },
+    "Minimum Commitment": {
+      "found_count": 84,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Performance milestones (e.g., number of events, impressions, or sales targets) required to maintain exclusivity or eligibility for bonuses.",
+        "Minimum performance goals, such as a minimum number of sales, subscribers, or impressions.",
+        "Termination clauses triggered if minimum sales thresholds (e.g., in IPO agency agreements) are not met.",
+        "Minimum purchase obligations defined by dollar amount, unit quantity, or batch size.",
+        "Minimum purchase quantities or volumes (e.g., minimum number of units, batches, or lbs) required per year or term."
+      ],
+      "example_extractions": [
+        "ADMA is obligated to supply a minimum number of batches of Product during the specified period, with liquidated damages applied for failure to meet this volume.",
+        "The agreement stipulates that if the Company fails to sell a minimum of 708,050 Shares, the agreement shall terminate and subscriptions must be refunded.",
+        "Zynga is obligated to pay WPT an Annual Minimum Guarantee of three million U.S. dollars per year, payable in semi-annual installments.",
+        "The contract establishes a binding purchase obligation for the quantities forecasted in the initial three months of each rolling forecast and specifies minimum yearly purchase units in Exhibit A.",
+        "The Distributor is obligated to purchase a minimum agreed quantity of products in the first, second, and third years of the Agreement, as detailed in the sales plans.",
+        "The contract establishes a minimum commitment for NICE to purchase Dead, Slow Moving, and Excess Inventory if these exceed 15% of the Monthly Consideration."
+      ],
+      "variations": [
+        "Some commitments are defined as 'as-ordered' with no guaranteed minimum, explicitly stating no obligation to purchase.",
+        "Certain agreements include 'make-up' provisions where unmet minimums from one period can be carried over to the next.",
+        "Some minimums are conditional, such as requiring a minimum sales force size or specific marketing activities rather than just financial or volume metrics."
+      ]
+    },
+    "Volume Restriction": {
+      "found_count": 29,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Forecast-based restrictions where orders exceeding forecasts by a certain percentage are subject to discretion.",
+        "Limits on the number of items, impressions, or transactions allowed under standard terms.",
+        "Tiered pricing or fee structures where rates change based on volume thresholds.",
+        "Thresholds that trigger additional fees, overage charges, or renegotiation (e.g., bandwidth overages, excess hours).",
+        "Caps on maximum order quantities or capacity limitations (e.g., maximum units per quarter or year)."
+      ],
+      "example_extractions": [
+        "The agreement imposes a cap on the aggregate purchase price for all equipment, limiting it to the Maximum Aggregate Capitalized Lessor's Cost.",
+        "The contract imposes a fee for customer service support if the ISP does not reach a minimum threshold of 250 users within the first 90 days.",
+        "The contract establishes specific capacity limitations that restrict the maximum number of units that can be ordered in a given time period.",
+        "FCC is not obligated to accept purchase orders that exceed the Maximum Quantity or specific quarterly thresholds unless the parties agree in writing to purchase quantities over the Maximum Quantity.",
+        "The contract defines specific revenue thresholds for different service types, above which the revenue share percentage changes, effectively altering the cost structure based on volume.",
+        "The contract establishes a tiered fee structure where the fee rate per million traded decreases as the Monthly Notional Volume increases, effectively restricting or adjusting pricing based on volume thresholds."
+      ],
+      "variations": [
+        "Some restrictions are soft caps, requiring 'commercially reasonable efforts' to fulfill excess demand rather than strict prohibitions.",
+        "Certain volume restrictions are tied to pricing tiers, where the price per unit changes after a specific volume threshold is crossed.",
+        "Some agreements include exclusivity triggers based on volume, such as requiring exclusive service if a certain number of units is processed."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md: Revenue and Commercial Terms Review\n\n## Covered Categories\n\n1.  **Revenue/Profit Sharing**\n    *   **Discovery Frequency:** 28.1% of contracts (86/306)\n    *   **Common Patterns:** Royalty payments based on Net/Gross Sales, fixed commission structures, joint venture profit splits (e.g., 50/50), and minimum guarantees/advances.\n\n2.  **Minimum Commitment**\n    *   **Discovery Frequency:** 27.5% of contracts (84/306)\n    *   **Common Patterns:** Minimum purchase obligations (dollar/unit), performance milestones for exclusivity, and termination triggers for failing to meet sales thresholds.\n\n3.  **Price Restrictions**\n    *   **Discovery Frequency:** 18.6% of contracts (57/306)\n    *   **Common Patterns:** CPI/Index-linked adjustments, Most Favored Nation (MFN) clauses, advance notice requirements for changes, and caps on annual increase percentages.\n\n4.  **Volume Restriction**\n    *   **Discovery Frequency:** 9.5% of contracts (29/306)\n    *   **Common Patterns:** Tiered pricing structures, capacity caps/maximum order limits, forecast-based discretion for excess orders, and overage fees.\n\n## Common Patterns\n\n### Revenue/Profit Sharing\n*   **Royalty Calculations:** Payments defined as a percentage of \"Net Sales,\" \"Gross Receipts,\" or \"Net Revenue.\"\n    *   *Example:* \"Zynga is required to pay WPT a royalty equal to ten percent of the cumulative Net Revenue...\"\n*   **Joint Venture Splits:** Equal or defined splits of income, credits, and losses.\n    *   *Example:* \"...all income, credits, losses, and deductions are shared equally (50/50) between the two joint venturers.\"\n*   **Recoupable Advances:** Minimum guarantees that are credited against future royalties.\n    *   *Example:* \"Zynga is obligated to pay WPT an Annual Minimum Guarantee of three million U.S. dollars... payable in semi-annual installments.\"\n\n### Price Restrictions\n*   **Index-Linked Adjustments:** Price changes tied to external metrics like CPI or commodity prices.\n    *   *Example:* \"...restricts price adjustments to specific triggers, such as changes in the Consumer Price Index (CPI)...\"\n*   **MFN Clauses:** Guarantees that prices are not less favorable than those offered to other partners.\n    *   *Example:* \"...rates charged to the Client do not exceed those charged to any other party.\"\n*   **Notice and Cap Requirements:** Limits on frequency (e.g., once per year) and mandatory advance notice (e.g., 30-90 days).\n    *   *Example:* \"...capping annual increases at ten percent and requiring thirty days' prior notice.\"\n\n### Minimum Commitment\n*   **Purchase Obligations:** Binding requirements to buy specific quantities or dollar amounts.\n    *   *Example:* \"The Distributor is obligated to purchase a minimum agreed quantity of products in the first, second, and third years...\"\n*   **Performance Milestones:** Targets required to maintain rights (e.g., exclusivity) or avoid termination.\n    *   *Example:* \"...if the Company fails to sell a minimum of 708,050 Shares, the agreement shall terminate...\"\n*   **Liquidated Damages/Make-up Provisions:** Penalties for missing targets or options to carry over unmet minimums.\n    *   *Example:* \"...liquidated damages applied for failure to meet this volume.\"\n\n### Volume Restriction\n*   **Tiered Pricing:** Rates change based on volume thresholds (increasing or decreasing).\n    *   *Example:* \"...tiered fee structure where the fee rate per million traded decreases as the Monthly Notional Volume increases...\"\n*   **Capacity Caps:** Maximum limits on orders or usage.\n    *   *Example:* \"FCC is not obligated to accept purchase orders that exceed the Maximum Quantity... unless the parties agree in writing...\"\n*   **Forecast Discretion:** Provider discretion over orders exceeding forecasts.\n    *   *Example:* \"...orders exceeding forecasts by a certain percentage are subject to discretion.\"\n\n## Review Checklist\n\n*   **Revenue/Profit Sharing:**\n    *   [ ] Is the base for calculation clearly defined (Gross vs. Net Sales/Revenue)?\n    *   [ ] Are there minimum guarantees or advances, and are they recoupable?\n    *   [ ] Is the payment frequency and reporting mechanism specified?\n*   **Price Restrictions:**\n    *   [ ] Are price increases capped by a percentage or tied to an external index?\n    *   [ ] Is there a Most Favored Nation (MFN) clause protecting against higher pricing than competitors?\n    *   [ ] What is the required advance notice period for any price change?\n*   **Minimum Commitment:**\n    *   [ ] Are there specific minimum purchase volumes or dollar amounts per period?\n    *   [ ] What are the consequences of failing to meet these minimums (termination, damages, loss of exclusivity)?\n    *   [ ] Are there \"make-up\" provisions allowing unmet minimums to be carried forward?\n*   **Volume Restriction:**\n    *   [ ] Are there maximum order limits or capacity constraints?\n    *   [ ] Do pricing tiers change at specific volume thresholds?\n    *   [ ] Is there a process for handling orders that exceed forecasts or caps (e.g., mutual agreement required)?\n\n## Evidence Extraction Rules\n\n1.  **Locate Financial Sections:** Search for sections titled \"Payment,\" \"Fees,\" \"Royalties,\" \"Pricing,\" \"Purchase Obligations,\" or \"Commercial Terms.\"\n2.  **Identify Keywords:**\n    *   *Revenue Sharing:* \"royalty,\" \"percentage of,\" \"net sales,\" \"gross receipts,\" \"revenue share,\" \"joint venture,\" \"profit split.\"\n    *   *Price Restrictions:* \"price increase,\" \"CPI,\" \"index,\" \"most favored nation,\" \"MFN,\" \"notice,\" \"cap,\" \"adjustment.\"\n    *   *Minimum Commitment:* \"minimum purchase,\" \"minimum order,\" \"guarantee,\" \"milestone,\" \"threshold,\" \"termination if,\" \"liquidated damages.\"\n    *   *Volume Restriction:* \"maximum quantity,\" \"cap,\" \"tier,\" \"overage,\" \"forecast,\" \"excess,\" \"capacity.\"\n3.  **Extract Context:** When extracting evidence, include the specific metric (e.g., \"5% of Gross Sales\"), the condition (e.g., \"if volume exceeds 1M units\"), and the consequence (e.g., \"fee increases by 2%\").\n4.  **Handle Variations:** Note if definitions vary (e.g., \"Gross Profit\" vs. \"Net Sales\") or if structures are complex (e.g., tiered percentages based on subscriber counts).\n\n## Output Format\n\n```json\n{\n  \"status\": \"success|failure\",\n  \"answer\": {\n    \"revenue_sharing\": {\n      \"exists\": true|false,\n      \"details\": \"string describing the sharing model (e.g., '10% royalty on Net Revenue')\",\n      \"base_metric\": \"string (e.g., 'Net Sales', 'Gross Receipts')\"\n    },\n    \"price_restrictions\": {\n      \"exists\": true|false,\n      \"mechanism\": \"string (e.g., 'CPI-linked', 'MFN clause', 'Fixed Cap')\",\n      \"notice_period\": \"string (e.g., '30 days')\",\n      \"cap_percentage\": \"number|null\"\n    },\n    \"minimum_commitment\": {\n      \"exists\": true|false,\n      \"type\": \"string (e.g., 'Purchase Volume', 'Sales Target')\",\n      \"amount\": \"string (e.g., '708,050 Shares', '$3M Annual')\",\n      \"consequence\": \"string (e.g., 'Termination', 'Liquidated Damages')\"\n    },\n    \"volume_restriction\": {\n      \"exists\": true|false,\n      \"type\": \"string (e.g., 'Tiered Pricing', 'Capacity Cap')\",\n      \"threshold\": \"string (e.g., '1M units')\",\n      \"impact\": \"string (e.g., 'Price decrease', 'Mutual agreement required')\"\n    }\n  },\n  \"evidence_unit_ids\": [\"string\", \"string\"],\n  \"source_contract_ids\": [\"string\"],\n  \"missing_inputs\": [\"string\"],\n  \"human_review_required\": true|false\n}\n```\n\n## Boundary Rules\n\n*   **Do Not** infer revenue sharing or price restrictions if they are not explicitly stated in the contract text.\n*   **Do Not** confuse \"Minimum Commitment\" (obligation to buy/sell) with \"Volume Restriction\" (limits on how much can be bought/sold or pricing changes due to volume).\n*   **Do Not** extract standard payment terms (e.g., \"Net 30\") as Price Restrictions unless they involve dynamic pricing adjustments.\n*   **Do** flag if \"Net Sales\" or \"Gross Revenue\" is defined in a way that significantly alters the calculation base (e.g., excluding taxes, returns, or discounts).\n*   **Do** distinguish between unilateral rights to change prices (with notice) and mutual agreement requirements."
+}

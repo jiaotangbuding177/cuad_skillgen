@@ -1,0 +1,55 @@
+{
+  "method": "evoskill_compiler",
+  "case_id": "competition_restrictions",
+  "model": "ecnu-plus",
+  "pipeline": {
+    "step1_extract": {
+      "contracts_processed": 306,
+      "total_kas_extracted": 738,
+      "avg_kas_per_contract": 2.41,
+      "kas_by_category": {
+        "Competitive Restriction Exception": 181,
+        "Non-Disparagement": 57,
+        "Non-Compete": 141,
+        "Exclusivity": 235,
+        "No-Solicit of Customers": 48,
+        "Most Favored Nation": 31,
+        "No-Solicit of Employees": 45
+      },
+      "kas_by_contract_sample": {
+        "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement": 0,
+        "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT": 1,
+        "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT": 0,
+        "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_": 0,
+        "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT": 0,
+        "ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY_AGREEMENT": 0,
+        "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT": 1,
+        "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT": 6,
+        "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement": 3,
+        "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING_AGREEMENT": 4
+      },
+      "llm_calls": 306
+    },
+    "step2_index": {
+      "total_kas_in_index": 738,
+      "categories_with_evidence": 7
+    },
+    "step3_security": {
+      "required_behaviors_count": 6,
+      "safety_requirements_count": 4
+    },
+    "step4_generate": {
+      "llm_calls": 1
+    },
+    "step5_compile": {
+      "llm_calls": 1
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2368378,
+    "completion_tokens": 125203,
+    "total_tokens": 2493581
+  },
+  "duration_seconds": 2057.17,
+  "created_at": "2026-07-22T00:05:46.013038+00:00"
+}

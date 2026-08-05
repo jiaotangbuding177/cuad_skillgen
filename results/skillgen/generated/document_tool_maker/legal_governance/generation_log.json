@@ -1,0 +1,521 @@
+{
+  "step1_tools_sample": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_governing_law",
+          "description": "Identifies the jurisdiction and specific state or country laws that govern the interpretation and enforcement of the contract.",
+          "category": "Governing Law",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "12.1 GOVERNING LAW. This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles.",
+            "output": {
+              "found": true,
+              "extracted_text": "This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles.",
+              "confidence": 1.0,
+              "explanation": "The contract is governed by the laws of the State of California."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_audit_rights",
+          "description": "Determines if a party has the right to audit the financial records, books, or accounts of the counterparty to verify compliance with payment or reporting obligations.",
+          "category": "Audit Rights",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "5.3 AUDIT RIGHTS. i-Escrow shall keep for one (1) year proper records and books of account relating to the computation of advertising payments owed to 2TheMart... Once every twelve (12) months, 2TheMart through a CPA may inspect and audit such records to verify reports.",
+            "output": {
+              "found": true,
+              "extracted_text": "Once every twelve (12) months, 2TheMart through a CPA may inspect and audit such records to verify reports.",
+              "confidence": 1.0,
+              "explanation": "2TheMart has the right to audit i-Escrow's records annually via a CPA to verify advertising payment computations."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_insurance_requirements",
+          "description": "Checks for any clauses requiring one or both parties to maintain specific insurance coverage for the benefit of the other party or third parties.",
+          "category": "Insurance",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full contract text of CO-BRANDING AND ADVERTISING AGREEMENT between I-ESCROW, INC. and 2THEMART.COM, INC.",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 1.0,
+              "explanation": "No specific insurance requirements were found in the provided contract text."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_governing_law",
+          "description": "Identifies the specific jurisdiction's laws that govern the interpretation and enforcement of the contract.",
+          "category": "Governing Law",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "7.2 Governing Law. This Agreement and any claim, controversy or dispute arising out of or related to this Agreement, any of the transactions contemplated hereby and/or the interpretation and enforcement of the rights and duties of the Parties, whether arising in contract, tort, equity or otherwise, shall be governed by and construed in accordance with the domestic laws of the State of Israel (including in respect of the statute of limitations or other limitations period applicable to any such claim, controversy or dispute), without giving effect to any choice or conflict of law provision or rule (whether of the State of Israel or any other jurisdiction) that would cause the application of the laws of any jurisdiction other than the State of Israel.",
+            "output": {
+              "found": true,
+              "extracted_text": "shall be governed by and construed in accordance with the domestic laws of the State of Israel",
+              "confidence": 1.0,
+              "explanation": "The contract explicitly states that the domestic laws of the State of Israel govern the agreement."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_audit_rights",
+          "description": "Determines if the contract grants a party the right to audit the counterparty's books, records, or physical locations to ensure compliance.",
+          "category": "Audit Rights",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "1.2 Standard of Service. (b) Provider shall maintain complete and accurate records relating to the provision of the Services under this Agreement, in such form as Recipient shall approve.",
+            "output": {
+              "found": false,
+              "extracted_text": "Provider shall maintain complete and accurate records relating to the provision of the Services under this Agreement, in such form as Recipient shall approve.",
+              "confidence": 0.9,
+              "explanation": "While the Provider must maintain records in a form approved by the Recipient, there is no explicit clause granting the Recipient the right to audit those records or the Provider's physical locations."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_insurance",
+          "description": "Checks if the contract requires one party to maintain specific insurance coverage for the benefit of the counterparty.",
+          "category": "Insurance",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "5. Indemnification. 5.1 Indemnification. Provider shall indemnify, defend, and hold harmless Recipient... including attorneys' fees, fees and the cost of enforcing any right to indemnification under this Agreement, and the cost of pursuing any insurance providers...",
+            "output": {
+              "found": false,
+              "extracted_text": "Provider shall indemnify, defend, and hold harmless Recipient...",
+              "confidence": 0.95,
+              "explanation": "The contract contains an indemnification clause and mentions 'pursuing any insurance providers' in the context of costs, but it does not contain a specific requirement for the Provider to maintain insurance policies (e.g., General Liability, Professional Liability) for the benefit of the Recipient."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_governing_law",
+          "description": "Identifies the specific state or country law that governs the interpretation and construction of the contract.",
+          "category": "Governing Law",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 14 of the Joint Venture Agreement",
+            "output": {
+              "found": true,
+              "extracted_text": "The Joint Venturers declare that in entering into this Agreement, they have contracted with reference to the laws of the Commonwealth of Pennsylvania, and the construction and interpretation of the terms and provisions of this Agreement shall be interpreted and construed under the laws of the Commonwealth of Pennsylvania",
+              "confidence": 1.0,
+              "explanation": "The contract explicitly states that the laws of the Commonwealth of Pennsylvania govern the agreement."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_audit_rights",
+          "description": "Determines if a party has the right to audit the books, records, or financial statements of the joint venture or counterparty.",
+          "category": "Audit Rights",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 7 of the Joint Venture Agreement",
+            "output": {
+              "found": true,
+              "extracted_text": "If requested by a Joint Venturer, the Joint Venture books and records shall be audited as of the close of each year by an independent accountant acceptable to both Joint Venturers.",
+              "confidence": 0.95,
+              "explanation": "The contract grants Joint Venturers the right to request an audit of the Joint Venture's books and records by an independent accountant."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_insurance_requirements",
+          "description": "Checks for explicit requirements for one party to maintain insurance for the benefit of the counterparty or the joint venture.",
+          "category": "Insurance",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full text of the Joint Venture Agreement",
+            "output": {
+              "found": false,
+              "extracted_text": "All direct costs and expenses, which shall include any insurance costs in connection with the distribution of the Products or operations of the Joint Venture... shall be paid by the Joint Venture.",
+              "confidence": 0.9,
+              "explanation": "While the contract mentions that insurance costs are direct expenses paid by the Joint Venture, it does not contain a specific clause requiring a party to maintain insurance coverage for the benefit of the other party."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "merged_tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_governing_law",
+        "category": "Governing Law",
+        "description": "Identifies the jurisdiction, state, or country law that governs the interpretation and enforcement of the contract, including any specified dispute resolution mechanisms.",
+        "source_contracts": [
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VEONEER,INC_02_21_2020-EX-10.11-JOINT_VENTURE_AGREEMENT",
+          "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of laws principles.",
+          "output": {
+            "found": true,
+            "extracted_text": "laws of the State of Delaware",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_audit_rights",
+        "category": "Audit Rights",
+        "description": "Determines if the contract grants any party the right to audit, inspect, or verify the books, records, financial data, physical facilities, internal controls, or systems of the counterparty to ensure compliance with contractual, financial, regulatory, or quality obligations.",
+        "source_contracts": [
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "Contract Text: \"During the Term and for a period of two (2) years thereafter, Company shall have the right, upon reasonable notice and during normal business hours, to audit Supplier's books and records reasonably related to the performance of this Agreement to verify compliance with quality standards and pricing obligations.\"",
+          "output": {
+            "found": true,
+            "extracted_text": "Company shall have the right, upon reasonable notice and during normal business hours, to audit Supplier's books and records reasonably related to the performance of this Agreement to verify compliance with quality standards and pricing obligations.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_insurance_requirements",
+        "category": "Insurance",
+        "description": "Identifies and extracts specific insurance coverage requirements, including types, limits, and additional insured status, that one or both parties must maintain for the benefit of the counterparty or for general risk management.",
+        "source_contracts": [
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "The Contractor shall maintain, at its own expense, comprehensive general liability insurance with minimum limits of $1,000,000 per occurrence and $2,000,000 aggregate, naming the Client as an additional insured.",
+          "output": {
+            "found": true,
+            "extracted_text": "The Contractor shall maintain, at its own expense, comprehensive general liability insurance with minimum limits of $1,000,000 per occurrence and $2,000,000 aggregate, naming the Client as an additional insured.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_governing_law",
+        "category": "Governing Law",
+        "description": "Identifies the jurisdiction and specific laws that govern the interpretation and enforcement of the agreement.",
+        "source_contracts": [
+          "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware.",
+          "output": {
+            "found": true,
+            "extracted_text": "State of Delaware",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_audit_rights",
+        "category": "Audit Rights",
+        "description": "Determines if a party has the right to audit the books, records, or physical locations of the counterparty to ensure compliance with the contract.",
+        "source_contracts": [
+          "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Does the agreement grant either party the right to inspect the other party's financial records?",
+          "output": {
+            "found": true,
+            "extracted_text": "Each party shall have the right, upon reasonable notice, to audit the books and records of the other party relevant to this Agreement.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_insurance",
+        "category": "Insurance",
+        "description": "Identifies if there is a requirement for insurance that must be maintained by one party for the benefit of the counterparty.",
+        "source_contracts": [
+          "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Party A shall maintain comprehensive general liability insurance with limits of not less than $1,000,000 per occurrence for the benefit of Party B.",
+          "output": {
+            "found": true,
+            "extracted_text": "Party A shall maintain comprehensive general liability insurance with limits of not less than $1,000,000 per occurrence for the benefit of Party B.",
+            "confidence": 0.98
+          }
+        }
+      }
+    ],
+    "tool_stats": {
+      "total_unique_tools": 6,
+      "tools_by_category": {
+        "Governing Law": 2,
+        "Audit Rights": 2,
+        "Insurance": 2,
+        "Governing Law: Which state/country's law governs the interpretation of the contract?": 0,
+        "Audit Rights: Does a party have the right to audit the books, records, or physical locations of the counterparty to ensure compliance with the contract?": 0,
+        "Insurance: Is there a requirement for insurance that must be maintained by one party for the benefit of the counterparty?": 0
+      }
+    }
+  },
+  "step3_skill_md": "# Contract Governance & Risk Review Skill\n\n## Overview\nThis skill performs a targeted legal review of commercial contracts, focusing on three critical governance and risk management categories: **Governing Law**, **Audit Rights**, and **Insurance Requirements**. It utilizes specialized extraction tools to identify jurisdictional clauses, compliance verification mechanisms, and risk transfer obligations. The skill is designed to assist legal teams in quickly assessing standard contractual protections and identifying missing or non-standard provisions.\n\n## Available Tools\n\n### 1. check_governing_law\n*   **Category:** Governing Law\n*   **Description:** Identifies the specific jurisdiction (state, country, or region) whose laws govern the interpretation, validity, and enforcement of the contract. It also detects any specified conflict of law principles or dispute resolution venues linked to that jurisdiction.\n*   **Parameters:**\n    *   `contract_text` (string): The full text or relevant sections of the agreement.\n*   **Returns:**\n    *   `found` (boolean): Whether a governing law clause was identified.\n    *   `extracted_text` (string): The exact clause defining the governing law.\n    *   `jurisdiction` (string): The specific state or country identified (e.g., \"State of Delaware\", \"England and Wales\").\n    *   `confidence` (float): Confidence score of the extraction (0.0 - 1.0).\n*   **Usage Notes:**\n    *   Look for phrases like \"governed by,\" \"construed in accordance with,\" or \"subject to the laws of.\"\n    *   *Example:* Input: `\"This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware...\"` → Output: `{ \"found\": true, \"jurisdiction\": \"State of Delaware\", ... }`\n\n### 2. check_audit_rights\n*   **Category:** Audit Rights\n*   **Description:** Determines if the contract grants one or both parties the right to audit, inspect, or verify the counterparty’s books, records, financial data, physical facilities, or systems. This is crucial for ensuring compliance with pricing, quality standards, royalty payments, or regulatory obligations.\n*   **Parameters:**\n    *   `contract_text` (string): The full text or relevant sections of the agreement.\n*   **Returns:**\n    *   `found` (boolean): Whether an audit right clause was identified.\n    *   `extracted_text` (string): The specific clause granting audit rights.\n    *   `scope` (string): Summary of what can be audited (e.g., \"books and records,\" \"physical facilities\").\n    *   `conditions` (string): Any conditions attached (e.g., \"reasonable notice,\" \"normal business hours\").\n    *   `confidence` (float): Confidence score of the extraction (0.0 - 1.0).\n*   **Usage Notes:**\n    *   Common in licensing, distribution, and service agreements.\n    *   *Example:* Input: `\"Company shall have the right... to audit Supplier's books and records... to verify compliance...\"` → Output: `{ \"found\": true, \"scope\": \"books and records\", ... }`\n\n### 3. check_insurance_requirements\n*   **Category:** Insurance\n*   **Description:** Identifies and extracts specific insurance coverage requirements that one or both parties must maintain. This includes types of insurance (e.g., general liability, workers' compensation), minimum coverage limits, and additional insured status requirements.\n*   **Parameters:**\n    *   `contract_text` (string): The full text or relevant sections of the agreement.\n*   **Returns:**\n    *   `found` (boolean): Whether insurance requirements were identified.\n    *   `extracted_text` (string): The specific clause detailing insurance obligations.\n    *   `coverage_types` (list[string]): Types of insurance required (e.g., [\"General Liability\", \"Professional Indemnity\"]).\n    *   `limits` (string): Monetary limits specified (e.g., \"$1,000,000 per occurrence\").\n    *   `confidence` (float): Confidence score of the extraction (0.0 - 1.0).\n*   **Usage Notes:**\n    *   Look for terms like \"maintain insurance,\" \"coverage limits,\" \"additional insured,\" or \"certificate of insurance.\"\n    *   *Example:* Input: `\"Contractor shall maintain... comprehensive general liability insurance with minimum limits of $1,000,000...\"` → Output: `{ \"found\": true, \"limits\": \"$1,000,000\", ... }`\n\n## Review Workflow\n\n1.  **Input Ingestion**: Receive the contract text and identify the document type (e.g., Service Agreement, License, Supply Agreement).\n2.  **Parallel Execution**: Trigger all three tools (`check_governing_law`, `check_audit_rights`, `check_insurance_requirements`) simultaneously against the provided contract text. These checks are independent and do not rely on each other's output.\n3.  **Result Aggregation**:\n    *   Collect outputs from all three tools.\n    *   Validate that `found` is `true` for critical clauses. If `found` is `false`, flag the category as \"Missing\" or \"Not Specified.\"\n4.  **Risk Assessment**:\n    *   **Governing Law**: Check if the jurisdiction is neutral or favorable to the reviewing party. Flag if missing.\n    *   **Audit Rights**: Determine if the scope is sufficient for the contract type (e.g., financial audits for royalty deals). Flag if missing in high-risk compliance contexts.\n    *   **Insurance**: Verify if limits meet standard industry benchmarks. Flag if missing or if limits are unusually low.\n5.  **Output Generation**: Compile the findings into the standardized JSON output format, including evidence snippets and confidence scores.\n\n## Output Format\n\nThe skill returns a JSON object conforming to the following schema:\n\n```json\n{\n  \"status\": \"success\" | \"partial\" | \"error\",\n  \"answer\": {\n    \"governing_law\": {\n      \"found\": boolean,\n      \"jurisdiction\": string | null,\n      \"extracted_text\": string | null,\n      \"confidence\": float\n    },\n    \"audit_rights\": {\n      \"found\": boolean,\n      \"scope\": string | null,\n      \"extracted_text\": string | null,\n      \"confidence\": float\n    },\n    \"insurance_requirements\": {\n      \"found\": boolean,\n      \"coverage_types\": list[string] | null,\n      \"limits\": string | null,\n      \"extracted_text\": string | null,\n      \"confidence\": float\n    }\n  },\n  \"evidence_unit_ids\": [\n    \"string\" \n  ],\n  \"source_contract_ids\": [\n    \"string\"\n  ],\n  \"missing_inputs\": [\n    \"string\"\n  ],\n  \"human_review_required\": boolean\n}\n```\n\n*   **status**: `success` if all tools ran; `partial` if some failed; `error` if the system failed.\n*   **answer**: Contains the structured results for each of the three categories.\n*   **evidence_unit_ids**: IDs of the specific text segments used as evidence.\n*   **source_contract_ids**: IDs of the source documents processed.\n*   **missing_inputs**: List of any required parameters that were not provided.\n*   **human_review_required**: `true` if any critical clause is missing, confidence is low (<0.7), or conflicting information is detected.\n\n## Boundary Rules\n\n*   **DO** extract exact text snippets for evidence to allow for human verification.\n*   **DO** report `found: false` clearly if a clause is absent, rather than hallucinating a default value.\n*   **DO NOT** provide legal advice or interpret the *implications* of the law (e.g., do not say \"Delaware law is favorable for corporations\"). Only state what the text says.\n*   **DO NOT** attempt to negotiate terms or suggest redlines.\n*   **DO NOT** process contracts that are heavily redacted to the point where context is lost; flag these as requiring human review.\n*   **DO** handle cases where multiple jurisdictions are mentioned (e.g., different laws for different sections) by extracting the primary governing law clause or noting the complexity for human review."
+}

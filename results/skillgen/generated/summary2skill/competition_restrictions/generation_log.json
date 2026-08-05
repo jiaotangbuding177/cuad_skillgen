@@ -1,0 +1,454 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "Most Favored Nation",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Compete",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Exclusivity",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "No-Solicit of Customers",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Competitive Restriction Exception",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "No-Solicit of Employees",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Disparagement",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Most Favored Nation",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Compete",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Exclusivity",
+          "found": true,
+          "summary": "The Provider Representatives are required to be dedicated solely to providing services to the Recipient and are prohibited from providing such services to the Provider or any other customer.",
+          "key_terms": [
+            "dedicated to solely providing",
+            "shall not provide any such services or resources to Provider or any other customer"
+          ],
+          "source_paragraph": "Provider Representatives shall be dedicated to solely providing the Services to Recipient and shall not provide any such services or resources to Provider or any other customer of Provider."
+        },
+        {
+          "category": "No-Solicit of Customers",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Competitive Restriction Exception",
+          "found": true,
+          "summary": "The agreement explicitly states that nothing prevents the Recipient from performing the services itself or acquiring similar services from other providers.",
+          "key_terms": [
+            "Nothing in this Agreement shall be construed to prevent",
+            "acquiring services from other providers"
+          ],
+          "source_paragraph": "Nothing in this Agreement shall be construed to prevent the Recipient from itself performing or from acquiring services from other providers that are similar to or identical to the Services."
+        },
+        {
+          "category": "No-Solicit of Employees",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Disparagement",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Most Favored Nation",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Compete",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Exclusivity",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "No-Solicit of Customers",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Competitive Restriction Exception",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "No-Solicit of Employees",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Disparagement",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "Most Favored Nation",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Compete",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Exclusivity",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "No-Solicit of Customers",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Competitive Restriction Exception",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "No-Solicit of Employees",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Disparagement",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Most Favored Nation",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Compete",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Exclusivity",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "No-Solicit of Customers",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Competitive Restriction Exception",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "No-Solicit of Employees",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Disparagement",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "Most Favored Nation": {
+      "found_count": 7,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Price protection clauses ensuring the licensee receives the same or better pricing than other customers.",
+        "Specific application to additional functionality or new features in software licenses.",
+        "Clauses ensuring the licensee or customer receives pricing or benefits no less favorable than those offered to other parties.",
+        "Often titled 'Most Favored Customer' or embedded in sponsorship agreements regarding sponsor benefits.",
+        "Obligations to amend agreements if more favorable terms are offered to third parties."
+      ],
+      "example_extractions": [
+        "TrueLink agrees that the rates charged for Hosting Services will not exceed those charged to any other party.",
+        "The contract includes a specific article titled 'Most Favored Customer' which governs the terms regarding competitive pricing or conditions.",
+        "The contract grants the Sponsor the right to ensure that no other sponsor receives benefits of greater value than those provided to the Sponsor, unless the other sponsor pays a higher fee.",
+        "NTC agrees that the Product Prices, benefits and allowances offered to ALFA AESAR shall not be less favorable than those offered on Products provided to agents, distributors or marketed directly by NTC to any customers...",
+        "Party B guarantees that the Driver User will enjoy the most favorable treatment... In case that the price and other substantive terms offered by Party B to such entity are more favorable... the Driver User and Party B shall amend the provisions...",
+        "D2 shall license such additional functionality or technology to LICENSEE at D2's then best price to its other Licensees."
+      ],
+      "variations": [
+        "Applied to service rates (hosting).",
+        "Applied to sponsorship benefits and logo placement.",
+        "Explicitly titled 'Most Favored Customer' in collaboration agreements."
+      ]
+    },
+    "Non-Compete": {
+      "found_count": 60,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Restrictions on using proprietary information or trade secrets to engage in competitive business activities.",
+        "Specific geographic or product-category limitations (e.g., 'golf putters', 'digital meditation', 'Lawn and Garden Market').",
+        "Restrictions on opening offices or conducting business in specific territories where the partner operates.",
+        "Prohibition on endorsing, manufacturing, or selling competing products during the term and often for a period post-termination.",
+        "Restrictions on developing, marketing, or selling products/services that compete with the other party."
+      ],
+      "example_extractions": [
+        "The Agency agrees not to sell competing professional liability products in Nevada during the term of the agreement and is restricted from selling professional liability insurance to former MICOA insureds in Nevada for two years after termination.",
+        "The franchisee is restricted from operating more than one restaurant within the Designated Area and is prohibited from engaging in catering and delivery services outside of that area.",
+        "Theismann is restricted from using, permitting the use of, or licensing his property for the advertisement, promotion, and sale of any network or Internet service identical or substantially similar to Bizzingo's Network during the term and for one year thereafter.",
+        "The Distributor is prohibited from developing, manufacturing, or selling any equipment or service that is competitive to the products offered by Lucid.",
+        "The Individual agrees not to render similar services or permit the use of her likeness for competing Kefir, yogurt, cheese, or frozen dessert products during the term of the agreement.",
+        "Moelis Holdings agrees not to open an office in Japan conducting Covered Businesses during the term of the Agreement."
+      ],
+      "variations": [
+        "Geographic restrictions (e.g., Nevada, Designated Area).",
+        "Product-specific restrictions (e.g., professional liability insurance, gaming chip-sorting machines).",
+        "Post-termination survival periods ranging from 6 months to 5 years.",
+        "Exceptions for pre-existing licenses or specific approved competitors."
+      ]
+    },
+    "Exclusivity": {
+      "found_count": 103,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Granting exclusive rights to distribute, manufacture, license, or promote products/services in a specific territory or field.",
+        "Often paired with purchase commitments or minimum volume requirements.",
+        "Obligations to purchase all requirements exclusively from the supplier (sole source purchasing).",
+        "Explicit statements of non-exclusivity are also common, clarifying that parties may work with others.",
+        "Explicit statements that the agreement is non-exclusive, often to clarify that parties can work with others."
+      ],
+      "example_extractions": [
+        "The Provider Representatives are required to be dedicated solely to providing services to the Recipient and are prohibited from providing such services to the Provider or any other customer.",
+        "MICOA grants the Agency an exclusive appointment to sell its professional liability products in Nevada, and the Agency agrees not to sell competing products in that territory without consent.",
+        "The contract explicitly states that the agreement is non-exclusive, allowing both parties to enter into similar servicing agreements with other persons without consent.",
+        "Kitov grants Dexcel an exclusive license to manufacture, label, package, test, and release the Product solely for Kitov during the term of the agreement.",
+        "Sierra appoints Envision as its exclusive distributor for the Product in the Territory, and Envision agrees to exclusively purchase the Product from Sierra.",
+        "The contract explicitly states that it does not create an exclusive arrangement and does not restrict the Customer from offering inventory via other agents or selling to third parties."
+      ],
+      "variations": [
+        "Exclusive vs. Non-Exclusive: Many contracts explicitly state they are non-exclusive.",
+        "Co-Exclusive: Rights shared between the licensor and licensee.",
+        "Conditional Exclusivity: Exclusivity granted only if minimum sales or payment targets are met.",
+        "Carve-outs: Specific exceptions for existing customers, specific territories (e.g., Japan), or specific product lines."
+      ]
+    },
+    "No-Solicit of Customers": {
+      "found_count": 23,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Often includes a post-termination survival period.",
+        "Restrictions on using customer data or records for solicitation purposes.",
+        "Restrictions often apply during the term and for a specific period (e.g., 1-2 years) after termination.",
+        "Prohibitions on soliciting the other party's customers, clients, or subscribers.",
+        "Prohibition on soliciting, marketing to, or circumventing customers introduced by the other party."
+      ],
+      "example_extractions": [
+        "MICOA is restricted from using Agency-placed business records to solicit policyholders for other lines of insurance unless authorized, and the Agency is restricted from selling to former MICOA insureds in Nevada for two years post-termination.",
+        "Upon termination for default, Galaxy reserves the right to contact Telnet's subscribers directly and solicit them to become subscribers of Galaxy or its affiliates.",
+        "Nationwide agrees that no person having access to the Servicing Agent's records may use such records or information to solicit any of the Servicing Agent's customers for any purpose.",
+        "The Customer is restricted from working with third-party advertisers or partners introduced by Kubient without consent and compensation during the term and for one year after termination.",
+        "Parties agree not to solicit any Client Introduced by the other party in connection with assignments on Covered Businesses involving Japanese Companies during the term and for 12 months thereafter.",
+        "Sekisui is prohibited from marketing, renting, or selling any Products to Qualigen's Retained Customers, who are listed on Exhibit E."
+      ],
+      "variations": [
+        "Scope: Customers, clients, subscribers, or prospective customers.",
+        "Duration: During term and for a specified period (e.g., 1-5 years) after termination.",
+        "Data Usage: Specific prohibitions on using confidential customer lists or data."
+      ]
+    },
+    "Competitive Restriction Exception": {
+      "found_count": 64,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Provisions allowing parties to engage in similar businesses if not directly competing or if consent is obtained.",
+        "Allowances for general public solicitations or marketing not specifically targeted at the other party's employees/customers.",
+        "Exceptions for passive investments in publicly traded securities.",
+        "Exceptions for pre-existing relationships, specific competitors, or internal use.",
+        "Carve-outs from non-compete or exclusivity clauses allowing specific activities."
+      ],
+      "example_extractions": [
+        "The agreement explicitly states that nothing prevents the Recipient from performing the services itself or acquiring similar services from other providers.",
+        "The exclusivity granted to the franchisee contains exceptions allowing the franchisor to develop or franchise locations at special sites such as airports, military bases, sports facilities, and amusement parks.",
+        "The non-compete restriction explicitly excludes any pre-existing licenses held by Theismann at the time of the agreement.",
+        "The non-circumvention restriction does not apply if the Customer can establish in writing that it had a preexisting working relationship with the third party prior to the Agreement.",
+        "The non-compete restriction explicitly excludes products manufactured or distributed by Lifeway and its affiliates, subsidiaries, and parent companies.",
+        "The restriction on Achaogen's ability to commercialize other assays is voided if Microgenics fails to supply the Assay for a specified period or if both parties mutually determine supply will not be possible."
+      ],
+      "variations": [
+        "Pre-existing rights: Exceptions for agreements or licenses existing before the contract.",
+        "Specific Competitors: Named competitors or categories of competitors excluded from restrictions.",
+        "Internal Use: Allowing development for internal use or affiliates.",
+        "Consent-based: Restrictions lifted if written consent is provided."
+      ]
+    },
+    "No-Solicit of Employees": {
+      "found_count": 27,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Prohibitions on hiring, soliciting, or enticing employees or contractors of the other party.",
+        "Often mutual and includes a post-termination survival period.",
+        "Restrictions typically apply during the term and for a period (e.g., 12-24 months) after termination.",
+        "Prohibition on soliciting, hiring, or inducing employees, contractors, or consultants of the other party to leave their employment.",
+        "Mutual obligations are common in strategic alliances and joint ventures."
+      ],
+      "example_extractions": [
+        "The agreement prohibits both parties from hiring or engaging the other party's employees or independent contractors during the term of the agreement and for six months following its expiration.",
+        "The Consultant is restricted from soliciting or hiring employees of the Company during the term and for one year following termination.",
+        "The contract prohibits both parties from soliciting or enticing employees from the other organization during the term and for one year after termination, with an exception for unsolicited applicants or those responding to public advertisements.",
+        "The Customer is prohibited from soliciting, hiring, or interfering with the employment of Kubient's employees or contractors during the term and for one year after termination.",
+        "Both parties agree not to solicit or induce the other party's employees to leave their employment for a period of 24 months following the execution of the agreement.",
+        "The Licensee is restricted from soliciting employees of the Licensor during the term of the agreement and for three years after its expiration."
+      ],
+      "variations": [
+        "Duration: Typically 6 months to 5 years post-termination.",
+        "Scope: Employees, contractors, consultants, or key personnel.",
+        "Exceptions: Public job postings, unsolicited applications, or general recruiting not targeted at specific individuals."
+      ]
+    },
+    "Non-Disparagement": {
+      "found_count": 28,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Often extends to officers, directors, affiliates, and products/services.",
+        "Mutual covenants not to make negative, defamatory, or disparaging statements about the other party.",
+        "Frequently found in cooperation, endorsement, and strategic alliance agreements.",
+        "Prohibitions on tarnishing, degrading, or reflecting adversely on the other party's reputation or business.",
+        "Mutual obligations to refrain from making negative, derogatory, or disparaging public statements about the other party."
+      ],
+      "example_extractions": [
+        "The ValueAct Group agrees not to disparage the Company, its affiliates, or its current and former officers and directors during the Covered Period.",
+        "The Contractor agrees not to use the Company's intellectual property in any manner that would reasonably be expected to disparage or damage the marks or the reputation of the Company.",
+        "Each party covenants not to make defamatory, misleading, or disparaging remarks about the other party, and post-termination obligations prohibit acts seen as disparaging brand names or reputations.",
+        "SRP is responsible for maintaining a positive public image for the Driver and Team, and the contract includes a termination right if the Defaulting Party engages in conduct that brings the Terminating Party into public hatred, contempt, disrespect, scandal, or ridicule.",
+        "The Licensee is restricted from using the Licensed Domain Names in any manner that tarnishes, degrades, disparages, or reflects adversely on the Licensor or its business or reputation.",
+        "Section 7 establishes mutual non-disparagement obligations requiring both the Investors and the Company to refrain from making derogatory or negative public statements about each other during the Standstill Period."
+      ],
+      "variations": [
+        "Scope: Includes the company, its affiliates, officers, directors, and products.",
+        "Context: Often tied to public statements, media interactions, or use of trademarks.",
+        "Duration: During the term and sometimes surviving termination."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md: Competition Restrictions Review\n\n## Covered Categories\n\n| Category | Discovery Frequency | Common Patterns |\n| :--- | :--- | :--- |\n| **Exclusivity** | 33.7% (103/306) | Exclusive rights to distribute/manufacture; sole-source purchasing commitments; explicit non-exclusivity statements. |\n| **Competitive Restriction Exception** | 20.9% (64/306) | Carve-outs for pre-existing relationships; exceptions for passive investments; consent-based waivers; specific competitor exclusions. |\n| **Non-Compete** | 19.6% (60/306) | Geographic or product-specific restrictions; prohibitions on using proprietary info for competition; post-termination survival periods. |\n| **Non-Disparagement** | 9.2% (28/306) | Mutual covenants against negative public statements; extensions to officers/directors/affiliates; tied to reputation protection. |\n| **No-Solicit of Employees** | 8.8% (27/306) | Prohibitions on hiring/soliciting employees/contractors; mutual obligations; post-termination survival (6mo-5yrs). |\n| **No-Solicit of Customers** | 7.5% (23/306) | Restrictions on soliciting counterparty’s customers/subscribers; prohibitions on using customer data/lists; post-termination survival. |\n| **Most Favored Nation** | 2.3% (7/306) | Price protection clauses; \"Most Favored Customer\" titles; obligations to amend terms if better rates offered to third parties. |\n\n## Common Patterns\n\n### 1. Exclusivity\n*   **Exclusive Appointment/Distribution:** Grants exclusive rights to sell, distribute, or manufacture in a specific territory or field.\n    *   *Example:* \"Sierra appoints Envision as its exclusive distributor for the Product in the Territory, and Envision agrees to exclusively purchase the Product from Sierra.\"\n*   **Sole Source Purchasing:** Obligations to purchase all requirements exclusively from the supplier.\n    *   *Example:* \"The Provider Representatives are required to be dedicated solely to providing services to the Recipient and are prohibited from providing such services to the Provider or any other customer.\"\n*   **Explicit Non-Exclusivity:** Clarifications that the agreement does not restrict parties from working with others.\n    *   *Example:* \"The contract explicitly states that the agreement is non-exclusive, allowing both parties to enter into similar servicing agreements with other persons without consent.\"\n\n### 2. Competitive Restriction Exception\n*   **Pre-existing Rights:** Exceptions for licenses, agreements, or relationships existing prior to the contract.\n    *   *Example:* \"The non-compete restriction explicitly excludes any pre-existing licenses held by Theismann at the time of the agreement.\"\n*   **Specific Competitor/Category Carve-outs:** Named competitors or categories excluded from restrictions.\n    *   *Example:* \"The non-compete restriction explicitly excludes products manufactured or distributed by Lifeway and its affiliates, subsidiaries, and parent companies.\"\n*   **Consent-Based Waivers:** Restrictions lifted if written consent is provided.\n    *   *Example:* \"The exclusivity granted to the franchisee contains exceptions allowing the franchisor to develop or franchise locations at special sites such as airports... [with consent].\"\n\n### 3. Non-Compete\n*   **Geographic/Product Limitations:** Restrictions tied to specific territories or product lines.\n    *   *Example:* \"The Agency agrees not to sell competing professional liability products in Nevada during the term of the agreement...\"\n*   **Post-Termination Survival:** Prohibitions continuing after the contract ends.\n    *   *Example:* \"Theismann is restricted from using... his property for the advertisement... of any network... identical or substantially similar to Bizzingo's Network during the term and for one year thereafter.\"\n*   **Activity Prohibitions:** Bans on developing, manufacturing, or endorsing competing products.\n    *   *Example:* \"The Distributor is prohibited from developing, manufacturing, or selling any equipment or service that is competitive to the products offered by Lucid.\"\n\n### 4. Non-Disparagement\n*   **Mutual Reputation Protection:** Covenants not to make defamatory or negative statements.\n    *   *Example:* \"Each party covenants not to make defamatory, misleading, or disparaging remarks about the other party...\"\n*   **Extended Scope:** Includes officers, directors, affiliates, and products.\n    *   *Example:* \"The ValueAct Group agrees not to disparage the Company, its affiliates, or its current and former officers and directors during the Covered Period.\"\n*   **Brand Usage Restrictions:** Prohibitions on using IP in a way that tarnishes reputation.\n    *   *Example:* \"The Licensee is restricted from using the Licensed Domain Names in any manner that tarnishes, degrades, disparages, or reflects adversely on the Licensor...\"\n\n### 5. No-Solicit of Employees\n*   **Hiring/Solicitation Bans:** Prohibitions on inducing employees/contractors to leave.\n    *   *Example:* \"The agreement prohibits both parties from hiring or engaging the other party's employees or independent contractors during the term of the agreement and for six months following its expiration.\"\n*   **Exceptions for General Recruiting:** Allowances for public job postings or unsolicited applications.\n    *   *Example:* \"...with an exception for unsolicited applicants or those responding to public advertisements.\"\n\n### 6. No-Solicit of Customers\n*   **Customer Data Restrictions:** Prohibitions on using customer lists/records for solicitation.\n    *   *Example:* \"Nationwide agrees that no person having access to the Servicing Agent's records may use such records or information to solicit any of the Servicing Agent's customers for any purpose.\"\n*   **Post-Termination Cooling-off:** Restrictions on soliciting former customers for a set period.\n    *   *Example:* \"The Customer is restricted from working with third-party advertisers or partners introduced by Kubient without consent and compensation during the term and for one year after termination.\"\n\n### 7. Most Favored Nation (MFN)\n*   **Price Parity:** Guaranteeing rates/prices are no higher than those offered to other parties.\n    *   *Example:* \"TrueLink agrees that the rates charged for Hosting Services will not exceed those charged to any other party.\"\n*   **Amendment Obligations:** Requirement to amend the contract if better terms are offered to third parties.\n    *   *Example:* \"In case that the price and other substantive terms offered by Party B to such entity are more favorable... the Driver User and Party B shall amend the provisions...\"\n\n## Review Checklist\n\n*   **Exclusivity:**\n    *   [ ] Is the arrangement exclusive, non-exclusive, or co-exclusive?\n    *   [ ] Are there minimum volume/purchase commitments tied to exclusivity?\n    *   [ ] Are there carve-outs for existing customers or specific territories?\n*   **Competitive Restriction Exception:**\n    *   [ ] Are there exceptions for pre-existing business relationships?\n    *   [ ] Are specific competitors or product lines excluded from restrictions?\n    *   [ ] Is consent required to engage in otherwise restricted activities?\n*   **Non-Compete:**\n    *   [ ] What is the geographic scope of the restriction?\n    *   [ ] What is the specific product/service category restricted?\n    *   [ ] Does the restriction survive termination? If so, for how long?\n*   **Non-Disparagement:**\n    *   [ ] Is the obligation mutual?\n    *   [ ] Does it cover affiliates, officers, and directors?\n    *   [ ] Does it survive termination?\n*   **No-Solicit of Employees:**\n    *   [ ] Does the restriction apply to employees, contractors, or both?\n    *   [ ] Is there an exception for general public job postings?\n    *   [ ] What is the post-termination survival period?\n*   **No-Solicit of Customers:**\n    *   [ ] Is there a prohibition on using customer data/lists?\n    *   [ ] Does the restriction apply to customers introduced by the counterparty?\n    *   [ ] What is the post-termination survival period?\n*   **Most Favored Nation:**\n    *   [ ] Is there a price protection clause?\n    *   [ ] Does it apply to new features or additional functionality?\n    *   [ ] Is there an obligation to amend the contract if better terms are offered elsewhere?\n\n## Evidence Extraction Rules\n\n1.  **Locate Clauses:** Search for keywords: \"exclusive,\" \"non-compete,\" \"solicit,\" \"disparage,\" \"most favored,\" \"competitor,\" \"restrict,\" \"prohibit.\"\n2.  **Extract Scope:** Identify the specific entities (employees, customers, products), geographies, and timeframes (term, post-termination) mentioned in the clause.\n3.  **Identify Exceptions:** Look for \"provided that,\" \"except,\" \"excluding,\" or \"carve-out\" language within the restriction clauses.\n4.  **Verify Mutuality:** Check if the obligation applies to one party or both (\"each party,\" \"mutual\").\n5.  **Capture Survival:** Note any specific durations mentioned for post-termination obligations (e.g., \"12 months following termination\").\n\n## Output Format\n\n```json\n{\n  \"status\": \"string (e.g., 'complete', 'partial', 'missing')\",\n  \"answer\": {\n    \"most_favored_nation\": {\n      \"present\": \"boolean\",\n      \"details\": \"string (summary of MFN terms)\",\n      \"evidence_unit_ids\": [\"string\"]\n    },\n    \"non_compete\": {\n      \"present\": \"boolean\",\n      \"geographic_scope\": \"string\",\n      \"product_scope\": \"string\",\n      \"survival_period\": \"string\",\n      \"evidence_unit_ids\": [\"string\"]\n    },\n    \"exclusivity\": {\n      \"present\": \"boolean\",\n      \"type\": \"string (exclusive, non-exclusive, co-exclusive)\",\n      \"commitments\": \"string (e.g., sole source, minimum volume)\",\n      \"evidence_unit_ids\": [\"string\"]\n    },\n    \"no_solicit_customers\": {\n      \"present\": \"boolean\",\n      \"scope\": \"string (customers, subscribers, etc.)\",\n      \"survival_period\": \"string\",\n      \"data_usage_restriction\": \"boolean\",\n      \"evidence_unit_ids\": [\"string\"]\n    },\n    \"competitive_restriction_exception\": {\n      \"present\": \"boolean\",\n      \"exceptions\": [\"string (list of specific carve-outs)\"],\n      \"evidence_unit_ids\": [\"string\"]\n    },\n    \"no_solicit_employees\": {\n      \"present\": \"boolean\",\n      \"scope\": \"string (employees, contractors, etc.)\",\n      \"survival_period\": \"string\",\n      \"public_posting_exception\": \"boolean\",\n      \"evidence_unit_ids\": [\"string\"]\n    },\n    \"non_disparagement\": {\n      \"present\": \"boolean\",\n      \"mutual\": \"boolean\",\n      \"scope\": \"string (company, officers, affiliates, etc.)\",\n      \"evidence_unit_ids\": [\"string\"]\n    }\n  },\n  \"evidence_unit_ids\": [\"string\"],\n  \"source_contract_ids\": [\"string\"],\n  \"missing_inputs\": [\"string\"],\n  \"human_review_required\": \"boolean\"\n}\n```\n\n## Boundary Rules\n\n*   **Do Not** infer restrictions that are not explicitly stated in the text.\n*   **Do Not** confuse \"Non-Compete\" with \"Exclusivity\" unless the contract explicitly links them (e.g., exclusivity implies non-compete in that territory).\n*   **Do Not** ignore exceptions/carve-outs; they are critical for accurate risk assessment.\n*   **Do Not** assume mutuality unless explicitly stated (\"each party,\" \"mutual\").\n*   **Do** distinguish between restrictions during the term and post-termination survival periods.\n*   **Do** capture specific geographic and product limitations for Non-Compete clauses."
+}

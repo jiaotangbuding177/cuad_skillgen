@@ -1,0 +1,37 @@
+{
+  "method": "schema_prompt_skill",
+  "case_id": "assignment_and_control",
+  "model": "deepseek-chat",
+  "schema_sections": [
+    "Covered Categories",
+    "Review Checklist",
+    "Evidence Extraction Rules",
+    "Output Format",
+    "Boundary Rules"
+  ],
+  "input_summary": {
+    "contracts_sampled": 10,
+    "sampled_contract_ids": [
+      "LUCIDINC_04_15_2011-EX-10.9-DISTRIBUTOR_AGREEMENT",
+      "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller_Agreement_Premier_Addendum",
+      "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+      "Columbia_Laboratories,_(Bermuda)_Ltd._-_AMEND_NO._2_TO_MANUFACTURING_AND_SUPPLY_AGREEMENT",
+      "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT",
+      "CybergyHoldingsInc_20140520_10-Q_EX-10.27_8605784_EX-10.27_Affiliate_Agreement",
+      "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+      "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+      "IMAGEWARESYSTEMSINC_12_20_1999-EX-10.22-MAINTENANCE_AGREEMENT"
+    ],
+    "contracts_with_evidence_count": 226,
+    "category_count": 2,
+    "estimated_input_tokens": 79701
+  },
+  "usage": {
+    "prompt_tokens": 66326,
+    "completion_tokens": 1539,
+    "total_tokens": 67865
+  },
+  "duration_seconds": 18.77,
+  "created_at": "2026-07-15T13:22:49.072024+00:00"
+}

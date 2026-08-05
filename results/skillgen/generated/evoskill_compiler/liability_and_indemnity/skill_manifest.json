@@ -1,0 +1,52 @@
+{
+  "method": "evoskill_compiler",
+  "case_id": "liability_and_indemnity",
+  "model": "ecnu-plus",
+  "pipeline": {
+    "step1_extract": {
+      "contracts_processed": 306,
+      "total_kas_extracted": 814,
+      "avg_kas_per_contract": 2.66,
+      "kas_by_category": {
+        "Uncapped Liability": 208,
+        "Cap on Liability": 225,
+        "Liquidated Damages": 198,
+        "Warranty Duration": 183
+      },
+      "kas_by_contract_sample": {
+        "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement": 4,
+        "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT": 4,
+        "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT": 0,
+        "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_": 5,
+        "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT": 0,
+        "ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY_AGREEMENT": 0,
+        "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT": 0,
+        "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT": 3,
+        "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement": 4,
+        "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING_AGREEMENT": 0
+      },
+      "llm_calls": 306
+    },
+    "step2_index": {
+      "total_kas_in_index": 814,
+      "categories_with_evidence": 4
+    },
+    "step3_security": {
+      "required_behaviors_count": 6,
+      "safety_requirements_count": 4
+    },
+    "step4_generate": {
+      "llm_calls": 1
+    },
+    "step5_compile": {
+      "llm_calls": 1
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2308632,
+    "completion_tokens": 154501,
+    "total_tokens": 2463133
+  },
+  "duration_seconds": 2419.07,
+  "created_at": "2026-07-22T00:46:05.106904+00:00"
+}

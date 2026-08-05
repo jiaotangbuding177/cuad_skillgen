@@ -1,0 +1,189 @@
+{
+  "step1_kas_sample": [
+    {
+      "ka_id": "KA-0001",
+      "category": "Renewal Term",
+      "text": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement. A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect. In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.",
+      "span_start": 15186,
+      "span_end": 15665,
+      "interpretation": "The contract allows for successive one-year renewal terms, which occur automatically if neither party provides notice of non-renewal.",
+      "confidence": 1.0,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0002",
+      "category": "Notice Period to Terminate Renewal",
+      "text": "A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect. In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.",
+      "span_start": 15363,
+      "span_end": 15666,
+      "interpretation": "To prevent automatic renewal, a party must provide at least 30 days' notice before the current term expires.",
+      "confidence": 1.0,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0003",
+      "category": "Termination for Convenience",
+      "text": "In the event that the parties are unable to agree to an SOW within 2 months following the Effective Date, either party may, in its sole discretion, terminate this Agreement by providing written notice.",
+      "span_start": 4143,
+      "span_end": 4344,
+      "interpretation": "Either party may terminate the agreement without cause (for convenience) if a Statement of Work is not agreed upon within 2 months of the Effective Date.",
+      "confidence": 0.95,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0004",
+      "category": "Termination for Convenience",
+      "text": "In the event that, after using such efforts, the Launch Date has not occurred within 4 months following the Effective Date, either party may terminate this Agreement by providing written notice. If only one party has used good faith and reasonable development efforts, only that party may exercise the foregoing right to terminate.",
+      "span_start": 5180,
+      "span_end": 5511,
+      "interpretation": "Either party may terminate the agreement without cause (for convenience) if the Launch Date has not occurred within 4 months of the Effective Date, provided they have used good faith efforts.",
+      "confidence": 0.95,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0005",
+      "category": "Termination for Convenience",
+      "text": "Each of the Recipient and the Provider may, in their sole discretion, terminate this Agreement in whole or in part, at any time without cause, and without liability except, in the case of the Recipient, for required payment for services rendered and reimbursement for authorized expenses incurred, by providing at least 90 (ninety) days' prior written notice to the other party",
+      "span_start": 9867,
+      "span_end": 10244,
+      "interpretation": "Both parties have the right to terminate the agreement without cause by providing 90 days' prior written notice.",
+      "confidence": 1.0,
+      "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0006",
+      "category": "Renewal Term",
+      "text": "The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination.",
+      "span_start": 2838,
+      "span_end": 3038,
+      "interpretation": "The contract does not specify a fixed renewal term duration (e.g., 1 year); instead, it allows for extension only by mutual written agreement, implying the term is indefinite or negotiated per extension rather than a set successive period.",
+      "confidence": 0.9,
+      "source_contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0007",
+      "category": "Notice Period to Terminate Renewal",
+      "text": "unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination.",
+      "span_start": 2956,
+      "span_end": 3038,
+      "interpretation": "To avoid termination (i.e., to renew/extend), the parties must provide written agreement at least 30 days prior to the scheduled termination date.",
+      "confidence": 0.95,
+      "source_contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0008",
+      "category": "Termination for Convenience",
+      "text": "The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination.",
+      "span_start": 2838,
+      "span_end": 3038,
+      "interpretation": "The contract expires automatically on a fixed date unless mutually extended; there is no clause allowing either party to unilaterally terminate the agreement for convenience during the term or at the end of the term without mutual consent.",
+      "confidence": 0.95,
+      "source_contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0009",
+      "category": "Renewal Term",
+      "text": "In the event the Offering is extended beyond the End Date, the Company, the MHC, the Bank and the Agent may agree to renew this Agreement under mutually acceptable terms.",
+      "span_start": 5389,
+      "span_end": 5562,
+      "interpretation": "The contract does not specify a fixed renewal term or automatic extension; instead, it allows for renewal only upon mutual agreement of all parties if the offering is extended.",
+      "confidence": 0.9,
+      "source_contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0010",
+      "category": "Notice Period to Terminate Renewal",
+      "text": "In the event the Offering is extended beyond the End Date, the Company, the MHC, the Bank and the Agent may agree to renew this Agreement under mutually acceptable terms.",
+      "span_start": 5389,
+      "span_end": 5562,
+      "interpretation": "No specific notice period for terminating a renewal is defined because renewal itself is contingent on mutual agreement rather than an automatic process.",
+      "confidence": 0.9,
+      "source_contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT"
+    }
+  ],
+  "step2_evidence_summary": {
+    "Renewal Term": 170,
+    "Notice Period to Terminate Renewal": 141,
+    "Termination for Convenience": 202
+  },
+  "step3_security_policy": {
+    "allowed_status": [
+      "answered",
+      "evidence_missing",
+      "missing_input",
+      "unsupported_scope",
+      "needs_human_review"
+    ],
+    "required_behaviors": [
+      {
+        "rule_id": "RB-001",
+        "text": "answer only using the target contract",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-002",
+        "text": "cite source-grounded evidence when answering",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-003",
+        "text": "return evidence_missing when no supporting clause exists",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-004",
+        "text": "return missing_input when contract_id or category is absent",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-005",
+        "text": "return unsupported_scope when the question is outside covered_categories",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-006",
+        "text": "route legal advice and high-risk interpretation to human review",
+        "enforcement": "hard"
+      }
+    ],
+    "safety_requirements": [
+      {
+        "rule_id": "SR-001",
+        "text": "do not cite non-target contracts",
+        "enforcement": "hard",
+        "check": "verify source_contract_ids == [target_contract_id]"
+      },
+      {
+        "rule_id": "SR-002",
+        "text": "do not fabricate clauses",
+        "enforcement": "hard",
+        "check": "verify evidence spans exist in target contract"
+      },
+      {
+        "rule_id": "SR-003",
+        "text": "do not provide legal advice",
+        "enforcement": "hard",
+        "check": "detect legal judgment language in answer"
+      },
+      {
+        "rule_id": "SR-004",
+        "text": "do not generate externally sendable legal opinions",
+        "enforcement": "hard",
+        "check": "detect formal document patterns"
+      }
+    ],
+    "boundary_rules": [
+      {
+        "covered_categories": [
+          "Renewal Term",
+          "Notice Period to Terminate Renewal",
+          "Termination for Convenience"
+        ]
+      },
+      {
+        "domain": "contract_review"
+      }
+    ]
+  },
+  "step4_skill_md": "# SKILL.md: Term and Termination Review\n\n## Covered Categories\n1. **Renewal Term**: Evidence atoms (KA-0001 to KA-0465)\n2. **Notice Period to Terminate Renewal**: Evidence atoms (KA-0002 to KA-0512)\n3. **Termination for Convenience**: Evidence atoms (KA-0005 to KA-0349)\n\n## Evidence-Based Review Rules\n\n### 1. Renewal Term\n*   **Identify Automatic Renewal Mechanisms**: Look for language indicating automatic renewal upon expiration of the initial term. Common patterns include \"automatically renewed for successive one (1) year periods\" [KA-0077, KA-0111, KA-0133, KA-0142, KA-0170, KA-0285, KA-0307, KA-0333, KA-0336, KA-0391, KA-0400, KA-0436] or \"renew automatically from year to year\" [KA-0016].\n*   **Determine Renewal Duration**: Check if the renewal term matches the initial term or differs. Evidence shows variations such as successive one-year terms [KA-0001, KA-0016, KA-0077, KA-0111, KA-0133, KA-0142, KA-0170, KA-0285, KA-0307, KA-0333, KA-0336, KA-0391, KA-0400, KA-0436], two-year terms [KA-0327], three-year terms [KA-0195, KA-0318, KA-0319], five-year terms [KA-0204], or ten-year terms [KA-0259, KA-0375].\n*   **Identify Perpetual/Indefinite Terms**: Flag agreements that lack a fixed renewal term and continue indefinitely. Look for phrases like \"continue indefinitely unless sooner terminated\" [KA-0299] or \"enduring in perpetuity\" [KA-0464, KA-0465].\n*   **Check for Conditional Renewals**: Identify if renewal is subject to specific thresholds or options. Examples include renewal upon meeting a \"First Renewal Threshold\" [KA-0318] or requiring an explicit option exercise by the Distributor [KA-0195, KA-0259, KA-0375].\n*   **Identify Month-to-Month Renewals**: Detect agreements that shift to a month-to-month basis after the initial term, e.g., \"continue on a month to month basis\" [KA-0164].\n\n### 2. Notice Period to Terminate Renewal\n*   **Determine Required Notice Window**: Identify the specific timeframe required to prevent automatic renewal. Common periods include:\n    *   30 days: [KA-0002, KA-0078, KA-0112, KA-0143, KA-0165, KA-0482, KA-0512, KA-0041]\n    *   60 days: [KA-0017, KA-0334, KA-0337, KA-0476]\n    *   90 days: [KA-0196]\n    *   6 months (180 days): [KA-0205, KA-0308, KA-0328, KA-0392, KA-0401, KA-0496]\n    *   120 days: [KA-0503]\n    *   1 year: [KA-0027]\n    *   3 months: [KA-0171]\n    *   9-12 months: [KA-0376]\n*   **Identify Notice Directionality**: Determine if notice is required from either party or only specific parties. Most clauses allow \"either party\" to provide notice [KA-0002, KA-0017, KA-0078, KA-0112, KA-0143, KA-0165, KA-0171, KA-0205, KA-0308, KA-0328, KA-0334, KA-0337, KA-0392, KA-0401, KA-0476, KA-0496, KA-0503, KA-0512, KA-0041]. Some restrict notice to specific roles, such as the Distributor [KA-0196] or Franchisee [KA-0376].\n*   **Check for Automatic Expiration Without Notice**: Identify clauses where the agreement expires automatically without requiring notice, e.g., \"expire and terminate automatically without further notice\" [KA-0320, KA-0321].\n\n### 3. Termination for Convenience\n*   **Identify Existence of Convenience Clause**: Look for explicit language allowing termination \"without cause,\" \"for any reason,\" or \"in their sole discretion.\"\n    *   Explicit \"without cause\": [KA-0005, KA-0039, KA-0114, KA-0115, KA-0186, KA-0226, KA-0287, KA-0329, KA-0348, KA-0349]\n    *   \"For any reason\": [KA-0329]\n    *   \"Sole discretion\": [KA-0005]\n*   **Determine Notice Period for Convenience Termination**: If a convenience clause exists, identify the required notice period.\n    *   30 days: [KA-0032, KA-0033, KA-0113, KA-0144, KA-0166, KA-0226]\n    *   60 days: [KA-0018, KA-0114, KA-0349]\n    *   90 days: [KA-0005, KA-0039, KA-0287, KA-0348]\n    *   6 months: [KA-0309, KA-0329]\n    *   3 months: [KA-0172]\n*   **Identify Absence of Convenience Clause**: Flag agreements that *only* allow termination for cause (e.g., material breach, insolvency, performance failure).\n    *   No convenience right: [KA-0079, KA-0135, KA-0197, KA-0301, KA-0322, KA-0323, KA-0338]\n*   **Check for Conditional Convenience Rights**: Identify if convenience termination is limited to specific periods, such as \"prior to delivery of the Product\" [KA-0186] or \"during a renewed term\" [KA-0309].\n\n## Review Checklist\n\n### Renewal Term\n- [ ] Does the contract specify an automatic renewal mechanism? [KA-0001, KA-0016, KA-0077, KA-0111, KA-0133, KA-0142, KA-0170, KA-0285, KA-0307, KA-0333, KA-0336, KA-0391, KA-0400, KA-0436]\n- [ ] What is the duration of the renewal term(s)? (e.g., 1 year, 3 years, 5 years, 10 years, month-to-month) [KA-0001, KA-0195, KA-0204, KA-0259, KA-0327, KA-0375, KA-0164]\n- [ ] Is the term perpetual or indefinite? [KA-0299, KA-0464, KA-0465]\n- [ ] Are there conditions precedent for renewal (e.g., thresholds, options)? [KA-0195, KA-0259, KA-0318, KA-0319, KA-0375]\n\n### Notice Period to Terminate Renewal\n- [ ] What is the minimum notice period required to prevent automatic renewal? [KA-0002, KA-0017, KA-0078, KA-0112, KA-0143, KA-0165, KA-0171, KA-0196, KA-0205, KA-0308, KA-0328, KA-0334, KA-0337, KA-0376, KA-0392, KA-0401, KA-0476, KA-0482, KA-0496, KA-0503, KA-0512, KA-0027, KA-0041]\n- [ ] Who is required to provide notice? (Either party, specific party) [KA-0002, KA-0196, KA-0376]\n- [ ] Does the agreement expire automatically without notice? [KA-0320, KA-0321]\n\n### Termination for Convenience\n- [ ] Does the contract allow termination for convenience (without cause)? [KA-0005, KA-0018, KA-0032, KA-0033, KA-0039, KA-0113, KA-0114, KA-0115, KA-0144, KA-0166, KA-0172, KA-0186, KA-0226, KA-0287, KA-0309, KA-0329, KA-0348, KA-0349]\n- [ ] If yes, what is the required notice period for convenience termination? [KA-0005, KA-0018, KA-0032, KA-0033, KA-0039, KA-0113, KA-0114, KA-0115, KA-0144, KA-0166, KA-0172, KA-0226, KA-0287, KA-0309, KA-0329, KA-0348, KA-0349]\n- [ ] Is termination for convenience restricted to specific parties or timeframes? [KA-0186, KA-0309, KA-0348, KA-0349]\n- [ ] Does the contract *only* allow termination for cause? [KA-0079, KA-0135, KA-0197, KA-0301, KA-0322, KA-0323, KA-0338]\n\n## Output Format\n```json\n{\n  \"status\": \"success\",\n  \"answer\": \"Review completed based on evidence index.\",\n  \"evidence_unit_ids\": [\"KA-0001\", \"KA-0002\", \"KA-0005\", \"...\"],\n  \"source_contract_ids\": [\"2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement\", \"ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement\", \"ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT\", \"...\"],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n## Boundary Rules\n- **[RB-001]**: Answer only using the target contract. Do not infer terms from external contracts.\n- **[RB-002]**: Cite source-grounded evidence when answering. Every rule must reference specific KA IDs.\n- **[RB-003]**: Return `evidence_missing` when no supporting clause exists for a specific query.\n- **[RB-004]**: Return `missing_input` when `contract_id` or `category` is absent.\n- **[RB-005]**: Return `unsupported_scope` when the question is outside `covered_categories` (Renewal Term, Notice Period to Terminate Renewal, Termination for Convenience).\n- **[RB-006]**: Route legal advice and high-risk interpretation to human review.\n- **[SR-001]**: Do not cite non-target contracts.\n- **[SR-002]**: Do not fabricate clauses. Only use patterns found in the evidence index.\n- **[SR-003]**: Do not provide legal advice.\n- **[SR-004]**: Do not generate externally sendable legal opinions."
+}

@@ -51,6 +51,35 @@ EVIDENCE_PATTERNS = [
     r"contract",
 ]
 
+REVIEW_SECTION_START_RE = re.compile(
+    r"^#{1,4}\s*(evidence|review|extraction|checklist|rules|covered categories)",
+    re.IGNORECASE,
+)
+REVIEW_SECTION_STOP_RE = re.compile(
+    r"^#{1,4}\s*(output format|boundary rules|safety requirements|human review|allowed status)",
+    re.IGNORECASE,
+)
+RULE_LINE_RE = re.compile(r"^\s*(?:[-*+]\s+|\d+[.)]\s+|\[[ xX]\]\s+|#{2,4}\s+)(.+)")
+SOURCE_MARKER_RE = re.compile(
+    r"\b(?:KA-\d+|GE-CUAD-\d+|E\d+|example from|source_contract|source contract|contract identifier|section reference)\b",
+    re.IGNORECASE,
+)
+
+BOUNDARY_REQUIREMENTS = {
+    "evidence_missing": ["evidence_missing", "no supporting", "no evidence", "not present"],
+    "missing_input": ["missing_input", "contract_id", "category", "question"],
+    "unsupported_scope": ["unsupported_scope", "outside", "covered categories", "scope"],
+    "needs_human_review": ["needs_human_review", "human review", "legal advice", "legal judgment"],
+    "external_output_restriction": ["externally sendable", "external output", "legal opinion", "formal document"],
+}
+
+
+def read_json(path: str, default):
+    if not os.path.exists(path):
+        return default
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
 
 def check_structure(skill_md: str) -> Dict:
     skill_lower = skill_md.lower()
@@ -136,6 +165,65 @@ def check_category_coverage(skill_md: str, case_json: dict) -> Dict:
     }
 
 
+def extract_review_rules(skill_md: str) -> List[Dict]:
+    rules = []
+    in_review_section = False
+    for line_number, line in enumerate(skill_md.splitlines(), 1):
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if stripped.startswith("#"):
+            if REVIEW_SECTION_STOP_RE.search(stripped):
+                in_review_section = False
+            elif REVIEW_SECTION_START_RE.search(stripped):
+                in_review_section = True
+        if not in_review_section:
+            continue
+        match = RULE_LINE_RE.match(line)
+        if not match:
+            continue
+        text = re.sub(r"\s+", " ", match.group(1)).strip()
+        if len(text) < 25 or text.lower().startswith(("description:", "answer format:")):
+            continue
+        rules.append({
+            "line": line_number,
+            "text": text,
+            "source_grounded": bool(SOURCE_MARKER_RE.search(text)),
+        })
+    return rules
+
+
+def check_rule_grounding(skill_md: str) -> Dict:
+    rules = extract_review_rules(skill_md)
+    grounded = [rule for rule in rules if rule["source_grounded"]]
+    unsupported = [rule for rule in rules if not rule["source_grounded"]]
+    total = len(rules)
+    return {
+        "total_review_rules": total,
+        "source_grounded_rules": len(grounded),
+        "unsupported_rules": len(unsupported),
+        "source_grounded_rule_rate": round(len(grounded) / total, 4) if total else 0.0,
+        "unsupported_rule_rate": round(len(unsupported) / total, 4) if total else 0.0,
+        "sample_unsupported_rules": unsupported[:5],
+    }
+
+
+def check_boundary_policy_coverage(skill_md: str, security_policy: dict) -> Dict:
+    policy_text = json.dumps(security_policy, ensure_ascii=False) if isinstance(security_policy, dict) else ""
+    text = (skill_md + "\n" + policy_text).lower()
+    coverage = {}
+    for requirement, markers in BOUNDARY_REQUIREMENTS.items():
+        coverage[requirement] = any(marker.lower() in text for marker in markers)
+    covered = [name for name, present in coverage.items() if present]
+    missing = [name for name, present in coverage.items() if not present]
+    return {
+        "coverage": round(len(covered) / len(BOUNDARY_REQUIREMENTS), 4),
+        "covered": covered,
+        "missing": missing,
+        "requirements": coverage,
+    }
+
+
 def evaluate_skill(method: str, case_id: str, results_root: str, 
                    loader: CUADSkillGenLoader) -> Dict:
     skill_path = os.path.join(results_root, method, case_id, "SKILL.md")
@@ -153,11 +241,11 @@ def evaluate_skill(method: str, case_id: str, results_root: str,
     safety = check_safety_compliance(skill_md, case_json)
     categories = check_category_coverage(skill_md, case_json)
     
-    manifest_path = os.path.join(results_root, method, case_id, "skill_manifest.json")
-    manifest = {}
-    if os.path.exists(manifest_path):
-        with open(manifest_path, "r", encoding="utf-8") as f:
-            manifest = json.load(f)
+    package_root = os.path.join(results_root, method, case_id)
+    manifest = read_json(os.path.join(package_root, "skill_manifest.json"), {})
+    security_policy = read_json(os.path.join(package_root, "security_policy.json"), {})
+    rule_grounding = check_rule_grounding(skill_md)
+    boundary_policy = check_boundary_policy_coverage(skill_md, security_policy)
     
     return {
         "method": method,
@@ -167,13 +255,15 @@ def evaluate_skill(method: str, case_id: str, results_root: str,
         "evidence": evidence,
         "safety": safety,
         "categories": categories,
+        "rule_grounding": rule_grounding,
+        "boundary_policy": boundary_policy,
         "usage": manifest.get("usage", {}),
     }
 
 
 def print_summary(evaluations: List[Dict]):
     print(f"\n{'='*100}")
-    print(f"{'Method':<25} {'Case':<25} {'Structure':<12} {'Evidence':<12} {'Safety':<12} {'Categories':<12}")
+    print(f"{'Method':<25} {'Case':<25} {'Structure':<12} {'SrcRule':<12} {'Unsup':<12} {'Boundary':<12}")
     print(f"{'-'*100}")
     
     for ev in evaluations:
@@ -184,11 +274,11 @@ def print_summary(evaluations: List[Dict]):
             continue
         
         struct_score = f"{ev['structure']['completeness']:.0%}"
-        evidence_score = f"{ev['evidence']['unique_references']} refs"
-        safety_score = f"{ev['safety']['behavior_coverage']:.0%}"
-        cat_score = f"{ev['categories']['coverage']:.0%}"
-        
-        print(f"{ev['method']:<25} {ev['case_id']:<25} {struct_score:<12} {evidence_score:<12} {safety_score:<12} {cat_score:<12}")
+        src_score = f"{ev['rule_grounding']['source_grounded_rule_rate']:.0%}"
+        unsup_score = f"{ev['rule_grounding']['unsupported_rule_rate']:.0%}"
+        boundary_score = f"{ev['boundary_policy']['coverage']:.0%}"
+
+        print(f"{ev['method']:<25} {ev['case_id']:<25} {struct_score:<12} {src_score:<12} {unsup_score:<12} {boundary_score:<12}")
     
     print(f"{'='*100}")
 

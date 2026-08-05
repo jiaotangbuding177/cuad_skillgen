@@ -1,0 +1,38 @@
+[
+  {
+    "method": "evoskill_compiler",
+    "total_tasks": 20,
+    "cases": {
+      "assignment_and_control": {
+        "total_tasks": 20,
+        "answered_tasks": 20,
+        "boundary_tasks": 0,
+        "isolation_tasks": 20,
+        "human_review_tasks": 0,
+        "external_restricted_tasks": 0,
+        "error_rate": 0.0,
+        "status_accuracy": 0.9,
+        "task_success_rate": 0.6,
+        "evidence_precision": 1.0,
+        "evidence_recall": 0.4508,
+        "evidence_f1": 0.4886,
+        "boundary_correct": 0.0,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.0,
+        "external_violation_rate": 0.0,
+        "validation_failure_rate": 0.25
+      }
+    },
+    "error_rate": 0.0,
+    "status_accuracy": 0.9,
+    "task_success_rate": 0.6,
+    "evidence_precision": 1.0,
+    "evidence_recall": 0.4508,
+    "evidence_f1": 0.4886,
+    "boundary_correct": 0.0,
+    "contract_isolation": 1.0,
+    "human_review_routing": 0.0,
+    "external_violation_rate": 0.0,
+    "validation_failure_rate": 0.25
+  }
+]

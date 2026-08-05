@@ -1,0 +1,37 @@
+{
+  "method": "schema_prompt_skill",
+  "case_id": "revenue_and_commercial_terms",
+  "model": "deepseek-chat",
+  "schema_sections": [
+    "Covered Categories",
+    "Review Checklist",
+    "Evidence Extraction Rules",
+    "Output Format",
+    "Boundary Rules"
+  ],
+  "input_summary": {
+    "contracts_sampled": 10,
+    "sampled_contract_ids": [
+      "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content_License_Agreement1",
+      "MusclepharmCorp_20170208_10-KA_EX-10.38_9893581_EX-10.38_Co-Branding_Agreement",
+      "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP_AGREEMENT",
+      "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion_Agreement",
+      "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+      "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+      "KUBIENT,INC_07_02_2020-EX-10.14-MASTER_SERVICES_AGREEMENT_Part2",
+      "Array_BioPharma_Inc._-_LICENSE,_DEVELOPMENT_AND_COMMERCIALIZATION_AGREEMENT",
+      "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+      "GridironBionutrientsInc_20171206_8-K_EX-10.2_10972556_EX-10.2_Endorsement_Agreement"
+    ],
+    "contracts_with_evidence_count": 163,
+    "category_count": 4,
+    "estimated_input_tokens": 100553
+  },
+  "usage": {
+    "prompt_tokens": 82039,
+    "completion_tokens": 1321,
+    "total_tokens": 83360
+  },
+  "duration_seconds": 16.54,
+  "created_at": "2026-07-15T13:23:05.615702+00:00"
+}

@@ -1,0 +1,986 @@
+{
+  "step1_tools_sample": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_non_compete",
+          "description": "Identifies clauses that restrict a party from engaging in competitive activities, such as advertising for competitors or using marks in a way that competes.",
+          "category": "Non-Compete",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 2.4 RESTRICTIONS ON COMMUNICATIONS",
+            "output": {
+              "found": true,
+              "extracted_text": "i-Escrow shall not run banner advertisements on the Co-Branded Site for any of 2TheMart's competitors. 2TheMart shall provide in writing, a list of companies they would like to exclude, including every time they wish to change this list.",
+              "confidence": 0.95,
+              "explanation": "The contract explicitly prohibits i-Escrow from running ads for 2TheMart's competitors, constituting a non-compete restriction regarding advertising."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_exclusivity",
+          "description": "Identifies clauses that grant exclusive rights to use content, trademarks, or services, or restrict sublicensing and third-party collaborations.",
+          "category": "Exclusivity",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 6.5 LIMITS ON SUBLICENSING",
+            "output": {
+              "found": true,
+              "extracted_text": "All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable. Notwithstanding the foregoing, either party may use a third party web host... In addition, 2TheMart may grant sublicenses to companies that 2TheMart has a business relationship with to the extent that 2TheMart Content is visible from such company's web-site through a link or other means.",
+              "confidence": 0.9,
+              "explanation": "The contract generally prohibits sublicensing (exclusive restriction), with specific narrow exceptions for web hosting and 2TheMart's business partners, indicating a controlled exclusivity framework."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_no_solicit_of_customers",
+          "description": "Identifies clauses that restrict a party from soliciting or contracting with the counterparty's customers or users.",
+          "category": "No-Solicit of Customers",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No explicit clause was found restricting either party from soliciting or contracting with the other party's customers outside the scope of the co-branded services."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_no_solicit_of_employees",
+          "description": "Identifies clauses that restrict a party from soliciting or hiring employees or contractors from the counterparty.",
+          "category": "No-Solicit of Employees",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No explicit clause was found restricting either party from soliciting or hiring employees or contractors from the other party."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_non_disparagement",
+          "description": "Identifies clauses that require parties to refrain from making negative or disparaging statements about the counterparty.",
+          "category": "Non-Disparagement",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No explicit non-disparagement clause was found. Section 6.4 mentions 'tarnishes, blurs or dilutes' regarding trademarks, but this is specific to mark usage, not general disparagement."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_006",
+          "name": "check_most_favored_nation",
+          "description": "Identifies clauses that guarantee a party will receive terms no less favorable than those offered to third parties.",
+          "category": "Most Favored Nation",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No Most Favored Nation clause was found. Section 5.1 allows rate adjustments by mutual consent, but does not tie them to third-party terms."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_007",
+          "name": "check_competitive_restriction_exception",
+          "description": "Identifies exceptions or carveouts to non-compete, exclusivity, or no-solicit restrictions.",
+          "category": "Competitive Restriction Exception",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 6.5 LIMITS ON SUBLICENSING",
+            "output": {
+              "found": true,
+              "extracted_text": "Notwithstanding the foregoing, either party may use a third party web host... In addition, 2TheMart may grant sublicenses to companies that 2TheMart has a business relationship with to the extent that 2TheMart Content is visible from such company's web-site through a link or other means.",
+              "confidence": 0.9,
+              "explanation": "This section provides exceptions to the general prohibition on sublicensing (exclusivity restriction), allowing for third-party web hosting and specific business relationships."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_exclusivity",
+          "description": "Identifies clauses that restrict the Recipient from engaging other providers or restrict the Provider from serving other clients, indicating an exclusivity arrangement.",
+          "category": "Exclusivity",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 1.2(c) and 1.3 of the Services Agreement",
+            "output": {
+              "found": true,
+              "extracted_text": "Provider Representatives shall be dedicated to solely providing the Services to Recipient and shall not provide any such services or resources to Provider or any other customer of Provider. ... Nothing in this Agreement shall be construed to prevent the Recipient from itself performing or from acquiring services from other providers that are similar to or identical to the Services.",
+              "confidence": 0.95,
+              "explanation": "The contract contains a partial exclusivity clause: Provider Representatives are exclusive to the Recipient, but the Recipient is explicitly allowed to use other providers (non-exclusive for Recipient)."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_no_solicit_of_employees",
+          "description": "Detects restrictions on soliciting or hiring employees or contractors from the counterparty.",
+          "category": "No-Solicit of Employees",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full contract text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.9,
+              "explanation": "No explicit clause restricting the solicitation or hiring of employees from the counterparty was found in the provided text."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_non_disparagement",
+          "description": "Identifies clauses requiring parties to refrain from making negative or disparaging statements about the counterparty.",
+          "category": "Non-Disparagement",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full contract text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.9,
+              "explanation": "No explicit non-disparagement clause was found in the provided text."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_most_favored_nation",
+          "description": "Identifies clauses guaranteeing that the buyer receives terms as favorable as those offered to any third party.",
+          "category": "Most Favored Nation",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full contract text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.9,
+              "explanation": "No Most Favored Nation clause was found. Pricing is defined as 'actual cost... plus a 10% service fee' without reference to third-party terms."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_non_compete",
+          "description": "Identifies restrictions on a party's ability to compete with the counterparty in specific geographies or business sectors.",
+          "category": "Non-Compete",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 1.2(c) and 1.3",
+            "output": {
+              "found": false,
+              "extracted_text": "Provider Representatives shall be dedicated to solely providing the Services to Recipient and shall not provide any such services or resources to Provider or any other customer of Provider. ... Nothing in this Agreement shall be construed to prevent the Recipient from itself performing or from acquiring services from other providers that are similar to or identical to the Services.",
+              "confidence": 0.85,
+              "explanation": "While Provider Representatives are restricted from serving others, the Provider entity itself is not broadly restricted from competing in the market, and the Recipient is explicitly allowed to use competitors. This is an exclusivity/assignment restriction rather than a general non-compete."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_006",
+          "name": "check_no_solicit_of_customers",
+          "description": "Identifies restrictions on soliciting or contracting with the counterparty's customers or partners.",
+          "category": "No-Solicit of Customers",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full contract text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.9,
+              "explanation": "No explicit clause restricting the solicitation of the counterparty's customers was found in the provided text."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_007",
+          "name": "check_competitive_restriction_exception",
+          "description": "Identifies exceptions or carveouts to exclusivity, non-compete, or no-solicit clauses.",
+          "category": "Competitive Restriction Exception",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 1.3",
+            "output": {
+              "found": true,
+              "extracted_text": "Nothing in this Agreement shall be construed to prevent the Recipient from itself performing or from acquiring services from other providers that are similar to or identical to the Services.",
+              "confidence": 0.95,
+              "explanation": "This clause serves as an exception to any potential exclusivity, explicitly allowing the Recipient to use other providers."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_exclusivity",
+          "description": "Identifies clauses that restrict a party from engaging in similar business activities with third parties or require exclusive dealing.",
+          "category": "Exclusivity",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether an exclusivity clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 10: Internal Revenue Code Election... nothing in this Agreement is to be construed as a limitation of the powers or rights of either Party to carry on his separate business for his sole benefit",
+            "output": {
+              "found": false,
+              "extracted_text": "nothing in this Agreement is to be construed as a limitation of the powers or rights of either Party to carry on his separate business for his sole benefit",
+              "confidence": 0.95,
+              "explanation": "The contract explicitly states that the agreement does not limit the parties' rights to carry on separate businesses, indicating a lack of exclusivity restrictions."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_non_compete",
+          "description": "Detects restrictions on a party's ability to compete with the counterparty in specific geographies or business sectors.",
+          "category": "Non-Compete",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether a non-compete clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 5: Powers and Authority... The Joint Venturers recognize that both of the Joint Venturers are and will continue to be engaged in the conduct of their respective businesses for their own account.",
+            "output": {
+              "found": false,
+              "extracted_text": "The Joint Venturers recognize that both of the Joint Venturers are and will continue to be engaged in the conduct of their respective businesses for their own account.",
+              "confidence": 0.9,
+              "explanation": "The contract acknowledges that parties continue their respective businesses, implying no general non-compete restriction exists."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_no_solicit_customers",
+          "description": "Checks for clauses prohibiting the solicitation or contracting with customers or partners of the counterparty.",
+          "category": "No-Solicit of Customers",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether a no-solicit customers clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No clauses were found restricting the solicitation of customers or partners."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_no_solicit_employees",
+          "description": "Checks for clauses prohibiting the solicitation or hiring of employees or contractors from the counterparty.",
+          "category": "No-Solicit of Employees",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether a no-solicit employees clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No clauses were found restricting the solicitation or hiring of employees."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_non_disparagement",
+          "description": "Identifies clauses requiring parties not to make negative or disparaging statements about the counterparty.",
+          "category": "Non-Disparagement",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether a non-disparagement clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No clauses were found requiring non-disparagement."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_006",
+          "name": "check_most_favored_nation",
+          "description": "Checks for clauses guaranteeing that if a third party receives better terms, the current party is entitled to those same terms.",
+          "category": "Most Favored Nation",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether an MFN clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No Most Favored Nation clauses were found in the agreement."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_007",
+          "name": "check_competitive_restriction_exception",
+          "description": "Identifies exceptions or carveouts to non-compete, exclusivity, or no-solicit restrictions.",
+          "category": "Competitive Restriction Exception",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether an exception clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 10: Internal Revenue Code Election... nothing in this Agreement is to be construed as a limitation of the powers or rights of either Party to carry on his separate business for his sole benefit",
+            "output": {
+              "found": true,
+              "extracted_text": "nothing in this Agreement is to be construed as a limitation of the powers or rights of either Party to carry on his separate business for his sole benefit",
+              "confidence": 0.9,
+              "explanation": "This clause serves as an exception, clarifying that the joint venture does not restrict independent business activities."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "merged_tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_exclusivity",
+        "category": "Exclusivity",
+        "description": "Identifies clauses where a party grants exclusive rights to manufacture, sell, distribute, or license products/services, or restricts the other party from working with competitors, sourcing from third parties, or dealing with others in a specific field, territory, or market. Includes checks for exclusive dealing commitments, sole supplier/distributor appointments, and prohibitions on competing activities.",
+        "source_contracts": [
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "Section 3. Exclusivity. During the Term, Company shall be the exclusive distributor of the Products in the Territory. Supplier shall not sell, distribute, or license the Products to any third party within the Territory without the prior written consent of Company. Company agrees to purchase all its requirements for the Products from Supplier.",
+          "output": {
+            "found": true,
+            "extracted_text": "Company shall be the exclusive distributor of the Products in the Territory. Supplier shall not sell, distribute, or license the Products to any third party within the Territory... Company agrees to purchase all its requirements for the Products from Supplier.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_exclusivity_circumvention",
+        "category": "Exclusivity",
+        "description": "Identifies clauses prohibiting parties from bypassing each other to deal directly with third parties regarding the subject matter of the agreement.",
+        "source_contracts": [
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Neither Party shall, directly or indirectly, contact, negotiate with, or enter into any agreement with any third party introduced by the other Party for the purpose of obtaining the services or products described herein, without the prior written consent of the introducing Party.",
+          "output": {
+            "found": true,
+            "extracted_text": "Neither Party shall, directly or indirectly, contact, negotiate with, or enter into any agreement with any third party introduced by the other Party...",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_003",
+        "name": "check_exclusivity_fuel_management",
+        "category": "Exclusivity",
+        "description": "Identifies clauses granting exclusive rights to manage or supply specific operational inputs, such as fuel, for a project.",
+        "source_contracts": [
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Party A grants Party B the exclusive right to supply and manage all fuel requirements for the Project Site for the duration of the Agreement.",
+          "output": {
+            "found": true,
+            "extracted_text": "Party A grants Party B the exclusive right to supply and manage all fuel requirements for the Project Site...",
+            "confidence": 0.92
+          }
+        }
+      },
+      {
+        "tool_id": "tool_004",
+        "name": "check_exclusivity_digital_products",
+        "category": "Exclusivity",
+        "description": "Identifies clauses where a party is restricted from selling, marketing, or promoting competing digital products (e.g., meditation or sleep apps) during the term and for a specified period after termination.",
+        "source_contracts": [
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "During the Term and for twelve (12) months following termination, Licensee shall not develop, market, or distribute any digital application that competes with the Licensed Software, specifically including meditation, sleep aid, or mindfulness applications.",
+          "output": {
+            "found": true,
+            "extracted_text": "Licensee shall not develop, market, or distribute any digital application that competes with the Licensed Software, specifically including meditation, sleep aid, or mindfulness applications.",
+            "confidence": 0.96
+          }
+        }
+      },
+      {
+        "tool_id": "tool_005",
+        "name": "check_exclusivity_airport_retail",
+        "category": "Exclusivity",
+        "description": "Identifies clauses where a party is restricted from selling or marketing products in specific retail locations (e.g., airports) without the counterparty's collaboration or consent.",
+        "source_contracts": [
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "Vendor agrees not to sell or market its products in any airport retail locations within the United States without the prior written consent and collaboration of Distributor.",
+          "output": {
+            "found": true,
+            "extracted_text": "Vendor agrees not to sell or market its products in any airport retail locations within the United States without the prior written consent and collaboration of Distributor.",
+            "confidence": 0.94
+          }
+        }
+      },
+      {
+        "tool_id": "tool_006",
+        "name": "check_exclusivity_supplier_requirements",
+        "category": "Exclusivity",
+        "description": "Identifies clauses where one party is designated as the sole supplier for specific goods or collateral, restricting the other party from sourcing these items from third parties.",
+        "source_contracts": [
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "Buyer shall procure all required packaging materials and promotional collateral exclusively from Seller. Buyer shall not source such items from any third-party supplier during the Term.",
+          "output": {
+            "found": true,
+            "extracted_text": "Buyer shall procure all required packaging materials and promotional collateral exclusively from Seller. Buyer shall not source such items from any third-party supplier...",
+            "confidence": 0.93
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_no_solicit_of_customers",
+        "category": "No-Solicit of Customers",
+        "description": "Identifies clauses that restrict a party from soliciting, marketing to, or contracting with the counterparty's customers, partners, clients, or users. This includes restrictions on direct contact, negotiation, inducing competitors, or diverting customers via links, often applicable during and/or after the contract term.",
+        "source_contracts": [
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "NUVEEN_-_REMARKETING_AGREEMENT",
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+          "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing_Agreement__Supply_Agreement",
+          "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark_License_Agreement",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+          "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR_AGREEMENT",
+          "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "ParatekPharmaceuticalsInc_20170505_10-KA_EX-10.29_10323872_EX-10.29_Outsourcing_Agreement",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        ],
+        "best_example": {
+          "input": "During the Term and for a period of two (2) years thereafter, Supplier shall not, directly or indirectly, solicit, induce, or attempt to induce any Customer of Buyer to terminate, reduce, or modify its business relationship with Buyer, nor shall Supplier solicit or contract with any such Customer for services similar to those provided to Buyer under this Agreement.",
+          "output": {
+            "found": true,
+            "extracted_text": "During the Term and for a period of two (2) years thereafter, Supplier shall not, directly or indirectly, solicit, induce, or attempt to induce any Customer of Buyer to terminate, reduce, or modify its business relationship with Buyer, nor shall Supplier solicit or contract with any such Customer for services similar to those provided to Buyer under this Agreement.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_no_solicit_employees",
+        "category": "No-Solicit of Employees",
+        "description": "Identifies clauses that restrict a party from soliciting, recruiting, hiring, or engaging employees, contractors, consultants, or agents of the counterparty during or after the contract term.",
+        "source_contracts": [
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        ],
+        "best_example": {
+          "input": "During the Term and for a period of twelve (12) months following the termination or expiration of this Agreement, neither Party shall, directly or indirectly, solicit for employment or hire any employee or independent contractor of the other Party who was employed or engaged by such other Party at any time during the twelve (12) months preceding such solicitation or hiring.",
+          "output": {
+            "found": true,
+            "extracted_text": "During the Term and for a period of twelve (12) months following the termination or expiration of this Agreement, neither Party shall, directly or indirectly, solicit for employment or hire any employee or independent contractor of the other Party who was employed or engaged by such other Party at any time during the twelve (12) months preceding such solicitation or hiring.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_non_disparagement",
+        "category": "Non-Disparagement",
+        "description": "Identifies clauses requiring parties to refrain from making negative, disparaging, defamatory, or misleading statements about the counterparty, its brand, products, officers, or directors, and may include restrictions on public announcements or conduct harming reputation.",
+        "source_contracts": [
+          "Magenta_Therapeutics,_Inc._-_Master_Development_and_Manufacturing_Agreement",
+          "Monsanto_Company_-_SECOND_A_R_EXCLUSIVE_AGENCY_AND_MARKETING_AGREEMENT_",
+          "MusclepharmCorp_20170208_10-KA_EX-10.38_9893581_EX-10.38_Co-Branding_Agreement",
+          "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP_AGREEMENT",
+          "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP_AGREEMENT",
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+          "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing_Agreement__Supply_Agreement",
+          "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark_License_Agreement",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+          "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR_AGREEMENT",
+          "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement_Agreement",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        ],
+        "best_example": {
+          "input": "Neither party shall make any negative, disparaging, or defamatory statements about the other party, its officers, directors, employees, or business operations, whether in public or private communications.",
+          "output": {
+            "found": true,
+            "extracted_text": "Neither party shall make any negative, disparaging, or defamatory statements about the other party, its officers, directors, employees, or business operations, whether in public or private communications.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_most_favored_nation",
+        "category": "Most Favored Nation",
+        "description": "Identifies clauses where a party is guaranteed pricing or terms no less favorable than those offered to other parties or third parties for similar technology, goods, or services.",
+        "source_contracts": [
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        ],
+        "best_example": {
+          "input": "If at any time during the term of this Agreement, Licensor grants to any third party a license to the Licensed Technology on terms more favorable than those granted to Licensee hereunder, Licensee shall be entitled to the benefit of such more favorable terms upon written request.",
+          "output": {
+            "found": true,
+            "extracted_text": "If at any time during the term of this Agreement, Licensor grants to any third party a license to the Licensed Technology on terms more favorable than those granted to Licensee hereunder, Licensee shall be entitled to the benefit of such more favorable terms upon written request.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_exception",
+        "category": "Exception",
+        "description": "Checks if the contract contains exceptions or carveouts to Non-Compete, Exclusivity and No-Solicit of Customers above.",
+        "source_contracts": [
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Contract text containing Non-Compete, Exclusivity, and No-Solicit clauses.",
+          "output": {
+            "found": true,
+            "extracted_text": "Exceptions to the Non-Compete obligation shall include...",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_competitive_exception",
+        "category": "Competitive Exception",
+        "description": "Checks for exceptions or carveouts to Non-Compete, Exclusivity, and No-Solicit of Customers clauses.",
+        "source_contracts": [
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement"
+        ],
+        "best_example": {
+          "input": "Sample contract text containing competitive exception clauses",
+          "output": {
+            "found": true,
+            "extracted_text": "Exceptions to non-compete obligations include...",
+            "confidence": 0.95
+          }
+        }
+      }
+    ],
+    "tool_stats": {
+      "total_unique_tools": 12,
+      "tools_by_category": {
+        "Non-Compete": 0,
+        "Exclusivity": 6,
+        "No-Solicit of Customers": 1,
+        "No-Solicit of Employees": 1,
+        "Non-Disparagement": 1,
+        "Most Favored Nation": 1,
+        "Competitive Restriction Exception": 0,
+        "Exception": 1,
+        "Competitive Exception": 1
+      }
+    }
+  },
+  "step3_skill_md": "# SKILL.md\n\n## Overview\nThis skill, **Competition Restrictions Review**, analyzes commercial contracts to identify clauses that restrict competition, limit business freedom, or impose loyalty obligations between parties. It specifically targets **Exclusivity**, **Non-Compete**, **No-Solicit** (Customers and Employees), **Most Favored Nation (MFN)** pricing, **Non-Disparagement**, and any **Exceptions** to these restrictions.\n\nThe skill utilizes a suite of specialized tools to extract precise contractual language, assess the scope of restrictions (territory, duration, subject matter), and identify carveouts that may mitigate risk.\n\n## Available Tools\n\n### 1. Exclusivity & Market Access\n\n#### `check_exclusivity`\n*   **Category:** Exclusivity\n*   **Description:** Identifies general exclusivity clauses where a party grants exclusive rights to manufacture, sell, distribute, or license products/services, or restricts the other party from working with competitors or third parties in a specific field, territory, or market. Includes sole supplier/distributor appointments and exclusive dealing commitments.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract or relevant sections.\n*   **Returns:**\n    *   `found`: Boolean indicating if an exclusivity clause was detected.\n    *   `extracted_text`: The specific clause text.\n    *   `confidence`: Confidence score (0-1).\n*   **Usage Notes:** Use this as the primary tool for general exclusivity checks. It covers broad restrictions on dealing with third parties.\n*   **Example Input:** \"Company shall be the exclusive distributor of the Products in the Territory. Supplier shall not sell... to any third party...\"\n*   **Example Output:** `{\"found\": true, \"extracted_text\": \"Company shall be the exclusive distributor...\", \"confidence\": 0.98}`\n\n#### `check_exclusivity_circumvention`\n*   **Category:** Exclusivity\n*   **Description:** Identifies clauses prohibiting parties from bypassing each other to deal directly with third parties introduced by the counterparty (anti-circumvention).\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The circumvention clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Use when reviewing joint ventures or introduction agreements where direct contact with introduced parties is a risk.\n*   **Example Input:** \"Neither Party shall... contact... any third party introduced by the other Party...\"\n\n#### `check_exclusivity_fuel_management`\n*   **Category:** Exclusivity\n*   **Description:** Identifies clauses granting exclusive rights to manage or supply specific operational inputs, such as fuel, for a project.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The fuel management exclusivity clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Specific to energy, infrastructure, or industrial projects involving fuel supply.\n\n#### `check_exclusivity_digital_products`\n*   **Category:** Exclusivity\n*   **Description:** Identifies clauses restricting a party from selling, marketing, or promoting competing digital products (e.g., apps, software) during the term and post-termination.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The digital product restriction clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Use for software, SaaS, or digital media agreements.\n\n#### `check_exclusivity_airport_retail`\n*   **Category:** Exclusivity\n*   **Description:** Identifies clauses restricting sales or marketing in specific retail locations (e.g., airports) without counterparty consent.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The airport retail restriction clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Use for retail distribution or brand licensing agreements involving physical locations.\n\n#### `check_exclusivity_supplier_requirements`\n*   **Category:** Exclusivity\n*   **Description:** Identifies clauses designating one party as the sole supplier for specific goods or collateral, restricting sourcing from third parties.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The sole supplier clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Use for supply chain or manufacturing agreements.\n\n### 2. No-Solicit Restrictions\n\n#### `check_no_solicit_of_customers`\n*   **Category:** No-Solicit of Customers\n*   **Description:** Identifies clauses restricting a party from soliciting, marketing to, or contracting with the counterparty's customers, partners, clients, or users. Includes restrictions on direct contact, inducing competitors, or diverting customers.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The no-solicit customer clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Critical for service agreements, outsourcing, and distribution deals. Check for duration (during term vs. post-termination).\n*   **Example Input:** \"Supplier shall not... solicit... any Customer of Buyer...\"\n\n#### `check_no_solicit_employees`\n*   **Category:** No-Solicit of Employees\n*   **Description:** Identifies clauses restricting a party from soliciting, recruiting, hiring, or engaging employees, contractors, or consultants of the counterparty.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The no-solicit employee clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Common in joint ventures, consulting, and strategic alliances. Note the \"look-back\" period (e.g., employees engaged in the last 12 months).\n*   **Example Input:** \"Neither Party shall... solicit for employment... any employee... of the other Party...\"\n\n### 3. Pricing & Reputation\n\n#### `check_most_favored_nation`\n*   **Category:** Most Favored Nation\n*   **Description:** Identifies clauses guaranteeing that a party receives pricing or terms no less favorable than those offered to other third parties for similar goods/services.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The MFN clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Use for licensing, distribution, and service agreements to ensure competitive pricing protection.\n*   **Example Input:** \"If... Licensor grants to any third party... terms more favorable... Licensee shall be entitled to the benefit...\"\n\n#### `check_non_disparagement`\n*   **Category:** Non-Disparagement\n*   **Description:** Identifies clauses requiring parties to refrain from making negative, disparaging, defamatory, or misleading statements about the counterparty, its brand, or officers.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The non-disparagement clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Common in endorsement, partnership, and separation agreements.\n\n### 4. Exceptions & Carveouts\n\n#### `check_exception`\n*   **Category:** Exception\n*   **Description:** Checks for general exceptions or carveouts to Non-Compete, Exclusivity, and No-Solicit of Customers clauses.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The exception clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Use after identifying restrictions to see if they are absolute or have defined safe harbors.\n\n#### `check_competitive_exception`\n*   **Category:** Competitive Exception\n*   **Description:** Specifically checks for exceptions or carveouts to Non-Compete, Exclusivity, and No-Solicit of Customers clauses, often related to pre-existing relationships or specific competitive activities.\n*   **Parameters:**\n    *   `contract_text`: The full text of the contract.\n*   **Returns:**\n    *   `found`: Boolean.\n    *   `extracted_text`: The competitive exception clause.\n    *   `confidence`: Confidence score.\n*   **Usage Notes:** Use to identify if the restrictions apply to all competitors or only specific ones.\n\n## Review Workflow\n\n1.  **Ingest Contract Text:** Load the full contract text into the review context.\n2.  **Scan for Core Restrictions:**\n    *   Run `check_exclusivity` to identify broad market exclusivity.\n    *   Run `check_no_solicit_of_customers` to identify customer poaching restrictions.\n    *   Run `check_no_solicit_employees` to identify hiring restrictions.\n    *   Run `check_most_favored_nation` to identify pricing protections.\n    *   Run `check_non_disparagement` to identify reputation protections.\n3.  **Scan for Specific/Industry Restrictions (If Applicable):**\n    *   If the contract involves digital goods, run `check_exclusivity_digital_products`.\n    *   If the contract involves retail/location-based sales, run `check_exclusivity_airport_retail`.\n    *   If the contract involves supply chain/manufacturing, run `check_exclusivity_supplier_requirements`.\n    *   If the contract involves energy/fuel, run `check_exclusivity_fuel_management`.\n    *   If the contract involves introductions/JVs, run `check_exclusivity_circumvention`.\n4.  **Scan for Exceptions:**\n    *   If any restrictions were found in steps 2 or 3, run `check_exception` and `check_competitive_exception` to identify carveouts.\n5.  **Synthesize Results:**\n    *   Compile all `found: true` results.\n    *   Map extracted texts to their respective categories.\n    *   Determine if human review is required based on ambiguity or high-risk clauses (e.g., perpetual non-competes).\n\n## Output Format\n\nThe output must be a JSON object conforming to the following schema:\n\n```json\n{\n  \"status\": \"success\" | \"error\",\n  \"answer\": {\n    \"exclusivity\": {\n      \"found\": boolean,\n      \"clauses\": [\n        {\n          \"tool_id\": \"string\",\n          \"extracted_text\": \"string\",\n          \"confidence\": float\n        }\n      ]\n    },\n    \"no_solicit_customers\": {\n      \"found\": boolean,\n      \"clauses\": [\n        {\n          \"tool_id\": \"string\",\n          \"extracted_text\": \"string\",\n          \"confidence\": float\n        }\n      ]\n    },\n    \"no_solicit_employees\": {\n      \"found\": boolean,\n      \"clauses\": [\n        {\n          \"tool_id\": \"string\",\n          \"extracted_text\": \"string\",\n          \"confidence\": float\n        }\n      ]\n    },\n    \"most_favored_nation\": {\n      \"found\": boolean,\n      \"clauses\": [\n        {\n          \"tool_id\": \"string\",\n          \"extracted_text\": \"string\",\n          \"confidence\": float\n        }\n      ]\n    },\n    \"non_disparagement\": {\n      \"found\": boolean,\n      \"clauses\": [\n        {\n          \"tool_id\": \"string\",\n          \"extracted_text\": \"string\",\n          \"confidence\": float\n        }\n      ]\n    },\n    \"exceptions\": {\n      \"found\": boolean,\n      \"clauses\": [\n        {\n          \"tool_id\": \"string\",\n          \"extracted_text\": \"string\",\n          \"confidence\": float\n        }\n      ]\n    }\n  },\n  \"evidence_unit_ids\": [\"string\"],\n  \"source_contract_ids\": [\"string\"],\n  \"missing_inputs\": [\"string\"],\n  \"human_review_required\": boolean\n}\n```\n\n## Boundary Rules\n\n*   **Do Not Interpret Law:** The skill extracts and identifies clauses based on textual patterns. It does not provide legal advice on the enforceability of these clauses (e.g., whether a non-compete is void under local law).\n*   **Scope Limitation:** Only analyze the provided contract text. Do not infer restrictions from external knowledge or other contracts unless explicitly linked in the `source_contract_ids`.\n*   **Confidence Thresholds:** If a tool returns a confidence score below 0.7, flag the result for `human_review_required`.\n*   **Non-Compete Specifics:** Note that the current tool set focuses heavily on *Exclusivity* and *No-Solicit*. If a general \"Non-Compete\" clause is present but not captured by `check_exclusivity`, it may be missed. Use `check_exclusivity` as the primary proxy for non-compete behavior in this skill set, as it covers \"prohibitions on competing activities.\"\n*   **Exception Handling:** If `check_exception` or `check_competitive_exception` returns `found: true`, ensure the extracted text is included in the `exceptions` section of the output, even if the primary restriction tools returned `found: false` (though this is rare)."
+}

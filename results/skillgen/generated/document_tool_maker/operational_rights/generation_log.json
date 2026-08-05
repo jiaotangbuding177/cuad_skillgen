@@ -1,0 +1,757 @@
+{
+  "step1_tools_sample": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_ip_ownership_assignment",
+          "description": "Identifies clauses where intellectual property created or provided by one party is assigned to or becomes the property of the counterparty.",
+          "category": "IP Ownership Assignment",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 6.2 CONTENT OWNERSHIP",
+            "output": {
+              "found": false,
+              "extracted_text": "Except as otherwise provided in this Agreement, as between 2TheMart and i-Escrow: (a) 2TheMart and its suppliers retain all rights, title and interest in and to all intellectual property rights embodied in or associated with the 2TheMart Content, and b) i-Escrow and its suppliers retain all rights, title and interest in and to all intellectual property rights embodied in or associated with the i-Escrow Content and Co-Branded Site.",
+              "confidence": 0.95,
+              "explanation": "The contract explicitly states that each party retains ownership of their respective content. There is no assignment of IP ownership from one party to the other; rather, licenses are granted."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_joint_ip_ownership",
+          "description": "Detects clauses that establish joint or shared ownership of intellectual property between the contracting parties.",
+          "category": "Joint IP Ownership",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 6.2 CONTENT OWNERSHIP",
+            "output": {
+              "found": false,
+              "extracted_text": "Except as otherwise provided in this Agreement, as between 2TheMart and i-Escrow: (a) 2TheMart and its suppliers retain all rights, title and interest in and to all intellectual property rights embodied in or associated with the 2TheMart Content, and b) i-Escrow and its suppliers retain all rights, title and interest in and to all intellectual property rights embodied in or associated with the i-Escrow Content and Co-Branded Site.",
+              "confidence": 0.98,
+              "explanation": "The contract specifies separate ownership for each party's content. There is no provision for joint ownership of IP."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_covenant_not_to_sue",
+          "description": "Identifies clauses where a party agrees not to contest the validity of the counterparty's IP or waive the right to bring certain claims.",
+          "category": "Covenant Not to Sue",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 6.4 TRADEMARK RESTRICTIONS",
+            "output": {
+              "found": false,
+              "extracted_text": "The other party shall not take any action inconsistent with the owner's ownership of the Marks, and any benefits accruing from use of such Marks shall automatically vest in the owner.",
+              "confidence": 0.9,
+              "explanation": "While the contract restricts actions inconsistent with ownership, it does not contain an explicit covenant not to sue or a waiver of rights to contest IP validity."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_third_party_beneficiary",
+          "description": "Determines if the contract grants enforceable rights to non-contracting third parties.",
+          "category": "Third Party Beneficiary",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 12.5 INDEPENDENT CONTRACTORS",
+            "output": {
+              "found": false,
+              "extracted_text": "The parties are independent contractors, and no agency, partnership, joint venture, employee- employer or franchisor-franchisee relationship is intended or created by this Agreement.",
+              "confidence": 0.95,
+              "explanation": "The contract defines the relationship between the two parties but does not explicitly grant rights to third parties (such as customers) to enforce the agreement. Standard boilerplate usually implies no third-party beneficiaries unless stated otherwise."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_rofr_rofo_rofn",
+          "description": "Checks for clauses granting rights of first refusal, first offer, or first negotiation regarding equity, assets, or services.",
+          "category": "Rofr/Rofo/Rofn",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 8.3 TERMINATION FOR CHANGE IN COMPANY STRUCTURE",
+            "output": {
+              "found": false,
+              "extracted_text": "If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. ... are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.",
+              "confidence": 0.98,
+              "explanation": "This clause allows for termination upon a change in control/acquisition, but it does not grant a right of first refusal, offer, or negotiation to purchase the equity interest itself."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_ip_ownership_assignment",
+          "description": "Identifies clauses where intellectual property created by one party is assigned to or becomes the property of the other party.",
+          "category": "IP Ownership Assignment",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 1.4 Intellectual Property",
+            "output": {
+              "found": true,
+              "extracted_text": "Recipient shall own, and Provider hereby irrevocably assigns to the Recipient, all rights, title, and interest in any invention, technique, process, device, discovery, improvement, or know-how... solely or jointly by Provider while working for or on behalf of the Recipient",
+              "confidence": 0.98,
+              "explanation": "The contract explicitly states that IP created by the Provider for the Recipient is assigned to the Recipient."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_joint_ip_ownership",
+          "description": "Determines if there are clauses establishing shared or joint ownership of intellectual property between the contracting parties.",
+          "category": "Joint IP Ownership",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 1.4 Intellectual Property",
+            "output": {
+              "found": false,
+              "extracted_text": "Recipient shall own, and Provider hereby irrevocably assigns to the Recipient, all rights, title, and interest in any invention... solely or jointly by Provider while working for or on behalf of the Recipient",
+              "confidence": 0.95,
+              "explanation": "Although the text mentions 'solely or jointly by Provider', the ownership is assigned entirely to the Recipient. There is no clause granting joint ownership rights to the Provider."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_rofr_rofo_rofn",
+          "description": "Scans for clauses granting a right of first refusal, right of first offer, or right of first negotiation regarding equity, assets, or services.",
+          "category": "Rofr/Rofo/Rofn",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.99,
+              "explanation": "No clauses granting right of first refusal, offer, or negotiation were found in the provided contract text."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_covenant_not_to_sue",
+          "description": "Identifies clauses where a party agrees not to contest the validity of the other party's IP or waive rights to sue for specific matters.",
+          "category": "Covenant Not to Sue",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.99,
+              "explanation": "No explicit covenant not to sue or non-contest clauses regarding IP validity were found in the contract."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_third_party_beneficiary",
+          "description": "Determines if the contract explicitly grants enforcement rights to non-contracting parties.",
+          "category": "Third Party Beneficiary",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 6.2 Succession and Assignment",
+            "output": {
+              "found": false,
+              "extracted_text": "This Agreement shall be binding upon and inure to the benefit of the Parties named herein and their respective successors and permitted assigns.",
+              "confidence": 0.95,
+              "explanation": "The contract limits benefits to the Parties, their successors, and permitted assigns. It does not explicitly create third-party beneficiary rights for unrelated entities."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_rofr_rofo_rofn",
+          "description": "Checks if the contract contains clauses granting a right of first refusal, right of first offer, or right of first negotiation regarding equity, assets, or interests.",
+          "category": "Rofr/Rofo/Rofn",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 12: Sale or Purchase of Interest of Joint Venturer Prohibited. No Joint Venturer shall be authorized or empowered to mortgage, hypothecate, pledge, sell, or transfer, an interest in the Joint Venture, nor confer on any successor or assignee the right to become a Joint Venturer without the consent of the other Joint Venturer.",
+            "output": {
+              "found": false,
+              "extracted_text": "No Joint Venturer shall be authorized or empowered to mortgage, hypothecate, pledge, sell, or transfer, an interest in the Joint Venture... without the consent of the other Joint Venturer.",
+              "confidence": 0.95,
+              "explanation": "The contract requires mutual consent for transfer but does not explicitly grant a Right of First Refusal (ROFR) or Right of First Offer (ROFO) to purchase the interest before selling to a third party. It is a restriction on transfer rather than a priority right to purchase."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_ip_ownership_assignment",
+          "description": "Determines if intellectual property created by one party is assigned to the counterparty or the Joint Venture.",
+          "category": "IP Ownership Assignment",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 2(b): The acquisition of a license(s) permitting the use of selected images in the Products; Exhibit A: CCGI will Prepare any artwork necessary for the reproduction of licensed or branded images...",
+            "output": {
+              "found": false,
+              "extracted_text": "The acquisition of a license(s) permitting the use of selected images in the Products",
+              "confidence": 0.9,
+              "explanation": "The contract mentions acquiring licenses and preparing artwork, but does not contain explicit language assigning ownership of newly created IP (like the artwork) to the Joint Venture or the other party. It implies usage rights via license rather than ownership transfer."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_joint_ip_ownership",
+          "description": "Identifies clauses that establish joint or shared ownership of intellectual property between the parties.",
+          "category": "Joint IP Ownership",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 2: Scope of the Joint Venture Business... (b) The acquisition of a license(s) permitting the use of selected images in the Products",
+            "output": {
+              "found": false,
+              "extracted_text": "The acquisition of a license(s) permitting the use of selected images in the Products",
+              "confidence": 0.85,
+              "explanation": "The contract does not explicitly state that IP is jointly owned. It refers to acquiring licenses for use. While the Joint Venture operates as a unit, there is no specific clause defining joint ownership of IP assets created or acquired."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_covenant_not_to_sue",
+          "description": "Checks for clauses where a party agrees not to sue or contest the validity of the other party's IP or rights.",
+          "category": "Covenant Not to Sue",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.95,
+              "explanation": "No covenant not to sue was found in the provided contract text."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_third_party_beneficiary",
+          "description": "Identifies if non-contracting parties are designated as beneficiaries with enforceable rights.",
+          "category": "Third Party Beneficiary",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 15: Benefit. This Agreement shall be binding on the Joint Venturers and their respective heirs, successors, executors, administrators, and assigns.",
+            "output": {
+              "found": false,
+              "extracted_text": "This Agreement shall be binding on the Joint Venturers and their respective heirs, successors, executors, administrators, and assigns.",
+              "confidence": 0.9,
+              "explanation": "Section 15 binds successors and assigns, which is standard privity of contract extension, but does not explicitly grant enforceable rights to independent third parties (like suppliers or customers) as third-party beneficiaries."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "merged_tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_joint_ip_ownership",
+        "category": "Joint IP Ownership",
+        "description": "Identifies clauses where intellectual property is jointly owned or shared between the contracting parties.",
+        "source_contracts": [
+          "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR_AGREEMENT",
+          "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP_AGREEMENT",
+          "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT",
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+          "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT",
+          "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark_License_Agreement",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development_Agreement1",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development_Agreement",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Any intellectual property developed jointly by the parties during the term of this Agreement shall be jointly owned by both parties. Each party shall have the right to exploit such jointly owned intellectual property without accounting to the other party, subject to the terms herein.",
+          "output": {
+            "found": true,
+            "extracted_text": "Any intellectual property developed jointly by the parties during the term of this Agreement shall be jointly owned by both parties.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_covenant_not_to_sue",
+        "category": "Covenant Not to Sue",
+        "description": "Identifies clauses where a party agrees not to contest the validity of the counterparty's intellectual property rights, waive rights to sue for IP infringement, or bring claims unrelated to the contract.",
+        "source_contracts": [
+          "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC_ALLIANCE_AGREEMENT",
+          "MRSFIELDSORIGINALCOOKIESINC_01_29_1998-EX-10-FRANCHISE_AGREEMENT",
+          "Magenta_Therapeutics,_Inc._-_Master_Development_and_Manufacturing_Agreement",
+          "Monsanto_Company_-_SECOND_A_R_EXCLUSIVE_AGENCY_AND_MARKETING_AGREEMENT_",
+          "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR_AGREEMENT",
+          "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP_AGREEMENT",
+          "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT",
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+          "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark_License_Agreement",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+          "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT",
+          "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark_License_Agreement",
+          "PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement_Agreement",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development_Agreement1",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "Party A agrees not to contest the validity, ownership, or enforceability of Party B's intellectual property rights, including patents, trademarks, and copyrights, and waives any right to bring claims against Party B regarding such IP.",
+          "output": {
+            "found": true,
+            "extracted_text": "Party A agrees not to contest the validity, ownership, or enforceability of Party B's intellectual property rights, including patents, trademarks, and copyrights, and waives any right to bring claims against Party B regarding such IP.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_covenant_not_to_sue_counterparty",
+        "category": "Covenant Not to Sue",
+        "description": "Detects clauses where the counterparty agrees not to contest the validity of the primary party's intellectual property rights.",
+        "source_contracts": [
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement"
+        ],
+        "best_example": {
+          "input": "Counterparty agrees not to challenge the validity of Primary Party's trademarks and patents.",
+          "output": {
+            "found": true,
+            "extracted_text": "Counterparty agrees not to challenge the validity of Primary Party's trademarks and patents.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_003",
+        "name": "check_covenant_not_to_sue_ip",
+        "category": "Covenant Not to Sue",
+        "description": "Identifies clauses where a party acknowledges the validity of the counterparty's IP and waives the right to contest ownership or bring infringement claims.",
+        "source_contracts": [
+          "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Party acknowledges the validity of Counterparty's IP and waives the right to contest ownership or bring infringement claims.",
+          "output": {
+            "found": true,
+            "extracted_text": "Party acknowledges the validity of Counterparty's IP and waives the right to contest ownership or bring infringement claims.",
+            "confidence": 0.96
+          }
+        }
+      },
+      {
+        "tool_id": "tool_004",
+        "name": "check_covenant_not_to_sue_lenders",
+        "category": "Covenant Not to Sue",
+        "description": "Detects clauses where a party waives rights to sue or bring claims against specific third parties, such as lenders or financing agents.",
+        "source_contracts": [
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Party waives any right to sue or bring claims against Lenders or Financing Agents related to the transaction.",
+          "output": {
+            "found": true,
+            "extracted_text": "Party waives any right to sue or bring claims against Lenders or Financing Agents related to the transaction.",
+            "confidence": 0.97
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_third_party_beneficiary",
+        "category": "Third Party Beneficiary",
+        "description": "Identifies clauses that explicitly state whether third parties have rights to enforce the contract or if the agreement is solely for the benefit of the contracting parties. This includes determining if non-contracting parties (such as successors, assigns, affiliates, directors, officers, or specific entities like government bodies or suppliers) are granted enforceable rights, benefits, or protections, or if they are explicitly excluded from such rights.",
+        "source_contracts": [
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VEONEER,INC_02_21_2020-EX-10.11-JOINT_VENTURE_AGREEMENT",
+          "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "This Agreement is for the sole benefit of the Parties and their respective successors and permitted assigns, and nothing herein, express or implied, is intended to or shall confer upon any other person or entity any legal or equitable right, benefit, or remedy of any nature whatsoever under or by reason of this Agreement.",
+          "output": {
+            "found": true,
+            "extracted_text": "This Agreement is for the sole benefit of the Parties and their respective successors and permitted assigns, and nothing herein, express or implied, is intended to or shall confer upon any other person or entity any legal or equitable right, benefit, or remedy of any nature whatsoever under or by reason of this Agreement.",
+            "confidence": 0.98,
+            "third_party_rights": false,
+            "explanation": "The clause explicitly excludes third-party beneficiaries, stating the agreement is solely for the benefit of the contracting parties and their successors/assigns."
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_rofr_rofo_rofn",
+        "category": "Rofr/Rofo/Rofn",
+        "description": "Scans for clauses granting rights of first refusal, first offer, or first negotiation regarding equity, assets, services, technology, IP, or business interests.",
+        "source_contracts": [
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+          "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT",
+          "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark_License_Agreement",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development_Agreement1",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "In the event that Company proposes to sell, transfer, or otherwise dispose of any equity interest, assets, or technology, it shall first offer such interest, assets, or technology to the other party on the same terms and conditions.",
+          "output": {
+            "found": true,
+            "extracted_text": "In the event that Company proposes to sell, transfer, or otherwise dispose of any equity interest, assets, or technology, it shall first offer such interest, assets, or technology to the other party on the same terms and conditions.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_rofr_manufacturing",
+        "category": "Rofr/Rofo/Rofn",
+        "description": "Identifies clauses granting a right of first refusal regarding the design and manufacture of branded merchandise.",
+        "source_contracts": [
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1"
+        ],
+        "best_example": {
+          "input": "Licensee shall have the right of first refusal to design and manufacture any new branded merchandise proposed by Licensor.",
+          "output": {
+            "found": true,
+            "extracted_text": "Licensee shall have the right of first refusal to design and manufacture any new branded merchandise proposed by Licensor.",
+            "confidence": 0.95
+          }
+        }
+      }
+    ],
+    "tool_stats": {
+      "total_unique_tools": 8,
+      "tools_by_category": {
+        "IP Ownership Assignment": 0,
+        "Joint IP Ownership": 1,
+        "Covenant Not to Sue": 4,
+        "Third Party Beneficiary": 1,
+        "Rofr/Rofo/Rofn": 2
+      }
+    }
+  },
+  "step3_skill_md": "# SKILL.md\n\n## Overview\nThis skill specializes in reviewing commercial contracts for specific operational and intellectual property rights. It focuses on identifying clauses related to **Joint IP Ownership**, **Covenants Not to Sue** (including waivers of IP validity challenges), **Third-Party Beneficiary** status, and **Rights of First Refusal/Offer/Negotiation (ROFR/ROFO/ROFN)**. The skill extracts relevant text, assesses confidence, and determines if specific rights or restrictions are present in the agreement.\n\n## Available Tools\n\n### 1. check_joint_ip_ownership\n*   **Category:** Joint IP Ownership\n*   **Description:** Identifies clauses where intellectual property is jointly owned or shared between the contracting parties. It looks for language indicating that IP developed during the term of the agreement is owned by both parties.\n*   **Parameters:**\n    *   `contract_text` (string): The full text of the contract or relevant section.\n*   **Returns:**\n    *   `found` (boolean): Whether a joint ownership clause was detected.\n    *   `extracted_text` (string): The specific clause text.\n    *   `confidence` (float): Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Use this tool when reviewing Joint Venture, Collaboration, or Development agreements to determine if IP created during the partnership is shared.\n*   **Example Input:** \"Any intellectual property developed jointly by the parties during the term of this Agreement shall be jointly owned by both parties.\"\n*   **Example Output:** `{ \"found\": true, \"extracted_text\": \"Any intellectual property developed jointly by the parties during the term of this Agreement shall be jointly owned by both parties.\", \"confidence\": 0.98 }`\n\n### 2. check_covenant_not_to_sue\n*   **Category:** Covenant Not to Sue\n*   **Description:** Identifies broad clauses where a party agrees not to contest the validity of the counterparty's intellectual property rights, waives rights to sue for IP infringement, or waives claims unrelated to the contract. This is a general check for non-assertion or non-contest covenants.\n*   **Parameters:**\n    *   `contract_text` (string): The full text of the contract or relevant section.\n*   **Returns:**\n    *   `found` (boolean): Whether a covenant not to sue was detected.\n    *   `extracted_text` (string): The specific clause text.\n    *   `confidence` (float): Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Use this as the primary tool for detecting general waivers of IP challenges. It covers scenarios where a party acknowledges the validity of the other's IP and waives the right to bring infringement claims.\n*   **Example Input:** \"Party A agrees not to contest the validity, ownership, or enforceability of Party B's intellectual property rights, including patents, trademarks, and copyrights, and waives any right to bring claims against Party B regarding such IP.\"\n*   **Example Output:** `{ \"found\": true, \"extracted_text\": \"Party A agrees not to contest the validity, ownership, or enforceability of Party B's intellectual property rights, including patents, trademarks, and copyrights, and waives any right to bring claims against Party B regarding such IP.\", \"confidence\": 0.98 }`\n\n### 3. check_covenant_not_to_sue_counterparty\n*   **Category:** Covenant Not to Sue\n*   **Description:** Detects specific clauses where the **counterparty** agrees not to contest the validity of the **primary party's** intellectual property rights. This is a directional check focusing on the protection of the primary party's IP.\n*   **Parameters:**\n    *   `contract_text` (string): The full text of the contract or relevant section.\n*   **Returns:**\n    *   `found` (boolean): Whether a counterparty-specific non-contest clause was detected.\n    *   `extracted_text` (string): The specific clause text.\n    *   `confidence` (float): Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Use this when specifically analyzing whether the other party is restricted from challenging your client's IP.\n*   **Example Input:** \"Counterparty agrees not to challenge the validity of Primary Party's trademarks and patents.\"\n*   **Example Output:** `{ \"found\": true, \"extracted_text\": \"Counterparty agrees not to challenge the validity of Primary Party's trademarks and patents.\", \"confidence\": 0.95 }`\n\n### 4. check_covenant_not_to_sue_ip\n*   **Category:** Covenant Not to Sue\n*   **Description:** Identifies clauses where a party explicitly acknowledges the validity of the counterparty's IP and waives the right to contest ownership or bring infringement claims. This tool focuses on the \"acknowledgment + waiver\" pattern.\n*   **Parameters:**\n    *   `contract_text` (string): The full text of the contract or relevant section.\n*   **Returns:**\n    *   `found` (boolean): Whether an IP acknowledgment/waiver clause was detected.\n    *   `extracted_text` (string): The specific clause text.\n    *   `confidence` (float): Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Use this to find explicit acknowledgments of IP validity coupled with waivers of litigation rights.\n*   **Example Input:** \"Party acknowledges the validity of Counterparty's IP and waives the right to contest ownership or bring infringement claims.\"\n*   **Example Output:** `{ \"found\": true, \"extracted_text\": \"Party acknowledges the validity of Counterparty's IP and waives the right to contest ownership or bring infringement claims.\", \"confidence\": 0.96 }`\n\n### 5. check_covenant_not_to_sue_lenders\n*   **Category:** Covenant Not to Sue\n*   **Description:** Detects clauses where a party waives rights to sue or bring claims against specific third parties, such as lenders or financing agents, often in the context of transaction-related disputes.\n*   **Parameters:**\n    *   `contract_text` (string): The full text of the contract or relevant section.\n*   **Returns:**\n    *   `found` (boolean): Whether a lender-specific waiver was detected.\n    *   `extracted_text` (string): The specific clause text.\n    *   `confidence` (float): Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Use this in financing or strategic alliance agreements where lenders are involved to ensure no unintended waivers of rights against financial institutions.\n*   **Example Input:** \"Party waives any right to sue or bring claims against Lenders or Financing Agents related to the transaction.\"\n*   **Example Output:** `{ \"found\": true, \"extracted_text\": \"Party waives any right to sue or bring claims against Lenders or Financing Agents related to the transaction.\", \"confidence\": 0.97 }`\n\n### 6. check_third_party_beneficiary\n*   **Category:** Third Party Beneficiary\n*   **Description:** Identifies clauses that explicitly state whether third parties have rights to enforce the contract. It determines if non-contracting parties (successors, assigns, affiliates, etc.) are granted enforceable rights or if they are explicitly excluded.\n*   **Parameters:**\n    *   `contract_text` (string): The full text of the contract or relevant section.\n*   **Returns:**\n    *   `found` (boolean): Whether a third-party beneficiary clause was detected.\n    *   `extracted_text` (string): The specific clause text.\n    *   `confidence` (float): Confidence score (0.0 - 1.0).\n    *   `third_party_rights` (boolean): `true` if third parties have rights, `false` if explicitly excluded.\n    *   `explanation` (string): Brief explanation of the clause's effect.\n*   **Usage Notes:** Essential for determining who can enforce the contract. Look for \"sole benefit of the parties\" vs. \"intended third-party beneficiaries.\"\n*   **Example Input:** \"This Agreement is for the sole benefit of the Parties and their respective successors and permitted assigns, and nothing herein... is intended to... confer upon any other person... any legal or equitable right...\"\n*   **Example Output:** `{ \"found\": true, \"extracted_text\": \"...\", \"confidence\": 0.98, \"third_party_rights\": false, \"explanation\": \"The clause explicitly excludes third-party beneficiaries.\" }`\n\n### 7. check_rofr_rofo_rofn\n*   **Category:** Rofr/Rofo/Rofn\n*   **Description:** Scans for clauses granting rights of first refusal (ROFR), first offer (ROFO), or first negotiation (ROFN) regarding equity, assets, services, technology, IP, or business interests.\n*   **Parameters:**\n    *   `contract_text` (string): The full text of the contract or relevant section.\n*   **Returns:**\n    *   `found` (boolean): Whether a ROFR/ROFO/ROFN clause was detected.\n    *   `extracted_text` (string): The specific clause text.\n    *   `confidence` (float): Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Use this to identify pre-emptive rights in M&A, joint ventures, or licensing deals.\n*   **Example Input:** \"In the event that Company proposes to sell, transfer, or otherwise dispose of any equity interest... it shall first offer such interest... to the other party on the same terms and conditions.\"\n*   **Example Output:** `{ \"found\": true, \"extracted_text\": \"...\", \"confidence\": 0.98 }`\n\n### 8. check_rofr_manufacturing\n*   **Category:** Rofr/Rofo/Rofn\n*   **Description:** Identifies specific clauses granting a right of first refusal regarding the **design and manufacture** of branded merchandise.\n*   **Parameters:**\n    *   `contract_text` (string): The full text of the contract or relevant section.\n*   **Returns:**\n    *   `found` (boolean): Whether a manufacturing ROFR clause was detected.\n    *   `extracted_text` (string): The specific clause text.\n    *   `confidence` (float): Confidence score (0.0 - 1.0).\n*   **Usage Notes:** Use this specifically in licensing or co-branding agreements where manufacturing rights are a key asset.\n*   **Example Input:** \"Licensee shall have the right of first refusal to design and manufacture any new branded merchandise proposed by Licensor.\"\n*   **Example Output:** `{ \"found\": true, \"extracted_text\": \"...\", \"confidence\": 0.95 }`\n\n## Review Workflow\n\n1.  **Analyze Contract Type:** Determine if the contract is a Joint Venture, License, Distribution, or Service agreement to prioritize relevant tools.\n2.  **Check IP Ownership:**\n    *   Run `check_joint_ip_ownership` to see if IP is shared.\n    *   *Note: The current tool set does not include a specific \"IP Assignment\" tool. If IP assignment is critical, note this as a missing input or rely on general text analysis if available in future iterations.*\n3.  **Check Covenants Not to Sue:**\n    *   Run `check_covenant_not_to_sue` for general waivers.\n    *   If specific directionality is needed, run `check_covenant_not_to_sue_counterparty` (protecting primary party) or `check_covenant_not_to_sue_ip` (acknowledgment/waiver).\n    *   Run `check_covenant_not_to_sue_lenders` if financing entities are involved.\n4.  **Check Third-Party Rights:**\n    *   Run `check_third_party_beneficiary` to determine if non-signatories can enforce the contract.\n5.  **Check Pre-emptive Rights:**\n    *   Run `check_rofr_rofo_rofn` for general equity/asset rights.\n    *   Run `check_rofr_manufacturing` if the contract involves branded goods or manufacturing.\n6.  **Synthesize Results:** Combine findings into the final JSON output, ensuring all `evidence_unit_ids` correspond to the tools that returned `found: true`.\n\n## Output Format\n\n```json\n{\n  \"status\": \"success\",\n  \"answer\": \"Summary of findings regarding Joint IP, Covenants Not to Sue, Third-Party Beneficiaries, and ROFR/ROFO/ROFN rights.\",\n  \"evidence_unit_ids\": [\n    \"tool_001\",\n    \"tool_002\"\n  ],\n  \"source_contract_ids\": [\n    \"CONTRACT_ID_123\"\n  ],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n*   **status**: \"success\" if tools executed without error, \"error\" otherwise.\n*   **answer**: A concise summary of the key clauses found.\n*   **evidence_unit_ids**: List of tool IDs that returned positive findings (`found: true`).\n*   **source_contract_ids**: List of contract identifiers processed.\n*   **missing_inputs**: List of required inputs that were missing (e.g., if \"IP Ownership Assignment\" check is requested but no tool exists, list it here).\n*   **human_review_required**: `true` if confidence scores are low (<0.8) or if conflicting clauses are detected.\n\n## Boundary Rules\n\n*   **Do Not** infer IP assignment if no specific tool is provided; mark as missing input if the case definition requires it.\n*   **Do Not** confuse \"Joint IP Ownership\" with \"IP Assignment.\" Joint ownership means both parties own it; assignment means one party transfers ownership to the other.\n*   **Do Not** assume a \"Covenant Not to Sue\" applies to all claims; distinguish between IP-specific waivers and general litigation waivers.\n*   **Do Not** overlook \"Successors and Assigns\" in Third-Party Beneficiary clauses; these are typically *not* considered third-party beneficiaries in the legal sense of *enforcing* rights against the original parties, but rather stepping into the shoes of the original party. The tool `check_third_party_beneficiary` handles this distinction via the `third_party_rights` flag.\n*   **Do Not** flag standard \"Right to Audit\" or \"Right to Inspect\" as ROFR/ROFO/ROFN.\n*   **Do Not** ignore the directionality of Covenants Not to Sue. Ensure you identify *who* is waiving rights against *whom*."
+}

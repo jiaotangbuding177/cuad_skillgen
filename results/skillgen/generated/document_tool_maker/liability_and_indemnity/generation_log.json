@@ -1,0 +1,664 @@
+{
+  "step1_tools_sample": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_cap_on_liability",
+          "description": "Identifies if the contract includes a cap on liability, such as excluding consequential damages or limiting recovery amounts.",
+          "category": "Cap on Liability",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "10. LIMITATION ON LIABILITY. EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES.",
+            "output": {
+              "found": true,
+              "extracted_text": "EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES.",
+              "confidence": 0.98,
+              "explanation": "The contract explicitly caps liability by excluding special, incidental, and consequential damages, with an exception for breaches of Section 11 (Confidential Information)."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_uncapped_liability",
+          "description": "Identifies if a party's liability is uncapped for specific breaches, such as IP infringement or confidentiality, often by creating exceptions to general liability caps.",
+          "category": "Uncapped Liability",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "10. LIMITATION ON LIABILITY. EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS...",
+            "output": {
+              "found": true,
+              "extracted_text": "EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS...",
+              "confidence": 0.95,
+              "explanation": "Liability is uncapped for breaches of Section 11 (Confidential Information), as the exclusion of consequential damages does not apply to such breaches."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_warranty_duration",
+          "description": "Determines the duration of warranties or if warranties are disclaimed entirely (e.g., 'AS IS').",
+          "category": "Warranty Duration",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "7. DISCLAIMER OF WARRANTIES. EACH PARTY PROVIDES ALL MATERIALS AND SERVICES TO THE OTHER PARTY \"AS IS.\" EACH PARTY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED OR STATUTORY...",
+            "output": {
+              "found": true,
+              "extracted_text": "EACH PARTY PROVIDES ALL MATERIALS AND SERVICES TO THE OTHER PARTY \"AS IS.\" EACH PARTY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY ANDFITNESS FOR A PARTICULAR PURPOSE.",
+              "confidence": 0.99,
+              "explanation": "There is no warranty duration because all warranties are explicitly disclaimed via an 'AS IS' clause."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_liquidated_damages",
+          "description": "Checks for clauses awarding liquidated damages or specific termination fees upon breach or contract termination.",
+          "category": "Liquidated Damages",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "8.5 EFFECTS OF TERMINATION. Upon expiration or termination of this Agreement for any reason: ... (b) i-Escrow shall pay all amounts owed to 2TheMart within six (6) weeks of termination...",
+            "output": {
+              "found": false,
+              "extracted_text": "i-Escrow shall pay all amounts owed to 2TheMart within six (6) weeks of termination",
+              "confidence": 0.9,
+              "explanation": "No liquidated damages or specific termination fees are found. The contract only requires payment of amounts already owed upon termination."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_uncapped_liability",
+          "description": "Determines if the contract contains clauses where a party's liability is uncapped, particularly for indemnification or specific breaches.",
+          "category": "Uncapped Liability",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine, e.g., 'Indemnification'"
+          },
+          "returns": {
+            "found": "boolean - Whether an uncapped liability clause was found",
+            "extracted_text": "string - The exact text defining the liability scope",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion regarding the cap status"
+          },
+          "example": {
+            "input": "Section 5.1 Indemnification",
+            "output": {
+              "found": true,
+              "extracted_text": "Provider shall indemnify, defend, and hold harmless Recipient... against any and all losses, damages, liabilities, deficiencies, claims, actions, judgments, settlements, interest, awards, penalties, fines, costs, or expenses of whatever kind...",
+              "confidence": 0.95,
+              "explanation": "The indemnification clause uses 'any and all losses' without specifying a monetary cap, indicating uncapped liability for the Provider."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_cap_on_liability",
+          "description": "Identifies if the contract includes a specific monetary cap or time limitation on liability for breach of obligations.",
+          "category": "Cap on Liability",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine, e.g., 'Limitation of Liability'"
+          },
+          "returns": {
+            "found": "boolean - Whether a liability cap was found",
+            "extracted_text": "string - The exact text defining the cap or limitation",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion regarding the existence of a cap"
+          },
+          "example": {
+            "input": "Full Contract Text",
+            "output": {
+              "found": false,
+              "extracted_text": "No specific limitation of liability clause found in Sections 1-7.",
+              "confidence": 0.9,
+              "explanation": "The contract does not contain a standard 'Limitation of Liability' section capping damages, implying liability may be uncapped subject to general law."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_liquidated_damages",
+          "description": "Checks for clauses awarding liquidated damages or specific termination fees upon breach or contract termination.",
+          "category": "Liquidated Damages",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine, e.g., 'Termination'"
+          },
+          "returns": {
+            "found": "boolean - Whether liquidated damages or termination fees were found",
+            "extracted_text": "string - The exact text defining the fee or damages",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion regarding liquidated damages"
+          },
+          "example": {
+            "input": "Section 3.2 Termination",
+            "output": {
+              "found": false,
+              "extracted_text": "Each of the Recipient and the Provider may... terminate this Agreement... without liability except, in the case of the Recipient, for required payment for services rendered and reimbursement for authorized expenses incurred...",
+              "confidence": 0.95,
+              "explanation": "The contract allows termination without cause but only requires payment for services rendered and expenses, not a fixed liquidated damage or termination fee."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_warranty_duration",
+          "description": "Extracts the duration or standard of warranty for services, technology, or products provided under the contract.",
+          "category": "Warranty Duration",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine, e.g., 'Standard of Service'"
+          },
+          "returns": {
+            "found": "boolean - Whether a warranty duration or standard was found",
+            "extracted_text": "string - The exact text defining the warranty terms",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion regarding the warranty scope and duration"
+          },
+          "example": {
+            "input": "Section 1.2 Standard of Service",
+            "output": {
+              "found": true,
+              "extracted_text": "Provider represents, warrants and agrees that the Services shall be provided in good faith, in accordance with applicable law and in a manner generally consistent with the historical provision of the Services and with the same standard of care as historically provided.",
+              "confidence": 0.9,
+              "explanation": "The warranty is defined by a standard of care ('consistent with historical provision') rather than a specific time duration, applying throughout the term of the agreement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_uncapped_liability",
+          "description": "Determines if the contract contains clauses where a party's liability is uncapped or if there are no explicit limitations on liability for breach of obligations.",
+          "category": "Uncapped Liability",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether an uncapped liability clause or absence of cap was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Joint Venture Agreement text",
+            "output": {
+              "found": true,
+              "extracted_text": "The Joint Venture shall incur no liability of any sort, nor any indebtedness for borrowed funds... without the written consent or approval of both of the Joint Venturers",
+              "confidence": 0.85,
+              "explanation": "The contract does not explicitly define a cap on liability for breaches between the parties. Section 5 limits the JV's external liability without consent, but does not cap the liability of one Joint Venturer to the other for breach of contract, implying potential uncapped liability for direct damages."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_cap_on_liability",
+          "description": "Identifies if the contract includes a specific monetary cap or time limitation on liability for breach of obligations.",
+          "category": "Cap on Liability",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether a liability cap was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Joint Venture Agreement text",
+            "output": {
+              "found": false,
+              "extracted_text": "None",
+              "confidence": 0.95,
+              "explanation": "No specific monetary cap or time limitation for bringing claims for breach of contract was found in the agreement. Section 5 limits the JV's ability to incur liability without consent, but this is a procedural restriction rather than a liability cap for breach."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_liquidated_damages",
+          "description": "Checks for clauses awarding liquidated damages or termination fees upon breach or termination of the contract.",
+          "category": "Liquidated Damages",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether liquidated damages or termination fees were found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Joint Venture Agreement text",
+            "output": {
+              "found": false,
+              "extracted_text": "None",
+              "confidence": 0.98,
+              "explanation": "The contract does not contain any clauses specifying liquidated damages or fixed termination fees. Section 11 describes liquidation of assets upon termination, but this is a distribution of remaining assets, not a penalty or fee."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_warranty_duration",
+          "description": "Identifies the duration of warranties against defects or errors in products, services, or technology provided under the contract.",
+          "category": "Warranty Duration",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether a warranty duration was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Joint Venture Agreement text",
+            "output": {
+              "found": false,
+              "extracted_text": "None",
+              "confidence": 0.95,
+              "explanation": "The contract does not specify any warranty duration for the products or services. Exhibit A outlines responsibilities such as providing products according to specifications, but does not include explicit warranty terms or durations."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "merged_tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_cap_on_liability",
+        "category": "Cap on Liability",
+        "description": "Identifies if the contract includes a cap on liability, such as limiting recourse to specific assets or excluding personal liability for trustees/advisors.",
+        "source_contracts": [
+          "GWG_HOLDINGS,_INC._-_ORDERLY_MARKETING_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "GWG_HOLDINGS,_INC._-_ORDERLY_MARKETING_AGREEMENT",
+          "output": {
+            "found": true,
+            "extracted_text": "Identifies if the contract includes a cap on liability, such as limiting recourse to specific assets or excluding personal liability for trustees/advisors.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_liability_cap",
+        "category": "Cap on Liability",
+        "description": "Checks if the contract includes a cap on liability upon the breach of a party's obligation.",
+        "source_contracts": [
+          "GridironBionutrientsInc_20171206_8-K_EX-10.2_10972556_EX-10.2_Endorsement_Agreement"
+        ],
+        "best_example": {
+          "input": "GridironBionutrientsInc_20171206_8-K_EX-10.2_10972556_EX-10.2_Endorsement_Agreement",
+          "output": {
+            "found": true,
+            "extracted_text": "Checks if the contract includes a cap on liability upon the breach of a party's obligation.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_003",
+        "name": "check_liability_caps",
+        "category": "Cap on Liability",
+        "description": "Identifies if the contract includes a cap on liability for breach of obligation, including time limitations or maximum recovery amounts.",
+        "source_contracts": [
+          "LECLANCHÉ_S.A._-_JOINT_DEVELOPMENT_AND_MARKETING_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "LECLANCHÉ_S.A._-_JOINT_DEVELOPMENT_AND_MARKETING_AGREEMENT",
+          "output": {
+            "found": true,
+            "extracted_text": "Identifies if the contract includes a cap on liability for breach of obligation, including time limitations or maximum recovery amounts.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_004",
+        "name": "check_time_limitation_for_claims",
+        "category": "Cap on Liability",
+        "description": "Determines if there is a specific time limit within which a party must bring a claim or action arising from the agreement.",
+        "source_contracts": [
+          "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING_AGREEMENT",
+          "output": {
+            "found": true,
+            "extracted_text": "Determines if there is a specific time limit within which a party must bring a claim or action arising from the agreement.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_005",
+        "name": "check_cap_on_liability_waiver_punitive",
+        "category": "Cap on Liability",
+        "description": "Checks if the contract includes a cap on liability, specifically looking for waivers of punitive damages which limit recovery amounts.",
+        "source_contracts": [
+          "MRSFIELDSORIGINALCOOKIESINC_01_29_1998-EX-10-FRANCHISE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "MRSFIELDSORIGINALCOOKIESINC_01_29_1998-EX-10-FRANCHISE_AGREEMENT",
+          "output": {
+            "found": true,
+            "extracted_text": "Checks if the contract includes a cap on liability, specifically looking for waivers of punitive damages which limit recovery amounts.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_006",
+        "name": "check_cap_on_liability_time_limitation",
+        "category": "Cap on Liability",
+        "description": "Identifies clauses that impose a time limitation (statute of limitations) on the ability to bring claims or actions under the contract.",
+        "source_contracts": [
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+        ],
+        "best_example": {
+          "input": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "output": {
+            "found": true,
+            "extracted_text": "Identifies clauses that impose a time limitation (statute of limitations) on the ability to bring claims or actions under the contract.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_uncapped_liability",
+        "category": "Uncapped Liability",
+        "description": "Checks if the contract contains clauses where a party's liability is explicitly uncapped or unlimited for specific breaches such as IP infringement, confidentiality, indemnity obligations, gross negligence, willful misconduct, or fraud. This includes identifying exceptions to liability caps and determining if indemnification clauses expose parties to uncapped liability.",
+        "source_contracts": [
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "QBIOMEDINC_04_08_2020-EX-99.1-JOINT_FILING_AGREEMENT",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VEONEER,INC_02_21_2020-EX-10.11-JOINT_VENTURE_AGREEMENT",
+          "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_1195828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "The Company shall not be liable for any indirect, special, incidental, or consequential damages, but liability for direct damages arising from breach of confidentiality or IP infringement shall be uncapped.",
+          "output": {
+            "found": true,
+            "extracted_text": "liability for direct damages arising from breach of confidentiality or IP infringement shall be uncapped",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_tax_responsibility",
+        "category": "Tax Responsibility",
+        "description": "Checks if the contract specifies which party is responsible for taxes related to the agreement.",
+        "source_contracts": [
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement"
+        ],
+        "best_example": {
+          "input": "Each party shall be responsible for its own taxes arising from this Agreement.",
+          "output": {
+            "found": true,
+            "extracted_text": "Each party shall be responsible for its own taxes arising from this Agreement.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_warranty_duration",
+        "category": "Warranty Duration",
+        "description": "Extracts the specific duration, time period, or survival clause for any warranties against defects, errors, or non-conformance in technology, products, or services provided under the contract.",
+        "source_contracts": [
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VEONEER,INC_02_21_2020-EX-10.11-JOINT_VENTURE_AGREEMENT",
+          "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "The Supplier warrants that the Products will be free from defects in material and workmanship for a period of twelve (12) months from the date of delivery.",
+          "output": {
+            "found": true,
+            "extracted_text": "twelve (12) months from the date of delivery",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_liquidated_damages",
+        "category": "Liquidated Damages",
+        "description": "Identifies clauses that specify predetermined damages (liquidated damages), termination fees, or fixed monetary penalties payable upon breach or termination of the agreement, distinguishing them from general indemnification or actual damages.",
+        "source_contracts": [
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VEONEER,INC_02_21_2020-EX-10.11-JOINT_VENTURE_AGREEMENT",
+          "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "In the event of a material breach of this Agreement by either party, the breaching party shall pay to the non-breaching party liquidated damages in the amount of $50,000, which the parties agree is a reasonable estimate of the damages likely to be incurred and not a penalty.",
+          "output": {
+            "found": true,
+            "extracted_text": "liquidated damages in the amount of $50,000",
+            "confidence": 0.98
+          }
+        }
+      }
+    ],
+    "tool_stats": {
+      "total_unique_tools": 10,
+      "tools_by_category": {
+        "Cap on Liability": 6,
+        "Uncapped Liability": 1,
+        "Warranty Duration": 1,
+        "Liquidated Damages": 1
+      }
+    }
+  },
+  "step3_skill_md": "# SKILL.md: Liability and Indemnity Review\n\n## Overview\nThis skill performs a comprehensive review of contractual liability provisions, focusing on risk allocation between parties. It analyzes four key areas: **Cap on Liability** (limits on recovery), **Uncapped Liability** (exceptions to caps such as IP or confidentiality breaches), **Liquidated Damages** (predetermined penalties/fees), and **Warranty Duration** (timeframes for defect claims). \n\nThe skill utilizes specialized extraction tools to identify specific clauses, extract relevant text, and determine the presence or absence of these critical legal protections.\n\n## Available Tools\n\n### 1. check_cap_on_liability\n*   **Category:** Cap on Liability\n*   **Description:** Identifies if the contract includes a general cap on liability, such as limiting recourse to specific assets or excluding personal liability for trustees/advisors.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** Use this as a primary scan for broad liability limitations that do not necessarily tie to a specific breach amount but limit the scope of liable entities or assets.\n\n### 2. check_liability_cap\n*   **Category:** Cap on Liability\n*   **Description:** Checks if the contract includes a specific cap on liability triggered upon the breach of a party's obligation.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** Focuses on breach-specific caps. Often used in conjunction with `check_liability_caps` to ensure all monetary limits are captured.\n\n### 3. check_liability_caps\n*   **Category:** Cap on Liability\n*   **Description:** Identifies caps on liability for breach of obligation, specifically looking for time limitations or maximum recovery amounts (monetary ceilings).\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** Best for extracting specific dollar amounts or percentage-based caps tied to contract value.\n\n### 4. check_time_limitation_for_claims\n*   **Category:** Cap on Liability\n*   **Description:** Determines if there is a specific time limit (statute of limitations) within which a party must bring a claim or action arising from the agreement.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** Critical for determining the \"tail\" of liability. Look for phrases like \"must bring suit within X years.\"\n\n### 5. check_cap_on_liability_waiver_punitive\n*   **Category:** Cap on Liability\n*   **Description:** Checks for waivers of punitive damages, which effectively cap recovery amounts by excluding certain types of damages.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** Essential for risk assessment in jurisdictions where punitive damages are common.\n\n### 6. check_cap_on_liability_time_limitation\n*   **Category:** Cap on Liability\n*   **Description:** Identifies clauses that impose a time limitation on the ability to bring claims or actions under the contract.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** Similar to `check_time_limitation_for_claims`; use both to ensure robust coverage of temporal restrictions on liability.\n\n### 7. check_uncapped_liability\n*   **Category:** Uncapped Liability\n*   **Description:** Checks for clauses where liability is explicitly uncapped or unlimited for specific breaches (e.g., IP infringement, confidentiality, indemnity, gross negligence, willful misconduct, fraud). Identifies exceptions to general liability caps.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** This is a high-risk indicator. Even if a cap exists, this tool identifies if major risks (like IP theft) bypass that cap.\n\n### 8. check_tax_responsibility\n*   **Category:** Tax Responsibility\n*   **Description:** Checks if the contract specifies which party is responsible for taxes related to the agreement.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** While primarily tax-focused, tax liabilities can sometimes be uncapped financial obligations. Include in review if tax indemnities are part of the broader liability framework.\n\n### 9. check_warranty_duration\n*   **Category:** Warranty Duration\n*   **Description:** Extracts the specific duration, time period, or survival clause for warranties against defects, errors, or non-conformance in technology, products, or services.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** Look for \"warranty period,\" \"survival of representations,\" or specific month/year durations from delivery/acceptance.\n\n### 10. check_liquidated_damages\n*   **Category:** Liquidated Damages\n*   **Description:** Identifies clauses specifying predetermined damages, termination fees, or fixed monetary penalties payable upon breach or termination, distinguishing them from general indemnification.\n*   **Parameters:** `contract_text` (string)\n*   **Returns:** `{ found: boolean, extracted_text: string, confidence: float }`\n*   **Usage Notes:** Key for identifying fixed financial exposures. Distinguish between true liquidated damages and unenforceable penalties.\n\n## Review Workflow\n\n1.  **Input Ingestion**: Receive the full contract text.\n2.  **Liability Cap Analysis**:\n    *   Run `check_cap_on_liability`, `check_liability_cap`, and `check_liability_caps` to establish the baseline financial limit.\n    *   Run `check_cap_on_liability_waiver_punitive` to check for exclusions of punitive damages.\n    *   Run `check_time_limitation_for_claims` and `check_cap_on_liability_time_limitation` to determine temporal limits on bringing claims.\n3.  **Uncapped Liability Check**:\n    *   Run `check_uncapped_liability` to identify any carve-outs where the caps identified in Step 2 do not apply (e.g., IP, Confidentiality, Fraud).\n4.  **Warranty & Damages Analysis**:\n    *   Run `check_warranty_duration` to determine how long defect claims can be made.\n    *   Run `check_liquidated_damages` to identify any fixed penalty clauses or termination fees.\n5.  **Tax Responsibility Check**:\n    *   Run `check_tax_responsibility` to identify any uncapped tax indemnities.\n6.  **Synthesis**: Aggregate findings. If a cap exists but significant risks (IP, Confidentiality) are uncapped, flag as high risk. If liquidated damages are present, note the amount. If warranty duration is short, note the limited window for claims.\n\n## Output Format\n\n```json\n{\n  \"status\": \"success\",\n  \"answer\": {\n    \"liability_cap_exists\": true,\n    \"liability_cap_details\": \"Liability limited to fees paid in the 12 months preceding the claim.\",\n    \"uncapped_liability_exists\": true,\n    \"uncapped_liability_details\": \"Liability for IP infringement and breach of confidentiality is uncapped.\",\n    \"time_limitation_exists\": true,\n    \"time_limitation_details\": \"Claims must be brought within 2 years of the event giving rise to the claim.\",\n    \"punitive_damages_waived\": true,\n    \"warranty_duration\": \"12 months from acceptance.\",\n    \"liquidated_damages_exists\": false,\n    \"liquidated_damages_details\": null,\n    \"tax_responsibility_defined\": true,\n    \"tax_responsibility_details\": \"Each party bears its own taxes.\"\n  },\n  \"evidence_unit_ids\": [\n    \"unit_123\",\n    \"unit_124\",\n    \"unit_125\"\n  ],\n  \"source_contract_ids\": [\n    \"contract_abc\"\n  ],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n## Boundary Rules\n\n*   **DO** extract exact text snippets supporting the findings.\n*   **DO** distinguish between general liability caps and specific uncapped exceptions.\n*   **DO** identify both monetary caps and time-based limitations (statutes of limitation).\n*   **DO NOT** provide legal advice on the enforceability of liquidated damages vs. penalties; only identify their presence and stated amount.\n*   **DO NOT** infer liability caps if they are not explicitly stated in the text.\n*   **DO NOT** merge distinct concepts (e.g., do not conflate warranty duration with the statute of limitations for bringing claims unless the contract explicitly links them).\n*   **SHOULD** flag cases where `check_uncapped_liability` returns true for high-risk categories (IP, Confidentiality, Gross Negligence) as these significantly alter the risk profile despite the existence of a general cap."
+}

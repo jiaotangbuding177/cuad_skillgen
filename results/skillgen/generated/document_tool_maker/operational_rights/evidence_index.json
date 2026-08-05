@@ -1,0 +1,111 @@
+{
+  "tool_001": {
+    "name": "check_rofr_rofo_rofn",
+    "category": "Rofr/Rofo/Rofn",
+    "source_contracts": [
+      "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+      "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+      "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+      "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+      "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+      "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+      "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT",
+      "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+      "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+      "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+      "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+      "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark_License_Agreement",
+      "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+      "PelicanDeliversInc_20200211_S-1_EX-10.3_11975895_EX-10.3_Development_Agreement1",
+      "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+      "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+      "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+      "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+      "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+      "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+      "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+      "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+      "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+      "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+      "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+      "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+      "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+      "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+      "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+      "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+      "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+      "Sonos,_Inc._-_Manufacturing_Agreement_",
+      "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+      "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+      "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+      "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+      "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+      "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+      "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+      "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+      "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+      "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+      "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+      "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+      "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+      "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+      "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+      "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+      "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+      "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+    ],
+    "example": {
+      "input": "In the event that Company proposes to sell, transfer, or otherwise dispose of any equity interest, assets, or technology, it shall first offer such interest, assets, or technology to the other party on the same terms and conditions.",
+      "output": {
+        "found": true,
+        "extracted_text": "In the event that Company proposes to sell, transfer, or otherwise dispose of any equity interest, assets, or technology, it shall first offer such interest, assets, or technology to the other party on the same terms and conditions.",
+        "confidence": 0.98
+      }
+    }
+  },
+  "tool_002": {
+    "name": "check_rofr_manufacturing",
+    "category": "Rofr/Rofo/Rofn",
+    "source_contracts": [
+      "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1"
+    ],
+    "example": {
+      "input": "Licensee shall have the right of first refusal to design and manufacture any new branded merchandise proposed by Licensor.",
+      "output": {
+        "found": true,
+        "extracted_text": "Licensee shall have the right of first refusal to design and manufacture any new branded merchandise proposed by Licensor.",
+        "confidence": 0.95
+      }
+    }
+  },
+  "tool_003": {
+    "name": "check_covenant_not_to_sue_ip",
+    "category": "Covenant Not to Sue",
+    "source_contracts": [
+      "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT"
+    ],
+    "example": {
+      "input": "Party acknowledges the validity of Counterparty's IP and waives the right to contest ownership or bring infringement claims.",
+      "output": {
+        "found": true,
+        "extracted_text": "Party acknowledges the validity of Counterparty's IP and waives the right to contest ownership or bring infringement claims.",
+        "confidence": 0.96
+      }
+    }
+  },
+  "tool_004": {
+    "name": "check_covenant_not_to_sue_lenders",
+    "category": "Covenant Not to Sue",
+    "source_contracts": [
+      "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+    ],
+    "example": {
+      "input": "Party waives any right to sue or bring claims against Lenders or Financing Agents related to the transaction.",
+      "output": {
+        "found": true,
+        "extracted_text": "Party waives any right to sue or bring claims against Lenders or Financing Agents related to the transaction.",
+        "confidence": 0.97
+      }
+    }
+  }
+}

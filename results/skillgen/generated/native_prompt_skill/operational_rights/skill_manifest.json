@@ -1,0 +1,34 @@
+{
+  "method": "native_prompt_skill",
+  "case_id": "operational_rights",
+  "model": "deepseek-chat",
+  "input_summary": {
+    "contracts_sampled": 10,
+    "sampled_contract_ids": [
+      "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License_Agreement",
+      "KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT_VENTURE_AGREEMENT",
+      "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+      "BERKELEYLIGHTS,INC_06_26_2020-EX-10.12-COLLABORATION_AGREEMENT",
+      "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+      "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING_AGREEMENT",
+      "Loop_Industries,_Inc._-_Marketing_Agreement",
+      "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+      "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR_AGREEMENT_Amendment",
+      "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT"
+    ],
+    "contracts_with_evidence_count": 135,
+    "category_count": 5,
+    "estimated_input_tokens": 109625
+  },
+  "output_summary": {
+    "skill_md_chars": 14062,
+    "skill_md_estimated_tokens": 3515
+  },
+  "usage": {
+    "prompt_tokens": 92570,
+    "completion_tokens": 3132,
+    "total_tokens": 95702
+  },
+  "duration_seconds": 27.18,
+  "created_at": "2026-07-14T16:23:54.224395+00:00"
+}

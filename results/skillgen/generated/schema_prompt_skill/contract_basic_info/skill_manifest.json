@@ -1,0 +1,37 @@
+{
+  "method": "schema_prompt_skill",
+  "case_id": "contract_basic_info",
+  "model": "deepseek-chat",
+  "schema_sections": [
+    "Covered Categories",
+    "Review Checklist",
+    "Evidence Extraction Rules",
+    "Output Format",
+    "Boundary Rules"
+  ],
+  "input_summary": {
+    "contracts_sampled": 10,
+    "sampled_contract_ids": [
+      "DYNTEKINC_07_30_1999-EX-10-ONLINE_HOSTING_AGREEMENT",
+      "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP_AGREEMENT",
+      "NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT_TO_THE_DISTRIBUTOR_AGREEMENT_BETWEEN_INGRAM_MICRO_AND_NETGEAR",
+      "Array_BioPharma_Inc._-_LICENSE,_DEVELOPMENT_AND_COMMERCIALIZATION_AGREEMENT",
+      "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+      "GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY_AGREEMENT",
+      "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing_Agreement3",
+      "BNCMORTGAGEINC_05_17_1999-EX-10.4-LICENSING_AND_WEB_SITE_HOSTING_AGREEMENT",
+      "MRSFIELDSORIGINALCOOKIESINC_01_29_1998-EX-10-FRANCHISE_AGREEMENT",
+      "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR_AGREEMENT_Amendment"
+    ],
+    "contracts_with_evidence_count": 306,
+    "category_count": 5,
+    "estimated_input_tokens": 74640
+  },
+  "usage": {
+    "prompt_tokens": 63823,
+    "completion_tokens": 1380,
+    "total_tokens": 65203
+  },
+  "duration_seconds": 20.64,
+  "created_at": "2026-07-15T13:20:53.849200+00:00"
+}

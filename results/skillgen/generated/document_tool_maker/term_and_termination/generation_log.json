@@ -1,0 +1,658 @@
+{
+  "step1_tools_sample": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_renewal_term",
+          "description": "Identifies the duration and conditions of the renewal term following the initial contract period.",
+          "category": "Renewal Term",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 8.1 TERM of the Co-Branding and Advertising Agreement",
+            "output": {
+              "found": true,
+              "extracted_text": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement. ... In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.",
+              "confidence": 0.98,
+              "explanation": "The contract specifies a renewal term of one (1) year. It allows for mutual written agreement for renewal, but also includes an automatic renewal provision if notice is not given."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_notice_period_to_terminate_renewal",
+          "description": "Determines the required notice period a party must provide to prevent automatic renewal or to terminate the agreement before the next renewal term begins.",
+          "category": "Notice Period to Terminate Renewal",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 8.1 TERM of the Co-Branding and Advertising Agreement",
+            "output": {
+              "found": true,
+              "extracted_text": "A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect. In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year.",
+              "confidence": 0.95,
+              "explanation": "The contract requires a notice period of no less than thirty (30) days before the expiration of the current term to avoid automatic renewal."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_termination_for_convenience",
+          "description": "Checks if either party has the right to terminate the agreement without cause, solely by providing notice and waiting for a specified period.",
+          "category": "Termination for Convenience",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Sections 2.2, 2.3, and 8 of the Co-Branding and Advertising Agreement",
+            "output": {
+              "found": false,
+              "extracted_text": "Section 2.2: 'In the event that the parties are unable to agree to an SOW within 2 months following the Effective Date, either party may, in its sole discretion, terminate this Agreement by providing written notice.' Section 2.3: 'In the event that... the Launch Date has not occurred within 4 months following the Effective Date, either party may terminate this Agreement by providing written notice.' Section 8.2: '...a party may immediately terminate this Agreement: (a) if the other party materially breaches...'",
+              "confidence": 0.9,
+              "explanation": "The contract does not contain a general 'termination for convenience' clause allowing termination at any time without cause. Termination rights are limited to specific conditions such as failure to agree on an SOW, failure to launch within a timeframe, material breach, change in company structure, bankruptcy, or force majeure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_renewal_term",
+          "description": "Identifies if the contract contains an automatic renewal clause or a specific renewal term after the initial expiration date.",
+          "category": "Renewal Term",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 3.1 Termination of Agreement. This Agreement be deemed effective as of the Effective Date, Agreement and shall terminate on December 31, 2020, unless terminated earlier in accordance with Section 3.2.",
+            "output": {
+              "found": false,
+              "extracted_text": "This Agreement be deemed effective as of the Effective Date, Agreement and shall terminate on December 31, 2020, unless terminated earlier in accordance with Section 3.2.",
+              "confidence": 0.95,
+              "explanation": "The contract specifies a fixed termination date (December 31, 2020) with no mention of automatic renewal or extension mechanisms."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_notice_period_to_terminate_renewal",
+          "description": "Determines the notice period required to opt-out of a renewal term, if a renewal term exists.",
+          "category": "Notice Period to Terminate Renewal",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 3.1 Termination of Agreement. This Agreement be deemed effective as of the Effective Date, Agreement and shall terminate on December 31, 2020, unless terminated earlier in accordance with Section 3.2.",
+            "output": {
+              "found": false,
+              "extracted_text": "This Agreement be deemed effective as of the Effective Date, Agreement and shall terminate on December 31, 2020, unless terminated earlier in accordance with Section 3.2.",
+              "confidence": 0.95,
+              "explanation": "Since there is no renewal term defined in the contract, there is no notice period required to terminate a renewal."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_termination_for_convenience",
+          "description": "Checks if either party has the right to terminate the agreement without cause, and identifies the required notice period.",
+          "category": "Termination for Convenience",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 3.2 Each of the Recipient and the Provider may, in their sole discretion, terminate this Agreement in whole or in part, at any time without cause, and without liability except, in the case of the Recipient, for required payment for services rendered and reimbursement for authorized expenses incurred, by providing at least 90 (ninety) days' prior written notice to the other party (such date, the \"Services Termination Date\").",
+            "output": {
+              "found": true,
+              "extracted_text": "Each of the Recipient and the Provider may, in their sole discretion, terminate this Agreement in whole or in part, at any time without cause... by providing at least 90 (ninety) days' prior written notice to the other party",
+              "confidence": 0.98,
+              "explanation": "Both parties have the right to terminate for convenience with 90 days' prior written notice."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_renewal_term",
+          "description": "Identifies the duration or conditions for the renewal of the joint venture agreement after the initial term expires.",
+          "category": "Renewal Term",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "8. Term of Joint Venture. The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination.",
+            "output": {
+              "found": true,
+              "extracted_text": "unless extended by written agreement of the Joint Venturers",
+              "confidence": 0.95,
+              "explanation": "The contract does not specify an automatic renewal term. Renewal requires a written agreement between the Joint Venturers."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_notice_period_to_terminate_renewal",
+          "description": "Determines the required notice period for terminating the agreement prior to a renewal or expiration.",
+          "category": "Notice Period to Terminate Renewal",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "8. Term of Joint Venture. The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination.",
+            "output": {
+              "found": true,
+              "extracted_text": "not less than thirty (30) days prior to scheduled termination",
+              "confidence": 0.95,
+              "explanation": "The contract requires a notice period of not less than 30 days prior to the scheduled termination date if the parties wish to extend or terminate the agreement."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_termination_for_convenience",
+          "description": "Checks if the contract allows a party to terminate the agreement without cause, solely by providing notice and waiting for a specified period.",
+          "category": "Termination for Convenience",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "8. Term of Joint Venture. The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination.",
+            "output": {
+              "found": false,
+              "extracted_text": "unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination.",
+              "confidence": 0.9,
+              "explanation": "The contract does not explicitly grant a right to terminate for convenience. It states the term ends on a specific date unless extended by mutual written agreement. There is no clause allowing unilateral termination without cause during the term."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "merged_tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_renewal_term",
+        "category": "Renewal Term",
+        "description": "Identifies if the contract contains provisions for automatic renewal, unilateral extension, or a defined renewal term after the initial period expires, including extracting duration and conditions.",
+        "source_contracts": [
+          "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement_Agreement",
+          "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development_Agreement",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RMRGROUPINC_01_22_2020-EX-99.1-JOINT_FILING_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET_INVESTMENT_INCOME_MAINTENANCE_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "SPRINGBANKPHARMACEUTICALS,INC_04_08_2020-EX-99.A-JOINT_FILING_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Upon expiration of the Initial Term, this Agreement shall automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+          "output": {
+            "found": true,
+            "extracted_text": "Upon expiration of the Initial Term, this Agreement shall automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_notice_period_to_terminate_renewal",
+        "category": "Notice Period to Terminate Renewal",
+        "description": "Extracts the specific notice period required to prevent the automatic renewal or extension of the contract, or to terminate a renewal term.",
+        "source_contracts": [
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RMRGROUPINC_01_22_2020-EX-99.1-JOINT_FILING_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET_INVESTMENT_INCOME_MAINTENANCE_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "SPRINGBANKPHARMACEUTICALS,INC_04_08_2020-EX-99.A-JOINT_FILING_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "This Agreement shall automatically renew for successive one-year terms unless either party provides written notice of non-renewal at least sixty (60) days prior to the expiration of the then-current term.",
+          "output": {
+            "found": true,
+            "extracted_text": "sixty (60) days",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_termination_for_convenience",
+        "category": "Termination for Convenience",
+        "description": "Determines if either party has the right to terminate the agreement without cause (for convenience), typically by providing notice and potentially waiting out a specified period.",
+        "source_contracts": [
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement_Agreement",
+          "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development_Agreement",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RMRGROUPINC_01_22_2020-EX-99.1-JOINT_FILING_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET_INVESTMENT_INCOME_MAINTENANCE_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "SPRINGBANKPHARMACEUTICALS,INC_04_08_2020-EX-99.A-JOINT_FILING_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Either party may terminate this Agreement without cause by providing thirty (30) days written notice to the other party.",
+          "output": {
+            "found": true,
+            "extracted_text": "Either party may terminate this Agreement without cause by providing thirty (30) days written notice to the other party.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_renewal_term",
+        "category": "Renewal Term: What is the renewal term after the initial term expires? This includes automatic extensions and unilateral extensions with prior notice.",
+        "description": "Extracts the duration and conditions of the automatic renewal term following the initial term of the agreement, including any automatic or unilateral extensions with prior notice.",
+        "source_contracts": [
+          "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION",
+          "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING_AND_MANAGEMENT_AGREEMENT_(1)",
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic_Alliance_Agreement",
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement",
+          "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing_Agreement",
+          "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+          "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1"
+        ],
+        "best_example": {
+          "input": "This Agreement shall automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+          "output": {
+            "found": true,
+            "extracted_text": "automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_notice_period_to_terminate_renewal",
+        "category": "Notice Period to Terminate Renewal: What is the notice period required to terminate renewal?",
+        "description": "Identifies the required notice period a party must provide to prevent automatic renewal of the contract or to terminate the agreement prior to the expiration of the initial term or renewal term.",
+        "source_contracts": [
+          "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION",
+          "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING_AND_MANAGEMENT_AGREEMENT_(1)",
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic_Alliance_Agreement",
+          "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing_Agreement",
+          "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+          "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1"
+        ],
+        "best_example": {
+          "input": "This Agreement shall automatically renew for successive one-year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+          "output": {
+            "found": true,
+            "extracted_text": "ninety (90) days prior to the end of the then-current term",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_termination_for_convenience",
+        "category": "Notice Period to Terminate Renewal: What is the notice period required to terminate renewal?",
+        "description": "Determines if a party can terminate the contract without cause by giving notice and allowing a waiting period to expire.",
+        "source_contracts": [
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement"
+        ],
+        "best_example": {
+          "input": "Either party may terminate this Agreement for convenience upon thirty (30) days' prior written notice to the other party.",
+          "output": {
+            "found": true,
+            "extracted_text": "thirty (30) days' prior written notice",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_termination_for_convenience",
+        "category": "Termination for Convenience",
+        "description": "Determines if a party can terminate the agreement without cause and identifies the required notice period.",
+        "source_contracts": [
+          "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION",
+          "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING_AND_MANAGEMENT_AGREEMENT_(1)",
+          "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+          "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "check_termination_for_convenience",
+          "output": {
+            "found": true,
+            "extracted_text": "Either party may terminate this Agreement without cause upon thirty (30) days' written notice to the other party.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_termination_for_convenience",
+        "category": "Termination for Convenience",
+        "description": "Determines if a party can terminate the contract without cause by giving notice.",
+        "source_contracts": [
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic_Alliance_Agreement",
+          "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1"
+        ],
+        "best_example": {
+          "input": "Either party may terminate this Agreement for convenience upon thirty (30) days prior written notice to the other party.",
+          "output": {
+            "found": true,
+            "extracted_text": "Either party may terminate this Agreement for convenience upon thirty (30) days prior written notice to the other party.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_notice_period_to_terminate",
+        "category": "Notice Period to Terminate",
+        "description": "Identifies the notice period required to terminate the contract.",
+        "source_contracts": [
+          "ImperialGardenResortInc_20161028_DRS_(on_F-1)_EX-10.13_9963189_EX-10.13_Outsourcing_Agreement"
+        ],
+        "best_example": {
+          "input": "The notice period required to terminate the contract.",
+          "output": {
+            "found": true,
+            "extracted_text": "Notice period to terminate",
+            "confidence": 0.95
+          }
+        }
+      }
+    ],
+    "tool_stats": {
+      "total_unique_tools": 9,
+      "tools_by_category": {
+        "Renewal Term": 1,
+        "Notice Period to Terminate Renewal": 1,
+        "Termination for Convenience": 3,
+        "Renewal Term: What is the renewal term after the initial term expires? This includes automatic extensions and unilateral extensions with prior notice.": 1,
+        "Notice Period to Terminate Renewal: What is the notice period required to terminate renewal?": 2,
+        "Termination for Convenience: Can a party terminate this contract without cause (solely by giving a notice and allowing a waiting period to expire)?": 0,
+        "Termination for Convenience: Can a party terminate this  contract without cause (solely by giving a notice and allowing a waiting  period to expire)?": 0,
+        "Notice Period to Terminate": 1
+      }
+    }
+  },
+  "step3_skill_md": "# SKILL.md: Contract Term and Termination Review\n\n## Overview\nThis skill specializes in analyzing the temporal lifecycle of commercial contracts. It focuses on three critical areas: **Renewal Terms** (how a contract extends beyond its initial period), **Notice Periods for Non-Renewal** (deadlines to prevent automatic extension), and **Termination for Convenience** (rights to exit the agreement without cause). \n\nThe skill utilizes specialized extraction tools to identify specific clauses, extract duration values, notice windows, and conditional logic regarding contract continuation or early exit.\n\n## Available Tools\n\n### 1. check_renewal_term\n*   **Category:** Renewal Term\n*   **Description:** Identifies if the contract contains provisions for automatic renewal, unilateral extension, or a defined renewal term after the initial period expires. It extracts the duration of these renewal periods (e.g., \"successive one-year periods\") and any associated conditions.\n*   **Parameters:** \n    *   `contract_text`: The full text or relevant section of the agreement.\n*   **Returns:** \n    *   `found` (boolean): Whether a renewal clause exists.\n    *   `extracted_text` (string): The specific clause defining the renewal mechanism.\n    *   `confidence` (float): Confidence score of the extraction.\n*   **Usage Notes:** Use this first to determine if the contract has an auto-renewal mechanism. Look for keywords like \"automatically renew,\" \"successive terms,\" or \"extend.\"\n*   **Example:**\n    *   *Input:* \"Upon expiration of the Initial Term, this Agreement shall automatically renew for successive one (1) year periods...\"\n    *   *Output:* `{ \"found\": true, \"extracted_text\": \"automatically renew for successive one (1) year periods...\", \"confidence\": 0.98 }`\n\n### 2. check_notice_period_to_terminate_renewal\n*   **Category:** Notice Period to Terminate Renewal\n*   **Description:** Extracts the specific notice period required to prevent automatic renewal or to terminate a renewal term. This is distinct from general termination; it specifically targets the window to stop the contract from rolling over.\n*   **Parameters:** \n    *   `contract_text`: The full text or relevant section of the agreement.\n*   **Returns:** \n    *   `found` (boolean): Whether a non-renewal notice period is specified.\n    *   `extracted_text` (string): The specific duration and timing requirement (e.g., \"60 days prior\").\n    *   `confidence` (float): Confidence score of the extraction.\n*   **Usage Notes:** Often found in the same paragraph as the renewal term. Look for phrases like \"notice of non-renewal,\" \"prior to the end of the then-current term.\"\n*   **Example:**\n    *   *Input:* \"...unless either party provides written notice of non-renewal at least sixty (60) days prior to the expiration...\"\n    *   *Output:* `{ \"found\": true, \"extracted_text\": \"sixty (60) days\", \"confidence\": 0.98 }`\n\n### 3. check_termination_for_convenience\n*   **Category:** Termination for Convenience\n*   **Description:** Determines if either party has the right to terminate the agreement without cause (for convenience). It identifies the existence of this right and extracts the required notice period and any waiting periods.\n*   **Parameters:** \n    *   `contract_text`: The full text or relevant section of the agreement.\n*   **Returns:** \n    *   `found` (boolean): Whether a termination for convenience clause exists.\n    *   `extracted_text` (string): The clause granting the right and specifying notice requirements.\n    *   `confidence` (float): Confidence score of the extraction.\n*   **Usage Notes:** Look for keywords like \"terminate without cause,\" \"for convenience,\" \"sole discretion,\" or \"no penalty.\" Distinguish this from termination for breach/cause.\n*   **Example:**\n    *   *Input:* \"Either party may terminate this Agreement without cause by providing thirty (30) days written notice...\"\n    *   *Output:* `{ \"found\": true, \"extracted_text\": \"Either party may terminate this Agreement without cause by providing thirty (30) days written notice...\", \"confidence\": 0.98 }`\n\n### 4. check_notice_period_to_terminate\n*   **Category:** Notice Period to Terminate\n*   **Description:** A broader tool that identifies the general notice period required to terminate the contract, which may apply to both convenience and cause scenarios if not explicitly separated.\n*   **Parameters:** \n    *   `contract_text`: The full text or relevant section of the agreement.\n*   **Returns:** \n    *   `found` (boolean): Whether a general termination notice period is specified.\n    *   `extracted_text` (string): The specific notice duration.\n    *   `confidence` (float): Confidence score of the extraction.\n*   **Usage Notes:** Use this as a fallback if `check_termination_for_convenience` does not yield a clear notice period, or to capture general termination mechanics.\n\n## Review Workflow\n\n1.  **Analyze Renewal Mechanics:**\n    *   Invoke `check_renewal_term`.\n    *   If `found` is true, note the renewal duration (e.g., 1 year, 3 years).\n    *   If `found` is false, mark renewal as \"None\" or \"Fixed Term Only.\"\n\n2.  **Determine Non-Renewal Requirements:**\n    *   If a renewal term was found, invoke `check_notice_period_to_terminate_renewal`.\n    *   Extract the specific number of days/months required to opt-out.\n    *   If no specific non-renewal notice is found but renewal exists, flag as \"Missing Non-Renewal Notice\" (potential risk).\n\n3.  **Assess Early Exit Rights:**\n    *   Invoke `check_termination_for_convenience`.\n    *   If `found` is true, extract the notice period (e.g., 30 days, 90 days).\n    *   Identify if the right is mutual (\"Either party\") or unilateral (\"Licensor may...\").\n\n4.  **Fallback General Termination Check:**\n    *   If `check_termination_for_convenience` returns negative or ambiguous results, invoke `check_notice_period_to_terminate` to ensure no general termination notice obligations are missed.\n\n5.  **Synthesize Findings:**\n    *   Combine findings into the final JSON output.\n    *   Flag any missing critical inputs (e.g., renewal exists but no notice period defined).\n\n## Output Format\n\n```json\n{\n  \"status\": \"success\", \n  \"answer\": {\n    \"renewal_term\": {\n      \"exists\": true,\n      \"duration\": \"successive one (1) year periods\",\n      \"clause_text\": \"Upon expiration of the Initial Term, this Agreement shall automatically renew for successive one (1) year periods...\"\n    },\n    \"non_renewal_notice\": {\n      \"required\": true,\n      \"period\": \"ninety (90) days\",\n      \"clause_text\": \"unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.\"\n    },\n    \"termination_for_convenience\": {\n      \"allowed\": true,\n      \"notice_period\": \"thirty (30) days\",\n      \"party_rights\": \"mutual\",\n      \"clause_text\": \"Either party may terminate this Agreement without cause by providing thirty (30) days written notice to the other party.\"\n    }\n  },\n  \"evidence_unit_ids\": [\n    \"unit_12345_renewal_clause\",\n    \"unit_12346_notice_clause\",\n    \"unit_12347_termination_clause\"\n  ],\n  \"source_contract_ids\": [\n    \"PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement\"\n  ],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n## Boundary Rules\n\n*   **DO** distinguish clearly between \"Termination for Cause\" (breach) and \"Termination for Convenience\" (no cause). This skill only targets the latter.\n*   **DO** differentiate between \"Notice to Terminate the Current Term\" and \"Notice to Prevent Renewal.\" They often have different timelines and legal implications.\n*   **DO NOT** infer notice periods if they are not explicitly stated in the text. If a renewal clause exists but lacks a non-renewal notice provision, report it as missing rather than guessing.\n*   **DO NOT** analyze financial penalties or wind-down procedures associated with termination unless explicitly requested by a separate tool; focus strictly on the *right* to terminate and the *notice period*.\n*   **DO** handle ambiguous language (e.g., \"reasonable notice\") by extracting the text exactly and flagging `human_review_required` as true if specific numeric values are absent."
+}

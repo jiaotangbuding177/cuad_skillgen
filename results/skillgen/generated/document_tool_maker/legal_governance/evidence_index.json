@@ -1,0 +1,18 @@
+{
+  "tool_001": {
+    "name": "check_insurance",
+    "category": "Insurance",
+    "source_contracts": [
+      "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT_VENTURE_AGREEMENT",
+      "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL_PROPERTY_AGREEMENT"
+    ],
+    "example": {
+      "input": "Party A shall maintain comprehensive general liability insurance with limits of not less than $1,000,000 per occurrence for the benefit of Party B.",
+      "output": {
+        "found": true,
+        "extracted_text": "Party A shall maintain comprehensive general liability insurance with limits of not less than $1,000,000 per occurrence for the benefit of Party B.",
+        "confidence": 0.98
+      }
+    }
+  }
+}

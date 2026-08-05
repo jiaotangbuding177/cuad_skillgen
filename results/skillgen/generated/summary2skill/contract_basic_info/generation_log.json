@@ -1,0 +1,382 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "Document Name",
+          "found": true,
+          "summary": "The contract is titled 'CO-BRANDING AND ADVERTISING AGREEMENT'.",
+          "key_terms": [
+            "CO-BRANDING AND ADVERTISING AGREEMENT"
+          ],
+          "source_paragraph": "CO-BRANDING AND ADVERTISING AGREEMENT"
+        },
+        {
+          "category": "Parties",
+          "found": true,
+          "summary": "The parties are I-ESCROW, INC. and 2THEMART.COM, INC.",
+          "key_terms": [
+            "I-ESCROW, INC.",
+            "2THEMART.COM, INC."
+          ],
+          "source_paragraph": "by and between I-ESCROW, INC., with its principal place of business at 1730 S. Amphlett Blvd., Suite 233, San Mateo, California 94402 (\"i-Escrow\"), and 2THEMART.COM, INC. having its principal place of business at 18301 Von Karman Avenue, 7th Floor, Irvine, California 92612 (\"2TheMart\")."
+        },
+        {
+          "category": "Agreement Date",
+          "found": true,
+          "summary": "The agreement is made as of June 21, 1999.",
+          "key_terms": [
+            "June 21, 1999"
+          ],
+          "source_paragraph": "THIS CO-BRANDING AND ADVERTISING AGREEMENT (the \"Agreement\") is made as of June 21, 1999 (the \"Effective Date\")"
+        },
+        {
+          "category": "Effective Date",
+          "found": true,
+          "summary": "The effective date is June 21, 1999.",
+          "key_terms": [
+            "June 21, 1999"
+          ],
+          "source_paragraph": "THIS CO-BRANDING AND ADVERTISING AGREEMENT (the \"Agreement\") is made as of June 21, 1999 (the \"Effective Date\")"
+        },
+        {
+          "category": "Expiration Date",
+          "found": true,
+          "summary": "The initial term expires one year after the Launch Date, which is not specified, but the term is one year following Launch Date unless earlier terminated.",
+          "key_terms": [
+            "one (1) year following the Launch Date"
+          ],
+          "source_paragraph": "The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein."
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Document Name",
+          "found": true,
+          "summary": "The contract is titled 'Services Agreement'.",
+          "key_terms": [
+            "Services Agreement"
+          ],
+          "source_paragraph": "This Services Agreement (this \"Agreement\") is entered into on October 1, 2019 and is made effective as of November 1, 2019 (the \"Effective Date\"), by and between [ * * * ] (the \"Provider\"), and TELCOSTAR PTE, LTD., a company organized and existing under the laws of Singapore and Ability Computer & Software Industries Ltd, a company organized and existing under the laws of the State of Israel (each and both of them \"Recipient\")."
+        },
+        {
+          "category": "Parties",
+          "found": true,
+          "summary": "The parties are Provider (redacted) and Recipient (Telcostar Pte, Ltd. and Ability Computer & Software Industries Ltd).",
+          "key_terms": [
+            "Provider",
+            "Recipient",
+            "Telcostar Pte, Ltd.",
+            "Ability Computer & Software Industries Ltd"
+          ],
+          "source_paragraph": "This Services Agreement (this \"Agreement\") is entered into on October 1, 2019 and is made effective as of November 1, 2019 (the \"Effective Date\"), by and between [ * * * ] (the \"Provider\"), and TELCOSTAR PTE, LTD., a company organized and existing under the laws of Singapore and Ability Computer & Software Industries Ltd, a company organized and existing under the laws of the State of Israel (each and both of them \"Recipient\")."
+        },
+        {
+          "category": "Agreement Date",
+          "found": true,
+          "summary": "The agreement was entered into on October 1, 2019.",
+          "key_terms": [
+            "October 1, 2019"
+          ],
+          "source_paragraph": "This Services Agreement (this \"Agreement\") is entered into on October 1, 2019 and is made effective as of November 1, 2019 (the \"Effective Date\"), by and between [ * * * ] (the \"Provider\"), and TELCOSTAR PTE, LTD., a company organized and existing under the laws of Singapore and Ability Computer & Software Industries Ltd, a company organized and existing under the laws of the State of Israel (each and both of them \"Recipient\")."
+        },
+        {
+          "category": "Effective Date",
+          "found": true,
+          "summary": "The effective date is November 1, 2019.",
+          "key_terms": [
+            "November 1, 2019"
+          ],
+          "source_paragraph": "This Services Agreement (this \"Agreement\") is entered into on October 1, 2019 and is made effective as of November 1, 2019 (the \"Effective Date\"), by and between [ * * * ] (the \"Provider\"), and TELCOSTAR PTE, LTD., a company organized and existing under the laws of Singapore and Ability Computer & Software Industries Ltd, a company organized and existing under the laws of the State of Israel (each and both of them \"Recipient\")."
+        },
+        {
+          "category": "Expiration Date",
+          "found": true,
+          "summary": "The agreement terminates on December 31, 2020, unless terminated earlier.",
+          "key_terms": [
+            "December 31, 2020"
+          ],
+          "source_paragraph": "This Agreement be deemed effective as of the Effective Date, Agreement and shall terminate on December 31, 2020, unless terminated earlier in accordance with Section 3.2."
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Document Name",
+          "found": true,
+          "summary": "The contract is titled 'Joint Venture Agreement'.",
+          "key_terms": [
+            "Joint Venture Agreement"
+          ],
+          "source_paragraph": "JOINT VENTURE AGREEMENT"
+        },
+        {
+          "category": "Parties",
+          "found": true,
+          "summary": "The parties are Collectible Concepts Group, Inc. and Pivotal Self Service Tech, Inc.",
+          "key_terms": [
+            "Collectible Concepts Group, Inc.",
+            "Pivotal Self Service Tech, Inc."
+          ],
+          "source_paragraph": "Collectible Concepts Group, Inc. (\"CCGI\") and Pivotal Self Service Tech, Inc. (\"PVSS\"), (the \"Parties\" or \"Joint Venturers\" if referred to collectively, or the \"Party\" or Joint Venturer\" if referred to singularly)"
+        },
+        {
+          "category": "Agreement Date",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Effective Date",
+          "found": true,
+          "summary": "The Joint Venture shall commence on March 1, 2003.",
+          "key_terms": [
+            "March 1, 2003"
+          ],
+          "source_paragraph": "The Joint Venture shall commence on the 1st of March, 2003"
+        },
+        {
+          "category": "Expiration Date",
+          "found": true,
+          "summary": "The initial term expires on February 28, 2004, unless extended.",
+          "key_terms": [
+            "February 28, 2004"
+          ],
+          "source_paragraph": "The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination."
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "Document Name",
+          "found": true,
+          "summary": "The document is Amendment #3 to the Manufacturing Agreement between ADMA BioManufacturing, LLC and Sanofi Pasteur S.A.",
+          "key_terms": [
+            "Amendment #3",
+            "Manufacturing Agreement"
+          ],
+          "source_paragraph": "Amendment #3 to the Manufacturing Agreement (this \"Amendment #3\") is made effective as of December 21, 2017 (\"Amendment Effective Date\"), by and between ADMA BioManufacturing, LLC, a Delaware limited liability company, having a place of business at 5800 Park of Commerce Boulevard NW, Boca Raton, Florida 33487 USA (\"ADMA\") and Sanofi Pasteur S.A., a company existing and organized under the laws of France (\"Sanofi Pasteur\"), having its registered head office at 14, espace Henry Vallee, 69007, Lyon, France."
+        },
+        {
+          "category": "Parties",
+          "found": true,
+          "summary": "The parties are ADMA BioManufacturing, LLC and Sanofi Pasteur S.A.",
+          "key_terms": [
+            "ADMA BioManufacturing, LLC",
+            "Sanofi Pasteur S.A."
+          ],
+          "source_paragraph": "by and between ADMA BioManufacturing, LLC, a Delaware limited liability company, having a place of business at 5800 Park of Commerce Boulevard NW, Boca Raton, Florida 33487 USA (\"ADMA\") and Sanofi Pasteur S.A., a company existing and organized under the laws of France (\"Sanofi Pasteur\"), having its registered head office at 14, espace Henry Vallee, 69007, Lyon, France."
+        },
+        {
+          "category": "Agreement Date",
+          "found": true,
+          "summary": "The agreement date is December 21, 2017.",
+          "key_terms": [
+            "December 21, 2017"
+          ],
+          "source_paragraph": "This Amendment #3 to the Manufacturing Agreement (this \"Amendment #3\") is made effective as of December 21, 2017 (\"Amendment Effective Date\")"
+        },
+        {
+          "category": "Effective Date",
+          "found": true,
+          "summary": "The effective date is December 21, 2017.",
+          "key_terms": [
+            "December 21, 2017"
+          ],
+          "source_paragraph": "This Amendment #3 to the Manufacturing Agreement (this \"Amendment #3\") is made effective as of December 21, 2017 (\"Amendment Effective Date\")"
+        },
+        {
+          "category": "Expiration Date",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Document Name",
+          "found": true,
+          "summary": "The contract is titled 'AGENCY AGREEMENT'.",
+          "key_terms": [
+            "AGENCY AGREEMENT"
+          ],
+          "source_paragraph": "AGENCY AGREEMENT"
+        },
+        {
+          "category": "Parties",
+          "found": true,
+          "summary": "The parties are Alamogordo Financial Corporation, AF Mutual Holding Company, Alamogordo Federal Savings and Loan Association, and Charles Webb & Company, a Division of Keefe, Bruyette & Woods, Inc.",
+          "key_terms": [
+            "Alamogordo Financial Corporation",
+            "AF Mutual Holding Company",
+            "Alamogordo Federal Savings and Loan Association",
+            "Charles Webb & Company, a Division of Keefe, Bruyette & Woods, Inc."
+          ],
+          "source_paragraph": "Alamogordo Financial Corporation, a federal corporation (the \"Company\"), AF Mutual Holding Company (the \"MHC\") and Alamogordo Federal Savings and Loan Association, a federally chartered stock savings and loan association (the \"Bank\") ... hereby confirm, jointly and severally, their agreement with Charles Webb & Company, a Division of Keefe, Bruyette & Woods, Inc. (the \"Agent\")"
+        },
+        {
+          "category": "Agreement Date",
+          "found": true,
+          "summary": "The agreement date is blank in the contract, indicated by underscores.",
+          "key_terms": [
+            "___ __, 2000"
+          ],
+          "source_paragraph": "___ __, 2000"
+        },
+        {
+          "category": "Effective Date",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Expiration Date",
+          "found": true,
+          "summary": "The contract terminates upon completion or termination of the Plan or Offering, but no later than 45 days after the Closing Date.",
+          "key_terms": [
+            "End Date",
+            "45 days after the Closing Date"
+          ],
+          "source_paragraph": "The obligations of the Agent pursuant to this Agreement (other than those set forth in Sections 2(d), 8 and 9 hereof) shall terminate upon the completion or termination or abandonment of the Plan by the Company or upon termination of the Offering, but in no event later than the date (the \"End Date\") which is 45 days after the Closing Date (as hereinafter defined)."
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "Document Name": {
+      "found_count": 306,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Most contracts have a clear title in the header or first paragraph.",
+        "Titles often include the type of agreement (e.g., 'Agency Agreement', 'Supply Agreement', 'Collaboration Agreement').",
+        "Some contracts are amendments or schedules, which reference the original agreement.",
+        "Often includes specific type like 'Distributor Agreement', 'Sponsorship Agreement', 'Joint Venture Agreement'.",
+        "Common names include 'Agreement', 'Contract', 'Addendum', 'Amendment', etc."
+      ],
+      "example_extractions": [
+        "The contract is titled 'CO-BRANDING AND ADVERTISING AGREEMENT'.",
+        "The contract is titled 'Services Agreement'.",
+        "The contract is titled 'Joint Venture Agreement'.",
+        "The document is Amendment #3 to the Manufacturing Agreement between ADMA BioManufacturing, LLC and Sanofi Pasteur S.A.",
+        "The contract is titled 'INTELLECTUAL PROPERTY AGREEMENT'.",
+        "The contract is titled 'Master Services Agreement'."
+      ],
+      "variations": [
+        "Some contracts have a subtitle or additional description (e.g., 'CO-BRANDING AND ADVERTISING AGREEMENT').",
+        "Amendments and schedules are titled accordingly (e.g., 'Amendment No. 2', 'Schedule A').",
+        "A few contracts have the title embedded in a larger header (e.g., 'EXHIBIT 10.26 MICOA AGENCY AGREEMENT')."
+      ]
+    },
+    "Parties": {
+      "found_count": 306,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Parties are typically identified in the opening paragraph with legal names and jurisdictions.",
+        "Often includes addresses and defined terms (e.g., 'Company', 'Agent').",
+        "All contracts identify the parties involved.",
+        "Parties are typically companies or individuals, often with legal form (Inc., LLC, Ltd., etc.).",
+        "Parties are usually defined at the beginning of the contract."
+      ],
+      "example_extractions": [
+        "The parties are I-ESCROW, INC. and 2THEMART.COM, INC.",
+        "The parties are Provider (redacted) and Recipient (Telcostar Pte, Ltd. and Ability Computer & Software Industries Ltd).",
+        "The parties are Collectible Concepts Group, Inc. and Pivotal Self Service Tech, Inc.",
+        "The parties are ADMA BioManufacturing, LLC and Sanofi Pasteur S.A.",
+        "The parties are VISUALANT INCORPORATED and KENNETH TURPIN.",
+        "The parties are Kubient Inc. and The Associated Press."
+      ],
+      "variations": [
+        "Some parties are redacted or use placeholders (e.g., '[ * * * ]', '<<enter Company Name>>').",
+        "In amendments, the original parties are referenced.",
+        "Some contracts include multiple entities on one side (e.g., 'the Marathon Parties' includes several entities)."
+      ]
+    },
+    "Agreement Date": {
+      "found_count": 291,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Date is often found in the opening paragraph or signature block.",
+        "The agreement date is usually found in the opening paragraph or signature block.",
+        "Often labeled as 'dated as of', 'entered into on', or 'made as of'.",
+        "Most contracts include a specific date when the agreement was made or executed.",
+        "Format varies (e.g., 'dated as of', 'made this', 'entered into as of')."
+      ],
+      "example_extractions": [
+        "The agreement is made as of June 21, 1999.",
+        "The agreement was entered into on October 1, 2019.",
+        "The agreement date is December 21, 2017.",
+        "The agreement date is blank in the contract, indicated by underscores.",
+        "The agreement is dated June 16, 2004.",
+        "The agreement is dated February 5, 2020."
+      ],
+      "variations": [
+        "Some contracts have blank dates (e.g., '___ __, 2000', '____ day of ________, 19____').",
+        "Amendments may reference the original agreement date.",
+        "A few contracts have multiple signature dates (e.g., one for each party)."
+      ]
+    },
+    "Effective Date": {
+      "found_count": 279,
+      "total_contracts": 306,
+      "common_patterns": [
+        "The effective date is often the same as the agreement date or a specified date.",
+        "Often explicitly stated in the opening paragraph or a definition section.",
+        "Can be a specific date or defined by reference to another event (e.g., closing date).",
+        "Many contracts define an 'Effective Date' which may be the same as or different from the agreement date.",
+        "May be contingent on conditions (e.g., 'the date a fully executed copy is received')."
+      ],
+      "example_extractions": [
+        "The effective date is June 21, 1999.",
+        "The effective date is November 1, 2019.",
+        "The Joint Venture shall commence on March 1, 2003.",
+        "The effective date is December 21, 2017.",
+        "The effective date is February 5, 2020.",
+        "The effective date is April 6, 2014."
+      ],
+      "variations": [
+        "Some effective dates are defined by reference to other events (e.g., 'Closing Date', 'Distribution Date').",
+        "In some contracts, the effective date is left blank or is the date of last signature.",
+        "Amendments may have their own effective date different from the original."
+      ]
+    },
+    "Expiration Date": {
+      "found_count": 250,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Most contracts specify an expiration date or term length.",
+        "Expiration is often defined as a fixed term (e.g., 'one year', 'five years') from the effective date.",
+        "Some contracts have automatic renewal unless terminated.",
+        "Termination may be tied to completion of a project or event.",
+        "Expiration is often tied to an anniversary of the effective date or a specific event."
+      ],
+      "example_extractions": [
+        "The initial term expires one year after the Launch Date, which is not specified, but the term is one year following Launch Date unless earlier terminated.",
+        "The agreement terminates on December 31, 2020, unless terminated earlier.",
+        "The initial term expires on February 28, 2004, unless extended.",
+        "The Agency Agreement Expiration Date and Last Delivery Date is October 31, 2006.",
+        "The initial term is one year from the Effective Date, so it expires on February 5, 2021.",
+        "The initial term is two years from the effective date, expiring on December 8, 2007, with automatic annual renewals."
+      ],
+      "variations": [
+        "Some contracts have no fixed expiration (perpetual or indefinite).",
+        "Expiration may be defined by reference to other agreements (e.g., 'term of the LSA').",
+        "Some contracts have multiple expiration conditions (e.g., earliest of several events)."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md\n\n## Covered Categories\n\n### Document Name\n- **Discovery frequency**: 100% of contracts (306/306)\n- **Common patterns**: Clear title in header or first paragraph; includes type of agreement (e.g., \"Agency Agreement\", \"Supply Agreement\", \"Collaboration Agreement\"); amendments and schedules reference original agreement\n\n### Parties\n- **Discovery frequency**: 100% of contracts (306/306)\n- **Common patterns**: Identified in opening paragraph with legal names and jurisdictions; includes addresses and defined terms (e.g., \"Company\", \"Agent\"); parties are typically companies or individuals with legal form (Inc., LLC, Ltd.)\n\n### Agreement Date\n- **Discovery frequency**: 95.1% of contracts (291/306)\n- **Common patterns**: Found in opening paragraph or signature block; labeled as \"dated as of\", \"entered into on\", or \"made as of\"; format varies\n\n### Effective Date\n- **Discovery frequency**: 91.2% of contracts (279/306)\n- **Common patterns**: Often same as agreement date or a specified date; explicitly stated in opening paragraph or definition section; may be contingent on conditions (e.g., \"the date a fully executed copy is received\")\n\n### Expiration Date\n- **Discovery frequency**: 81.7% of contracts (250/306)\n- **Common patterns**: Specified as fixed term (e.g., \"one year\", \"five years\") from effective date; some have automatic renewal unless terminated; termination may be tied to completion of project or event\n\n## Common Patterns\n\n### Document Name\n1. **Standard title in header**: \"The contract is titled '[TYPE] AGREEMENT'.\" (e.g., \"CO-BRANDING AND ADVERTISING AGREEMENT\", \"Services Agreement\", \"Joint Venture Agreement\")\n2. **Amendment/Schedule reference**: \"The document is Amendment #[N] to the [Original Agreement] between [Parties].\" (e.g., \"Amendment #3 to the Manufacturing Agreement between ADMA BioManufacturing, LLC and Sanofi Pasteur S.A.\")\n3. **Embedded in larger header**: \"EXHIBIT [NUMBER] [TYPE] AGREEMENT\" (e.g., \"EXHIBIT 10.26 MICOA AGENCY AGREEMENT\")\n\n### Parties\n1. **Standard opening paragraph**: \"The parties are [Party A] and [Party B].\" (e.g., \"The parties are I-ESCROW, INC. and 2THEMART.COM, INC.\")\n2. **Multiple entities on one side**: \"The parties are [Party A] and [Party B] (including [Subsidiaries]).\" (e.g., \"the Marathon Parties\" includes several entities)\n3. **Redacted/placeholder parties**: \"The parties are [Provider (redacted)] and [Recipient (Telcostar Pte, Ltd. and Ability Computer & Software Industries Ltd)].\"\n\n### Agreement Date\n1. **Explicit date in opening**: \"The agreement is made as of [Date].\" (e.g., \"The agreement is made as of June 21, 1999.\")\n2. **Date in signature block**: \"The agreement was entered into on [Date].\" (e.g., \"The agreement was entered into on October 1, 2019.\")\n3. **Blank/placeholder date**: \"The agreement date is blank in the contract, indicated by underscores.\" (e.g., \"___ __, 2000\", \"____ day of ________, 19____\")\n\n### Effective Date\n1. **Same as agreement date**: \"The effective date is [Date].\" (e.g., \"The effective date is June 21, 1999.\")\n2. **Different specified date**: \"The effective date is [Date].\" (e.g., \"The effective date is November 1, 2019.\")\n3. **Defined by reference to event**: \"The [Event] shall commence on [Date].\" (e.g., \"The Joint Venture shall commence on March 1, 2003.\")\n\n### Expiration Date\n1. **Fixed term from effective date**: \"The initial term is [N] [years/months] from the Effective Date, so it expires on [Date].\" (e.g., \"The initial term is one year from the Effective Date, so it expires on February 5, 2021.\")\n2. **Specific calendar date**: \"The agreement terminates on [Date], unless terminated earlier.\" (e.g., \"The agreement terminates on December 31, 2020, unless terminated earlier.\")\n3. **Tied to event/anniversary**: \"The initial term expires [N] [years/months] after the [Event].\" (e.g., \"The initial term expires one year after the Launch Date\")\n\n## Review Checklist\n\n### Document Name\n- [ ] Is the document name clearly stated in the header or first paragraph?\n- [ ] Does the name include the type of agreement (e.g., \"Agreement\", \"Amendment\", \"Addendum\")?\n- [ ] If it's an amendment or schedule, does it reference the original agreement?\n\n### Parties\n- [ ] Are all parties identified with their full legal names?\n- [ ] Are the parties' legal forms (Inc., LLC, Ltd., etc.) included?\n- [ ] Are there any redacted or placeholder parties that need clarification?\n- [ ] Are there multiple entities on one side that need to be listed?\n\n### Agreement Date\n- [ ] Is the agreement date explicitly stated?\n- [ ] Is the date in the opening paragraph or signature block?\n- [ ] If the date is blank or placeholder, is this noted?\n\n### Effective Date\n- [ ] Is the effective date explicitly stated?\n- [ ] Is it the same as the agreement date or different?\n- [ ] Is it contingent on any conditions (e.g., \"date a fully executed copy is received\")?\n- [ ] If defined by reference to another event, is that event specified?\n\n### Expiration Date\n- [ ] Is the expiration date or term length specified?\n- [ ] Is it a fixed term from the effective date or a specific calendar date?\n- [ ] Are there automatic renewal provisions?\n- [ ] Is termination tied to completion of a project or event?\n- [ ] If no fixed expiration, is the contract perpetual or indefinite?\n\n## Evidence Extraction Rules\n\n### Document Name\n- **Location**: Header, first paragraph, or title section of the document\n- **Extraction method**: Look for the first line or heading that identifies the document type. For amendments/schedules, also extract the reference to the original agreement.\n- **Evidence format**: \"The contract is titled '[EXACT TITLE]'.\" or \"The document is [Amendment/Schedule] #[N] to the [Original Agreement] between [Parties].\"\n\n### Parties\n- **Location**: Opening paragraph, typically after \"THIS [AGREEMENT TYPE] is made and entered into by and between\"\n- **Extraction method**: Identify all named parties. Note any redactions or placeholders. For multiple entities on one side, list all.\n- **Evidence format**: \"The parties are [Party A] and [Party B].\" or \"The parties are [Party A] and [Party B] (including [Subsidiaries]).\"\n\n### Agreement Date\n- **Location**: Opening paragraph (e.g., \"dated as of\", \"made this\", \"entered into as of\") or signature block\n- **Extraction method**: Find the date associated with the agreement's execution. Note if blank or placeholder.\n- **Evidence format**: \"The agreement is made as of [Date].\" or \"The agreement was entered into on [Date].\"\n\n### Effective Date\n- **Location**: Opening paragraph, definition section, or specific clause (e.g., \"Effective Date\" definition)\n- **Extraction method**: Find the date when the contract becomes effective. Note if same as agreement date or different. If contingent on conditions, describe the condition.\n- **Evidence format**: \"The effective date is [Date].\" or \"The effective date is [Date], contingent on [Condition].\"\n\n### Expiration Date\n- **Location**: Term section, expiration clause, or definition of \"Term\"\n- **Extraction method**: Find the initial term length or specific expiration date. Note automatic renewal provisions. If no fixed expiration, note \"perpetual\" or \"indefinite.\"\n- **Evidence format**: \"The initial term is [N] [years/months] from the Effective Date, so it expires on [Date].\" or \"The agreement terminates on [Date], unless terminated earlier.\"\n\n## Output Format\n\n```json\n{\n  \"status\": \"complete\" | \"incomplete\" | \"error\",\n  \"answer\": {\n    \"Document Name\": \"string\",\n    \"Parties\": [\"string\", \"string\"],\n    \"Agreement Date\": \"string (YYYY-MM-DD format or description)\",\n    \"Effective Date\": \"string (YYYY-MM-DD format or description)\",\n    \"Expiration Date\": \"string (YYYY-MM-DD format or description)\"\n  },\n  \"evidence_unit_ids\": [\"string\"],\n  \"source_contract_ids\": [\"string\"],\n  \"missing_inputs\": [\"string\"],\n  \"human_review_required\": false\n}\n```\n\n## Boundary Rules\n\n### What the skill SHOULD do:\n1. **Extract only the five specified categories**: Document Name, Parties, Agreement Date, Effective Date, Expiration Date\n2. **Use exact language from the contract** when possible, especially for Document Name and Parties\n3. **Note any blanks, placeholders, or redactions** in dates or parties\n4. **Calculate expiration dates** when the contract specifies a term length from the effective date (e.g., \"one year from Effective Date\")\n5. **Identify automatic renewal provisions** and note them in the expiration date description\n6. **Handle amendments and schedules** by extracting their specific information while noting the reference to the original agreement\n\n### What the skill should NOT do:\n1. **Do not extract information beyond the five specified categories** (e.g., do not extract governing law, jurisdiction, payment terms, etc.)\n2. **Do not interpret or infer missing information** - if a date is blank, state it's blank; if parties are redacted, state they are redacted\n3. **Do not calculate dates based on assumptions** - if the effective date is not specified, do not assume it's the same as the agreement date\n4. **Do not modify or standardize party names** - use the exact names as they appear in the contract\n5. **Do not extract multiple dates** for the same category unless explicitly required (e.g., if there are multiple signature dates, note the earliest or as specified)\n6. **Do not provide legal advice or interpretation** - simply extract the factual information as presented in the contract"
+}

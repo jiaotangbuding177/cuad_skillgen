@@ -1,0 +1,436 @@
+{
+  "method": "document_tool_maker",
+  "case_id": "term_and_termination",
+  "model": "ecnu-plus",
+  "pipeline": {
+    "step1_extract": {
+      "contracts_processed": 306,
+      "total_tools_extracted": 852,
+      "llm_calls": 306
+    },
+    "step2_merge": {
+      "llm_calls": 1
+    },
+    "step3_generate": {
+      "llm_calls": 1
+    }
+  },
+  "tool_manifest": {
+    "total_unique_tools": 9,
+    "tools_by_category": {
+      "Renewal Term": 1,
+      "Notice Period to Terminate Renewal": 1,
+      "Termination for Convenience": 3,
+      "Renewal Term: What is the renewal term after the initial term expires? This includes automatic extensions and unilateral extensions with prior notice.": 1,
+      "Notice Period to Terminate Renewal: What is the notice period required to terminate renewal?": 2,
+      "Termination for Convenience: Can a party terminate this contract without cause (solely by giving a notice and allowing a waiting period to expire)?": 0,
+      "Termination for Convenience: Can a party terminate this  contract without cause (solely by giving a notice and allowing a waiting  period to expire)?": 0,
+      "Notice Period to Terminate": 1
+    },
+    "tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_renewal_term",
+        "category": "Renewal Term",
+        "description": "Identifies if the contract contains provisions for automatic renewal, unilateral extension, or a defined renewal term after the initial period expires, including extracting duration and conditions.",
+        "source_contracts": [
+          "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement_Agreement",
+          "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development_Agreement",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RMRGROUPINC_01_22_2020-EX-99.1-JOINT_FILING_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET_INVESTMENT_INCOME_MAINTENANCE_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "SPRINGBANKPHARMACEUTICALS,INC_04_08_2020-EX-99.A-JOINT_FILING_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "This Agreement shall commence on the Effective Date and continue for an initial term of three (3) years. Upon expiration of the Initial Term, this Agreement shall automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+          "output": {
+            "found": true,
+            "extracted_text": "Upon expiration of the Initial Term, this Agreement shall automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_notice_period_to_terminate_renewal",
+        "category": "Notice Period to Terminate Renewal",
+        "description": "Extracts the specific notice period required to prevent the automatic renewal or extension of the contract, or to terminate a renewal term.",
+        "source_contracts": [
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RMRGROUPINC_01_22_2020-EX-99.1-JOINT_FILING_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET_INVESTMENT_INCOME_MAINTENANCE_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "SPRINGBANKPHARMACEUTICALS,INC_04_08_2020-EX-99.A-JOINT_FILING_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "This Agreement shall automatically renew for successive one-year terms unless either party provides written notice of non-renewal at least sixty (60) days prior to the expiration of the then-current term.",
+          "output": {
+            "found": true,
+            "extracted_text": "sixty (60) days",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_termination_for_convenience",
+        "category": "Termination for Convenience",
+        "description": "Determines if either party has the right to terminate the agreement without cause (for convenience), typically by providing notice and potentially waiting out a specified period.",
+        "source_contracts": [
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement_Agreement",
+          "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development_Agreement",
+          "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement_Agreement",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RMRGROUPINC_01_22_2020-EX-99.1-JOINT_FILING_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "Reinsurance_Group_of_America,_Incorporated_-_A_R_REMARKETING__AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET_INVESTMENT_INCOME_MAINTENANCE_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT",
+          "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "SPRINGBANKPHARMACEUTICALS,INC_04_08_2020-EX-99.A-JOINT_FILING_AGREEMENT",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise_Agreement2",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation_Agreement",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "UNITEDNATIONALBANCORP_03_03_1999-EX-99-Outsourcing_Agreement_with_the_BISYS_Group,_Inc.",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Either party may terminate this Agreement without cause by providing thirty (30) days written notice to the other party.",
+          "output": {
+            "found": true,
+            "extracted_text": "Either party may terminate this Agreement without cause by providing thirty (30) days written notice to the other party.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_renewal_term",
+        "category": "Renewal Term: What is the renewal term after the initial term expires? This includes automatic extensions and unilateral extensions with prior notice.",
+        "description": "Extracts the duration and conditions of the automatic renewal term following the initial term of the agreement, including any automatic or unilateral extensions with prior notice.",
+        "source_contracts": [
+          "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION",
+          "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING_AND_MANAGEMENT_AGREEMENT_(1)",
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic_Alliance_Agreement",
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement",
+          "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing_Agreement",
+          "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+          "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1"
+        ],
+        "best_example": {
+          "input": "This Agreement shall automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+          "output": {
+            "found": true,
+            "extracted_text": "automatically renew for successive one (1) year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_notice_period_to_terminate_renewal",
+        "category": "Notice Period to Terminate Renewal: What is the notice period required to terminate renewal?",
+        "description": "Identifies the required notice period a party must provide to prevent automatic renewal of the contract or to terminate the agreement prior to the expiration of the initial term or renewal term.",
+        "source_contracts": [
+          "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION",
+          "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING_AND_MANAGEMENT_AGREEMENT_(1)",
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic_Alliance_Agreement",
+          "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing_Agreement",
+          "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+          "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1"
+        ],
+        "best_example": {
+          "input": "This Agreement shall automatically renew for successive one-year periods unless either party provides written notice of non-renewal at least ninety (90) days prior to the end of the then-current term.",
+          "output": {
+            "found": true,
+            "extracted_text": "ninety (90) days prior to the end of the then-current term",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_termination_for_convenience",
+        "category": "Notice Period to Terminate Renewal: What is the notice period required to terminate renewal?",
+        "description": "Determines if a party can terminate the contract without cause by giving notice and allowing a waiting period to expire.",
+        "source_contracts": [
+          "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement"
+        ],
+        "best_example": {
+          "input": "Either party may terminate this Agreement for convenience upon thirty (30) days' prior written notice to the other party.",
+          "output": {
+            "found": true,
+            "extracted_text": "thirty (30) days' prior written notice",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_termination_for_convenience",
+        "category": "Termination for Convenience",
+        "description": "Determines if a party can terminate the agreement without cause and identifies the required notice period.",
+        "source_contracts": [
+          "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION",
+          "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING_AND_MANAGEMENT_AGREEMENT_(1)",
+          "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT",
+          "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT",
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "check_termination_for_convenience",
+          "output": {
+            "found": true,
+            "extracted_text": "Either party may terminate this Agreement without cause upon thirty (30) days' written notice to the other party.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_termination_for_convenience",
+        "category": "Termination for Convenience",
+        "description": "Determines if a party can terminate the contract without cause by giving notice.",
+        "source_contracts": [
+          "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic_Alliance_Agreement",
+          "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1"
+        ],
+        "best_example": {
+          "input": "Either party may terminate this Agreement for convenience upon thirty (30) days prior written notice to the other party.",
+          "output": {
+            "found": true,
+            "extracted_text": "Either party may terminate this Agreement for convenience upon thirty (30) days prior written notice to the other party.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_notice_period_to_terminate",
+        "category": "Notice Period to Terminate",
+        "description": "Identifies the notice period required to terminate the contract.",
+        "source_contracts": [
+          "ImperialGardenResortInc_20161028_DRS_(on_F-1)_EX-10.13_9963189_EX-10.13_Outsourcing_Agreement"
+        ],
+        "best_example": {
+          "input": "The notice period required to terminate the contract.",
+          "output": {
+            "found": true,
+            "extracted_text": "Notice period to terminate",
+            "confidence": 0.95
+          }
+        }
+      }
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 2294163,
+    "completion_tokens": 329634,
+    "total_tokens": 2623797
+  },
+  "duration_seconds": 12298.09,
+  "created_at": "2026-07-20T01:37:59.211419+00:00"
+}

@@ -1,0 +1,226 @@
+{
+  "method": "document_tool_maker",
+  "case_id": "assignment_and_control",
+  "total_tools": 11,
+  "tools": [
+    {
+      "tool_id": "tool_001",
+      "name": "check_change_of_control",
+      "category": "Change of Control",
+      "description": "Determines if the contract contains specific provisions regarding change of control events (such as mergers, asset sales, or transfers of ownership), including definitions of control, and whether these events trigger termination rights, require notice, or require consent.",
+      "source_contracts": [
+        "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+        "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+        "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+        "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+        "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+        "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+        "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+        "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+        "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+        "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+        "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+        "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+        "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+        "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+        "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+        "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+        "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+        "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+      ],
+      "best_example": {
+        "input": "Review the contract for Change of Control provisions.",
+        "output": {
+          "found": true,
+          "extracted_text": "In the event of a Change of Control of either Party, the other Party shall have the right to terminate this Agreement upon thirty (30) days written notice.",
+          "confidence": 0.98
+        }
+      }
+    },
+    {
+      "tool_id": "tool_002",
+      "name": "check_change_of_control_termination_rights",
+      "category": "Change of Control",
+      "description": "Identifies clauses that grant a party the specific right to terminate the agreement, or require notice/consent, upon a Change of Control event of the other party, including specific conditions such as objectionable acquirers or financial status changes.",
+      "source_contracts": [
+        "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+        "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+        "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+        "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+        "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+        "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+        "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+        "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+        "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+        "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+      ],
+      "best_example": {
+        "input": "Check for termination rights triggered by Change of Control.",
+        "output": {
+          "found": true,
+          "extracted_text": "If a Change of Control occurs with respect to Company, Sponsor may terminate this Agreement immediately upon written notice.",
+          "confidence": 0.95
+        }
+      }
+    },
+    {
+      "tool_id": "tool_003",
+      "name": "check_change_of_control_termination",
+      "category": "Change of Control",
+      "description": "Identifies clauses where the agreement automatically terminates, ceases to have effect, or requires notice/consent due to a change in ownership, control, bankruptcy, insolvency, or cessation of business.",
+      "source_contracts": [
+        "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+        "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+        "VEONEER,INC_02_21_2020-EX-10.11-JOINT_VENTURE_AGREEMENT",
+        "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+        "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement"
+      ],
+      "best_example": {
+        "input": "Identify automatic termination clauses related to Change of Control.",
+        "output": {
+          "found": true,
+          "extracted_text": "This Agreement shall automatically terminate upon the sale of all or substantially all assets of the Company.",
+          "confidence": 0.92
+        }
+      }
+    },
+    {
+      "tool_id": "tool_004",
+      "name": "check_successors_bound_clause",
+      "category": "Change of Control",
+      "description": "Determines if the contract explicitly binds successors and assigns, which is relevant to change of control scenarios where assets or shares are transferred.",
+      "source_contracts": [
+        "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT"
+      ],
+      "best_example": {
+        "input": "Check if successors are bound.",
+        "output": {
+          "found": true,
+          "extracted_text": "This Agreement shall be binding upon and inure to the benefit of the parties hereto and their respective successors and permitted assigns.",
+          "confidence": 0.99
+        }
+      }
+    },
+    {
+      "tool_id": "tool_005",
+      "name": "check_change_of_control_board_approval",
+      "category": "Change of Control",
+      "description": "Checks if unanimous board approval or specific shareholder consent is required for the company to enter into a change of control transaction or transfer of interest.",
+      "source_contracts": [
+        "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+        "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT"
+      ],
+      "best_example": {
+        "input": "Check for board approval requirements for Change of Control.",
+        "output": {
+          "found": true,
+          "extracted_text": "No Change of Control transaction may be entered into without the unanimous written consent of the Board of Directors.",
+          "confidence": 0.96
+        }
+      }
+    },
+    {
+      "tool_id": "tool_006",
+      "name": "check_change_of_control_rating_conditions",
+      "category": "Change of Control",
+      "description": "Extracts specific financial or rating conditions that must be met by an acquirer or new corporate structure for a change of control to be permissible without triggering immediate termination or breach.",
+      "source_contracts": [
+        "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT"
+      ],
+      "best_example": {
+        "input": "Identify rating conditions for Change of Control.",
+        "output": {
+          "found": true,
+          "extracted_text": "A Change of Control shall not be deemed a default if the successor entity maintains a credit rating of at least A-.",
+          "confidence": 0.94
+        }
+      }
+    },
+    {
+      "tool_id": "tool_007",
+      "name": "check_change_of_control_rights",
+      "category": "Change of Control",
+      "description": "Identifies clauses that grant specific rights or trigger obligations for a party in the event the other party undergoes a Change of Control, beyond simple termination.",
+      "source_contracts": [
+        "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+        "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement"
+      ],
+      "best_example": {
+        "input": "Identify rights triggered by Change of Control.",
+        "output": {
+          "found": true,
+          "extracted_text": "Upon a Change of Control, the Non-Affected Party may require the Affected Party to provide additional security for performance.",
+          "confidence": 0.93
+        }
+      }
+    },
+    {
+      "tool_id": "tool_008",
+      "name": "check_change_of_control_depositor",
+      "category": "Change of Control",
+      "description": "Checks if the Depositor is restricted from merging, consolidating, or assigning its interests without specific conditions or if such events trigger termination or consent requirements.",
+      "source_contracts": [
+        "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement"
+      ],
+      "best_example": {
+        "input": "Check restrictions on Depositor Change of Control.",
+        "output": {
+          "found": true,
+          "extracted_text": "Depositor shall not merge or consolidate with any other entity without prior written consent of the Servicer.",
+          "confidence": 0.97
+        }
+      }
+    },
+    {
+      "tool_id": "tool_009",
+      "name": "check_change_of_control_servicer",
+      "category": "Change of Control",
+      "description": "Checks if the Servicer is restricted from merging, consolidating, or assigning its interests without specific conditions or if such events trigger termination or consent requirements.",
+      "source_contracts": [
+        "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement"
+      ],
+      "best_example": {
+        "input": "Check restrictions on Servicer Change of Control.",
+        "output": {
+          "found": true,
+          "extracted_text": "Servicer shall not transfer its obligations under this Agreement in connection with a Change of Control without approval.",
+          "confidence": 0.97
+        }
+      }
+    },
+    {
+      "tool_id": "tool_010",
+      "name": "check_change_of_control_assignment",
+      "category": "Change of Control",
+      "description": "Determines if the contract allows assignment to a successor entity in the event of a change of control, merger, or asset sale.",
+      "source_contracts": [
+        "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT"
+      ],
+      "best_example": {
+        "input": "Check if assignment to successor is allowed upon Change of Control.",
+        "output": {
+          "found": true,
+          "extracted_text": "In the event of a merger or acquisition, the rights and obligations of the acquiring entity shall be assigned to the successor.",
+          "confidence": 0.95
+        }
+      }
+    },
+    {
+      "tool_id": "tool_011",
+      "name": "check_change_of_control_financial_consequences",
+      "category": "Change of Control",
+      "description": "Identifies any specific financial payments, penalties, or obligations triggered for a party (e.g., Distributor) upon a Change of Control termination.",
+      "source_contracts": [
+        "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+      ],
+      "best_example": {
+        "input": "Identify financial consequences of Change of Control termination.",
+        "output": {
+          "found": true,
+          "extracted_text": "Upon termination due to Change of Control, Company shall pay Distributor a fee equal to 12 months of average commissions.",
+          "confidence": 0.96
+        }
+      }
+    }
+  ]
+}

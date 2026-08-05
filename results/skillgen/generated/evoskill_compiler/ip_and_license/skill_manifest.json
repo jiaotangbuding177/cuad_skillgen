@@ -1,0 +1,56 @@
+{
+  "method": "evoskill_compiler",
+  "case_id": "ip_and_license",
+  "model": "ecnu-plus",
+  "pipeline": {
+    "step1_extract": {
+      "contracts_processed": 306,
+      "total_kas_extracted": 1962,
+      "avg_kas_per_contract": 6.41,
+      "kas_by_category": {
+        "License Grant": 292,
+        "Non-Transferable License": 254,
+        "Affiliate License-Licensor": 207,
+        "Affiliate License-Licensee": 227,
+        "Unlimited/All-You-Can-Eat-License": 199,
+        "Irrevocable or Perpetual License": 220,
+        "Source Code Escrow": 200,
+        "Post-Termination Services": 363
+      },
+      "kas_by_contract_sample": {
+        "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement": 12,
+        "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT": 5,
+        "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT": 8,
+        "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_": 0,
+        "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT": 0,
+        "ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY_AGREEMENT": 3,
+        "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT": 8,
+        "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT": 10,
+        "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement": 8,
+        "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING_AGREEMENT": 9
+      },
+      "llm_calls": 306
+    },
+    "step2_index": {
+      "total_kas_in_index": 1962,
+      "categories_with_evidence": 8
+    },
+    "step3_security": {
+      "required_behaviors_count": 6,
+      "safety_requirements_count": 4
+    },
+    "step4_generate": {
+      "llm_calls": 1
+    },
+    "step5_compile": {
+      "llm_calls": 1
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2365254,
+    "completion_tokens": 296517,
+    "total_tokens": 2661771
+  },
+  "duration_seconds": 4390.59,
+  "created_at": "2026-07-21T23:31:28.793992+00:00"
+}

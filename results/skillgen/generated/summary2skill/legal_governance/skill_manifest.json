@@ -1,0 +1,25 @@
+{
+  "method": "summary2skill",
+  "case_id": "legal_governance",
+  "model": "deepseek-chat",
+  "pipeline": {
+    "step1_extract": {
+      "contracts_processed": 306,
+      "llm_calls": 306
+    },
+    "step2_merge": {
+      "batches": 2,
+      "llm_calls": 2
+    },
+    "step3_generate": {
+      "llm_calls": 1
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2269455,
+    "completion_tokens": 89150,
+    "total_tokens": 2358605
+  },
+  "duration_seconds": 733.25,
+  "created_at": "2026-07-15T14:59:30.788378+00:00"
+}

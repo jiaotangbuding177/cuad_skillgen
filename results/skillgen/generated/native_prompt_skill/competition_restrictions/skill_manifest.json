@@ -1,0 +1,34 @@
+{
+  "method": "native_prompt_skill",
+  "case_id": "competition_restrictions",
+  "model": "deepseek-chat",
+  "input_summary": {
+    "contracts_sampled": 10,
+    "sampled_contract_ids": [
+      "HC2HOLDINGS,INC_05_14_2020-EX-10.1-COOPERATION_AGREEMENT",
+      "LiquidmetalTechnologiesInc_20200205_8-K_EX-10.1_11968198_EX-10.1_Development_Agreement",
+      "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+      "EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding_Agreement",
+      "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+      "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement",
+      "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+      "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+      "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+      "IDREAMSKYTECHNOLOGYLTD_07_03_2014-EX-10.39-Cooperation_Agreement_on_Mobile_Game_Business"
+    ],
+    "contracts_with_evidence_count": 159,
+    "category_count": 7,
+    "estimated_input_tokens": 109337
+  },
+  "output_summary": {
+    "skill_md_chars": 12328,
+    "skill_md_estimated_tokens": 3082
+  },
+  "usage": {
+    "prompt_tokens": 89840,
+    "completion_tokens": 2656,
+    "total_tokens": 92496
+  },
+  "duration_seconds": 22.24,
+  "created_at": "2026-07-14T16:22:12.377141+00:00"
+}

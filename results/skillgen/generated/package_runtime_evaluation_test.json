@@ -1,0 +1,22 @@
+[
+  {
+    "method": "evoskill_compiler",
+    "total_tasks": 0,
+    "cases": {
+      "assignment_and_control": {
+        "error": "Results not found"
+      }
+    },
+    "error_rate": 0.0,
+    "status_accuracy": 0.0,
+    "task_success_rate": 0.0,
+    "evidence_precision": 0.0,
+    "evidence_recall": 0.0,
+    "evidence_f1": 0.0,
+    "boundary_correct": 0.0,
+    "contract_isolation": 0.0,
+    "human_review_routing": 0.0,
+    "external_violation_rate": 0.0,
+    "validation_failure_rate": 0.0
+  }
+]

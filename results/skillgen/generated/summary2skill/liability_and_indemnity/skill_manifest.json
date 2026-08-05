@@ -1,0 +1,25 @@
+{
+  "method": "summary2skill",
+  "case_id": "liability_and_indemnity",
+  "model": "ecnu-plus",
+  "pipeline": {
+    "step1_extract": {
+      "contracts_processed": 306,
+      "llm_calls": 306
+    },
+    "step2_merge": {
+      "batches": 2,
+      "llm_calls": 2
+    },
+    "step3_generate": {
+      "llm_calls": 1
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2369039,
+    "completion_tokens": 121859,
+    "total_tokens": 2490898
+  },
+  "duration_seconds": 2818.06,
+  "created_at": "2026-07-18T07:03:38.306778+00:00"
+}

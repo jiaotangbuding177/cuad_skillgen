@@ -1,0 +1,4762 @@
+[
+  {
+    "method": "native_prompt_skill",
+    "case_id": "contract_basic_info",
+    "skill_md_chars": 5573,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 10,
+      "unique_references": 3,
+      "sample_refs": [
+        "contract",
+        "Contract",
+        "CONTRACT"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 0,
+      "safety_keywords": [],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Document Name",
+        "Parties",
+        "Agreement Date",
+        "Effective Date",
+        "Expiration Date"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 43,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 43,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 9,
+          "text": "Step 1: Identify the Document Name",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "Scan the document title at the top of the first page",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "Look for headings such as \"AGREEMENT,\" \"CONTRACT,\" \"AMENDMENT,\" or \"LICENSE\"",
+          "source_grounded": false
+        },
+        {
+          "line": 12,
+          "text": "Note any document identifiers (e.g., \"Contract No. 076C/01\")",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "For amendments, include both the amendment number and the original agreement name",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.0,
+      "covered": [],
+      "missing": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": false,
+        "unsupported_scope": false,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 63602,
+      "completion_tokens": 1385,
+      "total_tokens": 64987
+    }
+  },
+  {
+    "method": "native_prompt_skill",
+    "case_id": "term_and_termination",
+    "skill_md_chars": 7740,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 23,
+      "unique_references": 3,
+      "sample_refs": [
+        "contract",
+        "Evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 1,
+      "safety_keywords": [
+        "do not"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Renewal Term",
+        "Notice Period to Terminate Renewal",
+        "Termination for Convenience"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 22,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 22,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 9,
+          "text": "Step 1: Locate the Term and Termination Section",
+          "source_grounded": false
+        },
+        {
+          "line": 16,
+          "text": "\"Effective Date and Term\"",
+          "source_grounded": false
+        },
+        {
+          "line": 20,
+          "text": "Step 2: Identify the Initial Term",
+          "source_grounded": false
+        },
+        {
+          "line": 27,
+          "text": "\"The initial term ('Initial Term') of this Agreement shall be for one year commencing on the 1st day of May, 2006\" (BNLFINANCIALCORP)",
+          "source_grounded": false
+        },
+        {
+          "line": 28,
+          "text": "\"XIMAGE's obligations hereunder shall become effective upon the 'Effective Date' and, unless sooner terminated as provided herein, shall remain in full force and effect for at least one year thereafter\" (IMAGEWARESYSTEMSINC)",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.0,
+      "covered": [],
+      "missing": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": false,
+        "unsupported_scope": false,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 70472,
+      "completion_tokens": 1795,
+      "total_tokens": 72267
+    }
+  },
+  {
+    "method": "native_prompt_skill",
+    "case_id": "legal_governance",
+    "skill_md_chars": 8966,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 22,
+      "unique_references": 2,
+      "sample_refs": [
+        "contract",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 2,
+      "safety_keywords": [
+        "limitation",
+        "should not"
+      ],
+      "behavior_coverage": 0.8333333333333334
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Governing Law",
+        "Audit Rights",
+        "Insurance"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 64,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 64,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 7,
+          "text": "Review Categories and What to Look For",
+          "source_grounded": false
+        },
+        {
+          "line": 12,
+          "text": "A dedicated \"Governing Law\" clause (often a separate section near the end of the contract)",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "Language such as \"governed by,\" \"construed in accordance with,\" or \"interpreted under\"",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "References to specific state or country laws",
+          "source_grounded": false
+        },
+        {
+          "line": 15,
+          "text": "May include choice of venue or jurisdiction provisions",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "missing": [
+        "evidence_missing",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 71802,
+      "completion_tokens": 1954,
+      "total_tokens": 73756
+    }
+  },
+  {
+    "method": "native_prompt_skill",
+    "case_id": "ip_and_license",
+    "skill_md_chars": 12276,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 28,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "Source",
+        "Contract",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 2,
+      "safety_keywords": [
+        "limitation",
+        "do not"
+      ],
+      "behavior_coverage": 0.8333333333333334
+    },
+    "categories": {
+      "coverage": 0.625,
+      "found": [
+        "License Grant",
+        "Non-Transferable License",
+        "Irrevocable or Perpetual License",
+        "Source Code Escrow",
+        "Post-Termination Services"
+      ],
+      "missing": [
+        "Affiliate License-Licensor",
+        "Affiliate License-Licensee",
+        "Unlimited/All-You-Can-Eat-License"
+      ]
+    },
+    "rule_grounding": {
+      "total_review_rules": 105,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 105,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 13,
+          "text": "Step 1: Identify the Contract Type and Parties",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "Determine the nature of the agreement (e.g., franchise, supply, collaboration, joint venture, trademark license, development agreement)",
+          "source_grounded": false
+        },
+        {
+          "line": 15,
+          "text": "Identify which party is the licensor/grantor and which is the licensee/grantee",
+          "source_grounded": false
+        },
+        {
+          "line": 16,
+          "text": "Note any affiliate definitions and whether affiliates are included as parties",
+          "source_grounded": false
+        },
+        {
+          "line": 18,
+          "text": "Step 2: Scan for License Grant Language",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "missing": [
+        "evidence_missing",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 82905,
+      "completion_tokens": 2736,
+      "total_tokens": 85641
+    }
+  },
+  {
+    "method": "native_prompt_skill",
+    "case_id": "competition_restrictions",
+    "skill_md_chars": 12328,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 28,
+      "unique_references": 3,
+      "sample_refs": [
+        "source",
+        "Contract",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 1,
+      "safety_keywords": [
+        "limitation"
+      ],
+      "behavior_coverage": 0.8333333333333334
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Most Favored Nation",
+        "Non-Compete",
+        "Exclusivity",
+        "No-Solicit of Customers",
+        "Competitive Restriction Exception",
+        "No-Solicit of Employees",
+        "Non-Disparagement"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 83,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 83,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 11,
+          "text": "Step 1: Initial Contract Assessment",
+          "source_grounded": false
+        },
+        {
+          "line": 12,
+          "text": "Identify the contract type and parties involved",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "Determine the primary business relationship (franchisor/franchisee, licensor/licensee, service provider/client, strategic partner)",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "Note the contract duration and any post-termination obligations",
+          "source_grounded": false
+        },
+        {
+          "line": 15,
+          "text": "Scan for sections titled \"Restrictions,\" \"Non-Compete,\" \"Exclusivity,\" \"Standstill,\" or similar",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "missing": [
+        "evidence_missing",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 89840,
+      "completion_tokens": 2656,
+      "total_tokens": 92496
+    }
+  },
+  {
+    "method": "native_prompt_skill",
+    "case_id": "liability_and_indemnity",
+    "skill_md_chars": 8299,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 16,
+      "unique_references": 3,
+      "sample_refs": [
+        "contract",
+        "Evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 2,
+      "safety_keywords": [
+        "limitation",
+        "do not"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Cap on Liability",
+        "Uncapped Liability",
+        "Liquidated Damages",
+        "Warranty Duration"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 55,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 55,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 9,
+          "text": "Step 1: Identify All Liability-Related Clauses",
+          "source_grounded": false
+        },
+        {
+          "line": 12,
+          "text": "**Limitation of Liability** or **Limitation of Liability** clauses",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "**Indemnification** or **Indemnity** clauses",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "**Warranty** clauses (especially duration of warranties)",
+          "source_grounded": false
+        },
+        {
+          "line": 15,
+          "text": "**Liquidated Damages** clauses",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.2,
+      "covered": [
+        "unsupported_scope"
+      ],
+      "missing": [
+        "evidence_missing",
+        "missing_input",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": false,
+        "unsupported_scope": true,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 84043,
+      "completion_tokens": 1857,
+      "total_tokens": 85900
+    }
+  },
+  {
+    "method": "native_prompt_skill",
+    "case_id": "assignment_and_control",
+    "skill_md_chars": 10288,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 27,
+      "unique_references": 2,
+      "sample_refs": [
+        "contract",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 0,
+      "safety_keywords": [],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Anti-Assignment",
+        "Change of Control"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 24,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 24,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 9,
+          "text": "Step 1: Locate Relevant Clauses",
+          "source_grounded": false
+        },
+        {
+          "line": 17,
+          "text": "Step 2: Analyze Change of Control Provisions",
+          "source_grounded": false
+        },
+        {
+          "line": 21,
+          "text": "Does the contract give the other party the right to terminate upon a change of control?",
+          "source_grounded": false
+        },
+        {
+          "line": 22,
+          "text": "Is consent or notice required before a change of control can occur?",
+          "source_grounded": false
+        },
+        {
+          "line": 23,
+          "text": "Are there exceptions (e.g., mergers with affiliates)?",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.2,
+      "covered": [
+        "missing_input"
+      ],
+      "missing": [
+        "evidence_missing",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": false,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 66105,
+      "completion_tokens": 2105,
+      "total_tokens": 68210
+    }
+  },
+  {
+    "method": "native_prompt_skill",
+    "case_id": "revenue_and_commercial_terms",
+    "skill_md_chars": 16497,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 24,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "evidence",
+        "Contract",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 3,
+      "safety_keywords": [
+        "constraint",
+        "limitation",
+        "do not"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Revenue/Profit Sharing",
+        "Price Restrictions",
+        "Minimum Commitment",
+        "Volume Restriction"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 89,
+      "source_grounded_rules": 27,
+      "unsupported_rules": 62,
+      "source_grounded_rule_rate": 0.3034,
+      "unsupported_rule_rate": 0.6966,
+      "sample_unsupported_rules": [
+        {
+          "line": 11,
+          "text": "Review Categories and Steps",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "Category 1: Revenue/Profit Sharing",
+          "source_grounded": false
+        },
+        {
+          "line": 22,
+          "text": "**Royalty clauses** - Percentage-based payments on sales or revenue",
+          "source_grounded": false
+        },
+        {
+          "line": 23,
+          "text": "**Commission structures** - Payments based on transactions generated",
+          "source_grounded": false
+        },
+        {
+          "line": 24,
+          "text": "**Profit split arrangements** - Division of margins or net profits",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.2,
+      "covered": [
+        "missing_input"
+      ],
+      "missing": [
+        "evidence_missing",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": false,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 81818,
+      "completion_tokens": 3692,
+      "total_tokens": 85510
+    }
+  },
+  {
+    "method": "native_prompt_skill",
+    "case_id": "operational_rights",
+    "skill_md_chars": 14062,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 35,
+      "unique_references": 3,
+      "sample_refs": [
+        "contract",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 2,
+      "safety_keywords": [
+        "constraint",
+        "do not"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "IP Ownership Assignment",
+        "Joint IP Ownership",
+        "Covenant Not to Sue",
+        "Rofr/Rofo/Rofn",
+        "Third Party Beneficiary"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 41,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 41,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 11,
+          "text": "Step 1: Initial Contract Scan",
+          "source_grounded": false
+        },
+        {
+          "line": 12,
+          "text": "Read the contract title, parties, and recitals to understand the nature of the agreement",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "Identify the type of contract (license, joint venture, franchise, distribution, marketing, servicing, etc.)",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "Note the governing law and jurisdiction clauses",
+          "source_grounded": false
+        },
+        {
+          "line": 16,
+          "text": "Step 2: Systematic Category Review",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "missing": [
+        "evidence_missing",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 92570,
+      "completion_tokens": 3132,
+      "total_tokens": 95702
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "contract_basic_info",
+    "skill_md_chars": 5813,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 34,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 8,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Document Name",
+        "Parties",
+        "Agreement Date",
+        "Effective Date",
+        "Expiration Date"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 36,
+      "source_grounded_rules": 2,
+      "unsupported_rules": 34,
+      "source_grounded_rule_rate": 0.0556,
+      "unsupported_rule_rate": 0.9444,
+      "sample_unsupported_rules": [
+        {
+          "line": 18,
+          "text": "[ ] Locate the contract title in the opening paragraph or header (e.g., \"ONLINE HOSTING AGREEMENT\", \"SPONSORSHIP AGREEMENT\", \"LICENSE, DEVELOPMENT AND COMMERCIALIZATION AGREEMENT\")",
+          "source_grounded": false
+        },
+        {
+          "line": 19,
+          "text": "[ ] Check for any amendment or addendum titles that may modify the original agreement",
+          "source_grounded": false
+        },
+        {
+          "line": 23,
+          "text": "[ ] Identify all named parties in the opening recital paragraph (typically begins with \"This Agreement is entered into by and between\")",
+          "source_grounded": false
+        },
+        {
+          "line": 24,
+          "text": "[ ] Note each party's full legal name, state of incorporation/organization, and principal place of business",
+          "source_grounded": false
+        },
+        {
+          "line": 25,
+          "text": "[ ] Check for defined terms used throughout the contract (e.g., \"Array\", \"Ono\", \"Licensor\", \"Licensee\")",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 63823,
+      "completion_tokens": 1380,
+      "total_tokens": 65203
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "term_and_termination",
+    "skill_md_chars": 5293,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 28,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 8,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Renewal Term",
+        "Notice Period to Terminate Renewal",
+        "Termination for Convenience"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 30,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 30,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 9,
+          "text": "Notice Period to Terminate Renewal",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "Termination for Convenience",
+          "source_grounded": false
+        },
+        {
+          "line": 20,
+          "text": "[ ] Locate the \"Term\" or \"Duration\" section of the contract",
+          "source_grounded": false
+        },
+        {
+          "line": 21,
+          "text": "[ ] Identify the initial term length",
+          "source_grounded": false
+        },
+        {
+          "line": 22,
+          "text": "[ ] Check for automatic renewal clauses (e.g., \"shall automatically renew,\" \"shall continue on a year to year basis\")",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 70693,
+      "completion_tokens": 1168,
+      "total_tokens": 71861
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "legal_governance",
+    "skill_md_chars": 6147,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 22,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "Evidence",
+        "evidence",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 7,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "limitation",
+        "do not",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Governing Law",
+        "Audit Rights",
+        "Insurance"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 37,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 37,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Description**: Which state/country's law governs the interpretation of the contract?",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Answer Format**: Name of a US State / non-US Province, Country",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Description**: Does a party have the right to audit the books, records, or physical locations of the counterparty to ensure compliance with the contract?",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Answer Format**: Yes/No",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "**Description**: Is there a requirement for insurance that must be maintained by one party for the benefit of the counterparty?",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 72023,
+      "completion_tokens": 1367,
+      "total_tokens": 73390
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "ip_and_license",
+    "skill_md_chars": 10740,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 43,
+      "unique_references": 7,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "Source",
+        "evidence",
+        "SOURCE",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 9,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "limitation",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "License Grant",
+        "Non-Transferable License",
+        "Affiliate License-Licensor",
+        "Affiliate License-Licensee",
+        "Unlimited/All-You-Can-Eat-License",
+        "Irrevocable or Perpetual License",
+        "Source Code Escrow",
+        "Post-Termination Services"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 90,
+      "source_grounded_rules": 1,
+      "unsupported_rules": 89,
+      "source_grounded_rule_rate": 0.0111,
+      "unsupported_rule_rate": 0.9889,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Description**: Determine whether the contract contains a license granted by one party to its counterparty.",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Answer Format**: Yes/No",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Description**: Determine whether the contract limits the ability of a party to transfer the license being granted to a third party.",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Answer Format**: Yes/No",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "Affiliate License-Licensor",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 83126,
+      "completion_tokens": 2480,
+      "total_tokens": 85606
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "competition_restrictions",
+    "skill_md_chars": 8761,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 47,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 7,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "do not",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Most Favored Nation",
+        "Non-Compete",
+        "Exclusivity",
+        "No-Solicit of Customers",
+        "Competitive Restriction Exception",
+        "No-Solicit of Employees",
+        "Non-Disparagement"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 57,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 57,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Description**: Identifies clauses requiring that if a third party receives better terms on licensing or sale of technology/goods/services, the buyer under this contract shall be entitled to those better terms.",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Answer Format**: Yes/No",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Description**: Identifies restrictions on a party's ability to compete with the counterparty or operate in a certain geography, business, or technology sector.",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Answer Format**: Yes/No",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "**Description**: Identifies exclusive dealing commitments, including requirements to procure all \"requirements\" from one party, prohibitions on licensing/selling to third parties, or prohibitions on collaborating with other parties.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 90061,
+      "completion_tokens": 1958,
+      "total_tokens": 92019
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "liability_and_indemnity",
+    "skill_md_chars": 6565,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 39,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 8,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "limitation",
+        "do not",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Cap on Liability",
+        "Uncapped Liability",
+        "Liquidated Damages",
+        "Warranty Duration"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 36,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 36,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Description**: Determines whether a party's liability is uncapped upon breach of its obligation in the contract. This also includes uncapped liability for a particular type of breach such as IP infringement or breach of confidentiality obligation.",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Answer Format**: Yes/No",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Description**: Determines whether the contract includes a cap on liability upon breach of a party's obligation. This includes time limitations for the counterparty to bring claims or maximum amount for recovery.",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Answer Format**: Yes/No",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "**Description**: Determines whether the contract contains a clause that would award either party liquidated damages for breach or a fee upon termination of a contract (termination fee).",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 84264,
+      "completion_tokens": 1426,
+      "total_tokens": 85690
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "assignment_and_control",
+    "skill_md_chars": 7137,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 32,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 7,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Anti-Assignment",
+        "Change of Control"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 41,
+      "source_grounded_rules": 6,
+      "unsupported_rules": 35,
+      "source_grounded_rule_rate": 0.1463,
+      "unsupported_rule_rate": 0.8537,
+      "sample_unsupported_rules": [
+        {
+          "line": 18,
+          "text": "[ ] Does the contract contain a provision granting a party the right to terminate upon the other party's change of control?",
+          "source_grounded": false
+        },
+        {
+          "line": 19,
+          "text": "[ ] Does the contract require consent or notice from the counterparty before a change of control can occur?",
+          "source_grounded": false
+        },
+        {
+          "line": 20,
+          "text": "[ ] Look for clauses specifically mentioning \"change of control,\" \"merger,\" \"sale of assets,\" \"change in ownership,\" or \"change in management\"",
+          "source_grounded": false
+        },
+        {
+          "line": 21,
+          "text": "[ ] Check termination sections for change-of-control-related termination rights",
+          "source_grounded": false
+        },
+        {
+          "line": 22,
+          "text": "[ ] Review assignment clauses for change-of-control provisions (some contracts treat mergers/acquisitions differently from other assignments)",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 66326,
+      "completion_tokens": 1539,
+      "total_tokens": 67865
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "revenue_and_commercial_terms",
+    "skill_md_chars": 6196,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 29,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 9,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "limitation",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Revenue/Profit Sharing",
+        "Price Restrictions",
+        "Minimum Commitment",
+        "Volume Restriction"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 34,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 34,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 24,
+          "text": "[ ] Check for explicit revenue sharing percentages or formulas (e.g., \"X% of Net Sales\", \"X% of Gross Receipts\")",
+          "source_grounded": false
+        },
+        {
+          "line": 25,
+          "text": "[ ] Look for royalty payment structures tied to sales or revenue",
+          "source_grounded": false
+        },
+        {
+          "line": 26,
+          "text": "[ ] Identify profit-sharing arrangements or margin splits between parties",
+          "source_grounded": false
+        },
+        {
+          "line": 27,
+          "text": "[ ] Check for milestone payments, bonuses, or other contingent payments based on revenue/profit",
+          "source_grounded": false
+        },
+        {
+          "line": 28,
+          "text": "[ ] Look for \"bounty fees,\" \"commission fees,\" or similar per-transaction revenue sharing",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 82039,
+      "completion_tokens": 1321,
+      "total_tokens": 83360
+    }
+  },
+  {
+    "method": "schema_prompt_skill",
+    "case_id": "operational_rights",
+    "skill_md_chars": 7349,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 30,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 9,
+      "safety_keywords": [
+        "boundary",
+        "safety",
+        "limitation",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "IP Ownership Assignment",
+        "Joint IP Ownership",
+        "Covenant Not to Sue",
+        "Rofr/Rofo/Rofn",
+        "Third Party Beneficiary"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 35,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 35,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 28,
+          "text": "[ ] Look for explicit language using terms \"right of first refusal,\" \"right of first offer,\" \"right of first negotiation,\" \"ROFR,\" \"ROFO,\" or \"ROFN\"",
+          "source_grounded": false
+        },
+        {
+          "line": 29,
+          "text": "[ ] Check for clauses granting a party the first opportunity to purchase, license, market, or distribute specific assets, equity, technology, or services before the offering party can negotiate with third parties",
+          "source_grounded": false
+        },
+        {
+          "line": 30,
+          "text": "[ ] Examine sections related to exclusivity, purchase options, or preferential rights to acquire interests",
+          "source_grounded": false
+        },
+        {
+          "line": 31,
+          "text": "[ ] Review any \"first opportunity\" or \"first right\" language in marketing, distribution, or licensing contexts",
+          "source_grounded": false
+        },
+        {
+          "line": 34,
+          "text": "[ ] Identify clauses stating that IP created by one party \"shall be owned by\" or \"shall become the property of\" the counterparty",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 92791,
+      "completion_tokens": 1597,
+      "total_tokens": 94388
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "contract_basic_info",
+    "skill_md_chars": 9448,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 23,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "Evidence",
+        "evidence",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 4,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "should not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Document Name",
+        "Parties",
+        "Agreement Date",
+        "Effective Date",
+        "Expiration Date"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 60,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 60,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Discovery frequency**: 100% of contracts (306/306)",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Common patterns**: Clear title in header or first paragraph; includes type of agreement (e.g., \"Agency Agreement\", \"Supply Agreement\", \"Collaboration Agreement\"); amendments and schedules reference original agreement",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Discovery frequency**: 100% of contracts (306/306)",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Common patterns**: Identified in opening paragraph with legal names and jurisdictions; includes addresses and defined terms (e.g., \"Company\", \"Agent\"); parties are typically companies or individuals with legal form (Inc., LLC, Ltd.)",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "**Discovery frequency**: 95.1% of contracts (291/306)",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2369700,
+      "completion_tokens": 192044,
+      "total_tokens": 2561744
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "term_and_termination",
+    "skill_md_chars": 5690,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 12,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "Evidence",
+        "evidence",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 3,
+      "safety_keywords": [
+        "boundary",
+        "should not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Renewal Term",
+        "Notice Period to Terminate Renewal",
+        "Termination for Convenience"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 45,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 45,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Discovery frequency**: 31% of contracts (95/306)",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Common patterns**: Automatic renewal for fixed periods, perpetual/indefinite terms, conditional renewals based on performance thresholds, and unilateral extension rights",
+          "source_grounded": false
+        },
+        {
+          "line": 9,
+          "text": "Notice Period to Terminate Renewal",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Discovery frequency**: 17% of contracts (53/306)",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Common patterns**: Written notice required 30-90 days before term end, notice periods ranging from 30 days to 1 year, and notice of non-renewal to prevent automatic extension",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2263943,
+      "completion_tokens": 79206,
+      "total_tokens": 2343149
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "legal_governance",
+    "skill_md_chars": 7536,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 27,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 4,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "should not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Governing Law",
+        "Audit Rights",
+        "Insurance"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 42,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 42,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Discovery frequency**: 67.6% of contracts (207 out of 306)",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Common patterns**: Most contracts specify a U.S. state law (Delaware, New York, California, Texas, Florida most common); international contracts often choose a specific country's law; many exclude conflict of laws principles; some specify exclusive jurisdiction in addition to governing law.",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Discovery frequency**: 36.3% of contracts (111 out of 306)",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Common patterns**: Audits typically conducted by independent CPA or third-party auditor; frequency limited to once per year; conducted during normal business hours upon reasonable notice; often limited to financial records related to payments or royalties.",
+          "source_grounded": false
+        },
+        {
+          "line": 14,
+          "text": "**Discovery frequency**: 26.5% of contracts (81 out of 306)",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.8,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [
+        "evidence_missing"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2269455,
+      "completion_tokens": 89150,
+      "total_tokens": 2358605
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "ip_and_license",
+    "skill_md_chars": 12787,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 36,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "Source",
+        "evidence"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 5,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "should not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 0.875,
+      "found": [
+        "License Grant",
+        "Non-Transferable License",
+        "Affiliate License-Licensor",
+        "Affiliate License-Licensee",
+        "Irrevocable or Perpetual License",
+        "Source Code Escrow",
+        "Post-Termination Services"
+      ],
+      "missing": [
+        "Unlimited/All-You-Can-Eat-License"
+      ]
+    },
+    "rule_grounding": {
+      "total_review_rules": 112,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 112,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Discovery frequency**: 31.7% of contracts (97/306)",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Common patterns**: Non-exclusive, non-transferable, royalty-free licenses are most prevalent. Licenses are typically limited to specific purposes, fields, territories, or durations. Exclusive licenses appear in distribution and commercialization agreements.",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Discovery frequency**: 28.4% of contracts (87/306)",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Common patterns**: Transfer or assignment requires prior written consent. Exceptions exist for affiliates or mergers. Often coupled with non-sublicensability.",
+          "source_grounded": false
+        },
+        {
+          "line": 13,
+          "text": "Affiliate License-Licensor",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2436504,
+      "completion_tokens": 200617,
+      "total_tokens": 2637121
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "competition_restrictions",
+    "skill_md_chars": 11261,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 25,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "Source",
+        "evidence"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 4,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Most Favored Nation",
+        "Non-Compete",
+        "Exclusivity",
+        "No-Solicit of Customers",
+        "Competitive Restriction Exception",
+        "No-Solicit of Employees",
+        "Non-Disparagement"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 70,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 70,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 18,
+          "text": "**Exclusive Appointment/Distribution:** Grants exclusive rights to sell, distribute, or manufacture in a specific territory or field.",
+          "source_grounded": false
+        },
+        {
+          "line": 19,
+          "text": "*Example:* \"Sierra appoints Envision as its exclusive distributor for the Product in the Territory, and Envision agrees to exclusively purchase the Product from Sierra.\"",
+          "source_grounded": false
+        },
+        {
+          "line": 20,
+          "text": "**Sole Source Purchasing:** Obligations to purchase all requirements exclusively from the supplier.",
+          "source_grounded": false
+        },
+        {
+          "line": 21,
+          "text": "*Example:* \"The Provider Representatives are required to be dedicated solely to providing services to the Recipient and are prohibited from providing such services to the Provider or any other customer.\"",
+          "source_grounded": false
+        },
+        {
+          "line": 22,
+          "text": "**Explicit Non-Exclusivity:** Clarifications that the agreement does not restrict parties from working with others.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "missing": [
+        "evidence_missing",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2436096,
+      "completion_tokens": 172035,
+      "total_tokens": 2608131
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "liability_and_indemnity",
+    "skill_md_chars": 9767,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 15,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "Evidence",
+        "evidence",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 4,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Cap on Liability",
+        "Uncapped Liability",
+        "Liquidated Damages",
+        "Warranty Duration"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 52,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 52,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 7,
+          "text": "**Uncapped Liability** (26.1% of contracts)",
+          "source_grounded": false
+        },
+        {
+          "line": 8,
+          "text": "**Common Patterns:** Explicit exclusions of indemnification/confidentiality from general caps; statutory mandates preventing caps for personal injury/death; absence of any limitation clause; exclusions for fraud, willful misconduct, or gross negligence.",
+          "source_grounded": false
+        },
+        {
+          "line": 9,
+          "text": "**Cap on Liability** (37.3% of contracts)",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Common Patterns:** Fixed monetary maximums (e.g., $1M, fees paid); exclusion of consequential/indirect damages; liability limited to insurance coverage amounts; statute of limitations/time bars for claims.",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Liquidated Damages** (11.8% of contracts)",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2369039,
+      "completion_tokens": 121859,
+      "total_tokens": 2490898
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "assignment_and_control",
+    "skill_md_chars": 8848,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 12,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "Evidence",
+        "evidence",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 4,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Anti-Assignment",
+        "Change of Control"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 50,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 50,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Discovery Frequency:** 32.7% of contracts (100/306).",
+          "source_grounded": false
+        },
+        {
+          "line": 8,
+          "text": "**Termination Rights:** Grants one or both parties the right to terminate the agreement upon a Change of Control (CoC), often requiring written notice.",
+          "source_grounded": false
+        },
+        {
+          "line": 9,
+          "text": "**Automatic Termination:** In regulated industries (e.g., Investment Funds under the 1940 Act), the agreement may automatically terminate upon an assignment defined as a CoC.",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Financial Consequences:** Triggers buy-out payments, liquidated damages, or one-time payments.",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Definition via Assignment:** CoC is frequently defined or triggered by the assignment of the agreement to a successor in a merger, acquisition, or sale of substantially all assets.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2269510,
+      "completion_tokens": 87311,
+      "total_tokens": 2356821
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "revenue_and_commercial_terms",
+    "skill_md_chars": 8094,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 10,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "Evidence",
+        "evidence",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 4,
+      "safety_keywords": [
+        "boundary",
+        "constraint",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Revenue/Profit Sharing",
+        "Price Restrictions",
+        "Minimum Commitment",
+        "Volume Restriction"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 54,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 54,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 5,
+          "text": "**Revenue/Profit Sharing**",
+          "source_grounded": false
+        },
+        {
+          "line": 6,
+          "text": "**Discovery Frequency:** 28.1% of contracts (86/306)",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Common Patterns:** Royalty payments based on Net/Gross Sales, fixed commission structures, joint venture profit splits (e.g., 50/50), and minimum guarantees/advances.",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Discovery Frequency:** 27.5% of contracts (84/306)",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Common Patterns:** Minimum purchase obligations (dollar/unit), performance milestones for exclusivity, and termination triggers for failing to meet sales thresholds.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "missing": [
+        "evidence_missing",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2056563,
+      "completion_tokens": 107325,
+      "total_tokens": 2163888
+    }
+  },
+  {
+    "method": "summary2skill",
+    "case_id": "operational_rights",
+    "skill_md_chars": 11235,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 17,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 3,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "IP Ownership Assignment",
+        "Joint IP Ownership",
+        "Covenant Not to Sue",
+        "Rofr/Rofo/Rofn",
+        "Third Party Beneficiary"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 69,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 69,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 7,
+          "text": "**Rofr/Rofo/Rofn** (Right of First Refusal/Offer/Negotiation)",
+          "source_grounded": false
+        },
+        {
+          "line": 8,
+          "text": "**Discovery Frequency:** ~12% of contracts (36/306).",
+          "source_grounded": false
+        },
+        {
+          "line": 9,
+          "text": "**Common Patterns:** Clauses granting preemptive rights to purchase, license, or negotiate for new products, services, or equity interests before third parties are approached. Often tied to specific timeframes (e.g., 30-60 days) and \"good faith\" negotiation requirements.",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**IP Ownership Assignment**",
+          "source_grounded": false
+        },
+        {
+          "line": 12,
+          "text": "**Discovery Frequency:** ~30% of contracts (91/306).",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2085400,
+      "completion_tokens": 118514,
+      "total_tokens": 2203914
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "contract_basic_info",
+    "skill_md_chars": 8546,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 20,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "evidence",
+        "Contract",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 3,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Document Name",
+        "Parties",
+        "Agreement Date",
+        "Effective Date",
+        "Expiration Date"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 13,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 13,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 74,
+          "text": "**Pre-processing**: Ensure the contract text is clean and readable. Identify the document structure (Header, Preamble, Body, Signatures).",
+          "source_grounded": false
+        },
+        {
+          "line": 75,
+          "text": "**Step 1: Identify Document Identity**:",
+          "source_grounded": false
+        },
+        {
+          "line": 76,
+          "text": "Run `check_document_name` to establish what type of agreement is being reviewed.",
+          "source_grounded": false
+        },
+        {
+          "line": 77,
+          "text": "*Why first?* The document name often dictates the context for interpreting other clauses.",
+          "source_grounded": false
+        },
+        {
+          "line": 78,
+          "text": "**Step 2: Identify the Parties**:",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.8,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2254822,
+      "completion_tokens": 438370,
+      "total_tokens": 2693192
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "term_and_termination",
+    "skill_md_chars": 8193,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 15,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "evidence",
+        "Contract",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 3,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Renewal Term",
+        "Notice Period to Terminate Renewal",
+        "Termination for Convenience"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 16,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 16,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 65,
+          "text": "**Analyze Renewal Mechanics:**",
+          "source_grounded": false
+        },
+        {
+          "line": 66,
+          "text": "Invoke `check_renewal_term`.",
+          "source_grounded": false
+        },
+        {
+          "line": 67,
+          "text": "If `found` is true, note the renewal duration (e.g., 1 year, 3 years).",
+          "source_grounded": false
+        },
+        {
+          "line": 68,
+          "text": "If `found` is false, mark renewal as \"None\" or \"Fixed Term Only.\"",
+          "source_grounded": false
+        },
+        {
+          "line": 70,
+          "text": "**Determine Non-Renewal Requirements:**",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.2,
+      "covered": [
+        "missing_input"
+      ],
+      "missing": [
+        "evidence_missing",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": false,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2294163,
+      "completion_tokens": 329634,
+      "total_tokens": 2623797
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "legal_governance",
+    "skill_md_chars": 7599,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 23,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "evidence",
+        "Contract",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 3,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Governing Law",
+        "Audit Rights",
+        "Insurance"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 8,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 8,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 54,
+          "text": "**Input Ingestion**: Receive the contract text and identify the document type (e.g., Service Agreement, License, Supply Agreement).",
+          "source_grounded": false
+        },
+        {
+          "line": 55,
+          "text": "**Parallel Execution**: Trigger all three tools (`check_governing_law`, `check_audit_rights`, `check_insurance_requirements`) simultaneously against the provided contract text. These checks are independent and do not rely on each other's output.",
+          "source_grounded": false
+        },
+        {
+          "line": 57,
+          "text": "Collect outputs from all three tools.",
+          "source_grounded": false
+        },
+        {
+          "line": 58,
+          "text": "Validate that `found` is `true` for critical clauses. If `found` is `false`, flag the category as \"Missing\" or \"Not Specified.\"",
+          "source_grounded": false
+        },
+        {
+          "line": 60,
+          "text": "**Governing Law**: Check if the jurisdiction is neutral or favorable to the reviewing party. Flag if missing.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2305287,
+      "completion_tokens": 273669,
+      "total_tokens": 2578956
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "ip_and_license",
+    "skill_md_chars": 11988,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 43,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "CONTRACT",
+        "Source",
+        "evidence"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 5,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "should not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 0.875,
+      "found": [
+        "License Grant",
+        "Non-Transferable License",
+        "Affiliate License-Licensor",
+        "Affiliate License-Licensee",
+        "Unlimited/All-You-Can-Eat-License",
+        "Irrevocable or Perpetual License",
+        "Source Code Escrow"
+      ],
+      "missing": [
+        "Post-Termination Services"
+      ]
+    },
+    "rule_grounding": {
+      "total_review_rules": 15,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 15,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 110,
+          "text": "**Initial Scan (License Grant):**",
+          "source_grounded": false
+        },
+        {
+          "line": 111,
+          "text": "Run `check_license_grant` first.",
+          "source_grounded": false
+        },
+        {
+          "line": 112,
+          "text": "If `found` is `false`, the contract likely does not contain a standard IP license. You may skip subsequent license-specific checks unless the user specifically requests a search for implied licenses or other IP transfers.",
+          "source_grounded": false
+        },
+        {
+          "line": 113,
+          "text": "If `found` is `true`, proceed to step 2.",
+          "source_grounded": false
+        },
+        {
+          "line": 115,
+          "text": "**Scope and Limitation Analysis:**",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "missing": [
+        "evidence_missing",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2363488,
+      "completion_tokens": 443848,
+      "total_tokens": 2807336
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "competition_restrictions",
+    "skill_md_chars": 12870,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 42,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "evidence",
+        "Contract",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 4,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 0.8571428571428571,
+      "found": [
+        "Most Favored Nation",
+        "Non-Compete",
+        "Exclusivity",
+        "No-Solicit of Customers",
+        "No-Solicit of Employees",
+        "Non-Disparagement"
+      ],
+      "missing": [
+        "Competitive Restriction Exception"
+      ]
+    },
+    "rule_grounding": {
+      "total_review_rules": 17,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 17,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 158,
+          "text": "**Ingest Contract Text:** Load the full contract text into the review context.",
+          "source_grounded": false
+        },
+        {
+          "line": 159,
+          "text": "**Scan for Core Restrictions:**",
+          "source_grounded": false
+        },
+        {
+          "line": 160,
+          "text": "Run `check_exclusivity` to identify broad market exclusivity.",
+          "source_grounded": false
+        },
+        {
+          "line": 161,
+          "text": "Run `check_no_solicit_of_customers` to identify customer poaching restrictions.",
+          "source_grounded": false
+        },
+        {
+          "line": 162,
+          "text": "Run `check_no_solicit_employees` to identify hiring restrictions.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2385782,
+      "completion_tokens": 408580,
+      "total_tokens": 2794362
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "liability_and_indemnity",
+    "skill_md_chars": 8867,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 22,
+      "unique_references": 3,
+      "sample_refs": [
+        "source",
+        "evidence",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 4,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Cap on Liability",
+        "Uncapped Liability",
+        "Liquidated Damages",
+        "Warranty Duration"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 13,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 13,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 82,
+          "text": "**Input Ingestion**: Receive the full contract text.",
+          "source_grounded": false
+        },
+        {
+          "line": 83,
+          "text": "**Liability Cap Analysis**:",
+          "source_grounded": false
+        },
+        {
+          "line": 84,
+          "text": "Run `check_cap_on_liability`, `check_liability_cap`, and `check_liability_caps` to establish the baseline financial limit.",
+          "source_grounded": false
+        },
+        {
+          "line": 85,
+          "text": "Run `check_cap_on_liability_waiver_punitive` to check for exclusions of punitive damages.",
+          "source_grounded": false
+        },
+        {
+          "line": 86,
+          "text": "Run `check_time_limitation_for_claims` and `check_cap_on_liability_time_limitation` to determine temporal limits on bringing claims.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.6,
+      "covered": [
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2303608,
+      "completion_tokens": 381054,
+      "total_tokens": 2684662
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "assignment_and_control",
+    "skill_md_chars": 12623,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 30,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "CONTRACT",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 2,
+      "safety_keywords": [
+        "boundary",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Anti-Assignment",
+        "Change of Control"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 16,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 16,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 120,
+          "text": "**Initial Scan**: Run `check_change_of_control` to determine if the contract contains any Change of Control provisions. If `found` is false, proceed to step 4.",
+          "source_grounded": false
+        },
+        {
+          "line": 121,
+          "text": "**Termination Analysis**:",
+          "source_grounded": false
+        },
+        {
+          "line": 122,
+          "text": "Run `check_change_of_control_termination_rights` to identify discretionary termination rights.",
+          "source_grounded": false
+        },
+        {
+          "line": 123,
+          "text": "Run `check_change_of_control_termination` to identify automatic termination clauses.",
+          "source_grounded": false
+        },
+        {
+          "line": 124,
+          "text": "**Conditions & Consequences**:",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "unsupported_scope",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": false,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2291117,
+      "completion_tokens": 195021,
+      "total_tokens": 2486138
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "revenue_and_commercial_terms",
+    "skill_md_chars": 7668,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 18,
+      "unique_references": 4,
+      "sample_refs": [
+        "source",
+        "evidence",
+        "Contract",
+        "contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 3,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Revenue/Profit Sharing",
+        "Price Restrictions",
+        "Minimum Commitment",
+        "Volume Restriction"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 12,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 12,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 54,
+          "text": "**Analyze Contract Type**:",
+          "source_grounded": false
+        },
+        {
+          "line": 55,
+          "text": "Determine if the contract is a general commercial agreement (License, Distribution, Joint Venture) or a specialized financial service agreement (Servicing Agreement, ABS).",
+          "source_grounded": false
+        },
+        {
+          "line": 58,
+          "text": "**For General Agreements**: Use `check_revenue_profit_sharing` to identify royalties, commissions, and profit splits.",
+          "source_grounded": false
+        },
+        {
+          "line": 59,
+          "text": "**For Servicing/Financial Agreements**:",
+          "source_grounded": false
+        },
+        {
+          "line": 60,
+          "text": "First, use `check_servicing_fee_structure` to identify base and supplemental fees.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.4,
+      "covered": [
+        "missing_input",
+        "needs_human_review"
+      ],
+      "missing": [
+        "evidence_missing",
+        "unsupported_scope",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": false,
+        "needs_human_review": true,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2297421,
+      "completion_tokens": 293065,
+      "total_tokens": 2590486
+    }
+  },
+  {
+    "method": "document_tool_maker",
+    "case_id": "operational_rights",
+    "skill_md_chars": 13185,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "overview",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "covered categories"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 35,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "CONTRACT",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 3,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "missing_input"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "IP Ownership Assignment",
+        "Joint IP Ownership",
+        "Covenant Not to Sue",
+        "Rofr/Rofo/Rofn",
+        "Third Party Beneficiary"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 13,
+      "source_grounded_rules": 0,
+      "unsupported_rules": 13,
+      "source_grounded_rule_rate": 0.0,
+      "unsupported_rule_rate": 1.0,
+      "sample_unsupported_rules": [
+        {
+          "line": 116,
+          "text": "**Analyze Contract Type:** Determine if the contract is a Joint Venture, License, Distribution, or Service agreement to prioritize relevant tools.",
+          "source_grounded": false
+        },
+        {
+          "line": 118,
+          "text": "Run `check_joint_ip_ownership` to see if IP is shared.",
+          "source_grounded": false
+        },
+        {
+          "line": 119,
+          "text": "*Note: The current tool set does not include a specific \"IP Assignment\" tool. If IP assignment is critical, note this as a missing input or rely on general text analysis if available in future iterations.*",
+          "source_grounded": false
+        },
+        {
+          "line": 120,
+          "text": "**Check Covenants Not to Sue:**",
+          "source_grounded": false
+        },
+        {
+          "line": 121,
+          "text": "Run `check_covenant_not_to_sue` for general waivers.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 0.2,
+      "covered": [
+        "missing_input"
+      ],
+      "missing": [
+        "evidence_missing",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "requirements": {
+        "evidence_missing": false,
+        "missing_input": true,
+        "unsupported_scope": false,
+        "needs_human_review": false,
+        "external_output_restriction": false
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2350299,
+      "completion_tokens": 322977,
+      "total_tokens": 2673276
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "contract_basic_info",
+    "skill_md_chars": 5797,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 68,
+      "unique_references": 52,
+      "sample_refs": [
+        "source",
+        "contract",
+        "[KA-0058]",
+        "[RB-003]",
+        "[KA-0120]",
+        "[KA-0029]",
+        "[SR-003]",
+        "[RB-002]",
+        "[KA-0009]",
+        "[KA-0017]"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 5,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Document Name",
+        "Parties",
+        "Agreement Date",
+        "Effective Date",
+        "Expiration Date"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 38,
+      "source_grounded_rules": 32,
+      "unsupported_rules": 6,
+      "source_grounded_rule_rate": 0.8421,
+      "unsupported_rule_rate": 0.1579,
+      "sample_unsupported_rules": [
+        {
+          "line": 2,
+          "text": "Document Name (30 evidence atoms)",
+          "source_grounded": false
+        },
+        {
+          "line": 3,
+          "text": "Parties (30 evidence atoms)",
+          "source_grounded": false
+        },
+        {
+          "line": 4,
+          "text": "Agreement Date (30 evidence atoms)",
+          "source_grounded": false
+        },
+        {
+          "line": 5,
+          "text": "Effective Date (30 evidence atoms)",
+          "source_grounded": false
+        },
+        {
+          "line": 6,
+          "text": "Expiration Date (30 evidence atoms)",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2272371,
+      "completion_tokens": 206484,
+      "total_tokens": 2478855
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "term_and_termination",
+    "skill_md_chars": 7509,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 48,
+      "unique_references": 30,
+      "sample_refs": [
+        "source",
+        "contract",
+        "[KA-0171]",
+        "[RB-003]",
+        "[SR-003]",
+        "[RB-002]",
+        "[RB-001]",
+        "[RB-004]",
+        "[KA-0327]",
+        "[SR-004]"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 6,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Renewal Term",
+        "Notice Period to Terminate Renewal",
+        "Termination for Convenience"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 42,
+      "source_grounded_rules": 33,
+      "unsupported_rules": 9,
+      "source_grounded_rule_rate": 0.7857,
+      "unsupported_rule_rate": 0.2143,
+      "sample_unsupported_rules": [
+        {
+          "line": 8,
+          "text": "Evidence-Based Review Rules",
+          "source_grounded": false
+        },
+        {
+          "line": 17,
+          "text": "2. Notice Period to Terminate Renewal",
+          "source_grounded": false
+        },
+        {
+          "line": 18,
+          "text": "**Determine Required Notice Window**: Identify the specific timeframe required to prevent automatic renewal. Common periods include:",
+          "source_grounded": false
+        },
+        {
+          "line": 30,
+          "text": "3. Termination for Convenience",
+          "source_grounded": false
+        },
+        {
+          "line": 31,
+          "text": "**Identify Existence of Convenience Clause**: Look for explicit language allowing termination \"without cause,\" \"for any reason,\" or \"in their sole discretion.\"",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2283274,
+      "completion_tokens": 81829,
+      "total_tokens": 2365103
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "legal_governance",
+    "skill_md_chars": 6800,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 38,
+      "unique_references": 17,
+      "sample_refs": [
+        "[SR-004]",
+        "[RB-006]",
+        "source",
+        "[RB-003]",
+        "[SR-003]",
+        "contract",
+        "[RB-002]",
+        "Evidence",
+        "[RB-005]",
+        "[RB-001]"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 7,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Governing Law",
+        "Audit Rights",
+        "Insurance"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 33,
+      "source_grounded_rules": 32,
+      "unsupported_rules": 1,
+      "source_grounded_rule_rate": 0.9697,
+      "unsupported_rule_rate": 0.0303,
+      "sample_unsupported_rules": [
+        {
+          "line": 8,
+          "text": "Evidence-Based Review Rules",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2280119,
+      "completion_tokens": 111441,
+      "total_tokens": 2391560
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "ip_and_license",
+    "skill_md_chars": 9382,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 20,
+      "unique_references": 7,
+      "sample_refs": [
+        "source",
+        "contract",
+        "[KA-0295]",
+        "[KA-0345]",
+        "Source",
+        "Evidence",
+        "evidence"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 2,
+      "safety_keywords": [
+        "limitation",
+        "do not"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "License Grant",
+        "Non-Transferable License",
+        "Affiliate License-Licensor",
+        "Affiliate License-Licensee",
+        "Unlimited/All-You-Can-Eat-License",
+        "Irrevocable or Perpetual License",
+        "Source Code Escrow",
+        "Post-Termination Services"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 66,
+      "source_grounded_rules": 46,
+      "unsupported_rules": 20,
+      "source_grounded_rule_rate": 0.697,
+      "unsupported_rule_rate": 0.303,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**License Grant**: 292 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Non-Transferable License**: 254 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 8,
+          "text": "**Affiliate License-Licensor**: 207 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 9,
+          "text": "**Affiliate License-Licensee**: 227 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Unlimited/All-You-Can-Eat-License**: 199 KAs",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2365254,
+      "completion_tokens": 296517,
+      "total_tokens": 2661771
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "competition_restrictions",
+    "skill_md_chars": 9200,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 40,
+      "unique_references": 20,
+      "sample_refs": [
+        "source",
+        "contract",
+        "[RB-003]",
+        "[SR-003]",
+        "[RB-002]",
+        "[RB-001]",
+        "[RB-004]",
+        "[KA-0010]",
+        "[SR-004]",
+        "[KA-0130]"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 6,
+      "safety_keywords": [
+        "boundary",
+        "limitation",
+        "do not",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Most Favored Nation",
+        "Non-Compete",
+        "Exclusivity",
+        "No-Solicit of Customers",
+        "Competitive Restriction Exception",
+        "No-Solicit of Employees",
+        "Non-Disparagement"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 55,
+      "source_grounded_rules": 44,
+      "unsupported_rules": 11,
+      "source_grounded_rule_rate": 0.8,
+      "unsupported_rule_rate": 0.2,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Competitive Restriction Exception**: 181 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Non-Disparagement**: 57 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**No-Solicit of Customers**: 48 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 11,
+          "text": "**Most Favored Nation**: 31 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 12,
+          "text": "**No-Solicit of Employees**: 45 KAs",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2368378,
+      "completion_tokens": 125203,
+      "total_tokens": 2493581
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "liability_and_indemnity",
+    "skill_md_chars": 8972,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 20,
+      "unique_references": 5,
+      "sample_refs": [
+        "source",
+        "contract",
+        "Evidence",
+        "evidence",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 1,
+      "safety_keywords": [
+        "limitation"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Cap on Liability",
+        "Uncapped Liability",
+        "Liquidated Damages",
+        "Warranty Duration"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 34,
+      "source_grounded_rules": 32,
+      "unsupported_rules": 2,
+      "source_grounded_rule_rate": 0.9412,
+      "unsupported_rule_rate": 0.0588,
+      "sample_unsupported_rules": [
+        {
+          "line": 11,
+          "text": "Evidence-Based Review Rules",
+          "source_grounded": false
+        },
+        {
+          "line": 46,
+          "text": "[ ] Does the contract contain a general liability cap?",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2308632,
+      "completion_tokens": 154501,
+      "total_tokens": 2463133
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "assignment_and_control",
+    "skill_md_chars": 9591,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 46,
+      "unique_references": 28,
+      "sample_refs": [
+        "source",
+        "contract",
+        "[RB-003]",
+        "[SR-003]",
+        "CONTRACT",
+        "[RB-002]",
+        "[KA-0009]",
+        "[RB-001]",
+        "[RB-004]",
+        "[KA-0083]"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 6,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "only use",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Anti-Assignment",
+        "Change of Control"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 33,
+      "source_grounded_rules": 26,
+      "unsupported_rules": 7,
+      "source_grounded_rule_rate": 0.7879,
+      "unsupported_rule_rate": 0.2121,
+      "sample_unsupported_rules": [
+        {
+          "line": 7,
+          "text": "Evidence-Based Review Rules",
+          "source_grounded": false
+        },
+        {
+          "line": 12,
+          "text": "**Termination Rights**: Look for clauses granting either party or a specific party the right to terminate the agreement upon a Change of Control.",
+          "source_grounded": false
+        },
+        {
+          "line": 16,
+          "text": "**Assignment Exceptions**: Determine if Change of Control events are exempt from general anti-assignment restrictions.",
+          "source_grounded": false
+        },
+        {
+          "line": 20,
+          "text": "**Definition of Change of Control**: Verify how the event is defined.",
+          "source_grounded": false
+        },
+        {
+          "line": 27,
+          "text": "**General Prohibition**: Identify clauses that broadly prohibit assignment without prior written consent.",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2276219,
+      "completion_tokens": 94874,
+      "total_tokens": 2371093
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "revenue_and_commercial_terms",
+    "skill_md_chars": 15353,
+    "structure": {
+      "completeness": 0.5,
+      "found": [
+        "covered categories",
+        "review"
+      ],
+      "missing": [
+        "overview",
+        "output format"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 214,
+      "unique_references": 102,
+      "sample_refs": [
+        "[KA-0338]",
+        "[KA-0361]",
+        "[KA-0009]",
+        "[KA-0162]",
+        "[KA-0852]",
+        "[KA-0581]",
+        "[KA-0164]",
+        "[KA-0407]",
+        "[KA-0328]",
+        "[KA-0588]"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 2,
+      "safety_keywords": [
+        "constraint",
+        "do not"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "Revenue/Profit Sharing",
+        "Price Restrictions",
+        "Minimum Commitment",
+        "Volume Restriction"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 129,
+      "source_grounded_rules": 102,
+      "unsupported_rules": 27,
+      "source_grounded_rule_rate": 0.7907,
+      "unsupported_rule_rate": 0.2093,
+      "sample_unsupported_rules": [
+        {
+          "line": 4,
+          "text": "**Revenue/Profit Sharing**: 30 Evidence Atoms",
+          "source_grounded": false
+        },
+        {
+          "line": 5,
+          "text": "**Price Restrictions**: 30 Evidence Atoms",
+          "source_grounded": false
+        },
+        {
+          "line": 6,
+          "text": "**Minimum Commitment**: 30 Evidence Atoms",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**Volume Restriction**: 30 Evidence Atoms",
+          "source_grounded": false
+        },
+        {
+          "line": 9,
+          "text": "Evidence-Based Review Rules",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2299483,
+      "completion_tokens": 154542,
+      "total_tokens": 2454025
+    }
+  },
+  {
+    "method": "evoskill_compiler",
+    "case_id": "operational_rights",
+    "skill_md_chars": 7090,
+    "structure": {
+      "completeness": 0.75,
+      "found": [
+        "covered categories",
+        "review",
+        "output format"
+      ],
+      "missing": [
+        "overview"
+      ]
+    },
+    "evidence": {
+      "has_evidence": true,
+      "total_references": 34,
+      "unique_references": 17,
+      "sample_refs": [
+        "[SR-004]",
+        "[RB-006]",
+        "source",
+        "[RB-003]",
+        "[SR-003]",
+        "contract",
+        "[RB-002]",
+        "Evidence",
+        "[RB-005]",
+        "Contract"
+      ]
+    },
+    "safety": {
+      "safety_keywords_found": 5,
+      "safety_keywords": [
+        "boundary",
+        "do not",
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope"
+      ],
+      "behavior_coverage": 1.0
+    },
+    "categories": {
+      "coverage": 1.0,
+      "found": [
+        "IP Ownership Assignment",
+        "Joint IP Ownership",
+        "Covenant Not to Sue",
+        "Rofr/Rofo/Rofn",
+        "Third Party Beneficiary"
+      ],
+      "missing": []
+    },
+    "rule_grounding": {
+      "total_review_rules": 35,
+      "source_grounded_rules": 26,
+      "unsupported_rules": 9,
+      "source_grounded_rule_rate": 0.7429,
+      "unsupported_rule_rate": 0.2571,
+      "sample_unsupported_rules": [
+        {
+          "line": 6,
+          "text": "**Rofr/Rofo/Rofn**: 123 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 7,
+          "text": "**IP Ownership Assignment**: 251 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 8,
+          "text": "**Joint IP Ownership**: 125 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 9,
+          "text": "**Covenant Not to Sue**: 119 KAs",
+          "source_grounded": false
+        },
+        {
+          "line": 10,
+          "text": "**Third Party Beneficiary**: 163 KAs",
+          "source_grounded": false
+        }
+      ]
+    },
+    "boundary_policy": {
+      "coverage": 1.0,
+      "covered": [
+        "evidence_missing",
+        "missing_input",
+        "unsupported_scope",
+        "needs_human_review",
+        "external_output_restriction"
+      ],
+      "missing": [],
+      "requirements": {
+        "evidence_missing": true,
+        "missing_input": true,
+        "unsupported_scope": true,
+        "needs_human_review": true,
+        "external_output_restriction": true
+      }
+    },
+    "usage": {
+      "prompt_tokens": 2324781,
+      "completion_tokens": 126970,
+      "total_tokens": 2451751
+    }
+  }
+]

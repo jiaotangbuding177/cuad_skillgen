@@ -46,6 +46,77 @@ class LLMUsage:
         return f"LLMUsage(calls={self.calls}, tokens={self.total_tokens}, errors={self.errors})"
 
 
+def _repair_truncated_json(text: str):
+    """Attempt to repair JSON that was truncated mid-generation (e.g. due to max_tokens cutoff).
+
+    Tries progressively shorter truncations and closing of unclosed structures.
+    Returns the parsed dict, or None if repair fails.
+    """
+    import re as _re
+
+    text = text.strip()
+
+    # Strategy 1: try closing unclosed string + object by appending "}"
+    # Find the last unclosed quote and close it, then close any unclosed braces
+    candidates = []
+
+    # Try simple append of quote + closing braces
+    brace_count = 0
+    for ch in text:
+        if ch == "{":
+            brace_count += 1
+        elif ch == "}":
+            brace_count -= 1
+    bracket_count = 0
+    for ch in text:
+        if ch == "[":
+            bracket_count += 1
+        elif ch == "]":
+            bracket_count -= 1
+
+    if brace_count > 0 or bracket_count > 0:
+        suffix = ""
+        # If the last non-whitespace char is inside a string (odd number of unescaped quotes in the truncated portion),
+        # close the string first
+        in_string = False
+        escaped = False
+        for ch in text:
+            if escaped:
+                escaped = False
+                continue
+            if ch == "\\":
+                escaped = True
+                continue
+            if ch == '"':
+                in_string = not in_string
+        if in_string:
+            suffix += '"'
+            # Now we need to close the value: ...":"value"  → need , then close braces
+        suffix += "]" * bracket_count
+        suffix += "}" * brace_count
+        candidates.append(text + suffix)
+
+    # Strategy 2: find the last complete key-value pair, truncate there, close object
+    # Remove trailing incomplete key/value
+    last_comma = text.rfind(',"')
+    last_colon = text.rfind('":')
+    if last_comma > 0:
+        truncated = text[:last_comma] + "}"
+        # Ensure braces are balanced
+        if truncated.count("{") > truncated.count("}"):
+            truncated += "}" * (truncated.count("{") - truncated.count("}"))
+        candidates.append(truncated)
+
+    # Try each candidate
+    for candidate in candidates:
+        try:
+            return json.loads(candidate)
+        except (json.JSONDecodeError, ValueError):
+            continue
+
+    return None
+
+
 class LLMClient:
     """Unified LLM client with retry and logging."""
 
@@ -275,7 +346,12 @@ class LLMClient:
                 json_str = text.split("```")[1].split("```")[0].strip()
                 result = json.loads(json_str)
             else:
-                raise
+                # Try to repair truncated JSON (e.g. due to max_tokens cutoff)
+                repaired = _repair_truncated_json(text)
+                if repaired is not None:
+                    result = repaired
+                else:
+                    raise
 
         return result, usage
 

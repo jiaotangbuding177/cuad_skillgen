@@ -1,0 +1,177 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "Change of Control",
+          "found": true,
+          "summary": "Either party has the right to terminate the agreement without liability if a majority of the equity securities of the other party are acquired by another company, subject to specific exceptions for i-Escrow.",
+          "key_terms": [
+            "majority of the equity securities",
+            "acquired by another company",
+            "terminate this Agreement",
+            "without liability",
+            "thirty (30) days written notice"
+          ],
+          "source_paragraph": "8.3 TERMINATION FOR CHANGE IN COMPANY STRUCTURE. If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party."
+        },
+        {
+          "category": "Anti-Assignment",
+          "found": true,
+          "summary": "The agreement explicitly states that all rights granted are not transferable or assignable, although it allows for the use of third-party web hosts and specific sublicenses by 2TheMart.",
+          "key_terms": [
+            "not sublicenseable",
+            "transferable",
+            "assignable",
+            "third party web host",
+            "sublicenses"
+          ],
+          "source_paragraph": "6.5 LIMITS ON SUBLICENSING. All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable. Notwithstanding the foregoing, either party may use a third party web host, but all actions or failures to act of the web host that would be a breach of this Agreement, were the actions or failures to act taken by the applicable party, shall be deemed a breach of this Agreement. In addition, 2TheMart may grant sublicenses to companies that 2TheMart has a business relationship with to the extent that 2TheMart Content is visible from such company's web-site through a link or other means."
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Change of Control",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Anti-Assignment",
+          "found": true,
+          "summary": "The Provider is prohibited from assigning, delegating, or transferring the agreement or any rights and obligations without the prior written approval of the Recipient.",
+          "key_terms": [
+            "assign",
+            "delegate",
+            "transfer",
+            "prior written approval",
+            "successors",
+            "permitted assigns"
+          ],
+          "source_paragraph": "6.2 Succession and Assignment. This Agreement shall be binding upon and inure to the benefit of the Parties named herein and their respective successors and permitted assigns. Provider may not assign, delegate or otherwise transfer either this Agreement or any of its rights, interests, or obligations hereunder without the prior written approval of Recipient."
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Change of Control",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Anti-Assignment",
+          "found": true,
+          "summary": "The contract prohibits a Joint Venturer from selling, transferring, or assigning their interest in the Joint Venture without the consent of the other Joint Venturer.",
+          "key_terms": [
+            "sell",
+            "transfer",
+            "consent",
+            "assignee"
+          ],
+          "source_paragraph": "12.  Sale or Purchase of Interest of Joint Venturer Prohibited. No Joint Venturer shall be authorized or empowered to mortgage, hypothecate, pledge, sell, or transfer, an interest in the Joint Venture, nor confer on any successor or assignee the right to become a Joint Venturer without the consent of the other Joint Venturer."
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "Change of Control",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Anti-Assignment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Change of Control",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Anti-Assignment",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "Change of Control": {
+      "found_count": 100,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Automatic Termination: In regulated industries (e.g., investment funds under the 1940 Act), the agreement may automatically terminate upon an assignment defined as a change of control.",
+        "Competitor Restriction: Specific provisions often restrict assignments to direct competitors or allow termination if the acquiring entity is a competitor.",
+        "Financial consequences such as buy-out payments, liquidated damages, or one-time payments triggered by the event.",
+        "Definition via Assignment: Change of Control is frequently defined or triggered by the assignment of the agreement to a successor in a merger, acquisition, or sale of substantially all assets.",
+        "Termination Right: Many contracts grant one or both parties the right to terminate the agreement if a Change of Control occurs, often requiring written notice."
+      ],
+      "example_extractions": [
+        "Either party has the right to terminate the agreement without liability if a majority of the equity securities of the other party are acquired by another company, subject to specific exceptions for i-Escrow.",
+        "The contract allows for assignment or transfer in connection with a change of control, such as a merger or sale of substantially all assets, provided that notice is given to the other party, though prior consent is not required for these specific events.",
+        "The agreement automatically terminates in the event of its \"assignment\" (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act).",
+        "The Consultant has the right to terminate the agreement and receive a specific termination payment if a Change of Control occurs within six months of its effective date.",
+        "The contract defines Change of Control and grants the non-affected party the right to terminate the agreement with six months' advance written notice if a Change of Control occurs.",
+        "Lucid has the right to terminate the agreement if there is any change of control, ownership, or management of the Distributor."
+      ],
+      "variations": [
+        "Some contracts explicitly prohibit assignment even in the event of a change of control (e.g., non-assignable licenses).",
+        "Certain agreements define Change of Control narrowly, such as requiring a change in management or specific voting thresholds (e.g., 20% or 50%).",
+        "Some contracts treat bankruptcy or operation of law as a Change of Control event triggering breach or termination rights.",
+        "In some cases, Change of Control is defined by reference to another agreement (e.g., Asset Purchase Agreement)."
+      ]
+    },
+    "Anti-Assignment": {
+      "found_count": 193,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Unauthorized assignments are typically declared null and void.",
+        "Null and Void: Unauthorized assignments are typically declared null and void.",
+        "Prohibition of assignment without prior written consent of the other party.",
+        "Prior Written Consent: The most common pattern is a prohibition on assignment without the prior written consent of the other party.",
+        "Unreasonably Withheld: Consent for assignment is often stipulated as not to be unreasonably withheld, conditioned, or delayed."
+      ],
+      "example_extractions": [
+        "The Provider is prohibited from assigning, delegating, or transferring the agreement or any rights and obligations without the prior written approval of the Recipient.",
+        "Neither party may assign the agreement without the prior written consent of the other, although Galaxy is permitted to assign the agreement to an affiliate or sell accounts receivable to a financing institution.",
+        "The contract explicitly prohibits either party from assigning its rights or delegating its obligations to a third party, rendering any such assignment null and void.",
+        "The agreement states that it is assignable only upon the written consent of all parties involved.",
+        "The contract prohibits assignment without the other party's prior written consent, except for assignments to affiliates, purchasers of substantially all assets, or successors in mergers.",
+        "Neither party may assign the agreement without the prior written consent of the other, except in cases of merger or succession to substantially all assets where obligations are assumed."
+      ],
+      "variations": [
+        "Asymmetric Rights: Some contracts allow one party (e.g., the Licensor or Company) to assign freely while prohibiting the other party (e.g., Licensee or Contractor) from assigning.",
+        "Automatic Termination: In some cases, assignment triggers automatic termination rather than just being void (common in investment management agreements).",
+        "Specific Prohibitions: Some contracts prohibit assignment of specific rights (e.g., licenses) while allowing assignment of the agreement itself, or vice versa.",
+        "No Exceptions: A minority of contracts prohibit assignment entirely without any exceptions for affiliates or successors.",
+        "Delegation Distinction: Some contracts distinguish between assignment of rights and delegation of duties, allowing one but not the other."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md: Assignment and Change of Control Review\n\n## Covered Categories\n\n### 1. Change of Control\n*   **Discovery Frequency:** 32.7% of contracts (100/306).\n*   **Common Patterns:**\n    *   **Termination Rights:** Grants one or both parties the right to terminate the agreement upon a Change of Control (CoC), often requiring written notice.\n    *   **Automatic Termination:** In regulated industries (e.g., Investment Funds under the 1940 Act), the agreement may automatically terminate upon an assignment defined as a CoC.\n    *   **Financial Consequences:** Triggers buy-out payments, liquidated damages, or one-time payments.\n    *   **Definition via Assignment:** CoC is frequently defined or triggered by the assignment of the agreement to a successor in a merger, acquisition, or sale of substantially all assets.\n    *   **Competitor Restrictions:** Specific provisions restrict assignments to direct competitors or allow termination if the acquiring entity is a competitor.\n\n### 2. Anti-Assignment\n*   **Discovery Frequency:** 63.1% of contracts (193/306).\n*   **Common Patterns:**\n    *   **Prior Written Consent:** Prohibition on assignment without the prior written consent of the other party.\n    *   **Unreasonably Withheld:** Consent for assignment is often stipulated as not to be unreasonably withheld, conditioned, or delayed.\n    *   **Null and Void:** Unauthorized assignments are typically declared null and void.\n    *   **Exceptions for Successors:** Allowances for assignment to affiliates, purchasers of substantially all assets, or successors in mergers, provided obligations are assumed.\n\n## Common Patterns\n\n### Change of Control\n1.  **Termination Right with Notice:**\n    *   *Description:* The non-affected party has the right to terminate the agreement if a Change of Control occurs, usually requiring a specific notice period (e.g., 6 months).\n    *   *Example Phrasing:* \"The contract defines Change of Control and grants the non-affected party the right to terminate the agreement with six months' advance written notice if a Change of Control occurs.\"\n2.  **Automatic Termination (Regulated Industries):**\n    *   *Description:* The agreement terminates automatically upon an assignment defined as a change of control, common in investment funds.\n    *   *Example Phrasing:* \"The agreement automatically terminates in the event of its 'assignment' (as such term is defined for purposes of Section 15(a) (4) of the Investment Fund Act).\"\n3.  **Competitor/Management Restriction:**\n    *   *Description:* Termination rights are triggered specifically if the new controlling entity is a competitor or if management changes significantly.\n    *   *Example Phrasing:* \"Lucid has the right to terminate the agreement if there is any change of control, ownership, or management of the Distributor.\"\n\n### Anti-Assignment\n1.  **Consent Required (Not Unreasonably Withheld):**\n    *   *Description:* Assignment is prohibited unless the other party provides prior written consent, which cannot be unreasonably withheld.\n    *   *Example Phrasing:* \"Neither party may assign the agreement without the prior written consent of the other, except in cases of merger or succession to substantially all assets where obligations are assumed.\"\n2.  **Null and Void Clause:**\n    *   *Description:* Any assignment made without proper consent is explicitly declared null and void.\n    *   *Example Phrasing:* \"The contract explicitly prohibits either party from assigning its rights or delegating its obligations to a third party, rendering any such assignment null and void.\"\n3.  **Affiliate/Successor Exceptions:**\n    *   *Description:* Assignment is allowed to affiliates or in connection with a merger/sale of assets without consent, provided notice is given.\n    *   *Example Phrasing:* \"The contract allows for assignment or transfer in connection with a change of control, such as a merger or sale of substantially all assets, provided that notice is given to the other party, though prior consent is not required for these specific events.\"\n\n## Review Checklist\n\n### Change of Control\n- [ ] **Definition Check:** Is \"Change of Control\" explicitly defined? Does it include mergers, stock sales, asset sales, or changes in management/voting control?\n- [ ] **Termination Rights:** Does either party have the right to terminate the agreement upon a Change of Control?\n- [ ] **Notice Requirements:** If termination is allowed, what is the required notice period (e.g., 6 months)?\n- [ ] **Automatic Termination:** Does the agreement automatically terminate upon a Change of Control (common in regulated sectors)?\n- [ ] **Financial Implications:** Are there buy-out payments, liquidated damages, or other financial consequences triggered by a Change of Control?\n- [ ] **Competitor Restrictions:** Are there restrictions on assigning to or being acquired by a direct competitor?\n\n### Anti-Assignment\n- [ ] **General Prohibition:** Is assignment generally prohibited without consent?\n- [ ] **Consent Standard:** Is consent required? If so, is it subject to a \"not unreasonably withheld\" standard?\n- [ ] **Exceptions:** Are there exceptions for assignments to affiliates, successors in mergers, or purchasers of substantially all assets?\n- [ ] **Consequences of Breach:** Is an unauthorized assignment declared \"null and void\" or does it trigger automatic termination?\n- [ ] **Asymmetry:** Are assignment rights asymmetric (e.g., one party can assign freely while the other cannot)?\n- [ ] **Delegation vs. Assignment:** Does the contract distinguish between assigning rights and delegating duties?\n\n## Evidence Extraction Rules\n\n1.  **Locate Clauses:** Search for keywords: \"Assignment,\" \"Change of Control,\" \"Merger,\" \"Acquisition,\" \"Successor,\" \"Transfer,\" \"Delegation,\" \"Consent,\" \"Null and Void.\"\n2.  **Extract Definitions:** Extract the specific definition of \"Change of Control\" if present. Note if it references another agreement (e.g., Asset Purchase Agreement).\n3.  **Identify Triggers:** Identify what events trigger the clause (e.g., sale of >50% equity, change in management, merger).\n4.  **Capture Rights/Remedies:**\n    *   For **Change of Control**: Extract termination rights, notice periods, and financial penalties.\n    *   For **Anti-Assignment**: Extract consent requirements, exceptions (affiliates, mergers), and consequences of unauthorized assignment (void vs. termination).\n5.  **Note Variations:** Flag if the clause is asymmetric (one-sided) or if it prohibits assignment entirely without exceptions.\n6.  **Contextualize:** Note if the contract is in a regulated industry (e.g., Investment Funds) where automatic termination is common.\n\n## Output Format\n\n```json\n{\n  \"status\": \"success|failure\",\n  \"answer\": {\n    \"change_of_control\": {\n      \"defined\": true|false,\n      \"termination_right\": {\n        \"party\": \"Party A|Party B|Both|Neither\",\n        \"notice_period\": \"string|null\",\n        \"automatic_termination\": true|false\n      },\n      \"financial_consequences\": \"string|null\",\n      \"competitor_restriction\": true|false,\n      \"definition_details\": \"string|null\"\n    },\n    \"anti_assignment\": {\n      \"consent_required\": true|false,\n      \"consent_standard\": \"unreasonably withheld|absolute|null\",\n      \"exceptions\": [\"affiliate\", \"merger\", \"asset_sale\", \"none\"],\n      \"consequence_of_breach\": \"null_and_void|automatic_termination|breach|null\",\n      \"asymmetric\": true|false,\n      \"delegation_allowed\": true|false|null\n    }\n  },\n  \"evidence_unit_ids\": [\"string\", \"string\"],\n  \"source_contract_ids\": [\"string\"],\n  \"missing_inputs\": [\"string\"],\n  \"human_review_required\": true|false\n}\n```\n\n## Boundary Rules\n\n1.  **Scope Limitation:** This skill only reviews clauses related to **Assignment** and **Change of Control**. Do not review general termination clauses unrelated to assignment or control changes.\n2.  **Definition Dependency:** If \"Change of Control\" is defined by reference to another agreement, note this but do not attempt to extract the definition from the external agreement unless it is included in the input.\n3.  **Regulatory Context:** Be aware that in regulated industries (e.g., Investment Funds), \"Assignment\" may be legally defined as a Change of Control, triggering automatic termination. Do not assume standard commercial rules apply.\n4.  **No Legal Advice:** The output is for informational purposes only. Do not provide legal advice on the enforceability of clauses.\n5.  **Ambiguity Handling:** If the contract is silent on assignment or change of control, report `null` or `false` as appropriate, and flag for human review if the absence is critical to the business case.\n6.  **Distinction:** Clearly distinguish between \"Assignment\" (transfer of rights/obligations) and \"Change of Control\" (change in ownership/management). They may be linked but are distinct concepts."
+}

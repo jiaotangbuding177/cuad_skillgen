@@ -1,0 +1,191 @@
+{
+  "step1_kas_sample": [
+    {
+      "ka_id": "KA-0001",
+      "category": "Uncapped Liability",
+      "text": "EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES.",
+      "span_start": 20190,
+      "span_end": 20490,
+      "interpretation": "The contract explicitly excludes the limitation on special, incidental, or consequential damages for breaches of Section 11 (Confidential Information), implying that liability for such breaches is uncapped.",
+      "confidence": 0.95,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0002",
+      "category": "Cap on Liability",
+      "text": "EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF THE PARTIES ARE AWARE OF THE POSSIBILITY OF SUCH DAMAGES.",
+      "span_start": 20190,
+      "span_end": 20490,
+      "interpretation": "The contract caps liability by excluding special, incidental, and consequential damages for all breaches except those related to Confidential Information.",
+      "confidence": 0.95,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0003",
+      "category": "Liquidated Damages",
+      "text": "This Agreement contains the entire understanding of the parties hereto with respect to the transactions and matters contemplated hereby, supersedes all previous Agreements between i-Escrow and 2TheMart concerning the subject matter (except for the Confidential Agreement Dated January 4 1999, which shall survive this Agreement).  No amendments or supplements to this Agreement will be effective for any purpose except by a written Agreement signed by the parties.",
+      "span_start": 26957,
+      "span_end": 27421,
+      "interpretation": "The contract does not contain any clauses specifying liquidated damages or termination fees; the entire agreement clause confirms no other terms exist.",
+      "confidence": 0.9,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0004",
+      "category": "Warranty Duration",
+      "text": "EACH PARTY PROVIDES ALL MATERIALS AND SERVICES TO THE OTHER PARTY \"AS IS.\"  EACH PARTY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY ANDFITNESS FOR A PARTICULAR PURPOSE.",
+      "span_start": 14561,
+      "span_end": 14852,
+      "interpretation": "The contract explicitly disclaims all warranties, including implied warranties of merchantability and fitness for a particular purpose, meaning there is no warranty duration.",
+      "confidence": 0.95,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0005",
+      "category": "Uncapped Liability",
+      "text": "Provider shall indemnify, defend, and hold harmless Recipient and its officers, directors, employees, agents, affiliates, successors, and permitted assigns (collectively, \"Indemnified Party\") against any and all losses, damages, liabilities, deficiencies, claims, actions, judgments, settlements, interest, awards, penalties, fines, costs, or expenses of whatever kind, including attorneys' fees, fees and the cost of enforcing any right to indemnification under this Agreement, and the cost of pursuing any insurance providers, incurred by Indemnified Party or awarded against Indemnified Party (collectively, \"Losses\"), relating to/arising out of or resulting from any claim of a third party or Recipient arising out of or occurring in connection with Provider's negligence, willful misconduct, or breach of this Agreement.",
+      "span_start": 17823,
+      "span_end": 18648,
+      "interpretation": "The contract provides for indemnification against 'any and all losses' without specifying a monetary cap or limitation on the amount of liability for negligence, willful misconduct, or breach.",
+      "confidence": 0.95,
+      "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0006",
+      "category": "Cap on Liability",
+      "text": "Provider shall indemnify, defend, and hold harmless Recipient and its officers, directors, employees, agents, affiliates, successors, and permitted assigns (collectively, \"Indemnified Party\") against any and all losses, damages, liabilities, deficiencies, claims, actions, judgments, settlements, interest, awards, penalties, fines, costs, or expenses of whatever kind, including attorneys' fees, fees and the cost of enforcing any right to indemnification under this Agreement, and the cost of pursuing any insurance providers, incurred by Indemnified Party or awarded against Indemnified Party (collectively, \"Losses\"), relating to/arising out of or resulting from any claim of a third party or Recipient arising out of or occurring in connection with Provider's negligence, willful misconduct, or breach of this Agreement.",
+      "span_start": 17823,
+      "span_end": 18648,
+      "interpretation": "The contract does not contain a specific monetary cap or time limitation on liability for breaches, as it uses the phrase 'any and all losses' without further restriction in the indemnification clause.",
+      "confidence": 0.95,
+      "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0007",
+      "category": "Liquidated Damages",
+      "text": "Each of the Recipient and the Provider may, in their sole discretion, terminate this Agreement in whole or in part, at any time without cause, and without liability except, in the case of the Recipient, for required payment for services rendered and reimbursement for authorized expenses incurred, by providing at least 90 (ninety) days' prior written notice to the other party (such date, the \"Services Termination Date\").",
+      "span_start": 9867,
+      "span_end": 10290,
+      "interpretation": "The contract specifies that termination without cause results in liability only for services rendered and authorized expenses, rather than a fixed liquidated damages fee or penalty.",
+      "confidence": 0.9,
+      "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0008",
+      "category": "Warranty Duration",
+      "text": "Provider represents, warrants and agrees that the Services shall be provided in good faith, in accordance with applicable law and in a manner generally consistent with the historical provision of the Services and with the same standard of care as historically provided.",
+      "span_start": 2164,
+      "span_end": 2433,
+      "interpretation": "The contract does not specify a fixed duration (e.g., number of months or years) for the warranty; it implies the warranty applies for the duration of the service provision under the agreement.",
+      "confidence": 0.8,
+      "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0009",
+      "category": "Uncapped Liability",
+      "text": "This limitation of liability will not apply for damages that result from the gross negligence or the willful misconduct of a Party.",
+      "span_start": 12073,
+      "span_end": 12204,
+      "interpretation": "The contract explicitly states that the liability cap does not apply to damages resulting from gross negligence or willful misconduct, meaning liability is uncapped for these specific breaches.",
+      "confidence": 0.95,
+      "source_contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_"
+    },
+    {
+      "ka_id": "KA-0010",
+      "category": "Cap on Liability",
+      "text": "aggregate damages for which ADMA shall be liable to Sanofi Pasteur hereunder, including without limitation costs of Source Plasma yield loss and/or rejected Batches, shall not exceed [***].",
+      "span_start": 11699,
+      "span_end": 11888,
+      "interpretation": "The contract establishes a monetary cap on the aggregate damages ADMA is liable for, although the specific amount is redacted.",
+      "confidence": 0.95,
+      "source_contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_"
+    }
+  ],
+  "step2_evidence_summary": {
+    "Uncapped Liability": 208,
+    "Cap on Liability": 225,
+    "Liquidated Damages": 198,
+    "Warranty Duration": 183
+  },
+  "step3_security_policy": {
+    "allowed_status": [
+      "answered",
+      "evidence_missing",
+      "missing_input",
+      "unsupported_scope",
+      "needs_human_review"
+    ],
+    "required_behaviors": [
+      {
+        "rule_id": "RB-001",
+        "text": "answer only using the target contract",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-002",
+        "text": "cite source-grounded evidence when answering",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-003",
+        "text": "return evidence_missing when no supporting clause exists",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-004",
+        "text": "return missing_input when contract_id or category is absent",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-005",
+        "text": "return unsupported_scope when the question is outside covered_categories",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-006",
+        "text": "route legal advice and high-risk interpretation to human review",
+        "enforcement": "hard"
+      }
+    ],
+    "safety_requirements": [
+      {
+        "rule_id": "SR-001",
+        "text": "do not cite non-target contracts",
+        "enforcement": "hard",
+        "check": "verify source_contract_ids == [target_contract_id]"
+      },
+      {
+        "rule_id": "SR-002",
+        "text": "do not fabricate clauses",
+        "enforcement": "hard",
+        "check": "verify evidence spans exist in target contract"
+      },
+      {
+        "rule_id": "SR-003",
+        "text": "do not provide legal advice",
+        "enforcement": "hard",
+        "check": "detect legal judgment language in answer"
+      },
+      {
+        "rule_id": "SR-004",
+        "text": "do not generate externally sendable legal opinions",
+        "enforcement": "hard",
+        "check": "detect formal document patterns"
+      }
+    ],
+    "boundary_rules": [
+      {
+        "covered_categories": [
+          "Cap on Liability",
+          "Uncapped Liability",
+          "Liquidated Damages",
+          "Warranty Duration"
+        ]
+      },
+      {
+        "domain": "contract_review"
+      }
+    ]
+  },
+  "step4_skill_md": "# SKILL.md: Contract Review - Liability, Indemnity, and Warranties\n\n## Covered Categories\nThis skill covers the following categories based on the provided Knowledge Atom (KA) evidence index:\n\n1.  **Uncapped Liability**: Evidence Atoms (KA-0678, KA-0754, KA-0758, KA-0776, KA-0801, KA-0001, KA-0005, KA-0009, KA-0014, KA-0017, KA-0021, KA-0022, KA-0027, KA-0031, KA-0035, KA-0039, KA-0043, KA-0051, KA-0052, KA-0056, KA-0064, KA-0073, KA-0077, KA-0091, KA-0095)\n2.  **Cap on Liability**: Evidence Atoms (KA-0100, KA-0679, KA-0704, KA-0755, KA-0759, KA-0777, KA-0802, KA-0803, KA-0798, KA-0015, KA-0018, KA-0187, KA-0200, KA-0338, KA-0361, KA-0362, KA-0363, KA-0368, KA-0475, KA-0525, KA-0541, KA-0553, KA-0675, KA-0712, KA-0751)\n3.  **Liquidated Damages**: Evidence Atoms (KA-0085, KA-0656, KA-0705, KA-0756, KA-0760, KA-0804, KA-0791, KA-0118, KA-0130, KA-0270, KA-0347, KA-0669, KA-0670, KA-0671, KA-0012, KA-0013, KA-0016, KA-0025, KA-0041, KA-0045, KA-0049, KA-0054, KA-0058, KA-0062, KA-0067)\n4.  **Warranty Duration**: Evidence Atoms (KA-0105, KA-0106, KA-0562, KA-0595, KA-0681, KA-0757, KA-0761, KA-0753, KA-0800, KA-0198, KA-0224, KA-0370, KA-0486, KA-0555, KA-0556, KA-0677, KA-0788, KA-0004, KA-0020, KA-0034, KA-0046, KA-0050, KA-0120, KA-0140, KA-0154)\n\n## Evidence-Based Review Rules\n\n### 1. Uncapped Liability\nReview contracts to identify clauses that explicitly exclude specific breaches or damages from general liability caps, or that establish indemnification obligations without monetary limits.\n\n*   **Exceptions to Liability Caps**: Look for language stating that liability limitations \"shall not apply\" to specific categories such as gross negligence, willful misconduct, fraud, breach of confidentiality, or indemnification obligations [KA-0009, KA-0027, KA-0035, KA-0073, KA-0758, KA-0776].\n*   **Indemnification Without Cap**: Identify indemnification clauses that use phrases like \"any and all losses,\" \"defend, indemnify, and hold harmless,\" without specifying a monetary ceiling [KA-0005, KA-0014, KA-0021, KA-0022, KA-0043, KA-0051, KA-0052, KA-0091, KA-0095].\n*   **Explicit Uncapped Statements**: Check for explicit statements that liability is uncapped for death, injury, or specific section breaches [KA-0678, KA-0754, KA-0001, KA-0031, KA-0056].\n*   **Negative Evidence (Capped)**: Note that if a contract explicitly caps liability or excludes specific damage types (like consequential damages) without an uncapped exception, it does not constitute uncapped liability [KA-0017, KA-0039, KA-0064, KA-0801].\n\n### 2. Cap on Liability\nReview contracts to identify explicit monetary limits, time-based limitations, or exclusions of damage types that effectively cap liability.\n\n*   **Monetary Caps**: Look for definitions of \"Maximum Liability\" or aggregate limits tied to specific metrics such as fees paid, purchase price, or fixed dollar amounts [KA-0100, KA-0755, KA-0759, KA-0777, KA-0802, KA-0798, KA-0018, KA-0187, KA-0200, KA-0338, KA-0361, KA-0368, KA-0475, KA-0525, KA-0541, KA-0553, KA-0675, KA-0712].\n*   **Exclusion of Damage Types**: Identify clauses that waive or exclude indirect, consequential, punitive, or exemplary damages, which effectively caps recoverable losses to direct damages [KA-0015, KA-0362, KA-0751].\n*   **Time-Based Caps**: Check for statutes of limitations or notice periods that limit the window for bringing claims, acting as a temporal cap on liability [KA-0803, KA-0363].\n*   **Indemnity Caps**: Note specific caps applied to indemnification obligations, such as limits based on insurance coverage or annualized charges [KA-0679, KA-0704].\n\n### 3. Liquidated Damages\nReview contracts to identify clauses that specify predetermined amounts or formulas for damages in the event of breach, termination, or late performance.\n\n*   **Explicit Liquidated Damages Clauses**: Look for language defining \"Liquidated Damages,\" \"Termination Fee,\" or specific penalty amounts for breaches such as non-solicitation, late payment, or failure to meet volume commitments [KA-0085, KA-0656, KA-0705, KA-0756, KA-0791, KA-0118, KA-0130, KA-0270, KA-0347, KA-0669, KA-0670, KA-0671, KA-0012, KA-0013, KA-0016, KA-0058].\n*   **Formulas and Calculations**: Identify specific calculation methods, such as multiples of salary, percentages of overdue payments, or average service fees [KA-0085, KA-0656, KA-0705, KA-0791, KA-0118, KA-0130, KA-0270, KA-0016, KA-0058].\n*   **Absence of Liquidated Damages**: Note that if a contract explicitly states termination is \"without penalty\" or lacks specific liquidated damages clauses, it relies on standard indemnification or actual damages [KA-0760, KA-0804, KA-0025, KA-0041, KA-0045, KA-0049, KA-0054, KA-0062, KA-0067].\n\n### 4. Warranty Duration\nReview contracts to identify the specific time periods during which warranties for products, services, or technology are valid.\n\n*   **Explicit Duration Periods**: Look for defined \"Warranty Periods\" specified in days, months, or years from delivery, shipment, or installation [KA-0105, KA-0106, KA-0562, KA-0595, KA-0761, KA-0198, KA-0224, KA-0370, KA-0555, KA-0556, KA-0788, KA-0120, KA-0140, KA-0154].\n*   **Survival of Warranties**: Check if warranties survive the termination of the agreement or last for the entire term [KA-0681, KA-0034].\n*   **Disclaimer of Warranties**: Identify clauses that explicitly disclaim all warranties (express or implied), resulting in no warranty duration [KA-0757, KA-0753, KA-0800, KA-0486, KA-0677, KA-0004, KA-0020, KA-0046, KA-0050].\n\n## Review Checklist\n\n### Uncapped Liability\n- [ ] Does the contract contain a general liability cap?\n- [ ] Are there explicit exceptions to the cap for gross negligence, willful misconduct, or fraud? [KA-0009, KA-0027, KA-0035, KA-0073]\n- [ ] Are indemnification obligations excluded from the liability cap? [KA-0754, KA-0758, KA-0056]\n- [ ] Is liability for breach of confidentiality uncapped? [KA-0001, KA-0776, KA-0035]\n- [ ] Do indemnification clauses lack a monetary ceiling? [KA-0005, KA-0014, KA-0021, KA-0022, KA-0043, KA-0051, KA-0052, KA-0091, KA-0095]\n\n### Cap on Liability\n- [ ] Is there a defined \"Maximum Liability\" or aggregate cap? [KA-0100, KA-0755, KA-0759, KA-0777, KA-0802, KA-0798, KA-0018, KA-0187, KA-0200, KA-0338, KA-0361, KA-0368, KA-0475, KA-0525, KA-0541, KA-0553, KA-0675, KA-0712]\n- [ ] Are indirect, consequential, punitive, or exemplary damages excluded? [KA-0015, KA-0362, KA-0751]\n- [ ] Is there a time limit for bringing claims (statute of limitations)? [KA-0803, KA-0363]\n- [ ] Are indemnification obligations capped by insurance or fees? [KA-0679, KA-0704]\n\n### Liquidated Damages\n- [ ] Are there specific liquidated damages clauses for breach or termination? [KA-0085, KA-0656, KA-0705, KA-0756, KA-0791, KA-0118, KA-0130, KA-0270, KA-0347, KA-0669, KA-0670, KA-0671, KA-0012, KA-0013, KA-0016, KA-0058]\n- [ ] Are the liquidated damages amounts or formulas clearly defined? [KA-0085, KA-0656, KA-0705, KA-0791, KA-0118, KA-0130, KA-0270, KA-0016, KA-0058]\n- [ ] Does the contract explicitly state that termination is without penalty? [KA-0760, KA-0804, KA-0025, KA-0041, KA-0045, KA-0049, KA-0054, KA-0062, KA-0067]\n\n### Warranty Duration\n- [ ] Is there a defined warranty period for products or services? [KA-0105, KA-0106, KA-0562, KA-0595, KA-0761, KA-0198, KA-0224, KA-0370, KA-0555, KA-0556, KA-0788, KA-0120, KA-0140, KA-0154]\n- [ ] Do warranties survive the termination of the agreement? [KA-0681, KA-0034]\n- [ ] Are all warranties explicitly disclaimed? [KA-0757, KA-0753, KA-0800, KA-0486, KA-0677, KA-0004, KA-0020, KA-0046, KA-0050]\n\n## Output Format\n```json\n{\n  \"status\": \"success\",\n  \"answer\": \"Review completed based on evidence index.\",\n  \"evidence_unit_ids\": [\"KA-0678\", \"KA-0754\", \"KA-0758\", \"KA-0776\", \"KA-0801\", \"KA-0001\", \"KA-0005\", \"KA-0009\", \"KA-0014\", \"KA-0017\", \"KA-0021\", \"KA-0022\", \"KA-0027\", \"KA-0031\", \"KA-0035\", \"KA-0039\", \"KA-0043\", \"KA-0051\", \"KA-0052\", \"KA-0056\", \"KA-0064\", \"KA-0073\", \"KA-0077\", \"KA-0091\", \"KA-0095\", \"KA-0100\", \"KA-0679\", \"KA-0704\", \"KA-0755\", \"KA-0759\", \"KA-0777\", \"KA-0802\", \"KA-0803\", \"KA-0798\", \"KA-0015\", \"KA-0018\", \"KA-0187\", \"KA-0200\", \"KA-0338\", \"KA-0361\", \"KA-0362\", \"KA-0363\", \"KA-0368\", \"KA-0475\", \"KA-0525\", \"KA-0541\", \"KA-0553\", \"KA-0675\", \"KA-0712\", \"KA-0751\", \"KA-0085\", \"KA-0656\", \"KA-0705\", \"KA-0756\", \"KA-0760\", \"KA-0804\", \"KA-0791\", \"KA-0118\", \"KA-0130\", \"KA-0270\", \"KA-0347\", \"KA-0669\", \"KA-0670\", \"KA-0671\", \"KA-0012\", \"KA-0013\", \"KA-0016\", \"KA-0025\", \"KA-0041\", \"KA-0045\", \"KA-0049\", \"KA-0054\", \"KA-0058\", \"KA-0062\", \"KA-0067\", \"KA-0105\", \"KA-0106\", \"KA-0562\", \"KA-0595\", \"KA-0681\", \"KA-0757\", \"KA-0761\", \"KA-0753\", \"KA-0800\", \"KA-0198\", \"KA-0224\", \"KA-0370\", \"KA-0486\", \"KA-0555\", \"KA-0556\", \"KA-0677\", \"KA-0788\", \"KA-0004\", \"KA-0020\", \"KA-0034\", \"KA-0046\", \"KA-0050\", \"KA-0120\", \"KA-0140\", \"KA-0154\"],\n  \"source_contract_ids\": [\"SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT\", \"TheglobeComInc_19990503_S-1A_EX-1\"]\n}\n```"
+}

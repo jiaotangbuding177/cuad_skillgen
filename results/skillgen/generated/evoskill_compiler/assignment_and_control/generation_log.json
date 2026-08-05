@@ -1,0 +1,187 @@
+{
+  "step1_kas_sample": [
+    {
+      "ka_id": "KA-0001",
+      "category": "Change of Control",
+      "text": "If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.",
+      "span_start": 16231,
+      "span_end": 16771,
+      "interpretation": "The contract grants either party the right to terminate the agreement without liability upon a change of control (acquisition of majority equity securities) by providing 30 days' written notice, with specific exceptions for transfers involving i-Escrow.com.",
+      "confidence": 1.0,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0002",
+      "category": "Anti-Assignment",
+      "text": "All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable.",
+      "span_start": 12261,
+      "span_end": 12389,
+      "interpretation": "The contract explicitly states that the intellectual property rights granted are not assignable, implying a restriction on assignment of these specific rights without consent.",
+      "confidence": 0.9,
+      "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+    },
+    {
+      "ka_id": "KA-0003",
+      "category": "Change of Control",
+      "text": "Provider may not assign, delegate or otherwise transfer either this Agreement or any of its rights, interests, or obligations hereunder without the prior written approval of Recipient.",
+      "span_start": 19304,
+      "span_end": 19488,
+      "interpretation": "The contract restricts the Provider from assigning its rights or obligations, which typically includes transfers resulting from a change of control, requiring prior written approval from the Recipient.",
+      "confidence": 0.9,
+      "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0004",
+      "category": "Anti-Assignment",
+      "text": "Provider may not assign, delegate or otherwise transfer either this Agreement or any of its rights, interests, or obligations hereunder without the prior written approval of Recipient.",
+      "span_start": 19304,
+      "span_end": 19488,
+      "interpretation": "The Provider is explicitly prohibited from assigning, delegating, or transferring the agreement or its rights without obtaining prior written approval from the Recipient.",
+      "confidence": 1.0,
+      "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0005",
+      "category": "Anti-Assignment",
+      "text": "Recipient may freely assign its rights under this Agreement to receive the Services to any of its affiliates.",
+      "span_start": 2025,
+      "span_end": 2134,
+      "interpretation": "The Recipient is granted the right to assign its rights to receive services to its affiliates without restriction, contrasting with the restrictions placed on the Provider.",
+      "confidence": 1.0,
+      "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0006",
+      "category": "Change of Control",
+      "text": "No Joint Venturer shall be authorized or empowered to mortgage, hypothecate, pledge, sell, or transfer, an interest in the Joint Venture, nor confer on any successor or assignee the right to become a Joint Venturer without the consent of the other Joint Venturer.",
+      "span_start": 4835,
+      "span_end": 5038,
+      "interpretation": "The contract requires the consent of the other Joint Venturer for any transfer or sale of an interest in the Joint Venture, which covers changes of control involving the transfer of ownership interests.",
+      "confidence": 0.95,
+      "source_contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0007",
+      "category": "Anti-Assignment",
+      "text": "No Joint Venturer shall be authorized or empowered to mortgage, hypothecate, pledge, sell, or transfer, an interest in the Joint Venture, nor confer on any successor or assignee the right to become a Joint Venturer without the consent of the other Joint Venturer.",
+      "span_start": 4835,
+      "span_end": 5038,
+      "interpretation": "The contract explicitly prohibits the assignment or transfer of a Joint Venturer's interest to a third party without the prior consent of the other Joint Venturer.",
+      "confidence": 0.95,
+      "source_contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0008",
+      "category": "Change of Control",
+      "text": "No party to this Agreement may assign its rights or delegate its obligations under this Agreement, whether by operation of law or otherwise, and any assignment in contravention hereof shall be null and void.",
+      "span_start": 28443,
+      "span_end": 28650,
+      "interpretation": "The contract prohibits assignment by operation of law, which typically covers transfers resulting from a change of control, thereby restricting such events without consent.",
+      "confidence": 0.9,
+      "source_contract_id": "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0009",
+      "category": "Anti-Assignment",
+      "text": "No party to this Agreement may assign its rights or delegate its obligations under this Agreement, whether by operation of law or otherwise, and any assignment in contravention hereof shall be null and void.",
+      "span_start": 28443,
+      "span_end": 28650,
+      "interpretation": "The agreement explicitly prohibits any party from assigning its rights or delegating its obligations to a third party, rendering any such assignment null and void.",
+      "confidence": 1.0,
+      "source_contract_id": "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT"
+    },
+    {
+      "ka_id": "KA-0010",
+      "category": "Anti-Assignment",
+      "text": "MICOA may assign this Agreement to its parent, affiliate, or subsidiary corporations who are licensed insurers upon written notice to Agency. Agency may not assign this Agreement without the written permission of MICOA or its successors or assigns.",
+      "span_start": 22663,
+      "span_end": 22866,
+      "interpretation": "The contract requires written notice from MICOA for assignment to affiliates and written permission from MICOA for the Agency to assign the agreement, satisfying the criteria for Anti-Assignment.",
+      "confidence": 1.0,
+      "source_contract_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT"
+    }
+  ],
+  "step2_evidence_summary": {
+    "Change of Control": 240,
+    "Anti-Assignment": 275
+  },
+  "step3_security_policy": {
+    "allowed_status": [
+      "answered",
+      "evidence_missing",
+      "missing_input",
+      "unsupported_scope",
+      "needs_human_review"
+    ],
+    "required_behaviors": [
+      {
+        "rule_id": "RB-001",
+        "text": "answer only using the target contract",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-002",
+        "text": "cite source-grounded evidence when answering",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-003",
+        "text": "return evidence_missing when no supporting clause exists",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-004",
+        "text": "return missing_input when contract_id or category is absent",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-005",
+        "text": "return unsupported_scope when the question is outside covered_categories",
+        "enforcement": "hard"
+      },
+      {
+        "rule_id": "RB-006",
+        "text": "route legal advice and high-risk interpretation to human review",
+        "enforcement": "hard"
+      }
+    ],
+    "safety_requirements": [
+      {
+        "rule_id": "SR-001",
+        "text": "do not cite non-target contracts",
+        "enforcement": "hard",
+        "check": "verify source_contract_ids == [target_contract_id]"
+      },
+      {
+        "rule_id": "SR-002",
+        "text": "do not fabricate clauses",
+        "enforcement": "hard",
+        "check": "verify evidence spans exist in target contract"
+      },
+      {
+        "rule_id": "SR-003",
+        "text": "do not provide legal advice",
+        "enforcement": "hard",
+        "check": "detect legal judgment language in answer"
+      },
+      {
+        "rule_id": "SR-004",
+        "text": "do not generate externally sendable legal opinions",
+        "enforcement": "hard",
+        "check": "detect formal document patterns"
+      }
+    ],
+    "boundary_rules": [
+      {
+        "covered_categories": [
+          "Anti-Assignment",
+          "Change of Control"
+        ]
+      },
+      {
+        "domain": "contract_review"
+      }
+    ]
+  },
+  "step4_skill_md": "# SKILL.md: Contract Review for Assignment and Change of Control\n\n## Covered Categories\n1.  **Change of Control**: Evidence Atoms (KA-0001 to KA-0277)\n2.  **Anti-Assignment**: Evidence Atoms (KA-0004 to KA-0117)\n\n## Evidence-Based Review Rules\n\n### 1. Change of Control\nReview contracts for clauses that define \"Change of Control\" and specify the rights (termination, assignment, or consent requirements) triggered by such events.\n\n*   **Termination Rights**: Look for clauses granting either party or a specific party the right to terminate the agreement upon a Change of Control.\n    *   *Immediate Termination*: Check for language allowing immediate termination without notice [KA-0104, KA-0213].\n    *   *Notice-Based Termination*: Identify requirements for written notice periods (e.g., 30 days [KA-0001, KA-0229], 60 days [KA-0113]) or specific termination payments [KA-0075].\n    *   *Unilateral Rights*: Note if only one party (e.g., Licensor [KA-0090], Company [KA-0042]) holds the termination right.\n*   **Assignment Exceptions**: Determine if Change of Control events are exempt from general anti-assignment restrictions.\n    *   *No Consent Required*: Look for explicit exemptions where consent is not required for mergers, acquisitions, or asset sales [KA-0027, KA-0146, KA-0172, KA-0196].\n    *   *Notice Only*: Identify clauses where assignment is permitted upon providing written notice (e.g., within 30 days [KA-0206]) but without requiring consent [KA-0019, KA-0194].\n    *   *Consent Required*: Flag clauses where Change of Control assignments still require prior written consent [KA-0148, KA-0210, KA-0248, KA-0277].\n*   **Definition of Change of Control**: Verify how the event is defined.\n    *   *Equity Thresholds*: Look for specific ownership thresholds (e.g., majority equity [KA-0001], 20% voting power [KA-0113], 50% stock transfer [KA-0083]).\n    *   *Corporate Events*: Check for inclusion of mergers, consolidations, reorganizations, or sales of substantially all assets [KA-0023, KA-0083, KA-0148, KA-0210].\n\n### 2. Anti-Assignment\nReview contracts for general restrictions on assigning rights or delegating obligations.\n\n*   **General Prohibition**: Identify clauses that broadly prohibit assignment without prior written consent.\n    *   *Mutual Restrictions*: Look for language prohibiting both parties from assigning without consent [KA-0009, KA-0020, KA-0022, KA-0032, KA-0043, KA-0047, KA-0062, KA-0068, KA-0072, KA-0076, KA-0080, KA-0086, KA-0112, KA-0117].\n    *   *Unilateral Restrictions*: Note if only one party (e.g., Provider [KA-0004], Contractor [KA-0016], Licensee [KA-0028]) is restricted.\n*   **Exceptions to Prohibition**: Check for permitted assignments that do not require consent.\n    *   *Affiliates*: Look for permissions to assign to affiliates, subsidiaries, or parent companies [KA-0005, KA-0010, KA-0091, KA-0114].\n    *   *Successors*: Identify exceptions for successors in interest due to mergers or asset sales, often requiring the successor to assume obligations [KA-0115, KA-0194].\n*   **Consequences of Breach**: Determine the penalty for unauthorized assignment.\n    *   *Null and Void*: Check if unauthorized assignments are explicitly stated as null and void [KA-0009].\n    *   *Termination Event*: Look for language defining unauthorized assignment as a termination event or default [KA-0084, KA-0149].\n\n## Review Checklist\n\n### Change of Control\n- [ ] **Identify Trigger Events**: Does the contract define Change of Control? (e.g., merger, >50% equity change, asset sale) [KA-0001, KA-0083, KA-0148].\n- [ ] **Check Termination Rights**: Can either party terminate upon Change of Control? If so, is notice required? [KA-0001, KA-0104, KA-0229].\n- [ ] **Verify Assignment Permissions**: Is assignment during Change of Control allowed without consent? [KA-0027, KA-0172].\n- [ ] **Assess Consent Requirements**: If assignment is allowed, is prior written consent still required? [KA-0148, KA-0210, KA-0277].\n- [ ] **Review Notice Periods**: If notice is required for assignment or termination, what is the timeframe? (e.g., 30 days [KA-0001, KA-0206]).\n\n### Anti-Assignment\n- [ ] **Locate Assignment Clause**: Is there a general prohibition on assignment? [KA-0009, KA-0020].\n- [ ] **Determine Consent Standard**: Is consent required? If so, is it \"prior written consent\" or \"not to be unreasonably withheld\"? [KA-0028, KA-0097].\n- [ ] **Check for Affiliate Exceptions**: Can the party assign to its affiliates without consent? [KA-0005, KA-0091].\n- [ ] **Verify Successor Rights**: Are assignments to successors in mergers/acquisitions permitted? [KA-0115, KA-0194].\n- [ ] **Identify Breach Consequences**: Does unauthorized assignment constitute a default or termination event? [KA-0084, KA-0149].\n\n## Output Format\n```json\n{\n  \"status\": \"success\",\n  \"answer\": \"Review completed based on evidence index.\",\n  \"evidence_unit_ids\": [\"KA-0001\", \"KA-0004\", \"KA-0009\", \"KA-0019\", \"KA-0020\", \"KA-0023\", \"KA-0027\", \"KA-0028\", \"KA-0032\", \"KA-0042\", \"KA-0043\", \"KA-0047\", \"KA-0062\", \"KA-0068\", \"KA-0072\", \"KA-0075\", \"KA-0076\", \"KA-0080\", \"KA-0083\", \"KA-0084\", \"KA-0086\", \"KA-0090\", \"KA-0091\", \"KA-0097\", \"KA-0104\", \"KA-0112\", \"KA-0113\", \"KA-0114\", \"KA-0115\", \"KA-0117\", \"KA-0146\", \"KA-0148\", \"KA-0149\", \"KA-0172\", \"KA-0194\", \"KA-0196\", \"KA-0206\", \"KA-0210\", \"KA-0213\", \"KA-0229\", \"KA-0248\", \"KA-0277\"],\n  \"source_contract_ids\": [\n    \"2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement\",\n    \"ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT\",\n    \"ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT\",\n    \"AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT\",\n    \"ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING_AGREEMENT\",\n    \"AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content_License_Agreement\",\n    \"AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship_Agreement\",\n    \"Apollo_Endosurgery_-_Manufacturing_and_Supply_Agreement\",\n    \"ArconicRolledProductsCorp_20191217_10-12B_EX-2.7_11923804_EX-2.7_Trademark_License_Agreement\",\n    \"ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License_Agreement\",\n    \"BIOPURECORP_06_30_1999-EX-10.13-AGENCY_AGREEMENT\",\n    \"BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING_AGREEMENT\",\n    \"CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship_Agreement\",\n    \"CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT\",\n    \"CHIPMOSTECHNOLOGIESBERMUDALTD_04_18_2016-EX-4.72-Strategic_Alliance_Agreement\",\n    \"CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING_AGREEMENT\",\n    \"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE_SPONSORSHIP_AGREEMENT\",\n    \"CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Maintenance_Agreement1\",\n    \"CcRealEstateIncomeFundadv_20181205_POS_8C_EX-99.(H)(3)_11447739_EX-99.(H)(3)_Marketing_Agreement\",\n    \"ChinaRealEstateInformationCorp_20090929_F-1_EX-10.32_4771615_EX-10.32_Content_License_Agreement\",\n    \"Columbia_Laboratories,_(Bermuda)_Ltd._-_AMEND_NO._2_TO_MANUFACTURING_AND_SUPPLY_AGREEMENT\",\n    \"DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUTSOURCING_AGREEMENT\",\n    \"DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT\",\n    \"DYNTEKINC_07_30_1999-EX-10-ONLINE_HOSTING_AGREEMENT\",\n    \"DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content_License_Agreement\",\n    \"ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR_AGREEMENT\",\n    \"EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding_Agreement\",\n    \"ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development_Agreement\",\n    \"FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION\",\n    \"GSITECHNOLOGYINC_11_16_2009-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT_between_SONY_ELECTRONICS_INC._and_GSI_TECHNOLOGY,_INC.\",\n    \"GSVINC_05_15_1998-EX-10-SPONSORSHIP_AGREEMENT\",\n    \"GlobalTechnologiesGroupInc_20050928_10KSB_EX-10.9_4148808_EX-10.9_Content_License_Agreement\",\n    \"GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content_License_Agreement\",\n    \"GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License_Agreement\",\n    \"HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding_Agreement\",\n    \"INKTOMICORP_06_08_1998-EX-10.14-SOFTWARE_HOSTING_AGREEMENT\",\n    \"KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT_VENTURE_AGREEMENT\"\n  ],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n## Boundary Rules\n*   **[RB-001]**: Answers must be derived solely from the target contract's clauses.\n*   **[RB-002]**: All findings must cite specific evidence unit IDs (KA-XXXX).\n*   **[RB-003]**: If a specific clause pattern (e.g., \"unreasonable withholding of consent\") is not present in the target contract, return `evidence_missing` for that specific rule.\n*   **[RB-004]**: If `contract_id` or `category` is missing from the input, return `missing_input`.\n*   **[RB-005]**: If the query asks about categories outside \"Anti-Assignment\" or \"Change of Control\", return `unsupported_scope`.\n*   **[RB-006]**: Route any request for legal strategy or high-risk interpretation to human review.\n*   **[SR-001]**: Do not cite clauses from non-target contracts (e.g., do not use KA-0001 if reviewing a contract that does not contain the 2TheMart/i-Escrow agreement).\n*   **[SR-002]**: Do not fabricate clause patterns; only use patterns supported by the provided Evidence Index.\n*   **[SR-003]**: Do not provide legal advice; provide factual contract analysis.\n*   **[SR-004]**: Do not generate externally sendable legal opinions."
+}

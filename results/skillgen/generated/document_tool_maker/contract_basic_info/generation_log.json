@@ -1,0 +1,499 @@
+{
+  "step1_tools_sample": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_document_name",
+          "description": "Extracts the formal title or name of the agreement from the contract header.",
+          "category": "Document Name",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Header section"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "CO-BRANDING AND ADVERTISING AGREEMENT\n\nTHIS CO-BRANDING AND ADVERTISING AGREEMENT (the \"Agreement\") is made as of June 21, 1999...",
+            "output": {
+              "found": true,
+              "extracted_text": "CO-BRANDING AND ADVERTISING AGREEMENT",
+              "confidence": 1.0,
+              "explanation": "The document title is explicitly stated at the beginning of the contract."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_parties",
+          "description": "Identifies the legal entities entering into the agreement.",
+          "category": "Parties",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Preamble section"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "...by and between I-ESCROW, INC., with its principal place of business at 1730 S. Amphlett Blvd., Suite 233, San Mateo, California 94402 (\"i-Escrow\"), and 2THEMART.COM, INC. having its principal place of business at 18301 Von Karman Avenue, 7th Floor, Irvine, California 92612 (\"2TheMart\").",
+            "output": {
+              "found": true,
+              "extracted_text": "I-ESCROW, INC. and 2THEMART.COM, INC.",
+              "confidence": 1.0,
+              "explanation": "The parties are clearly identified in the preamble as i-Escrow and 2TheMart."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_agreement_date",
+          "description": "Extracts the date the contract was signed or executed.",
+          "category": "Agreement Date",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Signature block or Preamble"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "THIS CO-BRANDING AND ADVERTISING AGREEMENT (the \"Agreement\") is made as of June 21, 1999...",
+            "output": {
+              "found": true,
+              "extracted_text": "June 21, 1999",
+              "confidence": 1.0,
+              "explanation": "The agreement date is stated as June 21, 1999 in the preamble."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_effective_date",
+          "description": "Identifies the specific date on which the contract terms become effective.",
+          "category": "Effective Date",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Definitions or Preamble"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "THIS CO-BRANDING AND ADVERTISING AGREEMENT (the \"Agreement\") is made as of June 21, 1999 (the \"Effective Date\")...",
+            "output": {
+              "found": true,
+              "extracted_text": "June 21, 1999",
+              "confidence": 1.0,
+              "explanation": "The contract explicitly defines June 21, 1999 as the Effective Date."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_expiration_date",
+          "description": "Determines the date when the initial term of the contract expires based on the term definition.",
+          "category": "Expiration Date",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Term and Termination section"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "8.1 TERM. The term of this Agreement shall continue for one (1) year following the Launch Date, unless earlier terminated as provided herein.",
+            "output": {
+              "found": true,
+              "extracted_text": "one (1) year following the Launch Date",
+              "confidence": 0.9,
+              "explanation": "The expiration is not a fixed calendar date but is defined as one year after the 'Launch Date', which is a variable event defined in Section 1(g)."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_document_name",
+          "description": "Identifies the formal name of the agreement as stated in the title or preamble.",
+          "category": "Document Name",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Preamble or title section"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "SERVICES AGREEMENT This Services Agreement (this \"Agreement\") is entered into...",
+            "output": {
+              "found": true,
+              "extracted_text": "SERVICES AGREEMENT",
+              "confidence": 1.0,
+              "explanation": "The document explicitly titles itself as 'SERVICES AGREEMENT' in the header and preamble."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_parties",
+          "description": "Extracts the names and legal descriptions of the entities entering into the agreement.",
+          "category": "Parties",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Preamble section"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "...by and between [ * * * ] (the \"Provider\"), and TELCOSTAR PTE, LTD., a company organized and existing under the laws of Singapore and Ability Computer & Software Industries Ltd, a company organized and existing under the laws of the State of Israel (each and both of them \"Recipient\").",
+            "output": {
+              "found": true,
+              "extracted_text": "Provider: [ * * * ]; Recipient: TELCOSTAR PTE, LTD. and Ability Computer & Software Industries Ltd",
+              "confidence": 0.95,
+              "explanation": "The parties are identified as the Provider (redacted) and the Recipient (TeLCOSTAR PTE, LTD. and Ability Computer & Software Industries Ltd)."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_agreement_date",
+          "description": "Identifies the date on which the contract was signed or entered into.",
+          "category": "Agreement Date",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Preamble section"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "This Services Agreement (this \"Agreement\") is entered into on October 1, 2019...",
+            "output": {
+              "found": true,
+              "extracted_text": "October 1, 2019",
+              "confidence": 1.0,
+              "explanation": "The contract states it was 'entered into on October 1, 2019'."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_effective_date",
+          "description": "Identifies the specific date when the contract terms become legally effective.",
+          "category": "Effective Date",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Preamble section"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "...and is made effective as of November 1, 2019 (the \"Effective Date\")...",
+            "output": {
+              "found": true,
+              "extracted_text": "November 1, 2019",
+              "confidence": 1.0,
+              "explanation": "The contract explicitly defines the 'Effective Date' as November 1, 2019."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_expiration_date",
+          "description": "Determines the date on which the initial term of the contract expires.",
+          "category": "Expiration Date",
+          "parameters": {
+            "contract_text": "string - Full contract text",
+            "target_clause": "string (optional) - Termination section"
+          },
+          "returns": {
+            "found": "boolean",
+            "extracted_text": "string",
+            "confidence": "float",
+            "explanation": "string"
+          },
+          "example": {
+            "input": "3.1 Termination of Agreement. This Agreement be deemed effective as of the Effective Date, Agreement and shall terminate on December 31, 2020...",
+            "output": {
+              "found": true,
+              "extracted_text": "December 31, 2020",
+              "confidence": 1.0,
+              "explanation": "Section 3.1 states the agreement shall terminate on December 31, 2020."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_document_name",
+          "description": "Extracts the official name or title of the joint venture or agreement from the contract text.",
+          "category": "Document Name",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "1. Name of the Joint Venture. The name of the Joint Venture will be MightyCell Batteries, and may sometimes be referred to as \"MightyCell\" or the \"Joint Venture\" in this Agreement.",
+            "output": {
+              "found": true,
+              "extracted_text": "MightyCell Batteries",
+              "confidence": 0.98,
+              "explanation": "The contract explicitly states the name of the Joint Venture in Section 1."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_parties",
+          "description": "Identifies the legal entities entering into the joint venture agreement.",
+          "category": "Parties",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Collectible Concepts Group, Inc. (\"CCGI\") and Pivotal Self Service Tech, Inc. (\"PVSS\"), (the \"Parties\" or \"Joint Venturers\" if referred to collectively...",
+            "output": {
+              "found": true,
+              "extracted_text": "Collectible Concepts Group, Inc. and Pivotal Self Service Tech, Inc.",
+              "confidence": 0.99,
+              "explanation": "The preamble clearly identifies CCGI and PVSS as the parties to the agreement."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_003",
+          "name": "check_agreement_date",
+          "description": "Extracts the date the contract was signed or executed, typically found near the signature blocks or in the preamble.",
+          "category": "Agreement Date",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Contract ID: ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+            "output": {
+              "found": true,
+              "extracted_text": "04_24_2003",
+              "confidence": 0.85,
+              "explanation": "The contract ID contains the date 04/24/2003, which likely corresponds to the filing or agreement date, as no explicit 'Date of Agreement' line is filled in the signature block."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_004",
+          "name": "check_effective_date",
+          "description": "Determines the specific date on which the joint venture operations and legal obligations commence.",
+          "category": "Effective Date",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "8. Term of Joint Venture. The Joint Venture shall commence on the 1st of March, 2003...",
+            "output": {
+              "found": true,
+              "extracted_text": "1st of March, 2003",
+              "confidence": 0.99,
+              "explanation": "Section 8 explicitly states the commencement date of the Joint Venture."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_005",
+          "name": "check_expiration_date",
+          "description": "Identifies the date on which the initial term of the joint venture expires, absent any extensions.",
+          "category": "Expiration Date",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "8. Term of Joint Venture. The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement...",
+            "output": {
+              "found": true,
+              "extracted_text": "February 28, 2004",
+              "confidence": 0.99,
+              "explanation": "Section 8 defines the end of the initial term as February 28, 2004."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "merged_tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_document_name",
+        "category": "Document Name",
+        "description": "Extracts the formal title or name of the agreement from the document header or introductory clauses.",
+        "source_contracts": [
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "CONTENT LICENSE AGREEMENT\n\nThis Content License Agreement (the \"Agreement\") is entered into as of September 8, 2005...",
+          "output": {
+            "found": true,
+            "extracted_text": "CONTENT LICENSE AGREEMENT",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_parties",
+        "category": "Parties",
+        "description": "Identifies the legal entities or individuals entering into the agreement, including their roles, corporate structure, jurisdiction, and defined short names.",
+        "source_contracts": [
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "This Agreement is entered into by and between Virgin Galactic Holdings, Inc., a Delaware corporation, and [Counterparty Name], a [Jurisdiction] entity.",
+          "output": {
+            "found": true,
+            "extracted_text": "Virgin Galactic Holdings, Inc., a Delaware corporation; [Counterparty Name], a [Jurisdiction] entity",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_agreement_date",
+        "category": "Agreement Date",
+        "description": "Extracts the date on which the contract or amendment was made and entered into.",
+        "source_contracts": [
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "This Agreement is entered into as of April 16, 2014.",
+          "output": {
+            "found": true,
+            "extracted_text": "April 16, 2014",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_expiration_date",
+        "category": "Expiration Date",
+        "description": "Determines the expiration date of the initial term or identifies if the agreement is perpetual, often found in amendment sections modifying term dates.",
+        "source_contracts": [
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "The Initial Term of this Agreement shall commence on the Effective Date and shall expire on December 31, 2025, unless earlier terminated in accordance with Section 8.",
+          "output": {
+            "found": true,
+            "extracted_text": "December 31, 2025",
+            "confidence": 0.98
+          }
+        }
+      }
+    ],
+    "tool_stats": {
+      "total_unique_tools": 4,
+      "tools_by_category": {
+        "Document Name": 1,
+        "Parties": 1,
+        "Agreement Date": 1,
+        "Effective Date": 0,
+        "Expiration Date": 1
+      }
+    }
+  },
+  "step3_skill_md": "# SKILL.md\n\n## Overview\nThis skill, **Contract Basic Info Extraction**, is designed to identify and extract fundamental metadata from legal agreements. It focuses on the \"who, what, and when\" of a contract by locating the document title, the involved parties, and key temporal milestones (agreement date and expiration date). This skill serves as the foundational step in any contract review workflow, establishing the identity and temporal scope of the agreement before diving into substantive clause analysis.\n\n## Available Tools\n\n### 1. check_document_name\n- **Category**: Document Name\n- **Description**: Extracts the formal title or name of the agreement from the document header, introductory clauses, or signature blocks. It identifies the specific type of contract (e.g., \"Content License Agreement,\" \"Supply Agreement\").\n- **Parameters**:\n  - `document_text` (string): The full text of the contract or the header/introductory section.\n- **Returns**:\n  - `found` (boolean): Whether a clear document name was identified.\n  - `extracted_text` (string): The exact title string found in the document.\n  - `confidence` (float): Confidence score (0.0 to 1.0) of the extraction.\n- **Usage Notes**:\n  - Look for capitalized titles at the very beginning of the document.\n  - If the title is not explicitly capitalized, look for phrases like \"This [Agreement Name] is entered into...\"\n  - **Example**:\n    - *Input*: \"CONTENT LICENSE AGREEMENT\\n\\nThis Content License Agreement (the \\\"Agreement\\\") is entered into as of September 8, 2005...\"\n    - *Output*: `{\"found\": true, \"extracted_text\": \"CONTENT LICENSE AGREEMENT\", \"confidence\": 0.98}`\n\n### 2. check_parties\n- **Category**: Parties\n- **Description**: Identifies the legal entities or individuals entering into the agreement. It extracts their full legal names, roles (e.g., Licensor, Licensee, Buyer, Seller), corporate structure (e.g., \"Delaware corporation\"), jurisdiction, and any defined short names used throughout the contract.\n- **Parameters**:\n  - `document_text` (string): The full text of the contract, specifically focusing on the preamble or \"Parties\" section.\n- **Returns**:\n  - `found` (boolean): Whether parties were successfully identified.\n  - `extracted_text` (string): A structured string or list containing the names and descriptions of the parties.\n  - `confidence` (float): Confidence score (0.0 to 1.0).\n- **Usage Notes**:\n  - Look for phrases like \"entered into by and between,\" \"made by and between,\" or \"this Agreement is between.\"\n  - Capture both the full legal name and the defined short name (e.g., \"Virgin Galactic Holdings, Inc. (\\\"Company\\\").\")\n  - **Example**:\n    - *Input*: \"This Agreement is entered into by and between Virgin Galactic Holdings, Inc., a Delaware corporation, and [Counterparty Name], a [Jurisdiction] entity.\"\n    - *Output*: `{\"found\": true, \"extracted_text\": \"Virgin Galactic Holdings, Inc., a Delaware corporation; [Counterparty Name], a [Jurisdiction] entity\", \"confidence\": 0.98}`\n\n### 3. check_agreement_date\n- **Category**: Agreement Date\n- **Description**: Extracts the date on which the contract or amendment was physically signed, executed, or formally entered into. This is often distinct from the effective date.\n- **Parameters**:\n  - `document_text` (string): The full text of the contract, focusing on the preamble and signature blocks.\n- **Returns**:\n  - `found` (boolean): Whether an agreement date was identified.\n  - `extracted_text` (string): The date string (e.g., \"April 16, 2014\").\n  - `confidence` (float): Confidence score (0.0 to 1.0).\n- **Usage Notes**:\n  - Look for phrases like \"entered into as of,\" \"dated,\" or \"executed on.\"\n  - Distinguish this from the \"Effective Date\" if they differ.\n  - **Example**:\n    - *Input*: \"This Agreement is entered into as of April 16, 2014.\"\n    - *Output*: `{\"found\": true, \"extracted_text\": \"April 16, 2014\", \"confidence\": 0.98}`\n\n### 4. check_expiration_date\n- **Category**: Expiration Date\n- **Description**: Determines the expiration date of the initial term of the agreement. It identifies if the agreement has a fixed end date or is perpetual. It often looks in sections titled \"Term,\" \"Duration,\" or \"Expiration.\"\n- **Parameters**:\n  - `document_text` (string): The full text of the contract, specifically the \"Term\" or \"Duration\" section.\n- **Returns**:\n  - `found` (boolean): Whether an expiration date or term condition was identified.\n  - `extracted_text` (string): The specific date or description of the term end (e.g., \"December 31, 2025\" or \"Perpetual\").\n  - `confidence` (float): Confidence score (0.0 to 1.0).\n- **Usage Notes**:\n  - Look for phrases like \"shall expire on,\" \"initial term shall end on,\" or \"continue until.\"\n  - If the term is defined by a duration (e.g., \"12 months from Effective Date\"), note that the tool extracts the explicit date if available, or the duration clause if no fixed date is present.\n  - **Example**:\n    - *Input*: \"The Initial Term of this Agreement shall commence on the Effective Date and shall expire on December 31, 2025, unless earlier terminated in accordance with Section 8.\"\n    - *Output*: `{\"found\": true, \"extracted_text\": \"December 31, 2025\", \"confidence\": 0.98}`\n\n## Review Workflow\n\n1. **Pre-processing**: Ensure the contract text is clean and readable. Identify the document structure (Header, Preamble, Body, Signatures).\n2. **Step 1: Identify Document Identity**:\n   - Run `check_document_name` to establish what type of agreement is being reviewed.\n   - *Why first?* The document name often dictates the context for interpreting other clauses.\n3. **Step 2: Identify the Parties**:\n   - Run `check_parties` to determine who is bound by the agreement.\n   - *Why second?* Knowing the parties helps in understanding roles (e.g., who is the Licensor vs. Licensee) which is critical for subsequent clause analysis.\n4. **Step 3: Establish Temporal Context**:\n   - Run `check_agreement_date` to find when the contract was signed.\n   - Run `check_expiration_date` to find when the initial term ends.\n   - *Note*: If an \"Effective Date\" is required but not explicitly extracted by a dedicated tool, check if the `check_agreement_date` or `check_expiration_date` tools provide context clues, or note it as missing if a specific effective date tool is not available in this skill set.\n5. **Step 4: Validation**:\n   - Cross-reference the extracted dates and names with the signature block to ensure consistency.\n   - If confidence scores are low (<0.8), flag for human review.\n\n## Output Format\n\nThe output of this skill is a JSON object conforming to the following schema:\n\n```json\n{\n  \"status\": \"success | failure | partial\",\n  \"answer\": {\n    \"document_name\": \"string | null\",\n    \"parties\": \"string | null\",\n    \"agreement_date\": \"string | null\",\n    \"expiration_date\": \"string | null\"\n  },\n  \"evidence_unit_ids\": [\"tool_001\", \"tool_001\", \"tool_001\", \"tool_001\"],\n  \"source_contract_ids\": [\"string\"],\n  \"missing_inputs\": [\"list of missing fields if any\"],\n  \"human_review_required\": boolean\n}\n```\n\n- **status**: Indicates the overall success of the extraction.\n- **answer**: Contains the extracted values for each category.\n- **evidence_unit_ids**: References the specific tool IDs used for extraction.\n- **source_contract_ids**: The ID of the contract being analyzed.\n- **missing_inputs**: Lists any categories that could not be extracted (e.g., [\"effective_date\"] if not covered by tools).\n- **human_review_required**: Set to `true` if any confidence score is below 0.8 or if critical information is missing.\n\n## Boundary Rules\n\n- **Do**:\n  - Extract exact text strings for names and dates as they appear in the contract.\n  - Distinguish between \"Agreement Date\" (signing date) and \"Expiration Date\" (end of term).\n  - Handle multiple parties by listing them all in the `check_parties` output.\n  - Return `null` for fields that are not present in the document rather than guessing.\n\n- **Do Not**:\n  - Do not infer the \"Effective Date\" if it is not explicitly stated or if the tool does not support it (note: this skill set does not include a dedicated `check_effective_date` tool, so if the effective date differs from the agreement date, it may be missed or require manual review).\n  - Do not interpret legal implications of the dates or parties (e.g., do not determine if a party is a subsidiary; just extract the text).\n  - Do not extract dates from unrelated sections (e.g., dates in recitals that are not the agreement date).\n  - Do not modify the format of extracted dates (keep original string format)."
+}

@@ -1,0 +1,227 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "Renewal Term",
+          "found": true,
+          "summary": "The agreement automatically renews for successive one-year terms unless a party gives notice of non-renewal at least 30 days before expiration.",
+          "key_terms": [
+            "one year",
+            "successive",
+            "automatically renewed"
+          ],
+          "source_paragraph": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement. A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect. In the event that either party does not give such notice, the term of this Agreement shall be automatically renewed for another one (1) year."
+        },
+        {
+          "category": "Notice Period to Terminate Renewal",
+          "found": true,
+          "summary": "A party must give notice of non-renewal at least 30 days before the expiration of the current term to prevent automatic renewal.",
+          "key_terms": [
+            "thirty (30) days"
+          ],
+          "source_paragraph": "A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect."
+        },
+        {
+          "category": "Termination for Convenience",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Renewal Term",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Notice Period to Terminate Renewal",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Termination for Convenience",
+          "found": true,
+          "summary": "Either party may terminate the agreement without cause by providing at least 90 days' prior written notice.",
+          "key_terms": [
+            "90 days",
+            "prior written notice",
+            "without cause"
+          ],
+          "source_paragraph": "Each of the Recipient and the Provider may, in their sole discretion, terminate this Agreement in whole or in part, at any time without cause, and without liability except, in the case of the Recipient, for required payment for services rendered and reimbursement for authorized expenses incurred, by providing at least 90 (ninety) days' prior written notice to the other party (such date, the \"Services Termination Date\")."
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Renewal Term",
+          "found": true,
+          "summary": "The joint venture has an initial term of one year, which may be extended by written agreement of the parties not less than 30 days prior to scheduled termination; no specific renewal term length is specified beyond the initial extension.",
+          "key_terms": [
+            "extended by written agreement",
+            "not less than thirty (30) days prior to scheduled termination"
+          ],
+          "source_paragraph": "The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement of the Joint Venturers not less than thirty (30) days prior to scheduled termination."
+        },
+        {
+          "category": "Notice Period to Terminate Renewal",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Termination for Convenience",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "Renewal Term",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Notice Period to Terminate Renewal",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Termination for Convenience",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Renewal Term",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Notice Period to Terminate Renewal",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Termination for Convenience",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "Renewal Term": {
+      "found_count": 95,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Renewal contingent on meeting performance thresholds (e.g., net sales).",
+        "Perpetual term or indefinite renewal until terminated.",
+        "Automatic extension for a specified period (e.g., half a year, two years) upon meeting conditions.",
+        "Automatic renewal for successive fixed terms (e.g., 1-year, 2-year, 5-year) unless notice of non-renewal is given.",
+        "Automatic renewal for successive periods (e.g., one-year, annual, monthly) unless notice of non-renewal is given."
+      ],
+      "example_extractions": [
+        "The agreement automatically renews for successive one-year terms unless a party gives notice of non-renewal at least 30 days before expiration.",
+        "After the initial two-year term, the agreement renews automatically from year to year unless cancelled in writing with 60 days' notice.",
+        "The franchise may be renewed for two successive terms of five years each, subject to conditions.",
+        "The initial term is 10 years, and the parties shall negotiate an extension in good faith beginning 12 months prior to expiration.",
+        "The agreement automatically renews for successive one-year terms unless terminated earlier.",
+        "The initial term is two years, with automatic annual renewals thereafter unless either party provides sixty days' notice of termination prior to the renewal date."
+      ],
+      "variations": [
+        "Some contracts require mutual written agreement for renewal (e.g., 'extended by written agreement').",
+        "Renewal may be conditional on achieving certain performance metrics (e.g., minimum sales, payments).",
+        "Some contracts have a perpetual term with no fixed renewal (e.g., 'continues indefinitely').",
+        "Renewal terms vary: one-year, two-year, three-year, five-year, or month-to-month.",
+        "Some contracts allow unilateral extension by one party (e.g., 'Flotek may unilaterally extend')."
+      ]
+    },
+    "Notice Period to Terminate Renewal": {
+      "found_count": 53,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Notice periods commonly 30, 60, 90, 120, or 180 days.",
+        "Notice of non-renewal or termination must be in writing.",
+        "Some contracts specify a longer notice period (e.g., 6 months, 1 year).",
+        "Written notice required a certain number of days before the end of the current term to prevent automatic renewal.",
+        "Notice period typically ranges from 30 to 90 days before the end of the current term."
+      ],
+      "example_extractions": [
+        "A party must give notice of non-renewal at least 30 days before the expiration of the current term to prevent automatic renewal.",
+        "Either party must give at least 60 days' written notice before the end of the current term to prevent automatic renewal.",
+        "Either party must provide at least 90 days' written notice of non-renewal prior to the end of the then-current term.",
+        "Either party must give at least six months' written notice prior to the end of the then-current term to terminate the renewal.",
+        "Either party must provide at least 60 days' notice prior to the renewal date to prevent automatic renewal.",
+        "Either party must provide at least 90 days' written notice prior to the end of the then-current term to prevent automatic renewal."
+      ],
+      "variations": [
+        "Notice periods: 30 days, 60 days, 90 days, 6 months, 1 year, or redacted.",
+        "Some contracts require notice of 'intent not to renew' or 'non-renewal'.",
+        "In some cases, only one party has the right to terminate renewal (e.g., franchisor).",
+        "Some contracts allow termination at any time with notice, not just at renewal."
+      ]
+    },
+    "Termination for Convenience": {
+      "found_count": 78,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Termination for convenience is often available after an initial term or minimum period.",
+        "Either party may terminate without cause by providing written notice within a specified period (e.g., 30, 60, 90 days).",
+        "Either party may terminate without cause upon written notice (e.g., 30, 60, 90, 180 days).",
+        "Some contracts allow termination at any time for any reason.",
+        "Some contracts allow termination for convenience only after a minimum initial term."
+      ],
+      "example_extractions": [
+        "Either party may terminate the agreement without cause by providing at least 90 days' prior written notice.",
+        "Either party may terminate the agreement without cause upon 30 days written notice, provided no default exists.",
+        "Either party may terminate the agreement for any reason upon at least 90 days written notice to the other party.",
+        "Either party may terminate the agreement without cause by giving at least 120 days advance written notice.",
+        "Either party may terminate the agreement for any reason upon 30 days' written notice.",
+        "Either party may terminate the agreement without cause by giving 90 days written notice."
+      ],
+      "variations": [
+        "Notice periods vary: 7 days, 30 days, 45 days, 60 days, 90 days, 120 days, 180 days, 1 year, 2 years.",
+        "Some contracts allow termination for convenience only after a specific date or event.",
+        "Some contracts impose a penalty or fee for termination for convenience (e.g., termination fee, forfeiture of fee).",
+        "In some cases, only one party has the right to terminate for convenience (e.g., Bank of America, Roche).",
+        "Some contracts allow termination at any time without cause (e.g., 'at any time, with or without cause')."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md - Term and Termination Review\n\n## Covered Categories\n\n### Renewal Term\n- **Discovery frequency**: 31% of contracts (95/306)\n- **Common patterns**: Automatic renewal for fixed periods, perpetual/indefinite terms, conditional renewals based on performance thresholds, and unilateral extension rights\n\n### Notice Period to Terminate Renewal\n- **Discovery frequency**: 17% of contracts (53/306)\n- **Common patterns**: Written notice required 30-90 days before term end, notice periods ranging from 30 days to 1 year, and notice of non-renewal to prevent automatic extension\n\n### Termination for Convenience\n- **Discovery frequency**: 25% of contracts (78/306)\n- **Common patterns**: Either party may terminate without cause with written notice (30-90 days common), termination available after initial term, and some contracts allow termination at any time\n\n## Common Patterns\n\n### Renewal Term\n1. **Automatic renewal for successive fixed terms**: \"The agreement automatically renews for successive one-year terms unless a party gives notice of non-renewal at least 30 days before expiration.\"\n2. **Perpetual/indefinite term**: Agreement continues indefinitely until terminated by either party with notice.\n3. **Conditional renewal**: Renewal contingent on meeting performance thresholds (e.g., net sales, minimum payments) or mutual written agreement.\n\n### Notice Period to Terminate Renewal\n1. **Standard notice periods (30-90 days)**: \"Either party must give at least 60 days' written notice before the end of the current term to prevent automatic renewal.\"\n2. **Extended notice periods (120+ days)**: \"Either party must give at least six months' written notice prior to the end of the then-current term to terminate the renewal.\"\n3. **Written notice requirement**: Notice of non-renewal must be in writing and delivered within specified timeframe.\n\n### Termination for Convenience\n1. **Standard termination for convenience**: \"Either party may terminate the agreement without cause by providing at least 90 days' prior written notice.\"\n2. **Termination after initial term**: Termination for convenience available only after a minimum initial term has elapsed.\n3. **Unilateral termination right**: Only one party (e.g., franchisor, Bank of America) has the right to terminate for convenience.\n\n## Review Checklist\n\n### Renewal Term\n- [ ] Does the contract specify an automatic renewal mechanism?\n- [ ] Is renewal conditional on performance metrics or mutual agreement?\n- [ ] Is there a perpetual/indefinite term with no fixed renewal?\n- [ ] Does either party have unilateral extension rights?\n\n### Notice Period to Terminate Renewal\n- [ ] What is the notice period required to prevent automatic renewal?\n- [ ] Is written notice required?\n- [ ] Is the notice period reasonable (typically 30-90 days)?\n- [ ] Does the notice period apply to both parties equally?\n\n### Termination for Convenience\n- [ ] Can either party terminate without cause?\n- [ ] What is the notice period for termination for convenience?\n- [ ] Is termination for convenience available immediately or after an initial term?\n- [ ] Are there any penalties or fees for termination for convenience?\n\n## Evidence Extraction Rules\n\n### Renewal Term\n- **Locate**: Search for \"renew\", \"extend\", \"perpetual\", \"automatic\", \"successive\", \"term\"\n- **Extract**: The specific renewal mechanism (automatic, conditional, perpetual), duration of renewal term, and any conditions for renewal\n- **Example**: \"The agreement automatically renews for successive one-year terms unless a party gives notice of non-renewal at least 30 days before expiration.\"\n\n### Notice Period to Terminate Renewal\n- **Locate**: Search for \"notice\", \"non-renewal\", \"termination\", \"days\", \"written notice\"\n- **Extract**: The exact number of days required for notice, whether written notice is required, and to whom notice must be given\n- **Example**: \"Either party must give at least 60 days' written notice before the end of the current term to prevent automatic renewal.\"\n\n### Termination for Convenience\n- **Locate**: Search for \"terminate without cause\", \"termination for convenience\", \"without cause\", \"any reason\", \"at any time\"\n- **Extract**: Which parties have the right, notice period required, any restrictions (e.g., after initial term), and any penalties\n- **Example**: \"Either party may terminate the agreement without cause by providing at least 90 days' prior written notice.\"\n\n## Output Format\n\n```json\n{\n  \"status\": \"complete\" | \"incomplete\" | \"needs_review\",\n  \"answer\": \"Summary of findings for each category\",\n  \"evidence_unit_ids\": [\"id1\", \"id2\", ...],\n  \"source_contract_ids\": [\"contract1\", \"contract2\", ...],\n  \"missing_inputs\": [\"Renewal Term\", \"Notice Period to Terminate Renewal\", \"Termination for Convenience\"],\n  \"human_review_required\": true | false\n}\n```\n\n## Boundary Rules\n\n### What the skill SHOULD do:\n- Identify and extract renewal terms, notice periods, and termination for convenience clauses\n- Flag contracts with unusual or extreme notice periods (e.g., >180 days)\n- Note when termination for convenience is unilateral (only one party)\n- Identify conditional renewals that depend on performance metrics\n- Highlight perpetual/indefinite terms that may require special attention\n\n### What the skill SHOULD NOT do:\n- Evaluate the fairness or reasonableness of terms (e.g., whether 30 days is \"too short\")\n- Provide legal advice or recommend specific actions\n- Interpret ambiguous language without flagging for human review\n- Assess whether performance thresholds are achievable\n- Determine if a notice period is \"adequate\" under applicable law\n- Make judgments about termination penalties or fees (flag for human review)"
+}

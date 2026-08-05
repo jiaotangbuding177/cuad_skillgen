@@ -1,0 +1,32 @@
+{
+  "tool_001": {
+    "name": "check_notice_period_to_terminate",
+    "category": "Notice Period to Terminate",
+    "source_contracts": [
+      "ImperialGardenResortInc_20161028_DRS_(on_F-1)_EX-10.13_9963189_EX-10.13_Outsourcing_Agreement"
+    ],
+    "example": {
+      "input": "The notice period required to terminate the contract.",
+      "output": {
+        "found": true,
+        "extracted_text": "Notice period to terminate",
+        "confidence": 0.95
+      }
+    }
+  },
+  "tool_002": {
+    "name": "check_termination_for_convenience",
+    "category": "Notice Period to Terminate Renewal: What is the notice period required to terminate renewal?",
+    "source_contracts": [
+      "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement"
+    ],
+    "example": {
+      "input": "Either party may terminate this Agreement for convenience upon thirty (30) days' prior written notice to the other party.",
+      "output": {
+        "found": true,
+        "extracted_text": "thirty (30) days' prior written notice",
+        "confidence": 0.95
+      }
+    }
+  }
+}

@@ -1,0 +1,464 @@
+{
+  "method": "document_tool_maker",
+  "case_id": "competition_restrictions",
+  "model": "ecnu-plus",
+  "pipeline": {
+    "step1_extract": {
+      "contracts_processed": 306,
+      "total_tools_extracted": 1211,
+      "llm_calls": 306
+    },
+    "step2_merge": {
+      "llm_calls": 1
+    },
+    "step3_generate": {
+      "llm_calls": 1
+    }
+  },
+  "tool_manifest": {
+    "total_unique_tools": 12,
+    "tools_by_category": {
+      "Non-Compete": 0,
+      "Exclusivity": 6,
+      "No-Solicit of Customers": 1,
+      "No-Solicit of Employees": 1,
+      "Non-Disparagement": 1,
+      "Most Favored Nation": 1,
+      "Competitive Restriction Exception": 0,
+      "Exception": 1,
+      "Competitive Exception": 1
+    },
+    "tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_exclusivity",
+        "category": "Exclusivity",
+        "description": "Identifies clauses where a party grants exclusive rights to manufacture, sell, distribute, or license products/services, or restricts the other party from working with competitors, sourcing from third parties, or dealing with others in a specific field, territory, or market. Includes checks for exclusive dealing commitments, sole supplier/distributor appointments, and prohibitions on competing activities.",
+        "source_contracts": [
+          "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "ScansourceInc_20190822_10-K_EX-10.39_11793959_EX-10.39_Distributor_Agreement",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT_-_Intellectual_Property_Rights_________________Confidentiality_and_Non-Use_Obligations_Agreement",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "Section 3. Exclusivity. During the Term, Company shall be the exclusive distributor of the Products in the Territory. Supplier shall not sell, distribute, or license the Products to any third party within the Territory without the prior written consent of Company. Company agrees to purchase all its requirements for the Products from Supplier.",
+          "output": {
+            "found": true,
+            "extracted_text": "Company shall be the exclusive distributor of the Products in the Territory. Supplier shall not sell, distribute, or license the Products to any third party within the Territory... Company agrees to purchase all its requirements for the Products from Supplier.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_exclusivity_circumvention",
+        "category": "Exclusivity",
+        "description": "Identifies clauses prohibiting parties from bypassing each other to deal directly with third parties regarding the subject matter of the agreement.",
+        "source_contracts": [
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Neither Party shall, directly or indirectly, contact, negotiate with, or enter into any agreement with any third party introduced by the other Party for the purpose of obtaining the services or products described herein, without the prior written consent of the introducing Party.",
+          "output": {
+            "found": true,
+            "extracted_text": "Neither Party shall, directly or indirectly, contact, negotiate with, or enter into any agreement with any third party introduced by the other Party...",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_003",
+        "name": "check_exclusivity_fuel_management",
+        "category": "Exclusivity",
+        "description": "Identifies clauses granting exclusive rights to manage or supply specific operational inputs, such as fuel, for a project.",
+        "source_contracts": [
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Party A grants Party B the exclusive right to supply and manage all fuel requirements for the Project Site for the duration of the Agreement.",
+          "output": {
+            "found": true,
+            "extracted_text": "Party A grants Party B the exclusive right to supply and manage all fuel requirements for the Project Site...",
+            "confidence": 0.92
+          }
+        }
+      },
+      {
+        "tool_id": "tool_004",
+        "name": "check_exclusivity_digital_products",
+        "category": "Exclusivity",
+        "description": "Identifies clauses where a party is restricted from selling, marketing, or promoting competing digital products (e.g., meditation or sleep apps) during the term and for a specified period after termination.",
+        "source_contracts": [
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "During the Term and for twelve (12) months following termination, Licensee shall not develop, market, or distribute any digital application that competes with the Licensed Software, specifically including meditation, sleep aid, or mindfulness applications.",
+          "output": {
+            "found": true,
+            "extracted_text": "Licensee shall not develop, market, or distribute any digital application that competes with the Licensed Software, specifically including meditation, sleep aid, or mindfulness applications.",
+            "confidence": 0.96
+          }
+        }
+      },
+      {
+        "tool_id": "tool_005",
+        "name": "check_exclusivity_airport_retail",
+        "category": "Exclusivity",
+        "description": "Identifies clauses where a party is restricted from selling or marketing products in specific retail locations (e.g., airports) without the counterparty's collaboration or consent.",
+        "source_contracts": [
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "Vendor agrees not to sell or market its products in any airport retail locations within the United States without the prior written consent and collaboration of Distributor.",
+          "output": {
+            "found": true,
+            "extracted_text": "Vendor agrees not to sell or market its products in any airport retail locations within the United States without the prior written consent and collaboration of Distributor.",
+            "confidence": 0.94
+          }
+        }
+      },
+      {
+        "tool_id": "tool_006",
+        "name": "check_exclusivity_supplier_requirements",
+        "category": "Exclusivity",
+        "description": "Identifies clauses where one party is designated as the sole supplier for specific goods or collateral, restricting the other party from sourcing these items from third parties.",
+        "source_contracts": [
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        ],
+        "best_example": {
+          "input": "Buyer shall procure all required packaging materials and promotional collateral exclusively from Seller. Buyer shall not source such items from any third-party supplier during the Term.",
+          "output": {
+            "found": true,
+            "extracted_text": "Buyer shall procure all required packaging materials and promotional collateral exclusively from Seller. Buyer shall not source such items from any third-party supplier...",
+            "confidence": 0.93
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_no_solicit_of_customers",
+        "category": "No-Solicit of Customers",
+        "description": "Identifies clauses that restrict a party from soliciting, marketing to, or contracting with the counterparty's customers, partners, clients, or users. This includes restrictions on direct contact, negotiation, inducing competitors, or diverting customers via links, often applicable during and/or after the contract term.",
+        "source_contracts": [
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "NUVEEN_-_REMARKETING_AGREEMENT",
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+          "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing_Agreement__Supply_Agreement",
+          "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark_License_Agreement",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+          "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR_AGREEMENT",
+          "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "ParatekPharmaceuticalsInc_20170505_10-KA_EX-10.29_10323872_EX-10.29_Outsourcing_Agreement",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        ],
+        "best_example": {
+          "input": "During the Term and for a period of two (2) years thereafter, Supplier shall not, directly or indirectly, solicit, induce, or attempt to induce any Customer of Buyer to terminate, reduce, or modify its business relationship with Buyer, nor shall Supplier solicit or contract with any such Customer for services similar to those provided to Buyer under this Agreement.",
+          "output": {
+            "found": true,
+            "extracted_text": "During the Term and for a period of two (2) years thereafter, Supplier shall not, directly or indirectly, solicit, induce, or attempt to induce any Customer of Buyer to terminate, reduce, or modify its business relationship with Buyer, nor shall Supplier solicit or contract with any such Customer for services similar to those provided to Buyer under this Agreement.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_no_solicit_employees",
+        "category": "No-Solicit of Employees",
+        "description": "Identifies clauses that restrict a party from soliciting, recruiting, hiring, or engaging employees, contractors, consultants, or agents of the counterparty during or after the contract term.",
+        "source_contracts": [
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        ],
+        "best_example": {
+          "input": "During the Term and for a period of twelve (12) months following the termination or expiration of this Agreement, neither Party shall, directly or indirectly, solicit for employment or hire any employee or independent contractor of the other Party who was employed or engaged by such other Party at any time during the twelve (12) months preceding such solicitation or hiring.",
+          "output": {
+            "found": true,
+            "extracted_text": "During the Term and for a period of twelve (12) months following the termination or expiration of this Agreement, neither Party shall, directly or indirectly, solicit for employment or hire any employee or independent contractor of the other Party who was employed or engaged by such other Party at any time during the twelve (12) months preceding such solicitation or hiring.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_non_disparagement",
+        "category": "Non-Disparagement",
+        "description": "Identifies clauses requiring parties to refrain from making negative, disparaging, defamatory, or misleading statements about the counterparty, its brand, products, officers, or directors, and may include restrictions on public announcements or conduct harming reputation.",
+        "source_contracts": [
+          "Magenta_Therapeutics,_Inc._-_Master_Development_and_Manufacturing_Agreement",
+          "Monsanto_Company_-_SECOND_A_R_EXCLUSIVE_AGENCY_AND_MARKETING_AGREEMENT_",
+          "MusclepharmCorp_20170208_10-KA_EX-10.38_9893581_EX-10.38_Co-Branding_Agreement",
+          "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP_AGREEMENT",
+          "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP_AGREEMENT",
+          "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT",
+          "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT",
+          "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement",
+          "NeuroboPharmaceuticalsInc_20190903_S-4_EX-10.36_11802165_EX-10.36_Manufacturing_Agreement__Supply_Agreement",
+          "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark_License_Agreement",
+          "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT",
+          "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT",
+          "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR_AGREEMENT",
+          "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1",
+          "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT",
+          "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT",
+          "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT",
+          "PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement_Agreement",
+          "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement",
+          "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1",
+          "PlayboyEnterprisesInc_20090220_10-QA_EX-10.2_4091580_EX-10.2_Content_License_Agreement__Marketing_Agreement__Sales-Purchase_Agreement1",
+          "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT",
+          "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement",
+          "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement",
+          "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement",
+          "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement",
+          "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement",
+          "SPIENERGYCO,LTD_07_10_2014-EX-10-Cooperation_Agreement_of_50MWp_Photovoltaic_Grid-connected_Power_Generation_Project_in_Yangqiao_of~1",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        ],
+        "best_example": {
+          "input": "Neither party shall make any negative, disparaging, or defamatory statements about the other party, its officers, directors, employees, or business operations, whether in public or private communications.",
+          "output": {
+            "found": true,
+            "extracted_text": "Neither party shall make any negative, disparaging, or defamatory statements about the other party, its officers, directors, employees, or business operations, whether in public or private communications.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_most_favored_nation",
+        "category": "Most Favored Nation",
+        "description": "Identifies clauses where a party is guaranteed pricing or terms no less favorable than those offered to other parties or third parties for similar technology, goods, or services.",
+        "source_contracts": [
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller_Agreement",
+          "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "Sonos,_Inc._-_Manufacturing_Agreement_",
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT",
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "TELKOMSALTD_01_30_2003-EX-10-LICENCE_AND_MAINTENANCE_AGREEMENT",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VIRGINGALACTICHOLDINGS,INC_04_08_2020-EX-99.1-JOINT_FILING_STATEMENT",
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement",
+          "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        ],
+        "best_example": {
+          "input": "If at any time during the term of this Agreement, Licensor grants to any third party a license to the Licensed Technology on terms more favorable than those granted to Licensee hereunder, Licensee shall be entitled to the benefit of such more favorable terms upon written request.",
+          "output": {
+            "found": true,
+            "extracted_text": "If at any time during the term of this Agreement, Licensor grants to any third party a license to the Licensed Technology on terms more favorable than those granted to Licensee hereunder, Licensee shall be entitled to the benefit of such more favorable terms upon written request.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_exception",
+        "category": "Exception",
+        "description": "Checks if the contract contains exceptions or carveouts to Non-Compete, Exclusivity and No-Solicit of Customers above.",
+        "source_contracts": [
+          "TALLGRASSENERGY,LP_02_20_2020-EX-99.26-JOINT_FILING_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Contract text containing Non-Compete, Exclusivity, and No-Solicit clauses.",
+          "output": {
+            "found": true,
+            "extracted_text": "Exceptions to the Non-Compete obligation shall include...",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_001",
+        "name": "check_competitive_exception",
+        "category": "Competitive Exception",
+        "description": "Checks for exceptions or carveouts to Non-Compete, Exclusivity, and No-Solicit of Customers clauses.",
+        "source_contracts": [
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement"
+        ],
+        "best_example": {
+          "input": "Sample contract text containing competitive exception clauses",
+          "output": {
+            "found": true,
+            "extracted_text": "Exceptions to non-compete obligations include...",
+            "confidence": 0.95
+          }
+        }
+      }
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 2385782,
+    "completion_tokens": 408580,
+    "total_tokens": 2794362
+  },
+  "duration_seconds": 22296.04,
+  "created_at": "2026-07-19T22:33:48.228228+00:00"
+}

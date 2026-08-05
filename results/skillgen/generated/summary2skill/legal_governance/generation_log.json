@@ -1,0 +1,228 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "Governing Law",
+          "found": true,
+          "summary": "The contract is governed by the laws of the State of California.",
+          "key_terms": [
+            "State of California",
+            "Orange County, California"
+          ],
+          "source_paragraph": "This Agreement will be governed and construed in accordance with the laws of the State of California without giving effect to conflict of laws principles. Both parties submit to personal jurisdiction in California and further agree that any cause of action arising under this Agreement shall be brought in a court in Orange County, California."
+        },
+        {
+          "category": "Audit Rights",
+          "found": true,
+          "summary": "2TheMart has the right to audit i-Escrow's records related to advertising payments once every twelve months.",
+          "key_terms": [
+            "audit",
+            "CPA",
+            "once every twelve months",
+            "fifteen days notice"
+          ],
+          "source_paragraph": "Once every twelve (12) months, 2TheMart through a CPA may inspect and audit such records to verify reports. Any such inspection will be conducted in a manner that does not unreasonably interfere with i-Escrow's business activities and with no less than fifteen (15) days notice."
+        },
+        {
+          "category": "Insurance",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Governing Law",
+          "found": true,
+          "summary": "The contract is governed by the domestic laws of the State of Israel.",
+          "key_terms": [
+            "State of Israel"
+          ],
+          "source_paragraph": "This Agreement and any claim, controversy or dispute arising out of or related to this Agreement, any of the transactions contemplated hereby and/or the interpretation and enforcement of the rights and duties of the Parties, whether arising in contract, tort, equity or otherwise, shall be governed by and construed in accordance with the domestic laws of the State of Israel (including in respect of the statute of limitations or other limitations period applicable to any such claim, controversy or dispute), without giving effect to any choice or conflict of law provision or rule (whether of the State of Israel or any other jurisdiction) that would cause the application of the laws of any jurisdiction other than the State of Israel."
+        },
+        {
+          "category": "Audit Rights",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Insurance",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Governing Law",
+          "found": true,
+          "summary": "The contract is governed by the laws of the Commonwealth of Pennsylvania.",
+          "key_terms": [
+            "Commonwealth of Pennsylvania"
+          ],
+          "source_paragraph": "The Joint Venturers declare that in entering into this Agreement, they have contracted with reference to the laws of the Commonwealth of Pennsylvania, and the construction and interpretation of the terms and provisions of this Agreement shall be interpreted and construed under the laws of the Commonwealth of Pennsylvania, except in such cases and to such extent as the laws of another jurisdiction shall necessarily control."
+        },
+        {
+          "category": "Audit Rights",
+          "found": true,
+          "summary": "A Joint Venturer may request an audit of the Joint Venture books and records by an independent accountant acceptable to both Joint Venturers.",
+          "key_terms": [
+            "audited",
+            "independent accountant"
+          ],
+          "source_paragraph": "If requested by a Joint Venturer, the Joint Venture books and records shall be audited as of the close of each year by an independent accountant acceptable to both Joint Venturers."
+        },
+        {
+          "category": "Insurance",
+          "found": true,
+          "summary": "Insurance costs in connection with distribution of Products or operations of the Joint Venture are included as direct costs and expenses to be paid by the Joint Venture.",
+          "key_terms": [
+            "insurance costs"
+          ],
+          "source_paragraph": "All direct costs and expenses, which shall include any insurance costs in connection with the distribution of the Products or operations of the Joint Venture, or if the business of the Joint Venture requires additional office facilities than those now presently maintained by each Joint Venturer, such item shall be paid by the Joint Venture."
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "Governing Law",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Audit Rights",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Insurance",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "Governing Law",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Audit Rights",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Insurance",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "Governing Law": {
+      "found_count": 207,
+      "total_contracts": 306,
+      "common_patterns": [
+        "International contracts often choose the laws of a specific country or province (e.g., England, Japan, Israel, China, Hong Kong, Ontario).",
+        "Some contracts specify exclusive jurisdiction in a particular court or location.",
+        "Some contracts specify venue or jurisdiction in addition to governing law.",
+        "Most contracts specify a U.S. state law, with Delaware, New York, California, Texas, and Florida being the most common.",
+        "Many contracts exclude conflict of laws principles or choice of law rules."
+      ],
+      "example_extractions": [
+        "The contract is governed by the laws of the State of California.",
+        "The contract is governed by the laws of the State of Delaware.",
+        "The contract is governed by the laws of the State of New York.",
+        "The contract is governed by the laws of the State of Texas.",
+        "The contract is governed by the laws of the State of New York, with exclusive jurisdiction in New York, New York.",
+        "The contract is governed by the laws of the State of Delaware, without regard to conflict-of-law provisions."
+      ],
+      "variations": [
+        "Some contracts are governed by the laws of a foreign country or province (e.g., Israel, Canada, England, France, Spain, China, Taiwan, Hong Kong, Italy, Papua New Guinea, Colombia, Kazakhstan).",
+        "A few contracts do not specify a governing law but specify jurisdiction for disputes.",
+        "One contract allows lawsuits in either Massachusetts or the Netherlands without specifying governing law."
+      ]
+    },
+    "Audit Rights": {
+      "found_count": 111,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Audits are often conducted by an independent accountant or auditor.",
+        "Often, an independent certified public accountant or third-party auditor is used.",
+        "Frequency is often limited (e.g., once per year or once per contract year).",
+        "Audits are usually conducted during normal business hours upon reasonable notice.",
+        "Audits are typically limited to once per year or less frequently."
+      ],
+      "example_extractions": [
+        "2TheMart has the right to audit i-Escrow's records related to advertising payments once every twelve months.",
+        "Licensor has the right to audit Licensee's premises through a third-party auditor to ensure quality control of Licensed Products.",
+        "Each party has the right to audit the other party's books and records related to the agreement.",
+        "The Company has the right to inspect the Contractor's premises, books, and records related to the Renewable Note Program.",
+        "Kitov has the right to inspect Dexcel's manufacturing facilities used for the Product.",
+        "VerticalNet has the right to audit LeadersOnline's financial records related to payments under the agreement."
+      ],
+      "variations": [
+        "Some audit rights are limited to specific purposes (e.g., royalty verification, quality assurance, compliance with laws).",
+        "In some contracts, both parties have mutual audit rights.",
+        "A few contracts allow audits of facilities or operations, not just financial records.",
+        "One contract includes a provision that if an audit reveals underpayment exceeding a threshold, the audited party bears the audit cost."
+      ]
+    },
+    "Insurance": {
+      "found_count": 81,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Minimum coverage amounts are frequently specified (e.g., $1,000,000 per occurrence, $2,000,000 aggregate).",
+        "Many contracts require the other party to be named as an additional insured on the policy.",
+        "Many contracts require one party to name the other as an additional insured on their policies.",
+        "Insurance requirements often include commercial general liability, product liability, and workers' compensation insurance.",
+        "Evidence of insurance (e.g., certificate of insurance) is often required to be provided upon request."
+      ],
+      "example_extractions": [
+        "Agency must maintain errors and omissions insurance with minimum limits of $1,000,000 per incident and a fidelity and electronic crime policy.",
+        "Establishment must maintain commercial general liability insurance with specified limits and list Apollo as an additional insured.",
+        "Each party agrees to carry liability insurance sufficient to cover the risks posed under the agreement.",
+        "The franchisee is required to maintain insurance policies with specified coverages and naming the franchisor as an additional insured.",
+        "Each party must maintain comprehensive general liability and product liability insurance with minimum coverage amounts.",
+        "Both parties are required to maintain general and product liability insurance and name the other as an additional insured."
+      ],
+      "variations": [
+        "Some contracts require specific types of insurance (e.g., errors and omissions, fidelity, cyber, hull, spares).",
+        "Coverage amounts vary widely, from $1,000,000 to $10,000,000 or more.",
+        "A few contracts require insurance with insurers having a certain A.M. Best rating.",
+        "One contract explicitly states that the Producer has no insurance requirement."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md - Legal Governance Contract Review Skill\n\n## Covered Categories\n\n### Governing Law\n- **Discovery frequency**: 67.6% of contracts (207 out of 306)\n- **Common patterns**: Most contracts specify a U.S. state law (Delaware, New York, California, Texas, Florida most common); international contracts often choose a specific country's law; many exclude conflict of laws principles; some specify exclusive jurisdiction in addition to governing law.\n\n### Audit Rights\n- **Discovery frequency**: 36.3% of contracts (111 out of 306)\n- **Common patterns**: Audits typically conducted by independent CPA or third-party auditor; frequency limited to once per year; conducted during normal business hours upon reasonable notice; often limited to financial records related to payments or royalties.\n\n### Insurance\n- **Discovery frequency**: 26.5% of contracts (81 out of 306)\n- **Common patterns**: Minimum coverage amounts specified (often $1M-$2M); requirement to name counterparty as additional insured; includes commercial general liability, product liability, workers' compensation; evidence of insurance required upon request.\n\n## Common Patterns\n\n### Governing Law\n1. **U.S. State Law Selection**: Most common pattern. Example: \"This Agreement shall be governed by and construed in accordance with the laws of the State of [Delaware/New York/California/Texas/Florida].\"\n2. **International Law Selection**: Contracts involving parties from different countries. Example: \"This Agreement shall be governed by the laws of [England/Japan/Israel/China/Hong Kong/Ontario].\"\n3. **Exclusive Jurisdiction + Governing Law**: Specifies both governing law and exclusive venue. Example: \"This Agreement is governed by the laws of the State of New York, with exclusive jurisdiction in New York, New York.\"\n\n### Audit Rights\n1. **Financial Record Audit**: Right to audit books/records related to payments, royalties, or financial obligations. Example: \"[Party] has the right to audit [Counterparty]'s books and records related to payments under this agreement.\"\n2. **Quality/Compliance Audit**: Right to inspect facilities, premises, or manufacturing operations. Example: \"[Party] has the right to inspect [Counterparty]'s premises, books, and records related to the [Program/Product].\"\n3. **Mutual Audit Rights**: Both parties have reciprocal audit rights. Example: \"Each party has the right to audit the other party's books and records related to this agreement.\"\n\n### Insurance\n1. **Standard Liability Coverage**: Requires commercial general liability and product liability insurance with minimum limits. Example: \"[Party] must maintain commercial general liability insurance with minimum limits of $1,000,000 per occurrence and $2,000,000 aggregate.\"\n2. **Additional Insured Requirement**: Requires naming counterparty as additional insured. Example: \"[Party] shall name [Counterparty] as an additional insured on its insurance policies.\"\n3. **Evidence of Insurance**: Requires providing certificate of insurance upon request. Example: \"[Party] shall provide [Counterparty] with a certificate of insurance evidencing such coverage upon request.\"\n\n## Review Checklist\n\n### Governing Law\n- [ ] Does the contract specify a governing law (state or country)?\n- [ ] Is the governing law clearly stated in a single clause?\n- [ ] Does the contract also specify exclusive jurisdiction or venue?\n- [ ] Does the contract exclude conflict of laws principles?\n- [ ] Is the governing law appropriate for the parties' locations and the contract's subject matter?\n\n### Audit Rights\n- [ ] Does any party have audit rights over the other?\n- [ ] What is the scope of the audit (financial records, facilities, operations)?\n- [ ] Is the audit frequency specified (e.g., once per year)?\n- [ ] Who conducts the audit (independent accountant, third-party auditor)?\n- [ ] Are there notice requirements and time restrictions (e.g., normal business hours)?\n- [ ] Are there cost-bearing provisions (e.g., audited party pays if underpayment exceeds threshold)?\n\n### Insurance\n- [ ] Does the contract require insurance to be maintained?\n- [ ] What types of insurance are required (CGL, product liability, workers' comp, errors & omissions)?\n- [ ] Are minimum coverage amounts specified?\n- [ ] Is the counterparty required to be named as an additional insured?\n- [ ] Is evidence of insurance required to be provided?\n- [ ] Are there any exceptions (e.g., \"Producer has no insurance requirement\")?\n\n## Evidence Extraction Rules\n\n### Governing Law\n- **Location**: Typically found in a \"Governing Law\" or \"Choice of Law\" section, often near the end of the contract.\n- **Keywords**: \"governed by\", \"governing law\", \"choice of law\", \"laws of\", \"jurisdiction\", \"venue\", \"conflict of laws\".\n- **Extraction**: Capture the full sentence or clause specifying the governing law. Note if jurisdiction/venue is also specified. Record any exclusion of conflict of laws principles.\n\n### Audit Rights\n- **Location**: Often in a dedicated \"Audit Rights\" or \"Inspection\" section, or within \"Records\" or \"Compliance\" clauses.\n- **Keywords**: \"audit\", \"inspect\", \"examine\", \"books and records\", \"financial records\", \"premises\", \"facilities\", \"independent accountant\", \"third-party auditor\".\n- **Extraction**: Capture the full clause describing the audit right. Note the scope (financial, quality, compliance), frequency, notice requirements, who conducts the audit, and any cost-bearing provisions.\n\n### Insurance\n- **Location**: Typically in an \"Insurance\" section, or within \"Indemnification\" or \"General Provisions\".\n- **Keywords**: \"insurance\", \"coverage\", \"additional insured\", \"certificate of insurance\", \"commercial general liability\", \"product liability\", \"workers' compensation\", \"errors and omissions\".\n- **Extraction**: Capture the full insurance clause. Note types of insurance required, minimum coverage amounts, additional insured requirements, and evidence of insurance requirements.\n\n## Output Format\n\n```json\n{\n  \"status\": \"complete\" | \"incomplete\" | \"error\",\n  \"answer\": \"Summary of findings for each category, or error message.\",\n  \"evidence_unit_ids\": [\"list of evidence unit IDs supporting the answer\"],\n  \"source_contract_ids\": [\"list of contract IDs where evidence was found\"],\n  \"missing_inputs\": [\"list of required inputs that were not provided\"],\n  \"human_review_required\": true | false\n}\n```\n\n## Boundary Rules\n\n### What the skill SHOULD do:\n- **Extract and summarize** governing law, audit rights, and insurance provisions from contracts.\n- **Identify patterns** based on the aggregated knowledge (e.g., common state laws, typical audit frequency, standard insurance amounts).\n- **Flag missing or ambiguous provisions** for human review.\n- **Provide clear, structured output** in the specified JSON format.\n- **Use evidence extraction rules** to locate and capture relevant clauses.\n\n### What the skill should NOT do:\n- **Do not interpret or advise** on the legal sufficiency or enforceability of provisions.\n- **Do not assume** a provision exists if not explicitly stated (e.g., do not infer governing law from jurisdiction alone unless clearly linked).\n- **Do not modify or rewrite** contract language.\n- **Do not make judgments** about which governing law is \"better\" or which insurance amount is \"adequate.\"\n- **Do not handle categories outside** Governing Law, Audit Rights, and Insurance.\n- **Do not generate legal opinions** or recommendations.\n- **Do not ignore explicit exceptions** (e.g., \"Producer has no insurance requirement\" should be reported as found)."
+}

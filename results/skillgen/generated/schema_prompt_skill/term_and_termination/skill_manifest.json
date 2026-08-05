@@ -1,0 +1,37 @@
+{
+  "method": "schema_prompt_skill",
+  "case_id": "term_and_termination",
+  "model": "deepseek-chat",
+  "schema_sections": [
+    "Covered Categories",
+    "Review Checklist",
+    "Evidence Extraction Rules",
+    "Output Format",
+    "Boundary Rules"
+  ],
+  "input_summary": {
+    "contracts_sampled": 10,
+    "sampled_contract_ids": [
+      "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING_AGREEMENT",
+      "NICELTD_06_26_2003-EX-4.5-OUTSOURCING_AGREEMENT",
+      "IMAGEWARESYSTEMSINC_12_20_1999-EX-10.22-MAINTENANCE_AGREEMENT",
+      "EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding_Agreement",
+      "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2",
+      "DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content_License_Agreement",
+      "Sonos,_Inc._-_Manufacturing_Agreement_",
+      "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT",
+      "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET_INVESTMENT_INCOME_MAINTENANCE_AGREEMENT",
+      "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE_DISTRIBUTOR_AGREEMENT"
+    ],
+    "contracts_with_evidence_count": 168,
+    "category_count": 3,
+    "estimated_input_tokens": 86558
+  },
+  "usage": {
+    "prompt_tokens": 70693,
+    "completion_tokens": 1168,
+    "total_tokens": 71861
+  },
+  "duration_seconds": 14.98,
+  "created_at": "2026-07-15T13:21:08.833711+00:00"
+}

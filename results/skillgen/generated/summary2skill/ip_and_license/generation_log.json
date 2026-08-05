@@ -1,0 +1,538 @@
+{
+  "step1_summaries": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "extractions": [
+        {
+          "category": "License Grant",
+          "found": true,
+          "summary": "Both parties grant each other non-exclusive rights to use their respective content and marks for the purposes of the agreement.",
+          "key_terms": [
+            "non-exclusive",
+            "right to use",
+            "reproduce",
+            "distribute",
+            "publicly perform",
+            "publicly display",
+            "digitally perform"
+          ],
+          "source_paragraph": "2TheMart hereby grants to i-Escrow a worldwide, non-exclusive right to use, reproduce, distribute, publicly perform, publicly display and digitally perform the 2TheMart Content soley with respect to  and in conjunction with the Co-Branded Site all with the prior written consent of 2TheMart, for the term of this Agreement.  i-Escrow hereby grants to 2TheMart a worldwide, non-exclusive right to use, reproduce, distribute, publicly perform, publicly display and digitally perform the i-Escrow Content on or in conjunction with 2TheMart auctions."
+        },
+        {
+          "category": "Non-Transferable License",
+          "found": true,
+          "summary": "All rights granted are not sublicenseable, transferable or assignable, except for certain limited exceptions.",
+          "key_terms": [
+            "not sublicenseable",
+            "transferable",
+            "assignable"
+          ],
+          "source_paragraph": "All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable.  Notwithstanding the foregoing, either party may use a third party web host, but all actions or failures to act of the web host that would be a breach of this Agreement, were the actions or failures to act taken by the applicable party, shall be deemed a breach of this Agreement.  In addition, 2TheMart may grant sublicenses to companies that 2TheMart has a business relationship with to the extent that 2TheMart Content is visible from such company's web-site through a link or other means."
+        },
+        {
+          "category": "Affiliate License-Licensor",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensee",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Unlimited/All-You-Can-Eat-License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Irrevocable or Perpetual License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Source Code Escrow",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Post-Termination Services",
+          "found": true,
+          "summary": "Upon termination, i-Escrow must pay amounts owed, both parties must remove each other's content and marks, and certain provisions survive to complete pending transactions.",
+          "key_terms": [
+            "pay all amounts owed",
+            "remove the other party's content and Marks",
+            "survive to the extent necessary for i-Escrow to complete any Customer transactions which are pending"
+          ],
+          "source_paragraph": "Upon expiration or termination of this Agreement for any reason: (a) all rights granted herein shall terminate, (b) i-Escrow shall pay all amounts owed to 2TheMart within six (6) weeks of termination, and (c) each party shall remove the other party's content and Marks from their servers.  Notwithstanding the foregoing, unless this Agreement was terminated for a material breach, all provisions of this Agreement shall survive to the extent necessary for i-Escrow to complete any Customer transactions which are pending at the time of expiration or termination."
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "extractions": [
+        {
+          "category": "License Grant",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Transferable License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensor",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensee",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Unlimited/All-You-Can-Eat-License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Irrevocable or Perpetual License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Source Code Escrow",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Post-Termination Services",
+          "found": true,
+          "summary": "Upon termination, Provider must deliver work product, return Recipient's property, remove its own property, deliver Confidential Information, repay prepaid fees, erase Confidential Information, and certify compliance.",
+          "key_terms": [
+            "deliver",
+            "return",
+            "remove",
+            "repay",
+            "erase",
+            "certify"
+          ],
+          "source_paragraph": "Upon expiration or termination of this Agreement for any reason, Provider shall promptly: (a) Deliver to Recipient all documents, work product, and other materials, whether or not complete, prepared by or on behalf of Provider in the course of performing the Services for which Recipient has paid. (b) Return to Recipient all Recipient-owned property, equipment, or materials in its possession or control. (c) Remove any Provider-owned property, equipment, or materials located at Recipient's locations. (d) Deliver to Recipient, all documents and tangible materials (and any copies) containing, reflecting, incorporating, or based on Recipient's Confidential Information. (e) On a pro rata basis, repay all fees and expenses paid in advance for any Services which have not been provided. (f) Permanently erase all of Recipient's Confidential Information from its computer systems. (g) Certify in writing to Recipient that it has complied with the requirements of this Section 3.6"
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "extractions": [
+        {
+          "category": "License Grant",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Transferable License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensor",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensee",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Unlimited/All-You-Can-Eat-License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Irrevocable or Perpetual License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Source Code Escrow",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Post-Termination Services",
+          "found": true,
+          "summary": "The contract provides for post-termination procedures including payment of debts and distribution of assets.",
+          "key_terms": [
+            "termination",
+            "liquidation",
+            "distribution"
+          ],
+          "source_paragraph": "On any termination of the Joint Venture, its debt shall be paid or provided for in a manner satisfactory to the Joint Venturers. Then, any unexpended portion of Joint Venture funds shall be distributed to the Joint Venturers in accordance with their prorata ownership in the Joint Venture and all other assets of the Joint Venture shall be distributed as undivided interests to the Joint Venturers ratably according to their prorata interests in the Joint Venture as set forth in Section 6."
+        }
+      ]
+    },
+    {
+      "contract_id": "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_",
+      "extractions": [
+        {
+          "category": "License Grant",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Transferable License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensor",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensee",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Unlimited/All-You-Can-Eat-License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Irrevocable or Perpetual License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Source Code Escrow",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Post-Termination Services",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        }
+      ]
+    },
+    {
+      "contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT",
+      "extractions": [
+        {
+          "category": "License Grant",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Non-Transferable License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensor",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Affiliate License-Licensee",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Unlimited/All-You-Can-Eat-License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Irrevocable or Perpetual License",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Source Code Escrow",
+          "found": false,
+          "summary": "",
+          "key_terms": [],
+          "source_paragraph": ""
+        },
+        {
+          "category": "Post-Termination Services",
+          "found": true,
+          "summary": "The contract provides for reimbursement of the Agent's accountable out-of-pocket expenses upon termination of the Offering.",
+          "key_terms": [
+            "reimbursement",
+            "out-of-pocket expenses",
+            "termination"
+          ],
+          "source_paragraph": "In the event the Offering is terminated, the Agent shall be reimbursed for its actual accountable out-of-pocket expenses."
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "License Grant": {
+      "found_count": 97,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Non-exclusive licenses are most common, often described as 'non-exclusive, non-transferable, royalty-free'.",
+        "Many licenses include the right to sublicense, especially to affiliates or subsidiaries.",
+        "May include exclusive licenses for distribution or commercialization.",
+        "Grants a non-exclusive, non-transferable, royalty-free license to use software, trademarks, or content for a specific purpose.",
+        "Licenses are typically limited to specific purposes, fields, territories, or durations."
+      ],
+      "example_extractions": [
+        "Both parties grant each other non-exclusive rights to use their respective content and marks for the purposes of the agreement.",
+        "Licensor grants Licensee a limited, non-exclusive, worldwide, royalty-free license to use the Licensed Mark for Licensed Products and under Existing Agreements.",
+        "Array grants Ono exclusive licenses under Array Patents, Array Know-How, and Array's interests in Joint Patents and Joint Know-How to Develop, Manufacture, and Commercialize Products in the Ono Territory.",
+        "The Company grants the Contractor a limited license to use its logo, corporate colors, trademarks, trade names, fonts, and other aspects of corporate identity in advertisements and marketing materials related to the Notes and on the Contractor's website, subject to the Company's prior written approval.",
+        "Kubient grants Customer a limited, royalty-free, non-exclusive, non-transferable, non-assignable, revocable license to access and use the Auction Platform for serving Inventory at Target Demand.",
+        "Licensor grants Licensee an exclusive, non-transferable, non-sublicensable license to use the Licensed Domain Names and Licensed Content in connection with the Business."
+      ],
+      "variations": [
+        "Some licenses are 'limited' or 'restricted' to specific uses, while others are 'unlimited' or 'all-you-can-eat'.",
+        "Royalty-bearing licenses appear in commercial agreements, while royalty-free licenses are common in cross-promotional or internal use contexts.",
+        "Some licenses are 'irrevocable' or 'perpetual', especially for software or intellectual property transfers.",
+        "Affiliate licenses are sometimes explicitly granted to the licensee's subsidiaries or affiliates."
+      ]
+    },
+    "Non-Transferable License": {
+      "found_count": 87,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Transfer or assignment requires prior written consent from the licensor.",
+        "Exceptions are often made for assignments to affiliates or in connection with mergers or asset sales.",
+        "License is explicitly non-transferable, non-assignable, and/or non-sublicensable.",
+        "Non-transferability is frequently coupled with non-sublicensability.",
+        "Assignment or transfer of rights is prohibited without prior written consent of the other party."
+      ],
+      "example_extractions": [
+        "All rights granted are not sublicenseable, transferable or assignable, except for certain limited exceptions.",
+        "The license granted to the Contractor is limited and subject to Company approval, and the Contractor cannot assign the Agreement or its rights without the Company's written consent, effectively making the license non-transferable.",
+        "Both licenses granted under the Agreement are non-assignable, meaning they cannot be transferred to a third party without consent.",
+        "The license granted is nontransferable except in accordance with Section 14.1, which allows assignment in connection with merger or acquisition.",
+        "The license granted is explicitly non-transferable and non-assignable.",
+        "Licensee may not assign, sublicense, or transfer its license rights without Licensor's prior written consent."
+      ],
+      "variations": [
+        "Some contracts allow transfer to affiliates without consent, while others require consent for any transfer.",
+        "In franchise agreements, transfer is often subject to franchisor's approval and conditions.",
+        "Some licenses are 'non-transferable' but allow sublicensing to certain parties like affiliates or subcontractors.",
+        "In some cases, the license is transferable only to a specific entity (e.g., the Kuwait Government)."
+      ]
+    },
+    "Affiliate License-Licensor": {
+      "found_count": 46,
+      "total_contracts": 306,
+      "common_patterns": [
+        "License includes intellectual property owned or controlled by the licensor's affiliates.",
+        "The licensor remains responsible for its affiliates' performance.",
+        "Licensed IP includes intellectual property owned or controlled by the licensor and its affiliates.",
+        "Licensor grants license on behalf of itself and its affiliates.",
+        "Affiliates of the licensor may be required to grant licenses or provide assistance."
+      ],
+      "example_extractions": [
+        "The license is granted by Licensor on behalf of itself and its Affiliates.",
+        "The license grant from BLI includes intellectual property controlled by BLI or its Affiliates.",
+        "The license includes intellectual property owned by the franchisor's parent company, which is an affiliate of the licensor.",
+        "The contract allows Miltenyi to have Miltenyi Products manufactured by its Affiliates, and Miltenyi remains responsible for their performance.",
+        "The license grant includes affiliates, subsidiaries, and parent companies of Lifeway as licensees.",
+        "The license includes patents of Liquidmetal or any Affiliate of Liquidmetal."
+      ],
+      "variations": [
+        "Some contracts explicitly state that the licensor will cause its affiliates to grant the license.",
+        "In some cases, the licensor's affiliates are not mentioned, but the definition of 'Control' includes affiliates.",
+        "Affiliate involvement may be limited to specific IP categories (e.g., patents, trademarks)."
+      ]
+    },
+    "Affiliate License-Licensee": {
+      "found_count": 46,
+      "total_contracts": 306,
+      "common_patterns": [
+        "License is granted to the licensee and its affiliates.",
+        "Licensee is responsible for its affiliates' compliance with the agreement.",
+        "Licensee may sublicense or transfer rights to its affiliates.",
+        "Affiliates are permitted to use the licensed IP under the same terms.",
+        "Licensee may sublicense to its affiliates without additional consent."
+      ],
+      "example_extractions": [
+        "The license is granted to Licensee and its subsidiaries and affiliates, and includes a right to sublicense to Licensee's subsidiaries and joint venturers.",
+        "The license grant to Ginkgo includes the right to sublicense to its Affiliates.",
+        "The license is granted to Bizzingo and its affiliates, so affiliates of the licensee are included.",
+        "The license rights extend to Bank of America's Affiliates, and Bank of America is responsible for its Affiliates' obligations.",
+        "Party B and its affiliates are granted exclusive rights as the exclusive cooperator and provider of real estate and home furnishing information.",
+        "The license is granted to Allscripts and its Affiliates."
+      ],
+      "variations": [
+        "Some contracts allow sublicensing only to affiliates, while others allow sublicensing to any third party with consent.",
+        "In some cases, affiliates are defined broadly to include subsidiaries, joint ventures, or related bodies corporate.",
+        "Licensee may be required to guarantee the performance of its affiliates."
+      ]
+    },
+    "Unlimited/All-You-Can-Eat-License": {
+      "found_count": 9,
+      "total_contracts": 306,
+      "common_patterns": [
+        "License grants 'unlimited' rights to use, reproduce, or sublicense the licensed material.",
+        "Often coupled with perpetual and irrevocable terms.",
+        "May be limited by territory or term but not by number of users or copies.",
+        "May include rights to use, reproduce, modify, and distribute without restriction.",
+        "Often used in content distribution or software hosting agreements."
+      ],
+      "example_extractions": [
+        "The grant is described as 'unlimited right and privilege' to use the Property, indicating an unlimited usage license.",
+        "Corio is granted an unlimited number of sublicenses to Customers and an unlimited number of internal users for its own business operations.",
+        "Corio may sublicense an unlimited number of Customers to access and use the Software and MarketSite.net Service.",
+        "The license grants unlimited runs for the License Term and includes all rights of distribution, copying, and sublicensing.",
+        "Individual grants Lifeway an unlimited, perpetual, non-exclusive, worldwide, royalty-free right to use her name, image, and likeness in Marketing Materials.",
+        "The contract grants an unlimited, worldwide, perpetual, royalty-free license for Assigned IP that cannot be assigned."
+      ],
+      "variations": [
+        "Some licenses are unlimited in scope but limited to specific fields or territories.",
+        "Unlimited licenses may be royalty-bearing or royalty-free.",
+        "In some cases, 'unlimited' refers to the number of permitted users or sublicensees, not the scope of use."
+      ]
+    },
+    "Irrevocable or Perpetual License": {
+      "found_count": 34,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Perpetual licenses often survive termination of the agreement for certain purposes.",
+        "License is described as 'perpetual' or 'irrevocable'.",
+        "Often granted for IP that cannot be assigned or for background IP.",
+        "Irrevocable licenses cannot be terminated by the licensor except for cause.",
+        "Common in software licenses, intellectual property assignments, and spin-off agreements."
+      ],
+      "example_extractions": [
+        "The contract grants a perpetual license for end users who previously downloaded a Zynga game that includes WPT's Licensed Property to continue using that game on their device in perpetuity.",
+        "The license granted is perpetual and irrevocable.",
+        "The Client is granted a perpetual, irrevocable license to use pre-existing work incorporated into deliverables with Client's consent.",
+        "The license grants are explicitly described as perpetual and irrevocable.",
+        "Bachem grants Magenta a perpetual, irrevocable, nonexclusive, worldwide, paid-up, royalty-free license under Bachem Intellectual Property incorporated into deliverables.",
+        "The license granted for LMG Tools is irrevocable and perpetual."
+      ],
+      "variations": [
+        "Some licenses are perpetual but not irrevocable, or vice versa.",
+        "Perpetual licenses may be limited to specific versions or updates.",
+        "In some cases, the license is perpetual only for certain rights (e.g., use of pre-existing IP)."
+      ]
+    },
+    "Source Code Escrow": {
+      "found_count": 6,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Common in software licensing and hosting agreements.",
+        "Release conditions are specified (e.g., bankruptcy, breach).",
+        "Source code is deposited with an escrow agent.",
+        "Source code is deposited with an escrow agent for release upon certain conditions.",
+        "Licensee may obtain source code upon certain events."
+      ],
+      "example_extractions": [
+        "Commerce One agrees to deposit source code into escrow, which may be released to Corio upon dissolution or material breach of support obligations.",
+        "Upon Acceptance, HealthGate must deliver the source code of the Proprietary Software into escrow in accordance with the Escrow Agreement.",
+        "The contract permits disclosure of source code to commercial source code escrow providers, who may release it to third parties under escrow agreements.",
+        "The contract references an Escrow Agreement as one of the Ancillary Agreements, indicating a source code escrow arrangement.",
+        "The contract references an Escrow Agreement in Annexure 3, under which source code may be deposited and released upon certain conditions.",
+        "The contract requires M&I to deposit source code into escrow, which can be released to Customer upon certain events."
+      ],
+      "variations": [
+        "Some contracts require the escrow to be established within a certain period after the effective date.",
+        "Release conditions may vary, including dissolution, material breach, or failure to maintain support.",
+        "In some cases, the escrow is optional or only for specific software components."
+      ]
+    },
+    "Post-Termination Services": {
+      "found_count": 151,
+      "total_contracts": 306,
+      "common_patterns": [
+        "Transition assistance or wind-down periods to ensure orderly transfer of services.",
+        "Survival of certain provisions (e.g., confidentiality, indemnification, limitation of liability).",
+        "Return of property and materials.",
+        "Survival of certain obligations (e.g., confidentiality, indemnification, payment).",
+        "Obligations to return or destroy confidential information and materials."
+      ],
+      "example_extractions": [
+        "Upon termination, i-Escrow must pay amounts owed, both parties must remove each other's content and marks, and certain provisions survive to complete pending transactions.",
+        "Upon termination, Provider must deliver work product, return Recipient's property, remove its own property, deliver Confidential Information, repay prepaid fees, erase Confidential Information, and certify compliance.",
+        "Upon termination, the Distributor must cease using trademarks, return confidential information, and Erchonia will complete accepted purchase orders except in case of Distributor's breach.",
+        "Upon termination, the franchisee must pay amounts owed, cease using Marks, de-identify premises, return confidential information, and the franchisor has an option to purchase the franchise.",
+        "Upon termination, Kubient must cease providing Services, the license is revoked, Customer must cease use, and each party must return or destroy the other's Confidential Information.",
+        "Upon termination, Licensee has a 90-day transition period to cease use of Licensed Domain Names and Content."
+      ],
+      "variations": [
+        "Some contracts include a 'sell-off period' allowing continued sale of existing inventory.",
+        "Transition assistance may be limited to a specific period (e.g., 90 days, 180 days).",
+        "In some cases, the licensor has an option to purchase the licensee's assets or inventory.",
+        "Survival clauses vary widely; some specify which sections survive, while others have general survival language."
+      ]
+    }
+  },
+  "step3_skill_md": "# SKILL.md - IP and License Review Skill\n\n## Covered Categories\n\n### License Grant\n- **Discovery frequency**: 31.7% of contracts (97/306)\n- **Common patterns**: Non-exclusive, non-transferable, royalty-free licenses are most prevalent. Licenses are typically limited to specific purposes, fields, territories, or durations. Exclusive licenses appear in distribution and commercialization agreements.\n\n### Non-Transferable License\n- **Discovery frequency**: 28.4% of contracts (87/306)\n- **Common patterns**: Transfer or assignment requires prior written consent. Exceptions exist for affiliates or mergers. Often coupled with non-sublicensability.\n\n### Affiliate License-Licensor\n- **Discovery frequency**: 15.0% of contracts (46/306)\n- **Common patterns**: License includes IP owned or controlled by licensor's affiliates. Licensor remains responsible for affiliate performance. Licensor grants license on behalf of itself and its affiliates.\n\n### Affiliate License-Licensee\n- **Discovery frequency**: 15.0% of contracts (46/306)\n- **Common patterns**: License granted to licensee and its affiliates. Licensee responsible for affiliate compliance. Affiliates permitted to use licensed IP under same terms.\n\n### Unlimited/All-You-Can-Eat License\n- **Discovery frequency**: 2.9% of contracts (9/306)\n- **Common patterns**: Grants \"unlimited\" rights to use, reproduce, or sublicense. Often perpetual and irrevocable. May be limited by territory or term but not by users or copies.\n\n### Irrevocable or Perpetual License\n- **Discovery frequency**: 11.1% of contracts (34/306)\n- **Common patterns**: License described as \"perpetual\" or \"irrevocable\". Often survives termination for certain purposes. Common for background IP or pre-existing work.\n\n### Source Code Escrow\n- **Discovery frequency**: 2.0% of contracts (6/306)\n- **Common patterns**: Source code deposited with escrow agent. Release conditions include bankruptcy, breach, or dissolution. Common in software licensing and hosting agreements.\n\n### Post-Termination Services\n- **Discovery frequency**: 49.3% of contracts (151/306)\n- **Common patterns**: Transition assistance or wind-down periods. Survival of confidentiality, indemnification, and limitation of liability. Return of property and materials.\n\n## Common Patterns\n\n### License Grant\n1. **Non-exclusive, non-transferable, royalty-free license**: \"Both parties grant each other non-exclusive rights to use their respective content and marks for the purposes of the agreement.\"\n2. **Limited purpose license**: \"Licensor grants Licensee a limited, non-exclusive, worldwide, royalty-free license to use the Licensed Mark for Licensed Products.\"\n3. **Exclusive license for commercialization**: \"Array grants Ono exclusive licenses under Array Patents to Develop, Manufacture, and Commercialize Products in the Ono Territory.\"\n\n### Non-Transferable License\n1. **Prior written consent required**: \"Licensee may not assign, sublicense, or transfer its license rights without Licensor's prior written consent.\"\n2. **Exception for mergers/acquisitions**: \"The license granted is nontransferable except in accordance with Section 14.1, which allows assignment in connection with merger or acquisition.\"\n3. **Non-transferable and non-sublicensable**: \"All rights granted are not sublicenseable, transferable or assignable, except for certain limited exceptions.\"\n\n### Affiliate License-Licensor\n1. **License on behalf of affiliates**: \"The license is granted by Licensor on behalf of itself and its Affiliates.\"\n2. **IP controlled by affiliates**: \"The license grant from BLI includes intellectual property controlled by BLI or its Affiliates.\"\n3. **Licensor responsible for affiliates**: \"Miltenyi may have Miltenyi Products manufactured by its Affiliates, and Miltenyi remains responsible for their performance.\"\n\n### Affiliate License-Licensee\n1. **License to licensee and affiliates**: \"The license is granted to Licensee and its subsidiaries and affiliates.\"\n2. **Sublicense to affiliates**: \"The license grant to Ginkgo includes the right to sublicense to its Affiliates.\"\n3. **Licensee responsible for affiliates**: \"The license rights extend to Bank of America's Affiliates, and Bank of America is responsible for its Affiliates' obligations.\"\n\n### Unlimited/All-You-Can-Eat License\n1. **Unlimited usage rights**: \"The grant is described as 'unlimited right and privilege' to use the Property.\"\n2. **Unlimited sublicenses**: \"Corio is granted an unlimited number of sublicenses to Customers and an unlimited number of internal users.\"\n3. **Unlimited, perpetual, royalty-free**: \"Individual grants Lifeway an unlimited, perpetual, non-exclusive, worldwide, royalty-free right to use her name, image, and likeness.\"\n\n### Irrevocable or Perpetual License\n1. **Perpetual and irrevocable**: \"The license granted is perpetual and irrevocable.\"\n2. **Perpetual for pre-existing work**: \"The Client is granted a perpetual, irrevocable license to use pre-existing work incorporated into deliverables.\"\n3. **Perpetual for end users**: \"The contract grants a perpetual license for end users who previously downloaded a Zynga game that includes WPT's Licensed Property.\"\n\n### Source Code Escrow\n1. **Deposit with escrow agent**: \"Commerce One agrees to deposit source code into escrow, which may be released to Corio upon dissolution or material breach.\"\n2. **Release upon certain events**: \"The contract requires M&I to deposit source code into escrow, which can be released to Customer upon certain events.\"\n3. **Escrow agreement referenced**: \"The contract references an Escrow Agreement as one of the Ancillary Agreements.\"\n\n### Post-Termination Services\n1. **Transition period**: \"Upon termination, Licensee has a 90-day transition period to cease use of Licensed Domain Names and Content.\"\n2. **Return/destruction of materials**: \"Upon termination, the Distributor must cease using trademarks, return confidential information.\"\n3. **Survival of obligations**: \"Upon termination, i-Escrow must pay amounts owed, both parties must remove each other's content and marks, and certain provisions survive.\"\n\n## Review Checklist\n\n### License Grant\n- [ ] Does the contract contain a license grant from one party to another?\n- [ ] Is the license exclusive or non-exclusive?\n- [ ] Is the license limited to specific purposes, fields, territories, or durations?\n- [ ] Are there any royalty or payment obligations associated with the license?\n\n### Non-Transferable License\n- [ ] Does the license explicitly prohibit transfer or assignment?\n- [ ] Are there exceptions for affiliates, mergers, or asset sales?\n- [ ] Is prior written consent required for any transfer?\n- [ ] Is the license also non-sublicensable?\n\n### Affiliate License-Licensor\n- [ ] Does the license include IP owned or controlled by the licensor's affiliates?\n- [ ] Is the licensor responsible for its affiliates' performance?\n- [ ] Does the licensor grant the license on behalf of itself and its affiliates?\n\n### Affiliate License-Licensee\n- [ ] Is the license granted to the licensee and its affiliates?\n- [ ] Is the licensee responsible for its affiliates' compliance?\n- [ ] Can the licensee sublicense to its affiliates without additional consent?\n\n### Unlimited/All-You-Can-Eat License\n- [ ] Does the license grant \"unlimited\" rights to use, reproduce, or sublicense?\n- [ ] Is the license limited by territory or term but not by number of users or copies?\n- [ ] Is the license perpetual and irrevocable?\n\n### Irrevocable or Perpetual License\n- [ ] Is the license described as \"perpetual\" or \"irrevocable\"?\n- [ ] Does the license survive termination for certain purposes?\n- [ ] Is the license granted for pre-existing or background IP?\n\n### Source Code Escrow\n- [ ] Is one party required to deposit source code into escrow?\n- [ ] Are release conditions specified (e.g., bankruptcy, breach)?\n- [ ] Is there a reference to an escrow agreement?\n\n### Post-Termination Services\n- [ ] Are there obligations after termination or expiration?\n- [ ] Is there a transition or wind-down period?\n- [ ] Are there survival clauses for confidentiality, indemnification, or limitation of liability?\n- [ ] Is there a requirement to return or destroy materials?\n\n## Evidence Extraction Rules\n\n### License Grant\n- **Keywords**: \"license\", \"grant\", \"non-exclusive\", \"exclusive\", \"royalty-free\", \"right to use\"\n- **Location**: Typically in \"License Grant\" or \"Grant of License\" sections\n- **Extraction**: Extract the full license grant clause, including scope, limitations, and any conditions\n\n### Non-Transferable License\n- **Keywords**: \"non-transferable\", \"non-assignable\", \"non-sublicensable\", \"prior written consent\", \"assignment\"\n- **Location**: Often in \"Assignment\" or \"Transfer\" sections, or within the license grant itself\n- **Extraction**: Extract the specific language prohibiting or restricting transfer, including any exceptions\n\n### Affiliate License-Licensor\n- **Keywords**: \"affiliate\", \"subsidiary\", \"parent\", \"controlled\", \"on behalf of\"\n- **Location**: Within the license grant or definitions section\n- **Extraction**: Extract language showing the license includes affiliates of the licensor or IP controlled by affiliates\n\n### Affiliate License-Licensee\n- **Keywords**: \"affiliate\", \"subsidiary\", \"joint venture\", \"sublicense to affiliates\"\n- **Location**: Within the license grant or definitions section\n- **Extraction**: Extract language showing the license extends to the licensee's affiliates\n\n### Unlimited/All-You-Can-Eat License\n- **Keywords**: \"unlimited\", \"all you can eat\", \"enterprise\", \"unrestricted\", \"no limit\"\n- **Location**: Within the license grant or usage rights section\n- **Extraction**: Extract the specific language granting unlimited rights, including any limitations\n\n### Irrevocable or Perpetual License\n- **Keywords**: \"perpetual\", \"irrevocable\", \"survive termination\", \"in perpetuity\"\n- **Location**: Within the license grant or termination/survival sections\n- **Extraction**: Extract the specific language describing the license as perpetual or irrevocable\n\n### Source Code Escrow\n- **Keywords**: \"escrow\", \"source code\", \"deposit\", \"release\", \"escrow agent\"\n- **Location**: Often in a separate \"Escrow\" section or within \"Software\" or \"Technology\" sections\n- **Extraction**: Extract the escrow clause, including deposit requirements and release conditions\n\n### Post-Termination Services\n- **Keywords**: \"termination\", \"expiration\", \"transition\", \"wind-down\", \"survive\", \"return\", \"destroy\", \"sell-off\"\n- **Location**: Typically in \"Termination\" or \"Effect of Termination\" sections\n- **Extraction**: Extract all post-termination obligations, including transition periods, survival clauses, and return/destruction requirements\n\n## Output Format\n\n```json\n{\n  \"status\": \"complete\",\n  \"answer\": \"Yes/No/Not specified\",\n  \"evidence_unit_ids\": [\"evidence_unit_1\", \"evidence_unit_2\"],\n  \"source_contract_ids\": [\"contract_123\", \"contract_456\"],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n## Boundary Rules\n\n### What the skill SHOULD do:\n1. **Identify license grants**: Look for explicit language granting rights to use IP, software, content, or marks.\n2. **Detect transfer restrictions**: Identify clauses that limit or prohibit transfer, assignment, or sublicensing.\n3. **Recognize affiliate involvement**: Identify when affiliates are included as licensors or licensees.\n4. **Identify unlimited licenses**: Detect language granting unlimited or enterprise-wide usage rights.\n5. **Identify perpetual/irrevocable licenses**: Detect language describing licenses as perpetual or irrevocable.\n6. **Identify source code escrow**: Detect requirements to deposit source code with an escrow agent.\n7. **Identify post-termination obligations**: Detect obligations that survive or arise after termination.\n8. **Extract evidence**: Provide specific language from the contract as evidence.\n9. **Flag for human review**: When language is ambiguous or requires interpretation.\n\n### What the skill should NOT do:\n1. **Do not interpret ambiguous language**: If the contract language is unclear, flag for human review.\n2. **Do not assume implied licenses**: Only identify explicit license grants.\n3. **Do not evaluate enforceability**: Focus on identifying clauses, not their legal validity.\n4. **Do not assess business risk**: Do not evaluate whether terms are favorable or unfavorable.\n5. **Do not modify contract language**: Extract and report, do not suggest changes.\n6. **Do not infer from silence**: If a category is not mentioned, report \"Not specified\".\n7. **Do not combine categories**: Each category should be evaluated independently.\n8. **Do not provide legal advice**: The output is for informational purposes only.\n9. **Do not exceed scope**: Only address the eight covered categories."
+}

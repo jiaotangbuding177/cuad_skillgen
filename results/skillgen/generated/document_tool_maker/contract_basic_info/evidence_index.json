@@ -1,0 +1,18 @@
+{
+  "tool_001": {
+    "name": "check_expiration_date",
+    "category": "Expiration Date",
+    "source_contracts": [
+      "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT",
+      "ZONDWINDSYSTEMPARTNERSLTDSERIES85-B_04_03_2006-EX-10-MANAGEMENT_AND_MAINTENANCE_AGREEMENT"
+    ],
+    "example": {
+      "input": "The Initial Term of this Agreement shall commence on the Effective Date and shall expire on December 31, 2025, unless earlier terminated in accordance with Section 8.",
+      "output": {
+        "found": true,
+        "extracted_text": "December 31, 2025",
+        "confidence": 0.98
+      }
+    }
+  }
+}

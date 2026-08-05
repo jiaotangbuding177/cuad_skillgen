@@ -1,0 +1,400 @@
+{
+  "step1_tools_sample": [
+    {
+      "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_change_of_control_termination_rights",
+          "description": "Identifies clauses that allow a party to terminate the agreement if the other party undergoes a change of control, such as the acquisition of a majority of equity securities.",
+          "category": "Change of Control",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 8.3 TERMINATION FOR CHANGE IN COMPANY STRUCTURE. If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. ... are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.",
+            "output": {
+              "found": true,
+              "extracted_text": "If a majority of the equity securities of either 2TheMart or i-Escrow, Inc. (except that i-Escrow may sell all or a majority of its equity securities or voting interests to i-Escrow.com, and i-Escrow.com may sell all or a majority of its equity securities or voting interests to i-Escrow's existing shareholders, without triggering the foregoing) are acquired by another company during the term of this Agreement either company may terminate this Agreement, without liability, by giving a thirty (30) days written notice to the other party.",
+              "confidence": 1.0,
+              "explanation": "The contract explicitly grants both parties the right to terminate without liability if a majority of equity securities are acquired by another company, subject to specific exceptions for i-Escrow."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_anti_assignment_restrictions",
+          "description": "Determines if the contract prohibits assignment or sublicensing of rights without consent, or if it allows assignment under specific conditions.",
+          "category": "Anti-Assignment",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 6.5 LIMITS ON SUBLICENSING. All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable.",
+            "output": {
+              "found": true,
+              "extracted_text": "All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable. Notwithstanding the foregoing, either party may use a third party web host, but all actions or failures to act of the web host that would be a breach of this Agreement, were the actions or failures to act taken by the applicable party, shall be deemed a breach of this Agreement. In addition, 2TheMart may grant sublicenses to companies that 2TheMart has a business relationship with to the extent that 2TheMart Content is visible from such company's web-site through a link or other means.",
+              "confidence": 0.95,
+              "explanation": "The contract generally prohibits assignment and sublicensing of rights. However, it provides specific exceptions for using third-party web hosts and for 2TheMart to grant sublicenses to business partners regarding content visibility."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_anti_assignment",
+          "description": "Identifies clauses that restrict or require consent for the assignment of the contract to a third party.",
+          "category": "Anti-Assignment",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "6.2 Succession and Assignment. This Agreement shall be binding upon and inure to the benefit of the Parties named herein and their respective successors and permitted assigns. Provider may not assign, delegate or otherwise transfer either this Agreement or any of its rights, interests, or obligations hereunder without the prior written approval of Recipient.",
+            "output": {
+              "found": true,
+              "extracted_text": "Provider may not assign, delegate or otherwise transfer either this Agreement or any of its rights, interests, or obligations hereunder without the prior written approval of Recipient.",
+              "confidence": 0.98,
+              "explanation": "The contract explicitly prohibits the Provider from assigning the agreement without the Recipient's prior written approval."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_change_of_control",
+          "description": "Determines if the contract includes specific provisions regarding termination, consent, or notice requirements triggered by a change of control event.",
+          "category": "Change of Control",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "6.2 Succession and Assignment. This Agreement shall be binding upon and inure to the benefit of the Parties named herein and their respective successors and permitted assigns. Provider may not assign, delegate or otherwise transfer either this Agreement or any of its rights, interests, or obligations hereunder without the prior written approval of Recipient.",
+            "output": {
+              "found": false,
+              "extracted_text": "N/A",
+              "confidence": 0.95,
+              "explanation": "The contract does not contain a specific 'Change of Control' clause defining events like mergers or asset sales as triggers for termination or consent. It only addresses general assignment."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+      "tools": [
+        {
+          "tool_id": "tool_001",
+          "name": "check_anti_assignment",
+          "description": "Identifies clauses that restrict or prohibit the assignment, transfer, sale, or pledge of a party's interest in the joint venture or the agreement itself.",
+          "category": "Anti-Assignment",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Section 12 of the Joint Venture Agreement",
+            "output": {
+              "found": true,
+              "extracted_text": "No Joint Venturer shall be authorized or empowered to mortgage, hypothecate, pledge, sell, or transfer, an interest in the Joint Venture, nor confer on any successor or assignee the right to become a Joint Venturer without the consent of the other Joint Venturer.",
+              "confidence": 1.0,
+              "explanation": "The contract explicitly prohibits the transfer or assignment of interest without the consent of the other joint venturer."
+            }
+          }
+        },
+        {
+          "tool_id": "tool_002",
+          "name": "check_change_of_control",
+          "description": "Determines if the contract includes specific provisions regarding change of control events, such as mergers, asset sales, or transfers of ownership, and whether these trigger termination rights or require consent.",
+          "category": "Change of Control",
+          "parameters": {
+            "contract_text": "string - Full contract text or relevant section",
+            "target_clause": "string (optional) - Specific clause to examine"
+          },
+          "returns": {
+            "found": "boolean - Whether the relevant clause was found",
+            "extracted_text": "string - The exact text found in the contract",
+            "confidence": "float 0.0-1.0",
+            "explanation": "string - Review conclusion"
+          },
+          "example": {
+            "input": "Full Joint Venture Agreement text",
+            "output": {
+              "found": false,
+              "extracted_text": "",
+              "confidence": 0.9,
+              "explanation": "The contract does not contain a specific 'Change of Control' clause. While Section 12 restricts the transfer of interest (which may cover some change of control scenarios), there is no explicit definition or procedure for change of control events like mergers or stock sales."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "step2_merged": {
+    "merged_tools": [
+      {
+        "tool_id": "tool_001",
+        "name": "check_change_of_control",
+        "category": "Change of Control",
+        "description": "Determines if the contract contains specific provisions regarding change of control events (such as mergers, asset sales, or transfers of ownership), including definitions of control, and whether these events trigger termination rights, require notice, or require consent.",
+        "source_contracts": [
+          "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT",
+          "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT",
+          "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT",
+          "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT",
+          "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT",
+          "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT",
+          "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement",
+          "TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES_AGREEMENT",
+          "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT",
+          "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement",
+          "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement",
+          "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT",
+          "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT",
+          "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT",
+          "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement",
+          "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement",
+          "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement",
+          "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL_PROPERTY_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Review the contract for Change of Control provisions.",
+          "output": {
+            "found": true,
+            "extracted_text": "In the event of a Change of Control of either Party, the other Party shall have the right to terminate this Agreement upon thirty (30) days written notice.",
+            "confidence": 0.98
+          }
+        }
+      },
+      {
+        "tool_id": "tool_002",
+        "name": "check_change_of_control_termination_rights",
+        "category": "Change of Control",
+        "description": "Identifies clauses that grant a party the specific right to terminate the agreement, or require notice/consent, upon a Change of Control event of the other party, including specific conditions such as objectionable acquirers or financial status changes.",
+        "source_contracts": [
+          "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT",
+          "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement1",
+          "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement",
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING_AGREEMENT",
+          "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT",
+          "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT",
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT",
+          "WPPPLC_04_30_2020-EX-4.28-SERVICE_AGREEMENT",
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        ],
+        "best_example": {
+          "input": "Check for termination rights triggered by Change of Control.",
+          "output": {
+            "found": true,
+            "extracted_text": "If a Change of Control occurs with respect to Company, Sponsor may terminate this Agreement immediately upon written notice.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_003",
+        "name": "check_change_of_control_termination",
+        "category": "Change of Control",
+        "description": "Identifies clauses where the agreement automatically terminates, ceases to have effect, or requires notice/consent due to a change in ownership, control, bankruptcy, insolvency, or cessation of business.",
+        "source_contracts": [
+          "StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding_Agreement",
+          "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT",
+          "VEONEER,INC_02_21_2020-EX-10.11-JOINT_VENTURE_AGREEMENT",
+          "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT",
+          "WELLSFARGOMORTGAGEBACKEDSECURITIES2006-6TRUST_05_11_2006-EX-10.3-Yield_Maintenance_Agreement"
+        ],
+        "best_example": {
+          "input": "Identify automatic termination clauses related to Change of Control.",
+          "output": {
+            "found": true,
+            "extracted_text": "This Agreement shall automatically terminate upon the sale of all or substantially all assets of the Company.",
+            "confidence": 0.92
+          }
+        }
+      },
+      {
+        "tool_id": "tool_004",
+        "name": "check_successors_bound_clause",
+        "category": "Change of Control",
+        "description": "Determines if the contract explicitly binds successors and assigns, which is relevant to change of control scenarios where assets or shares are transferred.",
+        "source_contracts": [
+          "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Check if successors are bound.",
+          "output": {
+            "found": true,
+            "extracted_text": "This Agreement shall be binding upon and inure to the benefit of the parties hereto and their respective successors and permitted assigns.",
+            "confidence": 0.99
+          }
+        }
+      },
+      {
+        "tool_id": "tool_005",
+        "name": "check_change_of_control_board_approval",
+        "category": "Change of Control",
+        "description": "Checks if unanimous board approval or specific shareholder consent is required for the company to enter into a change of control transaction or transfer of interest.",
+        "source_contracts": [
+          "TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT_VENTURE_AGREEMENT",
+          "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT"
+        ],
+        "best_example": {
+          "input": "Check for board approval requirements for Change of Control.",
+          "output": {
+            "found": true,
+            "extracted_text": "No Change of Control transaction may be entered into without the unanimous written consent of the Board of Directors.",
+            "confidence": 0.96
+          }
+        }
+      },
+      {
+        "tool_id": "tool_006",
+        "name": "check_change_of_control_rating_conditions",
+        "category": "Change of Control",
+        "description": "Extracts specific financial or rating conditions that must be met by an acquirer or new corporate structure for a change of control to be permissible without triggering immediate termination or breach.",
+        "source_contracts": [
+          "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Identify rating conditions for Change of Control.",
+          "output": {
+            "found": true,
+            "extracted_text": "A Change of Control shall not be deemed a default if the successor entity maintains a credit rating of at least A-.",
+            "confidence": 0.94
+          }
+        }
+      },
+      {
+        "tool_id": "tool_007",
+        "name": "check_change_of_control_rights",
+        "category": "Change of Control",
+        "description": "Identifies clauses that grant specific rights or trigger obligations for a party in the event the other party undergoes a Change of Control, beyond simple termination.",
+        "source_contracts": [
+          "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY_AGREEMENT",
+          "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement"
+        ],
+        "best_example": {
+          "input": "Identify rights triggered by Change of Control.",
+          "output": {
+            "found": true,
+            "extracted_text": "Upon a Change of Control, the Non-Affected Party may require the Affected Party to provide additional security for performance.",
+            "confidence": 0.93
+          }
+        }
+      },
+      {
+        "tool_id": "tool_008",
+        "name": "check_change_of_control_depositor",
+        "category": "Change of Control",
+        "description": "Checks if the Depositor is restricted from merging, consolidating, or assigning its interests without specific conditions or if such events trigger termination or consent requirements.",
+        "source_contracts": [
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement"
+        ],
+        "best_example": {
+          "input": "Check restrictions on Depositor Change of Control.",
+          "output": {
+            "found": true,
+            "extracted_text": "Depositor shall not merge or consolidate with any other entity without prior written consent of the Servicer.",
+            "confidence": 0.97
+          }
+        }
+      },
+      {
+        "tool_id": "tool_009",
+        "name": "check_change_of_control_servicer",
+        "category": "Change of Control",
+        "description": "Checks if the Servicer is restricted from merging, consolidating, or assigning its interests without specific conditions or if such events trigger termination or consent requirements.",
+        "source_contracts": [
+          "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement"
+        ],
+        "best_example": {
+          "input": "Check restrictions on Servicer Change of Control.",
+          "output": {
+            "found": true,
+            "extracted_text": "Servicer shall not transfer its obligations under this Agreement in connection with a Change of Control without approval.",
+            "confidence": 0.97
+          }
+        }
+      },
+      {
+        "tool_id": "tool_010",
+        "name": "check_change_of_control_assignment",
+        "category": "Change of Control",
+        "description": "Determines if the contract allows assignment to a successor entity in the event of a change of control, merger, or asset sale.",
+        "source_contracts": [
+          "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT"
+        ],
+        "best_example": {
+          "input": "Check if assignment to successor is allowed upon Change of Control.",
+          "output": {
+            "found": true,
+            "extracted_text": "In the event of a merger or acquisition, the rights and obligations of the acquiring entity shall be assigned to the successor.",
+            "confidence": 0.95
+          }
+        }
+      },
+      {
+        "tool_id": "tool_011",
+        "name": "check_change_of_control_financial_consequences",
+        "category": "Change of Control",
+        "description": "Identifies any specific financial payments, penalties, or obligations triggered for a party (e.g., Distributor) upon a Change of Control termination.",
+        "source_contracts": [
+          "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        ],
+        "best_example": {
+          "input": "Identify financial consequences of Change of Control termination.",
+          "output": {
+            "found": true,
+            "extracted_text": "Upon termination due to Change of Control, Company shall pay Distributor a fee equal to 12 months of average commissions.",
+            "confidence": 0.96
+          }
+        }
+      }
+    ],
+    "tool_stats": {
+      "total_unique_tools": 11,
+      "tools_by_category": {
+        "Change of Control": 11,
+        "Anti-Assignment": 0
+      }
+    }
+  },
+  "step3_skill_md": "# SKILL.md\n\n## Overview\nThis skill specializes in reviewing contracts for **Change of Control** and **Anti-Assignment** provisions. It identifies clauses that define control events (mergers, asset sales, ownership transfers), determines if such events trigger termination rights, require consent or notice, impose financial penalties, or restrict assignment to successors. The skill extracts specific conditions, such as board approval requirements, credit rating thresholds, and automatic termination triggers.\n\n## Available Tools\n\n### 1. check_change_of_control\n- **Category**: Change of Control\n- **Description**: Determines if the contract contains specific provisions regarding change of control events (such as mergers, asset sales, or transfers of ownership), including definitions of control, and whether these events trigger termination rights, require notice, or require consent.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Use this as the primary discovery tool to identify if Change of Control clauses exist. It captures general definitions and high-level triggers.\n- **Example**:\n  - *Input*: \"Review the contract for Change of Control provisions.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"In the event of a Change of Control of either Party, the other Party shall have the right to terminate this Agreement upon thirty (30) days written notice.\", \"confidence\": 0.98}`\n\n### 2. check_change_of_control_termination_rights\n- **Category**: Change of Control\n- **Description**: Identifies clauses that grant a party the specific right to terminate the agreement, or require notice/consent, upon a Change of Control event of the other party, including specific conditions such as objectionable acquirers or financial status changes.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Use when specifically looking for the *right to terminate* rather than automatic termination. Focuses on discretionary termination rights.\n- **Example**:\n  - *Input*: \"Check for termination rights triggered by Change of Control.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"If a Change of Control occurs with respect to Company, Sponsor may terminate this Agreement immediately upon written notice.\", \"confidence\": 0.95}`\n\n### 3. check_change_of_control_termination\n- **Category**: Change of Control\n- **Description**: Identifies clauses where the agreement automatically terminates, ceases to have effect, or requires notice/consent due to a change in ownership, control, bankruptcy, insolvency, or cessation of business.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Use to find *automatic* termination clauses (e.g., \"shall automatically terminate\") as opposed to discretionary rights.\n- **Example**:\n  - *Input*: \"Identify automatic termination clauses related to Change of Control.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"This Agreement shall automatically terminate upon the sale of all or substantially all assets of the Company.\", \"confidence\": 0.92}`\n\n### 4. check_successors_bound_clause\n- **Category**: Change of Control\n- **Description**: Determines if the contract explicitly binds successors and assigns, which is relevant to change of control scenarios where assets or shares are transferred.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Essential for determining if the contract survives a change of control by binding the new entity. Look for \"binding upon and inure to the benefit of... successors and permitted assigns.\"\n- **Example**:\n  - *Input*: \"Check if successors are bound.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"This Agreement shall be binding upon and inure to the benefit of the parties hereto and their respective successors and permitted assigns.\", \"confidence\": 0.99}`\n\n### 5. check_change_of_control_board_approval\n- **Category**: Change of Control\n- **Description**: Checks if unanimous board approval or specific shareholder consent is required for the company to enter into a change of control transaction or transfer of interest.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Use to identify internal governance hurdles (Board/Shareholder consent) required before a Change of Control can occur.\n- **Example**:\n  - *Input*: \"Check for board approval requirements for Change of Control.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"No Change of Control transaction may be entered into without the unanimous written consent of the Board of Directors.\", \"confidence\": 0.96}`\n\n### 6. check_change_of_control_rating_conditions\n- **Category**: Change of Control\n- **Description**: Extracts specific financial or rating conditions that must be met by an acquirer or new corporate structure for a change of control to be permissible without triggering immediate termination or breach.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Use to find \"safe harbor\" conditions, such as maintaining a specific credit rating (e.g., A-) or financial strength.\n- **Example**:\n  - *Input*: \"Identify rating conditions for Change of Control.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"A Change of Control shall not be deemed a default if the successor entity maintains a credit rating of at least A-.\", \"confidence\": 0.94}`\n\n### 7. check_change_of_control_rights\n- **Category**: Change of Control\n- **Description**: Identifies clauses that grant specific rights or trigger obligations for a party in the event the other party undergoes a Change of Control, beyond simple termination.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Use to find non-termination consequences, such as requirements for additional security, performance bonds, or renegotiation rights.\n- **Example**:\n  - *Input*: \"Identify rights triggered by Change of Control.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"Upon a Change of Control, the Non-Affected Party may require the Affected Party to provide additional security for performance.\", \"confidence\": 0.93}`\n\n### 8. check_change_of_control_depositor\n- **Category**: Change of Control\n- **Description**: Checks if the Depositor is restricted from merging, consolidating, or assigning its interests without specific conditions or if such events trigger termination or consent requirements.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Specific to securitization or structured finance contracts involving a \"Depositor\" entity.\n- **Example**:\n  - *Input*: \"Check restrictions on Depositor Change of Control.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"Depositor shall not merge or consolidate with any other entity without prior written consent of the Servicer.\", \"confidence\": 0.97}`\n\n### 9. check_change_of_control_servicer\n- **Category**: Change of Control\n- **Description**: Checks if the Servicer is restricted from merging, consolidating, or assigning its interests without specific conditions or if such events trigger termination or consent requirements.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Specific to securitization or structured finance contracts involving a \"Servicer\" entity.\n- **Example**:\n  - *Input*: \"Check restrictions on Servicer Change of Control.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"Servicer shall not transfer its obligations under this Agreement in connection with a Change of Control without approval.\", \"confidence\": 0.97}`\n\n### 10. check_change_of_control_assignment\n- **Category**: Change of Control\n- **Description**: Determines if the contract allows assignment to a successor entity in the event of a change of control, merger, or asset sale.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Use to determine if the contract explicitly permits assignment to a successor in a merger/acquisition scenario, often overriding general anti-assignment clauses.\n- **Example**:\n  - *Input*: \"Check if assignment to successor is allowed upon Change of Control.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"In the event of a merger or acquisition, the rights and obligations of the acquiring entity shall be assigned to the successor.\", \"confidence\": 0.95}`\n\n### 11. check_change_of_control_financial_consequences\n- **Category**: Change of Control\n- **Description**: Identifies any specific financial payments, penalties, or obligations triggered for a party (e.g., Distributor) upon a Change of Control termination.\n- **Parameters**: None (Context: Contract Text)\n- **Returns**: `found` (boolean), `extracted_text` (string), `confidence` (float)\n- **Usage Notes**: Use to find monetary impacts, such as buyout fees, commission payouts, or penalties triggered specifically by Change of Control termination.\n- **Example**:\n  - *Input*: \"Identify financial consequences of Change of Control termination.\"\n  - *Output*: `{\"found\": true, \"extracted_text\": \"Upon termination due to Change of Control, Company shall pay Distributor a fee equal to 12 months of average commissions.\", \"confidence\": 0.96}`\n\n## Review Workflow\n\n1.  **Initial Scan**: Run `check_change_of_control` to determine if the contract contains any Change of Control provisions. If `found` is false, proceed to step 4.\n2.  **Termination Analysis**:\n    *   Run `check_change_of_control_termination_rights` to identify discretionary termination rights.\n    *   Run `check_change_of_control_termination` to identify automatic termination clauses.\n3.  **Conditions & Consequences**:\n    *   Run `check_change_of_control_board_approval` to check for internal consent requirements.\n    *   Run `check_change_of_control_rating_conditions` to check for financial/rating safe harbors.\n    *   Run `check_change_of_control_rights` to identify non-termination obligations (e.g., additional security).\n    *   Run `check_change_of_control_financial_consequences` to identify monetary penalties or payouts.\n4.  **Assignment & Successors**:\n    *   Run `check_successors_bound_clause` to verify if the contract binds successors.\n    *   Run `check_change_of_control_assignment` to see if assignment to a successor is explicitly permitted.\n5.  **Entity-Specific Checks (If Applicable)**:\n    *   If the contract involves a Depositor, run `check_change_of_control_depositor`.\n    *   If the contract involves a Servicer, run `check_change_of_control_servicer`.\n6.  **Synthesis**: Compile findings into the output format, noting any missing inputs or areas requiring human review (e.g., ambiguous definitions of \"Control\").\n\n## Output Format\n\n```json\n{\n  \"status\": \"success\",\n  \"answer\": \"Summary of Change of Control and Assignment provisions found.\",\n  \"evidence_unit_ids\": [\"tool_001\", \"tool_002\", \"tool_004\"],\n  \"source_contract_ids\": [\"CONTRACT_ID_123\"],\n  \"missing_inputs\": [],\n  \"human_review_required\": false\n}\n```\n\n## Boundary Rules\n\n-   **Do**: Focus strictly on clauses related to Change of Control (mergers, acquisitions, asset sales, ownership changes) and Assignment (transfer of rights/obligations).\n-   **Do**: Extract exact text snippets that define the triggers, rights, and consequences.\n-   **Do**: Distinguish between *automatic* termination and *discretionary* termination rights.\n-   **Do**: Identify specific conditions (e.g., credit ratings, board approval) that modify the standard Change of Control outcome.\n-   **Don't**: Include general termination clauses unrelated to Change of Control (e.g., termination for convenience, termination for cause due to breach) unless explicitly linked to a Change of Control event.\n-   **Don't**: Assume assignment is allowed or prohibited without explicit textual evidence; rely on `check_successors_bound_clause` and `check_change_of_control_assignment`.\n-   **Don't**: Provide legal advice; only extract and summarize contractual provisions."
+}

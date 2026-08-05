@@ -1,0 +1,47 @@
+[
+  {
+    "method": "document_tool_maker",
+    "judged_tasks": 1286,
+    "academic_judge_score": 0.9492,
+    "semantic_correctness": 0.9488,
+    "completeness": 0.9059,
+    "faithfulness": 0.9724,
+    "clarity": 0.9917
+  },
+  {
+    "method": "evoskill_compiler",
+    "judged_tasks": 1306,
+    "academic_judge_score": 0.9545,
+    "semantic_correctness": 0.9523,
+    "completeness": 0.9197,
+    "faithfulness": 0.9745,
+    "clarity": 0.9916
+  },
+  {
+    "method": "native_prompt_skill",
+    "judged_tasks": 1297,
+    "academic_judge_score": 0.9024,
+    "semantic_correctness": 0.9137,
+    "completeness": 0.8145,
+    "faithfulness": 0.9543,
+    "clarity": 0.9496
+  },
+  {
+    "method": "schema_prompt_skill",
+    "judged_tasks": 1288,
+    "academic_judge_score": 0.8404,
+    "semantic_correctness": 0.8899,
+    "completeness": 0.6905,
+    "faithfulness": 0.94,
+    "clarity": 0.8253
+  },
+  {
+    "method": "summary2skill",
+    "judged_tasks": 1317,
+    "academic_judge_score": 0.966,
+    "semantic_correctness": 0.9653,
+    "completeness": 0.9363,
+    "faithfulness": 0.983,
+    "clarity": 0.9946
+  }
+]

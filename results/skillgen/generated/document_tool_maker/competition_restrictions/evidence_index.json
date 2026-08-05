@@ -1,0 +1,92 @@
+{
+  "tool_001": {
+    "name": "check_competitive_exception",
+    "category": "Competitive Exception",
+    "source_contracts": [
+      "VerizonAbsLlc_20200123_8-K_EX-10.4_11952335_EX-10.4_Service_Agreement"
+    ],
+    "example": {
+      "input": "Sample contract text containing competitive exception clauses",
+      "output": {
+        "found": true,
+        "extracted_text": "Exceptions to non-compete obligations include...",
+        "confidence": 0.95
+      }
+    }
+  },
+  "tool_002": {
+    "name": "check_exclusivity_circumvention",
+    "category": "Exclusivity",
+    "source_contracts": [
+      "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+    ],
+    "example": {
+      "input": "Neither Party shall, directly or indirectly, contact, negotiate with, or enter into any agreement with any third party introduced by the other Party for the purpose of obtaining the services or products described herein, without the prior written consent of the introducing Party.",
+      "output": {
+        "found": true,
+        "extracted_text": "Neither Party shall, directly or indirectly, contact, negotiate with, or enter into any agreement with any third party introduced by the other Party...",
+        "confidence": 0.95
+      }
+    }
+  },
+  "tool_003": {
+    "name": "check_exclusivity_fuel_management",
+    "category": "Exclusivity",
+    "source_contracts": [
+      "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+    ],
+    "example": {
+      "input": "Party A grants Party B the exclusive right to supply and manage all fuel requirements for the Project Site for the duration of the Agreement.",
+      "output": {
+        "found": true,
+        "extracted_text": "Party A grants Party B the exclusive right to supply and manage all fuel requirements for the Project Site...",
+        "confidence": 0.92
+      }
+    }
+  },
+  "tool_004": {
+    "name": "check_exclusivity_digital_products",
+    "category": "Exclusivity",
+    "source_contracts": [
+      "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+    ],
+    "example": {
+      "input": "During the Term and for twelve (12) months following termination, Licensee shall not develop, market, or distribute any digital application that competes with the Licensed Software, specifically including meditation, sleep aid, or mindfulness applications.",
+      "output": {
+        "found": true,
+        "extracted_text": "Licensee shall not develop, market, or distribute any digital application that competes with the Licensed Software, specifically including meditation, sleep aid, or mindfulness applications.",
+        "confidence": 0.96
+      }
+    }
+  },
+  "tool_005": {
+    "name": "check_exclusivity_airport_retail",
+    "category": "Exclusivity",
+    "source_contracts": [
+      "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+    ],
+    "example": {
+      "input": "Vendor agrees not to sell or market its products in any airport retail locations within the United States without the prior written consent and collaboration of Distributor.",
+      "output": {
+        "found": true,
+        "extracted_text": "Vendor agrees not to sell or market its products in any airport retail locations within the United States without the prior written consent and collaboration of Distributor.",
+        "confidence": 0.94
+      }
+    }
+  },
+  "tool_006": {
+    "name": "check_exclusivity_supplier_requirements",
+    "category": "Exclusivity",
+    "source_contracts": [
+      "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+    ],
+    "example": {
+      "input": "Buyer shall procure all required packaging materials and promotional collateral exclusively from Seller. Buyer shall not source such items from any third-party supplier during the Term.",
+      "output": {
+        "found": true,
+        "extracted_text": "Buyer shall procure all required packaging materials and promotional collateral exclusively from Seller. Buyer shall not source such items from any third-party supplier...",
+        "confidence": 0.93
+      }
+    }
+  }
+}

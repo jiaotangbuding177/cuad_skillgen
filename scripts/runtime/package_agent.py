@@ -258,6 +258,32 @@ def retrieve_contract_chunks(
     return sorted(selected, key=lambda chunk: chunk.span_start)
 
 
+def build_contract_query(
+    category: str,
+    question: str,
+    guidance: Sequence[str],
+    knowledge: Sequence[dict],
+    tools: Sequence[dict],
+    variant: str = "full",
+) -> str:
+    """Build reproducible query variants for runtime and retrieval diagnostics."""
+    parts = [category, question]
+    if variant in {"package_without_knowledge", "full"}:
+        parts.extend(guidance)
+        parts.extend(
+            f"{tool.get('name', '')} {tool.get('description', '')}"
+            for tool in tools
+        )
+    if variant == "full":
+        parts.extend(
+            f"{item.get('text', '')} {item.get('interpretation', '')}"
+            for item in knowledge
+        )
+    if variant not in {"task_only", "package_without_knowledge", "full"}:
+        raise ValueError(f"Unknown query variant: {variant}")
+    return " ".join(parts)
+
+
 def _find_quote(text: str, quote: str, ranges: Sequence[Tuple[int, int]]) -> Optional[Tuple[int, int]]:
     quote = (quote or "").strip()
     if not quote:
@@ -372,11 +398,13 @@ unsupported_scope, or needs_human_review."""
         knowledge = package.retrieve_knowledge(category, question, self.top_k_knowledge)
         tools = package.tool_specs(category)[:3]
 
-        knowledge_query = " ".join(
-            [category, question]
-            + guidance
-            + [f"{item['text']} {item['interpretation']}" for item in knowledge]
-            + [f"{tool.get('name', '')} {tool.get('description', '')}" for tool in tools]
+        knowledge_query = build_contract_query(
+            category,
+            question,
+            guidance,
+            knowledge,
+            tools,
+            variant="full",
         )
         all_chunks = chunk_contract(contract_text)
         selected_chunks = retrieve_contract_chunks(all_chunks, knowledge_query, self.top_k_chunks)

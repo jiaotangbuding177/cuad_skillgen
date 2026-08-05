@@ -1,0 +1,25 @@
+{
+  "method": "summary2skill",
+  "case_id": "contract_basic_info",
+  "model": "deepseek-chat",
+  "pipeline": {
+    "step1_extract": {
+      "contracts_processed": 306,
+      "llm_calls": 306
+    },
+    "step2_merge": {
+      "batches": 2,
+      "llm_calls": 2
+    },
+    "step3_generate": {
+      "llm_calls": 1
+    }
+  },
+  "usage": {
+    "prompt_tokens": 2369700,
+    "completion_tokens": 192044,
+    "total_tokens": 2561744
+  },
+  "duration_seconds": 1456.9,
+  "created_at": "2026-07-15T14:34:21.522544+00:00"
+}

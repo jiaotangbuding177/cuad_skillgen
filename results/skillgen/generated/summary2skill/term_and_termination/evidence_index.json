@@ -1,0 +1,140 @@
+{
+  "Renewal Term": {
+    "found_in_contracts": 106,
+    "total_contracts": 306,
+    "source_paragraphs": [
+      {
+        "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+        "paragraph_snippet": "This Agreement may be renewed for any number of successive one (1) year terms by mutual written agreement of the parties prior to the conclusion of the term of this Agreement. A party wishing to renew"
+      },
+      {
+        "contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT",
+        "paragraph_snippet": "The Joint Venture shall commence on the 1st of March, 2003, and shall be effective until February 28, 2004 unless extended by written agreement of the Joint Venturers not less than thirty (30) days pr"
+      },
+      {
+        "contract_id": "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement",
+        "paragraph_snippet": "The initial term of this Agreement will be for two (2) year(s) commencing on the Effective Date. Thereafter, this agreement will renew automatically from year to year unless cancelled in writing by ei"
+      },
+      {
+        "contract_id": "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content_License_Agreement",
+        "paragraph_snippet": "This Agreement shall automatically extend for an additional two (2) years on the same terms herein (\"Renewal Term\") provided WPT receives payments greater than twelve million U.S. dollars ($12,000,000"
+      },
+      {
+        "contract_id": "Apollo_Endosurgery_-_Manufacturing_and_Supply_Agreement",
+        "paragraph_snippet": "This Agreement shall commence on the Effective Date and shall be valid for a period of five (5) years with automatic renewal of one year thereafter until terminated by either party with one (1) year w"
+      },
+      {
+        "contract_id": "ArcaUsTreasuryFund_20200207_N-2_EX-99.K5_11971930_EX-99.K5_Development_Agreement",
+        "paragraph_snippet": "This Agreement shall continue in effect for two years from the date hereof, and thereafter shall continue automatically for successive annual periods, provided that such continuance is specifically ap"
+      },
+      {
+        "contract_id": "AzulSa_20170303_F-1A_EX-10.3_9943903_EX-10.3_Maintenance_Agreement1",
+        "paragraph_snippet": "3.2 Upon expiry of the Initial Term, this Agreement [*****] unless a Notice of non-renewal is given by either Party to the other Party [*****] prior to the expiry of the Initial Term or the end of a r"
+      },
+      {
+        "contract_id": "BNCMORTGAGEINC_05_17_1999-EX-10.4-LICENSING_AND_WEB_SITE_HOSTING_AGREEMENT",
+        "paragraph_snippet": "This Agreement shall renew automatically thereafter for successive one year periods until terminated pursuant to Section 12 herein or unless either Client or TrueLink deliver to the other written noti"
+      },
+      {
+        "contract_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING_AGREEMENT",
+        "paragraph_snippet": "Unless either party gives written notice to terminate this Agreement at least six (6) months prior to the end of said Initial Term, this Agreement shall continue on a year to year basis (\"Extended Ter"
+      },
+      {
+        "contract_id": "BOLIVARMININGCORP_05_23_2003-EX-2.1-VISP_WEB_SITE_BUILDING_AND_HOSTING_AGREEMENT",
+        "paragraph_snippet": "This agreement shall be for a term of five years from the date of this document. This agreement shall renew automatically each year thereafter, unless either party serves written notice of its intenti"
+      }
+    ]
+  },
+  "Notice Period to Terminate Renewal": {
+    "found_in_contracts": 56,
+    "total_contracts": 306,
+    "source_paragraphs": [
+      {
+        "contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement",
+        "paragraph_snippet": "A party wishing to renew this Agreement shall give the other party notice thereof no less than thirty (30) days before the expiration of the term then in effect."
+      },
+      {
+        "contract_id": "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement",
+        "paragraph_snippet": "Thereafter, this agreement will renew automatically from year to year unless cancelled in writing by either Party giving the other written notice of such cancellation a minimum of 60 days before the e"
+      },
+      {
+        "contract_id": "Apollo_Endosurgery_-_Manufacturing_and_Supply_Agreement",
+        "paragraph_snippet": "This Agreement shall commence on the Effective Date and shall be valid for a period of five (5) years with automatic renewal of one year thereafter until terminated by either party with one (1) year w"
+      },
+      {
+        "contract_id": "AzulSa_20170303_F-1A_EX-10.3_9943903_EX-10.3_Maintenance_Agreement1",
+        "paragraph_snippet": "3.2 Upon expiry of the Initial Term, this Agreement [*****] unless a Notice of non-renewal is given by either Party to the other Party [*****] prior to the expiry of the Initial Term or the end of a r"
+      },
+      {
+        "contract_id": "BNCMORTGAGEINC_05_17_1999-EX-10.4-LICENSING_AND_WEB_SITE_HOSTING_AGREEMENT",
+        "paragraph_snippet": "This Agreement shall renew automatically thereafter for successive one year periods until terminated pursuant to Section 12 herein or unless either Client or TrueLink deliver to the other written noti"
+      },
+      {
+        "contract_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING_AGREEMENT",
+        "paragraph_snippet": "Unless either party gives written notice to terminate this Agreement at least six (6) months prior to the end of said Initial Term, this Agreement shall continue on a year to year basis (\"Extended Ter"
+      },
+      {
+        "contract_id": "BOLIVARMININGCORP_05_23_2003-EX-2.1-VISP_WEB_SITE_BUILDING_AND_HOSTING_AGREEMENT",
+        "paragraph_snippet": "This agreement shall renew automatically each year thereafter, unless either party serves written notice of its intention not to renew, on the other at least 90 days prior to the expiration of the the"
+      },
+      {
+        "contract_id": "BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE_AGREEMENT",
+        "paragraph_snippet": "We shall give you written notice of our election not to renew the franchise at least three (3) months prior to the expiration of the initial or first renewal term of this Agreement."
+      },
+      {
+        "contract_id": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT",
+        "paragraph_snippet": "This agreement shall automatically renew for successive six (6) month periods unless written notice is provided of either party's intent not to renew at least six (6) months before the end of the then"
+      },
+      {
+        "contract_id": "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT",
+        "paragraph_snippet": "unless either Party serves written notice of termination on the other Party at least 65 days prior to the end of the Initial Term, or any subsequent extension."
+      }
+    ]
+  },
+  "Termination for Convenience": {
+    "found_in_contracts": 89,
+    "total_contracts": 306,
+    "source_paragraphs": [
+      {
+        "contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT",
+        "paragraph_snippet": "Each of the Recipient and the Provider may, in their sole discretion, terminate this Agreement in whole or in part, at any time without cause, and without liability except, in the case of the Recipien"
+      },
+      {
+        "contract_id": "ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY_AGREEMENT",
+        "paragraph_snippet": "So long as no default exists and is continuing hereunder or under the Lease, either party may terminate this Agreement at any time upon ____________ (______30________) days written notice to the other"
+      },
+      {
+        "contract_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT",
+        "paragraph_snippet": "This Agreement shall terminate, subject to any automatic renewal or extension for one year as required by law, upon either party giving at least one hundred twenty (120) days advance written notice to"
+      },
+      {
+        "contract_id": "AULAMERICANUNITTRUST_04_24_2020-EX-99.8.77-SERVICING_AGREEMENT",
+        "paragraph_snippet": "In addition, either you or Nationwide may terminate this Agreement (i) upon the material breach of this Agreement by the other or (ii) for any reason on at least ninety (90) days written notice to the"
+      },
+      {
+        "contract_id": "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship_Agreement",
+        "paragraph_snippet": "Each Party may also terminate the Agreement for convenience after Contract Year 2 (as defined in Section 14.4) by providing written notice to the other Party at least sixty (60) calendar days prior to"
+      },
+      {
+        "contract_id": "ArcaUsTreasuryFund_20200207_N-2_EX-99.K5_11971930_EX-99.K5_Development_Agreement",
+        "paragraph_snippet": "This Agreement may be terminated at any time, without the payment of any penalty, upon 60 days' written notice, by the vote of a majority of the outstanding voting securities of the Fund or by the vot"
+      },
+      {
+        "contract_id": "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License_Agreement",
+        "paragraph_snippet": "8.1 Term. This Agreement may be terminated by ArTara upon thirty (30) days prior written notice to University. 8.2 Termination by Either Party. Either Party may terminate the Project and all commitmen"
+      },
+      {
+        "contract_id": "BIOPURECORP_06_30_1999-EX-10.13-AGENCY_AGREEMENT",
+        "paragraph_snippet": "Either party may, at its option, terminate this Agreement without cause, effective at any time after January 31, 1999, upon giving at least ninety (90) days prior written notice of such termination to"
+      },
+      {
+        "contract_id": "BNCMORTGAGEINC_05_17_1999-EX-10.4-LICENSING_AND_WEB_SITE_HOSTING_AGREEMENT",
+        "paragraph_snippet": "Subject to Section 4 hereof, TrueLink will continue to provide the requested Hosting Services and Support Services until the last day of the month following the month in which Client provides TrueLink"
+      },
+      {
+        "contract_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING_AGREEMENT",
+        "paragraph_snippet": "Unless either party gives written notice to terminate this Agreement at least six (6) months prior to the end of said Initial Term, this Agreement shall continue on a year to year basis (\"Extended Ter"
+      }
+    ]
+  }
+}

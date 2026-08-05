@@ -1,0 +1,579 @@
+[
+  {
+    "method": "evoskill_compiler",
+    "total_tasks": 21396,
+    "avg_evidence_f1": 0.0,
+    "avg_status_accuracy": 0.0,
+    "external_violation_rate": 1.0,
+    "cases_evaluated": 9,
+    "case_results": {
+      "contract_basic_info": {
+        "total_tasks": 2604,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 2304,
+          "evidence_missing": 258,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 2604
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 2604,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 2304,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 258,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 2304,
+          "evidence_missing->error": 258,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      },
+      "term_and_termination": {
+        "total_tasks": 1584,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 482,
+          "evidence_missing": 1060,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 1584
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 1584,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 482,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 1060,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 482,
+          "evidence_missing->error": 1060,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      },
+      "legal_governance": {
+        "total_tasks": 1584,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 829,
+          "evidence_missing": 713,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 1584
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 1584,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 829,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 713,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 829,
+          "evidence_missing->error": 713,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      },
+      "ip_and_license": {
+        "total_tasks": 4134,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 769,
+          "evidence_missing": 3323,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 4134
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 4134,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 769,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 3323,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 769,
+          "evidence_missing->error": 3323,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      },
+      "competition_restrictions": {
+        "total_tasks": 3624,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 546,
+          "evidence_missing": 3036,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 3624
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 3624,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 546,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 3036,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 546,
+          "evidence_missing->error": 3036,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      },
+      "liability_and_indemnity": {
+        "total_tasks": 2094,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 534,
+          "evidence_missing": 1518,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 2094
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 2094,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 534,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 1518,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 534,
+          "evidence_missing->error": 1518,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      },
+      "assignment_and_control": {
+        "total_tasks": 1074,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 507,
+          "evidence_missing": 525,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 1074
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 1074,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 507,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 525,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 507,
+          "evidence_missing->error": 525,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      },
+      "revenue_and_commercial_terms": {
+        "total_tasks": 2094,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 440,
+          "evidence_missing": 1612,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 2094
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 2094,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 440,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 1612,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 440,
+          "evidence_missing->error": 1612,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      },
+      "operational_rights": {
+        "total_tasks": 2604,
+        "evidence_f1": 0.0,
+        "status_accuracy": 0.0,
+        "external_violation_rate": 1.0,
+        "external_opportunities": 42,
+        "external_violations": 42,
+        "gold_status_distribution": {
+          "answered": 399,
+          "evidence_missing": 2163,
+          "missing_input": 12,
+          "unsupported_scope": 12,
+          "needs_human_review": 18
+        },
+        "pred_status_distribution": {
+          "error": 2604
+        },
+        "per_status_accuracy": {
+          "needs_human_review": {
+            "gold_count": 18,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "unsupported_scope": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "error": {
+            "gold_count": 0,
+            "pred_count": 2604,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "answered": {
+            "gold_count": 399,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "evidence_missing": {
+            "gold_count": 2163,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          },
+          "missing_input": {
+            "gold_count": 12,
+            "pred_count": 0,
+            "correct": 0,
+            "accuracy": 0.0
+          }
+        },
+        "status_confusion": {
+          "answered->error": 399,
+          "evidence_missing->error": 2163,
+          "missing_input->error": 12,
+          "unsupported_scope->error": 12,
+          "needs_human_review->error": 18
+        }
+      }
+    }
+  }
+]

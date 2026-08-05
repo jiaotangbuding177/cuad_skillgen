@@ -22,8 +22,5 @@ env/
 .DS_Store
 Thumbs.db
 
-# Results (generated output, too large for GitHub)
-results/
-
 # Logs
 *.log
