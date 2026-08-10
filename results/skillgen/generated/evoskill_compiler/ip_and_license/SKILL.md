@@ -1,102 +1,102 @@
-# SKILL.md: Intellectual Property and License Review
+# SKILL.md: IP and License Review
 
 ## Covered Categories
-The following categories are covered by the evidence index, with the number of Knowledge Atoms (KAs) available for each:
+- **License Grant**: 292 evidence atoms
+- **Non-Transferable License**: 254 evidence atoms
+- **Affiliate License-Licensor**: 207 evidence atoms
+- **Affiliate License-Licensee**: 227 evidence atoms
+- **Unlimited/All-You-Can-Eat-License**: 199 evidence atoms
+- **Irrevocable or Perpetual License**: 220 evidence atoms
+- **Source Code Escrow**: 200 evidence atoms
+- **Post-Termination Services**: 363 evidence atoms
 
-1.  **License Grant**: 292 KAs
-2.  **Non-Transferable License**: 254 KAs
-3.  **Affiliate License-Licensor**: 207 KAs
-4.  **Affiliate License-Licensee**: 227 KAs
-5.  **Unlimited/All-You-Can-Eat-License**: 199 KAs
-6.  **Irrevocable or Perpetual License**: 220 KAs
-7.  **Source Code Escrow**: 200 KAs
-8.  **Post-Termination Services**: 363 KAs
-
-## Evidence-Based Review Rules
+## Common Clause Patterns & Example Phrasing
 
 ### 1. License Grant
-*   **Identify Explicit Grant Language**: Look for phrases such as "hereby grants," "grants to [Licensee]," or "right to use" to confirm the existence of a license. [KA-0001, KA-0002, KA-0055, KA-0074, KA-0075, KA-0087, KA-0088, KA-0123, KA-0131, KA-0132, KA-0133, KA-0143, KA-0171, KA-0196, KA-0204, KA-0229, KA-0239, KA-0263, KA-0271, KA-0282, KA-0283, KA-0284]
-*   **Determine License Scope**: Verify if the license is exclusive or non-exclusive, and whether it covers specific territories or fields of use. [KA-0001, KA-0002, KA-0074, KA-0075, KA-0131, KA-0132, KA-0133, KA-0143, KA-0263, KA-0282]
-*   **Check for Absence of License**: If the contract is a Cooperation, Servicing, or Agency Agreement without IP transfer, confirm no license is granted. [KA-0029, KA-0064, KA-0152]
+**Pattern Name:** Standard IP License Grant
+**Description:** A clause explicitly granting rights to use, reproduce, or display intellectual property, often specifying exclusivity, territory, and scope.
+**Example Phrasing:**
+> "Zynga grants to WPT a non-exclusive, non- assignable, non-sublicensable, royalty-free, paid up, limited worldwide license to use and display Zyng..." [KA-0074]
+> "Array hereby grants to Ono an exclusive license, with the right to grant sublicenses as provided in Section 2.2, under the Array Patents..." [KA-0131]
+**Variation Notes:** Licenses may be exclusive or non-exclusive, worldwide or territorial, and royalty-free or fee-bearing. Some contracts explicitly state no license is granted (e.g., [KA-0029], [KA-0064]).
 
 ### 2. Non-Transferable License
-*   **Identify Transfer Restrictions**: Look for explicit language stating the license is "non-transferable," "non-assignable," or "non-sublicensable." [KA-0003, KA-0004, KA-0005, KA-0076, KA-0077, KA-0089, KA-0090, KA-0124, KA-0134, KA-0144, KA-0172, KA-0197, KA-0230, KA-0240, KA-0272, KA-0290, KA-0340, KA-0348, KA-0385]
-*   **Check for Consent Requirements**: Determine if assignment requires prior written consent from the other party. [KA-0124, KA-0134, KA-0144, KA-0197, KA-0240, KA-0385]
-*   **Verify Exceptions**: Note any exceptions to non-transferability, such as assignments to affiliates or in connection with mergers. [KA-0197, KA-0290, KA-0340, KA-0385]
-*   **Confirm No Restrictions if No License**: If no license is granted, there are no transfer restrictions. [KA-0030, KA-0065, KA-0153, KA-0298, KA-0330, KA-0356]
+**Pattern Name:** Assignment and Sublicensing Restrictions
+**Description:** Clauses prohibiting the licensee from transferring, assigning, or sublicensing the granted rights without consent, or explicitly stating the license is non-transferable.
+**Example Phrasing:**
+> "All rights (under any applicable intellectual property right) granted herein are not sublicenseable, transferable or assignable." [KA-0003]
+> "Newegg grants Allied a revocable, non-transferrable, non-assignable (whether voluntarily, or as a result of a change of control, or by operation of law)..." [KA-0090]
+**Variation Notes:** Restrictions may apply to voluntary assignment, change of control, or operation of law. Some clauses allow assignment to affiliates with consent ([KA-0197], [KA-0385]).
 
 ### 3. Affiliate License-Licensor
-*   **Identify Affiliate Inclusion**: Check if the license is granted by the Licensor "on behalf of itself and its Affiliates" or if it covers IP owned by affiliates. [KA-0231, KA-0273, KA-0617, KA-0633, KA-0745]
-*   **Confirm Exclusion of Affiliates**: If the license is granted directly by the Licensor without mention of affiliates, or explicitly excludes affiliate IP, note this limitation. [KA-0031, KA-0057, KA-0066, KA-0154, KA-0173, KA-0206, KA-0299, KA-0331, KA-0357, KA-0396, KA-0462, KA-0516, KA-0549, KA-0565, KA-0582, KA-0625, KA-0658, KA-0666, KA-0708, KA-0736]
+**Pattern Name:** Licensor Affiliate IP Coverage
+**Description:** Clauses where the licensor grants rights on behalf of itself and its affiliates, or where the licensed IP includes assets owned by the licensor's affiliates.
+**Example Phrasing:**
+> "Exact on behalf of itself and its Affiliates, hereby grants to Pfizer a non-exclusive, royalty free license..." [KA-0617]
+> "SONY, on behalf of itself and its Affiliates, hereby grants to PURCHASER a worldwide, non-exclusive, fully paid-up, royalty-free license..." [KA-0745]
+**Variation Notes:** Many contracts explicitly exclude affiliate IP or state no license is granted by affiliates ([KA-0031], [KA-0057], [KA-0582]).
 
 ### 4. Affiliate License-Licensee
-*   **Identify Affiliate Rights**: Look for language granting the license to the Licensee "and its Affiliates" or permitting sublicensing to affiliates. [KA-0126, KA-0137, KA-0138, KA-0242, KA-0368, KA-0387, KA-0397, KA-0421, KA-0558, KA-0618, KA-0634]
-*   **Confirm Restriction to Licensee Only**: If the license is granted specifically to the Licensee without extension to affiliates, note this restriction. [KA-0032, KA-0058, KA-0067, KA-0155, KA-0174, KA-0207, KA-0300, KA-0332, KA-0358, KA-0463, KA-0517, KA-0550, KA-0566, KA-0626]
+**Pattern Name:** Licensee Affiliate Rights and Sublicensing
+**Description:** Clauses granting the licensee the right to use IP for its affiliates or to sublicense rights to its affiliates.
+**Example Phrasing:**
+> "Licensor also grants to Licensee and its subsidiaries and affiliates a non-exclusive, worldwide royalty-free license for continued use of the Licensed Mark" [KA-0126]
+> "The licenses granted under this Subsection 2.1(b) may be sublicensed by Ono only to its Affiliates, and then only for so long as such entities remain as Affiliates." [KA-0137]
+**Variation Notes:** Rights may be limited to specific affiliates or require the licensee to assume responsibility for affiliate compliance ([KA-0368], [KA-0558]).
 
 ### 5. Unlimited/All-You-Can-Eat-License
-*   **Identify Unlimited Usage**: Look for terms like "unlimited right," "unlimited number of users," or "unlimited number of customers." [KA-0243, KA-0293, KA-0343]
-*   **Confirm Limited Scope**: Most licenses are limited to specific purposes, territories, or fields. Look for "limited license," "solely for," or specific usage caps. [KA-0008, KA-0059, KA-0080, KA-0081, KA-0127, KA-0139, KA-0208, KA-0233, KA-0267, KA-0275, KA-0388, KA-0398, KA-0456, KA-0464, KA-0518]
-*   **Check for Absence**: If no license is granted, there is no unlimited license. [KA-0033, KA-0068, KA-0156, KA-0175, KA-0301, KA-0333, KA-0359, KA-0398]
+**Pattern Name:** Unlimited Usage or Internal Rights
+**Description:** Clauses granting rights to an unlimited number of users, customers, or internal entities, often in hosting or enterprise software contexts.
+**Example Phrasing:**
+> "sublicense an unlimited number of Customers to access and use the Software and MarketSite.net Service only through the installation on Corio servers" [KA-0343]
+> "Theismann hereby grants to Bizzingo and its affiliates the unlimited right and privilege during the Term... to use the Property..." [KA-0243]
+**Variation Notes:** Most licenses are "limited" to specific purposes, products, or territories ([KA-0080], [KA-0127], [KA-0275]). True "unlimited" grants are rare and often restricted to internal use or specific customer bases.
 
 ### 6. Irrevocable or Perpetual License
-*   **Identify Perpetual/Irrevocable Terms**: Look for explicit language stating the license is "perpetual," "irrevocable," or survives termination. [KA-0082, KA-0083, KA-0268, KA-0294, KA-0344, KA-0370, KA-0389]
-*   **Confirm Term-Limited Nature**: Most licenses are tied to the agreement term. Look for "during the term," "upon termination," or "expires upon." [KA-0009, KA-0060, KA-0094, KA-0128, KA-0176, KA-0201, KA-0209, KA-0234, KA-0244, KA-0276, KA-0352, KA-0399]
-*   **Check for Absence**: If no license is granted, there is no perpetual license. [KA-0034, KA-0069, KA-0157, KA-0302, KA-0334, KA-0360]
+**Pattern Name:** Perpetual and Irrevocable Rights
+**Description:** Clauses explicitly stating that the license is perpetual (lasts forever) and/or irrevocable (cannot be withdrawn), often for background IP or specific deliverables.
+**Example Phrasing:**
+> "Commerce One hereby grants to Corio a fee-bearing, perpetual and irrevocable, nonexclusive, nontransferable... right and license" [KA-0344]
+> "Supplier hereby grants Bank of America a nonexclusive, worldwide, irrevocable, perpetual license to install, use, execute and copy the Software..." [KA-0370]
+**Variation Notes:** Many licenses are explicitly revocable or tied to the agreement term ([KA-0094], [KA-0201], [KA-0441]). Perpetual licenses often apply to jointly owned IP or specific prior inventions ([KA-0268], [KA-0473]).
 
 ### 7. Source Code Escrow
-*   **Identify Escrow Provisions**: Look for clauses requiring the deposit of source code with a third-party escrow agent. [KA-0345]
-*   **Confirm No Escrow**: Most contracts do not include source code escrow. Look for explicit statements that source code will not be provided or no mention of escrow. [KA-0010, KA-0035, KA-0061, KA-0070, KA-0084, KA-0095, KA-0129, KA-0141, KA-0158, KA-0177, KA-0210, KA-0235, KA-0245, KA-0269, KA-0277, KA-0295, KA-0303, KA-0335, KA-0353, KA-0361, KA-0400, KA-0458, KA-0466, KA-0474]
+**Pattern Name:** Source Code Escrow Agreement
+**Description:** Clauses requiring the deposit of source code with a third-party escrow agent for release under specific conditions (e.g., vendor bankruptcy).
+**Example Phrasing:**
+> "Within sixty (60) days of the Effective Date, Commerce One agrees to execute an escrow agreement by and among Corio, Commerce One and a mutually acceptable escrow agent..." [KA-0345]
+**Variation Notes:** Most contracts explicitly state no source code is provided or escrowed ([KA-0295], [KA-0303], [KA-0335]). Financial escrow is distinct from source code escrow ([KA-0010], [KA-0158]).
 
 ### 8. Post-Termination Services
-*   **Identify Transition Obligations**: Look for requirements to return/destroy confidential information, transfer data, or provide transition services. [KA-0011, KA-0012, KA-0062, KA-0063, KA-0085, KA-0086, KA-0096, KA-0097, KA-0098, KA-0099, KA-0130, KA-0142, KA-0146, KA-0147, KA-0203, KA-0236, KA-0237, KA-0238, KA-0270, KA-0278, KA-0279, KA-0280, KA-0281]
-*   **Check for Survival Clauses**: Identify obligations that survive termination, such as confidentiality or payment. [KA-0178, KA-0179]
+**Pattern Name:** Transition and Survival Obligations
+**Description:** Clauses requiring parties to continue services, return materials, or assist in transition after termination.
+**Example Phrasing:**
+> "TrueLink will continue to provide the requested Hosting Services and Support Services until the last day of the month following the month in which Client provides TrueLink..." [KA-0203]
+> "Commerce One's obligation to provide Software support and maintenance to Corio and its Customers shall survive any termination or expiration of this Agreement..." [KA-0346]
+**Variation Notes:** Obligations may include returning confidential information ([KA-0130], [KA-0278]), completing pending transactions ([KA-0012]), or providing transition assistance ([KA-0372]).
 
 ## Review Checklist
 
-### License Grant
-- [ ] Does the contract contain explicit language granting a license (e.g., "hereby grants")? [KA-0001, KA-0002, KA-0055]
-- [ ] Is the license exclusive or non-exclusive? [KA-0001, KA-0074, KA-0131]
-- [ ] Is the license limited to specific uses, territories, or fields? [KA-0001, KA-0074, KA-0139]
-- [ ] If no license is granted, is this explicitly stated or implied by the contract type? [KA-0029, KA-0064]
-
-### Non-Transferable License
-- [ ] Is the license explicitly stated as non-transferable, non-assignable, or non-sublicensable? [KA-0003, KA-0004, KA-0076]
-- [ ] Are there exceptions for assignments to affiliates or in mergers? [KA-0197, KA-0385]
-- [ ] Is prior written consent required for any transfer? [KA-0124, KA-0144]
-
-### Affiliate License-Licensor
-- [ ] Does the license cover IP owned by the Licensor's affiliates? [KA-0231, KA-0273, KA-0617]
-- [ ] Is the license granted on behalf of the Licensor and its affiliates? [KA-0617, KA-0745]
-- [ ] Is the license restricted to the Licensor only? [KA-0031, KA-0057, KA-0462]
-
-### Affiliate License-Licensee
-- [ ] Is the license granted to the Licensee and its affiliates? [KA-0126, KA-0242, KA-0387]
-- [ ] Is the Licensee permitted to sublicense to affiliates? [KA-0137, KA-0397, KA-0421]
-- [ ] Is the license restricted to the Licensee only? [KA-0032, KA-0058, KA-0463]
-
-### Unlimited/All-You-Can-Eat-License
-- [ ] Does the license grant unlimited usage rights (e.g., unlimited users, unlimited customers)? [KA-0243, KA-0293, KA-0343]
-- [ ] Is the license limited to specific purposes or caps? [KA-0008, KA-0080, KA-0139]
-- [ ] Is the license described as "limited"? [KA-0080, KA-0127, KA-0275]
-
-### Irrevocable or Perpetual License
-- [ ] Is the license explicitly stated as perpetual or irrevocable? [KA-0268, KA-0294, KA-0344, KA-0370]
-- [ ] Does the license survive termination? [KA-0082, KA-0083]
-- [ ] Is the license tied to the term of the agreement? [KA-0009, KA-0060, KA-0201]
-
-### Source Code Escrow
-- [ ] Is there a requirement to deposit source code with a third-party escrow agent? [KA-0345]
-- [ ] Is it explicitly stated that source code will not be provided? [KA-0295]
-- [ ] Is there no mention of source code escrow? [KA-0035, KA-0061, KA-0070]
-
-### Post-Termination Services
-- [ ] Are there obligations to return or destroy confidential information? [KA-0097, KA-0130, KA-0278]
-- [ ] Are there transition services or data transfer obligations? [KA-0063, KA-0142, KA-0203]
-- [ ] Do any obligations survive termination (e.g., confidentiality, payment)? [KA-0178, KA-0179, KA-0280]
+1.  **License Grant**: Identify the scope (exclusive/non-exclusive), territory, and specific rights granted. Check for "No" responses if no IP is licensed.
+2.  **Non-Transferable License**: Verify if assignment/sublicensing is prohibited or requires consent. Note exceptions for affiliates or mergers.
+3.  **Affiliate License-Licensor**: Determine if the licensor's affiliates are granting rights or if their IP is included.
+4.  **Affiliate License-Licensee**: Check if the licensee can use IP for affiliates or sublicense to them.
+5.  **Unlimited/All-You-Can-Eat-License**: Look for "unlimited" usage rights vs. "limited" specific purpose clauses.
+6.  **Irrevocable or Perpetual License**: Identify if the license survives termination or is perpetual/irrevocable.
+7.  **Source Code Escrow**: Confirm if source code escrow is required or explicitly excluded.
+8.  **Post-Termination Services**: Identify obligations for transition, support survival, or material return.
 
 ## Output Format
-```json
-{
-  "status": "success",
-  "answer": "Review completed based on evidence index.",
-  "evidence_unit_ids": ["KA-0001", "KA-0002", "KA-0003", "KA-0004", "KA-0005", "KA-0008", "KA-0009", "KA-0010", "KA-0011", "KA-0012", "KA-0029", "KA-0030", "KA-0031", "KA-0032", "KA-0033", "KA-0034", "KA-0035", "KA-0055", "KA-0057", "KA-0058", "KA-0059", "KA-0060", "KA-0061", "KA-0062", "KA-0063", "KA-0064", "KA-0065", "KA-0066", "KA-0067", "KA-0068", "KA-0069", "KA-0070", "KA-0074", "KA-0075", "KA-0076", "KA-0077", "KA-0080", "KA-0081", "KA-0082", "KA-0083", "KA-0084", "KA-0085", "KA-0086", "KA-0087", "KA-0088", "KA-0089", "KA-0090", "KA-0094", "KA-0095", "KA-0096", "KA-0097", "KA-0098", "KA-0099", "KA-0123", "KA-0124", "KA-0126", "KA-0127", "KA-0128", "KA-0129", "KA-0130", "KA-0131", "KA-0132", "KA-0133", "KA-0134", "KA-0137", "KA-0138", "KA-0139", "KA-0141", "KA-0142", "KA-0143", "KA-0144", "KA-0146", "KA-0147", "KA-0152", "KA-0153",
+JSON: {status, answer, evidence_unit_ids, source_contract_ids, missing_inputs, human_review_required}
+
+## Boundary Rules
+- [RB-001] Answer only using the target contract.
+- [RB-002] Cite source-grounded evidence when answering.
+- [RB-003] Return evidence_missing when no supporting clause exists.
+- [RB-004] Return missing_input when contract_id or category is absent.
+- [RB-005] Return unsupported_scope when the question is outside covered_categories.
+- [RB-006] Route legal advice and high-risk interpretation to human review.
+- [SR-001] Do not cite non-target contracts.
+- [SR-002] Do not fabricate clauses.
+- [SR-003] Do not provide legal advice.
+- [SR-004] Do not generate externally sendable legal opinions.

@@ -179,7 +179,8 @@ def main():
     parser.add_argument("--results-root", default="results/skillgen/generated")
     parser.add_argument("--methods", nargs="+",
                         default=["native_prompt_skill", "schema_prompt_skill",
-                                 "summary2skill", "document_tool_maker", "evoskill_compiler"])
+                                 "summary2skill", "document_tool_maker", "evoskill_compiler",
+                                 "graph_evoskill_compiler"])
     args = parser.parse_args()
 
     from common.loader import CUADSkillGenLoader

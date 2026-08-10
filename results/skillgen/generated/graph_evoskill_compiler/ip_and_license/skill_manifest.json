@@ -1,0 +1,35 @@
+{
+  "method": "graph_evoskill_compiler",
+  "case_id": "ip_and_license",
+  "model": "ecnu-plus",
+  "source_method": "evoskill_compiler",
+  "compilation_protocol": "gesc-1.0",
+  "graph_config": {
+    "graph_ka_limit": 200,
+    "similarity_threshold": 0.24,
+    "max_neighbors": 6,
+    "patterns_per_category": 6,
+    "examples_per_pattern": 3
+  },
+  "graph_statistics": {
+    "node_types": {
+      "Category": 8,
+      "KnowledgeAtom": 1599,
+      "ClausePattern": 48,
+      "Contract": 226
+    },
+    "edge_types": {
+      "BELONGS_TO": 1599,
+      "DERIVED_FROM": 1599,
+      "VARIANT_OF": 3323,
+      "INSTANCE_OF": 630
+    }
+  },
+  "usage": {
+    "prompt_tokens": 23414,
+    "completion_tokens": 4238,
+    "total_tokens": 27652
+  },
+  "duration_seconds": 87.727,
+  "created_at": "2026-08-10T07:45:01.316988+00:00"
+}

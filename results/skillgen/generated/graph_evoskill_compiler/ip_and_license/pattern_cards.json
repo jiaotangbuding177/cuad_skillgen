@@ -1,0 +1,1927 @@
+{
+  "License Grant": [
+    {
+      "pattern_id": "PAT-license-grant-01",
+      "category": "License Grant",
+      "member_count": 11,
+      "source_contract_count": 10,
+      "selection_score": 1.7484,
+      "variation_cues": [
+        "non-exclusive",
+        "hereby",
+        "license",
+        "grants",
+        "marks",
+        "use",
+        "service",
+        "trademarks",
+        "trade",
+        "names"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1642",
+          "text": "Each party hereby grants to the other a non-exclusive, limited license to use its trademarks, service marks or trade names only as specifically described in this Agreement.",
+          "interpretation": "The contract explicitly grants a non-exclusive, limited license for the use of trademarks, service marks, and trade names between the parties.",
+          "source_contract_id": "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0589",
+          "text": "Women.com hereby grants eDiets a non-exclusive, non-transferable, royalty-free worldwide right and license without the right to sublicense to use the Women.com Marks during the Term solely in connection with (i) the fulfillment of eDiets' obligations under this Agreement, and (ii) in advertising and marketing collateral related to this Agreement.",
+          "interpretation": "Women.com grants eDiets a license to use Women.com Marks for fulfilling obligations and advertising related to the Agreement.",
+          "source_contract_id": "EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0478",
+          "text": "Subject to the terms and conditions hereof, Sponsor hereby represents and warrants that it has the power and authority to grant, and does hereby grant to drkoop.com a non-exclusive, non-transferable, royalty-free, worldwide license to reproduce and display all logos, trademarks, trade names and similar identifying material relating to Sponsor (the \"Sponsor Marks\") solely in connection with the promotion, marketing and distribution of the parties and the Sites in accordance with the terms hereof",
+          "interpretation": "Sponsor grants drkoop.com a license to use its trademarks and logos for promotional purposes.",
+          "source_contract_id": "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-license-grant-02",
+      "category": "License Grant",
+      "member_count": 11,
+      "source_contract_count": 11,
+      "selection_score": 1.6578,
+      "variation_cues": [],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1358",
+          "text": "No",
+          "interpretation": "The contract is an outsourcing agreement for operational services and does not contain a license grant of intellectual property or software.",
+          "source_contract_id": "NEXSTARFINANCEHOLDINGSINC_03_27_2002-EX-10.26-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0734",
+          "text": "No",
+          "interpretation": "The contract is a transportation agreement for crude oil and does not contain any license grants for intellectual property or software.",
+          "source_contract_id": "GRANTIERRAENERGYINC_05_07_2012-EX-10.6-TRANSPORTATION_CONTRACT"
+        },
+        {
+          "ka_id": "KA-0773",
+          "text": "No",
+          "interpretation": "The contract is a distributor agreement for physical goods (coffee) and does not contain a license grant for intellectual property or software.",
+          "source_contract_id": "GentechHoldingsInc_20190808_1-A_EX1A-6_MAT_CTRCT_11776814_EX1A-6_MAT_CTRCT_Distributor_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-license-grant-03",
+      "category": "License Grant",
+      "member_count": 7,
+      "source_contract_count": 5,
+      "selection_score": 1.5347,
+      "variation_cues": [
+        "license",
+        "worldwide",
+        "hereby",
+        "grants",
+        "members",
+        "non-exclusive",
+        "perpetual",
+        "group",
+        "fully",
+        "subject"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0760",
+          "text": "SpinCo hereby grants, and agrees to cause the members of the SpinCo Group to hereby grant, to Honeywell and the members of the Honeywell Group a non-exclusive, royalty-free, fully-paid, perpetual, sublicenseable (solely to Subsidiaries and suppliers for \"have made\" purposes), worldwide license to use and exercise rights under the SpinCo Shared IP",
+          "interpretation": "SpinCo grants Honeywell a perpetual, royalty-free, non-exclusive license to use SpinCo Shared IP.",
+          "source_contract_id": "GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-0384",
+          "text": "SpinCo hereby grants to Nuance and the members of the Nuance Group a worldwide, non-exclusive, fully paid-up, perpetual and irrevocable, transferable (subject to ARTICLE VIII), sublicensable (subject to Section 4.01(g)) license under the SpinCo Patents",
+          "interpretation": "SpinCo grants Nuance a license to use SpinCo Patents for the Nuance Field of Use.",
+          "source_contract_id": "CerenceInc_20191002_8-K_EX-10.4_11827494_EX-10.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-1430",
+          "text": "hereby grants and agrees to grant to the applicable Licensee Party and the other members of the Licensee Group, subject to the field restriction of Section 3.1.2, a royalty-free, nonexclusive, perpetual, irrevocable, fully paid-up, worldwide right and license, with the right to sublicense as provided in Section 3.1.3, to Exploit Intellectual Property Rights",
+          "interpretation": "The Licensor Party grants a broad, royalty-free, nonexclusive, perpetual, and irrevocable license to the Licensee Party and its group members to exploit specified Intellectual Property Rights.",
+          "source_contract_id": "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-license-grant-04",
+      "category": "License Grant",
+      "member_count": 6,
+      "source_contract_count": 5,
+      "selection_score": 1.5219,
+      "variation_cues": [
+        "license",
+        "non-exclusive",
+        "use",
+        "worldwide",
+        "hereby",
+        "grants",
+        "content",
+        "reproduce",
+        "display",
+        "royalty-free"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1043",
+          "text": "Subject to the terms and conditions of this Agreement, Application Provider hereby grants to Excite@Home a royalty-free, non-exclusive, worldwide license to use, reproduce, distribute, transmit and publicly display the e-centives Content in accordance with this Agreement",
+          "interpretation": "Application Provider grants Excite@Home a royalty-free, non-exclusive, worldwide license to use and distribute e-centives Content.",
+          "source_contract_id": "InvendaCorp_20000828_S-1A_EX-10.2_2588206_EX-10.2_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0588",
+          "text": "eDiets hereby grants to Women.com, subject to the terms and conditions of this Agreement, a non-exclusive, nontransferable, worldwide, royalty-free license to use, copy, reproduce and display the editorial content and other data, branding and other identification provided by eDiets to Women.com in connection with this Agreement (the \"eDiets Content\") on the Women.com Sites",
+          "interpretation": "eDiets grants Women.com a license to use, copy, reproduce, and display eDiets Content on Women.com Sites.",
+          "source_contract_id": "EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0605",
+          "text": "Sponsor hereby grants Snap a non-exclusive, revocable nontransferable, royalty-free, worldwide license to: (a) use, reproduce, publish, perform and display the Sponsor Marks and Sponsor Brand Features on the Co-Branded Pages; (b) link to the Sponsor Web Site from the Co-Branded Pages and/or the Snap Web Site that contains the Co-Branded Pages and (c) use, reproduce, publish, perform, and display the Sponsor Content in and on the Co-Branded Pages.",
+          "interpretation": "Sponsor grants Snap a license to use Sponsor Marks, Brand Features, and Content on Co-Branded Pages.",
+          "source_contract_id": "EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-license-grant-05",
+      "category": "License Grant",
+      "member_count": 6,
+      "source_contract_count": 5,
+      "selection_score": 1.517,
+      "variation_cues": [
+        "grants",
+        "licensee",
+        "hereby",
+        "licensor",
+        "licensed",
+        "use",
+        "license",
+        "connection",
+        "provided",
+        "forth"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0392",
+          "text": "Licensor hereby grants to Licensee, and Licensee hereby accepts from Licensor, an exclusive, non-transferable (except as set forth in Section 10.7) and non-sublicensable (except as provided in Section 2.1(c)) license to use the Licensed Domain Names in connection with the Business during the Term.",
+          "interpretation": "The contract explicitly grants an exclusive license to the Licensee to use the Licensed Domain Names.",
+          "source_contract_id": "ChinaRealEstateInformationCorp_20090929_F-1_EX-10.32_4771615_EX-10.32_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-1623",
+          "text": "Licensor hereby, subject to the terms and conditions of this Agreement and provided that Licensee makes payments to Licensor as required under this Agreement, grants to Licensee a non-exclusive license to utilize Licensed Technology solely in the Field of Use and subject to the additional restrictions set forth below and otherwise in this License Agreement.",
+          "interpretation": "The contract explicitly grants a non-exclusive license from the Licensor to the Licensee to utilize the Licensed Technology.",
+          "source_contract_id": "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0123",
+          "text": "Licensor on behalf of itself and its Affliates hereby grants to Licensee the limited licenses to use and have used the Licensed Mark",
+          "interpretation": "The contract explicitly grants a license from the Licensor to the Licensee to use the Licensed Mark.",
+          "source_contract_id": "ArconicRolledProductsCorp_20191217_10-12B_EX-2.7_11923804_EX-2.7_Trademark_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-license-grant-06",
+      "category": "License Grant",
+      "member_count": 6,
+      "source_contract_count": 6,
+      "selection_score": 1.4909,
+      "variation_cues": [],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1598",
+          "text": "No",
+          "interpretation": "The contract is a services agreement for a CEO and does not contain any language granting a license to intellectual property or software.",
+          "source_contract_id": "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1135",
+          "text": "No",
+          "interpretation": "The contract is a Strategic Alliance Agreement focused on joint pursuit of projects and does not contain any language granting a license to intellectual property or software.",
+          "source_contract_id": "LIGHTBRIDGECORP_11_23_2015-EX-10.26-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1924",
+          "text": "No",
+          "interpretation": "The contract is a Global Master Supply Agreement for physical products (chemicals) and does not contain any clauses granting intellectual property licenses.",
+          "source_contract_id": "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply_Agreement"
+        }
+      ]
+    }
+  ],
+  "Non-Transferable License": [
+    {
+      "pattern_id": "PAT-non-transferable-license-01",
+      "category": "Non-Transferable License",
+      "member_count": 28,
+      "source_contract_count": 28,
+      "selection_score": 2.0906,
+      "variation_cues": [
+        "written",
+        "without",
+        "rights",
+        "prior",
+        "consent",
+        "assign",
+        "obligations",
+        "neither",
+        "hereunder",
+        "transfer"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0699",
+          "text": "Neither party shall assign any of its rights or obligations hereunder without the prior written consent of the other party.",
+          "interpretation": "The agreement explicitly prohibits the assignment of rights, including licenses, without prior written consent, making the license non-transferable.",
+          "source_contract_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1578",
+          "text": "Company may not assign or transfer its rights or obligations under this Agreement, whether by operation of law, contract or otherwise, without the prior written consent of Reed's",
+          "interpretation": "Company is prohibited from assigning or transferring its rights, including the license granted, without Reed's prior written consent.",
+          "source_contract_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-1132",
+          "text": "Without prior written consent of the other Parties, none of the Parties may assign any or all of its rights and obligations under this Agreement to any third party.",
+          "interpretation": "The contract explicitly prohibits the assignment of rights (including the license to operate the channel) to third parties without prior written consent.",
+          "source_contract_id": "LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET_CHANNEL_COOPERATION_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-non-transferable-license-02",
+      "category": "Non-Transferable License",
+      "member_count": 27,
+      "source_contract_count": 19,
+      "selection_score": 1.9846,
+      "variation_cues": [
+        "grants",
+        "license",
+        "hereby",
+        "non-exclusive",
+        "right",
+        "royalty-free",
+        "non-transferable",
+        "use",
+        "nontransferable",
+        "verticalnet"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1907",
+          "text": "Hydraspin hereby grants to Distributor an exclusive non-transferable and royalty-free right and license to use Hydraspin's Marks",
+          "interpretation": "The license granted for the use of Marks is explicitly defined as non-transferable, preventing the Distributor from assigning this right to third parties.",
+          "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-1415",
+          "text": "E.piphany grants HSNS a nonexclusive, nontransferable, non-sublicensable right",
+          "interpretation": "The license granted to HSNS is explicitly defined as nontransferable.",
+          "source_contract_id": "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1166",
+          "text": "LeadersOnline hereby grants VerticalNet a non- exclusive, nontransferable, royalty-free right and license for the Term of this Agreement to use, copy or modify the LeadersOnline Mark",
+          "interpretation": "The license granted by LeadersOnline to VerticalNet is explicitly non-transferable.",
+          "source_contract_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-non-transferable-license-03",
+      "category": "Non-Transferable License",
+      "member_count": 32,
+      "source_contract_count": 32,
+      "selection_score": 1.9733,
+      "variation_cues": [
+        "interest",
+        "right",
+        "receiving",
+        "information",
+        "license",
+        "create",
+        "disclosure",
+        "ownership",
+        "confidential"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0540",
+          "text": "No",
+          "interpretation": "Since no license is granted, there are no restrictions on transferring a license.",
+          "source_contract_id": "ELANDIAINTERNATIONALINC_04_25_2007-EX-10.21-Outsourcing_Agreement"
+        },
+        {
+          "ka_id": "KA-1423",
+          "text": "No",
+          "interpretation": "Since no license is granted, there are no restrictions on transferring a license.",
+          "source_contract_id": "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0306",
+          "text": "No",
+          "interpretation": "Since no license is granted, there are no restrictions on transferring a license.",
+          "source_contract_id": "CHINARECYCLINGENERGYCORP_11_14_2013-EX-10.6-Cooperation_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-non-transferable-license-04",
+      "category": "Non-Transferable License",
+      "member_count": 8,
+      "source_contract_count": 7,
+      "selection_score": 1.5915,
+      "variation_cues": [
+        "except",
+        "set",
+        "provided",
+        "non-transferable",
+        "forth",
+        "license",
+        "non-sublicensable",
+        "section",
+        "exclusive",
+        "use"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0798",
+          "text": "Fox grants Licensee a worldwide, exclusive (except as otherwise may be provided in the Agreement), non-transferable right and license to distribute video clips for the property \"KINGDOM OF HEAVEN\" (\"KOH Video Clips\").",
+          "interpretation": "The license granted for the Kingdom of Heaven video clips is explicitly defined as non-transferable.",
+          "source_contract_id": "GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content_License_Agreement2"
+        },
+        {
+          "ka_id": "KA-1942",
+          "text": "non-sublicensable (except as set forth in Section 9.03)",
+          "interpretation": "The license granted to XSPA is explicitly non-sublicensable, with a narrow exception for third-party vendors of Product Collateral as defined in Section 9.03.",
+          "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        },
+        {
+          "ka_id": "KA-0161",
+          "text": "The supply of the Miltenyi Products hereunder conveys to Bellicum the limited, non-exclusive, non-transferable (except as expressly provided herein, including as set forth in Article 17) right to use",
+          "interpretation": "The license granted to Bellicum is explicitly defined as non-transferable, with exceptions only as expressly provided in the agreement.",
+          "source_contract_id": "BELLICUMPHARMACEUTICALS,INC_05_07_2019-EX-10.1-Supply_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-non-transferable-license-05",
+      "category": "Non-Transferable License",
+      "member_count": 4,
+      "source_contract_count": 4,
+      "selection_score": 1.5331,
+      "variation_cues": [
+        "grants",
+        "exclusive",
+        "license",
+        "distribute",
+        "non-transferable",
+        "products",
+        "hereby",
+        "right",
+        "distributor",
+        "territory"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1165",
+          "text": "VerticalNet hereby grants to LeadersOnline a non- exclusive, non-transferable, royalty-free right and license to link to the VerticalNet Site.",
+          "interpretation": "The link license granted by VerticalNet to LeadersOnline is explicitly non-transferable.",
+          "source_contract_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-1033",
+          "text": "Erchonia grants Distributor the exclusive, non- transferable right and license to promote, distribute and sell the Products",
+          "interpretation": "The license granted to the Distributor is explicitly defined as non-transferable.",
+          "source_contract_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0873",
+          "text": "Developer hereby grants to Distributor an exclusive, non-transferable fight and license to market and distribute the Products in the Territory.",
+          "interpretation": "The license granted to the Distributor is explicitly stated as non-transferable.",
+          "source_contract_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE_DISTRIBUTOR_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-non-transferable-license-06",
+      "category": "Non-Transferable License",
+      "member_count": 4,
+      "source_contract_count": 4,
+      "selection_score": 1.4802,
+      "variation_cues": [
+        "law",
+        "consent",
+        "operation",
+        "written",
+        "without",
+        "otherwise",
+        "assigned",
+        "including",
+        "granted",
+        "prior"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0763",
+          "text": "Except as expressly set forth in this Agreement, neither this Agreement nor any of the rights, interests or obligations under this Agreement, including the licenses granted pursuant to this Agreement, shall be assigned, in whole or in part, by operation of Law or otherwise by either Party without the prior written consent of the other Party.",
+          "interpretation": "General assignment of the agreement and licenses is prohibited without prior written consent, effectively limiting transferability.",
+          "source_contract_id": "GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-0395",
+          "text": "This Agreement and any rights or authority granted hereunder shall not be assigned or transferred by either Party, including by operation of law, merger or otherwise, without the express written consent of the other Party",
+          "interpretation": "Section 10.7 prohibits assignment or transfer of the agreement and rights without express written consent, reinforcing the non-transferable nature.",
+          "source_contract_id": "ChinaRealEstateInformationCorp_20090929_F-1_EX-10.32_4771615_EX-10.32_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0782",
+          "text": "This Agreement is binding upon each party's assigns, transferees and successors; provided that no party may assign or otherwise transfer, by operation of law or otherwise, this Agreement in whole or in part, without the other party's prior written consent.",
+          "interpretation": "The agreement, including the licenses granted therein, cannot be assigned or transferred without the prior written consent of the other party, with specific exceptions for mergers, acquisitions, and common control entities.",
+          "source_contract_id": "GlobalTechnologiesGroupInc_20050928_10KSB_EX-10.9_4148808_EX-10.9_Content_License_Agreement"
+        }
+      ]
+    }
+  ],
+  "Affiliate License-Licensor": [
+    {
+      "pattern_id": "PAT-affiliate-license-licensor-01",
+      "category": "Affiliate License-Licensor",
+      "member_count": 62,
+      "source_contract_count": 62,
+      "selection_score": 2.0824,
+      "variation_cues": [
+        "unlimited",
+        "privilege",
+        "right",
+        "grants",
+        "defined",
+        "property",
+        "bizzingo",
+        "term",
+        "during",
+        "within"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1178",
+          "text": "No",
+          "interpretation": "The contract does not contain a license grant by affiliates of the licensor or that includes intellectual property of affiliates of the licensor.",
+          "source_contract_id": "LejuHoldingsLtd_20140121_DRS_(on_F-1)_EX-10.26_8473102_EX-10.26_Content_License_Agreement1"
+        },
+        {
+          "ka_id": "KA-1478",
+          "text": "No",
+          "interpretation": "The contract does not contain a license grant by affiliates of the licensor or that includes intellectual property of affiliates of the licensor.",
+          "source_contract_id": "PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement_Agreement"
+        },
+        {
+          "ka_id": "KA-1491",
+          "text": "No",
+          "interpretation": "The contract does not contain a license grant by affiliates of the licensor or that includes intellectual property of affiliates of the licensor.",
+          "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensor-02",
+      "category": "Affiliate License-Licensor",
+      "member_count": 8,
+      "source_contract_count": 8,
+      "selection_score": 1.5793,
+      "variation_cues": [
+        "rights",
+        "intellectual",
+        "copyright",
+        "property",
+        "name",
+        "right",
+        "construed",
+        "company",
+        "granting",
+        "nothing"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0257",
+          "text": "No",
+          "interpretation": "The contract does not contain any language granting licenses to or involving affiliates of the Licensor (Company).",
+          "source_contract_id": "CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship_Agreement"
+        },
+        {
+          "ka_id": "KA-0708",
+          "text": "Nothing in this Agreement will be construed as granting any rights under any patent, copyright or other intellectual property right of the Company",
+          "interpretation": "The contract does not contain any language granting licenses involving affiliates of the licensor; it strictly limits rights to the Company itself.",
+          "source_contract_id": "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1145",
+          "text": "No",
+          "interpretation": "The contract does not contain language granting licenses by affiliates of the licensor or including IP of affiliates.",
+          "source_contract_id": "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensor-03",
+      "category": "Affiliate License-Licensor",
+      "member_count": 7,
+      "source_contract_count": 5,
+      "selection_score": 1.3345,
+      "variation_cues": [
+        "behalf",
+        "grants",
+        "itself",
+        "hereby",
+        "license",
+        "affiliates",
+        "non-exclusive",
+        "worldwide",
+        "licensed",
+        "royalty-free"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0745",
+          "text": "SONY, on behalf of itself and its Affiliates, hereby grants to PURCHASER a worldwide, non-exclusive, fully paid-up, royalty-free license (a) under the Licensed Patents...",
+          "interpretation": "Sony grants the license on behalf of itself and its Affiliates, indicating that the license covers intellectual property owned by Sony's affiliates.",
+          "source_contract_id": "GSITECHNOLOGYINC_11_16_2009-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT_between_SONY_ELECTRONICS_INC._and_GSI_TECHNOLOGY,_INC."
+        },
+        {
+          "ka_id": "KA-0937",
+          "text": "SpinCo hereby grants to each individual member of the Parent Group, on behalf of itself and the other members of the SpinCo Group, and shall cause the other members of the SpinCo Group to grant to each individual member of the Parent Group...",
+          "interpretation": "SpinCo and its affiliates (SpinCo Group) are obligated to grant the license to Parent, indicating the license covers IP held by affiliates.",
+          "source_contract_id": "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL_PROPERTY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0617",
+          "text": "Exact on behalf of itself and its Affiliates, hereby grants to Pfizer a non-exclusive, royalty free license...",
+          "interpretation": "The license is granted by Exact on behalf of itself and its Affiliates, indicating that the IP covered includes that of Exact's affiliates.",
+          "source_contract_id": "ExactSciencesCorp_20180822_8-K_EX-10.1_11331629_EX-10.1_Promotion_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensor-04",
+      "category": "Affiliate License-Licensor",
+      "member_count": 5,
+      "source_contract_count": 4,
+      "selection_score": 1.2202,
+      "variation_cues": [
+        "all",
+        "affiliates",
+        "applicable",
+        "trademarks",
+        "licensed",
+        "rights",
+        "title",
+        "intellectual",
+        "owned",
+        "company"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1432",
+          "text": "a Licensor Party, on behalf of itself and the other members of the Licensor Group, and solely to the extent the Licensor Party or another member of the Licensor Group has the right to do so, hereby grants and agrees to grant to the applicable Licensee Party and the other members of the Licensee Group... to Exploit Intellectual Property Rights that are owned by the Licensor Party or another member of the Licensor Group",
+          "interpretation": "The license grant extends to Intellectual Property Rights owned by the Licensor Party or any other member of the Licensor Group (affiliates), effectively licensing affiliate IP.",
+          "source_contract_id": "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1"
+        },
+        {
+          "ka_id": "KA-0273",
+          "text": "under any and all applicable trademarks and other Intellectual Property owned or controlled by or licensed to the Company or any of its Affiliates",
+          "interpretation": "The license grant extends to Intellectual Property owned or controlled by the Company's Affiliates, not just the Company itself.",
+          "source_contract_id": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1449",
+          "text": "ICC or one of its Affiliates, as applicable, is the owner of all rights, title and interests in and to the names, trade names, trademarks, service marks and logos specified in and attached to the Trademark Consent of such Party or Affiliate (collectively, the \"ICC Licensed Marks\").",
+          "interpretation": "The contract acknowledges that ICC or its Affiliates own the licensed marks, and the license grant extends to marks owned by these affiliates.",
+          "source_contract_id": "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensor-05",
+      "category": "Affiliate License-Licensor",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.2065,
+      "variation_cues": [
+        "interest",
+        "all",
+        "right",
+        "title",
+        "content",
+        "licensor",
+        "granted",
+        "remain",
+        "except",
+        "marks"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0803",
+          "text": "Except for the express licenses granted in this Agreement, all right, title and interest in and to the Licensed Content and Licensor's Marks are and will remain with Licensor and its licensors.",
+          "interpretation": "The contract reserves rights to Licensor and its licensors but does not explicitly grant a license based on affiliate IP or include affiliate licenses in the grant.",
+          "source_contract_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-1918",
+          "text": "As between WebMD and Emdeon, WebMD or its suppliers retain all worldwide right, title, and interest in and to the Content.",
+          "interpretation": "The contract mentions 'suppliers' retaining rights, but does not explicitly grant a license based on affiliate IP or include affiliates of the licensor in the grant scope.",
+          "source_contract_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensor-06",
+      "category": "Affiliate License-Licensor",
+      "member_count": 4,
+      "source_contract_count": 4,
+      "selection_score": 1.1703,
+      "variation_cues": [
+        "intellectual",
+        "rights",
+        "all",
+        "property",
+        "suppliers",
+        "title",
+        "retain",
+        "trade",
+        "interest",
+        "embodied"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1034",
+          "text": "Ownership of all applicable copyrights, trade secrets, patents and other intellectual property rights in the Products are and shall at all times remain vested in Erchonia, its licensors or assigns.",
+          "interpretation": "The contract acknowledges that IP rights may be vested in Erchonia's licensors, implying the license covers IP owned by affiliates or third-party licensors of Erchonia.",
+          "source_contract_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-1794",
+          "text": "As between theglobe and Boxlot: (a) theglobe and its suppliers retain all rights, title and interest in and to all intellectual property rights embodied in or associated with the Page Templates, and (b) Boxlot and its suppliers retain all rights, title and interest in and to all intellectual property rights embodied in or associated with the Boxlot Content, Boxlot Banners and Boxlot Marks.",
+          "interpretation": "The contract explicitly states that suppliers (affiliates) of the licensors retain rights to the IP, implying the license covers IP owned by these affiliates.",
+          "source_contract_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-1245",
+          "text": "McDATA or its suppliers retain title in and to the Software and all intellectual property rights, and no title to the Software or intellectual property rights is transferred to the End User Customers. Such Software is proprietary to, trade secret of, and copyrighted by McDATA or its suppliers.",
+          "interpretation": "The contract acknowledges that intellectual property rights in the Software may be held by McDATA's suppliers (affiliates/third parties), implying the license covers IP owned by these entities.",
+          "source_contract_id": "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller_Agreement_Premier_Addendum"
+        }
+      ]
+    }
+  ],
+  "Affiliate License-Licensee": [
+    {
+      "pattern_id": "PAT-affiliate-license-licensee-01",
+      "category": "Affiliate License-Licensee",
+      "member_count": 61,
+      "source_contract_count": 61,
+      "selection_score": 1.9567,
+      "variation_cues": [
+        "granted",
+        "license",
+        "includes",
+        "grant",
+        "right",
+        "sublicenses",
+        "either",
+        "sub-license",
+        "pass-through",
+        "rights"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1580",
+          "text": "No",
+          "interpretation": "The contract does not explicitly grant the license to the licensee's affiliates; it grants rights to 'Company' specifically.",
+          "source_contract_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0701",
+          "text": "No",
+          "interpretation": "The contract does not explicitly grant the license to the licensee's affiliates; it grants rights to 'the Sponsor' specifically.",
+          "source_contract_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1554",
+          "text": "No",
+          "interpretation": "The contract does not explicitly grant the license to the licensee's affiliates; it grants the license to TAG specifically.",
+          "source_contract_id": "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensee-02",
+      "category": "Affiliate License-Licensee",
+      "member_count": 7,
+      "source_contract_count": 7,
+      "selection_score": 1.499,
+      "variation_cues": [
+        "grants",
+        "hereby",
+        "use",
+        "license",
+        "non-exclusive",
+        "royalty-free",
+        "non-transferable",
+        "purposes",
+        "customer",
+        "sublicense"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1909",
+          "text": "Hydraspin hereby grants to Distributor an exclusive non-transferable and royalty-free right and license to use Hydraspin's Marks",
+          "interpretation": "The license is granted specifically to the 'Distributor' entity. The contract does not explicitly extend this license to the Distributor's affiliates, nor does it grant sublicensing rights to affiliates.",
+          "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-1867",
+          "text": "VOTOCAST hereby grants to Licensee a nonexclusive, nontransferable license, to access the Services and provide Licensee's users (\"Licensee Users\") with access to the Services.",
+          "interpretation": "The license is granted to the Licensee and its users, but does not explicitly extend to affiliates of the Licensee.",
+          "source_contract_id": "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement"
+        },
+        {
+          "ka_id": "KA-0274",
+          "text": "the Company hereby grants Contractor a royalty-free, non-exclusive sublicense",
+          "interpretation": "The license is granted specifically to the Contractor entity. The contract does not explicitly extend the license to the Contractor's affiliates, nor does it define the Contractor's rights to use the IP on behalf of its affiliates.",
+          "source_contract_id": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensee-03",
+      "category": "Affiliate License-Licensee",
+      "member_count": 9,
+      "source_contract_count": 8,
+      "selection_score": 1.4977,
+      "variation_cues": [
+        "use",
+        "licensed",
+        "affiliates",
+        "non-exclusive",
+        "license",
+        "grants",
+        "limited",
+        "subsidiaries",
+        "licensee",
+        "royalty-free"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1533",
+          "text": "Party B may use the Program Content licensed by Party A only in Party B Business.",
+          "interpretation": "The license is restricted to 'Party B Business' and does not explicitly extend to affiliates of Party B, indicating the license is not granted to licensee affiliates.",
+          "source_contract_id": "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-1451",
+          "text": "ICC or its Affiliates, as applicable, shall grant to the PHL Parties and their Affiliates, as applicable, a non-exclusive limited license (a \"License\") to use the ICC Licensed Marks",
+          "interpretation": "The license is granted to the PHL Parties and their Affiliates, allowing affiliates of the licensee to use the marks.",
+          "source_contract_id": "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0804",
+          "text": "Licensee is not granted any right to, and shall not, permit any other use of the Licensed Content by End Users, or any use of the Licensed Content by any other Person (including Licensee's Affiliates).",
+          "interpretation": "The contract explicitly excludes Licensee's Affiliates from the license grant, prohibiting them from using the Licensed Content.",
+          "source_contract_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensee-04",
+      "category": "Affiliate License-Licensee",
+      "member_count": 15,
+      "source_contract_count": 13,
+      "selection_score": 1.4295,
+      "variation_cues": [
+        "affiliates",
+        "sublicensable",
+        "members",
+        "group",
+        "fmi",
+        "roche",
+        "spinco",
+        "honeywell",
+        "subsidiaries",
+        "users"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1935",
+          "text": "CEIS hereby grants XFN and its Affiliates an exclusive license",
+          "interpretation": "The license is explicitly granted to XFN and its Affiliates.",
+          "source_contract_id": "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0766",
+          "text": "to SpinCo and the members of the SpinCo Group",
+          "interpretation": "The license from Honeywell is granted to SpinCo and its group members (affiliates).",
+          "source_contract_id": "GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-0895",
+          "text": "\"Licensed User\" and \"Licensed Users\" means Licensee and Licensee's subsidiaries.",
+          "interpretation": "The license is granted to the Licensee and its subsidiaries, which are affiliates of the Licensee.",
+          "source_contract_id": "HertzGroupRealtyTrustInc_20190920_S-11A_EX-10.8_11816941_EX-10.8_Trademark_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensee-05",
+      "category": "Affiliate License-Licensee",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.4202,
+      "variation_cues": [
+        "without",
+        "consent",
+        "rights",
+        "obligations",
+        "assign",
+        "prior",
+        "written",
+        "transfer",
+        "part",
+        "affiliate"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0709",
+          "text": "Consultant may not assign or transfer any of Consultant's rights or delegate any of Consultant's obligations under this Agreement, in whole or in part, without the Company's express prior written consent.",
+          "interpretation": "The contract does not grant license rights to affiliates of the licensee; in fact, it prohibits assignment without consent.",
+          "source_contract_id": "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1710",
+          "text": "The Franchisee shall not be entitled to assign, transfer, encumber or dispose of any of its rights and or obligations under this Agreement, including to an affiliate, without the prior written consent of the Franchisor.",
+          "interpretation": "The contract explicitly states that the Franchisee cannot assign rights to an affiliate without consent, indicating that the license is not automatically granted to the Franchisee's affiliates.",
+          "source_contract_id": "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement"
+        },
+        {
+          "ka_id": "KA-0583",
+          "text": "Neither this Agreement nor any of the rights or obligations contained herein may be assigned or transferred by either party without the prior written consent of the other party.",
+          "interpretation": "The contract does not grant rights to affiliates of the licensee; assignment requires consent, implying no automatic affiliate license.",
+          "source_contract_id": "EcoScienceSolutionsInc_20171117_8-K_EX-10.1_10956472_EX-10.1_Endorsement_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-affiliate-license-licensee-06",
+      "category": "Affiliate License-Licensee",
+      "member_count": 4,
+      "source_contract_count": 3,
+      "selection_score": 1.3657,
+      "variation_cues": [
+        "group",
+        "hereby",
+        "grants",
+        "spinco",
+        "paid-up",
+        "members",
+        "license",
+        "fully",
+        "perpetual",
+        "worldwide"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0387",
+          "text": "Nuance hereby grants to SpinCo and the members of the SpinCo Group a worldwide, non-exclusive, fully paid-up, perpetual and irrevocable, transferable (subject to ARTICLE VIII), sublicensable (subject to Section 3.01(g)) license under the Nuance Patents",
+          "interpretation": "The license is explicitly granted to SpinCo and the members of the SpinCo Group (affiliates).",
+          "source_contract_id": "CerenceInc_20191002_8-K_EX-10.4_11827494_EX-10.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-0939",
+          "text": "SpinCo hereby grants to each individual member of the Parent Group...",
+          "interpretation": "The license is granted to each individual member of the Parent Group, effectively licensing to Parent and its affiliates.",
+          "source_contract_id": "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL_PROPERTY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1433",
+          "text": "hereby grants and agrees to grant to the applicable Licensee Party and the other members of the Licensee Group... a royalty-free, nonexclusive, perpetual, irrevocable, fully paid-up, worldwide right and license",
+          "interpretation": "The license is granted not only to the Licensee Party but also to the other members of the Licensee Group, which includes affiliates of the licensee.",
+          "source_contract_id": "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1"
+        }
+      ]
+    }
+  ],
+  "Unlimited/All-You-Can-Eat-License": [
+    {
+      "pattern_id": "PAT-unlimited-all-you-can-eat-licens-01",
+      "category": "Unlimited/All-You-Can-Eat-License",
+      "member_count": 37,
+      "source_contract_count": 37,
+      "selection_score": 2.0272,
+      "variation_cues": [
+        "sales",
+        "project",
+        "agrees",
+        "bravatek",
+        "lead",
+        "finder",
+        "company",
+        "serve",
+        "non-exclusive"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1076",
+          "text": "No",
+          "interpretation": "The contract does not contain a clause granting an enterprise, all-you-can-eat, or unlimited usage license.",
+          "source_contract_id": "KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0502",
+          "text": "No",
+          "interpretation": "The contract specifies fees for specific services and does not grant an unlimited or enterprise-wide usage license.",
+          "source_contract_id": "DYNTEKINC_07_30_1999-EX-10-ONLINE_HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0484",
+          "text": "No",
+          "interpretation": "The contract does not contain a clause granting an enterprise, all-you-can-eat, or unlimited usage license.",
+          "source_contract_id": "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-unlimited-all-you-can-eat-licens-02",
+      "category": "Unlimited/All-You-Can-Eat-License",
+      "member_count": 15,
+      "source_contract_count": 15,
+      "selection_score": 1.7007,
+      "variation_cues": [],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0575",
+          "text": "No",
+          "interpretation": "The license is limited to specific products and promotional materials within a defined territory and term, not an unlimited enterprise license.",
+          "source_contract_id": "ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0777",
+          "text": "No",
+          "interpretation": "The contract involves the purchase of physical products at a specific price per kilogram, not an unlimited usage license.",
+          "source_contract_id": "GentechHoldingsInc_20190808_1-A_EX1A-6_MAT_CTRCT_11776814_EX1A-6_MAT_CTRCT_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0184",
+          "text": "No",
+          "interpretation": "The contract is a supply agreement for specific products with defined specifications and forecasts, not an unlimited usage license.",
+          "source_contract_id": "BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-unlimited-all-you-can-eat-licens-03",
+      "category": "Unlimited/All-You-Can-Eat-License",
+      "member_count": 6,
+      "source_contract_count": 6,
+      "selection_score": 1.45,
+      "variation_cues": [
+        "license",
+        "products",
+        "use",
+        "exclusive",
+        "field",
+        "grants",
+        "territory",
+        "patents",
+        "solely",
+        "hereby"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1693",
+          "text": "SIGA hereby grants to MMT an exclusive right and license... solely to Promote the Product in the Field in the Territory.",
+          "interpretation": "The license is limited to promoting the specific Product in the Field in the Territory, not an unlimited or all-you-can-eat license.",
+          "source_contract_id": "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement"
+        },
+        {
+          "ka_id": "KA-1910",
+          "text": "Hydraspin hereby grants to Distributor an exclusive non-transferable and royalty-free right and license to use Hydraspin's Marks in connection with the advertising, promotion, marketing, distribution and sale of the Products in the Territory",
+          "interpretation": "The license is limited to specific purposes (advertising, promotion, etc.) and a specific geographic Territory, rather than being an unlimited or enterprise-wide license.",
+          "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0456",
+          "text": "CytoDyn hereby grants to Vyera, and Vyera hereby accepts, an exclusive royalty-bearing license (or sublicense, as the case may be), under the CytoDyn Patents, the CytoDyn Know-How and the Inventions (if any) solely to Commercialize, use, have used, offer for sale and sell Licensed Products in the Field in the Territory.",
+          "interpretation": "The license is limited to specific Licensed Products, Field, and Territory, and is not an unlimited or all-you-can-eat enterprise license.",
+          "source_contract_id": "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-unlimited-all-you-can-eat-licens-04",
+      "category": "Unlimited/All-You-Can-Eat-License",
+      "member_count": 7,
+      "source_contract_count": 6,
+      "selection_score": 1.4114,
+      "variation_cues": [
+        "limited",
+        "license",
+        "use",
+        "solely",
+        "property",
+        "licensed",
+        "specifically",
+        "obligations",
+        "described",
+        "marks"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0755",
+          "text": "Each party hereby grants to the other a non-exclusive, limited license to use its trademarks, service marks or trade names only as specifically described in this Agreement.",
+          "interpretation": "The license is explicitly described as 'limited' and restricted to specific descriptions, not an unlimited or all-you-can-eat license.",
+          "source_contract_id": "GSVINC_05_15_1998-EX-10-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0518",
+          "text": "Throughout the Term of this Agreement, the parties hereby agree to grant to each other a limited license to use each other's proprietary marks solely in connection with the sale, distribution, marketing and promotion of each party's calling cards by the other party.",
+          "interpretation": "The license is explicitly described as 'limited' and restricted to specific activities, not an unlimited or all-you-can-eat license.",
+          "source_contract_id": "DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding_Agreement__Service_Agreement"
+        },
+        {
+          "ka_id": "KA-0080",
+          "text": "limited worldwide license to use and display Zynga's Licensed Property solely as necessary to perform WPT's obligations under this Agreement and as specifically described on Exhibit A",
+          "interpretation": "The license is explicitly described as 'limited' and restricted to specific marketing activities in Exhibit A, not an unlimited or all-you-can-eat license.",
+          "source_contract_id": "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-unlimited-all-you-can-eat-licens-05",
+      "category": "Unlimited/All-You-Can-Eat-License",
+      "member_count": 6,
+      "source_contract_count": 5,
+      "selection_score": 1.3783,
+      "variation_cues": [
+        "license",
+        "use",
+        "worldwide",
+        "royalty-free",
+        "exploit",
+        "perpetual",
+        "reproduce",
+        "make",
+        "sell",
+        "display"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0472",
+          "text": "the Company is hereby granted a nonexclusive, royalty-free, perpetual, irrevocable, transferable, worldwide license ... to make, have made, use, import, offer for sale, sell, reproduce, distribute, modify, adapt, prepare derivative works of, display, perform, and otherwise exploit such Prior Inventions, without restriction",
+          "interpretation": "The license is granted 'without restriction' and is perpetual and worldwide, effectively acting as an unlimited usage license for the specified Prior Inventions.",
+          "source_contract_id": "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0941",
+          "text": "a non-exclusive, worldwide, perpetual, irrevocable, fully paid-up, royalty-free right and license, for use in the Parent Field, to (i) use, reproduce, distribute, display, perform, make Improvements and exploit the Licensed SpinCo IP, and (ii) make, have made, use, sell, offer to sell and import any goods and services incorporating, embodying or utilizing the Licensed SpinCo IP.",
+          "interpretation": "The license is worldwide, perpetual, and royalty-free, allowing unrestricted use within the defined Parent Field, resembling an unlimited usage license within that scope.",
+          "source_contract_id": "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL_PROPERTY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1084",
+          "text": "Company is hereby granted and shall have a non-exclusive, royalty-free, perpetual, irrevocable, worldwide license to make, have made, modify, reproduce, display, use and sell such Item as part of or in connection with the exploitation of such Invention.",
+          "interpretation": "The license is limited to the specific 'Item' incorporated into the 'Invention' and is not an enterprise-wide or unlimited usage license for all of the Consultant's IP.",
+          "source_contract_id": "KIROMICBIOPHARMA,INC_05_11_2020-EX-10.23-CONSULTING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-unlimited-all-you-can-eat-licens-06",
+      "category": "Unlimited/All-You-Can-Eat-License",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.324,
+      "variation_cues": [
+        "marks",
+        "system",
+        "use",
+        "grant",
+        "you",
+        "only",
+        "one",
+        "proprietary",
+        "business",
+        "franchised"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0729",
+          "text": "To use the Proprietary Marks and the System, but only in connection with the Franchised Business",
+          "interpretation": "The license is strictly limited to the operation of one specific Franchised Business at an Approved Location, not an unlimited or enterprise-wide license.",
+          "source_contract_id": "GOOSEHEADINSURANCE,INC_04_02_2018-EX-10.6-Franchise_Agreement"
+        },
+        {
+          "ka_id": "KA-1509",
+          "text": "We grant you the right, and you accept the obligation, to use the Proprietary Marks and the System to operate one Restaurant (the \"Franchised Business\") at the Premises",
+          "interpretation": "The license is limited to operating one specific restaurant at a specific premises, not an unlimited or enterprise-wide license.",
+          "source_contract_id": "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1"
+        },
+        {
+          "ka_id": "KA-0233",
+          "text": "Subject to the provisions stated below, we hereby grant you a license to use the \"Buffalo Wild Wings\" Marks and System... at one (1) location only",
+          "interpretation": "The license is restricted to a single location and is not an unlimited or enterprise-wide license.",
+          "source_contract_id": "BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE_AGREEMENT"
+        }
+      ]
+    }
+  ],
+  "Irrevocable or Perpetual License": [
+    {
+      "pattern_id": "PAT-irrevocable-or-perpetual-license-01",
+      "category": "Irrevocable or Perpetual License",
+      "member_count": 17,
+      "source_contract_count": 17,
+      "selection_score": 1.9456,
+      "variation_cues": [
+        "term",
+        "date",
+        "terminated",
+        "unless",
+        "effective",
+        "years",
+        "continue",
+        "commence",
+        "accordance",
+        "sooner"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1937",
+          "text": "This Agreement shall take effect from the Effective Date and continue in full force and effect for twenty (20) years thereafter, unless otherwise terminated in accordance with Clause 8.",
+          "interpretation": "The license is for a fixed term of 20 years and is subject to termination, so it is neither perpetual nor irrevocable.",
+          "source_contract_id": "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-1806",
+          "text": "No",
+          "interpretation": "The license is not irrevocable or perpetual; it is subject to termination clauses and has a defined term with renewal options.",
+          "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+        },
+        {
+          "ka_id": "KA-1510",
+          "text": "This Agreement expires ten (10) years from the Agreement Date (the \"Term\"), unless it is terminated sooner as provided in other sections of this Agreement.",
+          "interpretation": "The license is granted for a fixed term of 10 years and is subject to termination, so it is neither irrevocable nor perpetual.",
+          "source_contract_id": "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-irrevocable-or-perpetual-license-02",
+      "category": "Irrevocable or Perpetual License",
+      "member_count": 17,
+      "source_contract_count": 17,
+      "selection_score": 1.8027,
+      "variation_cues": [
+        "remain",
+        "terminated",
+        "until",
+        "effect"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0428",
+          "text": "No",
+          "interpretation": "The contract does not contain an irrevocable or perpetual license grant; the agreement has a defined term and termination provisions.",
+          "source_contract_id": "Columbia_Laboratories,_(Bermuda)_Ltd._-_AMEND_NO._2_TO_MANUFACTURING_AND_SUPPLY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1427",
+          "text": "No",
+          "interpretation": "The contract does not grant any irrevocable or perpetual licenses.",
+          "source_contract_id": "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1603",
+          "text": "No",
+          "interpretation": "The contract does not grant any irrevocable or perpetual licenses.",
+          "source_contract_id": "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-irrevocable-or-perpetual-license-03",
+      "category": "Irrevocable or Perpetual License",
+      "member_count": 10,
+      "source_contract_count": 8,
+      "selection_score": 1.6527,
+      "variation_cues": [
+        "termination",
+        "cease",
+        "expiration",
+        "section",
+        "use",
+        "immediately",
+        "rights",
+        "terminate",
+        "license",
+        "date"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1911",
+          "text": "Upon termination of this Agreement, Distributor shall immediately cease using the Marks.",
+          "interpretation": "The license is not perpetual or irrevocable; it explicitly terminates upon the expiration or termination of the agreement, requiring the Distributor to cease use.",
+          "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0193",
+          "text": "Upon the expiration or any termination of this Agreement, the Agent will immediately cease all use of the Trademarks.",
+          "interpretation": "The license is not perpetual or irrevocable, as it explicitly ceases upon the expiration or termination of the agreement.",
+          "source_contract_id": "BIOPURECORP_06_30_1999-EX-10.13-AGENCY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1011",
+          "text": "upon termination of this Agreement for any reason, such authorization will cease.",
+          "interpretation": "The license is not perpetual or irrevocable; it explicitly ceases upon termination of the agreement.",
+          "source_contract_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-irrevocable-or-perpetual-license-04",
+      "category": "Irrevocable or Perpetual License",
+      "member_count": 7,
+      "source_contract_count": 7,
+      "selection_score": 1.6191,
+      "variation_cues": [
+        "effective",
+        "automatically",
+        "notice",
+        "term",
+        "unless",
+        "date",
+        "thereafter",
+        "written",
+        "year",
+        "either"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1659",
+          "text": "Subject to the other provisions contained herein, this AGREEMENT shall be for a term of thirty (30) years from the Effective Date, which shall automatically renew from year-to-year thereafter unless terminated by a Party upon sixty (60) days' written notice after the end of the term.",
+          "interpretation": "The license is for a fixed term of 30 years with automatic renewal, but it is terminable by either party with notice, so it is not perpetual or irrevocable.",
+          "source_contract_id": "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1355",
+          "text": "This Agreement will be in effect for one year from the Effective Date and will automatically renew for successive one (1) year periods unless terminated as provided below.",
+          "interpretation": "The license is tied to the term of the agreement, which is renewable but terminable, and thus is not perpetual or irrevocable.",
+          "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0814",
+          "text": "the term of this Agreement shall commence on the Effective Date and shall terminate on December 31, 2034 (such period, including as may be extended in accordance with the subsequent sentence, the \"Term\"). Thereafter, the agreement shall automatically renew for successive five (5)-year terms, unless either Party gives written notice to the other Party of intent not to renew",
+          "interpretation": "The license is not perpetual; it has a defined term ending in 2034 with options for renewal, and is subject to termination clauses.",
+          "source_contract_id": "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-irrevocable-or-perpetual-license-05",
+      "category": "Irrevocable or Perpetual License",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.6044,
+      "variation_cues": [
+        "commencing",
+        "date",
+        "term",
+        "years",
+        "termination",
+        "anniversary",
+        "ending",
+        "effective",
+        "provided",
+        "three"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0494",
+          "text": "No",
+          "interpretation": "The license is not irrevocable or perpetual; it is limited to the term of the agreement and subject to termination.",
+          "source_contract_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1519",
+          "text": "The term of this Agreement shall be for one (1) year commencing on the Effective Date and ending on February 19, 2013 (\"Term\").",
+          "interpretation": "The license is limited to a specific one-year term and is not perpetual. It is also subject to termination clauses, so it is not irrevocable.",
+          "source_contract_id": "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement_Agreement"
+        },
+        {
+          "ka_id": "KA-1628",
+          "text": "Subject to termination pursuant to this Agreement, the Non Exclusive license granted by Licensor to Licensee shall be for an initial period of 36 months, commencing from the acceptance date, (the \"Initial Period\"). The Agreement may be renewed for an additional period of seven (7) years at the option of the Licensor.",
+          "interpretation": "The license is for a fixed initial term of 36 months with an optional renewal, and is subject to termination, meaning it is neither irrevocable nor perpetual.",
+          "source_contract_id": "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-irrevocable-or-perpetual-license-06",
+      "category": "Irrevocable or Perpetual License",
+      "member_count": 13,
+      "source_contract_count": 8,
+      "selection_score": 1.601,
+      "variation_cues": [
+        "license",
+        "royalty-free",
+        "worldwide",
+        "perpetual",
+        "hereby",
+        "non-exclusive",
+        "irrevocable",
+        "grants",
+        "roche",
+        "fmi"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1259",
+          "text": "Bachem hereby grants to Magenta a perpetual, irrevocable, nonexclusive, worldwide, paid up, royalty-free license under such Bachem Intellectual Property",
+          "interpretation": "The license granted by Bachem to Magenta is explicitly defined as perpetual and irrevocable.",
+          "source_contract_id": "Magenta_Therapeutics,_Inc._-_Master_Development_and_Manufacturing_Agreement"
+        },
+        {
+          "ka_id": "KA-0944",
+          "text": "a non-exclusive, worldwide, perpetual, irrevocable, fully paid-up, royalty-free right and license",
+          "interpretation": "The license granted to SpinCo is explicitly defined as perpetual and irrevocable.",
+          "source_contract_id": "INGEVITYCORP_05_16_2016-EX-10.5-INTELLECTUAL_PROPERTY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0612",
+          "text": "Sponsor hereby grants Snap a non-exclusive, revocable nontransferable, royalty-free, worldwide license",
+          "interpretation": "The license granted by Sponsor is explicitly revocable, not irrevocable or perpetual.",
+          "source_contract_id": "EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding_Agreement"
+        }
+      ]
+    }
+  ],
+  "Source Code Escrow": [
+    {
+      "pattern_id": "PAT-source-code-escrow-01",
+      "category": "Source Code Escrow",
+      "member_count": 89,
+      "source_contract_count": 89,
+      "selection_score": 2.4162,
+      "variation_cues": [
+        "all",
+        "right",
+        "content",
+        "use",
+        "license",
+        "property",
+        "provide",
+        "code",
+        "licensed",
+        "developed"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1420",
+          "text": "No",
+          "interpretation": "The contract does not contain any provisions regarding source code escrow.",
+          "source_contract_id": "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1219",
+          "text": "No",
+          "interpretation": "The contract does not contain any provisions regarding source code escrow.",
+          "source_contract_id": "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0545",
+          "text": "No",
+          "interpretation": "The contract does not contain any provisions regarding source code escrow.",
+          "source_contract_id": "ELANDIAINTERNATIONALINC_04_25_2007-EX-10.21-Outsourcing_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-source-code-escrow-02",
+      "category": "Source Code Escrow",
+      "member_count": 18,
+      "source_contract_count": 18,
+      "selection_score": 1.9505,
+      "variation_cues": [
+        "acknowledges",
+        "code",
+        "source",
+        "agrees",
+        "provided",
+        "software",
+        "copy",
+        "corio",
+        "product",
+        "responsible"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0915",
+          "text": "No",
+          "interpretation": "There is no mention of source code escrow arrangements in the contract.",
+          "source_contract_id": "IDREAMSKYTECHNOLOGYLTD_07_03_2014-EX-10.39-Cooperation_Agreement_on_Mobile_Game_Business"
+        },
+        {
+          "ka_id": "KA-1428",
+          "text": "No",
+          "interpretation": "There is no mention of source code escrow arrangements in the contract.",
+          "source_contract_id": "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1604",
+          "text": "No",
+          "interpretation": "There is no mention of source code escrow arrangements in the contract.",
+          "source_contract_id": "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-source-code-escrow-03",
+      "category": "Source Code Escrow",
+      "member_count": 6,
+      "source_contract_count": 6,
+      "selection_score": 1.424,
+      "variation_cues": [
+        "all",
+        "records",
+        "maintain",
+        "accurate",
+        "adequate",
+        "information",
+        "complete",
+        "relating",
+        "books",
+        "current"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0024",
+          "text": "The Joint Venturers shall maintain adequate books and records to be kept of all the Joint Venture activities and affairs conducted pursuant to the terms of this Agreement.",
+          "interpretation": "The contract requires the maintenance of books and records but does not contain any provision regarding the deposit of source code into escrow.",
+          "source_contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0120",
+          "text": "No",
+          "interpretation": "The contract mentions the development of smart contracts and maintenance of records, but does not require the deposit of source code into a third-party escrow arrangement.",
+          "source_contract_id": "ArcaUsTreasuryFund_20200207_N-2_EX-99.K5_11971930_EX-99.K5_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0561",
+          "text": "10. CONFIDENTIALITY. 10.1 Scope. The term \"Confidential Information\" means all financial, business and technical information disclosed by or on behalf of a party in relation to this Agreement...",
+          "interpretation": "The contract contains confidentiality provisions but does not contain any clause requiring the deposit of source code into escrow with a third party.",
+          "source_contract_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC_ALLIANCE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-source-code-escrow-04",
+      "category": "Source Code Escrow",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.3667,
+      "variation_cues": [
+        "content",
+        "consists",
+        "code",
+        "licensed",
+        "images",
+        "co-branded",
+        "those",
+        "except",
+        "theglobe",
+        "provide"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0807",
+          "text": "The Licensed Content consists of content and images and code.",
+          "interpretation": "While code is part of the licensed content, there is no provision requiring the deposit of source code into escrow with a third party.",
+          "source_contract_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-1798",
+          "text": "Boxlot shall provide Boxlot Content to Users via the Co-Branded Pages, except that Boxlot shall deliver to theglobe those elements of Boxlot Content residing on theglobe's servers in accordance with the terms of Exhibit A.",
+          "interpretation": "The contract does not contain any provision requiring the deposit of source code into escrow with a third party.",
+          "source_contract_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-1012",
+          "text": "No",
+          "interpretation": "There is no provision requiring the deposit of source code into escrow.",
+          "source_contract_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-source-code-escrow-05",
+      "category": "Source Code Escrow",
+      "member_count": 6,
+      "source_contract_count": 6,
+      "selection_score": 1.3294,
+      "variation_cues": [
+        "all",
+        "including",
+        "form",
+        "data",
+        "computer",
+        "whether",
+        "information",
+        "software",
+        "source",
+        "code"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1055",
+          "text": "Party B shall protect and maintain the confidentiality of any and all confidential data and information acknowledged or received by Party B from Party A",
+          "interpretation": "The contract contains confidentiality obligations but does not mention any source code escrow arrangement with a third party.",
+          "source_contract_id": "JINGWEIINTERNATIONALLTD_10_04_2007-EX-10.7-INTELLECTUAL_PROPERTY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0965",
+          "text": "1.17 \"Confidential Information\" means all secret, confidential or proprietary information, data or Know-How (including GSK Know-How and Theravance Know-How) whether provided in written, oral, graphic, video, computer or other form...",
+          "interpretation": "The contract defines confidential information broadly but does not contain any clause requiring source code escrow.",
+          "source_contract_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1870",
+          "text": "All materials, including but not limited to any computer software (in object code and source code form), data, information or content developed or provided by VOTOCAST or its suppliers under this Agreement... shall remain the sole and exclusive property of VOTOCAST or its suppliers.",
+          "interpretation": "The contract states that source code remains the property of VOTOCAST, but there is no provision requiring the deposit of source code into escrow.",
+          "source_contract_id": "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-source-code-escrow-06",
+      "category": "Source Code Escrow",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.2068,
+      "variation_cues": [
+        "intellectual",
+        "provide",
+        "assistance",
+        "documents",
+        "information",
+        "technical",
+        "property",
+        "obtain",
+        "technology",
+        "materials"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0771",
+          "text": "no Party or any member of its Group shall be required to provide the other Party with any technical assistance or to furnish any other Party with, or obtain on their behalf, any Intellectual Property Rights-related documents, materials or other information or technology.",
+          "interpretation": "The contract explicitly states there is no obligation to provide technical assistance or IP-related documents, and there is no mention of source code escrow arrangements.",
+          "source_contract_id": "GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-1436",
+          "text": "Except as expressly provided in this Agreement, this Agreement does not create any obligation on the part of any of the Parties to provide or create any of the following with respect to the Intellectual Property Rights owned, transferred, granted or licensed under this Agreement: (a) explanations, corrections, revisions, improvements, upgrades, technical assistance, maintenance, installation, debugging, or any other support; or (b) tangible embodiments, documents, information, software, data or any other items, deliverables or services.",
+          "interpretation": "The contract explicitly states that there are no obligations to provide software, data, or support, and contains no provisions for source code escrow.",
+          "source_contract_id": "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1"
+        }
+      ]
+    }
+  ],
+  "Post-Termination Services": [
+    {
+      "pattern_id": "PAT-post-termination-services-01",
+      "category": "Post-Termination Services",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.3953,
+      "variation_cues": [
+        "confidential",
+        "all",
+        "destroy",
+        "information",
+        "termination",
+        "expiration",
+        "provide",
+        "destruction",
+        "certification",
+        "copies"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0278",
+          "text": "Upon the termination or expiration of this Agreement or upon the earlier request of the Disclosing Party, the Receiving Party shall (i) promptly return to the Disclosing Party all Confidential Information, or (ii) upon written request by the Disclosing Party, destroy all Confidential Information and provide the Disclosing Party with written certification of such destruction.",
+          "interpretation": "The Contractor has post-termination obligations to return or destroy Confidential Information and certify such destruction.",
+          "source_contract_id": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0130",
+          "text": "Upon any expiration or termination of this Agreement, Licensee shall promptly return to Licensor, or at Licensor's direction, destroy all Licensor confidential information and all copies thereof in Licensee's possession.",
+          "interpretation": "The Licensee has a post-termination obligation to return or destroy confidential information.",
+          "source_contract_id": "ArconicRolledProductsCorp_20191217_10-12B_EX-2.7_11923804_EX-2.7_Trademark_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0097",
+          "text": "Upon any termination or expiration of this Agreement, Allied shall deliver to Newegg all originals and copies of any material in any form containing or representing Newegg's Marks and other Confidential Information of Newegg or, at Newegg's request, shall destroy the same and provide Newegg a certification of the destruction.",
+          "interpretation": "Allied must return or destroy Newegg's confidential information and marks upon termination.",
+          "source_contract_id": "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-post-termination-services-02",
+      "category": "Post-Termination Services",
+      "member_count": 9,
+      "source_contract_count": 7,
+      "selection_score": 1.3719,
+      "variation_cues": [
+        "termination",
+        "survive",
+        "section",
+        "obligations",
+        "article",
+        "circumstances",
+        "confidentiality",
+        "expiration",
+        "provisions",
+        "after"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0179",
+          "text": "The obligations of this Section 7 shall survive the termination of this Agreement, under any circumstances.",
+          "interpretation": "Confidentiality obligations survive the termination of the agreement.",
+          "source_contract_id": "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0918",
+          "text": "The obligation of confidentiality provided in this article shall survive the termination of this Agreement.",
+          "interpretation": "Confidentiality obligations continue to bind the parties after the termination of the contract.",
+          "source_contract_id": "IDREAMSKYTECHNOLOGYLTD_07_03_2014-EX-10.39-Cooperation_Agreement_on_Mobile_Game_Business"
+        },
+        {
+          "ka_id": "KA-0477",
+          "text": "Consultant agrees that Consultant's obligations under this Section 2.2 shall continue after the termination of this Agreement.",
+          "interpretation": "The confidentiality obligations (non-use and non-disclosure) explicitly survive the termination of the agreement.",
+          "source_contract_id": "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-post-termination-services-03",
+      "category": "Post-Termination Services",
+      "member_count": 4,
+      "source_contract_count": 3,
+      "selection_score": 1.3601,
+      "variation_cues": [
+        "possession",
+        "all",
+        "deliver",
+        "termination",
+        "consultant",
+        "company",
+        "earlier",
+        "property",
+        "request",
+        "control"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0336",
+          "text": "Upon the termination of this Agreement, or upon the Company's earlier request, the Consultant and the Principal shall promptly deliver to the Company all of the Confidential Information that the Consultant and the Principal may have in their possession or control.",
+          "interpretation": "The Consultant has a post-termination obligation to return all Confidential Information to the Company.",
+          "source_contract_id": "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1087",
+          "text": "Upon the termination of this Agreement, or upon Company's earlier request, Consultant will deliver to Company all Confidential Information and Company's property relating thereto and all tangible embodiments thereof, in Consultant's possession or control.",
+          "interpretation": "The Consultant has a post-termination obligation to return Confidential Information and Company property.",
+          "source_contract_id": "KIROMICBIOPHARMA,INC_05_11_2020-EX-10.23-CONSULTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0475",
+          "text": "Upon the termination of this Agreement, or upon Company's earlier request, Consultant will immediately deliver to the Company, and will not keep in Consultant's possession, recreate, or deliver to anyone else, any and all Company property",
+          "interpretation": "The Consultant has a post-termination obligation to return all Company property and materials.",
+          "source_contract_id": "DRIVENDELIVERIES,INC_05_22_2020-EX-10.4-CONSULTING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-post-termination-services-04",
+      "category": "Post-Termination Services",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.3228,
+      "variation_cues": [
+        "termination",
+        "survive",
+        "section",
+        "expiration",
+        "confidentiality",
+        "provisions",
+        "through",
+        "liability",
+        "limitation",
+        "dispute"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0036",
+          "text": "The provisions of Section 1(d) this Section 5, Section 7 through Section 16 (and, for the avoidance of doubt, the Confidentiality Agreement) shall survive the termination of this Agreement.",
+          "interpretation": "The contract specifies that certain sections, including confidentiality obligations (Section 7), survive termination, which constitutes a post-termination obligation.",
+          "source_contract_id": "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1306",
+          "text": "The provisions of Section 12 (Confidentiality), Section 13 (Warranty and Indemnity), Section 14 (Limitation of Liability) and Section 15 (Dispute Resolution) will survive any termination or expiration of this Agreement.",
+          "interpretation": "Specific sections including confidentiality, warranty, indemnity, liability, and dispute resolution survive termination.",
+          "source_contract_id": "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0338",
+          "text": "Sections 6 through 12, inclusive, and this Section 13, shall survive and remain in force notwithstanding the expiration or other termination of this Agreement for any reason whatsoever.",
+          "interpretation": "Specific sections including confidentiality, non-solicitation, and indemnification survive termination, imposing continuing obligations on the parties.",
+          "source_contract_id": "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-post-termination-services-05",
+      "category": "Post-Termination Services",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.2942,
+      "variation_cues": [
+        "termination",
+        "granted",
+        "affect",
+        "liability",
+        "accruing",
+        "previously",
+        "licenses",
+        "hereunder",
+        "either",
+        "royalty"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0246",
+          "text": "Upon termination of this Agreement as provided in this Section 10 (each a \"Termination Date\") or upon the expiration of the Term, Bizzingo shall cease using the Property in any way, and Theismann shall not be entitled to the Royalty, in each case from and after the Termination Date.",
+          "interpretation": "The contract specifies that Bizzingo must cease using the property upon termination, but does not impose ongoing service obligations or transition services on Theismann.",
+          "source_contract_id": "BizzingoInc_20120322_8-K_EX-10.17_7504499_EX-10.17_Endorsement_Agreement"
+        },
+        {
+          "ka_id": "KA-0304",
+          "text": "No",
+          "interpretation": "The contract specifies termination procedures and account settling but does not impose ongoing post-termination service obligations such as transition services or IP transfer.",
+          "source_contract_id": "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT"
+        },
+        {
+          "ka_id": "KA-0750",
+          "text": "Termination of the licenses granted hereunder shall not affect any liability of either of the Parties previously accruing under this IP Agreement.",
+          "interpretation": "The contract specifies that liabilities accrued prior to termination remain, but does not impose ongoing service, transition, or wind-down obligations on the parties after termination.",
+          "source_contract_id": "GSITECHNOLOGYINC_11_16_2009-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT_between_SONY_ELECTRONICS_INC._and_GSI_TECHNOLOGY,_INC."
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-post-termination-services-06",
+      "category": "Post-Termination Services",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.2068,
+      "variation_cues": [
+        "expiration",
+        "promptly",
+        "all",
+        "termination",
+        "remain",
+        "times",
+        "sole",
+        "returned",
+        "our",
+        "manuals"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1915",
+          "text": "Each Party will promptly return all Confidential Information to the other Party upon expiration or termination of this Agreement, or upon receipt by such Party of written notice from the other Party requesting return of such Confidential Information.",
+          "interpretation": "Both parties are obligated to return confidential information upon the termination or expiration of the agreement.",
+          "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0236",
+          "text": "The Manuals shall at all times remain our sole property and shall promptly be returned upon the expiration or termination of this Agreement.",
+          "interpretation": "The franchisee is obligated to return confidential manuals upon the expiration or termination of the agreement.",
+          "source_contract_id": "BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE_AGREEMENT"
+        }
+      ]
+    }
+  ]
+}

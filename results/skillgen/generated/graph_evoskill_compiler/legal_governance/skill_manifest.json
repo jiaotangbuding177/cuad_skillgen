@@ -1,0 +1,35 @@
+{
+  "method": "graph_evoskill_compiler",
+  "case_id": "legal_governance",
+  "model": "ecnu-plus",
+  "source_method": "evoskill_compiler",
+  "compilation_protocol": "gesc-1.0",
+  "graph_config": {
+    "graph_ka_limit": 200,
+    "similarity_threshold": 0.24,
+    "max_neighbors": 6,
+    "patterns_per_category": 6,
+    "examples_per_pattern": 3
+  },
+  "graph_statistics": {
+    "node_types": {
+      "Category": 3,
+      "KnowledgeAtom": 600,
+      "ClausePattern": 18,
+      "Contract": 225
+    },
+    "edge_types": {
+      "BELONGS_TO": 600,
+      "DERIVED_FROM": 600,
+      "VARIANT_OF": 1691,
+      "INSTANCE_OF": 292
+    }
+  },
+  "usage": {
+    "prompt_tokens": 9956,
+    "completion_tokens": 2488,
+    "total_tokens": 12444
+  },
+  "duration_seconds": 32.902,
+  "created_at": "2026-08-10T07:43:33.089201+00:00"
+}

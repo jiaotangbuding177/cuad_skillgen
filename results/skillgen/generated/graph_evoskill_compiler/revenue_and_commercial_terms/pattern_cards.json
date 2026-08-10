@@ -1,0 +1,952 @@
+{
+  "Revenue/Profit Sharing": [
+    {
+      "pattern_id": "PAT-revenue-profit-sharing-01",
+      "category": "Revenue/Profit Sharing",
+      "member_count": 13,
+      "source_contract_count": 12,
+      "selection_score": 1.8044,
+      "variation_cues": [
+        "set",
+        "forth",
+        "exhibit",
+        "hereto",
+        "schedule",
+        "terms",
+        "pay",
+        "subject",
+        "product",
+        "per"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0289",
+          "text": "eDiets shall pay to Women.com a monthly fee in the amount set forth on Exhibit C unless adjusted as set forth in Section 3.1 [Advertising and Promotion].",
+          "interpretation": "The contract specifies a fixed monthly fee payment from eDiets to Women.com rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0462",
+          "text": "The price for the API shall be as set forth on Exhibit C hereto. All sums shall be expressed in and payable in US Dollars.",
+          "interpretation": "The contract specifies a fixed pricing mechanism via an exhibit rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "INTERSECTENT,INC_05_11_2020-EX-10.1-SUPPLY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0240",
+          "text": "Subject to all other terms and conditions of this Agreement, Dynamex shall pay to Purolator the rates set forth in Schedule \"E\".",
+          "interpretation": "The contract specifies that payments are made based on fixed rates in a schedule, rather than sharing revenue or profit percentages.",
+          "source_contract_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-revenue-profit-sharing-02",
+      "category": "Revenue/Profit Sharing",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.6052,
+      "variation_cues": [
+        "pay",
+        "amount",
+        "fee",
+        "services",
+        "plus",
+        "term",
+        "sponsor",
+        "service",
+        "provider",
+        "providing"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0334",
+          "text": "The Sponsor shall pay to Racing a sponsorship fee in the amount of $750,000.00 for the term of this Agreement",
+          "interpretation": "The contract specifies a fixed sponsorship fee rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0411",
+          "text": "DGT shall pay Dolphin USD10,000, for carrying out the beta testing of the quality of their photo-editing services and testing of the Internet bandwidth for file transmission.",
+          "interpretation": "The contract specifies a fixed fee for beta testing services rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0285",
+          "text": "Sponsor agrees to contract with Fruit of Life Productions LLC., for the amount of $250,000.00 to be paid in full upon signing of this agreement.",
+          "interpretation": "The contract specifies a fixed sponsorship fee rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "EcoScienceSolutionsInc_20180406_8-K_EX-10.1_11135398_EX-10.1_Sponsorship_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-revenue-profit-sharing-03",
+      "category": "Revenue/Profit Sharing",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.5834,
+      "variation_cues": [
+        "pay",
+        "fee",
+        "amounts",
+        "payment",
+        "thousand",
+        "five",
+        "dollars",
+        "forth",
+        "per",
+        "pursuant"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0446",
+          "text": "The total annual maintenance charge amounts to US $24502 for the first year of maintenance.",
+          "interpretation": "The contract specifies a fixed annual maintenance fee rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "IMAGEWARESYSTEMSINC_12_20_1999-EX-10.22-MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0296",
+          "text": "Sponsor will pay Snap the amounts set forth on Exhibit A as the \"Up-Front Fee\" in consideration of Snap's development and integration of travel-related content for use on the Co-Branded Pages and/or the Sponsor Web Site.",
+          "interpretation": "The contract specifies fixed fee payments (Up-Front Fee and Quarterly Fees) rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0155",
+          "text": "The Principal shall pay the Company a fee of $1.00 (one dollar), inclusive of VAT, per one net tonne of Commodity shipped pursuant to this Contract.",
+          "interpretation": "The contract specifies a fixed fee per unit of commodity shipped rather than a percentage-based revenue or profit sharing arrangement.",
+          "source_contract_id": "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-revenue-profit-sharing-04",
+      "category": "Revenue/Profit Sharing",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.4093,
+      "variation_cues": [
+        "thousand",
+        "hundred",
+        "one",
+        "paid",
+        "fifty",
+        "services",
+        "dollars",
+        "amount",
+        "total",
+        "installments"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0350",
+          "text": "Both Parties mutually agree that the Purchase Price of the Product is determined on a $5.00 per pound basis for a total cost of one hundred fifty thousand dollars ($150,000).",
+          "interpretation": "The contract specifies a fixed purchase price per unit rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0323",
+          "text": "The total annual amount to be paid, excluding taxes, for the year 2009, for the total provision of the services described in Article 2 of this Agreement, as well as the supervision of these (establishment of measurements and supervision meetings) will be: TWO HUNDRED THOUSAND EUROS (200,000 €)",
+          "interpretation": "The contract specifies a fixed annual fee for services rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing_Agreement"
+        },
+        {
+          "ka_id": "KA-0134",
+          "text": "In consideration of the services to be rendered under this Agreement as set forth above, the Company shall be entitled to compensation in the amount of $150,000.00 (One Hundred Fifty Thousand Dollars), to be paid in equal installments of $37,500.00 (Thirty Seven Thousand Five Hundred Dollars) on January 1, 2008, April 1, 2008, July 1, 2008 and October 1, 2008.",
+          "interpretation": "The contract specifies a fixed compensation amount rather than a revenue or profit sharing arrangement.",
+          "source_contract_id": "CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-revenue-profit-sharing-05",
+      "category": "Revenue/Profit Sharing",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.324,
+      "variation_cues": [
+        "gross",
+        "you",
+        "percent",
+        "fund",
+        "three",
+        "your",
+        "amount",
+        "contribute",
+        "equal",
+        "revenues"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0518",
+          "text": "If we establish an Ad Fund, you agree to contribute to the Ad Fund a percentage of gross revenues of the Franchise in an amount we designate from time to time by notice to you, up to a maximum of two percent (2%) of the gross revenues of the Franchise.",
+          "interpretation": "The Franchisee must contribute a percentage of gross revenues (up to 2%) to the Company's advertising fund, which is a form of revenue sharing.",
+          "source_contract_id": "JOINTCORP_09_19_2014-EX-10.15-FRANCHISE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0742",
+          "text": "you must make a contribution as described in Section 9.1 [Pizza Fusion Marketing Fund] below equal to three percent (3%) of your Gross Revenues for the preceding Period.",
+          "interpretation": "The Franchisee must contribute 3% of Gross Revenues to the Marketing Fund, constituting a revenue sharing obligation.",
+          "source_contract_id": "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1"
+        },
+        {
+          "ka_id": "KA-0118",
+          "text": "You will contribute to the Buffalo Wild Wings Advertising and Development Fund (\"Fund\") ... an amount equal to three percent (3%) of your Gross Sales",
+          "interpretation": "The franchisee must contribute 3% of gross sales to a collective advertising fund managed by the franchisor.",
+          "source_contract_id": "BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-revenue-profit-sharing-06",
+      "category": "Revenue/Profit Sharing",
+      "member_count": 4,
+      "source_contract_count": 3,
+      "selection_score": 1.294,
+      "variation_cues": [
+        "forth",
+        "set",
+        "pay",
+        "sales",
+        "royalties",
+        "following",
+        "quarter",
+        "annual",
+        "later",
+        "below"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0269",
+          "text": "DIALOG will pay ENERGOUS the Royalties set forth in Exhibit B.",
+          "interpretation": "Dialog is required to pay royalties to Energous based on sales, which constitutes a form of revenue sharing.",
+          "source_contract_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0053",
+          "text": "Royalties will be payable by ArTara on Net Sales of Product in the Indication. ArTara will, no later than […***…] following the close of each calendar quarter, pay tiered Royalties based on annual Net Sales of Product in the Indication as set forth below:",
+          "interpretation": "ArTara is required to pay royalties to the University based on a percentage of Net Sales, which constitutes a form of revenue sharing.",
+          "source_contract_id": "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0143",
+          "text": "In consideration of providing the Services set forth in Exhibit B, the Company agrees to pay to Contractor [ ** ] percent ([ *∗ ]%]) of Company's Gross Invoiced Sales (the \"Service Fees\").",
+          "interpretation": "The Contractor is entitled to a percentage of the Company's Gross Invoiced Sales as Service Fees, which constitutes a form of revenue sharing.",
+          "source_contract_id": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT"
+        }
+      ]
+    }
+  ],
+  "Price Restrictions": [
+    {
+      "pattern_id": "PAT-price-restrictions-01",
+      "category": "Price Restrictions",
+      "member_count": 8,
+      "source_contract_count": 8,
+      "selection_score": 1.5947,
+      "variation_cues": [
+        "act",
+        "specified",
+        "exhibit",
+        "failure",
+        "judgment",
+        "made",
+        "where",
+        "member",
+        "good",
+        "liable"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0209",
+          "text": "No relevant text found.",
+          "interpretation": "The contract does not contain clauses restricting the ability of either party to raise or reduce the prices of the goods or services provided.",
+          "source_contract_id": "CnsPharmaceuticalsInc_20200326_8-K_EX-10.1_12079626_EX-10.1_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0423",
+          "text": "No",
+          "interpretation": "The contract does not contain clauses restricting the ability of either party to raise or reduce prices of technology, goods, or services provided.",
+          "source_contract_id": "HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0850",
+          "text": "No",
+          "interpretation": "The contract does not contain any clauses restricting the ability of either party to raise or reduce the prices of the goods or services provided.",
+          "source_contract_id": "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-price-restrictions-02",
+      "category": "Price Restrictions",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.2556,
+      "variation_cues": [
+        "amount",
+        "sponsor",
+        "agrees",
+        "pay",
+        "sponsorship",
+        "total",
+        "above",
+        "components",
+        "acm",
+        "contract"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0335",
+          "text": "The Sponsor shall pay to Racing a sponsorship fee in the amount of $750,000.00 for the term of this Agreement",
+          "interpretation": "The price is fixed at $750,000.00 for the term, implying no ability to raise or reduce prices during the agreement period.",
+          "source_contract_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0286",
+          "text": "Sponsor agrees to contract with Fruit of Life Productions LLC., for the amount of $250,000.00 to be paid in full upon signing of this agreement.",
+          "interpretation": "The price is fixed at $250,000.00 with no language restricting the ability to raise or reduce prices, as it is a one-time payment.",
+          "source_contract_id": "EcoScienceSolutionsInc_20180406_8-K_EX-10.1_11135398_EX-10.1_Sponsorship_Agreement"
+        },
+        {
+          "ka_id": "KA-0707",
+          "text": "For the above sponsorship components, the Sponsor agrees to pay ACM a total amount of US$400,000.00.",
+          "interpretation": "The price is fixed at a specific amount with no language restricting the ability to raise or reduce prices.",
+          "source_contract_id": "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-price-restrictions-03",
+      "category": "Price Restrictions",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.1336,
+      "variation_cues": [
+        "right",
+        "time",
+        "after",
+        "except",
+        "undelivered",
+        "immediately",
+        "accepted",
+        "orders",
+        "purchase",
+        "received"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0483",
+          "text": "JRVS shall have the right to revise JRVS Price at any time. Price changes shall apply to all purchase orders received after the effective date with the notice, except that any price increase shall be effective immediately upon notice to Distributor and apply to those accepted but undelivered orders.",
+          "interpretation": "JRVS retains the unilateral right to change prices at any time without restriction, applying increases immediately upon notice.",
+          "source_contract_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0227",
+          "text": "Company reserves the right to change its process and/or fees, from time to time, in its sole and absolute discretion.",
+          "interpretation": "The Company retains the unilateral right to modify prices and fees without restriction, other than providing notice for specific technology price changes.",
+          "source_contract_id": "CybergyHoldingsInc_20140520_10-Q_EX-10.27_8605784_EX-10.27_Affiliate_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-price-restrictions-04",
+      "category": "Price Restrictions",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.1032,
+      "variation_cues": [
+        "price",
+        "time",
+        "international",
+        "list",
+        "products",
+        "distributor",
+        "notice",
+        "lucid",
+        "published",
+        "purchase"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0653",
+          "text": "NETGEAR may modify the Price List at any time, including changes to the Products or their corresponding list prices, but NETGEAR will provide Distributor with written notice thirty days in advance of the effective date of any price increase or Product deletion.",
+          "interpretation": "NETGEAR retains the right to change prices at any time, subject only to a 30-day notice requirement for increases, indicating no restriction on the ability to raise prices other than procedural notice.",
+          "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0702",
+          "text": "INTERNATIONAL TEST SYSTEMS RESERVES THE RIGHT TO CHANGE THE RETAIL PRICE AT ANY TIME, WITH NOTICE TO COMWARE.",
+          "interpretation": "The contract explicitly grants ITS the right to change retail prices at any time with notice, indicating there is no restriction on ITS's ability to raise or reduce prices.",
+          "source_contract_id": "OPTIMIZEDTRANSPORTATIONMANAGEMENT,INC_07_26_2000-EX-6.6-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0558",
+          "text": "The Distributor may purchase Products from Lucid at the price published by Lucid, from time to time, in the International Distributor price list (attached).",
+          "interpretation": "Lucid retains the right to set and change prices via the published price list, indicating no restriction on Lucid's ability to raise or reduce prices.",
+          "source_contract_id": "LUCIDINC_04_15_2011-EX-10.9-DISTRIBUTOR_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-price-restrictions-05",
+      "category": "Price Restrictions",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.0903,
+      "variation_cues": [
+        "provided",
+        "schedule",
+        "months",
+        "notice",
+        "days",
+        "prior",
+        "twelve",
+        "increase",
+        "more",
+        "current"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0290",
+          "text": "Following the Initial Term, Women.com shall have the right, upon no fewer than sixty (60) days prior written notice to eDiets, to increase the amount of the Payment Schedule; provided, that (i) Women.com may not increase the Payment Schedule more than once in any period of twelve (12) consecutive months; and (ii) such increase may not exceed twenty percent (20%) of the then current Payment Schedule.",
+          "interpretation": "The contract restricts Women.com's ability to raise prices by limiting increases to once per year and capping the increase at 20% of the current schedule.",
+          "source_contract_id": "EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0104",
+          "text": "After the initial twelve months of this Agreement, VIP may adjust the rates in Schedule A to VIP's then current standard rates for such services, provided that it provides BNL with notice of any such adjustment not less ~han thirty (30) days prior to any such adjustment and that such rates shall not increase by more than ten ( 10% ) percent per year .",
+          "interpretation": "The contract restricts VIP's ability to raise prices for additional services by capping annual increases at 10% and requiring 30 days' notice.",
+          "source_contract_id": "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-price-restrictions-06",
+      "category": "Price Restrictions",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.0457,
+      "variation_cues": [
+        "licensor",
+        "charged",
+        "provided",
+        "exceed",
+        "taking",
+        "commercially",
+        "content",
+        "limited",
+        "unaffiliated",
+        "including"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0203",
+          "text": "provided that (i) such fees shall be commercially reasonable and (ii) such fees shall not exceed the fees charged by Licensor to unaffiliated third parties for use of the Licensed Content, taking into account any other consideration received by Licensor (including, but not limited to, discounted services offerings from the third party).",
+          "interpretation": "The contract restricts the fees that may be charged to the Licensee by requiring them to be commercially reasonable and not exceeding the fees charged to unaffiliated third parties, effectively capping the price.",
+          "source_contract_id": "ChinaRealEstateInformationCorp_20090929_F-1_EX-10.32_4771615_EX-10.32_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0569",
+          "text": "provided that (i) such fees shall be commercially reasonable and (ii) such fees shall not exceed the fees charged by Licensor to unaffiliated third parties for use of the Licensed Content, taking into account any other consideration received by Licensor (including, but not limited to, discounted services offerings from the third party).",
+          "interpretation": "If fees are introduced under Section 2.3, they are restricted by a most-favored-nation clause requiring them to not exceed fees charged to unaffiliated third parties and to be commercially reasonable.",
+          "source_contract_id": "LejuHoldingsLtd_20140121_DRS_(on_F-1)_EX-10.26_8473102_EX-10.26_Content_License_Agreement1"
+        }
+      ]
+    }
+  ],
+  "Minimum Commitment": [
+    {
+      "pattern_id": "PAT-minimum-commitment-01",
+      "category": "Minimum Commitment",
+      "member_count": 15,
+      "source_contract_count": 15,
+      "selection_score": 1.8668,
+      "variation_cues": [
+        "purchase",
+        "products",
+        "services",
+        "all",
+        "distributor",
+        "responsible",
+        "exclusively",
+        "fees",
+        "five",
+        "units"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0547",
+          "text": "During the term of this Agreement, ENVISION will exclusively purchase the Product from SIERRA.",
+          "interpretation": "While ENVISION is required to purchase exclusively from SIERRA, the contract does not specify a minimum order size, minimum amount, or minimum units per time period.",
+          "source_contract_id": "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0689",
+          "text": "In consideration of the provision of services under this Agreement, Oaktree US will pay the Sub-Advisor such fees as may be agreed between the parties from time to time (the \"Service Fee\").",
+          "interpretation": "The contract does not specify any minimum order size, minimum amount, or minimum units per time period that one party must purchase from the other.",
+          "source_contract_id": "OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services_Agreement"
+        },
+        {
+          "ka_id": "KA-0210",
+          "text": "No relevant text found.",
+          "interpretation": "The contract does not specify a minimum order size, minimum purchase amount, or minimum units per time period that one party must buy from the other.",
+          "source_contract_id": "CnsPharmaceuticalsInc_20200326_8-K_EX-10.1_12079626_EX-10.1_Development_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-minimum-commitment-02",
+      "category": "Minimum Commitment",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.3858,
+      "variation_cues": [
+        "term",
+        "provided",
+        "exhibit",
+        "services",
+        "respect",
+        "date",
+        "provide",
+        "terminated",
+        "license",
+        "effect"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0145",
+          "text": "Contractor shall perform during the Term of this Agreement the Services set forth on Exhibit B in respect of the Products in the Territory.",
+          "interpretation": "The Contractor is obligated to perform the services for the duration of the term, but there is no specified minimum order size, minimum purchase amount, or minimum units per time period that the Company must buy.",
+          "source_contract_id": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0237",
+          "text": "The fee for the placements and other rights provided under this Agreement for the Initial Term (as defined below) is * * * is payable within * * * of the date of this Agreement, with the balance of such fee payable by Sponsor in * * * consecutive equal installments of * * * payable by the * * * of the Initial Term commencing * * * following * * * the Launch Date (as defined below).",
+          "interpretation": "The contract outlines a fixed fee structure payable in installments for the Initial Term, but does not specify a minimum order size, minimum purchase amount, or minimum units per time period that the Sponsor must buy from drkoop.com.",
+          "source_contract_id": "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0762",
+          "text": "This Agreement shall become effective as of the Effective Date and, unless terminated under this Article, shall continue in effect until the Conversion Date (the \"Term\"); provided that, with respect to any LMG Tools identified in Exhibit A as having a license term beyond the Conversion Date, TAG's License to, and LMG's obligation to provide LMG Services for, such LMG Tools shall survive for the period specified in Exhibit A.",
+          "interpretation": "The contract defines a specific term ending on the Conversion Date, but does not specify a minimum order size, minimum purchase amount, or minimum units per time period that TAG must buy from LMG.",
+          "source_contract_id": "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-minimum-commitment-03",
+      "category": "Minimum Commitment",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.2056,
+      "variation_cues": [
+        "who",
+        "except",
+        "provided",
+        "them",
+        "refund",
+        "subscribed",
+        "which",
+        "minimum",
+        "herein",
+        "forth"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0016",
+          "text": "In the event the Company is unable to sell a minimum of 708,050 Shares within the period herein provided, this Agreement shall terminate and the Company shall refund to any persons who have subscribed for any of the Shares, the full amount which it may have received from them plus accrued interest as set forth in the Prospectus; and none of the parties to this Agreement shall have any obligation to the other parties hereunder, except as set forth in this Section 2 and in Sections 6, 8 and 9 hereof.",
+          "interpretation": "The contract establishes a minimum commitment of 708,050 shares that must be sold for the offering to proceed, otherwise the agreement terminates and funds are refunded.",
+          "source_contract_id": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0098",
+          "text": "In the event the Holding Company is unable to sell a minimum of 17,850,000 Shares within the period herein provided, this Agreement shall terminate and the Holding Company shall refund to any persons who have subscribed for any of the Shares the full amount which it may have received from them plus accrued interest, as set forth in the Prospectus; and none of the parties to this Agreement shall have any obligation to the other parties hereunder, except as set forth in this Section 2 and in Sections 7, 9 and 10 hereof.",
+          "interpretation": "The contract establishes a minimum threshold of 17,850,000 shares that must be sold for the agreement to remain in effect; failure to meet this minimum results in termination and refunds.",
+          "source_contract_id": "BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0035",
+          "text": "In the event the Company is unable to sell a minimum of    Shares within the period herein provided, this Agreement shall terminate and the Company shall refund to any persons who have subscribed for any of the Shares the full amount which it may have received from them plus accrued interest, as set forth in the Prospectus; and none of the parties to this Agreement shall have any obligation to the other parties hereunder, except as set forth in this Section 2 and in Sections 7, 9 and 10 hereof.",
+          "interpretation": "The contract specifies a minimum number of shares that must be sold for the offering to proceed; failure to meet this minimum triggers termination and refunds, effectively establishing a minimum commitment threshold for the transaction's validity.",
+          "source_contract_id": "ATHENSBANCSHARESCORP_11_02_2009-EX-1.2-AGENCY_AGREEMENT_,_2009"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-minimum-commitment-04",
+      "category": "Minimum Commitment",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.1978,
+      "variation_cues": [
+        "fee",
+        "pay",
+        "rmb200",
+        "channel",
+        "million",
+        "cooperation",
+        "which",
+        "rmb40",
+        "rmb160",
+        "promotion"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0336",
+          "text": "The Sponsor shall pay to Racing a sponsorship fee in the amount of $750,000.00 for the term of this Agreement",
+          "interpretation": "The Sponsor is committed to paying a total of $750,000.00, representing a minimum financial commitment for the sponsorship services.",
+          "source_contract_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0515",
+          "text": "Party B should pay for All Intellectual Property RMB 1,000,000 per year to Party A as license fee.",
+          "interpretation": "Party B is committed to paying a fixed annual license fee of RMB 1,000,000, which constitutes a minimum financial commitment.",
+          "source_contract_id": "JINGWEIINTERNATIONALLTD_10_04_2007-EX-10.7-INTELLECTUAL_PROPERTY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0551",
+          "text": "The cooperation fee under this Agreement will be RMB200 million, of which RMB160 million will be channel cooperation fee and RMB40 million will be promotion fee for the Cooperation Channel.",
+          "interpretation": "Party B is committed to paying a fixed total cooperation fee of RMB200 million, which constitutes a minimum financial commitment under the agreement.",
+          "source_contract_id": "LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET_CHANNEL_COOPERATION_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-minimum-commitment-05",
+      "category": "Minimum Commitment",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.1268,
+      "variation_cues": [
+        "set",
+        "binding",
+        "order",
+        "purchase",
+        "firm",
+        "forth",
+        "constitute",
+        "product",
+        "volume",
+        "amag"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0044",
+          "text": "[***] of each Forecast shall constitute a firm order and be a binding commitment on AMAG to purchase the volume of Product, sample Product and Trainers set forth therein (the \"Binding Forecast\").",
+          "interpretation": "A portion of the rolling forecast is defined as a 'Binding Forecast,' creating a firm purchase commitment for AMAG.",
+          "source_contract_id": "Antares_Pharma,_Inc._-_Manufacturing_Agreement"
+        },
+        {
+          "ka_id": "KA-0218",
+          "text": "The amounts set forth for the [***] in each Production Schedule shall constitute a firm purchase order and shall be binding upon Columbia (each a \"Purchase Order\")",
+          "interpretation": "Columbia is bound by firm purchase orders included in the Production Schedule, establishing a minimum commitment to purchase specific quantities.",
+          "source_contract_id": "Columbia_Laboratories,_(Bermuda)_Ltd._-_AMEND_NO._2_TO_MANUFACTURING_AND_SUPPLY_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-minimum-commitment-06",
+      "category": "Minimum Commitment",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.1268,
+      "variation_cues": [
+        "three",
+        "months",
+        "forecast",
+        "binding",
+        "quantities",
+        "rolling",
+        "product",
+        "obligation",
+        "forecasted",
+        "represent"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0771",
+          "text": "provided, however, that as to Instruments the quantities for each of the first three months of each respective Forecast shall be deemed to constitute and shall constitute firm, binding orders for such quantities of Instruments in such respective months",
+          "interpretation": "Sekisui is required to purchase a minimum quantity of Instruments as specified in the first three months of its rolling forecast, creating a binding minimum order commitment.",
+          "source_contract_id": "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0047",
+          "text": "The quantities of Product forecasted for the initial three (3) months of each updated rolling Forecast shall represent a binding obligation of Apollo to purchase from ESTABLISHMENT",
+          "interpretation": "Apollo is bound to purchase the quantities forecasted for the first three months of each rolling forecast, creating a minimum commitment.",
+          "source_contract_id": "Apollo_Endosurgery_-_Manufacturing_and_Supply_Agreement"
+        }
+      ]
+    }
+  ],
+  "Volume Restriction": [
+    {
+      "pattern_id": "PAT-volume-restriction-01",
+      "category": "Volume Restriction",
+      "member_count": 6,
+      "source_contract_count": 6,
+      "selection_score": 1.6894,
+      "variation_cues": [
+        "time",
+        "notice",
+        "fee",
+        "right",
+        "change",
+        "agrees",
+        "url",
+        "nai",
+        "reserves",
+        "locations"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0367",
+          "text": "N/A",
+          "interpretation": "The contract does not contain clauses that impose fee increases or consent requirements based on the Distributor exceeding specific usage or volume thresholds.",
+          "source_contract_id": "GlobalTechnologiesGroupInc_20050928_10KSB_EX-10.9_4148808_EX-10.9_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0284",
+          "text": "No",
+          "interpretation": "The contract does not contain clauses imposing fee increases or consent requirements based on exceeding specific usage or volume thresholds beyond the fixed minimum purchase commitments.",
+          "source_contract_id": "ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0425",
+          "text": "No",
+          "interpretation": "The contract does not specify fee increases or consent requirements triggered by exceeding usage thresholds for the product or services.",
+          "source_contract_id": "HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-volume-restriction-02",
+      "category": "Volume Restriction",
+      "member_count": 9,
+      "source_contract_count": 9,
+      "selection_score": 1.6393,
+      "variation_cues": [
+        "relevant",
+        "text",
+        "found",
+        "establish",
+        "inventory",
+        "exclusively",
+        "spare",
+        "adequate",
+        "one",
+        "located"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0211",
+          "text": "No relevant text found.",
+          "interpretation": "The contract does not impose fee increases or consent requirements based on the volume of product usage or sales exceeding a certain threshold.",
+          "source_contract_id": "CnsPharmaceuticalsInc_20200326_8-K_EX-10.1_12079626_EX-10.1_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0581",
+          "text": "No",
+          "interpretation": "The contract does not contain any clauses imposing fee increases or consent requirements based on usage thresholds or volume limits.",
+          "source_contract_id": "LinkPlusCorp_20050802_8-K_EX-10_3240252_EX-10_Affiliate_Agreement"
+        },
+        {
+          "ka_id": "KA-0461",
+          "text": "6.3.1 Royalty on Single-Agent Collaboration Products and LABA/ICS Combination Products",
+          "interpretation": "The contract defines royalty rates on Net Sales but does not impose volume restrictions, such as fee increases or consent requirements, if sales or usage exceed certain thresholds.",
+          "source_contract_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-volume-restriction-03",
+      "category": "Volume Restriction",
+      "member_count": 4,
+      "source_contract_count": 4,
+      "selection_score": 1.315,
+      "variation_cues": [
+        "less",
+        "per",
+        "episodes",
+        "forty",
+        "produce",
+        "show",
+        "year",
+        "company",
+        "original",
+        "than"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0700",
+          "text": "No",
+          "interpretation": "The contract defines fixed maximum limits for pin code distribution and a fixed fee structure, but does not contain clauses regarding fee increases or consent requirements for exceeding usage thresholds.",
+          "source_contract_id": "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0353",
+          "text": "Shi Farms agrees to sell Product and Gridiron agrees to purchase 30,000 lbs. of hemp biomass (\"Biomass\") from Shi Farms.",
+          "interpretation": "The contract defines a specific volume of 30,000 lbs but does not contain clauses regarding fee increases or consent requirements for exceeding this threshold.",
+          "source_contract_id": "GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0137",
+          "text": "The Company shall produce no less than forty (40) original episodes of the Show per year;",
+          "interpretation": "The contract specifies a minimum production volume but does not contain clauses regarding fee increases or consent requirements for exceeding this threshold.",
+          "source_contract_id": "CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-volume-restriction-04",
+      "category": "Volume Restriction",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.2988,
+      "variation_cues": [
+        "connection",
+        "except",
+        "provide",
+        "section",
+        "bear",
+        "necessary",
+        "payments",
+        "purposes",
+        "connections",
+        "all"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0025",
+          "text": "No",
+          "interpretation": "The contract does not impose fee increases or consent requirements based on the volume of services used or premiums generated exceeding a specific threshold, other than the repayment trigger which is a fixed term condition.",
+          "source_contract_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0644",
+          "text": "NPC shall bear all expenses of maintaining facilities and connections necessary to provide Merchant Processing Services except for the facilities and connection maintained by NCB for purposes of effecting payments pursuant to Section 1.6(b).",
+          "interpretation": "The contract allocates fixed costs and fees but does not impose fee increases or consent requirements based on exceeding specific transaction volume thresholds.",
+          "source_contract_id": "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-volume-restriction-05",
+      "category": "Volume Restriction",
+      "member_count": 2,
+      "source_contract_count": 2,
+      "selection_score": 1.1843,
+      "variation_cues": [
+        "product",
+        "sales",
+        "provide",
+        "sierra",
+        "inform",
+        "enough",
+        "demand",
+        "produce",
+        "projections",
+        "production"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0560",
+          "text": "The Distributor agrees to purchase from Lucid minimum agreed quantity of product in the first, second and third years of the Agreement, excluding demonstration product.",
+          "interpretation": "The contract defines minimum purchase obligations but does not impose fees, consent requirements, or restrictions on usage exceeding certain thresholds.",
+          "source_contract_id": "LUCIDINC_04_15_2011-EX-10.9-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0548",
+          "text": "ENVISION will provide SIERRA with demand projections for the Product and SIERRA will produce enough Product to meet such demand projections. ENVISION will inform SIERRA of committed sales and SIERRA will increase or scale up its production of the Product accordingly.",
+          "interpretation": "The contract outlines a process for scaling production based on demand projections but does not impose fees, consent requirements, or restrictions if usage exceeds certain thresholds.",
+          "source_contract_id": "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-volume-restriction-06",
+      "category": "Volume Restriction",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.159,
+      "variation_cues": [
+        "royalty",
+        "product",
+        "sales",
+        "percent",
+        "net",
+        "indication",
+        "rate",
+        "annual",
+        "subscribers",
+        "revenue"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0381",
+          "text": "Subscribers Royalty Payable as Percentage of Gross Revenue 0 - 5000 6.25% 5001 - 7500 6.75% 7501 - 10,000 7.00% 10,001 - 15,000 8.00% 15,001 - 20,000 8.50% 20,001 - 25,000 9.25% 25,001+ 9.75%",
+          "interpretation": "The royalty rate increases as the number of subscribers (volume) exceeds specific thresholds, imposing a fee increase based on usage volume.",
+          "source_contract_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0058",
+          "text": "Annual Net Sales of Product for the Indication Annual Royalty Rate Percent Net Sales $0 - $25,000,000 1.75% >$25,000,000 - $50,000,000 2.25% >$50,000,000 2.50%",
+          "interpretation": "The royalty rate increases (fee increase) as the volume of Net Sales exceeds specific thresholds ($25M and $50M).",
+          "source_contract_id": "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0829",
+          "text": "Imprimis shall pay to Surgical Sales Commissions equal to ten percent (10%) of the Net Sales for Product.",
+          "interpretation": "The commission rate is a flat 10% of Net Sales with no mention of fee increases or consent requirements if sales volumes exceed certain thresholds.",
+          "source_contract_id": "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT"
+        }
+      ]
+    }
+  ]
+}

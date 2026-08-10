@@ -1,0 +1,746 @@
+{
+  "Renewal Term": [
+    {
+      "pattern_id": "PAT-renewal-term-01",
+      "category": "Renewal Term",
+      "member_count": 37,
+      "source_contract_count": 37,
+      "selection_score": 2.1878,
+      "variation_cues": [
+        "year",
+        "automatically",
+        "successive",
+        "renew",
+        "one",
+        "periods",
+        "terms",
+        "term",
+        "thereafter",
+        "additional"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0330",
+          "text": "successive one-year terms",
+          "interpretation": "The agreement automatically renews for successive periods of one year each after the initial term expires.",
+          "source_contract_id": "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0339",
+          "text": "will automatically renew for successive one (1) year periods",
+          "interpretation": "The agreement automatically renews for successive one-year periods after the initial term.",
+          "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0369",
+          "text": "This Agreement will automatically renew at the end of the Initial Term or a subsequent renewal term on a year to year basis (each, a \"Renewal Term\")",
+          "interpretation": "The agreement renews automatically for successive one-year periods after the initial term expires.",
+          "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-renewal-term-02",
+      "category": "Renewal Term",
+      "member_count": 16,
+      "source_contract_count": 16,
+      "selection_score": 1.8725,
+      "variation_cues": [
+        "terminated",
+        "date",
+        "effective",
+        "continue",
+        "unless",
+        "until",
+        "indefinitely",
+        "commence",
+        "term",
+        "section"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0484",
+          "text": "This Agreement shall commence on the Effective Date and, shall continue for the duration of the Lease, unless terminated earlier pursuant to Section 3.2 or 3.3.",
+          "interpretation": "The agreement does not have a fixed initial term with a subsequent renewal term; instead, it continues for the duration of the Lease.",
+          "source_contract_id": "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0117",
+          "text": "This Agreement shall be effective from the date first above written and shall continue indefinitely until terminated by either Party in accordance with the provisions of this Agreement.",
+          "interpretation": "The agreement does not have a fixed initial term with a specific renewal period; instead, it continues indefinitely (perpetually) until terminated.",
+          "source_contract_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0266",
+          "text": "This Agreement shall continue until terminated as provided herein.",
+          "interpretation": "The agreement does not specify a fixed initial term or renewal term; it continues indefinitely until terminated.",
+          "source_contract_id": "KNOWLABS,INC_08_15_2005-EX-10-INTELLECTUAL_PROPERTY_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-renewal-term-03",
+      "category": "Renewal Term",
+      "member_count": 16,
+      "source_contract_count": 15,
+      "selection_score": 1.8146,
+      "variation_cues": [
+        "additional",
+        "term",
+        "year",
+        "renew",
+        "period",
+        "years",
+        "three",
+        "one",
+        "automatically",
+        "renewed"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0201",
+          "text": "Thereafter, this Agreement shall renew automatically for one (1) additional three (3) year period",
+          "interpretation": "The agreement includes an automatic renewal for a single period of three years after the initial term expires.",
+          "source_contract_id": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0478",
+          "text": "This Agreement shall be for an initial term of five (5) years, and unless earlier terminated in accordance with this Agreement, shall automatically renew for an additional term of five (5) years thereafter.",
+          "interpretation": "The contract specifies an automatic renewal for a successive term of five years after the initial term expires.",
+          "source_contract_id": "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0505",
+          "text": "Upon mutual agreement, this Agreement may be renewed for one (1) additional one (1) year term upon the expiration of the Initial Term.",
+          "interpretation": "The contract allows for a renewal of one year, but it requires mutual agreement rather than being automatic.",
+          "source_contract_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-renewal-term-04",
+      "category": "Renewal Term",
+      "member_count": 12,
+      "source_contract_count": 12,
+      "selection_score": 1.7787,
+      "variation_cues": [
+        "term",
+        "expiration",
+        "negotiate",
+        "months",
+        "extension",
+        "prior",
+        "cooperation",
+        "good",
+        "faith",
+        "initial"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0408",
+          "text": "and thereafter upon the mutual agreement of the Company and Maimon",
+          "interpretation": "The contract does not specify a fixed renewal term or automatic extension; instead, continuation after the initial 12-month period requires mutual agreement between the parties.",
+          "source_contract_id": "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0302",
+          "text": "This Agreement may be renewed upon mutual, written agreement of the parties.",
+          "interpretation": "The contract does not specify a fixed renewal term or automatic extension; renewal is contingent upon mutual written agreement between the parties.",
+          "source_contract_id": "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0049",
+          "text": "The Term may be extended with the unanimous consent of all Members.",
+          "interpretation": "The contract does not specify a fixed renewal term or automatic extension; instead, it requires unanimous consent for any extension, implying no automatic renewal term exists.",
+          "source_contract_id": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT_VENTURE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-renewal-term-05",
+      "category": "Renewal Term",
+      "member_count": 6,
+      "source_contract_count": 6,
+      "selection_score": 1.583,
+      "variation_cues": [
+        "automatically",
+        "one",
+        "year",
+        "term",
+        "written",
+        "notice",
+        "renew",
+        "unless",
+        "end",
+        "before"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0307",
+          "text": "At the end of such initial term, and any renewed term, as applicable, this Agreement shall automatically renew for an additional one (1) year term, unless a party provides written notice to the other parties at least six (6) months prior to the end of the initial term.",
+          "interpretation": "The contract automatically renews for successive one-year terms unless terminated by notice.",
+          "source_contract_id": "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0355",
+          "text": "successive one (1) year terms",
+          "interpretation": "The contract allows for renewal for successive one-year terms upon mutual written agreement.",
+          "source_contract_id": "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0016",
+          "text": "Thereafter, this agreement will renew automatically from year to year unless cancelled in writing by either Party giving the other written notice of such cancellation a minimum of 60 days before the end of the then current term.",
+          "interpretation": "The agreement automatically renews for successive one-year terms upon expiration of the initial term or any subsequent term, unless terminated by notice.",
+          "source_contract_id": "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-renewal-term-06",
+      "category": "Renewal Term",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.4847,
+      "variation_cues": [
+        "renewed",
+        "written",
+        "mutual",
+        "extended",
+        "term",
+        "periods",
+        "section",
+        "conditions",
+        "agreed",
+        "writing"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0394",
+          "text": "The Term may be extended by written agreement of the parties.",
+          "interpretation": "The contract does not specify an automatic renewal term or unilateral extension right; renewal requires a mutual written agreement between the parties.",
+          "source_contract_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0412",
+          "text": "Thereafter, this Agreement may be renewed for such periods of time and under such terms and conditions as are mutually agreed to in writing and pursuant to Section 12.7.",
+          "interpretation": "The contract does not specify a fixed renewal term or automatic extension; instead, renewal is contingent upon mutual written agreement for unspecified periods.",
+          "source_contract_id": "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0361",
+          "text": "This agreement may be renewed upon mutual, written agreement of the parties.",
+          "interpretation": "The contract does not specify an automatic or unilateral renewal term; renewal is contingent upon mutual written agreement, meaning there is no predefined successive term length.",
+          "source_contract_id": "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT"
+        }
+      ]
+    }
+  ],
+  "Notice Period to Terminate Renewal": [
+    {
+      "pattern_id": "PAT-notice-period-to-terminate-renew-01",
+      "category": "Notice Period to Terminate Renewal",
+      "member_count": 39,
+      "source_contract_count": 39,
+      "selection_score": 2.1938,
+      "variation_cues": [
+        "notice",
+        "prior",
+        "least",
+        "term",
+        "written",
+        "unless",
+        "days",
+        "end",
+        "either",
+        "initial"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0067",
+          "text": "unless either Party serves written notice of termination on the other Party at least 65 days prior to the end of the Initial Term, or any subsequent extension.",
+          "interpretation": "A party must provide at least 65 days' written notice prior to the end of the current term to prevent automatic renewal.",
+          "source_contract_id": "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT"
+        },
+        {
+          "ka_id": "KA-0424",
+          "text": "Such notice must be given ninety (90) days prior to expiration of the original term.",
+          "interpretation": "A party must provide 90 days' written notice prior to the expiration of the term to prevent automatic renewal.",
+          "source_contract_id": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement"
+        },
+        {
+          "ka_id": "KA-0297",
+          "text": "at least 180 days prior written notice",
+          "interpretation": "A party must provide at least 180 days' written notice before the end of the current term to prevent automatic renewal.",
+          "source_contract_id": "LiquidmetalTechnologiesInc_20200205_8-K_EX-10.1_11968198_EX-10.1_Development_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-notice-period-to-terminate-renew-02",
+      "category": "Notice Period to Terminate Renewal",
+      "member_count": 21,
+      "source_contract_count": 20,
+      "selection_score": 1.961,
+      "variation_cues": [
+        "notice",
+        "written",
+        "days",
+        "terminate",
+        "either",
+        "ninety",
+        "prior",
+        "thirty",
+        "reason",
+        "providing"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0286",
+          "text": "Either party may terminate this agreement by providing Ninety days Written Notice.",
+          "interpretation": "A party must provide ninety days' written notice to terminate the agreement, which serves as the notice period to prevent automatic renewal or end the current term.",
+          "source_contract_id": "LUCIDINC_04_15_2011-EX-10.9-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0461",
+          "text": "upon 90 days' advance written notice",
+          "interpretation": "Either party must provide 90 days' advance written notice to terminate the agreement for convenience.",
+          "source_contract_id": "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0340",
+          "text": "ninety (90) days written notice",
+          "interpretation": "A party must provide ninety days' written notice to terminate the agreement or prevent renewal.",
+          "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-notice-period-to-terminate-renew-03",
+      "category": "Notice Period to Terminate Renewal",
+      "member_count": 10,
+      "source_contract_count": 10,
+      "selection_score": 1.7781,
+      "variation_cues": [
+        "term",
+        "extended",
+        "unless",
+        "terminated",
+        "expire",
+        "section",
+        "commence",
+        "date",
+        "writing",
+        "below"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0247",
+          "text": "This Agreement shall expire unless extended by both parties in writing prior to the termination.",
+          "interpretation": "Since there is no automatic renewal, there is no specific notice period required to terminate a renewal; the agreement simply expires at the end of the term if no written extension is executed.",
+          "source_contract_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0455",
+          "text": "The Agreement shall commence on the Effective Date and, unless terminated earlier pursuant to this Agreement or extended by mutual agreement between the parties, shall continue in effect for thirty six (36) months following the Effective Date (the \"Term\").",
+          "interpretation": "Since there is no automatic renewal term, there is no specific notice period required to terminate a renewal.",
+          "source_contract_id": "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0490",
+          "text": "extended by renewal by written agreement of the Parties in accordance with the provisions of Section 13(o) of this Agreement",
+          "interpretation": "Since renewal is based on mutual written agreement rather than an automatic extension with a notice period, there is no specific notice period defined for terminating a renewal.",
+          "source_contract_id": "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-notice-period-to-terminate-renew-04",
+      "category": "Notice Period to Terminate Renewal",
+      "member_count": 7,
+      "source_contract_count": 7,
+      "selection_score": 1.6422,
+      "variation_cues": [
+        "notice",
+        "days",
+        "expiration",
+        "term",
+        "written",
+        "prior",
+        "before",
+        "thirty",
+        "renew",
+        "then"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0047",
+          "text": "at least 90 days prior to the expiration of the then current term of this agreement",
+          "interpretation": "A party must provide written notice of non-renewal at least 90 days before the current term expires.",
+          "source_contract_id": "BOLIVARMININGCORP_05_23_2003-EX-2.1-VISP_WEB_SITE_BUILDING_AND_HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0376",
+          "text": "You must give us written notice of your desire to exercise your option not more than twelve (12) months and not less than nine (9) months before this Agreement expires.",
+          "interpretation": "The Franchisee must provide written notice of their intent to renew between 9 and 12 months prior to the expiration of the current term.",
+          "source_contract_id": "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise_Agreement1"
+        },
+        {
+          "ka_id": "KA-0078",
+          "text": "thirty (30) days prior to the expiration",
+          "interpretation": "Either party must provide written notice at least 30 days before the expiration of the current term to prevent automatic renewal.",
+          "source_contract_id": "CORIOINC_07_20_2000-EX-10.5-LICENSE_AND_HOSTING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-notice-period-to-terminate-renew-05",
+      "category": "Notice Period to Terminate Renewal",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.4963,
+      "variation_cues": [
+        "expiration",
+        "months",
+        "negotiate",
+        "extension",
+        "term",
+        "initial",
+        "renewed",
+        "beginning",
+        "efforts",
+        "prior"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0506",
+          "text": "Upon mutual agreement, this Agreement may be renewed for one (1) additional one (1) year term upon the expiration of the Initial Term.",
+          "interpretation": "The contract does not specify a notice period to terminate renewal because renewal is not automatic; it requires mutual agreement, implying no unilateral right to renew exists that would require termination notice.",
+          "source_contract_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0413",
+          "text": "Thereafter, this Agreement may be renewed for such periods of time and under such terms and conditions as are mutually agreed to in writing and pursuant to Section 12.7.",
+          "interpretation": "The contract does not define a specific notice period for terminating a renewal because renewal requires mutual written agreement rather than automatic continuation.",
+          "source_contract_id": "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0071",
+          "text": "The Parties may negotiate for an extension of this Agreement six (6) months before the expiration of the Cooperation Period.",
+          "interpretation": "The contract does not define a specific notice period to terminate a renewal because renewal is not automatic; it requires negotiation initiated six months before expiration.",
+          "source_contract_id": "CHIPMOSTECHNOLOGIESBERMUDALTD_04_18_2016-EX-4.72-Strategic_Alliance_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-notice-period-to-terminate-renew-06",
+      "category": "Notice Period to Terminate Renewal",
+      "member_count": 4,
+      "source_contract_count": 4,
+      "selection_score": 1.4599,
+      "variation_cues": [
+        "terminated",
+        "unless",
+        "years",
+        "automatically",
+        "renew",
+        "earlier",
+        "term",
+        "additional",
+        "forth",
+        "terms"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0356",
+          "text": "This Agreement shall continue for a term set forth in Exhibit B, and may be renewed for successive one (1) year terms pursuant to mutual written agreement of the parties, unless terminated earlier pursuant to this Section 12.1.",
+          "interpretation": "The contract does not specify a notice period to terminate renewal because renewal requires mutual written agreement rather than automatic renewal with an opt-out notice.",
+          "source_contract_id": "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0479",
+          "text": "This Agreement shall be for an initial term of five (5) years, and unless earlier terminated in accordance with this Agreement, shall automatically renew for an additional term of five (5) years thereafter.",
+          "interpretation": "The contract does not specify a notice period required to terminate the automatic renewal; it simply states the agreement automatically renews unless terminated in accordance with the agreement (which refers to default or bankruptcy conditions, not a specific renewal opt-out notice period).",
+          "source_contract_id": "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0250",
+          "text": "This agreement shall automatically renew for a period of three (3) years and upon the parties mutual agreement on new minimum performance goals for the renewal period.",
+          "interpretation": "The contract does not specify a notice period required to terminate the automatic renewal; it only states the renewal is automatic upon mutual agreement on goals.",
+          "source_contract_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor_Agreement"
+        }
+      ]
+    }
+  ],
+  "Termination for Convenience": [
+    {
+      "pattern_id": "PAT-termination-for-convenience-01",
+      "category": "Termination for Convenience",
+      "member_count": 56,
+      "source_contract_count": 50,
+      "selection_score": 2.1918,
+      "variation_cues": [
+        "notice",
+        "written",
+        "days",
+        "prior",
+        "terminate",
+        "either",
+        "time",
+        "terminated",
+        "thirty",
+        "giving"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0284",
+          "text": "termination by either Party for any reason upon thirty (30) days' written notice to the other Party",
+          "interpretation": "The contract allows either party to terminate the agreement for any reason (without cause) by providing thirty days' written notice.",
+          "source_contract_id": "LIGHTBRIDGECORP_11_23_2015-EX-10.26-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0410",
+          "text": "The Company may in its discretion and at its option terminate this Agreement at any time after the Minimum Period upon five days prior written notice to Maimon.",
+          "interpretation": "The Company has the right to terminate the agreement for convenience (without cause) after the minimum period by providing five days' prior written notice.",
+          "source_contract_id": "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0407",
+          "text": "Owner shall have the right to terminate this Agreement at any time upon no less than 120 days prior written notice to Operator",
+          "interpretation": "The Owner has the right to terminate the agreement for convenience (without cause) by providing 120 days' notice.",
+          "source_contract_id": "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-termination-for-convenience-02",
+      "category": "Termination for Convenience",
+      "member_count": 14,
+      "source_contract_count": 14,
+      "selection_score": 1.8604,
+      "variation_cues": [
+        "notice",
+        "written",
+        "terminate",
+        "days",
+        "either",
+        "breach",
+        "fails",
+        "after",
+        "following",
+        "cure"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0383",
+          "text": "A Party shall have the right to terminate its obligations under this Agreement if the other Party materially breaches this Agreement and fails to cure such breach within thirty (30) days after its receipt of written notice of the breach specifying such default.",
+          "interpretation": "The contract only provides for termination for cause (material breach) and does not contain a clause allowing either party to terminate the agreement without cause or for convenience.",
+          "source_contract_id": "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement"
+        },
+        {
+          "ka_id": "KA-0371",
+          "text": "Either party may terminate this Agreement immediately upon written notice to the other party in the event any material breach of a material term of this Agreement by such other party that remains uncured 30 days in the case of a breach of a payment obligation, or 45 days for all other breaches, after notice of such breach was received by such other party",
+          "interpretation": "The contract only provides for termination for cause (material breach) and does not contain a provision allowing termination for convenience without cause.",
+          "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0338",
+          "text": "Either party to this Agreement may terminate this Agreement: (1) Immediately upon written notice if the other party to this Agreement becomes insolvent... or (2) Immediately upon written notice if the other party to this Agreement performance of any obligation under this Agreement... and fails to cure such default",
+          "interpretation": "The contract only allows termination for cause (insolvency, bankruptcy, or material breach), not for convenience without cause.",
+          "source_contract_id": "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR_AGREEMENT_New"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-termination-for-convenience-03",
+      "category": "Termination for Convenience",
+      "member_count": 12,
+      "source_contract_count": 12,
+      "selection_score": 1.8555,
+      "variation_cues": [
+        "breach",
+        "terminate",
+        "either",
+        "notice",
+        "material",
+        "written",
+        "days",
+        "within",
+        "cured",
+        "period"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0116",
+          "text": "Either party may terminate this Agreement upon thirty (30) days' written notice of a breach by the other party, provided such breach is not cured within such thirty-day period.",
+          "interpretation": "The contract only allows termination for cause (breach) with a cure period, not for convenience without cause.",
+          "source_contract_id": "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0200",
+          "text": "Either party may terminate the Agreement at any time in the event of a material breach by the other party that remains uncured after thirty (30) days written notice of the breach.",
+          "interpretation": "The contract only permits termination for cause (material breach, bankruptcy, or force majeure) and does not provide a right to terminate for convenience without cause.",
+          "source_contract_id": "GlobalTechnologiesGroupInc_20050928_10KSB_EX-10.9_4148808_EX-10.9_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0153",
+          "text": "Either party may terminate the Term upon not less than sixty (60) days prior written notice to the other party of any breach hereof by such other party.",
+          "interpretation": "Termination is permitted only for cause (breach) or specific insolvency events, not for convenience without cause.",
+          "source_contract_id": "EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-termination-for-convenience-04",
+      "category": "Termination for Convenience",
+      "member_count": 12,
+      "source_contract_count": 12,
+      "selection_score": 1.843,
+      "variation_cues": [
+        "terminate",
+        "either",
+        "notice",
+        "written",
+        "time",
+        "days",
+        "prior",
+        "termination",
+        "providing",
+        "least"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0393",
+          "text": "Either party may terminate this Agreement at any time in the event that the other party is in default or breach of any material provision of this Agreement",
+          "interpretation": "The contract only allows termination for cause (breach/default) or failure to negotiate revenue sharing; it does not provide a right to terminate for convenience without cause.",
+          "source_contract_id": "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0304",
+          "text": "Either party may terminate this Agreement at any time with 30 days written notice.",
+          "interpretation": "The contract explicitly allows either party to terminate the agreement at any time without cause, provided they give 30 days' written notice.",
+          "source_contract_id": "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0119",
+          "text": "Either Party may terminate this Agreement, without cause, by giving two (2) years written notice.",
+          "interpretation": "The contract explicitly allows either party to terminate the agreement without cause by providing two years of written notice.",
+          "source_contract_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-termination-for-convenience-05",
+      "category": "Termination for Convenience",
+      "member_count": 8,
+      "source_contract_count": 8,
+      "selection_score": 1.7477,
+      "variation_cues": [
+        "either",
+        "unless",
+        "written",
+        "notice",
+        "term",
+        "days",
+        "least",
+        "end",
+        "year",
+        "prior"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0335",
+          "text": "unless either party to this Agreement delivers written notice of termination to the other party to this Agreement at least sixty (60) days prior to the end of the original or any renewal term.",
+          "interpretation": "The contract allows either party to terminate the agreement without cause by providing the required notice before the end of the term, effectively allowing termination for convenience at term end.",
+          "source_contract_id": "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR_AGREEMENT_Amendment"
+        },
+        {
+          "ka_id": "KA-0048",
+          "text": "unless either party serves written notice of its intention not to renew, on the other at least 90 days prior to the expiration of the then current term of this agreement",
+          "interpretation": "Either party may terminate the agreement at the end of any term (initial or renewed) without cause by providing the required 90-day notice.",
+          "source_contract_id": "BOLIVARMININGCORP_05_23_2003-EX-2.1-VISP_WEB_SITE_BUILDING_AND_HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0068",
+          "text": "unless either Party serves written notice of termination on the other Party at least 65 days prior to the end of the Initial Term, or any subsequent extension.",
+          "interpretation": "Yes, either party may terminate the contract without cause by providing the required notice before the end of the term.",
+          "source_contract_id": "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-termination-for-convenience-06",
+      "category": "Termination for Convenience",
+      "member_count": 7,
+      "source_contract_count": 7,
+      "selection_score": 1.7067,
+      "variation_cues": [
+        "written",
+        "notice",
+        "terminate",
+        "days",
+        "either",
+        "forth",
+        "event",
+        "within",
+        "set",
+        "thirty"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0251",
+          "text": "Either party may terminate this Agreement in the event of a material breach by the other party, provided the breaching party is first given reasonably detailed, written notice of the breach. If the breach is not cured within ten days of such notice, the Agreement will terminate immediately.",
+          "interpretation": "The contract only allows termination for cause (material breach) or specific conditions like bankruptcy, with no provision for termination without cause.",
+          "source_contract_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0219",
+          "text": "The Parties may terminate its performance of related obligations under this Agreement within thirty (30) days of receipt by the Party of written termination notice.",
+          "interpretation": "The agreement allows either party to terminate the contract without specifying a cause, requiring only a written notice and a 30-day waiting period.",
+          "source_contract_id": "HPILHOLDING_01_07_2015-EX-99.1-COOPERATION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0414",
+          "text": "Without limiting the other rights to terminate set forth in this Agreement, this Agreement may be terminated by either party as follows: (a) Material Breach. In the event that a party materially defaults under or materially breaches any of the provisions of this Agreement, the other party shall have the right to terminate this Agreement upon 60 days' prior written notice... (b) Bankruptcy. If a party institutes for its protection or is made a defendant in any proceeding under bankruptcy... the other party may elect to terminate this Agreement immediately by written notice...",
+          "interpretation": "The contract only provides for termination for cause (material breach or bankruptcy) and does not include a provision allowing either party to terminate for convenience without cause.",
+          "source_contract_id": "SEASPINEHOLDINGSCORP_10_10_2018-EX-10.1-SUPPLY_AGREEMENT"
+        }
+      ]
+    }
+  ]
+}

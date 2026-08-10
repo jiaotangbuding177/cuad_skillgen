@@ -1,0 +1,35 @@
+{
+  "method": "graph_evoskill_compiler",
+  "case_id": "assignment_and_control",
+  "model": "ecnu-plus",
+  "source_method": "evoskill_compiler",
+  "compilation_protocol": "gesc-1.0",
+  "graph_config": {
+    "graph_ka_limit": 200,
+    "similarity_threshold": 0.24,
+    "max_neighbors": 6,
+    "patterns_per_category": 6,
+    "examples_per_pattern": 3
+  },
+  "graph_statistics": {
+    "node_types": {
+      "Category": 2,
+      "KnowledgeAtom": 400,
+      "ClausePattern": 12,
+      "Contract": 216
+    },
+    "edge_types": {
+      "BELONGS_TO": 400,
+      "DERIVED_FROM": 400,
+      "VARIANT_OF": 1264,
+      "INSTANCE_OF": 180
+    }
+  },
+  "usage": {
+    "prompt_tokens": 6979,
+    "completion_tokens": 4438,
+    "total_tokens": 11417
+  },
+  "duration_seconds": 47.658,
+  "created_at": "2026-08-10T07:48:38.416118+00:00"
+}

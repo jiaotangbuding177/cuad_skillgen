@@ -1,0 +1,35 @@
+{
+  "method": "graph_evoskill_compiler",
+  "case_id": "operational_rights",
+  "model": "ecnu-plus",
+  "source_method": "evoskill_compiler",
+  "compilation_protocol": "gesc-1.0",
+  "graph_config": {
+    "graph_ka_limit": 200,
+    "similarity_threshold": 0.24,
+    "max_neighbors": 6,
+    "patterns_per_category": 6,
+    "examples_per_pattern": 3
+  },
+  "graph_statistics": {
+    "node_types": {
+      "Category": 5,
+      "KnowledgeAtom": 730,
+      "ClausePattern": 30,
+      "Contract": 205
+    },
+    "edge_types": {
+      "BELONGS_TO": 730,
+      "DERIVED_FROM": 730,
+      "VARIANT_OF": 1614,
+      "INSTANCE_OF": 327
+    }
+  },
+  "usage": {
+    "prompt_tokens": 14670,
+    "completion_tokens": 2590,
+    "total_tokens": 17260
+  },
+  "duration_seconds": 42.303,
+  "created_at": "2026-08-10T07:50:08.714081+00:00"
+}

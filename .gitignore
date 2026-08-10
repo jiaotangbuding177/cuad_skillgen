@@ -22,5 +22,8 @@ env/
 .DS_Store
 Thumbs.db
 
+# Secrets
+.env
+
 # Logs
 *.log

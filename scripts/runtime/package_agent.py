@@ -187,6 +187,31 @@ class SkillPackage:
         ranked = sorted(zip(items, scores), key=lambda pair: pair[1], reverse=True)
         return [item for item, score in ranked[:top_k] if score > 0]
 
+def expand_chunk_context(
+    chunks: Sequence[ContractChunk],
+    full_text: str,
+    window_chars: int = 1200,
+) -> List[ContractChunk]:
+    """Expand each chunk by a context window on both sides from the full contract text.
+
+    This gives the LLM more clause-level context around each matched chunk,
+    reducing fragmented quotes from short retrieval windows.
+    """
+    if not chunks:
+        return []
+    max_len = len(full_text)
+    expanded = []
+    for chunk in chunks:
+        new_start = max(0, chunk.span_start - window_chars)
+        new_end = min(max_len, chunk.span_end + window_chars)
+        expanded.append(ContractChunk(
+            chunk.chunk_id,
+            full_text[new_start:new_end],
+            new_start,
+            new_end,
+        ))
+    return expanded
+
 
 def score_texts(query: str, texts: Sequence[str]) -> List[float]:
     """Small dependency-free BM25 implementation."""
@@ -408,6 +433,7 @@ unsupported_scope, or needs_human_review."""
         )
         all_chunks = chunk_contract(contract_text)
         selected_chunks = retrieve_contract_chunks(all_chunks, knowledge_query, self.top_k_chunks)
+        selected_chunks = expand_chunk_context(selected_chunks, contract_text, window_chars=1200)
         prompt = self._build_prompt(task, package, guidance, knowledge, tools, selected_chunks)
 
         try:
@@ -590,6 +616,7 @@ class IncrementalPackageRunner:
         include_governance: bool = True,
         retry_errors: bool = True,
         max_tasks: Optional[int] = None,
+        stop_on_quota_error: bool = True,
     ) -> dict:
         os.makedirs(output_dir, exist_ok=True)
         output_path = os.path.join(output_dir, f"{case_id}_results.jsonl")
@@ -609,6 +636,7 @@ class IncrementalPackageRunner:
         )
         usage_total = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
         start_time = time.time()
+        halted_reason = None
         with open(output_path, "a", encoding="utf-8", buffering=1) as f:
             for index, task in enumerate(pending, 1):
                 result = self.agent.process_task(task)
@@ -624,11 +652,32 @@ class IncrementalPackageRunner:
                 result["_split"] = split
                 f.write(json.dumps(result, ensure_ascii=False) + "\n")
                 f.flush()
+                error_text = str(result.get("_error", "")).lower()
+                quota_markers = (
+                    "每天 credits 限制",
+                    "daily credits",
+                    "daily credit",
+                    "quota exceeded",
+                    "insufficient_quota",
+                )
+                if (
+                    stop_on_quota_error
+                    and result.get("status") == "error"
+                    and any(marker in error_text for marker in quota_markers)
+                ):
+                    halted_reason = result.get("_error") or "daily quota exhausted"
+                    print(
+                        f"    quota exhausted at {index}/{len(pending)}; "
+                        "checkpoint saved, stopping this run"
+                    )
+                    break
                 if index % 25 == 0:
                     print(f"    checkpoint: {index}/{len(pending)}")
         return {
             "selected_tasks": len(tasks),
-            "processed_tasks": len(pending),
+            "processed_tasks": index if pending else 0,
+            "remaining_tasks": max(0, len(pending) - (index if pending else 0)),
+            "halted_reason": halted_reason,
             "usage": usage_total,
             "duration": time.time() - start_time,
             "output_path": output_path,

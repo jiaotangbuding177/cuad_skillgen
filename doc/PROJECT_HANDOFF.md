@@ -1,10 +1,16 @@
 # CUAD-SkillGen 项目交接文档
 
-> 更新时间：2026-08-06  
-> 当前分支：`main`  
-> 当前提交：`33f69b7 feat: complete project snapshot with all results, docs, and experiment progress`  
-> 工作区状态：干净，无未提交修改  
-> 自动测试：18项全部通过
+> 更新时间：2026-08-11
+>
+> 当前分支：`main`
+>
+> 当前提交：`a7c7676 docs: add EvoSkill improvement experiment handoff document`
+>
+> 工作区状态：存在未提交的实验代码、文档与结果修改，接手时不得覆盖或回滚
+>
+> 自动测试：`tests/`目录20项全部通过（项目根目录全量收集受`test_ecnu_json.py`缺少API Key影响）
+>
+> 当前实验阶段：**Graph-enhanced Skill Compilation（GESC）新基线实现完成，正在进入Skill生成与运行时对照实验**
 
 ## 1. 项目目标
 
@@ -20,12 +26,14 @@
 
 - 完成CUAD-SkillGen数据组织和合同级train/dev/test划分。
 - 将CUAD类别组织为9个能力域。
-- 完成5种Document-to-Skill方法：
+- 完成5种原始Document-to-Skill方法：
   - `native_prompt_skill`
   - `schema_prompt_skill`
   - `summary2skill`
   - `document_tool_maker`
   - `evoskill_compiler`
+- 在保留现有EvoSkill的前提下，新增第6种独立实验基线：
+  - `graph_evoskill_compiler`
 - 完成统一Package-aware Agent。
 - 完成增量式、可恢复的运行时评测链路。
 - 五种方法均完成4668/4668条test任务。
@@ -37,7 +45,8 @@
 - 增加Containment-aware Evidence F1。
 - 增加Semantic Evidence Validity。
 - 完成论文正文形式的实验章节。
-- 18项单元测试全部通过。
+- GESC图构建、Pattern归纳、来源多样性选择单元测试已补充。
+- `tests/`目录20项单元测试全部通过。
 
 ### 2.2 当前论文成熟度
 
@@ -228,9 +237,107 @@ Evidence F1偏低不是单一原因：
 
 当前Containment匹配没有引文长度膨胀上限，完整包含Gold的超长引文也可得到匹配。这是已知限制，后续应在dev人工集校准2×、3×、5×长度上限。
 
+### 5.4 当前正在进行：Graph-enhanced Skill Compilation
+
+#### 研究动机
+
+EvoSkill v4通过在`SKILL.md`中增加Common Clause Patterns与Example Phrasing，已经证明“条款模式化组织”可能改善任务成功率、状态判断和no-answer能力。当前新实验进一步把这一做法从提示词中的隐式组织，升级为确定、可审计的图增强编译算法。
+
+核心研究问题是：
+
+> 在知识原子、security policy、Package-aware Agent、运行模型、数据划分和top-k参数保持相同的情况下，显式构建Knowledge Atom图并据此归纳Clause Pattern，能否比扁平KA编译更好地表达条款变体、条件、例外和判定边界？
+
+#### 因果边界
+
+`graph_evoskill_compiler`是独立基线，不替换`evoskill_compiler`。第一阶段只改变compile-time Skill组织方式：
+
+| 组成 | EvoSkill v4 | GESC | 是否保持一致 |
+|---|---|---|---|
+| 原始KA | EvoSkill evidence index | 复用同一evidence index | 是 |
+| Security policy | EvoSkill policy | 原样复用 | 是 |
+| Runtime Agent | Package-aware Agent | Package-aware Agent | 是 |
+| Runtime retrieval | chunks=10, knowledge=6 | chunks=10, knowledge=6 | 是 |
+| 编译输入组织 | 每类Top-30扁平KA | 每类Top-200构图后选择Pattern | 否 |
+| Skill提示结构 | Pattern/Example提示 | 图选择的Pattern Cards | 否 |
+
+因此主对照`evoskill_compiler`与`graph_evoskill_compiler`的差异，原则上可以归因于图增强编译，而不是重新抽取KA或更换Agent。当前阶段不引入runtime Graph-RAG，避免把编译收益和运行时检索收益混在一起。
+
+#### 已完成实现
+
+- 新增`scripts/baselines/graph_evoskill_compiler.py`。
+- 节点类型：`KnowledgeAtom`、`ClausePattern`、`Category`、`Contract`。
+- 边类型：`BELONGS_TO`、`DERIVED_FROM`、`VARIANT_OF`、`INSTANCE_OF`。
+- 使用倒排候选和token Jaccard构造稀疏同类别变体边。
+- 使用中心原子约束的星型聚类归纳Pattern，避免普通连通分量的chaining。
+- 使用置信度、图中心性、来源合同覆盖、条件/例外信息为Pattern排序。
+- 使用来源多样性与MMR式冗余惩罚选择代表例句。
+- 输出`knowledge_graph.json`和`pattern_cards.json`供审计与消融。
+- 保留源EvoSkill的`evidence_index.json`和`security_policy.json`，保证现有Agent兼容。
+- 已接入`run_all_baselines.py`、`run_package_runtime.py`、Academic Judge、Semantic Evidence Validity及静态Skill评测入口。
+
+#### 当前默认参数
+
+| 参数 | 默认值 | 含义 |
+|---|---:|---|
+| `graph_ka_limit` | 200/category | 每类参与构图的高置信KA上限 |
+| `similarity_threshold` | 0.24 | KA并入Pattern中心的Jaccard阈值 |
+| `max_neighbors` | 6 | 每个KA保留的变体近邻上限 |
+| `patterns_per_category` | 6 | 每类进入编译提示的Pattern上限 |
+| `examples_per_pattern` | 3 | 每个Pattern的代表例句上限 |
+
+#### 离线构图验证
+
+已对全部9个case的真实EvoSkill evidence index执行不调用LLM的dry-run：
+
+| Case | 节点 | 边 | 进入编译的Pattern |
+|---|---:|---:|---:|
+| contract_basic_info | 1,318 | 5,660 | 30 |
+| term_and_termination | 721 | 3,014 | 18 |
+| legal_governance | 846 | 3,183 | 18 |
+| ip_and_license | 1,881 | 7,151 | 48 |
+| competition_restrictions | 925 | 2,108 | 42 |
+| liability_and_indemnity | 1,002 | 3,639 | 24 |
+| assignment_and_control | 630 | 2,244 | 12 |
+| revenue_and_commercial_terms | 1,020 | 2,244 | 24 |
+| operational_rights | 970 | 3,401 | 30 |
+
+早期连通分量实现曾把Anti-Assignment的161/200个KA吞并为一个大Pattern，表明法律模板中存在明显的近邻链式传播。改用星型聚类后，`assignment_and_control`中两个类别选中的Pattern规模为：
+
+```text
+Change of Control: 31, 18, 5, 7, 4, 4
+Anti-Assignment:   38, 29, 16, 11, 10, 7
+```
+
+这一修正已经进入当前默认实现和设计文档。
+
+#### 当前尚未完成
+
+- 尚未调用LLM为全部case生成GESC `SKILL.md`。
+- 尚未运行`graph_evoskill_compiler`的test 4668任务。
+- 尚未生成GESC的Academic Judge与Semantic Evidence Validity结果。
+- 尚未执行GESC消融和配对显著性检验。
+- 尚不能声称GESC有效；目前只能确认实现、可复现协议和离线图结构通过验证。
+
+#### 下一轮主假设
+
+GESC应首先影响Skill对语义变体及条件/例外的表达，因此优先观察：Task Success、Status Macro-F1、Balanced Accuracy、No-answer Recall、Academic Judge、Semantic Evidence Validity和Containment-aware Evidence F1。Strict Evidence F1只保留为Gold-span对齐诊断，不作为图增强质量的唯一结论。
+
 ## 6. 当前待解决问题
 
 ### P0：最终论文前必须完成
+
+#### 6.0 完成GESC主对照实验
+
+当前最高优先级是完成`graph_evoskill_compiler`闭环，而不是继续修改图算法：
+
+1. 生成全部9个case的GESC Skill package；
+2. 先做静态审计，检查类别覆盖、Pattern可读性、条件/例外保真和提示长度；
+3. 使用与EvoSkill v4完全相同的`ecnu-plus + top-k10/k6 + test`配置运行4668任务；
+4. 完成确定性指标、Academic Judge和Semantic Evidence Validity；
+5. 对相同task做paired bootstrap和McNemar检验；
+6. 根据主结果再决定是否执行`no-centrality`、`no-source-diversity`和`random-patterns`消融。
+
+在主实验完成前不要根据test结果反复调整`similarity_threshold`或Pattern数量。若需要调参，应先在dev或离线图统计上预注册候选配置。
 
 #### 6.1 配对统计检验
 
@@ -353,6 +460,9 @@ Evidence F1偏低不是单一原因：
 
 ### 8.1 论文与设计
 
+- `doc/GRAPH_ENHANCED_SKILL_COMPILATION.md`：当前GESC完整算法、因果边界、参数、产物与消融协议。
+- `doc/EVOSKILL_IMPROVEMENT_HANDOFF.md`：EvoSkill v4改造阶段的专项交接记录。
+- `doc/paper_experiments_v2.md`：当前论文实验叙事与EvoSkill改造记录。
 - `doc/paper_experiments.md`：当前可直接进入论文正文的实验章节。
 - `doc/first_stage_experiment_report.md`：完整指标、诊断过程和第一阶段记录。
 - `doc/package_aware_runtime_experiment.md`：运行时实验协议。
@@ -362,6 +472,7 @@ Evidence F1偏低不是单一原因：
 
 ### 8.2 核心代码
 
+- `scripts/baselines/graph_evoskill_compiler.py`：GESC构图、Pattern归纳、代表例句选择与Skill编译。
 - `scripts/runtime/package_agent.py`：Package-aware Agent、检索、引文验证。
 - `scripts/runtime/package_evaluator.py`：任务、状态、治理、Strict和Containment证据指标。
 - `scripts/run_package_runtime.py`：运行与离线重算入口。
@@ -370,7 +481,8 @@ Evidence F1偏低不是单一原因：
 - `scripts/diagnose_evidence_pipeline.py`：小样本检索与失败归因。
 - `scripts/review_evidence_diagnosis.py`：证据复核与Mapper sensitivity。
 - `scripts/evaluate_skill_quality.py`：静态Skill审计。
-- `tests/test_package_runtime.py`：当前18项测试。
+- `tests/test_package_runtime.py`：Package-aware runtime测试。
+- `tests/test_graph_evoskill_compiler.py`：GESC图模式、Pattern Card、KA上限与来源多样性测试。
 
 ### 8.3 关键结果
 
@@ -384,18 +496,54 @@ Evidence F1偏低不是单一原因：
 
 ## 9. 常用命令
 
+### 9.0 GESC当前实验命令
+
+不调用LLM，检查全部case图规模：
+
+```powershell
+python scripts/baselines/graph_evoskill_compiler.py --dry-run
+```
+
+先生成单个case用于静态审计：
+
+```powershell
+python scripts/baselines/graph_evoskill_compiler.py `
+  --case-id assignment_and_control `
+  --model ecnu-plus
+```
+
+确认单case产物后生成全部GESC Skill：
+
+```powershell
+python scripts/baselines/graph_evoskill_compiler.py --model ecnu-plus
+```
+
+运行正式test主对照：
+
+```powershell
+python scripts/run_package_runtime.py `
+  --method graph_evoskill_compiler `
+  --split test `
+  --run-id graph-k10-k6 `
+  --top-k-chunks 10 `
+  --top-k-knowledge 6
+```
+
+若目标是与现有`final-k10-k6`逐task配对，统计脚本必须显式读取两个方法各自的结果目录，不能因run ID不同而把另一方法误判为结果缺失。
+
 ### 9.1 运行测试
 
 ```powershell
-python -m unittest tests.test_package_runtime
+python -m pytest tests -q
 ```
 
 当前预期：
 
 ```text
-Ran 18 tests
-OK
+20 passed
 ```
+
+不要直接把根目录`python -m pytest -q`失败解释为算法测试失败；当前根目录的`test_ecnu_json.py`在测试收集阶段直接初始化OpenAI客户端，没有API Key时会报错。
 
 ### 9.2 不调用LLM重算运行指标
 
@@ -451,14 +599,14 @@ python scripts/evaluate_academic_judge.py `
 
 ## 10. 推荐接手顺序
 
-1. 阅读`doc/paper_experiments.md`，了解当前论文叙事和指标筛选。
-2. 阅读本文档第5节，了解最近Evidence F1和类别不平衡问题的结论。
-3. 先做paired bootstrap与McNemar检验，确认当前小幅排名差异是否可靠。
-4. 在dev集建立人工证据校准集，避免继续根据test结果调整Mapper。
-5. 实现`KA only for reasoning`和`Minimal Sufficient Quote`两个低风险消融。
-6. 实现`No Policy`与`No KA Retrieval`，拆解EvoSkill治理和知识贡献。
-7. 最后再决定是否修改KA编译算法。
+1. 阅读`doc/GRAPH_ENHANCED_SKILL_COMPILATION.md`，确认当前算法、默认参数、因果边界和实验假设。
+2. 运行GESC dry-run并检查9个case图统计能够复现；不要在test结果出现前继续修改默认参数。
+3. 生成`assignment_and_control`单case Skill，人工检查Pattern Card与`SKILL.md`是否忠于KA、条件和例外。
+4. 审计通过后生成全部9个GESC Skill package，并记录生成token、耗时和失败重试。
+5. 使用相同`ecnu-plus + test + k10/k6`配置运行4668任务，完成确定性指标、Academic Judge和Semantic Evidence Validity。
+6. 对GESC与EvoSkill v4执行paired bootstrap与McNemar检验；只有确认方向后再运行图组件消融。
+7. GESC主实验闭环后，再恢复dev人工证据校准、`Minimal Sufficient Quote`、`No Policy`和`No KA Retrieval`等原P0/P1任务。
 
 ## 11. 一句话交接结论
 
-项目已经完成从数据集、五种Skill生成方法、统一Agent到多层评测和论文实验初稿的完整闭环。最近的工作解决了状态类别不平衡和Evidence F1解释偏差：EvoSkill的治理与类别均衡能力确实领先，其证据质量也明显高于Strict F1表面结果，但Summary仍保留约2–3个百分点的真实语义证据优势。下一阶段的核心不是继续增加指标，而是通过统计检验、人工校准和最小消融建立可靠因果证据。
+项目已经完成从数据集、五种原始Skill生成方法、统一Agent到多层评测和论文实验初稿的完整闭环，并新增了第六种独立基线`graph_evoskill_compiler`。最近的工作先解决了状态类别不平衡和Evidence F1解释偏差，随后把EvoSkill v4中有效的Pattern/Example Phrasing思路升级为可审计的知识原子图编译。GESC实现、全case离线构图和测试已经完成，但尚无运行时结果，因此目前不能宣称图增强有效。下一阶段最重要的任务是保持KA、Agent与k10/k6配置不变，完成GESC Skill生成、4668任务主对照、语义评测和配对统计检验，再决定是否推进图检索或进一步修改KA算法。

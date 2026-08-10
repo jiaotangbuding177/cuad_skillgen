@@ -1,119 +1,238 @@
 # SKILL.md: Competition Restrictions Review
 
 ## Covered Categories
-The following categories are covered by the evidence index, with the number of Knowledge Atoms (KAs) available for each:
+- **Competitive Restriction Exception**: 181 Evidence Atoms
+- **Non-Disparagement**: 57 Evidence Atoms
+- **Non-Compete**: 141 Evidence Atoms
+- **Exclusivity**: 235 Evidence Atoms
+- **No-Solicit of Customers**: 48 Evidence Atoms
+- **Most Favored Nation**: 31 Evidence Atoms
+- **No-Solicit of Employees**: 45 Evidence Atoms
 
-*   **Competitive Restriction Exception**: 181 KAs
-*   **Non-Disparagement**: 57 KAs
-*   **Non-Compete**: 141 KAs
-*   **Exclusivity**: 235 KAs
-*   **No-Solicit of Customers**: 48 KAs
-*   **Most Favored Nation**: 31 KAs
-*   **No-Solicit of Employees**: 45 KAs
-
-## Evidence-Based Review Rules
+## Common Clause Patterns & Example Phrasing
 
 ### 1. Competitive Restriction Exception
-Review for carve-outs that limit the scope of exclusivity or non-compete obligations.
-*   **Explicit Carve-outs for Third-Party Activities**: Look for language stating that the agreement does not prohibit specific activities, such as reselling own goods, hosting comparative services, or collaborating with specific entities (e.g., small companies, academic institutions) [KA-0045, KA-0046, KA-0088, KA-0090].
-*   **Internal Research Exceptions**: Identify clauses allowing internal research or development that does not involve third parties, even if external collaboration is restricted [KA-0091].
-*   **Pre-Existing Agreements**: Check for exceptions that preserve rights under agreements executed prior to a specific date or before the current agreement [KA-0286, KA-0335].
-*   **Specific Counterparty Exceptions**: Look for named "Identified Parties" or specific competitors with whom the restricted party may continue to do business [KA-0332, KA-0334, KA-0337].
-*   **Safe Harbor Periods**: Identify provisions granting a period (e.g., following a Change of Control) during which a party may divest or terminate without breaching non-compete covenants [KA-0130].
-*   **Hiring Exceptions**: Note exceptions to no-solicit clauses for unsolicited applicants or public advertisements [KA-0169].
-*   **Geographic or Product Scope Limitations**: Look for restrictions that apply only to specific territories, fields, or product types, implying freedom outside those bounds [KA-0129, KA-0327].
+*Exceptions to exclusivity or non-compete obligations, allowing parties to engage with third parties or competitors under specific conditions.*
+
+**Pattern Name: General Non-Exclusivity Carveout**
+- **Description**: Explicitly states that the agreement does not create an exclusive relationship, allowing the service provider or agent to work with others.
+- **Example Phrasing**: "This Agreement does not create an exclusive arrangement for the Agent to provide services to the Company, and nothing in this Agreement shall preclude the Company from contracting or entering into an ..." [KA-0039]
+- **Variation Notes**: May be phrased as "non-exclusive authorized reseller" [KA-0009] or "free to render services to others" [KA-0030].
+
+**Pattern Name: Pre-Existing Relationship Exception**
+- **Description**: Carves out agreements or relationships that existed prior to the execution of the current contract.
+- **Example Phrasing**: "Notwithstanding the foregoing, this Section 2.2 shall not be deemed to apply to agreements executed prior to the date of this Agreement between the HOF Entities and Johnson Controls, Inc. or any of it..." [KA-0286]
+- **Variation Notes**: May specify a cutoff date (e.g., "before January 1, 2009") [KA-0335].
+
+**Pattern Name: Specific Competitor/Partner Exception**
+- **Description**: Allows engagement with specifically named third parties or categories of partners despite general exclusivity.
+- **Example Phrasing**: "IntriCon acknowledges that Dynamic Hearing's rights to license technology and software to companies manufacturing implantable devices is not restricted in any way." [KA-0333]
+- **Variation Notes**: May list specific entities (e.g., "Siemens AG, Sonova Holding") [KA-0337] or define "Identified Parties" [KA-0332].
+
+**Pattern Name: Regulatory or Legal Compliance Exception**
+- **Description**: Exempts restrictions if compliance with local laws requires third-party involvement.
+- **Example Phrasing**: "provided always that no such restriction shall apply in respect of those countries of the Territory wherein GSK is or has been required under applicable local laws to appoint a Third Party as its dist..." [KA-0327]
+- **Variation Notes**: Often tied to specific territories or licensing requirements.
+
+**Pattern Name: Internal Research/Development Exception**
+- **Description**: Allows a party to conduct internal R&D or use technology for non-commercial purposes without breaching exclusivity.
+- **Example Phrasing**: "IGER will have no restrictions to undertake internal (i.e. not involving third parties but including government-funded) research activities that involve COLLABORATION CROPS but relate solely to enviro..." [KA-0091]
+- **Variation Notes**: May require consent for commercial exploitation but not internal study.
 
 ### 2. Non-Disparagement
-Review for clauses prohibiting negative public statements.
-*   **Explicit Prohibitions**: Look for direct language prohibiting disparagement, defamation, or negative statements about the company, its affiliates, officers, or directors [KA-0002, KA-0173, KA-0287, KA-0299, KA-0442, KA-0443, KA-0664, KA-0665, KA-0023].
-*   **Brand/Mark Usage Restrictions**: Identify clauses that prohibit using trademarks or domain names in a manner that tarnishes, degrades, or reflects adversely on the licensor’s reputation [KA-0108, KA-0594].
-*   **Survival Clauses**: Check if the non-disparagement obligation survives the termination or expiration of the agreement [KA-0024].
-*   **Absence of Clause**: If no explicit non-disparagement language is found, note that the contract does not contain such a restriction [KA-0052, KA-0153, KA-0201, KA-0223, KA-0255, KA-0386, KA-0393, KA-0434, KA-0663, KA-0698, KA-0738, KA-0190, KA-0729].
+*Clauses prohibiting parties from making negative public statements about each other.*
+
+**Pattern Name: Mutual Non-Disparagement Covenant**
+- **Description**: Both parties agree not to make defamatory or disparaging remarks about the other party, its affiliates, or officers.
+- **Example Phrasing**: "Each Party covenants that it shall not make, publish or communicate to any person or entity in any online or other public forum any defamatory, misleading or disparaging remarks, comments or statement..." [KA-0023]
+- **Variation Notes**: May be limited to "public forums" or "media statements" [KA-0287].
+
+**Pattern Name: Non-Disparagement via Trademark/Brand Usage**
+- **Description**: Prohibits using the other party's marks or materials in a manner that disparages or negatively portrays them.
+- **Example Phrasing**: "Licensee shall not knowingly (a) use the Licensed Domain Names in any manner that tarnishes, degrades, disparages or reflects adversely on Licensor or Licensor's business or reputation" [KA-0108]
+- **Variation Notes**: Often found in license agreements alongside confidentiality clauses.
+
+**Pattern Name: Survival of Non-Disparagement**
+- **Description**: Specifies that the non-disparagement obligation continues after the termination or expiration of the agreement.
+- **Example Phrasing**: "Notwithstanding the expiry or termination of this Agreement, both Parties shall not, and shall ensure that its Representatives shall not, do any of the following: ... (b) commit any act that would rea..." [KA-0024]
+- **Variation Notes**: May have a specific survival period or be perpetual.
+
+**Pattern Name: Standstill Period Non-Disparagement**
+- **Description**: Restricts disparagement specifically during a defined "Standstill" or "Cooperation" period, often in M&A contexts.
+- **Example Phrasing**: "Subject to applicable law, each of the Parties covenants and agrees that, during the Standstill Period, neither Party nor any of its subsidiaries, Affiliates, successors, assigns, principals, partners..." [KA-0299]
+- **Variation Notes**: May include exceptions for required regulatory filings.
 
 ### 3. Non-Compete
-Review for restrictions on engaging in competitive business activities.
-*   **Explicit Non-Compete Covenants**: Look for language prohibiting the development, marketing, or sale of competitive products or services [KA-0109, KA-0127, KA-0131, KA-0191, KA-0304, KA-0317, KA-0318, KA-0345, KA-0349, KA-0481, KA-0553, KA-0554, KA-0555, KA-0556, KA-0557, KA-0584, KA-0590, KA-0604].
-*   **Non-Exclusive Declarations**: Identify clauses explicitly stating that the arrangement is *not* exclusive and that parties are free to compete or serve other clients [KA-0031, KA-0102, KA-0148, KA-0342, KA-0370].
-*   **Absence of Restriction**: If no non-compete language is found, note that the contract does not restrict competition [KA-0218, KA-0289].
+*Clauses restricting a party from engaging in competitive business activities.*
+
+**Pattern Name: Absolute Non-Compete Restriction**
+- **Description**: Prohibits the party from developing, marketing, or selling competitive products/services during the term and potentially post-termination.
+- **Example Phrasing**: "The Developer shall not develop, maintain or market a similar platform and will not compete with the Client directly or indirectly worldwide." [KA-0109]
+- **Variation Notes**: May be limited to a specific "Territory" or "Field" [KA-0127].
+
+**Pattern Name: Post-Termination Non-Compete**
+- **Description**: Extends the non-compete restriction for a defined period after the agreement ends.
+- **Example Phrasing**: "During the term of this Agreement and for a period of two (2) years after the termination hereof for any reason, Distributor will not market, or attempt to market, a computer program which competes in..." [KA-0304]
+- **Variation Notes**: Duration varies (e.g., 1 year [KA-0591], 5 years [KA-0318]).
+
+**Pattern Name: No Non-Compete (Explicit Freedom to Compete)**
+- **Description**: Explicitly states that the agreement does not restrict the party from competing or serving other clients.
+- **Example Phrasing**: "Nothing herein shall prevent the Servicer or its respective Affiliates from engaging in other businesses or, in its sole discretion, from acting in a similar capacity for any other person or entity ev..." [KA-0102]
+- **Variation Notes**: Often used in service agreements to clarify non-exclusivity.
+
+**Pattern Name: Talent/Endorser Non-Compete**
+- **Description**: Restricts a talent or endorser from promoting competing products.
+- **Example Phrasing**: "Talent represents and warrants that during the Term and in the Territories, Talent will not endorse or make any appearances or advertisements on behalf of any other product which is directly competiti..." [KA-0191]
+- **Variation Notes**: May include a post-termination period (e.g., 2 years) [KA-0699].
 
 ### 4. Exclusivity
-Review for obligations to deal exclusively with one party.
-*   **Exclusive Appointments/Licenses**: Look for language granting exclusive rights to sell, distribute, license, or provide services [KA-0016, KA-0025, KA-0026, KA-0032, KA-0033, KA-0043, KA-0044, KA-0053, KA-0057, KA-0064, KA-0065, KA-0066, KA-0067, KA-0083, KA-0084, KA-0085, KA-0086, KA-0087, KA-0105].
-*   **Non-Exclusive Declarations**: Identify clauses explicitly stating that the relationship is non-exclusive [KA-0009, KA-0017, KA-0028, KA-0030, KA-0038, KA-0103].
+*Clauses granting one party exclusive rights to sell, distribute, or use certain products/services.*
+
+**Pattern Name: Exclusive Appointment/Grant**
+- **Description**: Grants one party the exclusive right to act as agent, distributor, or licensee.
+- **Example Phrasing**: "the Company and the Bank hereby appoint the Agent as their exclusive financial advisor and marketing agent" [KA-0016]
+- **Variation Notes**: May be "exclusive even as to Licensor" [KA-0111].
+
+**Pattern Name: Exclusive Supply/Purchase Obligation**
+- **Description**: Requires one party to purchase all requirements exclusively from the other.
+- **Example Phrasing**: "Commencing on the Effective Date and during the Term, AMAG shall commit to purchase its entire requirements of Product(s), sample Products and Trainers for sale in the Territory from Antares." [KA-0026]
+- **Variation Notes**: May be limited to a specific territory (e.g., US) [KA-0053].
+
+**Pattern Name: Non-Exclusive Relationship**
+- **Description**: Explicitly states the relationship is non-exclusive.
+- **Example Phrasing**: "Subject to the terms and conditions of this Agreement, Galaxy hereby appoints Telnet as a non-exclusive authorized reseller of the Products and Services and Telnet hereby accepts the appointment." [KA-0009]
+- **Variation Notes**: May allow both parties to engage others without consent [KA-0017].
+
+**Pattern Name: Exclusive License Grant**
+- **Description**: Grants an exclusive license to intellectual property.
+- **Example Phrasing**: "Array hereby grants to Ono an exclusive license, with the right to grant sublicenses as provided in Section 2.2, under the Array Patents, Array Know-How and Array's interests in the Joint Patents and ..." [KA-0032]
+- **Variation Notes**: May be limited to specific fields or territories.
 
 ### 5. No-Solicit of Customers
-Review for restrictions on soliciting the other party's customers.
-*   **Explicit Solicitation Bans**: Look for language prohibiting soliciting, diverting, or contacting customers, clients, or vendors [KA-0132, KA-0297, KA-0591, KA-0605, KA-0720, KA-0242, KA-0008, KA-0018, KA-0056, KA-0062, KA-0095, KA-0142, KA-0143].
-*   **Exceptions to Solicitation Bans**: Identify clauses allowing solicitation under specific conditions, such as termination for default or unsolicited inquiries [KA-0010].
-*   **Absence of Clause**: If no no-solicit language is found, note that the contract does not contain such a restriction [KA-0050, KA-0199, KA-0220, KA-0252, KA-0290, KA-0390, KA-0660, KA-0695, KA-0736, KA-0189, KA-0727].
+*Clauses restricting a party from soliciting the other party's customers.*
 
-### 6. Most Favored Nation (MFN)
-Review for clauses guaranteeing terms no less favorable than those offered to third parties.
-*   **MFN Provisions**: Look for language ensuring pricing, benefits, or terms are equal to or better than those offered to other customers or partners [KA-0614, KA-0058, KA-0215, KA-0235, KA-0261, KA-0470].
-*   **Absence of MFN**: If no MFN language is found, note that the contract does not contain such a clause [KA-0049, KA-0154, KA-0198, KA-0224, KA-0251, KA-0288, KA-0296, KA-0382, KA-0387, KA-0421, KA-0431, KA-0656, KA-0692, KA-0718, KA-0735, KA-0188, KA-0725, KA-0246, KA-0402].
+**Pattern Name: General No-Solicit of Customers**
+- **Description**: Prohibits soliciting or diverting the other party's customers, clients, or vendors.
+- **Example Phrasing**: "Consultant also expressly agrees that he will not, without the prior written consent of the Company, either directly or indirectly on his own behalf, or in the service or on behalf of others, solicit,..." [KA-0132]
+- **Variation Notes**: May include a post-termination period (e.g., 5 years [KA-0132], 1 year [KA-0242]).
+
+**Pattern Name: No-Solicit via Records/Lists**
+- **Description**: Prohibits using customer records or lists obtained during the agreement to solicit customers.
+- **Example Phrasing**: "Nationwide agrees that no person having access to such records may use such records or information to solicit, directly or indirectly, any of your customers for any purpose." [KA-0018]
+- **Variation Notes**: Often tied to confidentiality obligations.
+
+**Pattern Name: No-Solicit of Specific Customer Types**
+- **Description**: Restricts solicitation of specific categories of customers (e.g., existing sameday customers).
+- **Example Phrasing**: "Except for the joint marketing efforts referred to in Section 3.1 (v) above, Purolator agrees not to directly or indirectly solicit next day or multiple day freight from existing sameday customers of ..." [KA-0142]
+- **Variation Notes**: May be mutual [KA-0143].
+
+**Pattern Name: No-Solicit Exception upon Termination**
+- **Description**: Allows solicitation of customers if the agreement is terminated for cause/default.
+- **Example Phrasing**: "If this Agreement is terminated pursuant to section 10.2, Galaxy shall have the right to contact Subscribers directly and solicit such Subscribers to become subscribers of Galaxy, an affiliate thereof..." [KA-0010]
+- **Variation Notes**: Specific to termination events.
+
+### 6. Most Favored Nation
+*Clauses ensuring a party receives terms no less favorable than those offered to third parties.*
+
+**Pattern Name: Pricing MFN**
+- **Description**: Guarantees that the price charged will not be higher than the lowest price charged to others.
+- **Example Phrasing**: "Volume Discount Prices nor the lowest price charged to others for the same Product." [KA-0261]
+- **Variation Notes**: May exclude specific discounts (e.g., volume discounts) or pre-existing partners [KA-0470].
+
+**Pattern Name: Terms/Benefits MFN**
+- **Description**: Ensures benefits, allowances, or terms are no less favorable than those offered to other agents/distributors.
+- **Example Phrasing**: "NTC agrees that the Product Prices, benefits and allowances offered to ALFA AESAR shall not be less favorable than those offered on Products provided to agents, distributors or marketed directly by NT..." [KA-0470]
+- **Variation Notes**: May apply to "similar services" [KA-0578].
+
+**Pattern Name: Sponsorship/Value MFN**
+- **Description**: Ensures a sponsor receives benefits of equal or greater value compared to other sponsors.
+- **Example Phrasing**: "Racing agrees that, during the term of this Agreement, (i) Sponsor shall have the right to approve or disapprove any additional sponsor identified by Racing, and (ii) unless another proposed sponsor h..." [KA-0235]
+- **Variation Notes**: Often tied to approval rights for new sponsors.
+
+**Pattern Name: No MFN Clause**
+- **Description**: Explicitly states there is no MFN obligation.
+- **Example Phrasing**: "No" [KA-0049]
+- **Variation Notes**: Common in many contracts where pricing is fixed or negotiated separately.
 
 ### 7. No-Solicit of Employees
-Review for restrictions on soliciting or hiring the other party's employees.
-*   **Explicit Solicitation Bans**: Look for language prohibiting soliciting, hiring, or engaging employees or independent contractors [KA-0100, KA-0101, KA-0110, KA-0133, KA-0168, KA-0222, KA-0586, KA-0589, KA-0606, KA-0686, KA-0697, KA-0373, KA-0228, KA-0244].
-*   **Absence of Clause**: If no no-solicit language is found, note that the contract does not contain such a restriction [KA-0051, KA-0200, KA-0254, KA-0291, KA-0298, KA-0385, KA-0392, KA-0433, KA-0662, KA-0737, KA-0728].
+*Clauses restricting a party from soliciting or hiring the other party's employees.*
+
+**Pattern Name: Mutual No-Solicit of Employees**
+- **Description**: Both parties agree not to solicit or hire each other's employees or contractors.
+- **Example Phrasing**: "COOL TECH and VET TECH agree not to engage in any attempt whatsoever, to hire, or to engage as independent contractors, the other's employees or independent contractors during the term of this Agreeme..." [KA-0100]
+- **Variation Notes**: May include a post-termination period (e.g., 6 months [KA-0100], 1 year [KA-0168]).
+
+**Pattern Name: Consultant/Employee No-Solicit**
+- **Description**: A consultant or service provider agrees not to solicit the client's employees.
+- **Example Phrasing**: "Consultant expressly agrees that he will not, without the prior written consent of the Company, either directly or indirectly on his own behalf, or in the service or on behalf of others, solicit, dive..." [KA-0133]
+- **Variation Notes**: May have a long post-termination period (e.g., 5 years [KA-0133]).
+
+**Pattern Name: No-Solicit Exception for Public Advertisements**
+- **Description**: Allows hiring of individuals who respond to public advertisements or apply unsolicited.
+- **Example Phrasing**: "Clause 5.5 will not in any way restrict either organisation from hiring any person who has responded to any published advertisement of position or who has otherwise approached either organisation for ..." [KA-0169]
+- **Variation Notes**: Common carveout to ensure compliance with labor laws.
+
+**Pattern Name: No-Solicit of Specific Personnel**
+- **Description**: Restricts solicitation of specific employees involved in the agreement.
+- **Example Phrasing**: "2.3.2 Non-Solicitation. [***], neither Valeant nor Dova (nor any of their respective Affiliates) shall directly or indirectly solicit for hire or employee as an employee, consultant or otherwise any o..." [KA-0166]
+- **Variation Notes**: May be limited to "professional personnel" or those with access to confidential info.
 
 ## Review Checklist
 
 ### Competitive Restriction Exception
-- [ ] Identify any explicit carve-outs for third-party collaborations or sales [KA-0045, KA-0088, KA-0332].
-- [ ] Check for exceptions allowing internal research or development [KA-0091].
-- [ ] Verify if pre-existing agreements are preserved [KA-0286, KA-0335].
-- [ ] Look for safe harbor periods for divestiture [KA-0130].
-- [ ] Note exceptions for unsolicited job applicants [KA-0169].
+- [ ] Check for **General Non-Exclusivity Carveout** [KA-0039, KA-0009].
+- [ ] Identify **Pre-Existing Relationship Exception** [KA-0286, KA-0335].
+- [ ] Verify **Specific Competitor/Partner Exception** [KA-0333, KA-0337].
+- [ ] Look for **Regulatory or Legal Compliance Exception** [KA-0327].
+- [ ] Confirm **Internal Research/Development Exception** [KA-0091].
 
 ### Non-Disparagement
-- [ ] Confirm presence of explicit non-disparagement clauses [KA-0002, KA-0173, KA-0287].
-- [ ] Check for restrictions on brand/mark usage that could imply disparagement [KA-0108, KA-0594].
-- [ ] Verify if the obligation survives termination [KA-0024].
-- [ ] If absent, document that no non-disparagement clause exists [KA-0052, KA-0201].
+- [ ] Locate **Mutual Non-Disparagement Covenant** [KA-0023, KA-0287].
+- [ ] Check for **Non-Disparagement via Trademark/Brand Usage** [KA-0108].
+- [ ] Verify **Survival of Non-Disparagement** [KA-0024].
+- [ ] Identify **Standstill Period Non-Disparagement** [KA-0299].
 
 ### Non-Compete
-- [ ] Identify explicit non-compete covenants restricting competitive activities [KA-0109, KA-0127, KA-0304].
-- [ ] Check for declarations that the agreement is non-exclusive [KA-0031, KA-0102, KA-0342].
-- [ ] If absent, document that no non-compete restriction exists [KA-0218, KA-0289].
+- [ ] Identify **Absolute Non-Compete Restriction** [KA-0109, KA-0127].
+- [ ] Check for **Post-Termination Non-Compete** [KA-0304, KA-0318].
+- [ ] Verify **No Non-Compete (Explicit Freedom to Compete)** [KA-0102].
+- [ ] Look for **Talent/Endorser Non-Compete** [KA-0191, KA-0699].
 
 ### Exclusivity
-- [ ] Identify exclusive appointment or licensing language [KA-0016, KA-0025, KA-0032].
-- [ ] Check for explicit non-exclusive declarations [KA-0009, KA-0017, KA-0038].
+- [ ] Confirm **Exclusive Appointment/Grant** [KA-0016, KA-0111].
+- [ ] Check for **Exclusive Supply/Purchase Obligation** [KA-0026, KA-0053].
+- [ ] Verify **Non-Exclusive Relationship** [KA-0009, KA-0017].
+- [ ] Identify **Exclusive License Grant** [KA-0032].
 
 ### No-Solicit of Customers
-- [ ] Identify explicit bans on soliciting customers or clients [KA-0132, KA-0605, KA-0720].
-- [ ] Check for exceptions allowing solicitation under specific conditions [KA-0010].
-- [ ] If absent, document that no no-solicit clause exists [KA-0050, KA-0199, KA-0220].
+- [ ] Locate **General No-Solicit of Customers** [KA-0132, KA-0242].
+- [ ] Check for **No-Solicit via Records/Lists** [KA-0018].
+- [ ] Verify **No-Solicit of Specific Customer Types** [KA-0142, KA-0143].
+- [ ] Identify **No-Solicit Exception upon Termination** [KA-0010].
 
 ### Most Favored Nation
-- [ ] Identify MFN clauses guaranteeing best terms [KA-0614, KA-0058, KA-0235].
-- [ ] If absent, document that no MFN clause exists [KA-0049, KA-0154, KA-0198].
+- [ ] Check for **Pricing MFN** [KA-0261, KA-0578].
+- [ ] Verify **Terms/Benefits MFN** [KA-0470].
+- [ ] Look for **Sponsorship/Value MFN** [KA-0235].
+- [ ] Confirm **No MFN Clause** if absent [KA-0049].
 
 ### No-Solicit of Employees
-- [ ] Identify explicit bans on soliciting or hiring employees [KA-0100, KA-0133, KA-0168].
-- [ ] If absent, document that no no-solicit clause exists [KA-0051, KA-0200, KA-0254].
+- [ ] Identify **Mutual No-Solicit of Employees** [KA-0100, KA-0168].
+- [ ] Check for **Consultant/Employee No-Solicit** [KA-0133].
+- [ ] Verify **No-Solicit Exception for Public Advertisements** [KA-0169].
+- [ ] Look for **No-Solicit of Specific Personnel** [KA-0166].
 
 ## Output Format
-```json
-{
-  "status": "success",
-  "answer": "Review completed based on evidence index.",
-  "evidence_unit_ids": ["KA-0001", "KA-0002", "..."],
-  "source_contract_ids": ["Contract_ID_1", "Contract_ID_2", "..."],
-  "missing_inputs": [],
-  "human_review_required": false
-}
-```
+JSON: {status, answer, evidence_unit_ids, source_contract_ids, missing_inputs, human_review_required}
 
 ## Boundary Rules
-*   **[RB-001]** Answer only using the target contract.
-*   **[RB-002]** Cite source-grounded evidence when answering.
-*   **[RB-003]** Return `evidence_missing` when no supporting clause exists.
-*   **[RB-004]** Return `missing_input` when contract_id or category is absent.
-*   **[RB-005]** Return `unsupported_scope` when the question is outside covered_categories.
-*   **[RB-006]** Route legal advice and high-risk interpretation to human review.
-*   **[SR-001]** Do not cite non-target contracts.
-*   **[SR-002]** Do not fabricate clauses.
-*   **[SR-003]** Do not provide legal advice.
-*   **[SR-004]** Do not generate externally sendable legal opinions.
+- **[RB-001]**: Answer only using the target contract.
+- **[RB-002]**: Cite source-grounded evidence when answering.
+- **[RB-003]**: Return `evidence_missing` when no supporting clause exists.
+- **[RB-004]**: Return `missing_input` when contract_id or category is absent.
+- **[RB-005]**: Return `unsupported_scope` when the question is outside covered_categories.
+- **[RB-006]**: Route legal advice and high-risk interpretation to human review.
+- **[SR-001]**: Do not cite non-target contracts.
+- **[SR-002]**: Do not fabricate clauses.
+- **[SR-003]**: Do not provide legal advice.
+- **[SR-004]**: Do not generate externally sendable legal opinions.

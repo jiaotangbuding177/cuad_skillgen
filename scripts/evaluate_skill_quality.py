@@ -32,6 +32,7 @@ METHODS = [
     "summary2skill",
     "document_tool_maker",
     "evoskill_compiler",
+    "graph_evoskill_compiler",
 ]
 
 REQUIRED_SECTIONS = [

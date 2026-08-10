@@ -25,6 +25,7 @@ METHODS = [
     "summary2skill",
     "document_tool_maker",
     "evoskill_compiler",
+    "graph_evoskill_compiler",
 ]
 
 JUDGE_SYSTEM = """You are an academic evaluator for contract review answers.

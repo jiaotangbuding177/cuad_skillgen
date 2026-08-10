@@ -21,6 +21,7 @@ METHODS = [
     "summary2skill",
     "document_tool_maker",
     "evoskill_compiler",
+    "graph_evoskill_compiler",
 ]
 
 
@@ -40,6 +41,21 @@ def ensure_run_config(output_dir: str, config: dict) -> None:
         json.dump(config, f, indent=2, ensure_ascii=False)
 
 
+def select_case_range(all_case_ids, case_id=None, start_case=None):
+    """Select one case or an ordered suffix for safe incremental resumption."""
+    if case_id and start_case:
+        raise ValueError("--case-id and --start-case cannot be used together")
+    if case_id:
+        if case_id not in all_case_ids:
+            raise ValueError(f"Unknown case ID: {case_id}")
+        return [case_id]
+    if start_case:
+        if start_case not in all_case_ids:
+            raise ValueError(f"Unknown start case: {start_case}")
+        return all_case_ids[all_case_ids.index(start_case):]
+    return all_case_ids
+
+
 def main():
     parser = argparse.ArgumentParser(description="Package-aware CUAD-SkillGen runtime")
     parser.add_argument("--data-root", default="data/cuad_skillgen")
@@ -47,9 +63,18 @@ def main():
     parser.add_argument("--model", default="ecnu-plus")
     parser.add_argument("--method", choices=METHODS)
     parser.add_argument("--case-id")
+    parser.add_argument(
+        "--start-case",
+        help="Resume from this case through the remaining cases in loader order",
+    )
     parser.add_argument("--split", choices=("dev", "test", "all"), default="test")
     parser.add_argument("--no-governance", action="store_true")
     parser.add_argument("--no-retry-errors", action="store_true")
+    parser.add_argument(
+        "--continue-on-quota-error",
+        action="store_true",
+        help="Keep running after a daily-credit/quota error (not recommended)",
+    )
     parser.add_argument("--top-k-chunks", type=int, default=10)
     parser.add_argument("--top-k-knowledge", type=int, default=6)
     parser.add_argument("--max-tasks", type=int)
@@ -59,7 +84,13 @@ def main():
 
     loader = CUADSkillGenLoader(args.data_root)
     methods = [args.method] if args.method else METHODS
-    case_ids = [args.case_id] if args.case_id else loader.get_all_case_ids()
+    all_case_ids = loader.get_all_case_ids()
+    case_ids = select_case_range(
+        all_case_ids, case_id=args.case_id, start_case=args.start_case
+    )
+    # --start-case controls execution only.  Once resumed, evaluate the whole
+    # method so the canonical summary is not accidentally replaced by a suffix.
+    evaluation_case_ids = [args.case_id] if args.case_id else all_case_ids
 
     if not args.evaluate_only:
         llm = LLMClient(model=args.model)
@@ -91,6 +122,7 @@ def main():
                 "top_k_chunks": args.top_k_chunks,
                 "top_k_knowledge": args.top_k_knowledge,
             })
+            quota_halted = False
             for case_id in case_ids:
                 skill_path = os.path.join(args.results_root, method, case_id, "SKILL.md")
                 if not os.path.exists(skill_path):
@@ -103,19 +135,30 @@ def main():
                     include_governance=not args.no_governance,
                     retry_errors=not args.no_retry_errors,
                     max_tasks=args.max_tasks,
+                    stop_on_quota_error=not args.continue_on_quota_error,
                 )
                 print(
                     f"  [{case_id}] processed={summary['processed_tasks']} "
                     f"tokens={summary['usage']['total_tokens']} "
                     f"seconds={summary['duration']:.1f}"
                 )
+                if summary.get("halted_reason"):
+                    print(
+                        "Runtime halted safely because the daily quota is exhausted. "
+                        "Rerun the same command after quota recovery; successful tasks "
+                        "will be skipped and errors retried."
+                    )
+                    quota_halted = True
+                    break
+            if quota_halted:
+                break
         print(f"\nRuntime completed in {time.time() - start:.1f}s")
 
     evaluations = evaluate_methods(
         loader,
         args.results_root,
         methods,
-        case_ids,
+        evaluation_case_ids,
         split=args.split,
         run_id=args.run_id,
     )

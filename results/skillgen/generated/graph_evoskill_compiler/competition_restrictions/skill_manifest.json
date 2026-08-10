@@ -1,0 +1,35 @@
+{
+  "method": "graph_evoskill_compiler",
+  "case_id": "competition_restrictions",
+  "model": "ecnu-plus",
+  "source_method": "evoskill_compiler",
+  "compilation_protocol": "gesc-1.0",
+  "graph_config": {
+    "graph_ka_limit": 200,
+    "similarity_threshold": 0.24,
+    "max_neighbors": 6,
+    "patterns_per_category": 6,
+    "examples_per_pattern": 3
+  },
+  "graph_statistics": {
+    "node_types": {
+      "Category": 7,
+      "KnowledgeAtom": 703,
+      "ClausePattern": 42,
+      "Contract": 173
+    },
+    "edge_types": {
+      "BELONGS_TO": 703,
+      "DERIVED_FROM": 703,
+      "VARIANT_OF": 542,
+      "INSTANCE_OF": 160
+    }
+  },
+  "usage": {
+    "prompt_tokens": 19555,
+    "completion_tokens": 7000,
+    "total_tokens": 26555
+  },
+  "duration_seconds": 121.885,
+  "created_at": "2026-08-10T07:47:03.582474+00:00"
+}

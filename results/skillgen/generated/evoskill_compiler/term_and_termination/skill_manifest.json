@@ -2,50 +2,13 @@
   "method": "evoskill_compiler",
   "case_id": "term_and_termination",
   "model": "ecnu-plus",
-  "pipeline": {
-    "step1_extract": {
-      "contracts_processed": 306,
-      "total_kas_extracted": 513,
-      "avg_kas_per_contract": 1.68,
-      "kas_by_category": {
-        "Renewal Term": 170,
-        "Notice Period to Terminate Renewal": 141,
-        "Termination for Convenience": 202
-      },
-      "kas_by_contract_sample": {
-        "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement": 4,
-        "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT": 1,
-        "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT": 3,
-        "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_": 0,
-        "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT": 3,
-        "ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY_AGREEMENT": 1,
-        "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT": 0,
-        "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT": 3,
-        "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement": 3,
-        "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING_AGREEMENT": 0
-      },
-      "llm_calls": 306
-    },
-    "step2_index": {
-      "total_kas_in_index": 513,
-      "categories_with_evidence": 3
-    },
-    "step3_security": {
-      "required_behaviors_count": 6,
-      "safety_requirements_count": 4
-    },
-    "step4_generate": {
-      "llm_calls": 1
-    },
-    "step5_compile": {
-      "llm_calls": 1
-    }
+  "ka_top_n": 30,
+  "regenerated_at": "2026-08-10 11:53:37",
+  "generation_notes": "Regenerated with top-30 KAs per category",
+  "categories": {
+    "Renewal Term": 30,
+    "Notice Period to Terminate Renewal": 30,
+    "Termination for Convenience": 30
   },
-  "usage": {
-    "prompt_tokens": 2283274,
-    "completion_tokens": 81829,
-    "total_tokens": 2365103
-  },
-  "duration_seconds": 5037.1,
-  "created_at": "2026-07-21T21:05:24.971955+00:00"
+  "created_at": "2026-08-10T03:53:37.170209+00:00"
 }

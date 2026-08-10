@@ -1,0 +1,755 @@
+{
+  "system_prompt": "You compile a contract-review Skill from graph-derived clause-pattern cards.\nReturn only the complete Markdown for SKILL.md. Preserve the supplied category boundaries,\nconditions, exceptions, and governance rules. Do not invent legal rules or citations.\nTeach the runtime agent how to recognize semantic variants, answer conservatively, quote\nverbatim evidence, and abstain when the target contract does not support a finding.\n\nRequired sections:\n1. Purpose and Scope\n2. Review Workflow\n3. Common Clause Patterns (one subsection per category)\n4. Evidence and Citation Protocol\n5. Boundary and Abstention Rules\n\nFor every pattern, explain its invariant meaning, variation cues, conditions/exceptions,\nand include the supplied representative phrasings. Treat examples as recognition aids,\nnever as evidence for a target contract.",
+  "pattern_cards": {
+    "Governing Law": [
+      {
+        "pattern_id": "PAT-governing-law-01",
+        "category": "Governing Law",
+        "member_count": 83,
+        "source_contract_count": 83,
+        "selection_score": 2.4299,
+        "variation_cues": [
+          "laws",
+          "governed",
+          "state",
+          "accordance",
+          "construed",
+          "without",
+          "principles",
+          "conflict",
+          "law",
+          "regard"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0667",
+            "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of New York, without application of conflict of laws principles.",
+            "interpretation": "The contract explicitly states that the laws of the State of New York govern the agreement.",
+            "source_contract_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0615",
+            "text": "This Agreement will be governed and construed in accordance with the laws of the State of New York without giving effect to conflict of laws principles.",
+            "interpretation": "The contract specifies that the laws of the State of New York govern the interpretation and construction of the agreement.",
+            "source_contract_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0637",
+            "text": "This Agreement shall be governed by, construed, and enforced in accordance with the laws of the State of Delaware, without regard to choice of law principles that would require the application of the laws of any other jurisdiction.",
+            "interpretation": "The contract explicitly states that the laws of the State of Delaware govern its interpretation and enforcement.",
+            "source_contract_id": "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-governing-law-02",
+        "category": "Governing Law",
+        "member_count": 38,
+        "source_contract_count": 38,
+        "selection_score": 2.1728,
+        "variation_cues": [
+          "laws",
+          "governed",
+          "state",
+          "new",
+          "york",
+          "provisions",
+          "accordance",
+          "interpretation",
+          "law",
+          "conflicts"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0494",
+            "text": "This Agreement shall be governed by, and construed in accordance with, the laws of the State of New York.",
+            "interpretation": "The contract explicitly states that the laws of the State of New York govern its interpretation and construction.",
+            "source_contract_id": "PalmerSquareCapitalBdcInc_20200116_10-12GA_EX-10.6_11949289_EX-10.6_Trademark_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0389",
+            "text": "This Agreement shall be governed by and interpreted under the laws of the Commonwealth of Pennsylvania without regard to its conflicts of law provisions.",
+            "interpretation": "The contract explicitly states that the laws of the Commonwealth of Pennsylvania govern its interpretation.",
+            "source_contract_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0566",
+            "text": "This Agreement shall be governed by and interpreted in accordance within the laws of the State of New York without reference to conflicts of laws provisions.",
+            "interpretation": "The contract explicitly states that the laws of the State of New York govern the agreement.",
+            "source_contract_id": "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-governing-law-03",
+        "category": "Governing Law",
+        "member_count": 11,
+        "source_contract_count": 11,
+        "selection_score": 1.6745,
+        "variation_cues": [
+          "governed",
+          "construed",
+          "laws",
+          "accordance",
+          "canada",
+          "province",
+          "columbia",
+          "british",
+          "federal",
+          "applicable"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0361",
+            "text": "This  Agreement  shall be  governed  by and  construed  in      accordance  with the laws of the  Province  of  British  Columbia  (without      regard to its conflict of laws provisions)  which shall be deemed to be the      proper law thereof.",
+            "interpretation": "The contract is governed by the laws of the Province of British Columbia.",
+            "source_contract_id": "KNOWLABS,INC_08_15_2005-EX-10-INTELLECTUAL_PROPERTY_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0585",
+            "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of California, excluding the choice of law rules, and the parties hereby agree to submit to the jurisdiction and venue of the State and Federal courts of the State of California",
+            "interpretation": "The contract is governed by the laws of the State of California.",
+            "source_contract_id": "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0097",
+            "text": "This Agreement shall be deemed to have been entered into in the State of New Jersey, and shall be construed and interpreted in accordance with the laws of that State applicable to agreements made and to be performed in the State of New Jersey.",
+            "interpretation": "The contract is governed by the laws of the State of New Jersey.",
+            "source_contract_id": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-governing-law-04",
+        "category": "Governing Law",
+        "member_count": 14,
+        "source_contract_count": 14,
+        "selection_score": 1.6201,
+        "variation_cues": [
+          "laws",
+          "state",
+          "accordance",
+          "governed",
+          "florida",
+          "construed",
+          "law",
+          "venture",
+          "joint",
+          "enter"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0192",
+            "text": "This Agreement shall be governed by and interpreted in accordance with the laws of the State of Florida, without regard to its conflict-of-laws or choice-of law principles.",
+            "interpretation": "The contract explicitly states that the laws of the State of Florida govern the agreement.",
+            "source_contract_id": "EcoScienceSolutionsInc_20180406_8-K_EX-10.1_11135398_EX-10.1_Sponsorship_Agreement"
+          },
+          {
+            "ka_id": "KA-0628",
+            "text": "In accordance with the Law of the People's Republic of China on Joint Ventures Using Chinese and Foreign Investment (the \"Joint Venture Law\") and other relevant Chinese laws and regulations",
+            "interpretation": "The contract explicitly states it is entered into in accordance with the laws of the People's Republic of China.",
+            "source_contract_id": "VALENCETECHNOLOGYINC_02_14_2003-EX-10-JOINT_VENTURE_CONTRACT"
+          },
+          {
+            "ka_id": "KA-0449",
+            "text": "governed by the laws of the State of California except that body of law dealing with conflicts of law.",
+            "interpretation": "The contract explicitly states that it is governed by the laws of the State of California.",
+            "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT_TO_THE_DISTRIBUTOR_AGREEMENT_BETWEEN_INGRAM_MICRO_AND_NETGEAR"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-governing-law-05",
+        "category": "Governing Law",
+        "member_count": 4,
+        "source_contract_count": 4,
+        "selection_score": 1.5669,
+        "variation_cues": [
+          "governed",
+          "conflicts",
+          "laws",
+          "law",
+          "would",
+          "jurisdiction",
+          "without",
+          "state",
+          "which",
+          "principles"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0358",
+            "text": "This Agreement shall be governed by the laws of the State of Texas, without reference to its conflicts of law principles.",
+            "interpretation": "The contract explicitly states that the laws of the State of Texas govern the agreement.",
+            "source_contract_id": "KIROMICBIOPHARMA,INC_05_11_2020-EX-10.23-CONSULTING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0423",
+            "text": "all rights hereunder shall be governed by and construed in accordance with the laws of the State of New York without regard to its rules governing conflicts of laws, or the rules of any other jurisdiction which would cause the laws of any jurisdiction other than the State of New York to apply.",
+            "interpretation": "The contract is governed by the laws of the State of New York, excluding conflict of law rules.",
+            "source_contract_id": "MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0183",
+            "text": "The validity, construction and performance of this Agreement shall be governed by the laws of the State of Texas, not including any of its conflicts of law rules that would direct or refer to the laws of another jurisdiction.",
+            "interpretation": "The contract specifies that the laws of the State of Texas govern its validity, construction, and performance.",
+            "source_contract_id": "ENERGYXXILTD_05_08_2015-EX-10.13-Transportation_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-governing-law-06",
+        "category": "Governing Law",
+        "member_count": 3,
+        "source_contract_count": 3,
+        "selection_score": 1.5072,
+        "variation_cues": [
+          "construed",
+          "laws",
+          "within",
+          "performed",
+          "state",
+          "applicable",
+          "interpreted",
+          "governed",
+          "accordance",
+          "intellectual"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0652",
+            "text": "THIS AGREEMENT SHALL BE GOVERNED BY AND CONSTRUED IN ACCORDANCE WITH THE INTERNAL LAWS OF THE STATE OF NEW YORK APPLICABLE TO AGREEMENTS MADE AND TO BE PERFORMED ENTIRELY WITHIN SUCH STATE, WITHOUT REGARD TO THE CONFLICTS OF LAW PRINCIPLES OF SUCH STATE OTHER THAN SECTIONS 5-1401 OF THE NEW YORK GENERAL OBLIGATIONS LAW.",
+            "interpretation": "The contract explicitly states that it is governed by the internal laws of the State of New York.",
+            "source_contract_id": "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0636",
+            "text": "This Intellectual Property Agreement shall be construed and interpreted according to the laws of the State of Georgia, applicable contracts to be wholly performed within the State of Georgia.",
+            "interpretation": "The contract explicitly states that it is governed by the laws of the State of Georgia.",
+            "source_contract_id": "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0646",
+            "text": "This agreement shall be construed, interpreted and governed by and in accordance with the laws of Hong Kong.",
+            "interpretation": "The contract explicitly states that it is governed by the laws of Hong Kong.",
+            "source_contract_id": "VgrabCommunicationsInc_20200129_10-K_EX-10.33_11958828_EX-10.33_Development_Agreement"
+          }
+        ]
+      }
+    ],
+    "Audit Rights": [
+      {
+        "pattern_id": "PAT-audit-rights-01",
+        "category": "Audit Rights",
+        "member_count": 15,
+        "source_contract_count": 15,
+        "selection_score": 1.8751,
+        "variation_cues": [
+          "entire",
+          "understandings",
+          "between",
+          "subject",
+          "all",
+          "matter",
+          "respect",
+          "prior",
+          "agreements",
+          "oral"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0420",
+            "text": "This writing constitutes the entire agreement between the parties hereto and may not be changed or modified except by a writing signed by the party or parties to be charged thereby.",
+            "interpretation": "The contract does not contain any clauses granting either party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0424",
+            "text": "This Agreement shall not be deemed to constitute a contract of employment between Executive and the Company, nor shall any provision restrict the right of the Company to discharge Executive, or to restrict the right of Executive to terminate employment with the Company.",
+            "interpretation": "The contract does not contain any clauses granting either party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0488",
+            "text": "This Agreement sets forth the entire agreement of the parties hereto with regard to the subject matter hereof and supersedes and replaces all prior agreements, understandings and representations, oral or written, with regard to such matter.",
+            "interpretation": "The contract contains an entire agreement clause but does not grant any party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-audit-rights-02",
+        "category": "Audit Rights",
+        "member_count": 6,
+        "source_contract_count": 6,
+        "selection_score": 1.7259,
+        "variation_cues": [
+          "herein",
+          "hereto",
+          "subject",
+          "respect",
+          "intended",
+          "contained",
+          "matter",
+          "section",
+          "all",
+          "entire"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0623",
+            "text": "This Agreement is solely for the benefit of the parties hereto and is not enforceable by any other persons.",
+            "interpretation": "The contract does not contain any provisions granting either party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0509",
+            "text": "This Agreement constitutes the entire agreement with respect to the subject matter contained herein and supersedes all previous communications and agreements between the parties pertaining to the subject matter hereof, whether written or oral.",
+            "interpretation": "The contract does not contain any clauses granting either party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement_Agreement"
+          },
+          {
+            "ka_id": "KA-0641",
+            "text": "This Agreement does not and is not intended to confer any rights upon any person other than the Parties, except that it is expressly agreed that Team and SCSA are intended third party beneficiaries of Section 8.",
+            "interpretation": "The contract does not contain any provisions granting either party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-audit-rights-03",
+        "category": "Audit Rights",
+        "member_count": 7,
+        "source_contract_count": 7,
+        "selection_score": 1.6853,
+        "variation_cues": [
+          "product",
+          "information",
+          "sales",
+          "provide",
+          "make",
+          "efforts",
+          "business",
+          "company",
+          "payments",
+          "distributor"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0274",
+            "text": "The reports will contain sufficient information to permit Provider to verify payments hereunder.",
+            "interpretation": "The contract requires reports to contain sufficient information for verification of payments, but does not grant an explicit right to audit books, records, or physical locations.",
+            "source_contract_id": "GlobalTechnologiesGroupInc_20050928_10KSB_EX-10.9_4148808_EX-10.9_Content_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0430",
+            "text": "Reseller agrees to provide McDATA with its and its ultimate parent company's most recent financial statements prior to the Effective Date of the Agreement.",
+            "interpretation": "The contract requires the Reseller to provide financial statements, but does not grant McDATA the right to audit the Reseller's books, records, or physical locations for compliance.",
+            "source_contract_id": "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller_Agreement_Premier_Addendum"
+          },
+          {
+            "ka_id": "KA-0374",
+            "text": "ENVISION will provide SIERRA with demand projections for the Product and SIERRA will produce enough Product to meet such demand projections. ENVISION will inform SIERRA of committed sales and SIERRA will increase or scale up its production of the Product accordingly.",
+            "interpretation": "The contract requires ENVISION to provide demand projections and inform SIERRA of committed sales, but it does not grant either party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-audit-rights-04",
+        "category": "Audit Rights",
+        "member_count": 6,
+        "source_contract_count": 6,
+        "selection_score": 1.661,
+        "variation_cues": [
+          "set",
+          "forth",
+          "use",
+          "exhibit",
+          "services",
+          "result",
+          "including",
+          "information",
+          "negotiation",
+          "authorized"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0675",
+            "text": "Each party shall bear its own costs (including but not limited to legal costs) and disbursements of and incidental to the preparation, negotiation and execution of this Agreement and all ancillary documentation.",
+            "interpretation": "The contract does not contain any clause granting either party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0407",
+            "text": "Each Party shall treat as confidential (as set forth herein) all Confidential Information of the other Party, and shall not use such Confidential Information except as contemplated in this Agreement or as otherwise authorized in writing.",
+            "interpretation": "The contract does not contain any clauses granting a party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "Loop_Industries,_Inc._-_Marketing_Agreement"
+          },
+          {
+            "ka_id": "KA-0384",
+            "text": "Both parties shall exercise due care to protect the confidentiality of any information exchanged between them as a result of this Agreement, including information exchanged during the negotiation of this Agreement, and shall not use such information to the disadvantage of the other party.",
+            "interpretation": "The contract contains confidentiality obligations but does not grant either party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-audit-rights-05",
+        "category": "Audit Rights",
+        "member_count": 10,
+        "source_contract_count": 9,
+        "selection_score": 1.6356,
+        "variation_cues": [
+          "hours",
+          "during",
+          "business",
+          "records",
+          "audit",
+          "normal",
+          "books",
+          "make",
+          "available",
+          "notice"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0581",
+            "text": "Customer grants to Cisco and its independent accountants the right to examine Customer's books, records and accounts during Customer's normal business hours to verify compliance with this Agreement.",
+            "interpretation": "Cisco has the right to audit the Customer's books, records, and accounts to verify compliance with the agreement.",
+            "source_contract_id": "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor_Agreement2"
+          },
+          {
+            "ka_id": "KA-0301",
+            "text": "Upon reasonable notice to Distributor, Distributor shall make such books and records available to Developer, at Distributor's place of business during normal business hours, to audit the payments being made by Distributor hereunder.",
+            "interpretation": "The Developer has the right to audit the Distributor's books and records regarding payments upon reasonable notice.",
+            "source_contract_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE_DISTRIBUTOR_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0122",
+            "text": "The Servicer shall maintain appropriate books of account and records relating to services performed hereunder, which books of account and records shall be accessible for inspection by the Owner at any time during normal business hours.",
+            "interpretation": "The Owner has the right to inspect the Servicer's books of account and records during normal business hours, constituting an audit right.",
+            "source_contract_id": "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-audit-rights-06",
+        "category": "Audit Rights",
+        "member_count": 6,
+        "source_contract_count": 6,
+        "selection_score": 1.5191,
+        "variation_cues": [
+          "order",
+          "connection",
+          "all",
+          "monthly",
+          "these",
+          "what",
+          "analyse",
+          "can",
+          "measurements",
+          "identify"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0538",
+            "text": "The Company will reimburse Maimon for all reasonable pre- approved out-of-pocket expenses incurred in connection with this Agreement.",
+            "interpretation": "The contract mentions reimbursement of expenses but does not grant any party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0381",
+            "text": "Each Party shall, and shall cause its Affiliates to, at all times, comply in all respects with all applicable Laws in connection with the transactions contemplated by this Agreement.",
+            "interpretation": "The contract requires compliance with laws but does not grant any party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "LIGHTBRIDGECORP_11_23_2015-EX-10.26-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0295",
+            "text": "3.1. HPIL ET's obligations under this Agreement are to: (i) Follow up on developments regarding GINARES; (ii) Work with GINARES as appropriate.   3.2. GINARES's obligations under this Agreement are to: (i) Keep HPIL ET aware of developments regarding GINARES; (ii) Work with HPIL ET as appropriate.",
+            "interpretation": "The contract outlines general cooperation obligations but does not grant any party the right to audit the books, records, or physical locations of the counterparty.",
+            "source_contract_id": "HPILHOLDING_01_07_2015-EX-99.1-COOPERATION_AGREEMENT"
+          }
+        ]
+      }
+    ],
+    "Insurance": [
+      {
+        "pattern_id": "PAT-insurance-01",
+        "category": "Insurance",
+        "member_count": 33,
+        "source_contract_count": 33,
+        "selection_score": 2.0873,
+        "variation_cues": [
+          "all",
+          "expenses",
+          "between",
+          "connection",
+          "entire",
+          "representations",
+          "except",
+          "incurred",
+          "own",
+          "company"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0624",
+            "text": "This Agreement is solely for the benefit of the parties hereto and is not enforceable by any other persons.",
+            "interpretation": "The contract does not contain any clauses requiring either party to maintain insurance for the benefit of the other party.",
+            "source_contract_id": "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0334",
+            "text": "8.0 Representations, Warranties, Disclaimers and Limitation of Liability",
+            "interpretation": "The contract includes a section on liability and warranties but does not contain any clauses requiring either party to maintain specific insurance coverage for the benefit of the other party.",
+            "source_contract_id": "IbioInc_20200313_8-K_EX-10.1_12052678_EX-10.1_Development_Agreement"
+          },
+          {
+            "ka_id": "KA-0529",
+            "text": "Except as expressly provided for in this Agreement, each party shall bear its own expenses incurred in connection with this Agreement, including without limitation travel and living expenses incurred by that party's employees.",
+            "interpretation": "The contract does not contain any clauses requiring either party to maintain insurance for the benefit of the other party.",
+            "source_contract_id": "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-insurance-02",
+        "category": "Insurance",
+        "member_count": 12,
+        "source_contract_count": 12,
+        "selection_score": 1.8307,
+        "variation_cues": [
+          "harmless",
+          "hold",
+          "against",
+          "indemnify",
+          "all",
+          "arising",
+          "agrees",
+          "defend",
+          "out",
+          "claims"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0477",
+            "text": "HSNS agrees to indemnify, defend and hold harmless E.piphany, and its officers, directors and partners (each, an \"Indemnified Party\") against any and all claims, demands, causes of action, damages, costs, expenses, penalties, losses and liabilities",
+            "interpretation": "The contract contains indemnification clauses but does not contain any specific requirement for either party to maintain insurance coverage.",
+            "source_contract_id": "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0431",
+            "text": "Reseller agrees to defend, indemnify, and hold McDATA harmless from and against any and all claims arising out of use of the Software in such applications by Reseller or its End User Customers.",
+            "interpretation": "The contract contains indemnification obligations but does not explicitly require either party to maintain specific insurance coverage for the benefit of the other.",
+            "source_contract_id": "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller_Agreement_Premier_Addendum"
+          },
+          {
+            "ka_id": "KA-0397",
+            "text": "Individual agrees to indemnify, defend and hold harmless Lifeway from and against any and all claims, actions, causes or other expenses incurred arising from any misrepresentations or false statements made by the Individual in the Marketing Materials.",
+            "interpretation": "The contract contains an indemnification clause but does not contain any requirement for either party to maintain insurance coverage.",
+            "source_contract_id": "LifewayFoodsInc_20160316_10-K_EX-10.24_9489766_EX-10.24_Endorsement_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-insurance-03",
+        "category": "Insurance",
+        "member_count": 12,
+        "source_contract_count": 12,
+        "selection_score": 1.8141,
+        "variation_cues": [
+          "officers",
+          "employees",
+          "agents",
+          "directors",
+          "indemnify",
+          "affiliates",
+          "harmless",
+          "all",
+          "against",
+          "fees"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0548",
+            "text": "COMPANY shall indemnify Bravatek, its directors, officers and employees, for any and all damages, costs, expenses, and other liabilities, including reasonable attorney's fees and court costs incurred in connection with any third-party claim, action or proceeding arising from the negligence or intentional misconduct of COMPANY or breach of COMPANY of any of its obligations under this Agreement.",
+            "interpretation": "The contract includes indemnification clauses but does not contain any specific requirements for either party to maintain insurance policies for the benefit of the counterparty.",
+            "source_contract_id": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement"
+          },
+          {
+            "ka_id": "KA-0159",
+            "text": "Each party hereby agrees to indemnify and hold harmless the other party and its subsidiaries and affiliates, and their respective directors, officers, employees, agents, shareholders, partners, members and other owners, against any and all claims, actions, demands, liabilities, losses, damages, judgments, settlements, costs and expenses (including reasonable attorneys' fees)",
+            "interpretation": "The contract includes indemnification obligations but does not contain any clause requiring either party to maintain specific insurance coverage.",
+            "source_contract_id": "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0366",
+            "text": "Kubient agrees to indemnify, defend, and hold harmless Customer and its officers, directors, managers, members, agents, and employees from all third-party allegations, claims, actions, losses, expenses, damages, costs (including, without limitation, reasonable attorneys' fees) or liabilities (\"Claims\") arising out of or in connection with: (i) the Services; (ii) the Auction Platform; (iii) to the best of its knowledge the Creative placed onto Customer's platforms or websites by the Auction Platform; (iv) Kubient's breach of any representation or warranty under this Agreement or (v) the acts or omissions of Kubient or a third party hired by, employed, retained or under Kubient control with respect to Kubient's obligations hereunder.",
+            "interpretation": "The contract includes indemnification provisions but does not contain any requirements for either party to maintain specific insurance coverage for the benefit of the other.",
+            "source_contract_id": "KUBIENT,INC_07_02_2020-EX-10.14-MASTER_SERVICES_AGREEMENT_Part1"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-insurance-04",
+        "category": "Insurance",
+        "member_count": 14,
+        "source_contract_count": 14,
+        "selection_score": 1.7677,
+        "variation_cues": [
+          "maintain",
+          "insurance",
+          "liability",
+          "general",
+          "expense",
+          "less",
+          "coverage",
+          "property",
+          "than",
+          "commercial"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0510",
+            "text": "HDS agrees to provide and maintain at its own expense, the following insurance coverages: A. Commercial General Liability coverage of product liability with limits no less than $1,000,000 per occurrence and $2,000,000 aggregate. B. Umbrella / Excess Liability coverage inclusive of product liability with limits not less than $5,000,000 per occurrence and aggregate. C. Media Liability insurance with limits not less than $2,000,000 per occurrence and aggregate. The Celebrity shall be named as an additional insured on coverages A, B and C.",
+            "interpretation": "HDS is required to maintain specific insurance coverages (General Liability, Umbrella, and Media Liability) and name the Celebrity as an additional insured.",
+            "source_contract_id": "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement_Agreement"
+          },
+          {
+            "ka_id": "KA-0454",
+            "text": "NETGEAR, at its expense, agrees to maintain insurance coverage to protect against its liabilities under the Agreement in an amount no less than is reasonable or required by applicable statute. This insurance will include (a) worker's compensation insurance, (b) comprehensive general liability insurance, including coverage for product liability, bodily injury and property damage, and (c) automobile liability insurance.",
+            "interpretation": "NETGEAR is required to maintain specific types of insurance coverage, including general liability and workers' compensation, to protect against liabilities under the agreement.",
+            "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0587",
+            "text": "Each party shall maintain insurance, including comprehensive or commercial general liability and products liability insurance (contractual liability included), with respect to its activities under this Agreement in such amounts and with such limits as reasonable and customary in the industry, but with limits not less than the following: (a) each occurrence, one million dollars ($1,000,000); (b) products/completed operations aggregate, five million dollars ($5,000,000); (c) personal and advertising injury, one million dollars ($1,000,000); and (d) general aggregate (commercial form only), five million dollars ($5,000,000).",
+            "interpretation": "Both parties are required to maintain specific types and minimum limits of insurance coverage for their activities under the agreement.",
+            "source_contract_id": "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-insurance-05",
+        "category": "Insurance",
+        "member_count": 13,
+        "source_contract_count": 13,
+        "selection_score": 1.7158,
+        "variation_cues": [
+          "indemnify",
+          "costs",
+          "claims",
+          "expenses",
+          "all",
+          "against",
+          "harmless",
+          "hold",
+          "including",
+          "fees"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0360",
+            "text": "Consultant will indemnify Company and hold it harmless from and against all claims, liabilities, damages and expenses, including reasonable attorneys' fees and costs of suit, arising out of or in connection with any violation or claimed violation by Company of such third party's rights resulting in whole or in part from Company's use of the work product of Consultant under this Agreement.",
+            "interpretation": "The contract includes an indemnification clause but does not contain any requirement for either party to maintain insurance coverage.",
+            "source_contract_id": "KIROMICBIOPHARMA,INC_05_11_2020-EX-10.23-CONSULTING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0272",
+            "text": "Each Party (\"Indemnifying Party\") shall indemnify, hold harmless and defend the other Party (\"Indemnified Party\") and its officers, directors, agents, employees, and affiliates, from and against any and all claims, demands, actions, costs, expenses, liabilities, judgments, causes of action, proceedings, suits, losses and damages of any nature, which are threatened or brought against, or are suffered or incurred by, the Indemnified Party or any such person to the extent caused directly by acts or omissions of the Indemnifying Party relating to this Agreement",
+            "interpretation": "The contract includes indemnification obligations but does not contain any specific requirements for either party to maintain insurance coverage for the benefit of the counterparty.",
+            "source_contract_id": "GentechHoldingsInc_20190808_1-A_EX1A-6_MAT_CTRCT_11776814_EX1A-6_MAT_CTRCT_Distributor_Agreement"
+          },
+          {
+            "ka_id": "KA-0676",
+            "text": "CEIS shall fully indemnify XFN and hold XFN harmless from and against any and all costs, expenses, loss, damages, liabilities, claims and proceedings which may be incurred or suffered by or taken against XFN in relation to:",
+            "interpretation": "The contract includes an indemnity clause but does not contain any requirement for either party to maintain insurance for the benefit of the other.",
+            "source_contract_id": "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-insurance-06",
+        "category": "Insurance",
+        "member_count": 5,
+        "source_contract_count": 5,
+        "selection_score": 1.5407,
+        "variation_cues": [
+          "subject",
+          "entire",
+          "all",
+          "agreements",
+          "matter",
+          "hereof",
+          "understandings",
+          "hereto",
+          "respect",
+          "prior"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0489",
+            "text": "This Agreement sets forth the entire agreement of the parties hereto with regard to the subject matter hereof and supersedes and replaces all prior agreements, understandings and representations, oral or written, with regard to such matter.",
+            "interpretation": "The contract does not contain any provisions requiring either party to maintain insurance for the benefit of the other.",
+            "source_contract_id": "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0132",
+            "text": "This Agreement and the Exhibits and Schedules hereto contain the entire agreement between the Parties with respect to the subject matter hereof and supersede all previous agreements, negotiations, discussions, writings, understandings, commitments and conversations with respect to such subject matter, and there are no agreements or understandings between the Parties with respect to the subject matter hereof other than those set forth or referred to herein or therein.",
+            "interpretation": "The contract does not contain any clauses requiring either party to maintain insurance for the benefit of the counterparty.",
+            "source_contract_id": "CerenceInc_20191002_8-K_EX-10.4_11827494_EX-10.4_Intellectual_Property_Agreement"
+          },
+          {
+            "ka_id": "KA-0165",
+            "text": "This Agreement, along with the Exhibit hereto, contains the entire agreement and understanding between the parties hereto with respect to the subject matter hereof and supersedes all prior agreements and understandings relating to such subject matter.",
+            "interpretation": "The contract contains an entire agreement clause and does not include any specific provisions requiring either party to maintain insurance for the benefit of the other.",
+            "source_contract_id": "DYNTEKINC_07_30_1999-EX-10-ONLINE_HOSTING_AGREEMENT"
+          }
+        ]
+      }
+    ]
+  },
+  "response": "# SKILL.md\n\n## 1. Purpose and Scope\n\nThis skill enables the runtime agent to review target contracts for specific legal governance and risk management clauses. The agent must identify, extract, and interpret provisions related to **Governing Law**, **Audit Rights**, and **Insurance**.\n\nThe agent operates under strict evidentiary constraints:\n*   **Source Grounding:** All findings must be derived exclusively from the text of the target contract.\n*   **No External Law:** The agent must not invent legal rules, cite external statutes, or provide legal advice.\n*   **Conservative Interpretation:** If a clause is ambiguous or absent, the agent must abstain or report missing evidence rather than guessing.\n\n## 2. Review Workflow\n\n1.  **Input Validation:**\n    *   Check if `contract_id` and `category` are provided.\n    *   If missing, return status: `missing_input`.\n    *   If `category` is not in `[\"Governing Law\", \"Audit Rights\", \"Insurance\"]`, return status: `unsupported_scope`.\n\n2.  **Pattern Matching:**\n    *   Scan the target contract text for semantic variants of the patterns defined in Section 3.\n    *   Identify the specific jurisdiction, rights granted, or insurance requirements.\n\n3.  **Evidence Extraction:**\n    *   Locate the exact verbatim text supporting the finding.\n    *   Verify that the evidence exists within the target contract (Rule SR-002).\n\n4.  **Interpretation & Output:**\n    *   If evidence is found: Extract the clause, interpret its invariant meaning based on the pattern definitions, and return status: `answered`.\n    *   If no relevant clause is found: Return status: `evidence_missing`.\n    *   If the interpretation requires high-risk legal judgment: Return status: `needs_human_review`.\n\n## 3. Common Clause Patterns\n\n### Governing Law\n\n**Invariant Meaning:**\nIdentifies the specific jurisdiction's laws that govern the interpretation, construction, and enforcement of the agreement. It often includes exclusions for conflict-of-law principles.\n\n**Variation Cues:**\n*   Keywords: `governed`, `construed`, `laws`, `state`, `accordance`, `without`, `principles`, `conflict`, `law`, `regard`, `interpreted`, `enforced`.\n*   Structural cues: \"This Agreement shall be governed by...\", \"construed in accordance with...\", \"without regard to conflict of laws...\".\n\n**Conditions & Exceptions:**\n*   **Condition:** The clause must explicitly name a jurisdiction (e.g., State of New York, Province of British Columbia, People's Republic of China).\n*   **Exception:** Look for exclusions such as \"without application of conflict of laws principles,\" \"excluding the choice of law rules,\" or \"without regard to its conflicts of law provisions.\"\n\n**Representative Phrasings (Recognition Aids Only):**\n*   \"This Agreement shall be governed by and construed in accordance with the laws of the State of New York, without application of conflict of laws principles.\"\n*   \"This Agreement will be governed and construed in accordance with the laws of the State of New York without giving effect to conflict of laws principles.\"\n*   \"This Agreement shall be governed by, construed, and enforced in accordance with the laws of the State of Delaware, without regard to choice of law principles that would require the application of the laws of any other jurisdiction.\"\n*   \"This Agreement shall be governed by and interpreted under the laws of the Commonwealth of Pennsylvania without regard to its conflicts of law provisions.\"\n*   \"This Agreement shall be deemed to have been entered into in the State of New Jersey, and shall be construed and interpreted in accordance with the laws of that State applicable to agreements made and to be performed in the State of New Jersey.\"\n*   \"In accordance with the Law of the People's Republic of China on Joint Ventures Using Chinese and Foreign Investment... and other relevant Chinese laws and regulations\"\n*   \"governed by the laws of the State of California except that body of law dealing with conflicts of law.\"\n*   \"THIS AGREEMENT SHALL BE GOVERNED BY AND CONSTRUED IN ACCORDANCE WITH THE INTERNAL LAWS OF THE STATE OF NEW YORK... WITHOUT REGARD TO THE CONFLICTS OF LAW PRINCIPLES...\"\n\n### Audit Rights\n\n**Invariant Meaning:**\nDetermines whether a party has the explicit right to inspect, examine, or audit the other party's books, records, accounts, or physical locations to verify compliance or payments.\n\n**Variation Cues:**\n*   **Positive Indicators:** `audit`, `examine`, `inspect`, `books`, `records`, `accounts`, `verify`, `compliance`, `normal business hours`, `reasonable notice`.\n*   **Negative/Null Indicators:** Clauses discussing `entire agreement`, `indemnification`, `confidentiality`, `reimbursement`, or `general cooperation` do **not** constitute audit rights unless they explicitly grant inspection privileges.\n\n**Conditions & Exceptions:**\n*   **Condition:** The clause must explicitly grant the right to access records or premises. Mere obligations to provide reports or financial statements (e.g., \"provide most recent financial statements\") are not audit rights unless coupled with an inspection/audit mechanism.\n*   **Exception:** Distinguish between \"right to audit\" and \"obligation to provide information.\" If the text only says \"Party A shall provide reports,\" it is **not** an audit right. If it says \"Party B may examine Party A's books,\" it **is** an audit right.\n\n**Representative Phrasings (Recognition Aids Only):**\n*   *Positive (Audit Right Exists):*\n    *   \"Customer grants to Cisco and its independent accountants the right to examine Customer's books, records and accounts during Customer's normal business hours to verify compliance with this Agreement.\"\n    *   \"Upon reasonable notice to Distributor, Distributor shall make such books and records available to Developer... to audit the payments being made by Distributor hereunder.\"\n    *   \"The Servicer shall maintain appropriate books of account and records... which books of account and records shall be accessible for inspection by the Owner at any time during normal business hours.\"\n*   *Negative (No Audit Right):*\n    *   \"This writing constitutes the entire agreement between the parties hereto...\" (Entire Agreement clause does not grant audit rights).\n    *   \"The reports will contain sufficient information to permit Provider to verify payments hereunder.\" (Reporting obligation, not audit right).\n    *   \"Reseller agrees to provide McDATA with its... most recent financial statements...\" (Provision of documents, not audit right).\n    *   \"Each Party shall treat as confidential... all Confidential Information...\" (Confidentiality clause, not audit right).\n\n### Insurance\n\n**Invariant Meaning:**\nIdentifies obligations for one or both parties to maintain specific types of insurance coverage (e.g., General Liability, Workers' Compensation) and often specifies minimum limits and additional insured requirements.\n\n**Variation Cues:**\n*   **Positive Indicators:** `maintain`, `insurance`, `coverage`, `liability`, `general`, `commercial`, `workers' compensation`, `additional insured`, `limits`, `per occurrence`, `aggregate`.\n*   **Negative/Null Indicators:** Clauses discussing `indemnification`, `hold harmless`, `entire agreement`, or `expenses` do **not** constitute insurance requirements unless they explicitly mandate the purchase/maintenance of insurance policies.\n\n**Conditions & Exceptions:**\n*   **Condition:** The clause must explicitly require the maintenance of insurance policies. Indemnification clauses (\"indemnify, defend, and hold harmless\") are distinct from insurance requirements.\n*   **Exception:** Look for specific policy types (General Liability, Umbrella, Media Liability) and monetary limits. If the clause only mentions \"indemnify,\" it is **not** an insurance clause.\n\n**Representative Phrasings (Recognition Aids Only):**\n*   *Positive (Insurance Required):*\n    *   \"HDS agrees to provide and maintain at its own expense, the following insurance coverages: A. Commercial General Liability coverage... B. Umbrella / Excess Liability coverage... C. Media Liability insurance...\"\n    *   \"NETGEAR, at its expense, agrees to maintain insurance coverage to protect against its liabilities... This insurance will include (a) worker's compensation insurance, (b) comprehensive general liability insurance... and (c) automobile liability insurance.\"\n    *   \"Each party shall maintain insurance, including comprehensive or commercial general liability and products liability insurance... with limits not less than the following: (a) each occurrence, one million dollars...\"\n*   *Negative (No Insurance Requirement):*\n    *   \"HSNS agrees to indemnify, defend and hold harmless E.piphany... against any and all claims...\" (Indemnification only, no insurance mandate).\n    *   \"Reseller agrees to defend, indemnify, and hold McDATA harmless...\" (Indemnification only).\n    *   \"This Agreement is solely for the benefit of the parties hereto...\" (No insurance mandate).\n    *   \"Except as expressly provided for in this Agreement, each party shall bear its own expenses...\" (Expense allocation, not insurance).\n\n## 4. Evidence and Citation Protocol\n\n1.  **Verbatim Quoting:**\n    *   When a finding is made, quote the exact text from the target contract.\n    *   Do not paraphrase the evidence.\n    *   Example: `\"This Agreement shall be governed by and construed in accordance with the laws of the State of New York...\"`\n\n2.  **Source Verification:**\n    *   Ensure the quoted text appears in the target contract provided in the input.\n    *   Do not cite `source_contract_id` from the pattern cards (e.g., `WebmdHealthCorp_...`). These are training examples only.\n\n3.  **Interpretation Separation:**\n    *   Clearly separate the **Evidence** (the quote) from the **Interpretation** (the agent's analysis of what the quote means in the context of the category).\n    *   Interpretation must be conservative. If the text says \"governed by NY law,\" do not infer \"NY courts have jurisdiction\" unless the text also explicitly states jurisdiction/venue.\n\n## 5. Boundary and Abstention Rules\n\n1.  **Missing Input:**\n    *   If `contract_id` is null or `category` is not provided, return `missing_input`.\n\n2.  **Unsupported Scope:**\n    *   If the requested category is not `Governing Law`, `Audit Rights`, or `Insurance`, return `unsupported_scope`.\n\n3.  **Evidence Missing:**\n    *   If the target contract does not contain a clause matching the invariant meaning of the requested category, return `evidence_missing`.\n    *   *Example:* If asked for \"Audit Rights\" and the contract only has an \"Entire Agreement\" clause, return `evidence_missing` for Audit Rights. Do not hallucinate an audit right from the entire agreement clause.\n\n4.  **No Legal Advice:**\n    *   Do not provide opinions on the enforceability, fairness, or legal sufficiency of the clauses.\n    *   Do not suggest changes to the contract.\n    *   If the clause is complex or ambiguous, return `needs_human_review`.\n\n5.  **No External Citations:**\n    *   Do not cite laws, regulations, or case law not present in the target contract text.\n    *   Do not use the `representative_examples` from Section 3 as evidence for the target contract. They are for pattern recognition only.",
+  "usage": {
+    "prompt_tokens": 9956,
+    "completion_tokens": 2488,
+    "total_tokens": 12444
+  }
+}

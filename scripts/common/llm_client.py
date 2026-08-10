@@ -13,6 +13,18 @@ import os
 import time
 from typing import Dict, List, Optional, Tuple
 
+# Auto-load .env from project root (if present)
+_env_path = os.path.join(os.path.dirname(__file__), "..", "..", ".env")
+_env_path = os.path.abspath(_env_path)
+if os.path.exists(_env_path):
+    with open(_env_path, encoding="utf-8") as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and not _line.startswith("#") and "=" in _line:
+                _key, _val = _line.split("=", 1)
+                if _key.strip() not in os.environ:
+                    os.environ[_key.strip()] = _val.strip()
+
 
 class LLMUsage:
     """Track LLM API usage."""

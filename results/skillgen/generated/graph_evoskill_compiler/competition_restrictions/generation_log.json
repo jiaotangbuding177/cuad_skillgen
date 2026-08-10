@@ -1,0 +1,1537 @@
+{
+  "system_prompt": "You compile a contract-review Skill from graph-derived clause-pattern cards.\nReturn only the complete Markdown for SKILL.md. Preserve the supplied category boundaries,\nconditions, exceptions, and governance rules. Do not invent legal rules or citations.\nTeach the runtime agent how to recognize semantic variants, answer conservatively, quote\nverbatim evidence, and abstain when the target contract does not support a finding.\n\nRequired sections:\n1. Purpose and Scope\n2. Review Workflow\n3. Common Clause Patterns (one subsection per category)\n4. Evidence and Citation Protocol\n5. Boundary and Abstention Rules\n\nFor every pattern, explain its invariant meaning, variation cues, conditions/exceptions,\nand include the supplied representative phrasings. Treat examples as recognition aids,\nnever as evidence for a target contract.",
+  "pattern_cards": {
+    "Competitive Restriction Exception": [
+      {
+        "pattern_id": "PAT-competitive-restriction-exceptio-01",
+        "category": "Competitive Restriction Exception",
+        "member_count": 5,
+        "source_contract_count": 5,
+        "selection_score": 1.3348,
+        "variation_cues": [
+          "similar",
+          "services",
+          "construed",
+          "nothing",
+          "content",
+          "provide",
+          "third",
+          "acquiring",
+          "itself",
+          "performing"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0001",
+            "text": "Nothing in this Agreement shall be construed to prevent the Recipient from itself performing or from acquiring services from other providers that are similar to or identical to the Services.",
+            "interpretation": "This clause explicitly allows the Recipient to engage other providers for similar services, serving as an exception to any potential exclusivity or non-compete restrictions.",
+            "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0348",
+            "text": "Nothing in this Agreement shall be construed as preventing Impresse or VerticalNet from developing other co-branded versions of their materials, data, information and content.",
+            "interpretation": "This clause explicitly carves out an exception to any potential exclusivity or non-compete restrictions, allowing both parties to develop other co-branded versions of their materials.",
+            "source_contract_id": "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0724",
+            "text": "XFN and/or its Affiliates are entitled to publish or distribute content of any third party where such content is similar to or competitive with the Content.",
+            "interpretation": "This clause explicitly allows XFN to distribute competitive third-party content, serving as an exception to any potential exclusivity or non-compete restrictions.",
+            "source_contract_id": "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-competitive-restriction-exceptio-02",
+        "category": "Competitive Restriction Exception",
+        "member_count": 5,
+        "source_contract_count": 2,
+        "selection_score": 1.2425,
+        "variation_cues": [
+          "set",
+          "except",
+          "preventing",
+          "construed",
+          "forth",
+          "nothing",
+          "site",
+          "sections",
+          "implementing",
+          "links"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0563",
+            "text": "Except as set forth in Sections 4.3 [Non-Competition] and 5.8 [Non-Competition], nothing in this Agreement shall be construed as preventing either party from developing other co-branded versions of its materials, data, information and content.",
+            "interpretation": "Either party may develop other co-branded versions of their materials, subject to the non-competition restrictions in Sections 4.3 and 5.8.",
+            "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0516",
+            "text": "Except as set forth in Sections 3.8  [LABORATORY PRODUCTS] and 5.8  [CO-BRANDED TRAINING AND EDUCATION SITE], nothing in this Agreement shall be construed as preventing Neoforma from implementing Neoforma Links on any other Site.",
+            "interpretation": "Neoforma is generally free to implement links on other sites, except for specific restrictions regarding VerticalNet Competitors and Training/Education services.",
+            "source_contract_id": "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0561",
+            "text": "Except as set forth in Sections 4.3.1 [Non-Competition] and 5.8 [Non-Competition], nothing in this Agreement shall be construed as preventing VerticalNet from implementing VerticalNet Links on any other Site.",
+            "interpretation": "VerticalNet is permitted to implement its links on other sites, subject to the specific non-competition restrictions in Sections 4.3.1 and 5.8.",
+            "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-competitive-restriction-exceptio-03",
+        "category": "Competitive Restriction Exception",
+        "member_count": 3,
+        "source_contract_count": 2,
+        "selection_score": 1.2229,
+        "variation_cues": [
+          "consent",
+          "prior",
+          "express",
+          "without",
+          "written",
+          "advance",
+          "jrvs",
+          "material",
+          "seeking",
+          "writing"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0733",
+            "text": "without the express prior written consent of Calm.",
+            "interpretation": "The non-compete restriction on XSPA includes an exception if Calm provides express prior written consent.",
+            "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+          },
+          {
+            "ka_id": "KA-0347",
+            "text": "unless JRVS consents thereto in writing in advance, based upon the Distributor's full disclosure of the material facts in seeking such consent.",
+            "interpretation": "The non-compete restriction allows for an exception if JRVS provides prior written consent based on full disclosure.",
+            "source_contract_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor_Agreement"
+          },
+          {
+            "ka_id": "KA-0734",
+            "text": "without the express prior written consent of XSPA.",
+            "interpretation": "The non-compete restriction on Calm includes an exception if XSPA provides express prior written consent.",
+            "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-competitive-restriction-exceptio-04",
+        "category": "Competitive Restriction Exception",
+        "member_count": 3,
+        "source_contract_count": 3,
+        "selection_score": 1.2206,
+        "variation_cues": [
+          "however",
+          "provided",
+          "apply",
+          "section",
+          "restrictions",
+          "non-competition",
+          "features",
+          "storefronts",
+          "advertisements",
+          "verticalnet"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0560",
+            "text": "provided, however, that this Section 5.8.1 [Non-Competition] shall not apply to advertisements, Storefronts or similar features on VerticalNet's Sites.",
+            "interpretation": "The non-compete restriction on VerticalNet does not apply to advertisements, Storefronts, or similar features on VerticalNet's Sites.",
+            "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0176",
+            "text": "provided, however, that DIALOG shall not be under any such restrictions in relation to services or products it provides to the Key Customer in the event the Key Customer terminates its agreement with ENERGOUS.",
+            "interpretation": "The non-compete restriction on Dialog does not apply to services or products provided to the Key Customer if that customer terminates its agreement with Energous.",
+            "source_contract_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0638",
+            "text": "provided, however, the Parties hereby acknowledge that the restrictions set forth in this Section 2.3 shall not apply to any Affiliates of MMT (including Pfizer)",
+            "interpretation": "The non-compete restriction on MMT does not apply to its affiliates, including Pfizer, allowing them to commercialize competing products.",
+            "source_contract_id": "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-competitive-restriction-exceptio-05",
+        "category": "Competitive Restriction Exception",
+        "member_count": 3,
+        "source_contract_count": 3,
+        "selection_score": 1.2131,
+        "variation_cues": [
+          "who",
+          "majority",
+          "license",
+          "outlets",
+          "reserves",
+          "products",
+          "distributors",
+          "both",
+          "period",
+          "procure"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0484",
+            "text": "The foregoing notwithstanding, during the [*] and any subsequent period, NETGEAR reserves the right to sell or license Products in [*] to customers other than distributors such as, but not limited to resellers who procure Products at centralized locations for resale to end-use customers solely through their wholly or majority owned retail outlets, both store-front and catalog.",
+            "interpretation": "This clause carves out an exception to the exclusivity provision, allowing Netgear to sell directly to certain types of resellers (retail outlets) even during the exclusive period.",
+            "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT_TO_THE_DISTRIBUTOR_AGREEMENT_BETWEEN_INGRAM_MICRO_AND_NETGEAR"
+          },
+          {
+            "ka_id": "KA-0487",
+            "text": "The foregoing notwithstanding, during the initial one (1) year term and any subsequent period. NETGEAR reserves the right to sell or license Products in the Territory to customers other than distributors such as, but not limited to resellers who procure Products at centralized locations for resale to end-use customers solely through their wholly or majority owned retail outlets, both store-front and catalog.",
+            "interpretation": "This clause carves out an exception to the exclusivity granted to the Distributor, allowing NETGEAR to sell directly to certain types of resellers (e.g., retail outlets) even during the exclusive term.",
+            "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0491",
+            "text": "The foregoing notwithstanding, during the [*] and any subsequent period, NETGEAR reserves the right to sell or license Products in [*] to customers other than distributors such as, but not limited to resellers who procure Products at centralized locations for resale to end-use customers solely through their wholly or majority owned retail outlets, both store-front and catalog.",
+            "interpretation": "This clause carves out an exception to the exclusivity provision, allowing Netgear to sell directly to certain types of resellers (e.g., retail outlets) even during the exclusive period.",
+            "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-_AMENDMENT_#2_TO_THE_DISTRIBUTION_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-competitive-restriction-exceptio-06",
+        "category": "Competitive Restriction Exception",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.1156,
+        "variation_cues": [
+          "participants",
+          "remaining",
+          "without",
+          "unanimous",
+          "consent",
+          "written",
+          "racing",
+          "endorsement",
+          "writing",
+          "sponsor"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0445",
+            "text": "without the unanimous written consent of the remaining Participants.",
+            "interpretation": "The non-compete restriction can be waived if the remaining participants provide unanimous written consent.",
+            "source_contract_id": "MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT_VENTURE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0238",
+            "text": "unless such endorsement activity is approved in writing by Racing and the Sponsor",
+            "interpretation": "The non-compete restriction on endorsements can be waived if both parties provide written approval.",
+            "source_contract_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      }
+    ],
+    "Non-Disparagement": [
+      {
+        "pattern_id": "PAT-non-disparagement-01",
+        "category": "Non-Disparagement",
+        "member_count": 13,
+        "source_contract_count": 13,
+        "selection_score": 1.6885,
+        "variation_cues": [],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0698",
+            "text": "No",
+            "interpretation": "The contract does not contain a Non-Disparagement clause.",
+            "source_contract_id": "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement"
+          },
+          {
+            "ka_id": "KA-0738",
+            "text": "No",
+            "interpretation": "The contract does not contain a Non-Disparagement clause.",
+            "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+          },
+          {
+            "ka_id": "KA-0190",
+            "text": "No",
+            "interpretation": "The contract does not contain a Non-Disparagement clause.",
+            "source_contract_id": "ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-disparagement-02",
+        "category": "Non-Disparagement",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.1493,
+        "variation_cues": [
+          "who",
+          "disparage",
+          "subsidiaries",
+          "affiliates",
+          "indirectly",
+          "businesses",
+          "slander",
+          "media",
+          "expected",
+          "longer"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0299",
+            "text": "Subject to applicable law, each of the Parties covenants and agrees that, during the Standstill Period, neither Party nor any of its subsidiaries, Affiliates, successors, assigns, principals, partners, members, general partners, officers, key employees or directors (collectively, \"Representatives\"), shall in any way, directly or indirectly, in any capacity or manner, whether written or oral, electronically or otherwise (including, without limitation, in a television, radio, internet, newspaper, magazine interview, or otherwise through the press, media, analysts or other persons or in any document or report filed with the SEC), publicly disparage, impugn, make ad hominem attacks on or otherwise defame or slander or make, express, transmit, speak, write, verbalize or otherwise publicly communicate in any way (or cause, further, assist, solicit, encourage, support or participate in any of the foregoing), any public communication or statement of any kind, whether verbal, in writing, electronically transferred or otherwise, that might reasonably be construed to be disparage, derogate or impugn, the other Party or such other Party's Representatives (including any current officer or director of a Party or a Parties' subsidiaries who no longer serves in such capacity following the execution of this Agreement), employees, stockholders (solely in their capacity as stockholders of the applicable Party), or any of their businesses, products or services, in any manner that would reasonably be expected to damage the business, or reputation of the other Party or of its Representatives (including former officers and directors), directors (or former directors), employees, stockholders (solely in their capacity as stockholders of the applicable Party); provided that, with respect to any litigation, arbitration or other proceeding between the Parties, nothing in this Section 5 shall prevent either Party from disclosing any facts or circumstances with respect to any such litigation, arbitration or other proceeding.",
+            "interpretation": "The contract contains a mutual non-disparagement clause prohibiting parties from making public statements that disparage the other party, its representatives, employees, or business during the Standstill Period.",
+            "source_contract_id": "HC2HOLDINGS,INC_05_14_2020-EX-10.1-COOPERATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0173",
+            "text": "Subject to applicable law, the Company, on the one hand, and each of the Marathon Parties on the other hand, covenants and agrees that, during the Support Period or if earlier, until such time as the other Party or any of its or her officers, directors, employees, subsidiaries, Affiliates, Associates, agents, attorneys or other representatives (collectively, the \"Representatives\") shall have breached this section, neither it nor any of its respective Representatives acting, directly or indirectly, at its direction or on its behalf, shall in any way publicly (including by any communication with other investors or prospective investors in the Company where such communications could reasonably be expected to be made public or trigger a public disclosure obligation, with securities analysts or any member of traditional or digital media) criticize, disparage, call into disrepute or otherwise defame or slander the other Party or such other Party's Representatives (including any current officer or director of a Party or a Party's subsidiaries who no longer serves in such capacity at any time following the execution of this Agreement), or any of their businesses, products or services, in any manner that would reasonably be expected to damage the business or reputation of such other Party.",
+            "interpretation": "The contract includes a mutual non-disparagement clause prohibiting both the Company and the Marathon Parties from publicly criticizing or defaming each other during the Support Period.",
+            "source_contract_id": "ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-disparagement-03",
+        "category": "Non-Disparagement",
+        "member_count": 3,
+        "source_contract_count": 3,
+        "selection_score": 1.1281,
+        "variation_cues": [
+          "licensor",
+          "business",
+          "adversely",
+          "manner",
+          "licensed",
+          "licensee",
+          "disparages",
+          "reflects",
+          "reputation",
+          "use"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0108",
+            "text": "Licensee shall not knowingly (a) use the Licensed Domain Names in any manner that tarnishes, degrades, disparages or reflects adversely on Licensor or Licensor's business or reputation",
+            "interpretation": "The Licensee is explicitly prohibited from using the Licensed Domain Names in a manner that disparages or reflects adversely on the Licensor's business or reputation.",
+            "source_contract_id": "ChinaRealEstateInformationCorp_20090929_F-1_EX-10.32_4771615_EX-10.32_Content_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0521",
+            "text": "The Licensee shall not by any act or omission use the Licensed Mark in any manner that disparages or reflects adversely on Licensor or its business or reputation.",
+            "interpretation": "The Licensee is contractually prohibited from using the Licensed Mark in a way that disparages or negatively reflects on the Licensor's business or reputation.",
+            "source_contract_id": "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0414",
+            "text": "Licensee shall not knowingly (a) use the Licensed Domain Names in any manner that tarnishes, degrades, disparages or reflects adversely on Licensor or Licensor's business or reputation",
+            "interpretation": "The Licensee is explicitly prohibited from using the Licensed Domain Names in a manner that disparages or reflects adversely on the Licensor's business or reputation.",
+            "source_contract_id": "LejuHoldingsLtd_20140121_DRS_(on_F-1)_EX-10.26_8473102_EX-10.26_Content_License_Agreement1"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-disparagement-04",
+        "category": "Non-Disparagement",
+        "member_count": 2,
+        "source_contract_count": 1,
+        "selection_score": 1.0277,
+        "variation_cues": [
+          "further",
+          "disparage",
+          "affiliates",
+          "indirectly",
+          "includes",
+          "three",
+          "declaration",
+          "write",
+          "verbalize",
+          "following"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0442",
+            "text": "Each Investor agrees that, until the earlier of (i) the expiration of the Standstill Period or (ii) any material breach of this Agreement by the Company (provided that the Company shall have three (3) business days following written notice from such Investor of any material breach to remedy such material breach if capable of remedy), neither it nor any of its Affiliates or Associates will, and it will cause each of its Affiliates and Associates not to, directly or indirectly, publicly make, express, transmit, speak, write, verbalize or otherwise publicly communicate in any way (or cause, further, assist, solicit, encourage, support or participate in any of the foregoing), any remark, comment, message, information, declaration, communication or other statement of any kind, whether verbal or in writing, that might reasonably be construed to be derogatory or critical of, or negative toward, the Company or any of its directors, officers, Affiliates, Associates, subsidiaries, employees, agents or representatives (collectively, the \"Company Representatives\"), or that reveals, discloses, incorporates, is based upon, discusses, includes or otherwise involves any confidential or proprietary information of the Company or its subsidiaries or Affiliates or Associates, or to malign, harm, disparage, defame or damage the reputation or good name of the Company, its business or any of the Company Representatives.",
+            "interpretation": "The Investors are restricted from making any public statements that are derogatory, critical, or negative toward the Company or its representatives during the Standstill Period.",
+            "source_contract_id": "MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0443",
+            "text": "The Company hereby agrees that, until the earlier of (i) the expiration of the Standstill Period or (ii) any material breach of this Agreement by an Investor (provided that such Investor shall have three (3) business days following written notice from the Company of any material breach to remedy such material breach if capable of remedy), neither it nor any of its Affiliates will, and it will cause each of its Affiliates not to, directly or indirectly, publicly make, express, transmit, speak, write, verbalize or otherwise publicly communicate in any way (or cause, further, assist, solicit, encourage, support or participate in any of the foregoing), any remark, comment, message, information, declaration, communication or other statement of any kind, whether verbal or in writing, that might reasonably be construed to be derogatory or critical of, or negative toward, the Investors or their Affiliates or Associates or any of their agents or representatives (collectively, the \"Investor Agents\"), or that reveals, discloses, incorporates, is based upon, discusses, includes or otherwise involves any confidential or proprietary information of any Investor or its Affiliates or Associates, or to malign, harm, disparage, defame or damage the reputation or good name of any Investor, its business or any of the Investor Agents.",
+            "interpretation": "The Company is restricted from making any public statements that are derogatory, critical, or negative toward the Investors or their agents during the Standstill Period.",
+            "source_contract_id": "MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-disparagement-05",
+        "category": "Non-Disparagement",
+        "member_count": 3,
+        "source_contract_count": 3,
+        "selection_score": 1.0203,
+        "variation_cues": [
+          "information",
+          "confidential",
+          "disclosing",
+          "consent",
+          "written",
+          "without",
+          "agrees",
+          "proprietary",
+          "agree",
+          "right"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0386",
+            "text": "The parties agree that each will treat such information as confidential. Neither party shall have the right to disclose the Proprietary Information to any third party without the express written consent of the disclosing party.",
+            "interpretation": "The contract includes confidentiality obligations but does not contain a specific non-disparagement clause prohibiting negative public statements about the counterparty.",
+            "source_contract_id": "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0434",
+            "text": "Each Party agrees that the terms and conditions, but not the existence, of this Agreement shall be treated as the other's Confidential Information and that no public reference to the terms and conditions of this Agreement or to activities pertaining to this Agreement can be made without the prior written consent of the other Party",
+            "interpretation": "The contract includes confidentiality provisions regarding the terms of the agreement but does not contain an explicit non-disparagement clause prohibiting negative statements about the counterparty.",
+            "source_contract_id": "Loop_Industries,_Inc._-_Marketing_Agreement"
+          },
+          {
+            "ka_id": "KA-0542",
+            "text": "Each Party agrees to hold in confidence confidential information acquired in the course of this relationship with the other Parties and their associates. Each Party agrees to refrain from, either during period of this Agreement or at any other time thereafter, disclosing, using or disseminating such confidential information, for its or another's benefit, in any way acquired in the course of any association arising out of this Agreement.",
+            "interpretation": "The contract contains confidentiality obligations but does not include a specific non-disparagement clause prohibiting negative public statements.",
+            "source_contract_id": "PREMIERBIOMEDICALINC_05_14_2020-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-disparagement-06",
+        "category": "Non-Disparagement",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.0189,
+        "variation_cues": [
+          "light",
+          "agrees",
+          "manner",
+          "otherwise",
+          "portrays",
+          "negative",
+          "disparaging",
+          "use",
+          "connection",
+          "marks"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0122",
+            "text": "Affiliate agrees not to use the Licensed Materials in any manner that is disparaging or that otherwise portrays Chase in a negative light.",
+            "interpretation": "The affiliate is explicitly prohibited from using Chase's licensed materials in a way that disparages or negatively portrays Chase.",
+            "source_contract_id": "CreditcardscomInc_20070810_S-1_EX-10.33_362297_EX-10.33_Affiliate_Agreement"
+          },
+          {
+            "ka_id": "KA-0594",
+            "text": "In connection with such license each party agrees not to use the other party's Marks in any manner that is disparaging or that otherwise portrays such party in a negative light.",
+            "interpretation": "Parties agree not to use each other's marks in a disparaging manner or in a way that portrays the other party negatively.",
+            "source_contract_id": "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement"
+          }
+        ]
+      }
+    ],
+    "Non-Compete": [
+      {
+        "pattern_id": "PAT-non-compete-01",
+        "category": "Non-Compete",
+        "member_count": 6,
+        "source_contract_count": 6,
+        "selection_score": 1.3839,
+        "variation_cues": [],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0218",
+            "text": "No",
+            "interpretation": "The contract does not contain a clause restricting the parties from competing with each other or operating in specific geographies or sectors.",
+            "source_contract_id": "FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0289",
+            "text": "No",
+            "interpretation": "The contract does not contain a general non-compete clause restricting a party from operating in a certain geography or business sector, only exclusivity regarding procurement.",
+            "source_contract_id": "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service_Agreement"
+          },
+          {
+            "ka_id": "KA-0693",
+            "text": "No",
+            "interpretation": "The contract does not contain a Non-Compete clause restricting the parties from competing.",
+            "source_contract_id": "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-compete-02",
+        "category": "Non-Compete",
+        "member_count": 5,
+        "source_contract_count": 5,
+        "selection_score": 1.2734,
+        "variation_cues": [
+          "compete",
+          "covenant",
+          "noncompetition",
+          "section",
+          "non-competition",
+          "competition",
+          "restrictions"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0202",
+            "text": "20.COVENANT NOT TO COMPETE.",
+            "interpretation": "The Table of Contents explicitly lists a section dedicated to a Covenant Not to Compete, indicating the presence of such restrictions in the agreement.",
+            "source_contract_id": "ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development_Agreement"
+          },
+          {
+            "ka_id": "KA-0460",
+            "text": "Section 6.13 Noncompetition",
+            "interpretation": "The Table of Contents indicates the presence of a specific section dedicated to noncompetition obligations.",
+            "source_contract_id": "Monsanto_Company_-_SECOND_A_R_EXCLUSIVE_AGENCY_AND_MARKETING_AGREEMENT_"
+          },
+          {
+            "ka_id": "KA-0359",
+            "text": "9.3 Non-Competition Agreement",
+            "interpretation": "The Table of Contents indicates the existence of a specific section dedicated to Non-Competition Agreements.",
+            "source_contract_id": "JOINTCORP_09_19_2014-EX-10.15-FRANCHISE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-compete-03",
+        "category": "Non-Compete",
+        "member_count": 3,
+        "source_contract_count": 2,
+        "selection_score": 1.1493,
+        "variation_cues": [
+          "express",
+          "nor",
+          "promote",
+          "consent",
+          "products",
+          "written",
+          "sell",
+          "prior",
+          "without",
+          "sale"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0349",
+            "text": "During the term of this agreement, Distributor shall not market, sell advertise or promote the sale or use of any product or device which is competitive with or substantially similar to the Products, without the prior express written consent of Erchonia, nor shall they assist any third party in doing so.",
+            "interpretation": "The Distributor is restricted from marketing, selling, or promoting products that are competitive with or substantially similar to Erchonia's Products during the term of the agreement.",
+            "source_contract_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor_Agreement"
+          },
+          {
+            "ka_id": "KA-0731",
+            "text": "Throughout the Term and for a period of six (6) months after the expiration or termination of this Agreement, neither Calm nor any of its affiliates shall, directly or indirectly, sell, offer for sale, market or promote any digital meditation or digital sleep products in any retail location located in an airport other than in collaboration with XSPA, without the express prior written consent of XSPA.",
+            "interpretation": "Calm is restricted from selling or promoting digital meditation or sleep products in airport retail locations without XSPA's collaboration during the term and for six months post-termination.",
+            "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+          },
+          {
+            "ka_id": "KA-0730",
+            "text": "Throughout the Term and for a period of six (6) months after the expiration or termination of this Agreement, neither XSPA nor any of its affiliates shall, directly or indirectly, sell, offer for sale, market or promote any digital meditation or digital sleep products (other than the Products), including online or in any Store in the Territory, without the express prior written consent of Calm.",
+            "interpretation": "XSPA is restricted from selling or promoting competing digital meditation or sleep products during the term and for six months post-termination.",
+            "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-compete-04",
+        "category": "Non-Compete",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.057,
+        "variation_cues": [
+          "product",
+          "during",
+          "commercialize",
+          "term",
+          "territory",
+          "royalty",
+          "manufacture",
+          "except",
+          "competitive",
+          "vyera"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0127",
+            "text": "Except as expressly required under this Agreement, Vyera hereby covenants not to Develop, Manufacture, Commercialize or otherwise exploit a Competitive Product in the Territory during the Royalty Term, including by means of an Affiliate.",
+            "interpretation": "Vyera is restricted from developing, manufacturing, or commercializing competitive products in the Territory during the Royalty Term.",
+            "source_contract_id": "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0636",
+            "text": "During the Term, MMT shall not Commercialize in any manner any Competing Product in the Field in any country in the Territory",
+            "interpretation": "MMT is restricted from commercializing any competing products in the defined field and territory during the term of the agreement.",
+            "source_contract_id": "SigaTechnologiesInc_20190603_8-K_EX-10.1_11695818_EX-10.1_Promotion_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-compete-05",
+        "category": "Non-Compete",
+        "member_count": 3,
+        "source_contract_count": 2,
+        "selection_score": 1.0493,
+        "variation_cues": [
+          "competitor",
+          "term",
+          "advertisements",
+          "during",
+          "place",
+          "paperexchange",
+          "verticalnet",
+          "pulp",
+          "online",
+          "paper"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0502",
+            "text": "During the Term, Neoforma shall not place any advertisements on a Neoforma Site for any VerticalNet Competitor.",
+            "interpretation": "Neoforma is restricted from placing advertisements for VerticalNet Competitors on its sites.",
+            "source_contract_id": "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0554",
+            "text": "During the Term, PaperExchange shall not place any advertisements on the PaperExchange Site from any Pulp and Paper Online Competitor.",
+            "interpretation": "PaperExchange is restricted from placing advertisements from Pulp and Paper Online Competitors on its site during the Term.",
+            "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0553",
+            "text": "During the Term, VerticalNet shall not (a) act as an advertising agent or representative for any PaperExchange Competitor and (b) place any advertisements on Pulp and Paper Online from any PaperExchange Competitor.",
+            "interpretation": "VerticalNet is restricted from acting as an advertising agent for or placing ads from PaperExchange Competitors during the Term.",
+            "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-non-compete-06",
+        "category": "Non-Compete",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.0457,
+        "variation_cues": [
+          "sell",
+          "agrees",
+          "written",
+          "products",
+          "without",
+          "professional",
+          "liability",
+          "agency",
+          "micoa",
+          "competing"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0003",
+            "text": "Agency agrees not to sell any competing professional liability products in Nevada, without the written consent of MICOA.",
+            "interpretation": "The Agency is restricted from selling competing professional liability products in Nevada during the term of the agreement.",
+            "source_contract_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0175",
+            "text": "Until expiration or earlier termination of the Agreement, DIALOG agrees that it and its Affiliates will not, without ENERGOUS' written approval, intentionally sell, distribute or work with any third party to develop products incorporating any Uncoupled Power Transfer Technology other than Licensed Products;",
+            "interpretation": "Dialog is restricted from selling, distributing, or developing competing products using Uncoupled Power Transfer Technology during the term of the agreement.",
+            "source_contract_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC_ALLIANCE_AGREEMENT"
+          }
+        ]
+      }
+    ],
+    "Exclusivity": [
+      {
+        "pattern_id": "PAT-exclusivity-01",
+        "category": "Exclusivity",
+        "member_count": 6,
+        "source_contract_count": 6,
+        "selection_score": 1.5157,
+        "variation_cues": [
+          "exclusive",
+          "grants",
+          "products",
+          "distribute",
+          "territory",
+          "sell",
+          "right",
+          "distributor",
+          "hereby",
+          "market"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0305",
+            "text": "Upon the terms and subject to the conditions of this Agreement, Developer hereby grants to Distributor an exclusive, non-transferable fight and license to market and distribute the Products in the Territory.",
+            "interpretation": "The Developer grants the Distributor an exclusive license to market and distribute the Products within the defined Territory.",
+            "source_contract_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE_DISTRIBUTOR_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0658",
+            "text": "Todos hereby grants the Reseller a non-sublicensable, non-transferable, exclusive right to distribute and sell the Products to Customers in the Territory",
+            "interpretation": "Todos grants the Reseller an exclusive right to distribute and sell the Products within the defined Territory.",
+            "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+          },
+          {
+            "ka_id": "KA-0472",
+            "text": "NTC hereby grants to ALFA AESAR, and its subsidiaries and affiliates, the exclusive right to market, sell and distribute Research Quantities of the Products within the Territory",
+            "interpretation": "NTC grants ALFA AESAR the exclusive right to market, sell, and distribute Research Quantities of the Products within the defined Territory.",
+            "source_contract_id": "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-exclusivity-02",
+        "category": "Exclusivity",
+        "member_count": 4,
+        "source_contract_count": 4,
+        "selection_score": 1.3814,
+        "variation_cues": [
+          "exclusive",
+          "distributor",
+          "products",
+          "territory",
+          "appointment",
+          "accepts",
+          "appoints",
+          "terms",
+          "conditions",
+          "hereby"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0719",
+            "text": "Hydraspin hereby appoints Distributor, and Distributor hereby accepts appointment, as Hydraspin's exclusive distributor of the Products in the Territory during the term of this Agreement, subject to the terms and conditions of this Agreement, including, but not limited to, the satisfaction of the Performance Benchmarks.",
+            "interpretation": "The contract establishes an exclusive distribution relationship where Hydraspin appoints the Distributor as the sole distributor for the Products within the defined Territory.",
+            "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+          },
+          {
+            "ka_id": "KA-0588",
+            "text": "ARGO agreed to appoint YEC as the exclusive distributor of its products in the Territory specified therein",
+            "interpretation": "The contract establishes an exclusive distribution relationship where YEC is the sole distributor for ARGO's products in the specified territory.",
+            "source_contract_id": "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0404",
+            "text": "Lucid appoints the Distributor and the Distributor accepts appointment as an exclusive authorized Lucid Distributor.",
+            "interpretation": "The agreement establishes an exclusive distribution relationship where the Distributor is the sole authorized distributor for Lucid in the specified territories.",
+            "source_contract_id": "LUCIDINC_04_15_2011-EX-10.9-DISTRIBUTOR_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-exclusivity-03",
+        "category": "Exclusivity",
+        "member_count": 3,
+        "source_contract_count": 3,
+        "selection_score": 1.3507,
+        "variation_cues": [
+          "appoints",
+          "products",
+          "non-exclusive",
+          "accepts",
+          "authorized",
+          "appointment",
+          "terms",
+          "hereby",
+          "distributor",
+          "territory"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0009",
+            "text": "Subject to the terms and conditions of this Agreement, Galaxy hereby appoints Telnet as a non-exclusive authorized reseller of the Products and Services and Telnet hereby accepts the appointment.",
+            "interpretation": "The agreement explicitly defines the relationship as non-exclusive, meaning there is no exclusivity commitment.",
+            "source_contract_id": "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement"
+          },
+          {
+            "ka_id": "KA-0232",
+            "text": "The Supplier appoints the Distributor as its non-exclusive distributor to distribute the Products in the Territory on the terms of this agreement.",
+            "interpretation": "The contract explicitly states that the distributorship is non-exclusive, meaning there is no exclusive dealing commitment.",
+            "source_contract_id": "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor_Agreement"
+          },
+          {
+            "ka_id": "KA-0346",
+            "text": "JRVS appoints the Distributor, and the Distributor hereby accepts such appointment, as JRVS'S non-exclusive authorized distributor for sale of the Products to the Customers (other than House Account) in the Territory",
+            "interpretation": "The agreement explicitly defines the relationship as non-exclusive, meaning there is no exclusive dealing commitment.",
+            "source_contract_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-exclusivity-04",
+        "category": "Exclusivity",
+        "member_count": 5,
+        "source_contract_count": 4,
+        "selection_score": 1.2996,
+        "variation_cues": [
+          "license",
+          "exclusive",
+          "field",
+          "hereby",
+          "grants",
+          "territory",
+          "grant",
+          "products",
+          "section",
+          "patents"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0033",
+            "text": "Array hereby grants to Ono an exclusive license, with the right to grant sublicenses and appoint distributors as provided in Section 2.2, under the Array Patents, Array Know-How and Array's interests in the Joint Patents and Joint Know-How to Commercialize the Products in the Field in the Ono Territory.",
+            "interpretation": "Array grants Ono an exclusive license to commercialize the Products in the Ono Territory.",
+            "source_contract_id": "Array_BioPharma_Inc._-_LICENSE,_DEVELOPMENT_AND_COMMERCIALIZATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0128",
+            "text": "CytoDyn hereby grants to Vyera, and Vyera hereby accepts, an exclusive royalty-bearing license (or sublicense, as the case may be), under the CytoDyn Patents, the CytoDyn Know-How and the Inventions (if any) solely to Commercialize, use, have used, offer for sale and sell Licensed Products in the Field in the Territory.",
+            "interpretation": "CytoDyn grants Vyera an exclusive license to commercialize the Licensed Products in the Field and Territory.",
+            "source_contract_id": "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0111",
+            "text": "Bioeq hereby grants to Licensee an exclusive (even as to Bioeq), milestone- and royalty-bearing, non-transferable license (including the right to grant sublicenses only to the extent permitted by Section 2.1.2) under the Licensed Technology (including the Licensed Patents) to use, sell, have sold, import, have imported or otherwise Commercialize the Licensed Products in the Field in the Territory.",
+            "interpretation": "Bioeq grants Coherus an exclusive license to commercialize the Licensed Products in the Territory, excluding even Bioeq itself from doing so.",
+            "source_contract_id": "CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-exclusivity-05",
+        "category": "Exclusivity",
+        "member_count": 3,
+        "source_contract_count": 2,
+        "selection_score": 1.2615,
+        "variation_cues": [
+          "enhance",
+          "transmit",
+          "grants",
+          "license",
+          "verticalnet",
+          "perform",
+          "modify",
+          "display",
+          "reproduce",
+          "use"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0506",
+            "text": "VerticalNet hereby grants Neoforma an exclusive license, even as to VerticalNet, to use, modify, enhance, reproduce, display, perform and transmit the VerticalNet Medical Product Listings, subject to and in accordance with the terms, conditions and provisions of this Agreement, to the extent that VerticalNet has the right to do so.",
+            "interpretation": "VerticalNet grants Neoforma an exclusive license to use VerticalNet Medical Product Listings, excluding VerticalNet itself.",
+            "source_contract_id": "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0559",
+            "text": "PaperExchange hereby grants VerticalNet an exclusive license to use, modify, enhance, reproduce, display, perform and transmit the PaperExchange Content",
+            "interpretation": "PaperExchange grants VerticalNet an exclusive license to use and transmit PaperExchange Content.",
+            "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0509",
+            "text": "Neoforma hereby grants VerticalNet an exclusive license, even as to Neoforma, to use, modify, enhance, reproduce, display, perform and transmit the Neoforma Laboratory Product Listings, subject to and in accordance with the terms, conditions and provisions of this Agreement, to the extent that Neoforma has the right to do so.",
+            "interpretation": "Neoforma grants VerticalNet an exclusive license to use Neoforma Laboratory Product Listings, excluding Neoforma itself.",
+            "source_contract_id": "NeoformaInc_19991202_S-1A_EX-10.26_5224521_EX-10.26_Co-Branding_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-exclusivity-06",
+        "category": "Exclusivity",
+        "member_count": 3,
+        "source_contract_count": 3,
+        "selection_score": 1.2131,
+        "variation_cues": [
+          "subject",
+          "exhibit",
+          "which",
+          "conducting",
+          "described",
+          "appointed",
+          "during",
+          "between",
+          "only",
+          "one"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0483",
+            "text": "During the initial one year period beginning on the Amendment Date, Distributor shall be the only distributor appointed by NETGEAR in [*], subject to Distributor conducting mutually agreed to marketing activities as described in the Marketing Plan for [*] to be developed and agreed to by and between the parties and which shall be attached to and made a part of this Agreement as Exhibit 4a.",
+            "interpretation": "The contract grants Ingram Micro exclusive distribution rights in the specified territory for the initial one-year period, contingent on meeting marketing requirements.",
+            "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT_TO_THE_DISTRIBUTOR_AGREEMENT_BETWEEN_INGRAM_MICRO_AND_NETGEAR"
+          },
+          {
+            "ka_id": "KA-0486",
+            "text": "During the initial one (1) year term of this Agreement. Distributor shall be the only distributor appointed by NETGEAR in the Territory, subject to Distributor conducting mutually agreed to marketing activities as described in the Marketing Plan to be developed and agreed to by and between the parties and which shall be attached to and made a part of this Agreement as Exhibit 4.",
+            "interpretation": "The contract grants Ingram Micro exclusive distribution rights in the Territory for the initial one-year term, contingent on meeting marketing plan requirements.",
+            "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0490",
+            "text": "During the initial one year period beginning on the Amendment Date, Distributor shall be the only distributor appointed by NETGEAR in [*], subject to Distributor conducting mutually agreed to marketing activities as described in the Marketing Plan for [*] to be developed and agreed to by and between the parties and which shall be attached to and made a part of this Agreement as Exhibit 4a.",
+            "interpretation": "The contract grants Ingram Micro exclusive distribution rights in the specified territory for the initial one-year period, contingent on meeting marketing requirements.",
+            "source_contract_id": "NETGEAR,INC_04_21_2003-EX-10.16-_AMENDMENT_#2_TO_THE_DISTRIBUTION_AGREEMENT"
+          }
+        ]
+      }
+    ],
+    "No-Solicit of Customers": [
+      {
+        "pattern_id": "PAT-no-solicit-of-customers-01",
+        "category": "No-Solicit of Customers",
+        "member_count": 14,
+        "source_contract_count": 14,
+        "selection_score": 1.7191,
+        "variation_cues": [],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0727",
+            "text": "No",
+            "interpretation": "The contract does not contain a no-solicit of customers clause.",
+            "source_contract_id": "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0660",
+            "text": "No",
+            "interpretation": "The contract does not contain a specific clause restricting the solicitation of the counterparty's customers.",
+            "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+          },
+          {
+            "ka_id": "KA-0736",
+            "text": "No",
+            "interpretation": "The contract does not contain a No-Solicit of Customers clause.",
+            "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-customers-02",
+        "category": "No-Solicit of Customers",
+        "member_count": 2,
+        "source_contract_count": 1,
+        "selection_score": 0.9241,
+        "variation_cues": [
+          "except",
+          "above",
+          "section",
+          "indirectly",
+          "agrees",
+          "joint",
+          "purolator",
+          "referred",
+          "directly",
+          "efforts"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0142",
+            "text": "Except for the joint marketing efforts referred to in Section 3.1 (v) above, Purolator agrees not to directly or indirectly solicit next day or multiple day freight from existing sameday customers of Dynamex.",
+            "interpretation": "Purolator is prohibited from soliciting Dynamex's existing sameday customers for next-day or multiple-day freight services.",
+            "source_contract_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0143",
+            "text": "Except for the joint marketing efforts referred to in Section 3.1 (v) above, Dynamex agrees not to directly or indirectly solicit overnight freight from customers of Purolator.",
+            "interpretation": "Dynamex is prohibited from soliciting Purolator's customers for overnight freight services.",
+            "source_contract_id": "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION_SERVICES_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-customers-03",
+        "category": "No-Solicit of Customers",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.8079,
+        "variation_cues": [
+          "except",
+          "provided",
+          "restrictions",
+          "approval",
+          "period",
+          "dassault",
+          "during",
+          "expressly",
+          "one",
+          "systemes"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0591",
+            "text": "7.1 Restrictions on PlanetCAD. (a) During the Term of this Agreement, and for a period of one year thereafter, except as expressly provided in this Agreement, PlanetCAD shall not market any services to Customers without the prior written approval of Dassault Systemes.",
+            "interpretation": "PlanetCAD is restricted from marketing services to customers without Dassault Systemes' approval during the term and for one year after.",
+            "source_contract_id": "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-customers-04",
+        "category": "No-Solicit of Customers",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.8079,
+        "variation_cues": [
+          "acting",
+          "except",
+          "which",
+          "limitation",
+          "distribution",
+          "consent",
+          "products",
+          "indirectly",
+          "hydraspin",
+          "relation"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0720",
+            "text": "Hydraspin certifies, stipulates, and agrees that the Hydraspin will deal exclusively with and through the Distributor in relation to the distribution of the Products in the Territory. Hydraspin will not in any way or in any capacity, either directly or indirectly (including without limitation acting by, with or through one or more Persons in which the Hydraspin has an interest and/or with whom Hydraspin has a relationship): except pursuant to an agreement with the Distributor, (a) contact, approach or negotiate with any Customer outside of the Distributor, or (b) contact, approach or negotiate with any Person other than the Distributor and its representatives on any matter with respect to the Products, without the prior written consent of the Distributor.",
+            "interpretation": "Hydraspin is prohibited from directly contacting, approaching, or negotiating with Customers or other persons regarding the Products without going through the Distributor, effectively restricting solicitation of the Distributor's customers.",
+            "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-customers-05",
+        "category": "No-Solicit of Customers",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.7854,
+        "variation_cues": [
+          "authorized",
+          "except",
+          "provided",
+          "agency",
+          "unless",
+          "products",
+          "affiliates",
+          "section",
+          "micoa",
+          "placed"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0008",
+            "text": "Except as provided in Section D or unless authorized by the Agency, MICOA or its affiliates shall not use its records of business placed by the Agency with MICOA to solicit individual policyholders for the sale of other lines of insurance or other products or services.",
+            "interpretation": "MICOA is restricted from using Agency-placed business records to solicit policyholders for other products without authorization.",
+            "source_contract_id": "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-customers-06",
+        "category": "No-Solicit of Customers",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.7854,
+        "variation_cues": [
+          "subscribers",
+          "right",
+          "directly",
+          "terminated",
+          "client",
+          "solicit",
+          "contact",
+          "pursuant",
+          "another",
+          "galaxy"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0010",
+            "text": "If this Agreement is terminated pursuant to section 10.2, Galaxy shall have the right to contact Subscribers directly and solicit such Subscribers to become subscribers of Galaxy, an affiliate thereof or of another client of Galaxy's.",
+            "interpretation": "This clause grants Galaxy the right to solicit Telnet's customers upon termination for default, which serves as an exception to any implied or standard non-solicitation protections for Telnet's customer base.",
+            "source_contract_id": "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement"
+          }
+        ]
+      }
+    ],
+    "Most Favored Nation": [
+      {
+        "pattern_id": "PAT-most-favored-nation-01",
+        "category": "Most Favored Nation",
+        "member_count": 17,
+        "source_contract_count": 17,
+        "selection_score": 1.9169,
+        "variation_cues": [
+          "clause",
+          "found",
+          "nation",
+          "most",
+          "favored",
+          "per",
+          "agrees",
+          "price",
+          "lucid",
+          "published"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0711",
+            "text": "No",
+            "interpretation": "The contract does not contain a Most Favored Nation clause.",
+            "source_contract_id": "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0725",
+            "text": "No",
+            "interpretation": "The contract does not contain a Most Favored Nation clause.",
+            "source_contract_id": "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0246",
+            "text": "No",
+            "interpretation": "The contract does not contain a Most Favored Nation clause.",
+            "source_contract_id": "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-most-favored-nation-02",
+        "category": "Most Favored Nation",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.8079,
+        "variation_cues": [
+          "after",
+          "service",
+          "provided",
+          "exhibit",
+          "terminated",
+          "when",
+          "fee",
+          "section",
+          "described",
+          "relating"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0154",
+            "text": "Diplomat will pay to Tadeo when due a fee for each of the Services equal to the amount described in EXHIBIT A hereto relating to each such Service; PROVIDED, that in the event Diplomat terminates this Agreement in accordance with Section 3 hereof, the fee for the provision of each terminated Service shall cease to accrue on and after the effective date of such termination.",
+            "interpretation": "The compensation section defines fees based on Exhibit A but does not contain a Most Favored Nation clause guaranteeing terms equal to or better than those offered to third parties.",
+            "source_contract_id": "DYNTEKINC_07_30_1999-EX-10-ONLINE_HOSTING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-most-favored-nation-03",
+        "category": "Most Favored Nation",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.8079,
+        "variation_cues": [
+          "subject",
+          "sierra",
+          "ninety",
+          "conference",
+          "accepted",
+          "forth",
+          "herein",
+          "faith",
+          "section",
+          "orders"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0382",
+            "text": "The price for the Product as set forth in Section 9 herein, sold by SIERRA to ENVISION, shall be subject to change due to changes in manufacturing costs and so as to maximize profits; any changes in price for the Product shall not be applicable to previously accepted orders and shall be made with at least ninety (90) days advance notice in writing and in good faith by conference of the parties.",
+            "interpretation": "The contract does not contain a Most Favored Nation clause; pricing is determined by manufacturing costs and profit maximization rather than matching third-party terms.",
+            "source_contract_id": "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-most-favored-nation-04",
+        "category": "Most Favored Nation",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.7854,
+        "variation_cues": [
+          "receive",
+          "additional",
+          "logo",
+          "provided",
+          "name",
+          "unless",
+          "identifying",
+          "hereunder",
+          "fee",
+          "exceeds"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0235",
+            "text": "Racing agrees that, during the term of this Agreement, (i) Sponsor shall have the right to approve or disapprove any additional sponsor identified by Racing, and (ii) unless another proposed sponsor has agreed to pay a sponsorship fee that exceeds the amount paid by Sponsor, no other sponsor shall receive any benefit of greater value (including either an equivalent or a more prominent use of another sponsor's name, logo or other identifying information) than the Benefits provided to the Sponsor hereunder.",
+            "interpretation": "The contract includes a Most Favored Nation clause ensuring the Sponsor receives benefits of equal or greater value compared to other sponsors, unless those other sponsors pay a higher fee.",
+            "source_contract_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-most-favored-nation-05",
+        "category": "Most Favored Nation",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.7854,
+        "variation_cues": [
+          "ntc",
+          "provided",
+          "agents",
+          "favorable",
+          "products",
+          "distributors",
+          "product",
+          "agrees",
+          "allowances",
+          "commercial"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0470",
+            "text": "NTC agrees that the Product Prices, benefits and allowances offered to ALFA AESAR shall not be less favorable than those offered on Products provided to agents, distributors or marketed directly by NTC to any customers, other than the Product Prices existing as of the date of this Agreement with NTC's commercial partners.",
+            "interpretation": "The contract includes a Most Favored Nation clause ensuring ALFA AESAR receives pricing and benefits no less favorable than those offered to other agents, distributors, or direct customers, with a specific exception for pre-existing commercial partner prices.",
+            "source_contract_id": "NANOPHASETECHNOLOGIESCORP_11_01_2005-EX-99.1-DISTRIBUTOR_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-most-favored-nation-06",
+        "category": "Most Favored Nation",
+        "member_count": 1,
+        "source_contract_count": 1,
+        "selection_score": 0.7854,
+        "variation_cues": [
+          "additional",
+          "issue",
+          "which",
+          "common",
+          "purchaser",
+          "enters",
+          "global",
+          "section",
+          "sells",
+          "subsequent"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0666",
+            "text": "If at any time on or prior to the earlier of (i) December 31, 2007, or (ii) the date on which Global Energy completes an initial public offering (\"IPO\") of its common stock, Global Energy sells additional common shares or other financial instruments convertible into its common shares, or enters into any similar transaction for the sale of an ownership interest in Global Energy which is the same or substantially the same as that sold to Oxbow under Section 1 of this Agreement, and the price of which is less than $200.00 per share, Global Energy shall issue additional common shares to Oxbow such that Oxbow's adjusted per-share price for its stockholdings shall be no greater than the lowest price paid by any such subsequent purchaser of its shares.",
+            "interpretation": "This clause provides a price protection mechanism (Most Favored Nation treatment) for Oxbow regarding the purchase of shares, ensuring Oxbow's effective price per share does not exceed the lowest price paid by any subsequent purchaser.",
+            "source_contract_id": "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+          }
+        ]
+      }
+    ],
+    "No-Solicit of Employees": [
+      {
+        "pattern_id": "PAT-no-solicit-of-employees-01",
+        "category": "No-Solicit of Employees",
+        "member_count": 15,
+        "source_contract_count": 15,
+        "selection_score": 1.7249,
+        "variation_cues": [
+          "purpose",
+          "joint",
+          "independent",
+          "agent",
+          "deemed",
+          "contractors",
+          "nothing",
+          "sierra",
+          "acknowledge",
+          "including"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0662",
+            "text": "No",
+            "interpretation": "The contract does not contain a clause restricting the solicitation or hiring of the counterparty's employees.",
+            "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+          },
+          {
+            "ka_id": "KA-0709",
+            "text": "No",
+            "interpretation": "The contract does not contain a specific clause restricting the solicitation of the counterparty's employees.",
+            "source_contract_id": "WOMENSGOLFUNLIMITEDINC_03_29_2000-EX-10.13-ENDORSEMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0675",
+            "text": "No",
+            "interpretation": "The contract does not contain a clause restricting either party from soliciting or hiring employees or contractors from the other party.",
+            "source_contract_id": "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-employees-02",
+        "category": "No-Solicit of Employees",
+        "member_count": 4,
+        "source_contract_count": 3,
+        "selection_score": 1.2,
+        "variation_cues": [
+          "consent",
+          "agrees",
+          "written",
+          "leave",
+          "prior",
+          "solicit",
+          "employment",
+          "without",
+          "employ",
+          "present"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0186",
+            "text": "Distributor agrees that, without the prior written consent of the Vendor, for a period beginning from the date of this Agreement and ending three (3) years after the termination of this Agreement, neither Distributor nor any of its affiliates or representatives will: (1) employ or solicit to employ any of the employees of Vendor; or (2) encourage of the employees of the Vendor or its subsidiaries to leave the employment of Vendor;",
+            "interpretation": "Distributor is restricted from soliciting or hiring Vendor's employees for 3 years after termination.",
+            "source_contract_id": "ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0437",
+            "text": "MKOS agrees that for a twenty four months (24) following the execution of this Agreement, MKOS shall not, without UTEK's prior written consent, directly or indirectly solicit for employment any present employee of UTEK, or request, induce or advise any employee of UTEK to leave the employ of UTEK. In turn, UTEK agrees that it will not directly or indirectly solicit any present employee of MKOS.",
+            "interpretation": "This is a mutual non-solicitation clause prohibiting both parties from soliciting each other's employees for a period of 24 months following the execution of the agreement.",
+            "source_contract_id": "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0529",
+            "text": "AVDU agrees that for a twenty four months (24) following the execution of this Agreement, AVDU shall not, without UTEK's prior written consent, directly or indirectly solicit for employment any present employee of UTEK, or request induce or advise any employee of UTEK to leave the employ of UTEK. In turn, UTEK agrees that it will not directly or indirectly solicit any present employee of AVDU.",
+            "interpretation": "This is a mutual non-solicitation clause restricting both parties from soliciting each other's employees for a period of 24 months following the execution of the agreement.",
+            "source_contract_id": "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC_ALLIANCE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-employees-03",
+        "category": "No-Solicit of Employees",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.1267,
+        "variation_cues": [
+          "after",
+          "her",
+          "his",
+          "period",
+          "three",
+          "solicit",
+          "employment",
+          "commencing",
+          "attempt",
+          "subsidiaries"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0624",
+            "text": "During the Term of this Agreement and during the three year period after the expiration or termination of this Agreement, the Licensee will not solicit any person employed by Licensor and/or its Affiliates to leave his or her employment with Licensor.",
+            "interpretation": "The Licensee is prohibited from soliciting employees of the Licensor during the term of the agreement and for three years following its termination.",
+            "source_contract_id": "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0586",
+            "text": "Each Seller agrees that for a period commencing on the Effective Date and ending three years after the Closing Date (the \"Non-Solicit Period\"), each Seller shall not, directly or indirectly: (i) induce, solicit, recruit or attempt to persuade any employee of the Combined Business to terminate his or her employment with the Buyer or any of its subsidiaries, or (ii) solicit the employment of any of the employees of the Combined Business.",
+            "interpretation": "Sellers are prohibited from soliciting or recruiting employees of the Combined Business for three years after the Closing Date.",
+            "source_contract_id": "Quaker_Chemical_Corporation_-_NON_COMPETITION_AND_NON_SOLICITATION_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-employees-04",
+        "category": "No-Solicit of Employees",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.0992,
+        "variation_cues": [
+          "who",
+          "period",
+          "indirectly",
+          "during",
+          "one",
+          "person",
+          "directly",
+          "behalf",
+          "solicit",
+          "employment"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0373",
+            "text": "During the Term and any renewal terms of the Agreement, and for a period of one (1) year following the expiration or earlier termination thereof, Customer shall not, without Kubient's prior written consent, directly or indirectly (i) solicit or encourage any person to leave the employment or other service of Kubient; or (ii) hire, on behalf of Customer or any other person or entity, any person who has left the employment of Kubient within the one (1) year period following the termination or end of that person's employment.",
+            "interpretation": "The Customer is prohibited from soliciting or hiring Kubient's employees or contractors during the term and for one year after termination.",
+            "source_contract_id": "KUBIENT,INC_07_02_2020-EX-10.14-MASTER_SERVICES_AGREEMENT_Part2"
+          },
+          {
+            "ka_id": "KA-0101",
+            "text": "7.1 The Consultant covenants, undertakes and agrees with the Company that during the Term and for a period of one year from the date of expiration or termination of this Agreement for any reason whatsoever, it shall not, on its own behalf or on behalf of any person, whether directly or indirectly, in any capacity whatsoever, offer employment to or solicit the employment of or otherwise entice away from the employment of the Company or any of the Affiliated Companies, any individual who is employed or engaged by the Company or any of the Affiliated Companies at the date of expiration or termination of this Agreement or who was employed or engaged by the Company or any of the Affiliated Companies, within the one year period immediately preceding the date of expiration or termination of this Agreement, as applicable.",
+            "interpretation": "The Consultant is restricted from soliciting or hiring employees of the Company during the term and for one year after termination.",
+            "source_contract_id": "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-employees-05",
+        "category": "No-Solicit of Employees",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.0857,
+        "variation_cues": [
+          "her",
+          "encourage",
+          "induce",
+          "his",
+          "period",
+          "employee",
+          "during",
+          "solicit",
+          "employment",
+          "terminate"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0378",
+            "text": "Both Parties agree that during the Term of this Agreement and for a period of two (2) years following the termination, both Parties will not (i) solicit, encourage, or take any other action, which is intended, directly or indirectly, to induce any employee to terminate his or her employment with a Party; or (ii) interfere in any manner with the contractual or employment relationship between the Parties and any their employees.",
+            "interpretation": "The contract includes a non-solicitation clause prohibiting both parties from soliciting or hiring each other's employees during the term and for two years after termination.",
+            "source_contract_id": "LECLANCHÉ_S.A._-_JOINT_DEVELOPMENT_AND_MARKETING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0228",
+            "text": "12. Non-Solicitation. During the term and for a period of [***] thereafter, neither party shall solicit, induce, encourage or attempt to induce or encourage any employee of the other party with whom such party has had direct contact to terminate his or her employment with such other party or to breach any other obligation to such other party.",
+            "interpretation": "This section explicitly prohibits both parties from soliciting or inducing employees of the other party to terminate their employment during the term and for a specified period thereafter.",
+            "source_contract_id": "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-no-solicit-of-employees-06",
+        "category": "No-Solicit of Employees",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.0682,
+        "variation_cues": [
+          "hire",
+          "attempt",
+          "period",
+          "months",
+          "during",
+          "independent",
+          "following",
+          "engage",
+          "whatsoever",
+          "contractors"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0100",
+            "text": "COOL TECH and VET TECH agree not to engage in any attempt whatsoever, to hire, or to engage as independent contractors, the other's employees or independent contractors during the term of this Agreement and for a period of six (6) months following expiration or termination of this Agreement except as may be mutually agreed in writing.",
+            "interpretation": "The contract explicitly prohibits both parties from soliciting or hiring each other's employees or independent contractors during the term and for six months after termination.",
+            "source_contract_id": "COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic_Alliance_Agreement"
+          },
+          {
+            "ka_id": "KA-0589",
+            "text": "each of ARGO and YEC agrees not to engage in any attempt whatsoever to hire, or to engage as independent contractors, the other's employees or independent contractors during the term of the collaboration and for a period of twelve (12) months following expiration or termination of the collaboration",
+            "interpretation": "The parties are restricted from soliciting or hiring each other's employees or independent contractors during the term and for 12 months post-termination.",
+            "source_contract_id": "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+          }
+        ]
+      }
+    ]
+  },
+  "response": "# SKILL.md\n\n## 1. Purpose and Scope\n\nThis skill enables the runtime agent to review target contracts for specific competition-related restrictions and exceptions. The agent must identify clauses falling within the following **Covered Categories**:\n\n*   **Competitive Restriction Exception**: Clauses that carve out exceptions to non-compete or exclusivity obligations.\n*   **Non-Disparagement**: Clauses prohibiting negative public statements about the counterparty.\n*   **Non-Compete**: Clauses restricting a party from competing with the other in specific geographies, sectors, or activities.\n*   **Exclusivity**: Clauses granting exclusive rights to distribute, sell, or license products/services.\n*   **No-Solicit of Customers**: Clauses restricting the solicitation of the counterparty’s customers.\n*   **Most Favored Nation (MFN)**: Clauses guaranteeing terms equal to or better than those offered to third parties.\n*   **No-Solicit of Employees**: Clauses restricting the solicitation or hiring of the counterparty’s employees.\n\n**Scope Constraints:**\n*   The agent must analyze **only** the provided target contract.\n*   The agent must **not** invent legal rules, citations, or interpretations not grounded in the text.\n*   The agent must **abstain** from answering if the target contract does not contain evidence supporting a finding for the requested category.\n\n## 2. Review Workflow\n\n1.  **Input Validation**:\n    *   Check if `contract_id` and `category` are provided.\n    *   If missing, return status: `missing_input`.\n    *   Check if the requested `category` is within the **Covered Categories** listed in Section 1.\n    *   If outside scope, return status: `unsupported_scope`.\n\n2.  **Pattern Recognition**:\n    *   Scan the target contract for semantic variants of the patterns defined in Section 3.\n    *   Identify the **invariant meaning** of the clause (e.g., is it a restriction or an exception?).\n    *   Note any **conditions** (e.g., \"subject to,\" \"provided that\") or **exceptions** (e.g., \"except as,\" \"without consent\").\n\n3.  **Evidence Extraction**:\n    *   Locate the verbatim text in the target contract that supports the finding.\n    *   Ensure the evidence is from the **target contract only**. Do not use examples from the pattern cards as evidence.\n\n4.  **Response Formulation**:\n    *   If evidence is found: Return status `answered`, include the interpretation, and quote the verbatim evidence.\n    *   If no evidence is found: Return status `evidence_missing`.\n    *   If the clause is ambiguous or requires high-risk legal judgment: Return status `needs_human_review`.\n\n## 3. Common Clause Patterns\n\n### Competitive Restriction Exception\n\n**Invariant Meaning**: These clauses explicitly allow a party to engage in activities that might otherwise be restricted by non-compete or exclusivity provisions. They often serve as carve-outs.\n\n**Pattern 1: General Permission for Similar Services/Content**\n*   **Meaning**: Allows a party to perform similar services or acquire them from third parties, or to develop competitive content.\n*   **Variation Cues**: \"similar\", \"services\", \"construed\", \"nothing\", \"content\", \"provide\", \"third\", \"acquiring\", \"itself\", \"performing\".\n*   **Conditions/Exceptions**: Often unconditional (\"Nothing in this Agreement shall be construed...\").\n*   **Representative Phrasings**:\n    *   \"Nothing in this Agreement shall be construed to prevent the Recipient from itself performing or from acquiring services from other providers that are similar to or identical to the Services.\"\n    *   \"Nothing in this Agreement shall be construed as preventing Impresse or VerticalNet from developing other co-branded versions of their materials, data, information and content.\"\n    *   \"XFN and/or its Affiliates are entitled to publish or distribute content of any third party where such content is similar to or competitive with the Content.\"\n\n**Pattern 2: Exception Subject to Specific Sections**\n*   **Meaning**: Permits activity generally, except where specific non-compete sections apply.\n*   **Variation Cues**: \"set\", \"except\", \"preventing\", \"construed\", \"forth\", \"nothing\", \"site\", \"sections\", \"implementing\", \"links\".\n*   **Conditions/Exceptions**: \"Except as set forth in Sections [X] and [Y]...\"\n*   **Representative Phrasings**:\n    *   \"Except as set forth in Sections 4.3 [Non-Competition] and 5.8 [Non-Competition], nothing in this Agreement shall be construed as preventing either party from developing other co-branded versions of its materials...\"\n    *   \"Except as set forth in Sections 3.8 [LABORATORY PRODUCTS] and 5.8 [CO-BRANDED TRAINING AND EDUCATION SITE], nothing in this Agreement shall be construed as preventing Neoforma from implementing Neoforma Links on any other Site.\"\n\n**Pattern 3: Consent-Based Exception**\n*   **Meaning**: Restriction applies unless prior written consent is obtained.\n*   **Variation Cues**: \"consent\", \"prior\", \"express\", \"without\", \"written\", \"advance\", \"jrvs\", \"material\", \"seeking\", \"writing\".\n*   **Conditions/Exceptions**: Requires \"express prior written consent\" or consent based on \"full disclosure\".\n*   **Representative Phrasings**:\n    *   \"without the express prior written consent of Calm.\"\n    *   \"unless JRVS consents thereto in writing in advance, based upon the Distributor's full disclosure of the material facts in seeking such consent.\"\n\n**Pattern 4: Carve-Out for Specific Activities/Parties**\n*   **Meaning**: Non-compete restrictions do not apply to specific types of activities (e.g., ads) or specific parties (e.g., affiliates).\n*   **Variation Cues**: \"however\", \"provided\", \"apply\", \"section\", \"restrictions\", \"non-competition\", \"features\", \"storefronts\", \"advertisements\", \"verticalnet\".\n*   **Conditions/Exceptions**: \"provided, however, that this Section... shall not apply to...\"\n*   **Representative Phrasings**:\n    *   \"provided, however, that this Section 5.8.1 [Non-Competition] shall not apply to advertisements, Storefronts or similar features on VerticalNet's Sites.\"\n    *   \"provided, however, that DIALOG shall not be under any such restrictions in relation to services or products it provides to the Key Customer in the event the Key Customer terminates its agreement with ENERGOUS.\"\n    *   \"provided, however, the Parties hereby acknowledge that the restrictions set forth in this Section 2.3 shall not apply to any Affiliates of MMT (including Pfizer)\"\n\n**Pattern 5: Reservation of Rights to Sell Directly**\n*   **Meaning**: Manufacturer reserves the right to sell to certain resellers despite exclusivity granted to a distributor.\n*   **Variation Cues**: \"who\", \"majority\", \"license\", \"outlets\", \"reserves\", \"products\", \"distributors\", \"both\", \"period\", \"procure\".\n*   **Conditions/Exceptions**: \"The foregoing notwithstanding... reserves the right to sell... to customers other than distributors such as... resellers who procure Products at centralized locations...\"\n*   **Representative Phrasings**:\n    *   \"The foregoing notwithstanding, during the [*] and any subsequent period, NETGEAR reserves the right to sell or license Products in [*] to customers other than distributors such as, but not limited to resellers who procure Products at centralized locations for resale to end-use customers solely through their wholly or majority owned retail outlets...\"\n\n**Pattern 6: Unanimous Consent Waiver**\n*   **Meaning**: Restriction can be waived by unanimous written consent of remaining participants.\n*   **Variation Cues**: \"participants\", \"remaining\", \"without\", \"unanimous\", \"consent\", \"written\", \"racing\", \"endorsement\", \"writing\", \"sponsor\".\n*   **Conditions/Exceptions**: \"without the unanimous written consent of the remaining Participants.\"\n*   **Representative Phrasings**:\n    *   \"without the unanimous written consent of the remaining Participants.\"\n    *   \"unless such endorsement activity is approved in writing by Racing and the Sponsor\"\n\n### Non-Disparagement\n\n**Invariant Meaning**: Prohibits parties from making negative public statements about the counterparty, its business, or its representatives.\n\n**Pattern 1: Absence of Clause**\n*   **Meaning**: The contract does not contain a non-disparagement clause.\n*   **Variation Cues**: None (Negative finding).\n*   **Representative Phrasings**: \"No\" (Indicates absence in source data; agent must verify absence in target).\n\n**Pattern 2: Mutual Non-Disparagement with Broad Scope**\n*   **Meaning**: Both parties agree not to disparage each other, affiliates, employees, or business reputation. Often includes exceptions for litigation disclosures.\n*   **Variation Cues**: \"who\", \"disparage\", \"subsidiaries\", \"affiliates\", \"indirectly\", \"businesses\", \"slander\", \"media\", \"expected\", \"longer\".\n*   **Conditions/Exceptions**: \"Subject to applicable law... during the Standstill Period... provided that... nothing in this Section shall prevent either Party from disclosing any facts... with respect to any such litigation.\"\n*   **Representative Phrasings**:\n    *   \"Subject to applicable law, each of the Parties covenants and agrees that... neither Party... shall in any way... publicly disparage, impugn, make ad hominem attacks on or otherwise defame or slander... the other Party or such other Party's Representatives...\"\n    *   \"Subject to applicable law, the Company... and each of the Marathon Parties... covenants and agrees that... neither it nor any of its respective Representatives... shall in any way publicly... criticize, disparage, call into disrepute or otherwise defame or slander the other Party...\"\n\n**Pattern 3: Non-Disparagement via Use of Marks/Domain Names**\n*   **Meaning**: Prohibits using licensed marks or domains in a way that tarnishes or disparages the licensor.\n*   **Variation Cues**: \"licensor\", \"business\", \"adversely\", \"manner\", \"licensed\", \"licensee\", \"disparages\", \"reflects\", \"reputation\", \"use\".\n*   **Conditions/Exceptions**: \"Licensee shall not knowingly... use the Licensed Domain Names in any manner that tarnishes, degrades, disparages or reflects adversely on Licensor...\"\n*   **Representative Phrasings**:\n    *   \"Licensee shall not knowingly (a) use the Licensed Domain Names in any manner that tarnishes, degrades, disparages or reflects adversely on Licensor or Licensor's business or reputation\"\n    *   \"The Licensee shall not by any act or omission use the Licensed Mark in any manner that disparages or reflects adversely on Licensor or its business or reputation.\"\n\n**Pattern 4: Investor/Company Mutual Non-Disparagement**\n*   **Meaning**: Investors and Company agree not to make derogatory statements during the Standstill Period. Includes cure periods for breaches.\n*   **Variation Cues**: \"further\", \"disparage\", \"affiliates\", \"indirectly\", \"includes\", \"three\", \"declaration\", \"write\", \"verbalize\", \"following\".\n*   **Conditions/Exceptions**: \"until the earlier of (i) the expiration of the Standstill Period or (ii) any material breach... (provided that the Company shall have three (3) business days... to remedy...)\"\n*   **Representative Phrasings**:\n    *   \"Each Investor agrees that... neither it nor any of its Affiliates or Associates will... publicly make... any remark... that might reasonably be construed to be derogatory or critical of... the Company...\"\n    *   \"The Company hereby agrees that... neither it nor any of its Affiliates will... publicly make... any remark... that might reasonably be construed to be derogatory or critical of... the Investors...\"\n\n**Pattern 5: Confidentiality Only (No Explicit Non-Disparagement)**\n*   **Meaning**: Contract contains confidentiality obligations but no explicit ban on negative public statements.\n*   **Variation Cues**: \"information\", \"confidential\", \"disclosing\", \"consent\", \"written\", \"without\", \"agrees\", \"proprietary\", \"agree\", \"right\".\n*   **Representative Phrasings**:\n    *   \"The parties agree that each will treat such information as confidential. Neither party shall have the right to disclose the Proprietary Information to any third party without the express written consent of the disclosing party.\"\n    *   \"Each Party agrees that the terms and conditions... shall be treated as the other's Confidential Information... no public reference... can be made without the prior written consent...\"\n\n**Pattern 6: Non-Disparagement via Use of Materials/Marks**\n*   **Meaning**: Prohibits using licensed materials or marks in a disparaging manner or negative light.\n*   **Variation Cues**: \"light\", \"agrees\", \"manner\", \"otherwise\", \"portrays\", \"negative\", \"disparaging\", \"use\", \"connection\", \"marks\".\n*   **Representative Phrasings**:\n    *   \"Affiliate agrees not to use the Licensed Materials in any manner that is disparaging or that otherwise portrays Chase in a negative light.\"\n    *   \"In connection with such license each party agrees not to use the other party's Marks in any manner that is disparaging or that otherwise portrays such party in a negative light.\"\n\n### Non-Compete\n\n**Invariant Meaning**: Restricts a party from engaging in competitive activities, selling competing products, or operating in specific territories/fields.\n\n**Pattern 1: Absence of Clause**\n*   **Meaning**: No general non-compete clause exists.\n*   **Representative Phrasings**: \"No\" (Indicates absence in source data).\n\n**Pattern 2: Table of Contents Reference**\n*   **Meaning**: Presence of a section titled \"Non-Competition\" or \"Covenant Not to Compete\" in the TOC indicates the clause exists elsewhere in the document.\n*   **Variation Cues**: \"compete\", \"covenant\", \"noncompetition\", \"section\", \"non-competition\", \"competition\", \"restrictions\".\n*   **Representative Phrasings**:\n    *   \"20.COVENANT NOT TO COMPETE.\"\n    *   \"Section 6.13 Noncompetition\"\n    *   \"9.3 Non-Competition Agreement\"\n\n**Pattern 3: Restriction on Marketing/Selling Competitive Products**\n*   **Meaning**: Distributor/Party cannot market, sell, or promote products competitive with the licensed products.\n*   **Variation Cues**: \"express\", \"nor\", \"promote\", \"consent\", \"products\", \"written\", \"sell\", \"prior\", \"without\", \"sale\".\n*   **Conditions/Exceptions**: Often requires \"prior express written consent\" for exceptions.\n*   **Representative Phrasings**:\n    *   \"During the term of this agreement, Distributor shall not market, sell advertise or promote the sale or use of any product or device which is competitive with or substantially similar to the Products, without the prior express written consent of Erchonia...\"\n    *   \"Throughout the Term and for a period of six (6) months after the expiration or termination of this Agreement, neither Calm nor any of its affiliates shall... sell, offer for sale, market or promote any digital meditation or digital sleep products... without the express prior written consent of XSPA.\"\n\n**Pattern 4: Restriction on Developing/Commercializing Competitive Products**\n*   **Meaning**: Party cannot develop, manufacture, or commercialize competitive products in the territory/field.\n*   **Variation Cues**: \"product\", \"during\", \"commercialize\", \"term\", \"territory\", \"royalty\", \"manufacture\", \"except\", \"competitive\", \"vyera\".\n*   **Conditions/Exceptions**: \"Except as expressly required under this Agreement...\"\n*   **Representative Phrasings**:\n    *   \"Except as expressly required under this Agreement, Vyera hereby covenants not to Develop, Manufacture, Commercialize or otherwise exploit a Competitive Product in the Territory during the Royalty Term...\"\n    *   \"During the Term, MMT shall not Commercialize in any manner any Competing Product in the Field in any country in the Territory\"\n\n**Pattern 5: Restriction on Advertising Competitors**\n*   **Meaning**: Party cannot place advertisements for competitors on their sites.\n*   **Variation Cues**: \"competitor\", \"term\", \"advertisements\", \"during\", \"place\", \"paperexchange\", \"verticalnet\", \"pulp\", \"online\", \"paper\".\n*   **Representative Phrasings**:\n    *   \"During the Term, Neoforma shall not place any advertisements on a Neoforma Site for any VerticalNet Competitor.\"\n    *   \"During the Term, PaperExchange shall not place any advertisements on the PaperExchange Site from any Pulp and Paper Online Competitor.\"\n\n**Pattern 6: Restriction on Selling Competing Products in Specific Jurisdictions**\n*   **Meaning**: Party cannot sell competing products in a specific state/region without consent.\n*   **Variation Cues**: \"sell\", \"agrees\", \"written\", \"products\", \"without\", \"professional\", \"liability\", \"agency\", \"micoa\", \"competing\".\n*   **Conditions/Exceptions**: \"without the written consent of MICOA.\"\n*   **Representative Phrasings**:\n    *   \"Agency agrees not to sell any competing professional liability products in Nevada, without the written consent of MICOA.\"\n    *   \"Until expiration or earlier termination of the Agreement, DIALOG agrees that it and its Affiliates will not, without ENERGOUS' written approval, intentionally sell, distribute or work with any third party to develop products incorporating any Uncoupled Power Transfer Technology other than Licensed Products;\"\n\n### Exclusivity\n\n**Invariant Meaning**: Grants a party the sole right to distribute, sell, or license products/services in a territory, excluding others (including the licensor).\n\n**Pattern 1: Grant of Exclusive License/Right**\n*   **Meaning**: Licensor grants exclusive right to market/distribute products in a territory.\n*   **Variation Cues**: \"exclusive\", \"grants\", \"products\", \"distribute\", \"territory\", \"sell\", \"right\", \"distributor\", \"hereby\", \"market\".\n*   **Conditions/Exceptions**: \"Upon the terms and subject to the conditions of this Agreement...\"\n*   **Representative Phrasings**:\n    *   \"Upon the terms and subject to the conditions of this Agreement, Developer hereby grants to Distributor an exclusive, non-transferable fight and license to market and distribute the Products in the Territory.\"\n    *   \"Todos hereby grants the Reseller a non-sublicensable, non-transferable, exclusive right to distribute and sell the Products to Customers in the Territory\"\n\n**Pattern 2: Appointment as Exclusive Distributor**\n*   **Meaning**: Explicit appointment of a party as the exclusive distributor.\n*   **Variation Cues**: \"exclusive\", \"distributor\", \"products\", \"territory\", \"appointment\", \"accepts\", \"appoints\", \"terms\", \"conditions\", \"hereby\".\n*   **Conditions/Exceptions**: \"subject to the terms and conditions... including... satisfaction of the Performance Benchmarks.\"\n*   **Representative Phrasings**:\n    *   \"Hydraspin hereby appoints Distributor, and Distributor hereby accepts appointment, as Hydraspin's exclusive distributor of the Products in the Territory during the term of this Agreement...\"\n    *   \"ARGO agreed to appoint YEC as the exclusive distributor of its products in the Territory specified therein\"\n\n**Pattern 3: Explicit Non-Exclusivity**\n*   **Meaning**: Clause explicitly states the relationship is **non-exclusive**. This is a negative finding for Exclusivity.\n*   **Variation Cues**: \"appoints\", \"products\", \"non-exclusive\", \"accepts\", \"authorized\", \"appointment\", \"terms\", \"hereby\", \"distributor\", \"territory\".\n*   **Representative Phrasings**:\n    *   \"Subject to the terms and conditions of this Agreement, Galaxy hereby appoints Telnet as a non-exclusive authorized reseller of the Products and Services...\"\n    *   \"The Supplier appoints the Distributor as its non-exclusive distributor to distribute the Products in the Territory...\"\n\n**Pattern 4: Exclusive License to Commercialize**\n*   **Meaning**: Exclusive license to use patents/know-how to commercialize products in a field/territory.\n*   **Variation Cues**: \"license\", \"exclusive\", \"field\", \"hereby\", \"grants\", \"territory\", \"grant\", \"products\", \"section\", \"patents\".\n*   **Representative Phrasings**:\n    *   \"Array hereby grants to Ono an exclusive license... under the Array Patents... to Commercialize the Products in the Field in the Ono Territory.\"\n    *   \"CytoDyn hereby grants to Vyera... an exclusive royalty-bearing license... solely to Commercialize... Licensed Products in the Field in the Territory.\"\n\n**Pattern 5: Exclusive License to Use Content/Lists**\n*   **Meaning**: Exclusive license to use, modify, or transmit specific content or product listings.\n*   **Variation Cues**: \"enhance\", \"transmit\", \"grants\", \"license\", \"verticalnet\", \"perform\", \"modify\", \"display\", \"reproduce\", \"use\".\n*   **Conditions/Exceptions**: \"even as to VerticalNet\" (excludes licensor).\n*   **Representative Phrasings**:\n    *   \"VerticalNet hereby grants Neoforma an exclusive license, even as to VerticalNet, to use, modify, enhance, reproduce, display, perform and transmit the VerticalNet Medical Product Listings...\"\n    *   \"PaperExchange hereby grants VerticalNet an exclusive license to use, modify, enhance, reproduce, display, perform and transmit the PaperExchange Content\"\n\n**Pattern 6: Conditional Exclusivity (Marketing Plan)**\n*   **Meaning**: Exclusivity is granted contingent on meeting marketing requirements.\n*   **Variation Cues**: \"subject\", \"exhibit\", \"which\", \"conducting\", \"described\", \"appointed\", \"during\", \"between\", \"only\", \"one\".\n*   **Conditions/Exceptions**: \"subject to Distributor conducting mutually agreed to marketing activities as described in the Marketing Plan...\"\n*   **Representative Phrasings**:\n    *   \"During the initial one year period beginning on the Amendment Date, Distributor shall be the only distributor appointed by NETGEAR in [*], subject to Distributor conducting mutually agreed to marketing activities as described in the Marketing Plan...\"\n\n### No-Solicit of Customers\n\n**Invariant Meaning**: Restricts a party from soliciting or contacting the counterparty’s customers.\n\n**Pattern 1: Absence of Clause**\n*   **Meaning**: No specific clause restricting solicitation of customers.\n*   **Representative Phrasings**: \"No\" (Indicates absence in source data).\n\n**Pattern 2: Mutual Non-Solicitation with Joint Marketing Exception**\n*   **Meaning**: Parties cannot solicit each other's customers, except for joint marketing efforts.\n*   **Variation Cues**: \"except\", \"above\", \"section\", \"indirectly\", \"agrees\", \"joint\", \"purolator\", \"referred\", \"directly\", \"efforts\".\n*   **Conditions/Exceptions**: \"Except for the joint marketing efforts referred to in Section 3.1 (v) above...\"\n*   **Representative Phrasings**:\n    *   \"Except for the joint marketing efforts referred to in Section 3.1 (v) above, Purolator agrees not to directly or indirectly solicit next day or multiple day freight from existing sameday customers of Dynamex.\"\n    *   \"Except for the joint marketing efforts referred to in Section 3.1 (v) above, Dynamex agrees not to directly or indirectly solicit overnight freight from customers of Purolator.\"\n\n**Pattern 3: Restriction on Marketing to Customers Without Approval**\n*   **Meaning**: Party cannot market services to customers without prior written approval.\n*   **Variation Cues**: \"except\", \"provided\", \"restrictions\", \"approval\", \"period\", \"dassault\", \"during\", \"expressly\", \"one\", \"systemes\".\n*   **Conditions/Exceptions**: \"except as expressly provided in this Agreement... without the prior written approval of Dassault Systemes.\"\n*   **Representative Phrasings**:\n    *   \"During the Term of this Agreement, and for a period of one year thereafter, except as expressly provided in this Agreement, PlanetCAD shall not market any services to Customers without the prior written approval of Dassault Systemes.\"\n\n**Pattern 4: Exclusivity Implied Non-Solicitation**\n*   **Meaning**: Supplier agrees to deal exclusively through Distributor, effectively prohibiting direct solicitation of customers.\n*   **Variation Cues**: \"acting\", \"except\", \"which\", \"limitation\", \"distribution\", \"consent\", \"products\", \"indirectly\", \"hydraspin\", \"relation\".\n*   **Conditions/Exceptions**: \"except pursuant to an agreement with the Distributor... without the prior written consent of the Distributor.\"\n*   **Representative Phrasings**:\n    *   \"Hydraspin certifies, stipulates, and agrees that the Hydraspin will deal exclusively with and through the Distributor... Hydraspin will not in any way... (a) contact, approach or negotiate with any Customer outside of the Distributor...\"\n\n**Pattern 5: Restriction on Using Records to Solicit**\n*   **Meaning**: Party cannot use business records to solicit policyholders for other products.\n*   **Variation Cues**: \"authorized\", \"except\", \"provided\", \"agency\", \"unless\", \"products\", \"affiliates\", \"section\", \"micoa\", \"placed\".\n*   **Conditions/Exceptions**: \"Except as provided in Section D or unless authorized by the Agency...\"\n*   **Representative Phrasings**:\n    *   \"Except as provided in Section D or unless authorized by the Agency, MICOA or its affiliates shall not use its records of business placed by the Agency with MICOA to solicit individual policyholders for the sale of other lines of insurance...\"\n\n**Pattern 6: Right to Solicit Upon Termination**\n*   **Meaning**: Grants a party the right to solicit customers if the agreement is terminated for default. This is an exception to standard non-solicitation.\n*   **Variation Cues**: \"subscribers\", \"right\", \"directly\", \"terminated\", \"client\", \"solicit\", \"contact\", \"pursuant\", \"another\", \"galaxy\".\n*   **Conditions/Exceptions**: \"If this Agreement is terminated pursuant to section 10.2...\"\n*   **Representative Phrasings**:\n    *   \"If this Agreement is terminated pursuant to section 10.2, Galaxy shall have the right to contact Subscribers directly and solicit such Subscribers to become subscribers of Galaxy...\"\n\n### Most Favored Nation\n\n**Invariant Meaning**: Guarantees that a party receives terms (price, benefits) equal to or better than those offered to third parties.\n\n**Pattern 1: Absence of Clause**\n*   **Meaning**: No MFN clause exists.\n*   **Representative Phrasings**: \"No\" (Indicates absence in source data).\n\n**Pattern 2: Fee Structure Without MFN**\n*   **Meaning**: Fees are defined by exhibit/section, but no guarantee of best terms vs. third parties.\n*   **Variation Cues**: \"after\", \"service\", \"provided\", \"exhibit\", \"terminated\", \"when\", \"fee\", \"section\", \"described\", \"relating\".\n*   **Representative Phrasings**:\n    *   \"Diplomat will pay to Tadeo when due a fee for each of the Services equal to the amount described in EXHIBIT A hereto...\"\n\n**Pattern 3: Pricing Based on Costs/Profits (No MFN)**\n*   **Meaning**: Pricing is determined by manufacturing costs and profit maximization, not third-party comparisons.\n*   **Variation Cues**: \"subject\", \"sierra\", \"ninety\", \"conference\", \"accepted\", \"forth\", \"herein\", \"faith\", \"section\", \"orders\".\n*   **Representative Phrasings**:\n    *   \"The price for the Product... shall be subject to change due to changes in manufacturing costs and so as to maximize profits...\"\n\n**Pattern 4: MFN for Sponsorship Benefits**\n*   **Meaning**: Sponsor receives benefits of equal or greater value than other sponsors, unless they pay more.\n*   **Variation Cues**: \"receive\", \"additional\", \"logo\", \"provided\", \"name\", \"unless\", \"identifying\", \"hereunder\", \"fee\", \"exceeds\".\n*   **Conditions/Exceptions**: \"unless another proposed sponsor has agreed to pay a sponsorship fee that exceeds the amount paid by Sponsor...\"\n*   **Representative Phrasings**:\n    *   \"Racing agrees that... unless another proposed sponsor has agreed to pay a sponsorship fee that exceeds the amount paid by Sponsor, no other sponsor shall receive any benefit of greater value... than the Benefits provided to the Sponsor hereunder.\"\n\n**Pattern 5: MFN for Pricing and Allowances**\n*   **Meaning**: Distributor receives prices/benefits no less favorable than those offered to other agents/distributors/customers.\n*   **Variation Cues**: \"ntc\", \"provided\", \"agents\", \"favorable\", \"products\", \"distributors\", \"product\", \"agrees\", \"allowances\", \"commercial\".\n*   **Conditions/Exceptions**: \"other than the Product Prices existing as of the date of this Agreement with NTC's commercial partners.\"\n*   **Representative Phrasings**:\n    *   \"NTC agrees that the Product Prices, benefits and allowances offered to ALFA AESAR shall not be less favorable than those offered on Products provided to agents, distributors or marketed directly by NTC to any customers...\"\n\n**Pattern 6: Price Protection for Equity/Shares**\n*   **Meaning**: Investor receives additional shares if subsequent shares are sold at a lower price, ensuring their effective price is no greater than the lowest subsequent price.\n*   **Variation Cues**: \"additional\", \"issue\", \"which\", \"common\", \"purchaser\", \"enters\", \"global\", \"section\", \"sells\", \"subsequent\".\n*   **Conditions/Exceptions**: \"If at any time... Global Energy sells additional common shares... and the price of which is less than $200.00 per share...\"\n*   **Representative Phrasings**:\n    *   \"Global Energy shall issue additional common shares to Oxbow such that Oxbow's adjusted per-share price for its stockholdings shall be no greater than the lowest price paid by any such subsequent purchaser of its shares.\"\n\n### No-Solicit of Employees\n\n**Invariant Meaning**: Restricts a party from soliciting, hiring, or inducing the counterparty’s employees or contractors to leave.\n\n**Pattern 1: Absence of Clause**\n*   **Meaning**: No clause restricting solicitation of employees.\n*   **Representative Phrasings**: \"No\" (Indicates absence in source data).\n\n**Pattern 2: Mutual Non-Solicitation with Consent Exception**\n*   **Meaning**: Parties cannot solicit each other's employees without prior written consent.\n*   **Variation C",
+  "usage": {
+    "prompt_tokens": 19555,
+    "completion_tokens": 7000,
+    "total_tokens": 26555
+  }
+}

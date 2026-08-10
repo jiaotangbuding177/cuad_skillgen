@@ -1,0 +1,9 @@
+{
+  "protocol_version": "package-aware-v1",
+  "method": "graph_evoskill_compiler",
+  "model": "ecnu-plus",
+  "split": "test",
+  "include_governance": true,
+  "top_k_chunks": 10,
+  "top_k_knowledge": 6
+}

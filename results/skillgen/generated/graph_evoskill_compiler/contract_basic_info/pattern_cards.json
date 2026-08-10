@@ -1,0 +1,1232 @@
+{
+  "Document Name": [
+    {
+      "pattern_id": "PAT-document-name-01",
+      "category": "Document Name",
+      "member_count": 78,
+      "source_contract_count": 78,
+      "selection_score": 1.9946,
+      "variation_cues": [
+        "services",
+        "sponsorship",
+        "outsourcing",
+        "endorsement",
+        "co-branding",
+        "intellectual",
+        "property",
+        "joint",
+        "cooperation",
+        "strategic"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1044",
+          "text": "STRATEGIC ALLIANCE AGREEMENT",
+          "interpretation": "The contract is explicitly titled as a Strategic Alliance Agreement.",
+          "source_contract_id": "MANAKOASERVICESCORP_11_21_2007-EX-7.5-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0680",
+          "text": "INTELLECTUAL PROPERTY AGREEMENT",
+          "interpretation": "The contract is explicitly titled as an Intellectual Property Agreement between the parties.",
+          "source_contract_id": "GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-0014",
+          "text": "JOINT VENTURE AGREEMENT",
+          "interpretation": "The document is explicitly titled as a Joint Venture Agreement.",
+          "source_contract_id": "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-document-name-02",
+      "category": "Document Name",
+      "member_count": 44,
+      "source_contract_count": 44,
+      "selection_score": 1.764,
+      "variation_cues": [
+        "license",
+        "development",
+        "co-branding",
+        "content",
+        "sponsorship",
+        "supply",
+        "commercialization",
+        "maintenance",
+        "outsourcing",
+        "manufacturing"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0089",
+          "text": "JOINT CONTENT LICENSE AGREEMENT",
+          "interpretation": "The contract is identified as a Joint Content License Agreement.",
+          "source_contract_id": "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0496",
+          "text": "STRATEGIC ALLIANCE AGREEMENT",
+          "interpretation": "The contract is identified as a Strategic Alliance Agreement.",
+          "source_contract_id": "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0502",
+          "text": "TRANSPORTATION AGREEMENT",
+          "interpretation": "The contract is identified as a Transportation Agreement in the title and preamble.",
+          "source_contract_id": "ENERGYXXILTD_05_08_2015-EX-10.13-Transportation_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-document-name-03",
+      "category": "Document Name",
+      "member_count": 14,
+      "source_contract_count": 14,
+      "selection_score": 1.6853,
+      "variation_cues": [
+        "strategic",
+        "alliance",
+        "distributor",
+        "distributorship",
+        "intellectual",
+        "property",
+        "exhibit",
+        "erchonia",
+        "exclusive",
+        "corporation"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1300",
+          "text": "STRATEGIC ALLIANCE AGREEMENT",
+          "interpretation": "The contract is identified as a Strategic Alliance Agreement.",
+          "source_contract_id": "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0646",
+          "text": "INTELLECTUAL PROPERTY AGREEMENT",
+          "interpretation": "The contract is identified as an Intellectual Property Agreement between the parties.",
+          "source_contract_id": "GSITECHNOLOGYINC_11_16_2009-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT_between_SONY_ELECTRONICS_INC._and_GSI_TECHNOLOGY,_INC."
+        },
+        {
+          "ka_id": "KA-0894",
+          "text": "ERCHONIA CORPORATION EXCLUSIVE DISTRIBUTOR AGREEMENT",
+          "interpretation": "The contract is identified as an Exclusive Distributor Agreement between Erchonia Corporation and the Distributor.",
+          "source_contract_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-document-name-04",
+      "category": "Document Name",
+      "member_count": 13,
+      "source_contract_count": 13,
+      "selection_score": 1.6557,
+      "variation_cues": [
+        "amendment",
+        "manufacturing",
+        "agency",
+        "collaboration",
+        "supply",
+        "first",
+        "development",
+        "corporation",
+        "nutrition",
+        "llc"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0573",
+          "text": "Collaboration Agreement",
+          "interpretation": "The document is identified as a Collaboration Agreement between the parties.",
+          "source_contract_id": "FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration_Agreement"
+        },
+        {
+          "ka_id": "KA-0823",
+          "text": "JOINT VENTURE AGREEMENT",
+          "interpretation": "The document is identified as a Joint Venture Agreement between the specified parties.",
+          "source_contract_id": "IMPCOTECHNOLOGIESINC_04_15_2003-EX-10.65-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0076",
+          "text": "AGENCY AGREEMENT",
+          "interpretation": "The document is identified as an Agency Agreement between the Company, the Bank, and the Agent.",
+          "source_contract_id": "ATHENSBANCSHARESCORP_11_02_2009-EX-1.2-AGENCY_AGREEMENT_,_2009"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-document-name-05",
+      "category": "Document Name",
+      "member_count": 10,
+      "source_contract_count": 10,
+      "selection_score": 1.5437,
+      "variation_cues": [
+        "license",
+        "distributor",
+        "contract",
+        "transportation",
+        "media",
+        "cooperation",
+        "development",
+        "business",
+        "venture",
+        "joint"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1068",
+          "text": "STRATEGIC ALLIANCE AGREEMENT",
+          "interpretation": "The document is identified as a Strategic Alliance Agreement in the title and preamble.",
+          "source_contract_id": "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0990",
+          "text": "DISTRIBUTOR AGREEMENT",
+          "interpretation": "The contract is identified as a Distributor Agreement in the header and preamble.",
+          "source_contract_id": "LUCIDINC_04_15_2011-EX-10.9-DISTRIBUTOR_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0633",
+          "text": "TRANSPORTATION CONTRACT",
+          "interpretation": "The document is identified as a Transportation Contract in the header and title sections.",
+          "source_contract_id": "GRANTIERRAENERGYINC_05_07_2012-EX-10.6-TRANSPORTATION_CONTRACT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-document-name-06",
+      "category": "Document Name",
+      "member_count": 8,
+      "source_contract_count": 8,
+      "selection_score": 1.5251,
+      "variation_cues": [
+        "agency",
+        "outsourcing",
+        "biopure",
+        "corporation",
+        "franchise",
+        "sponsorship",
+        "venture",
+        "joint"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1145",
+          "text": "SPONSORSHIP AGREEMENT",
+          "interpretation": "The document is explicitly titled as a Sponsorship Agreement between the parties.",
+          "source_contract_id": "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1203",
+          "text": "JOINT VENTURE AGREEMENT",
+          "interpretation": "The document is explicitly titled as a Joint Venture Agreement between the specified parties.",
+          "source_contract_id": "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0156",
+          "text": "AGENCY AGREEMENT",
+          "interpretation": "The document is explicitly titled as an Agency Agreement between El Banco Financial Corporation and the sales agent.",
+          "source_contract_id": "BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY_AGREEMENT"
+        }
+      ]
+    }
+  ],
+  "Parties": [
+    {
+      "pattern_id": "PAT-parties-01",
+      "category": "Parties",
+      "member_count": 47,
+      "source_contract_count": 32,
+      "selection_score": 1.9272,
+      "variation_cues": [
+        "inc",
+        "corporation",
+        "com",
+        "ltd",
+        "systems",
+        "delaware",
+        "international",
+        "nevada",
+        "pharmaceuticals",
+        "affiliates"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0462",
+          "text": "RSL COM PrimeCall, Inc., a Delaware corporation (\"PrimeCall\")",
+          "interpretation": "RSL COM PrimeCall, Inc. is identified as one of the contracting parties.",
+          "source_contract_id": "DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding_Agreement__Service_Agreement"
+        },
+        {
+          "ka_id": "KA-0474",
+          "text": "DOVA PHARMACEUTICALS, INC.",
+          "interpretation": "Dova Pharmaceuticals, Inc. is identified as one of the contracting parties.",
+          "source_contract_id": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion_Agreement"
+        },
+        {
+          "ka_id": "KA-0392",
+          "text": "Bioeq IP AG",
+          "interpretation": "Bioeq IP AG is identified as one of the contracting parties.",
+          "source_contract_id": "CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-parties-02",
+      "category": "Parties",
+      "member_count": 13,
+      "source_contract_count": 10,
+      "selection_score": 1.6972,
+      "variation_cues": [
+        "corporation",
+        "delaware",
+        "inc",
+        "organized",
+        "laws",
+        "arconic",
+        "corio",
+        "licensee",
+        "licensor",
+        "rolled"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0491",
+          "text": "e.l.f. Beauty, Inc., a Delaware corporation (the \"Company\")",
+          "interpretation": "e.l.f. Beauty, Inc. is identified as one of the primary parties to the agreement.",
+          "source_contract_id": "ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0320",
+          "text": "Commerce One, Inc., a Delaware corporation",
+          "interpretation": "Commerce One, Inc. is identified as the other primary party to the agreement.",
+          "source_contract_id": "CORIOINC_07_20_2000-EX-10.5-LICENSE_AND_HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0422",
+          "text": "CytoDyn Inc., a Delaware corporation (\"CytoDyn\")",
+          "interpretation": "CytoDyn Inc. is identified as the other contracting party.",
+          "source_contract_id": "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-parties-03",
+      "category": "Parties",
+      "member_count": 13,
+      "source_contract_count": 11,
+      "selection_score": 1.6606,
+      "variation_cues": [
+        "inc",
+        "pharmaceuticals",
+        "corporation",
+        "georgia",
+        "amag",
+        "vaccines",
+        "dba",
+        "jvls",
+        "llc",
+        "ltd"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0598",
+          "text": "CONVERGTV, INC., a Delaware Corporation",
+          "interpretation": "ConvergTV, Inc. is identified as one of the primary parties entering into the agreement.",
+          "source_contract_id": "FulucaiProductionsLtd_20131223_10-Q_EX-10.9_8368347_EX-10.9_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0563",
+          "text": "Equifax Inc., a Georgia corporation (\"Equifax\")",
+          "interpretation": "Equifax Inc. is identified as one of the primary parties entering into the agreement.",
+          "source_contract_id": "FIDELITYNATIONALINFORMATIONSERVICES,INC_08_05_2009-EX-10.3-INTELLECTUAL_PROPERTY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0387",
+          "text": "WPD Pharmaceuticals, (\"WPD\")",
+          "interpretation": "WPD Pharmaceuticals is identified as the second primary party entering into the agreement.",
+          "source_contract_id": "CnsPharmaceuticalsInc_20200326_8-K_EX-10.1_12079626_EX-10.1_Development_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-parties-04",
+      "category": "Parties",
+      "member_count": 11,
+      "source_contract_count": 10,
+      "selection_score": 1.5559,
+      "variation_cues": [
+        "llc",
+        "corporation",
+        "company",
+        "biomanufacturing",
+        "adma",
+        "sanofi",
+        "pasteur",
+        "alamogordo",
+        "federal",
+        "financial"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0574",
+          "text": "F. Hoffmann-La Roche Ltd",
+          "interpretation": "F. Hoffmann-La Roche Ltd is identified as one of the primary parties to the agreement.",
+          "source_contract_id": "FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration_Agreement"
+        },
+        {
+          "ka_id": "KA-0580",
+          "text": "EDGE Communications Solutions, LLC",
+          "interpretation": "EDGE Communications Solutions, LLC is identified as one of the primary parties to the agreement.",
+          "source_contract_id": "FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0242",
+          "text": "Stremick's Heritage Foods, LLC",
+          "interpretation": "Stremick's Heritage Foods, LLC is identified as one of the primary parties to the agreement, referred to as 'Heritage'.",
+          "source_contract_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing_Agreement3"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-parties-05",
+      "category": "Parties",
+      "member_count": 6,
+      "source_contract_count": 5,
+      "selection_score": 1.4116,
+      "variation_cues": [
+        "liability",
+        "delaware",
+        "llc",
+        "company",
+        "limited",
+        "curo",
+        "owner",
+        "finance",
+        "receivables",
+        "management"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0421",
+          "text": "Vyera Pharmaceuticals, LLC, a Delaware limited liability company (\"Vyera\")",
+          "interpretation": "Vyera Pharmaceuticals, LLC is identified as one of the contracting parties.",
+          "source_contract_id": "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0468",
+          "text": "National CineMedia, LLC, a Delaware limited liability company (\"NCM\")",
+          "interpretation": "National CineMedia, LLC is identified as one of the primary parties to the agreement.",
+          "source_contract_id": "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate_Agreement"
+        },
+        {
+          "ka_id": "KA-0357",
+          "text": "S2K Financial LLC, a Delaware limited liability company (\"S2K\")",
+          "interpretation": "S2K Financial LLC is identified as the second primary party to the agreement.",
+          "source_contract_id": "CcRealEstateIncomeFundadv_20181205_POS_8C_EX-99.(H)(3)_11447739_EX-99.(H)(3)_Marketing_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-parties-06",
+      "category": "Parties",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.3709,
+      "variation_cues": [
+        "corporation",
+        "delaware",
+        "nutrition",
+        "premier",
+        "spinco",
+        "cerence",
+        "inc",
+        "porex",
+        "clickstream",
+        "digital"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0363",
+          "text": "CERENCE INC., a Delaware corporation (\"SpinCo\")",
+          "interpretation": "Cerence Inc. is identified as the second primary party to the agreement, referred to as SpinCo.",
+          "source_contract_id": "CerenceInc_20191002_8-K_EX-10.4_11827494_EX-10.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-0243",
+          "text": "Premier Nutrition Corporation",
+          "interpretation": "Premier Nutrition Corporation is identified as the other primary party to the agreement, referred to as 'Premier'.",
+          "source_contract_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing_Agreement3"
+        },
+        {
+          "ka_id": "KA-0469",
+          "text": "Digital Cinema Destinations Corp., a Delaware corporation (\"Network Affiliate\"",
+          "interpretation": "Digital Cinema Destinations Corp. is identified as the other primary party, referred to as the Network Affiliate.",
+          "source_contract_id": "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate_Agreement"
+        }
+      ]
+    }
+  ],
+  "Agreement Date": [
+    {
+      "pattern_id": "PAT-agreement-date-01",
+      "category": "Agreement Date",
+      "member_count": 50,
+      "source_contract_count": 50,
+      "selection_score": 2.1152,
+      "variation_cues": [
+        "day",
+        "june",
+        "march",
+        "april",
+        "december",
+        "august",
+        "february",
+        "november",
+        "january",
+        "october"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1835",
+          "text": "12th day of November, 2019",
+          "interpretation": "The agreement was made and entered into on November 12, 2019.",
+          "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-1566",
+          "text": "28th day of March 2006",
+          "interpretation": "The agreement was made and entered into on March 28, 2006.",
+          "source_contract_id": "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1777",
+          "text": "June 13, 2012",
+          "interpretation": "The agreement was made and entered into on June 13, 2012.",
+          "source_contract_id": "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-agreement-date-02",
+      "category": "Agreement Date",
+      "member_count": 38,
+      "source_contract_count": 38,
+      "selection_score": 1.9838,
+      "variation_cues": [
+        "day",
+        "october",
+        "november",
+        "february",
+        "january",
+        "december",
+        "march",
+        "april",
+        "july",
+        "entered"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1622",
+          "text": "20t h day of November, 2018",
+          "interpretation": "The agreement was entered into on November 20, 2018.",
+          "source_contract_id": "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement"
+        },
+        {
+          "ka_id": "KA-1756",
+          "text": "October 30, 2019",
+          "interpretation": "The agreement was made and entered into on October 30, 2019.",
+          "source_contract_id": "VEONEER,INC_02_21_2020-EX-10.11-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1771",
+          "text": "9th day of October, 2001",
+          "interpretation": "The agreement was entered into on October 9, 2001.",
+          "source_contract_id": "VERTICALNETINC_04_01_2002-EX-10.19-MAINTENANCE_AND_SUPPORT_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-agreement-date-03",
+      "category": "Agreement Date",
+      "member_count": 31,
+      "source_contract_count": 31,
+      "selection_score": 1.9241,
+      "variation_cues": [
+        "day",
+        "dated",
+        "september",
+        "march",
+        "november",
+        "december",
+        "july",
+        "february",
+        "friday",
+        "january"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1859",
+          "text": "12th day of November, 2018",
+          "interpretation": "The agreement was executed on November 12, 2018.",
+          "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        },
+        {
+          "ka_id": "KA-0999",
+          "text": "dated March 15, 2000",
+          "interpretation": "The contract states it was dated March 15, 2000.",
+          "source_contract_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-1310",
+          "text": "December 10, 2015",
+          "interpretation": "The agreement was executed and dated December 10, 2015.",
+          "source_contract_id": "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-agreement-date-04",
+      "category": "Agreement Date",
+      "member_count": 17,
+      "source_contract_count": 17,
+      "selection_score": 1.7617,
+      "variation_cues": [
+        "january",
+        "march",
+        "december",
+        "dated",
+        "september",
+        "october",
+        "april"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1206",
+          "text": "December 19, 2019",
+          "interpretation": "The agreement is dated December 19, 2019, as stated in the preamble.",
+          "source_contract_id": "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0683",
+          "text": "September 27, 2018",
+          "interpretation": "The agreement is dated September 27, 2018, as stated in the preamble.",
+          "source_contract_id": "GarrettMotionInc_20181001_8-K_EX-2.4_11364532_EX-2.4_Intellectual_Property_Agreement"
+        },
+        {
+          "ka_id": "KA-1291",
+          "text": "Dated as of April 2, 2020",
+          "interpretation": "The contract is dated April 2, 2020.",
+          "source_contract_id": "OTISWORLDWIDECORP_04_03_2020-EX-10.4-INTELLECTUAL_PROPERTY_AGREEMENT_by_and_among_UNITED_TECHNOLOGIES_CORPORATION,_OTIS_WORLDWIDE_CORPORATION_and_CARRIER_~1"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-agreement-date-05",
+      "category": "Agreement Date",
+      "member_count": 21,
+      "source_contract_count": 21,
+      "selection_score": 1.7242,
+      "variation_cues": [
+        "dated",
+        "november",
+        "april",
+        "june",
+        "october",
+        "day",
+        "august",
+        "july",
+        "february",
+        "january"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1766",
+          "text": "dated this  3rd day of November, 2010",
+          "interpretation": "The agreement was dated November 3, 2010.",
+          "source_contract_id": "VERTEXENERGYINC_08_14_2014-EX-10.24-OPERATION_AND_MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0606",
+          "text": "29/3/18",
+          "interpretation": "The agreement is dated March 29, 2018.",
+          "source_contract_id": "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0784",
+          "text": "April 15, 1994",
+          "interpretation": "The agreement is dated April 15, 1994.",
+          "source_contract_id": "HYPERIONSOFTWARECORP_09_28_1994-EX-10.47-EXCLUSIVE_DISTRIBUTOR_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-agreement-date-06",
+      "category": "Agreement Date",
+      "member_count": 8,
+      "source_contract_count": 8,
+      "selection_score": 1.6334,
+      "variation_cues": [
+        "day",
+        "january",
+        "september",
+        "first",
+        "december",
+        "dated",
+        "april"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1669",
+          "text": "this first (1st)  day of January, 1996",
+          "interpretation": "The agreement states it was made and entered into on January 1, 1996.",
+          "source_contract_id": "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1545",
+          "text": "2nd day of September 1998",
+          "interpretation": "The agreement states it was made and entered into on this date.",
+          "source_contract_id": "STARTECGLOBALCOMMUNICATIONSCORP_11_16_1998-EX-10.30-CONSTRUCTION_AND_MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1762",
+          "text": "dated as of December 20, 2007",
+          "interpretation": "The agreement states it is dated as of December 20, 2007.",
+          "source_contract_id": "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL_PROPERTY_AGREEMENT"
+        }
+      ]
+    }
+  ],
+  "Effective Date": [
+    {
+      "pattern_id": "PAT-effective-date-01",
+      "category": "Effective Date",
+      "member_count": 105,
+      "source_contract_count": 105,
+      "selection_score": 2.2191,
+      "variation_cues": [
+        "effective",
+        "date",
+        "day",
+        "march",
+        "february",
+        "september",
+        "january",
+        "december",
+        "august",
+        "june"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1718",
+          "text": "20t h day of December 2018 (the \"Effective Date\")",
+          "interpretation": "The contract explicitly defines December 20, 2018, as the Effective Date.",
+          "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+        },
+        {
+          "ka_id": "KA-1137",
+          "text": "23rd day of September, 1997 (\"Effective Date\")",
+          "interpretation": "The contract explicitly defines the Effective Date as September 23, 1997.",
+          "source_contract_id": "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1012",
+          "text": "14th day of March, 2016",
+          "interpretation": "The contract explicitly defines the date of execution as the 'Effective Date'.",
+          "source_contract_id": "LifewayFoodsInc_20160316_10-K_EX-10.24_9489766_EX-10.24_Endorsement_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-effective-date-02",
+      "category": "Effective Date",
+      "member_count": 15,
+      "source_contract_count": 15,
+      "selection_score": 1.8094,
+      "variation_cues": [
+        "effective",
+        "date",
+        "december",
+        "hereof",
+        "july",
+        "dated",
+        "day",
+        "commence",
+        "signed",
+        "january"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0928",
+          "text": "This JV Agreement shall become effective on the signing date",
+          "interpretation": "The agreement becomes effective on the date it is signed, which is April 2, 2020.",
+          "source_contract_id": "KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0821",
+          "text": "December 10, 1993",
+          "interpretation": "The Effective Date is defined as the Date of Installation of the PSS in Kuwait, which is December 10, 1993.",
+          "source_contract_id": "IMAGEWARESYSTEMSINC_12_20_1999-EX-10.22-MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0754",
+          "text": "dated as of May 13, 2020",
+          "interpretation": "The agreement becomes effective on the date it is signed, which is May 13, 2020.",
+          "source_contract_id": "HC2HOLDINGS,INC_05_14_2020-EX-10.1-COOPERATION_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-effective-date-03",
+      "category": "Effective Date",
+      "member_count": 18,
+      "source_contract_count": 18,
+      "selection_score": 1.7602,
+      "variation_cues": [
+        "date",
+        "march",
+        "hereof",
+        "day",
+        "april",
+        "commence",
+        "term",
+        "commencing",
+        "dated",
+        "begin"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0304",
+          "text": "11th day of December, 2015",
+          "interpretation": "The Execution Date is defined as December 11, 2015, which serves as the effective date for the term calculation.",
+          "source_contract_id": "CHIPMOSTECHNOLOGIESBERMUDALTD_04_18_2016-EX-4.72-Strategic_Alliance_Agreement"
+        },
+        {
+          "ka_id": "KA-0227",
+          "text": "April 18, 2018",
+          "interpretation": "The contract states it is made as of April 18, 2018, which serves as the effective date.",
+          "source_contract_id": "BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0637",
+          "text": "From January 30, 2012",
+          "interpretation": "The term of execution begins on January 30, 2012, which serves as the effective date of the contract.",
+          "source_contract_id": "GRANTIERRAENERGYINC_05_07_2012-EX-10.6-TRANSPORTATION_CONTRACT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-effective-date-04",
+      "category": "Effective Date",
+      "member_count": 12,
+      "source_contract_count": 12,
+      "selection_score": 1.6063,
+      "variation_cues": [
+        "effective",
+        "november",
+        "date",
+        "day",
+        "february",
+        "january",
+        "october",
+        "letter",
+        "july",
+        "made"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1836",
+          "text": "12th day of November, 2019 (the \"Effective Date\")",
+          "interpretation": "The effective date of the agreement is explicitly defined as November 12, 2019.",
+          "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-1589",
+          "text": "4th day of February 2019 (\"Effective Date\")",
+          "interpretation": "The effective date of the addendum is explicitly defined as February 4, 2019.",
+          "source_contract_id": "ScansourceInc_20190509_10-Q_EX-10.2_11661422_EX-10.2_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-1700",
+          "text": "January 1, 2007",
+          "interpretation": "The preamble explicitly states the agreement is effective as of January 1, 2007.",
+          "source_contract_id": "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-effective-date-05",
+      "category": "Effective Date",
+      "member_count": 9,
+      "source_contract_count": 9,
+      "selection_score": 1.5569,
+      "variation_cues": [
+        "date",
+        "effective",
+        "last",
+        "execute",
+        "which",
+        "sign",
+        "signed",
+        "term",
+        "begin",
+        "signatory"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1123",
+          "text": "September 30, 1998",
+          "interpretation": "The contract states it is effective as of September 30, 1998, which is also defined as the Effective Date in Section 1.1.",
+          "source_contract_id": "Monsanto_Company_-_SECOND_A_R_EXCLUSIVE_AGENCY_AND_MARKETING_AGREEMENT_"
+        },
+        {
+          "ka_id": "KA-0874",
+          "text": "The term of this Agreement (\"Term\") will begin on the date this Agreement is signed by the last signatory (\"Effective Date\")",
+          "interpretation": "The effective date is defined as the date the last signatory signs the agreement, which corresponds to August 8, 2018.",
+          "source_contract_id": "IbioInc_20200313_8-K_EX-10.1_12052678_EX-10.1_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0828",
+          "text": "the date on which the Parties sign and execute this Agreement",
+          "interpretation": "The Effective Date is defined as the date of signing and execution, which corresponds to the Agreement Date of May 18, 2001.",
+          "source_contract_id": "IMPCOTECHNOLOGIESINC_04_15_2003-EX-10.65-JOINT_VENTURE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-effective-date-06",
+      "category": "Effective Date",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.5104,
+      "variation_cues": [
+        "date",
+        "effective",
+        "november",
+        "above",
+        "first",
+        "written",
+        "day",
+        "become"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1860",
+          "text": "12th day of November, 2018 (the \"Effective Date\")",
+          "interpretation": "The effective date of the agreement is defined as November 12, 2018.",
+          "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        },
+        {
+          "ka_id": "KA-0880",
+          "text": "This Agreement shall become effective upon the date first written above",
+          "interpretation": "The effective date is the same as the agreement date, July 19, 2018.",
+          "source_contract_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-1623",
+          "text": "20t h day of November, 2018 (the \"Effective Date\")",
+          "interpretation": "The Effective Date is defined as November 20, 2018.",
+          "source_contract_id": "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement"
+        }
+      ]
+    }
+  ],
+  "Expiration Date": [
+    {
+      "pattern_id": "PAT-expiration-date-01",
+      "category": "Expiration Date",
+      "member_count": 38,
+      "source_contract_count": 38,
+      "selection_score": 2.1976,
+      "variation_cues": [
+        "date",
+        "years",
+        "effective",
+        "term",
+        "five",
+        "initial",
+        "continue",
+        "period",
+        "year",
+        "ten"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1837",
+          "text": "end on the five (5) year anniversary of the Effective Date (the \"Initial Term\")",
+          "interpretation": "The initial term expires five years after the effective date, which calculates to November 12, 2024.",
+          "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-1166",
+          "text": "two (2) years after the date of this Agreement",
+          "interpretation": "The initial term of the agreement expires two years after the agreement date, which is January 1, 1998.",
+          "source_contract_id": "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR_AGREEMENT_New"
+        },
+        {
+          "ka_id": "KA-1734",
+          "text": "This Agreement shall be for an initial term of five (5) years",
+          "interpretation": "The initial term of the agreement is five years from the effective date (December 22, 2006), meaning the initial term expires on December 22, 2011.",
+          "source_contract_id": "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC_ALLIANCE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-expiration-date-02",
+      "category": "Expiration Date",
+      "member_count": 25,
+      "source_contract_count": 25,
+      "selection_score": 1.9796,
+      "variation_cues": [
+        "december",
+        "term",
+        "terminated",
+        "unless",
+        "date",
+        "continue",
+        "effective",
+        "february",
+        "expire",
+        "initial"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0737",
+          "text": "expire on December 31, 2028",
+          "interpretation": "The initial term of the agreement expires on December 31, 2028.",
+          "source_contract_id": "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service_Agreement"
+        },
+        {
+          "ka_id": "KA-0774",
+          "text": "The term of this Agreement shall be one (1) year unless terminated earlier in accordance with the terms of this Agreement",
+          "interpretation": "The initial term is one year from the effective date, meaning it expires on January 5, 2016, unless terminated earlier.",
+          "source_contract_id": "HPILHOLDING_01_07_2015-EX-99.1-COOPERATION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1671",
+          "text": "concluding December 31, 1998",
+          "interpretation": "The initial term of the agreement expires on December 31, 1998.",
+          "source_contract_id": "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-expiration-date-03",
+      "category": "Expiration Date",
+      "member_count": 16,
+      "source_contract_count": 16,
+      "selection_score": 1.9444,
+      "variation_cues": [
+        "terminated",
+        "continue",
+        "until",
+        "date",
+        "effective",
+        "effect",
+        "thereafter",
+        "pursuant",
+        "written",
+        "indefinitely"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0940",
+          "text": "This Agreement shall continue until terminated as provided herein.",
+          "interpretation": "The agreement does not have a fixed expiration date but continues until terminated by either party upon termination of employment.",
+          "source_contract_id": "KNOWLABS,INC_08_15_2005-EX-10-INTELLECTUAL_PROPERTY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1745",
+          "text": "this Agreement shall continue indefinitely",
+          "interpretation": "The agreement does not have a fixed expiration date and continues indefinitely unless terminated.",
+          "source_contract_id": "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1306",
+          "text": "This Agreement shall commence on the Effective Date and shall continue until it is terminated in accordance with the provisions of Section 15 of this Agreement",
+          "interpretation": "The agreement does not have a fixed expiration date; it continues until terminated according to Section 15.",
+          "source_contract_id": "PHLVARIABLEINSURANCECOCT_08_17_2009-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-expiration-date-04",
+      "category": "Expiration Date",
+      "member_count": 13,
+      "source_contract_count": 13,
+      "selection_score": 1.8821,
+      "variation_cues": [
+        "years",
+        "period",
+        "continue",
+        "term",
+        "effect",
+        "date",
+        "effective",
+        "two",
+        "force",
+        "full"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1481",
+          "text": "The initial term of this Agreement shall commence on the Effective Date and shall continue for a period of five (5) years",
+          "interpretation": "The initial term is five years from the Effective Date of May 1, 2016, resulting in an expiration date of May 1, 2021.",
+          "source_contract_id": "RitterPharmaceuticalsInc_20200313_S-4A_EX-10.54_12055220_EX-10.54_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-1493",
+          "text": "continue for a minimum period of 12 months",
+          "interpretation": "The initial term is a minimum of 12 months from the effective date, expiring on April 1, 2020, after which it continues upon mutual agreement.",
+          "source_contract_id": "SCOUTCAMINC_05_12_2020-EX-10.22-SERVICES_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0513",
+          "text": "the term of this Agreement shall be for a period of five (5) years, beginning on the Effective Date",
+          "interpretation": "The initial term is five years starting from the Effective Date of January 21, 2005, making the expiration date January 21, 2010.",
+          "source_contract_id": "ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-expiration-date-05",
+      "category": "Expiration Date",
+      "member_count": 14,
+      "source_contract_count": 14,
+      "selection_score": 1.8275,
+      "variation_cues": [
+        "effective",
+        "term",
+        "date",
+        "years",
+        "period",
+        "year",
+        "initial",
+        "commence",
+        "effect",
+        "continue"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-1105",
+          "text": "This Agreement shall commence on the Effective Date and shall extend for a period of Five (5) years thereafter (\"Initial Term\")",
+          "interpretation": "The initial term is five years from the Effective Date of February 13, 2018, resulting in an expiration date of February 13, 2023.",
+          "source_contract_id": "Magenta_Therapeutics,_Inc._-_Master_Development_and_Manufacturing_Agreement"
+        },
+        {
+          "ka_id": "KA-0466",
+          "text": "shall continue for a term of three (3) years",
+          "interpretation": "The initial term is three years from the effective date of October 1, 1999, resulting in an expiration date of September 30, 2002.",
+          "source_contract_id": "DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding_Agreement__Service_Agreement"
+        },
+        {
+          "ka_id": "KA-0251",
+          "text": "this Agreement shall commence on the Effective Date and continue for a period of one (1) year (\"Term\")",
+          "interpretation": "The initial term is one year from the effective date of March 1, 2012, making the expiration date March 1, 2013.",
+          "source_contract_id": "BizzingoInc_20120322_8-K_EX-10.17_7504499_EX-10.17_Endorsement_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-expiration-date-06",
+      "category": "Expiration Date",
+      "member_count": 11,
+      "source_contract_count": 11,
+      "selection_score": 1.6583,
+      "variation_cues": [
+        "date",
+        "effective",
+        "anniversary",
+        "term",
+        "initial",
+        "through",
+        "day",
+        "prior",
+        "mean",
+        "first"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0983",
+          "text": "the fifth (5t h) anniversary of the Effective Date",
+          "interpretation": "The initial term expires on the fifth anniversary of the Effective Date, which is August 16, 2017.",
+          "source_contract_id": "LIGHTBRIDGECORP_11_23_2015-EX-10.26-STRATEGIC_ALLIANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-1521",
+          "text": "The term of this Agreement is twelve (12) months from the date hereof",
+          "interpretation": "The initial term is 12 months from the effective date of November 30, 2017, meaning the initial term expires on November 30, 2018.",
+          "source_contract_id": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic_Alliance_Agreement"
+        },
+        {
+          "ka_id": "KA-1349",
+          "text": "Initial Term shall mean the Effective Date through the day prior to the fourth anniversary of the Effective Date",
+          "interpretation": "The initial term expires on the day prior to the fourth anniversary of the Effective Date (September 29, 2003).",
+          "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+        }
+      ]
+    }
+  ]
+}

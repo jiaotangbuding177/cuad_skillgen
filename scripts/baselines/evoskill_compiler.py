@@ -80,7 +80,7 @@ def build_extract_user_prompt(contract_id: str, contract_text: str,
 GENERATE_SYSTEM = """You are a contract review skill compiler. Generate a SKILL.md from the Knowledge Atom evidence index.
 
 CRITICAL RULES:
-1. Every review rule in the SKILL.md MUST reference specific KA IDs as evidence.
+1. Every review rule / pattern in the SKILL.md MUST reference specific KA IDs as evidence.
 2. Never fabricate clause patterns that are not supported by the evidence index.
 3. Follow the security policy strictly.
 
@@ -89,18 +89,26 @@ The SKILL.md must contain these sections:
 ## Covered Categories
 List each category with the number of evidence atoms available.
 
-## Evidence-Based Review Rules
-For each category, describe review rules with [KA-XXXX] references.
-Example: "Look for explicit grant language such as 'hereby grants' [KA-0001, KA-0003]"
+## Common Clause Patterns & Example Phrasing
+For each category, instead of abstract review rules, derive 3-6 common clause PATTERNS
+from the evidence KAs. For each pattern include:
+- Pattern Name: a short label (e.g. "Termination Right with Notice Period")
+- Description: what the pattern looks like in real contracts
+- **Example Phrasing:** 1-2 actual full-length example quotes from KA texts
+  showing how this clause is typically phrased in real contracts.
+  These examples are SEARCH GUIDES — the runtime agent will look for similar language.
+  Cite the KA IDs used.
+- Variation Notes: how the pattern may differ across contracts (KA IDs as evidence)
 
 ## Review Checklist
-Actionable checklist items for each category.
+Actionable checklist items for each category, referencing pattern names.
 
 ## Output Format
 JSON: {status, answer, evidence_unit_ids, source_contract_ids, missing_inputs, human_review_required}
 
 ## Boundary Rules
-Reference the security policy rules by ID (e.g., [RB-001], [SR-001])."""
+Reference the security policy rules by ID (e.g., [RB-001], [SR-001]).
+"""
 
 
 def build_generate_user_prompt(evidence_by_category: dict, security_policy: dict,
@@ -127,15 +135,18 @@ def build_generate_user_prompt(evidence_by_category: dict, security_policy: dict
         parts.append(f"  - {cat}")
 
     parts.append("\n=== INSTRUCTION ===")
-    parts.append("Generate a SKILL.md that references specific KA IDs for every review rule.")
+    parts.append("Generate a SKILL.md with Common Clause Patterns, each including concrete Example Phrasing drawn from KA texts.")
+    parts.append("Provide full example quotes (up to 300 chars) — the runtime agent uses these as search templates.")
+    parts.append("Reference specific KA IDs for every pattern.")
     return "\n".join(parts)
 
 
 COMPILE_SYSTEM = """You are a skill quality auditor. Review the following SKILL.md for:
-1. Redundancy: Remove duplicate rules
+1. Redundancy: Remove duplicate patterns
 2. Consistency: Fix contradictions
-3. Evidence: Verify all rules reference valid KA IDs
-4. Security: Verify all boundary rules reference security policy
+3. Evidence: Verify all patterns reference valid KA IDs
+4. Example Phrasing Quality: Ensure examples are actual quotes from KA texts (not fabricated), are at least 80 chars, and represent diverse phrasing styles
+5. Security: Verify all boundary rules reference security policy
 
 Return ONLY the corrected SKILL.md. Do not add commentary."""
 

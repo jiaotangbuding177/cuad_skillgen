@@ -1,76 +1,176 @@
 # SKILL.md: Contract Review - Liability, Indemnity, and Warranties
 
 ## Covered Categories
-This skill covers the following categories based on the provided Knowledge Atom (KA) evidence index:
+- **Uncapped Liability**: 30 Evidence Atoms
+- **Cap on Liability**: 30 Evidence Atoms
+- **Liquidated Damages**: 30 Evidence Atoms
+- **Warranty Duration**: 30 Evidence Atoms
 
-1.  **Uncapped Liability**: Evidence Atoms (KA-0678, KA-0754, KA-0758, KA-0776, KA-0801, KA-0001, KA-0005, KA-0009, KA-0014, KA-0017, KA-0021, KA-0022, KA-0027, KA-0031, KA-0035, KA-0039, KA-0043, KA-0051, KA-0052, KA-0056, KA-0064, KA-0073, KA-0077, KA-0091, KA-0095)
-2.  **Cap on Liability**: Evidence Atoms (KA-0100, KA-0679, KA-0704, KA-0755, KA-0759, KA-0777, KA-0802, KA-0803, KA-0798, KA-0015, KA-0018, KA-0187, KA-0200, KA-0338, KA-0361, KA-0362, KA-0363, KA-0368, KA-0475, KA-0525, KA-0541, KA-0553, KA-0675, KA-0712, KA-0751)
-3.  **Liquidated Damages**: Evidence Atoms (KA-0085, KA-0656, KA-0705, KA-0756, KA-0760, KA-0804, KA-0791, KA-0118, KA-0130, KA-0270, KA-0347, KA-0669, KA-0670, KA-0671, KA-0012, KA-0013, KA-0016, KA-0025, KA-0041, KA-0045, KA-0049, KA-0054, KA-0058, KA-0062, KA-0067)
-4.  **Warranty Duration**: Evidence Atoms (KA-0105, KA-0106, KA-0562, KA-0595, KA-0681, KA-0757, KA-0761, KA-0753, KA-0800, KA-0198, KA-0224, KA-0370, KA-0486, KA-0555, KA-0556, KA-0677, KA-0788, KA-0004, KA-0020, KA-0034, KA-0046, KA-0050, KA-0120, KA-0140, KA-0154)
+## Common Clause Patterns & Example Phrasing
 
-## Evidence-Based Review Rules
+### Category: Uncapped Liability
+*Focus: Identifying clauses where liability is explicitly excluded from caps, often for severe breaches or specific obligations.*
 
-### 1. Uncapped Liability
-Review contracts to identify clauses that explicitly exclude specific breaches or damages from general liability caps, or that establish indemnification obligations without monetary limits.
+**1. Exclusion for Gross Negligence or Willful Misconduct**
+- **Description**: The liability cap does not apply to damages resulting from gross negligence, willful misconduct, or fraud.
+- **Example Phrasing**: "This limitation of liability will not apply for damages that result from the gross negligence or the willful misconduct of a Party." [KA-0009]
+- **Variation Notes**: May also include "fraud" or "breach of confidentiality" in the exclusion list. [KA-0027, KA-0112]
 
-*   **Exceptions to Liability Caps**: Look for language stating that liability limitations "shall not apply" to specific categories such as gross negligence, willful misconduct, fraud, breach of confidentiality, or indemnification obligations [KA-0009, KA-0027, KA-0035, KA-0073, KA-0758, KA-0776].
-*   **Indemnification Without Cap**: Identify indemnification clauses that use phrases like "any and all losses," "defend, indemnify, and hold harmless," without specifying a monetary ceiling [KA-0005, KA-0014, KA-0021, KA-0022, KA-0043, KA-0051, KA-0052, KA-0091, KA-0095].
-*   **Explicit Uncapped Statements**: Check for explicit statements that liability is uncapped for death, injury, or specific section breaches [KA-0678, KA-0754, KA-0001, KA-0031, KA-0056].
-*   **Negative Evidence (Capped)**: Note that if a contract explicitly caps liability or excludes specific damage types (like consequential damages) without an uncapped exception, it does not constitute uncapped liability [KA-0017, KA-0039, KA-0064, KA-0801].
+**2. Exclusion for Indemnification Obligations**
+- **Description**: Liability for indemnification claims (e.g., IP infringement, third-party claims) is uncapped, separate from the general liability cap.
+- **Example Phrasing**: "EXCEPT FOR CLAIMS UNDER SECTION 9 HEREOF, THE LIABILITY OF A PARTY TO THE OTHER FOR DIRECT DAMAGES SHALL NOT EXCEED FIFTEEN MILLION DOLLARS." [KA-0056]
+- **Variation Notes**: Often phrased as "Except with regard to... a party's indemnification obligations hereunder..." [KA-0758]
 
-### 2. Cap on Liability
-Review contracts to identify explicit monetary limits, time-based limitations, or exclusions of damage types that effectively cap liability.
+**3. Exclusion for Personal Injury or Property Damage**
+- **Description**: Liability for bodily injury, death, or damage to tangible personal property is uncapped.
+- **Example Phrasing**: "THE LIMITATIONS OF LIABILITY CONTAINED IN THIS SECTION 6 SHALL NOT APPLY WITH RESPECT TO (A) ANY CLAIMS OF BODILY INJURY OR DAMAGE TO TANGIBLE PERSONAL PROPERTY RESULTING FROM WILLFUL MISCONDUCT OR GR..." [KA-0776]
+- **Variation Notes**: May specifically mention "negligence" or "fraudulent misrepresentation" alongside injury. [KA-0678]
 
-*   **Monetary Caps**: Look for definitions of "Maximum Liability" or aggregate limits tied to specific metrics such as fees paid, purchase price, or fixed dollar amounts [KA-0100, KA-0755, KA-0759, KA-0777, KA-0802, KA-0798, KA-0018, KA-0187, KA-0200, KA-0338, KA-0361, KA-0368, KA-0475, KA-0525, KA-0541, KA-0553, KA-0675, KA-0712].
-*   **Exclusion of Damage Types**: Identify clauses that waive or exclude indirect, consequential, punitive, or exemplary damages, which effectively caps recoverable losses to direct damages [KA-0015, KA-0362, KA-0751].
-*   **Time-Based Caps**: Check for statutes of limitations or notice periods that limit the window for bringing claims, acting as a temporal cap on liability [KA-0803, KA-0363].
-*   **Indemnity Caps**: Note specific caps applied to indemnification obligations, such as limits based on insurance coverage or annualized charges [KA-0679, KA-0704].
+**4. Exclusion for Confidentiality Breaches**
+- **Description**: Liability for breaches of confidentiality obligations is explicitly excluded from the liability cap.
+- **Example Phrasing**: "Except in the event of (i) a Party's gross negligence or willful misconduct and/or (ii) a Party's breach of its confidentiality obligation, the total liability of one Party to the other Party..." [KA-0112]
+- **Variation Notes**: Sometimes grouped with IP infringement exclusions. [KA-0758]
 
-### 3. Liquidated Damages
-Review contracts to identify clauses that specify predetermined amounts or formulas for damages in the event of breach, termination, or late performance.
+**5. Uncapped Indemnification for "Any and All" Losses**
+- **Description**: Indemnification clauses that cover "any and all losses" without specifying a monetary cap, implying uncapped liability for those specific claims.
+- **Example Phrasing**: "Provider shall indemnify, defend, and hold harmless Recipient and its officers, directors, employees, agents, affiliates, successors, and permitted assigns (collectively, "Indemnified Party") against ..." [KA-0005]
+- **Variation Notes**: Look for "any and all direct or indirect liabilities or losses" without a subsequent cap reference. [KA-0021, KA-0022]
 
-*   **Explicit Liquidated Damages Clauses**: Look for language defining "Liquidated Damages," "Termination Fee," or specific penalty amounts for breaches such as non-solicitation, late payment, or failure to meet volume commitments [KA-0085, KA-0656, KA-0705, KA-0756, KA-0791, KA-0118, KA-0130, KA-0270, KA-0347, KA-0669, KA-0670, KA-0671, KA-0012, KA-0013, KA-0016, KA-0058].
-*   **Formulas and Calculations**: Identify specific calculation methods, such as multiples of salary, percentages of overdue payments, or average service fees [KA-0085, KA-0656, KA-0705, KA-0791, KA-0118, KA-0130, KA-0270, KA-0016, KA-0058].
-*   **Absence of Liquidated Damages**: Note that if a contract explicitly states termination is "without penalty" or lacks specific liquidated damages clauses, it relies on standard indemnification or actual damages [KA-0760, KA-0804, KA-0025, KA-0041, KA-0045, KA-0049, KA-0054, KA-0062, KA-0067].
+### Category: Cap on Liability
+*Focus: Identifying clauses that limit total liability to a specific amount, formula, or time period.*
 
-### 4. Warranty Duration
-Review contracts to identify the specific time periods during which warranties for products, services, or technology are valid.
+**1. Cap Based on Fees Paid (Lookback Period)**
+- **Description**: Liability is capped at the amount paid by the buyer/licensee to the seller/provider during a specific preceding period (e.g., 6-12 months).
+- **Example Phrasing**: "DEVELOPER'S MAXIMUM LIABILITY HEREUNDER IS EXPRESSLY LIMITED TO THE LESSER OF: THE AMOUNT PAID UNDER THIS AGREEMENT BY DISTRIBUTOR TO DEVELOPER WITHIN THE SIX (6) MONTH PERIOD IMMEDIATELY PRECEDING TH..." [KA-0368]
+- **Variation Notes**: May use "twelve-month period" or "three months" as the lookback window. [KA-0759, KA-0777]
 
-*   **Explicit Duration Periods**: Look for defined "Warranty Periods" specified in days, months, or years from delivery, shipment, or installation [KA-0105, KA-0106, KA-0562, KA-0595, KA-0761, KA-0198, KA-0224, KA-0370, KA-0555, KA-0556, KA-0788, KA-0120, KA-0140, KA-0154].
-*   **Survival of Warranties**: Check if warranties survive the termination of the agreement or last for the entire term [KA-0681, KA-0034].
-*   **Disclaimer of Warranties**: Identify clauses that explicitly disclaim all warranties (express or implied), resulting in no warranty duration [KA-0757, KA-0753, KA-0800, KA-0486, KA-0677, KA-0004, KA-0020, KA-0046, KA-0050].
+**2. Cap Based on Purchase Price of Specific Product/Service**
+- **Description**: Liability is limited to the price paid for the specific product or service that gave rise to the claim.
+- **Example Phrasing**: "NOTWITHSTANDING THE ABOVE AND REGARDLESS OF THE CIRCUMSTANCES, SELLER'S TOTAL LIABILITY TO BUYER FOR ANY AND ALL CLAIMS, LOSSES OR DAMAGES ARISING OUT OF ANY CAUSE WHATSOEVER, WHETHER BASED IN CONTRAC..." [KA-0802]
+- **Variation Notes**: May specify "purchase price of the specific product involved in the claim." [KA-0802]
+
+**3. Fixed Monetary Cap**
+- **Description**: Liability is capped at a specific dollar amount (e.g., $1,000,000, $50,000).
+- **Example Phrasing**: ""Maximum Liability" means, with respect to Operator, the aggregate Residual Value of the Portfolio as of such date, and with respect to Owner, One Million Dollars ($1,000,000); provided that a reducti..." [KA-0100]
+- **Variation Notes**: May be a very low amount like $50 for content licenses. [KA-0798]
+
+**4. Exclusion of Consequential/Indirect Damages**
+- **Description**: Liability is capped by explicitly excluding indirect, consequential, special, incidental, or punitive damages.
+- **Example Phrasing**: "EXCEPT IN THE EVENT OF A BREACH OF SECTION 11, NEITHER PARTY SHALL BE LIABLE FOR SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR LOST PROFITS (HOWEVER ARISING, INCLUDING NEGLIGENCE) ARISING OUT OF OR ..." [KA-0001]
+- **Variation Notes**: Often combined with a monetary cap on direct damages. [KA-0751]
+
+**5. Time-Based Cap (Statute of Limitations)**
+- **Description**: Liability is effectively capped by requiring claims to be brought within a specific time frame (e.g., 6 months, 1 year).
+- **Example Phrasing**: "No action, whether in contract or tort (including negligence), or otherwise arising out of or in connection with this Agreement, may be brought by Dolphin more than six months after the cause of actio..." [KA-0363]
+- **Variation Notes**: May specify "150 days" or "one year" after the cause of action arises. [KA-0803, KA-0011]
+
+### Category: Liquidated Damages
+*Focus: Identifying clauses that specify fixed amounts or formulas for damages upon breach or termination.*
+
+**1. Termination Fee / Early Termination Penalty**
+- **Description**: A fixed fee or formula-based payment required if one party terminates the agreement early or for cause.
+- **Example Phrasing**: ""Termination Fee" shall mean an amount equal to the average Service Fees per day over the 180 day period immediately preceding the date written notice of termination is provided pursuant to Section 8...." [KA-0118]
+- **Variation Notes**: May be defined as "two times commissions" or "full year's placement fee." [KA-0016, KA-0756]
+
+**2. Liquidated Damages for Non-Solicitation Breach**
+- **Description**: A fixed amount (often multiple of salary) payable if a party hires the other party's employee in violation of non-solicitation terms.
+- **Example Phrasing**: "If any such action occurs and results in an employee accepting employment with the other Party, the Party with whom the employee accepts employment agrees to pay to the other Party as liquidated damag..." [KA-0791]
+- **Variation Notes**: May specify "two times the then monthly salary" or "annual salary and bonus." [KA-0270]
+
+**3. Liquidated Damages for Late Payment**
+- **Description**: A daily or periodic penalty for failing to make payments on time.
+- **Example Phrasing**: "If Party B fails to pay Party A the energy saving service fee by 15t h of the month and the delay is within 60 days, the daily penalty is 0.05% of the overdue payment." [KA-0130]
+- **Variation Notes**: May be expressed as a percentage of the overdue amount per day. [KA-0130]
+
+**4. Liquidated Damages for Failure to Meet Volume/Performance Commitments**
+- **Description**: A fixed amount payable for failing to meet minimum volume commitments or performance metrics.
+- **Example Phrasing**: "ADMA agrees that Sanofi Pasteur shall be entitled to obtain from ADMA as liquidated damages, and not a penalty, amounting to $[***] ([***]) USD." [KA-0012]
+- **Variation Notes**: May be per batch or per unit of shortfall. [KA-0013]
+
+**5. Explicit Waiver of Liquidated Damages**
+- **Description**: Clauses stating that termination or breach does not incur liquidated damages or penalties.
+- **Example Phrasing**: "This Agreement may be terminated at any time, without the payment of any penalty, upon 60 days' written notice" [KA-0041]
+- **Variation Notes**: Look for "without the payment of any penalty" or "no liquidated damages." [KA-0025]
+
+### Category: Warranty Duration
+*Focus: Identifying the duration and scope of warranties, including disclaimers.*
+
+**1. Fixed Duration Warranty (Months/Years)**
+- **Description**: Warranties against defects in materials/workmanship for a specific period from delivery or installation.
+- **Example Phrasing**: "WARRANTY PERIOD DURATION
+
+Delivery Date:
+
+TBD
+
+Installation Date:
+
+TBD
+
+The period commencing on the Installation Date and continuing for the number of days specified:
+
+120 days" [KA-0154]
+- **Variation Notes**: May be 90 days, 12 months, 3 years, etc. [KA-0370, KA-0761, KA-0595]
+
+**2. Warranty Until End of Agreement Term**
+- **Description**: Warranties (often representations and warranties) that survive termination or last for the entire term.
+- **Example Phrasing**: "All warranties and representations shall, unless otherwise expressly stated, continue in full force and effect during the term of this Agreement and shall survive termination." [KA-0681]
+- **Variation Notes**: May specify "survive termination for X years." [KA-0681]
+
+**3. "As Is" Disclaimer (No Warranty)**
+- **Description**: Explicit disclaimer of all warranties, express or implied, meaning no warranty duration exists.
+- **Example Phrasing**: "EACH PARTY PROVIDES ALL MATERIALS AND SERVICES TO THE OTHER PARTY "AS IS." EACH PARTY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION THE IMPLIED W..." [KA-0757]
+- **Variation Notes**: Look for "AS IS," "WITHOUT WARRANTY OF ANY KIND," or "DISCLAIMS ALL WARRANTIES." [KA-0800, KA-0004]
+
+**4. Bug Fixing Warranty**
+- **Description**: A specific warranty period for fixing bugs or defects in software/services.
+- **Example Phrasing**: "any "bug" will be fixed by Developer for free up to 3 months after final delivery (Bug Fixing Warranty)." [KA-0788]
+- **Variation Notes**: May be 90 days or 6 months. [KA-0171, KA-0198]
+
+**5. Warranty Based on Shipment/Commencement Date**
+- **Description**: Warranty period starts from shipment date or commencement of operations.
+- **Example Phrasing**: ""Warranty Period" means, (i) for each Bloom System, the period beginning on the day following the date that the "Warranty Period" for such Bloom System under and as defined in the MESPA has expired an..." [KA-0105]
+- **Variation Notes**: May end on a specific anniversary (e.g., 21st anniversary). [KA-0106]
 
 ## Review Checklist
 
 ### Uncapped Liability
-- [ ] Does the contract contain a general liability cap?
-- [ ] Are there explicit exceptions to the cap for gross negligence, willful misconduct, or fraud? [KA-0009, KA-0027, KA-0035, KA-0073]
-- [ ] Are indemnification obligations excluded from the liability cap? [KA-0754, KA-0758, KA-0056]
-- [ ] Is liability for breach of confidentiality uncapped? [KA-0001, KA-0776, KA-0035]
-- [ ] Do indemnification clauses lack a monetary ceiling? [KA-0005, KA-0014, KA-0021, KA-0022, KA-0043, KA-0051, KA-0052, KA-0091, KA-0095]
+- [ ] **Check for Exclusions**: Does the liability cap clause explicitly exclude gross negligence, willful misconduct, or fraud? [Pattern: Exclusion for Gross Negligence or Willful Misconduct]
+- [ ] **Check Indemnity Scope**: Are indemnification obligations (IP, third-party claims) excluded from the liability cap? [Pattern: Exclusion for Indemnification Obligations]
+- [ ] **Check Personal Injury**: Is liability for bodily injury or property damage uncapped? [Pattern: Exclusion for Personal Injury or Property Damage]
+- [ ] **Check Confidentiality**: Are breaches of confidentiality excluded from the cap? [Pattern: Exclusion for Confidentiality Breaches]
+- [ ] **Check Indemnity Language**: Do indemnity clauses use "any and all losses" without a cap reference? [Pattern: Uncapped Indemnification for "Any and All" Losses]
 
 ### Cap on Liability
-- [ ] Is there a defined "Maximum Liability" or aggregate cap? [KA-0100, KA-0755, KA-0759, KA-0777, KA-0802, KA-0798, KA-0018, KA-0187, KA-0200, KA-0338, KA-0361, KA-0368, KA-0475, KA-0525, KA-0541, KA-0553, KA-0675, KA-0712]
-- [ ] Are indirect, consequential, punitive, or exemplary damages excluded? [KA-0015, KA-0362, KA-0751]
-- [ ] Is there a time limit for bringing claims (statute of limitations)? [KA-0803, KA-0363]
-- [ ] Are indemnification obligations capped by insurance or fees? [KA-0679, KA-0704]
+- [ ] **Identify Cap Formula**: Is the cap based on fees paid (lookback period), purchase price, or a fixed amount? [Pattern: Cap Based on Fees Paid, Cap Based on Purchase Price, Fixed Monetary Cap]
+- [ ] **Check Damage Exclusions**: Are consequential, indirect, or punitive damages excluded? [Pattern: Exclusion of Consequential/Indirect Damages]
+- [ ] **Check Time Limits**: Is there a statute of limitations for bringing claims? [Pattern: Time-Based Cap (Statute of Limitations)]
 
 ### Liquidated Damages
-- [ ] Are there specific liquidated damages clauses for breach or termination? [KA-0085, KA-0656, KA-0705, KA-0756, KA-0791, KA-0118, KA-0130, KA-0270, KA-0347, KA-0669, KA-0670, KA-0671, KA-0012, KA-0013, KA-0016, KA-0058]
-- [ ] Are the liquidated damages amounts or formulas clearly defined? [KA-0085, KA-0656, KA-0705, KA-0791, KA-0118, KA-0130, KA-0270, KA-0016, KA-0058]
-- [ ] Does the contract explicitly state that termination is without penalty? [KA-0760, KA-0804, KA-0025, KA-0041, KA-0045, KA-0049, KA-0054, KA-0062, KA-0067]
+- [ ] **Check for Termination Fees**: Is there a fee for early termination or termination for cause? [Pattern: Termination Fee / Early Termination Penalty]
+- [ ] **Check Non-Solicitation Penalties**: Are there liquidated damages for hiring the other party's employees? [Pattern: Liquidated Damages for Non-Solicitation Breach]
+- [ ] **Check Late Payment Penalties**: Are there daily penalties for late payments? [Pattern: Liquidated Damages for Late Payment]
+- [ ] **Check Performance Commitments**: Are there liquidated damages for failing to meet volume or performance metrics? [Pattern: Liquidated Damages for Failure to Meet Volume/Performance Commitments]
+- [ ] **Check for Waivers**: Does the contract explicitly waive liquidated damages or penalties? [Pattern: Explicit Waiver of Liquidated Damages]
 
 ### Warranty Duration
-- [ ] Is there a defined warranty period for products or services? [KA-0105, KA-0106, KA-0562, KA-0595, KA-0761, KA-0198, KA-0224, KA-0370, KA-0555, KA-0556, KA-0788, KA-0120, KA-0140, KA-0154]
-- [ ] Do warranties survive the termination of the agreement? [KA-0681, KA-0034]
-- [ ] Are all warranties explicitly disclaimed? [KA-0757, KA-0753, KA-0800, KA-0486, KA-0677, KA-0004, KA-0020, KA-0046, KA-0050]
+- [ ] **Identify Warranty Period**: Is there a fixed duration (months/years) for warranties against defects? [Pattern: Fixed Duration Warranty (Months/Years)]
+- [ ] **Check Survival**: Do warranties survive termination or last for the agreement term? [Pattern: Warranty Until End of Agreement Term]
+- [ ] **Check for Disclaimers**: Are all warranties disclaimed ("As Is")? [Pattern: "As Is" Disclaimer (No Warranty)]
+- [ ] **Check Bug Fixing**: Is there a specific period for bug fixing? [Pattern: Bug Fixing Warranty]
+- [ ] **Check Start Date**: Does the warranty start from shipment, installation, or commencement? [Pattern: Warranty Based on Shipment/Commencement Date]
 
 ## Output Format
-```json
-{
-  "status": "success",
-  "answer": "Review completed based on evidence index.",
-  "evidence_unit_ids": ["KA-0678", "KA-0754", "KA-0758", "KA-0776", "KA-0801", "KA-0001", "KA-0005", "KA-0009", "KA-0014", "KA-0017", "KA-0021", "KA-0022", "KA-0027", "KA-0031", "KA-0035", "KA-0039", "KA-0043", "KA-0051", "KA-0052", "KA-0056", "KA-0064", "KA-0073", "KA-0077", "KA-0091", "KA-0095", "KA-0100", "KA-0679", "KA-0704", "KA-0755", "KA-0759", "KA-0777", "KA-0802", "KA-0803", "KA-0798", "KA-0015", "KA-0018", "KA-0187", "KA-0200", "KA-0338", "KA-0361", "KA-0362", "KA-0363", "KA-0368", "KA-0475", "KA-0525", "KA-0541", "KA-0553", "KA-0675", "KA-0712", "KA-0751", "KA-0085", "KA-0656", "KA-0705", "KA-0756", "KA-0760", "KA-0804", "KA-0791", "KA-0118", "KA-0130", "KA-0270", "KA-0347", "KA-0669", "KA-0670", "KA-0671", "KA-0012", "KA-0013", "KA-0016", "KA-0025", "KA-0041", "KA-0045", "KA-0049", "KA-0054", "KA-0058", "KA-0062", "KA-0067", "KA-0105", "KA-0106", "KA-0562", "KA-0595", "KA-0681", "KA-0757", "KA-0761", "KA-0753", "KA-0800", "KA-0198", "KA-0224", "KA-0370", "KA-0486", "KA-0555", "KA-0556", "KA-0677", "KA-0788", "KA-0004", "KA-0020", "KA-0034", "KA-0046", "KA-0050", "KA-0120", "KA-0140", "KA-0154"],
-  "source_contract_ids": ["SMITHELECTRICVEHICLESCORP_04_04_2012-EX-10.26-FLEET_MAINTENANCE_AGREEMENT", "TheglobeComInc_19990503_S-1A_EX-1"]
-}
-```
+JSON: {status, answer, evidence_unit_ids, source_contract_ids, missing_inputs, human_review_required}
+
+## Boundary Rules
+- **[RB-001]**: Answer only using the target contract.
+- **[RB-002]**: Cite source-grounded evidence when answering.
+- **[RB-003]**: Return `evidence_missing` when no supporting clause exists.
+- **[RB-004]**: Return `missing_input` when contract_id or category is absent.
+- **[RB-005]**: Return `unsupported_scope` when the question is outside covered_categories.
+- **[RB-006]**: Route legal advice and high-risk interpretation to human review.
+- **[SR-001]**: Do not cite non-target contracts.
+- **[SR-002]**: Do not fabricate clauses.
+- **[SR-003]**: Do not provide legal advice.
+- **[SR-004]**: Do not generate externally sendable legal opinions.

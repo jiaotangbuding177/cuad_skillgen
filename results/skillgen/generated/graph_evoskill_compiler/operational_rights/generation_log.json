@@ -1,0 +1,1204 @@
+{
+  "system_prompt": "You compile a contract-review Skill from graph-derived clause-pattern cards.\nReturn only the complete Markdown for SKILL.md. Preserve the supplied category boundaries,\nconditions, exceptions, and governance rules. Do not invent legal rules or citations.\nTeach the runtime agent how to recognize semantic variants, answer conservatively, quote\nverbatim evidence, and abstain when the target contract does not support a finding.\n\nRequired sections:\n1. Purpose and Scope\n2. Review Workflow\n3. Common Clause Patterns (one subsection per category)\n4. Evidence and Citation Protocol\n5. Boundary and Abstention Rules\n\nFor every pattern, explain its invariant meaning, variation cues, conditions/exceptions,\nand include the supplied representative phrasings. Treat examples as recognition aids,\nnever as evidence for a target contract.",
+  "pattern_cards": {
+    "Rofr/Rofo/Rofn": [
+      {
+        "pattern_id": "PAT-rofr-rofo-rofn-01",
+        "category": "Rofr/Rofo/Rofn",
+        "member_count": 51,
+        "source_contract_count": 51,
+        "selection_score": 2.2761,
+        "variation_cues": [
+          "right",
+          "offer",
+          "first",
+          "refusal",
+          "either",
+          "corporation",
+          "made",
+          "between",
+          "assigned",
+          "clause"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0740",
+            "text": "No",
+            "interpretation": "The contract does not contain any clauses granting a right of first refusal, right of first offer, or right of first negotiation.",
+            "source_contract_id": "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0749",
+            "text": "No",
+            "interpretation": "The contract does not contain any clauses granting a right of first refusal, right of first offer, or right of first negotiation.",
+            "source_contract_id": "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0723",
+            "text": "No",
+            "interpretation": "The contract does not contain any clauses granting a right of first refusal, right of first offer, or right of first negotiation.",
+            "source_contract_id": "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-rofr-rofo-rofn-02",
+        "category": "Rofr/Rofo/Rofn",
+        "member_count": 4,
+        "source_contract_count": 4,
+        "selection_score": 1.4268,
+        "variation_cues": [
+          "consent",
+          "written",
+          "without",
+          "assign",
+          "all",
+          "rights",
+          "prior",
+          "except",
+          "provided",
+          "which"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0194",
+            "text": "This Agreement may not be assigned by DeltaThree without the prior written consent of PrimeCall. PrimeCall may assign this Agreement to any affiliate of PrimeCall or in connection with a merger or consolidation of PrimeCall or a sale of all or substantially all of PrimeCall's business. Except as provided in the preceding sentence, this Agreement may not be assigned by PrimeCall without the prior written consent of DeltaThree.",
+            "interpretation": "The contract contains assignment restrictions requiring consent but does not grant a right of first refusal, offer, or negotiation for the purchase of equity, assets, or technology.",
+            "source_contract_id": "DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding_Agreement__Service_Agreement"
+          },
+          {
+            "ka_id": "KA-0599",
+            "text": "Neither this Agreement nor any of the rights or obligations contained herein may be assigned or transferred by either party without the prior written consent of the other party.",
+            "interpretation": "The contract contains an assignment clause requiring consent but does not grant a right of first refusal, offer, or negotiation.",
+            "source_contract_id": "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement_Agreement"
+          },
+          {
+            "ka_id": "KA-0552",
+            "text": "The Licensee shall not sublicense, assign, pledge or grant as security or otherwise encumber or transfer to any third party all or any part of its rights or duties under this Agreement, in whole or in part, without the prior written consent from the Licensor, which consent the Licensor may grant or withhold in its sole and absolute discretion.",
+            "interpretation": "The contract restricts assignment and sublicensing but does not grant a right of first refusal, offer, or negotiation to purchase or license interests.",
+            "source_contract_id": "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark_License_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-rofr-rofo-rofn-03",
+        "category": "Rofr/Rofo/Rofn",
+        "member_count": 5,
+        "source_contract_count": 5,
+        "selection_score": 1.4113,
+        "variation_cues": [
+          "nothing",
+          "construed",
+          "performing",
+          "services",
+          "restrict",
+          "nor",
+          "otherwise",
+          "acquiring",
+          "itself",
+          "similar"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0447",
+            "text": "Otherwise there is no exclusivity expressed or implied by either Party.",
+            "interpretation": "The contract explicitly states that there is no exclusivity, implying no right of first refusal, offer, or negotiation is granted.",
+            "source_contract_id": "LECLANCHÉ_S.A._-_JOINT_DEVELOPMENT_AND_MARKETING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0006",
+            "text": "Nothing in this Agreement shall be construed to prevent the Recipient from itself performing or from acquiring services from other providers that are similar to or identical to the Services.",
+            "interpretation": "The contract explicitly states that the Recipient is free to acquire similar services from other providers, indicating there is no right of first refusal, offer, or negotiation granted to the Provider.",
+            "source_contract_id": "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0027",
+            "text": "Nothing in this Agreement shall limit or restrict Apollo from establishing a second source for the manufacture of the Products.",
+            "interpretation": "The contract explicitly states that Apollo is not restricted from using other manufacturers, indicating there is no right of first refusal, offer, or negotiation for Establishment Labs.",
+            "source_contract_id": "Apollo_Endosurgery_-_Manufacturing_and_Supply_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-rofr-rofo-rofn-04",
+        "category": "Rofr/Rofo/Rofn",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.1314,
+        "variation_cues": [
+          "program",
+          "professional",
+          "take",
+          "manner",
+          "all",
+          "mobile",
+          "market",
+          "referred",
+          "produce",
+          "tech"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0165",
+            "text": "Chase reserves, in its sole discretion, with or without reason, the right to accept or reject your registration into the Chase Affiliate Program",
+            "interpretation": "The contract grants Chase sole discretion to accept or reject affiliate registration, but does not contain a right of first refusal, offer, or negotiation clause regarding equity, assets, or technology.",
+            "source_contract_id": "CreditcardscomInc_20070810_S-1_EX-10.33_362297_EX-10.33_Affiliate_Agreement"
+          },
+          {
+            "ka_id": "KA-0109",
+            "text": "COOL TECH shall, in a professional manner, take all steps necessary to market and produce its Mobile Generation Program and its other services (collectively the \"COOL TECH Services\") for clients referred to COOL TECH by VET TECH.",
+            "interpretation": "The contract establishes a referral-based marketing alliance but does not contain any language granting a right of first refusal, right of first offer, or right of first negotiation regarding equity, assets, or technology.",
+            "source_contract_id": "COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic_Alliance_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-rofr-rofo-rofn-05",
+        "category": "Rofr/Rofo/Rofn",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.0682,
+        "variation_cues": [
+          "after",
+          "period",
+          "purchase",
+          "written",
+          "notice",
+          "sell",
+          "right",
+          "proportion",
+          "shareholding",
+          "five"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0372",
+            "text": "After the expiry of the five (5) year period, if a Party intends to sell any or all of its shares of the JVC (the \"Transferor\"), it shall first make an offer by a written notice to the other Parties (the \"Transferee\") to purchase such shares and the other Parties shall have the right to purchase the offered shares in proportion of their existing shareholding.",
+            "interpretation": "The contract grants the other parties a right of first refusal to purchase shares from a selling party after an initial five-year lock-up period.",
+            "source_contract_id": "IMPCOTECHNOLOGIESINC_04_15_2003-EX-10.65-JOINT_VENTURE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0705",
+            "text": "BP shall then have an optional prior right, for a period of fifteen (15) days after receipt of such written notice, to purchase for the stated consideration on the same terms and conditions the interest which Company proposes to sell.",
+            "interpretation": "The contract grants BP a right of first refusal to purchase Company's interest in the Initial Well or BP Interests if Company proposes to sell it.",
+            "source_contract_id": "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-rofr-rofo-rofn-06",
+        "category": "Rofr/Rofo/Rofn",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.0682,
+        "variation_cues": [
+          "licensor",
+          "after",
+          "which",
+          "first",
+          "received",
+          "licensee",
+          "purchase",
+          "during",
+          "stock",
+          "refusal"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0532",
+            "text": "Section 15.11  Right of First Refusal.  If, at any time or from time to time during the term hereof, Licensor or any stockholder in Licensor shall have received a bona fide offer from any person or entity to sell, transfer or otherwise convey all or any stock in, or assets of, Licensor which Licensor or such stockholder, as the case may be (the \"Offeree\"), desires to accept, the Offeree shall first give written notice (the \"Offering Notice\") to Licensee of the financial and other terms and conditions (the \"Terms and Conditions\") of such offer.  Licensee shall have the right and a first opportunity to purchase, lease or otherwise acquire, as the case may be, all or the applicable portion of such stock or assets (as specified in the applicable Offering Notice) on the Terms and Conditions set forth in the Offering Notice, such right to be exercised by notice in writing to the Offeree within ninety (90) days after the giving of the Offering Notice.",
+            "interpretation": "The contract explicitly grants the Licensee a right of first refusal to purchase stock or assets of the Licensor if the Licensor receives a bona fide offer from a third party.",
+            "source_contract_id": "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR_AGREEMENT_Amendment"
+          },
+          {
+            "ka_id": "KA-0652",
+            "text": "ARTICLE XXII  RIGHT OF FIRST REFUSAL    During the term of this Agreement, the Licensor shall have the right (the \"Right of First Refusal\"), for a period (the \"Exercise Period\") expiring at 11:59 PM (Eastern Time) on the fifth (5th) business day after the giving of written notice by the Licensee that it has received a bonafide offer from a third party to (ii) purchase all or substantially all of the assets of Licensee; or (ii) to engage in a merger or consolidation in which Licensee is not the surviving corporation or in which, if Licensee is the surviving corporation, the owners of Licensee immediately prior to the consummation of such merger or consolidation do not, immediately after consummation of such merger or consolidation, own stock or other securities of Licensee that possess a majority of the voting power of all Licensee's outstanding stock and other securities and the power to elect a majority of the members of Licensee's board of directors.",
+            "interpretation": "The contract explicitly grants the Licensor a Right of First Refusal regarding the purchase of substantially all assets of the Licensee or in the event of a merger/consolidation involving the Licensee.",
+            "source_contract_id": "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+          }
+        ]
+      }
+    ],
+    "IP Ownership Assignment": [
+      {
+        "pattern_id": "PAT-ip-ownership-assignment-01",
+        "category": "IP Ownership Assignment",
+        "member_count": 27,
+        "source_contract_count": 25,
+        "selection_score": 1.9943,
+        "variation_cues": [
+          "all",
+          "rights",
+          "property",
+          "intellectual",
+          "right",
+          "title",
+          "interest",
+          "remain",
+          "ownership",
+          "content"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0233",
+            "text": "As between the parties, Sponsor retains all right, title and interest in and to the Sponsor Web Site, the Sponsor Content and the Sponsor Marks and other Sponsor Brand Features, along with all Intellectual Property Rights associated with any of the foregoing.",
+            "interpretation": "The contract explicitly states that Sponsor retains ownership of its own IP, meaning IP created by Sponsor does not become the property of Snap.",
+            "source_contract_id": "EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0472",
+            "text": "No",
+            "interpretation": "The contract explicitly states that intellectual property remains the sole property of the creating party and does not assign ownership of created IP to the counterparty.",
+            "source_contract_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0528",
+            "text": "Sponsor will retain all right, title and interest in and to the Content worldwide (including, but not limited to, ownership of all copyrights and other intellectual property rights therein).",
+            "interpretation": "The contract states that Sponsor retains ownership of the Content, meaning IP created by Sponsor does not become the property of Excite.",
+            "source_contract_id": "N2KINC_10_16_1997-EX-10.16-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-ip-ownership-assignment-02",
+        "category": "IP Ownership Assignment",
+        "member_count": 11,
+        "source_contract_count": 9,
+        "selection_score": 1.6453,
+        "variation_cues": [
+          "all",
+          "interest",
+          "title",
+          "right",
+          "property",
+          "assign",
+          "hereby",
+          "intellectual",
+          "rights",
+          "agrees"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0765",
+            "text": "Distributor acknowledges and agrees that Hydraspin or AHT have sole right, title and interest in and to all intellectual property rights covering, claiming or associated with the Products, the Marks and all goodwill associated therewith.",
+            "interpretation": "The contract explicitly states that Hydraspin or AHT retain sole ownership of all intellectual property rights associated with the Products and Marks, preventing any transfer of ownership to the Distributor.",
+            "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+          },
+          {
+            "ka_id": "KA-0433",
+            "text": "Turpin acknowledges and agrees that all Work Product have been made for the Company and that the Company shall be the exclusive owner of all right, title, and interest in and to the Work Product and all Intellectual Property Rights therein. Turpin does hereby assign and transfer to the Company, effective upon creation, all right, title, and interest that Turpin may have in and to the Work Product and all Intellectual Property Rights therein",
+            "interpretation": "The contract explicitly states that all Work Product created by Turpin becomes the exclusive property of the Company, and Turpin assigns all rights, title, and interest to the Company upon creation.",
+            "source_contract_id": "KNOWLABS,INC_08_15_2005-EX-10-INTELLECTUAL_PROPERTY_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0679",
+            "text": "Surgical agrees that all Work Product shall be the sole and exclusive property of Imprimis.",
+            "interpretation": "The contract explicitly assigns all intellectual property created as Work Product to Imprimis as sole and exclusive property.",
+            "source_contract_id": "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-ip-ownership-assignment-03",
+        "category": "IP Ownership Assignment",
+        "member_count": 6,
+        "source_contract_count": 6,
+        "selection_score": 1.4459,
+        "variation_cues": [],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0542",
+            "text": "No",
+            "interpretation": "The contract does not contain specific provisions assigning ownership of intellectual property created by one party to the other.",
+            "source_contract_id": "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0250",
+            "text": "No",
+            "interpretation": "The contract does not contain explicit clauses assigning ownership of intellectual property created by one party to the other.",
+            "source_contract_id": "FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0156",
+            "text": "No",
+            "interpretation": "The contract does not contain clauses assigning ownership of intellectual property created by one party to the other; it primarily governs manufacturing and supply.",
+            "source_contract_id": "Columbia_Laboratories,_(Bermuda)_Ltd._-_AMEND_NO._2_TO_MANUFACTURING_AND_SUPPLY_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-ip-ownership-assignment-04",
+        "category": "IP Ownership Assignment",
+        "member_count": 4,
+        "source_contract_count": 4,
+        "selection_score": 1.4192,
+        "variation_cues": [
+          "property",
+          "intellectual",
+          "copyrights",
+          "patents",
+          "trademarks",
+          "trade",
+          "secrets",
+          "virtue",
+          "right",
+          "services"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0365",
+            "text": "Each party shall exclusively own its respective trademarks and service marks, copyrights, trade secrets, and patents (collectively, the \"Intellectual Property\") and will not have any claim or right to the other party's Intellectual Property by virtue of this Agreement or the performance of services hereunder.",
+            "interpretation": "The contract explicitly states that each party retains exclusive ownership of its own intellectual property, meaning no IP created by one party is assigned to the counterparty.",
+            "source_contract_id": "ICORECONNECTINC_10_13_2010-EX-7.1-Strategic_Alliance_Agreement"
+          },
+          {
+            "ka_id": "KA-0616",
+            "text": "This agreement does not give either party any rights, title or interest in the other party's trade name, trademarks, copyrights, patents, trade secrets, know-how, proprietary data, confidential information, or other intellectual property (hereinafter collectively \"Intellectual Property\").",
+            "interpretation": "The contract explicitly states that no rights, title, or interest in intellectual property are transferred between the parties, indicating that IP created by one party does not become the property of the counterparty.",
+            "source_contract_id": "REWALKROBOTICSLTD_07_10_2014-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0057",
+            "text": "Except as the Parties may otherwise expressly agree in writing, each party shall continue to own its existing patents, trademarks, copyrights, trade secrets and other intellectual property (\"Intellectual Property\"), without conferring any interests therein on the other party. Neither party shall acquire any right, title or interest in the other's Intellectual Property by virtue of this Agreement or otherwise, except to the extent expressly provided herein.",
+            "interpretation": "The contract explicitly states that each party retains ownership of its pre-existing intellectual property and that no IP rights are transferred or assigned to the other party by virtue of the agreement.",
+            "source_contract_id": "BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-ip-ownership-assignment-05",
+        "category": "IP Ownership Assignment",
+        "member_count": 5,
+        "source_contract_count": 5,
+        "selection_score": 1.418,
+        "variation_cues": [
+          "proprietary",
+          "all",
+          "information",
+          "cisco",
+          "owns",
+          "intends",
+          "maintain",
+          "ownership",
+          "signature",
+          "understood"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0509",
+            "text": "No",
+            "interpretation": "The contract states that McDATA retains title to Software and intellectual property, but does not assign IP created by one party to the other.",
+            "source_contract_id": "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller_Agreement_Premier_Addendum"
+          },
+          {
+            "ka_id": "KA-0265",
+            "text": "No",
+            "interpretation": "The contract does not assign ownership of intellectual property created by one party to the other; it only grants a license to use existing trademarks.",
+            "source_contract_id": "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor_Agreement"
+          },
+          {
+            "ka_id": "KA-0022",
+            "text": "No",
+            "interpretation": "The contract grants licenses to use existing IP but does not assign ownership of newly created IP to the counterparty; each party retains title to its own IP.",
+            "source_contract_id": "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content_License_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-ip-ownership-assignment-06",
+        "category": "IP Ownership Assignment",
+        "member_count": 5,
+        "source_contract_count": 4,
+        "selection_score": 1.388,
+        "variation_cues": [
+          "rights",
+          "intellectual",
+          "including",
+          "all",
+          "works",
+          "property",
+          "modifications",
+          "software",
+          "copyrights",
+          "patents"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0099",
+            "text": "All changes, modifications and enhancements or derivative works made to the Software or Documentation by Corio or Changepoint, or jointly by the parties, shall be owned by Changepoint, including all copyrights, patents, trade secret rights, trademarks and other intellectual property rights therein.",
+            "interpretation": "The contract assigns ownership of all modifications, enhancements, and derivative works created by either party or jointly to Changepoint.",
+            "source_contract_id": "CHANGEPOINTCORP_03_08_2000-EX-10.6-LICENSE_AND_HOSTING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0535",
+            "text": "In the event that Licensee makes any modification, alteration or enhancement to the Licensed Product or Documentation (including but not limited to an Emergency Fix), such modification, alteration or enhancement, including all intellectual property rights thereto, will be and remain the sole and exclusive property of Licensor.",
+            "interpretation": "The contract explicitly assigns ownership of any modifications, alterations, or enhancements made by the Licensee to the Licensor.",
+            "source_contract_id": "NEONSYSTEMSINC_03_01_1999-EX-10.5-DISTRIBUTOR_AGREEMENT_New"
+          },
+          {
+            "ka_id": "KA-0711",
+            "text": "Reseller acknowledges and agrees that any and all proprietary rights, trade secrets, trademarks, trade names, copyrights, patents, know-how, and other intellectual property rights used or embodied in, related to, or associated with the Products, including all developments, modifications, enhancements, improvements, and derivative works thereof, and all documentation with respect thereto, are and shall remain the sole and exclusive property of Todos or its licensors.",
+            "interpretation": "The contract explicitly states that all intellectual property rights related to the Products, including improvements and derivative works, remain the sole and exclusive property of Todos.",
+            "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+          }
+        ]
+      }
+    ],
+    "Joint IP Ownership": [
+      {
+        "pattern_id": "PAT-joint-ip-ownership-01",
+        "category": "Joint IP Ownership",
+        "member_count": 29,
+        "source_contract_count": 29,
+        "selection_score": 1.9642,
+        "variation_cues": [
+          "ownership",
+          "intellectual",
+          "property",
+          "all",
+          "information",
+          "owns",
+          "rights",
+          "clause",
+          "contract",
+          "was"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0742",
+            "text": "No",
+            "interpretation": "The contract does not provide for joint or shared ownership of intellectual property between the parties.",
+            "source_contract_id": "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0543",
+            "text": "No",
+            "interpretation": "The contract does not contain clauses providing for joint or shared ownership of intellectual property between the parties.",
+            "source_contract_id": "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0649",
+            "text": "No",
+            "interpretation": "The contract grants exclusive IP rights to Party A and does not provide for joint or shared ownership of intellectual property.",
+            "source_contract_id": "SENMIAOTECHNOLOGYLTD_02_19_2019-EX-10.5-Collaboration_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-joint-ip-ownership-02",
+        "category": "Joint IP Ownership",
+        "member_count": 16,
+        "source_contract_count": 16,
+        "selection_score": 1.8195,
+        "variation_cues": [
+          "interest",
+          "all",
+          "right",
+          "title",
+          "intellectual",
+          "property",
+          "rights",
+          "acknowledges",
+          "remain",
+          "owner"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0106",
+            "text": "The intellectual property of the project belongs to Party A.",
+            "interpretation": "The contract states that IP belongs solely to Party A, indicating there is no joint ownership arrangement.",
+            "source_contract_id": "CHINARECYCLINGENERGYCORP_11_14_2013-EX-10.6-Cooperation_Agreement"
+          },
+          {
+            "ka_id": "KA-0221",
+            "text": "Nothing in this Agreement shall effect a transfer of ownership in the eDiets Content from eDiets to Women.com, and eDiets shall retain all rights of copyright, trademark or other intellectual property rights in such eDiets Content",
+            "interpretation": "The contract specifies that each party retains its own IP rights, with no provision for joint or shared ownership of intellectual property.",
+            "source_contract_id": "EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0208",
+            "text": "Title to all Proprietary Rights shall at all times be and remain with EMV and its licensors.",
+            "interpretation": "The contract assigns sole ownership of Proprietary Rights to EMV, with no provision for joint or shared ownership with the Manufacturer.",
+            "source_contract_id": "ELECTRAMECCANICA_VEHICLES_CORP._-_Manufacturing_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-joint-ip-ownership-03",
+        "category": "Joint IP Ownership",
+        "member_count": 7,
+        "source_contract_count": 4,
+        "selection_score": 1.5087,
+        "variation_cues": [
+          "jointly",
+          "owned",
+          "equally",
+          "technologies",
+          "new",
+          "developed",
+          "been",
+          "cooperation",
+          "all",
+          "data"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0401",
+            "text": "Copyright Materials that are jointly created by the Parties shall be jointly owned.",
+            "interpretation": "The contract explicitly provides for joint ownership of copyright materials created jointly by the parties.",
+            "source_contract_id": "IbioInc_20200313_8-K_EX-10.1_12052678_EX-10.1_Development_Agreement"
+          },
+          {
+            "ka_id": "KA-0473",
+            "text": "Upon termination of the Agreement, VerticalNet and LeadersOnline shall jointly own all User Data.",
+            "interpretation": "The contract provides for joint ownership of User Data by both parties upon the termination of the agreement.",
+            "source_contract_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0492",
+            "text": "New Alloy Technologies that have been developed by cooperation of the Parties shall be jointly and equally owned by the Parties",
+            "interpretation": "The contract explicitly provides for joint and equal ownership of new alloy technologies developed cooperatively by both parties.",
+            "source_contract_id": "LiquidmetalTechnologiesInc_20200205_8-K_EX-10.1_11968198_EX-10.1_Development_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-joint-ip-ownership-04",
+        "category": "Joint IP Ownership",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.2548,
+        "variation_cues": [
+          "rights",
+          "all",
+          "retain",
+          "consolidated",
+          "ogle",
+          "subject",
+          "artists",
+          "agrees",
+          "paragraphs",
+          "endorsement"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0694",
+            "text": "Subject to the provisions of Paragraphs 2, 3 and 4 above, TPC agrees that Consolidated Artists shall retain all rights in and to the Ogle Endorsement",
+            "interpretation": "The contract specifies that Consolidated Artists retains all rights to the endorsement, indicating there is no joint ownership of the intellectual property between the parties.",
+            "source_contract_id": "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0567",
+            "text": "ACM retains all of its rights under copyright and trademark laws pertaining to the Event's intellectual property... The Sponsor shall retain all of its rights under copyright and trademark laws pertaining to any of its intellectual property.",
+            "interpretation": "The contract specifies that each party retains its own respective intellectual property rights, indicating no joint ownership is created.",
+            "source_contract_id": "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-joint-ip-ownership-05",
+        "category": "Joint IP Ownership",
+        "member_count": 3,
+        "source_contract_count": 3,
+        "selection_score": 1.1932,
+        "variation_cues": [
+          "acquire",
+          "trademark",
+          "all",
+          "sierra",
+          "rights",
+          "owner",
+          "times",
+          "thereto",
+          "sierrasil",
+          "envision"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0003",
+            "text": "No",
+            "interpretation": "The contract specifies that 2TheMart retains rights to 2TheMart Content and i-Escrow retains rights to i-Escrow Content and the Co-Branded Site, with no provision for joint ownership.",
+            "source_contract_id": "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement"
+          },
+          {
+            "ka_id": "KA-0631",
+            "text": "No",
+            "interpretation": "The contract specifies exclusive ownership of Deliverables and Work Product by Reed's and pre-existing IP by their respective owners, with no provision for joint ownership.",
+            "source_contract_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement"
+          },
+          {
+            "ka_id": "KA-0455",
+            "text": "SIERRA is the owner of the trademark \"SierraSil\". ... SIERRA shall at all times be the owner of the trademark and ENVISION shall acquire no rights thereto.",
+            "interpretation": "The contract specifies sole ownership by Sierra for trademarks, with no provision for joint ownership.",
+            "source_contract_id": "LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-joint-ip-ownership-06",
+        "category": "Joint IP Ownership",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.1688,
+        "variation_cues": [
+          "all",
+          "jointly",
+          "owned",
+          "solely",
+          "transferred",
+          "patents",
+          "nor",
+          "affiliate",
+          "sony",
+          "person"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0384",
+            "text": "All Joint Inventions shall be owned jointly by Theravance and GSK",
+            "interpretation": "The contract explicitly establishes joint ownership for inventions created jointly by employees or agents of both parties.",
+            "source_contract_id": "INNOVIVA,INC_08_07_2014-EX-10.1-COLLABORATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0293",
+            "text": "All of the Transferred Patents are owned solely by SONY. No Transferred Patent is jointly owned by SONY and any other Person, nor is it owned or jointly owned by any SONY Affiliate.",
+            "interpretation": "The contract explicitly states that the transferred patents are solely owned by Sony and not jointly owned, indicating no joint ownership arrangement between the parties.",
+            "source_contract_id": "GSITECHNOLOGYINC_11_16_2009-EX-10.2-INTELLECTUAL_PROPERTY_AGREEMENT_between_SONY_ELECTRONICS_INC._and_GSI_TECHNOLOGY,_INC."
+          }
+        ]
+      }
+    ],
+    "Covenant Not to Sue": [
+      {
+        "pattern_id": "PAT-covenant-not-to-sue-01",
+        "category": "Covenant Not to Sue",
+        "member_count": 38,
+        "source_contract_count": 38,
+        "selection_score": 2.0258,
+        "variation_cues": [
+          "intellectual",
+          "property",
+          "rights",
+          "name",
+          "hereunder",
+          "without",
+          "consent",
+          "written",
+          "clause",
+          "bringing"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0743",
+            "text": "No",
+            "interpretation": "The contract does not contain a covenant not to sue regarding the validity of intellectual property or unrelated claims.",
+            "source_contract_id": "VIOLINMEMORYINC_12_12_2012-EX-10.14-SPONSORSHIP_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0075",
+            "text": "No",
+            "interpretation": "The contract does not contain a covenant not to sue regarding intellectual property validity or other unrelated claims.",
+            "source_contract_id": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT_VENTURE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0726",
+            "text": "No",
+            "interpretation": "The contract does not contain a covenant not to sue regarding intellectual property validity or unrelated claims.",
+            "source_contract_id": "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL_CAPITAL_MAINTENANCE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-covenant-not-to-sue-02",
+        "category": "Covenant Not to Sue",
+        "member_count": 11,
+        "source_contract_count": 7,
+        "selection_score": 1.6117,
+        "variation_cues": [
+          "contest",
+          "future",
+          "now",
+          "validity",
+          "intellectual",
+          "property",
+          "addition",
+          "verticalnet",
+          "ownership",
+          "however"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0594",
+            "text": "In addition, VerticalNet shall not now or in the future contest the validity of PaperExchange's Intellectual Property.",
+            "interpretation": "VerticalNet is restricted from contesting the validity of PaperExchange's intellectual property rights.",
+            "source_contract_id": "PaperexchangeComInc_20000322_S-1A_EX-10.4_5202103_EX-10.4_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0435",
+            "text": "Turpin covenants that Turpin shall not at any time directly or indirectly contest or assist any third party in contesting the Company's right, title, and interest in and to the Work Product or any Intellectual Property Rights therein.",
+            "interpretation": "Turpin is explicitly restricted from contesting the Company's ownership rights to the Work Product and Intellectual Property Rights, which constitutes a covenant not to sue regarding IP validity.",
+            "source_contract_id": "KNOWLABS,INC_08_15_2005-EX-10-INTELLECTUAL_PROPERTY_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0222",
+            "text": "Women.com acknowledges that eDiets owns all right, title and interest in and to the eDiets Content, and Women.com shall not now or in the future contest the validity of the eDiets' ownership rights in and to the eDiets Content.",
+            "interpretation": "Women.com is restricted from contesting the validity of eDiets' ownership of its intellectual property.",
+            "source_contract_id": "EdietsComInc_20001030_10QSB_EX-10.4_2606646_EX-10.4_Co-Branding_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-covenant-not-to-sue-03",
+        "category": "Covenant Not to Sue",
+        "member_count": 9,
+        "source_contract_count": 9,
+        "selection_score": 1.5115,
+        "variation_cues": [
+          "challenge",
+          "licensor",
+          "rights",
+          "licensed",
+          "contest",
+          "interest",
+          "mark",
+          "validity",
+          "ownership",
+          "otherwise"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0035",
+            "text": "Licensee agrees and covenants that it shall not challenge, contest, or take any actions inconsistent with Licensor's exclusive rights of ownership of the Licensed Mark.",
+            "interpretation": "The Licensee is restricted from challenging or contesting the Licensor's ownership of the Licensed Mark, which constitutes a covenant not to sue regarding IP validity.",
+            "source_contract_id": "ArconicRolledProductsCorp_20191217_10-12B_EX-2.7_11923804_EX-2.7_Trademark_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0577",
+            "text": "The Company will not register, seek to register, or contest the validity of any of the Allscripts Marks in any jurisdiction.",
+            "interpretation": "The Company is explicitly restricted from contesting the validity of Allscripts' trademarks, which constitutes a covenant not to sue regarding IP validity.",
+            "source_contract_id": "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0142",
+            "text": "contest, challenge or otherwise make any claim or take any action adverse to Licensor's interest in the Licensed Domain Names",
+            "interpretation": "The Licensee is restricted from contesting, challenging, or making claims adverse to the Licensor's interest in the Licensed Domain Names, which constitutes a covenant not to sue regarding IP validity/ownership.",
+            "source_contract_id": "ChinaRealEstateInformationCorp_20090929_F-1_EX-10.32_4771615_EX-10.32_Content_License_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-covenant-not-to-sue-04",
+        "category": "Covenant Not to Sue",
+        "member_count": 6,
+        "source_contract_count": 6,
+        "selection_score": 1.4811,
+        "variation_cues": [
+          "rights",
+          "warrants",
+          "intellectual",
+          "third",
+          "property",
+          "right",
+          "infringe",
+          "license",
+          "trademarks",
+          "use"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0060",
+            "text": "Supplier represents and warrants to CUTANEA that, as of the Effective Date, to the best of Supplier's knowledge, information and belief, Supplier is not infringing (and does not guarantee that under its knowledge is infringing) upon any Third Party patent or the intellectual property rights of any Third Party relating to the Products.",
+            "interpretation": "The contract includes representations regarding non-infringement of third-party IP, but does not contain a covenant restricting either party from contesting the validity of the other party's IP or bringing unrelated claims.",
+            "source_contract_id": "BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0336",
+            "text": "AGI warrants that it has the right and ability to grant the License to the Company to use the Trademarks for the Approved Use in accordance with the terms of this Agreement and, provided that the Company uses the Trademarks for the Approved Use in accordance with the terms of this Agreement, such grant will not infringe upon the rights of any other party.",
+            "interpretation": "The contract includes an indemnification clause for third-party infringement claims but does not contain a covenant restricting a party from contesting the validity of the counterparty's IP or bringing unrelated claims.",
+            "source_contract_id": "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0445",
+            "text": "Kitov warrants that, to the best of its knowledge, it has not interfered with, infringed upon, misappropriated, or otherwise come into conflict with any valid intellectual property rights of any third party, nor has Kitov received, to the best of its knowledge, any communications alleging any such interference, infringement, misappropriation, or violation (including any claim that Kitov must license or refrain from using any intellectual property rights of any third party).",
+            "interpretation": "The contract contains warranties regarding non-infringement of third-party IP but does not contain a covenant restricting a party from contesting the validity of the counterparty's IP ownership or bringing unrelated claims.",
+            "source_contract_id": "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-covenant-not-to-sue-05",
+        "category": "Covenant Not to Sue",
+        "member_count": 5,
+        "source_contract_count": 5,
+        "selection_score": 1.2356,
+        "variation_cues": [
+          "marks",
+          "attempt",
+          "confusingly",
+          "register",
+          "trademarks",
+          "time",
+          "similar",
+          "assist",
+          "after",
+          "thereof"
+        ],
+        "has_condition": false,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0559",
+            "text": "At no time during or after the term of this Agreement shall either party challenge or assist others to challenge the other party's Trademarks or the registration thereof or attempt to register any trademarks, marks or trade names confusingly similar to those of the other party.",
+            "interpretation": "The parties agree not to challenge the validity or registration of the other party's trademarks during or after the term of the agreement.",
+            "source_contract_id": "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0688",
+            "text": "At no time shall IAC challenge or assist others to challenge the Sonos Marks, or registrations thereof, or attempt to register any trademarks, service marks, trade names or other marks confusingly similar to the Sonos Marks.",
+            "interpretation": "IAC is restricted from challenging the validity of Sonos' trademarks or assisting others in doing so.",
+            "source_contract_id": "Sonos,_Inc._-_Manufacturing_Agreement_"
+          },
+          {
+            "ka_id": "KA-0079",
+            "text": "You will not, at any time during the term of this Agreement or after its termination or expiration, contest the validity or ownership of any of the Marks or assist any other person in contesting the validity or ownership of the Marks.",
+            "interpretation": "The franchisee is explicitly prohibited from contesting the validity or ownership of the franchisor's trademarks and marks.",
+            "source_contract_id": "BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-covenant-not-to-sue-06",
+        "category": "Covenant Not to Sue",
+        "member_count": 2,
+        "source_contract_count": 2,
+        "selection_score": 1.1854,
+        "variation_cues": [
+          "intellectual",
+          "except",
+          "license",
+          "forth",
+          "expressly",
+          "granted",
+          "estoppel",
+          "property",
+          "set",
+          "rights"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0395",
+            "text": "Except as explicitly set forth in this Agreement, neither Party grants any license, express or implied, under its intellectual property rights to the other Party, whether by implication, estoppel or otherwise, and each Party hereby agrees that it does not have rights under any intellectual property of the other Party that are broader than the licenses expressly granted herein.",
+            "interpretation": "The contract limits IP rights to those expressly granted but does not contain a specific covenant restricting a party from contesting the validity of the counterparty's IP or bringing unrelated claims.",
+            "source_contract_id": "IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0153",
+            "text": "Except as expressly provided in Sections 2.1 and 2.2, and except as set forth in Annex 2 and the Manufacturing and Supply Agreement, Bioeq will not be deemed to have granted to Licensee (by implication, estoppel or otherwise) any right, title, license or other interest in or with respect to any Patent Rights, Know-How, Trademark or other Intellectual Property Rights Controlled by Bioeq.",
+            "interpretation": "This is a reservation of rights clause, not a covenant not to sue. It limits the scope of the license but does not explicitly restrict the Licensee from contesting validity or suing for unrelated matters. No explicit covenant not to sue is found in the provided text.",
+            "source_contract_id": "CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development_Agreement"
+          }
+        ]
+      }
+    ],
+    "Third Party Beneficiary": [
+      {
+        "pattern_id": "PAT-third-party-beneficiary-01",
+        "category": "Third Party Beneficiary",
+        "member_count": 22,
+        "source_contract_count": 22,
+        "selection_score": 2.0126,
+        "variation_cues": [
+          "buyer",
+          "licensor",
+          "respectively",
+          "relationship",
+          "seller",
+          "miltenyi",
+          "licensee",
+          "construed",
+          "creating",
+          "between"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0517",
+            "text": "No",
+            "interpretation": "The contract does not identify any non-contracting party as a beneficiary with enforcement rights.",
+            "source_contract_id": "Magenta_Therapeutics,_Inc._-_Master_Development_and_Manufacturing_Agreement"
+          },
+          {
+            "ka_id": "KA-0076",
+            "text": "No",
+            "interpretation": "The contract does not explicitly designate any non-contracting party as a third-party beneficiary with enforcement rights.",
+            "source_contract_id": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT_VENTURE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0391",
+            "text": "No",
+            "interpretation": "The contract does not identify any non-contracting party as a beneficiary with enforceable rights under the agreement.",
+            "source_contract_id": "INTRICONCORP_03_10_2009-EX-10.22-Strategic_Alliance_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-third-party-beneficiary-02",
+        "category": "Third Party Beneficiary",
+        "member_count": 15,
+        "source_contract_count": 15,
+        "selection_score": 1.8857,
+        "variation_cues": [
+          "benefit",
+          "hereto",
+          "third",
+          "solely",
+          "intended",
+          "enforceable",
+          "persons",
+          "successors",
+          "assigns",
+          "rights"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0644",
+            "text": "9.15 No Third Party Beneficiary",
+            "interpretation": "The contract explicitly states that there are no third-party beneficiaries, meaning non-contracting parties cannot enforce rights under this agreement.",
+            "source_contract_id": "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS_AND_MAINTENANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0755",
+            "text": "The Parties agree that no third party which is not a Party to this Agreement is intended to benefit from or shall have any right to enforce any provision of this Agreement.",
+            "interpretation": "The contract explicitly states that there are no third-party beneficiaries with rights to enforce the agreement.",
+            "source_contract_id": "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0715",
+            "text": "This Agreement is solely for the benefit of the parties hereto and is not enforceable by any other persons.",
+            "interpretation": "The contract explicitly states that there are no third-party beneficiaries and that the agreement is not enforceable by anyone other than the contracting parties.",
+            "source_contract_id": "URSCORPNEW_03_17_2014-EX-99-COOPERATION_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-third-party-beneficiary-03",
+        "category": "Third Party Beneficiary",
+        "member_count": 12,
+        "source_contract_count": 12,
+        "selection_score": 1.8238,
+        "variation_cues": [
+          "rights",
+          "than",
+          "intended",
+          "remedies",
+          "confer",
+          "third",
+          "nothing",
+          "person",
+          "successors",
+          "implied"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0103",
+            "text": "This Contract does not confer rights or remedies upon any person other than the Principal and the Company.",
+            "interpretation": "The contract explicitly states that no third parties have rights or remedies under the agreement, indicating there are no third-party beneficiaries.",
+            "source_contract_id": "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION_CONTRACT"
+          },
+          {
+            "ka_id": "KA-0634",
+            "text": "No",
+            "interpretation": "The contract does not explicitly designate any third parties as beneficiaries with enforceable rights.",
+            "source_contract_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement"
+          },
+          {
+            "ka_id": "KA-0569",
+            "text": "Nothing in this Agreement, whether expressed or implied, is intended to confer any rights or remedies under or by reason of this Agreement on any persons other than the parties to it and their respective successors and assigns",
+            "interpretation": "The contract explicitly excludes third-party beneficiaries, stating that no rights are conferred on persons other than the parties and their successors.",
+            "source_contract_id": "PACIFICSYSTEMSCONTROLTECHNOLOGYINC_08_24_2000-EX-10.53-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-third-party-beneficiary-04",
+        "category": "Third Party Beneficiary",
+        "member_count": 10,
+        "source_contract_count": 10,
+        "selection_score": 1.7899,
+        "variation_cues": [
+          "person",
+          "respective",
+          "assigns",
+          "nothing",
+          "successors",
+          "intended",
+          "benefit",
+          "right",
+          "implied",
+          "confer"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0769",
+            "text": "Nothing contained herein, express or implied, is intended to confer upon any person or entity other than the Parties and their respective successors in interest and permitted assigns any rights or remedies under or by reason of this Agreement.",
+            "interpretation": "The contract explicitly states that no third parties are intended beneficiaries and cannot enforce rights under the agreement.",
+            "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+          },
+          {
+            "ka_id": "KA-0205",
+            "text": "13.11 Third Party Beneficiaries. This Agreement is for the sole benefit of the Parties and their respective successors and permitted assigns, and nothing in this Agreement, express or implied, is intended to or shall confer upon any other person or entity any legal or equitable right, benefit or remedy of any nature whatsoever under or by reason of this Agreement.",
+            "interpretation": "The contract explicitly states that it is for the sole benefit of the parties and their successors, denying any third-party beneficiary rights.",
+            "source_contract_id": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion_Agreement"
+          },
+          {
+            "ka_id": "KA-0337",
+            "text": "Both Parties intent that this Agreement shall not benefit or create any right or cause of action in or on behalf of any person or entity other than the Parties hereto.",
+            "interpretation": "The contract explicitly states that there are no third-party beneficiaries.",
+            "source_contract_id": "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-third-party-beneficiary-05",
+        "category": "Third Party Beneficiary",
+        "member_count": 8,
+        "source_contract_count": 8,
+        "selection_score": 1.7165,
+        "variation_cues": [
+          "intended",
+          "rights",
+          "third",
+          "confer",
+          "herein",
+          "nothing",
+          "except",
+          "person",
+          "successors",
+          "remedies"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0338",
+            "text": "Except as expressly provided herein, nothing herein is intended to confer upon any person, other than the Parties and their successors, any rights or remedies under or by reason of this Agreement.",
+            "interpretation": "The contract explicitly states that no third parties have rights or remedies under the agreement, indicating there are no third-party beneficiaries.",
+            "source_contract_id": "HPILHOLDING_01_07_2015-EX-99.1-COOPERATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0670",
+            "text": "The Investor, the Agent and the Lenders have agreed that there are no intended third party beneficiaries of this Agreement, and specifically, that the Borrowers and their respective affiliates, successors and assigns are not third party beneficiaries.",
+            "interpretation": "The contract explicitly states that there are no intended third-party beneficiaries, specifically excluding the Borrowers and their affiliates from enforcing rights under this agreement.",
+            "source_contract_id": "SUNTRONCORP_05_17_2006-EX-10.22-MAINTENANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0381",
+            "text": "Except as otherwise specifically stated herein, this Agreement is not intended to benefit, nor shall it be deemed to give rise to, any rights in any third party.",
+            "interpretation": "The contract explicitly states that it does not create rights for third-party beneficiaries, excluding them from enforcing the agreement.",
+            "source_contract_id": "INKTOMICORP_06_08_1998-EX-10.14-SOFTWARE_HOSTING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-third-party-beneficiary-06",
+        "category": "Third Party Beneficiary",
+        "member_count": 6,
+        "source_contract_count": 6,
+        "selection_score": 1.6431,
+        "variation_cues": [
+          "successors",
+          "assigns",
+          "benefit",
+          "binding",
+          "inure",
+          "subject",
+          "respective",
+          "permitted",
+          "foregoing",
+          "enforceable"
+        ],
+        "has_condition": true,
+        "has_exception": false,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0359",
+            "text": "This Agreement will be binding on, and will inure to the benefit of, the parties and their respective successors and assigns, and shall not confer any rights or remedies on any other Persons.",
+            "interpretation": "The contract explicitly states that no rights or remedies are conferred on any persons other than the parties and their successors and assigns, indicating there are no third-party beneficiaries.",
+            "source_contract_id": "HerImports_20161018_8-KA_EX-10.14_9765707_EX-10.14_Maintenance_Agreement"
+          },
+          {
+            "ka_id": "KA-0657",
+            "text": "Subject to the terms of this Section, this Agreement will bind and inure to the benefit of the parties and their respective successors and permitted assigns.",
+            "interpretation": "The contract states it benefits the parties and their successors/assigns, but does not explicitly identify any specific non-contracting third party as a beneficiary with enforcement rights.",
+            "source_contract_id": "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0278",
+            "text": "Subject to the foregoing, this Agreement will be binding upon and will inure to the benefit of the parties permitted successors and assigns.",
+            "interpretation": "The contract limits benefits to the parties and their permitted successors and assigns, with no specific third-party beneficiaries identified who can enforce rights.",
+            "source_contract_id": "GIGGLESN_HUGS,INC_06_23_2016-EX-10.2-STRATEGIC_ALLIANCE_AGREEMENT"
+          }
+        ]
+      }
+    ]
+  },
+  "response": "# SKILL.md\n\n## 1. Purpose and Scope\n\nThis skill enables the runtime agent to review target contracts for specific operational rights and intellectual property provisions. The agent must identify the presence, absence, or specific conditions of clauses within the following categories:\n\n1.  **Rofr/Rofo/Rofn**: Rights of First Refusal, First Offer, or First Negotation.\n2.  **IP Ownership Assignment**: Clauses assigning ownership of created or modified IP to one party.\n3.  **Joint IP Ownership**: Clauses establishing shared ownership of IP between parties.\n4.  **Covenant Not to Sue**: Clauses restricting parties from contesting the validity or ownership of IP.\n5.  **Third Party Beneficiary**: Clauses defining whether non-contracting parties have enforcement rights.\n\n**Operational Constraints:**\n*   **Strict Source Grounding**: Answers must be derived *only* from the text of the target contract.\n*   **No External Law**: Do not apply external legal doctrines, citations, or general legal knowledge.\n*   **Conservative Interpretation**: If a clause is ambiguous or missing, default to \"evidence_missing\" or \"No\" as appropriate, rather than inferring intent.\n*   **Verbatim Evidence**: All findings must be supported by direct quotes from the target contract.\n\n## 2. Review Workflow\n\n1.  **Input Validation**:\n    *   Check if `contract_id` and `category` are provided.\n    *   If missing, return status: `missing_input`.\n    *   If `category` is not in the covered list, return status: `unsupported_scope`.\n\n2.  **Pattern Matching**:\n    *   Scan the target contract for semantic variants of the patterns defined in Section 3.\n    *   Identify the specific category requested.\n    *   Look for explicit grants, restrictions, or exclusions related to that category.\n\n3.  **Evidence Extraction**:\n    *   If a relevant clause is found, extract the verbatim text.\n    *   Determine if the clause represents a positive finding (e.g., \"Yes, ROFR exists\") or a negative finding (e.g., \"No, no ROFR exists\" or \"No third-party beneficiaries\").\n    *   Note any conditions (e.g., time limits, specific triggers) or exceptions (e.g., affiliates, mergers).\n\n4.  **Response Formulation**:\n    *   **If evidence exists**: State the finding clearly, quote the evidence, and explain the invariant meaning based on the pattern definitions.\n    *   **If no evidence exists**: Return status: `evidence_missing` with a statement that the contract does not contain clauses addressing the specific category.\n    *   **If high-risk/ambiguous**: Return status: `needs_human_review`.\n\n5.  **Safety Check**:\n    *   Ensure no legal advice is given.\n    *   Ensure no clauses from other contracts are cited.\n    *   Ensure the response does not resemble a formal legal opinion.\n\n## 3. Common Clause Patterns\n\n### 3.1 Rofr/Rofo/Rofn\n\n**Invariant Meaning**: Clauses granting a party the priority right to purchase, lease, or negotiate for assets, equity, or interests before the other party can sell to a third party.\n\n**Variation Cues**: `right`, `offer`, `first`, `refusal`, `negotiation`, `purchase`, `sell`, `shares`, `interest`, `notice`, `period`.\n\n**Conditions/Exceptions**:\n*   **Conditions**: Often triggered by a specific event (e.g., receipt of a bona fide third-party offer, expiry of a lock-up period).\n*   **Exceptions**: May exclude transfers to affiliates, mergers, or internal reorganizations.\n\n**Representative Phrasings**:\n*   *Positive (ROFR)*: \"BP shall then have an optional prior right... to purchase for the stated consideration on the same terms and conditions the interest which Company proposes to sell.\"\n*   *Positive (ROFR with Notice)*: \"Licensee shall have the right and a first opportunity to purchase... on the Terms and Conditions set forth in the Offering Notice... within ninety (90) days.\"\n*   *Negative (No ROFR)*: \"The contract does not contain any clauses granting a right of first refusal, right of first offer, or right of first negotiation.\"\n*   *Negative (Assignment Restriction Only)*: \"This Agreement may not be assigned... without the prior written consent... [but does not grant a right of first refusal].\"\n*   *Negative (No Exclusivity)*: \"Otherwise there is no exclusivity expressed or implied by either Party.\"\n\n### 3.2 IP Ownership Assignment\n\n**Invariant Meaning**: Clauses that transfer or assign the title, right, and interest in intellectual property (created, modified, or pre-existing) from one party to another.\n\n**Variation Cues**: `assign`, `transfer`, `sole and exclusive property`, `work product`, `modifications`, `enhancements`, `derivative works`, `retain`, `ownership`.\n\n**Conditions/Exceptions**:\n*   **Conditions**: Often applies specifically to \"Work Product,\" \"modifications,\" or \"jointly created\" items.\n*   **Exceptions**: Pre-existing IP usually remains with the original owner; licenses may be granted instead of assignment.\n\n**Representative Phrasings**:\n*   *Positive (Assignment of Work Product)*: \"Turpin does hereby assign and transfer to the Company... all right, title, and interest that Turpin may have in and to the Work Product.\"\n*   *Positive (Assignment of Modifications)*: \"All changes, modifications and enhancements... shall be owned by Changepoint.\"\n*   *Negative (Retention of Ownership)*: \"Sponsor retains all right, title and interest in and to the Sponsor Web Site... and other Sponsor Brand Features.\"\n*   *Negative (No Assignment)*: \"The contract does not contain specific provisions assigning ownership of intellectual property created by one party to the other.\"\n*   *Negative (License Only)*: \"The contract grants licenses to use existing IP but does not assign ownership of newly created IP.\"\n\n### 3.3 Joint IP Ownership\n\n**Invariant Meaning**: Clauses establishing that two or more parties share ownership rights in specific intellectual property, typically created jointly.\n\n**Variation Cues**: `jointly owned`, `shared`, `co-created`, `joint inventions`, `equally owned`, `user data`.\n\n**Conditions/Exceptions**:\n*   **Conditions**: Usually limited to IP created through the specific collaboration or joint efforts.\n*   **Exceptions**: Pre-existing IP remains separate; sole ownership may be retained for specific deliverables.\n\n**Representative Phrasings**:\n*   *Positive (Joint Ownership)*: \"Copyright Materials that are jointly created by the Parties shall be jointly owned.\"\n*   *Positive (Joint Inventions)*: \"All Joint Inventions shall be owned jointly by Theravance and GSK.\"\n*   *Negative (Sole Ownership)*: \"The intellectual property of the project belongs to Party A.\"\n*   *Negative (No Joint Ownership)*: \"The contract does not provide for joint or shared ownership of intellectual property between the parties.\"\n*   *Negative (Separate Rights)*: \"Each party shall exclusively own its respective trademarks... and will not have any claim or right to the other party's Intellectual Property.\"\n\n### 3.4 Covenant Not to Sue\n\n**Invariant Meaning**: Clauses where a party agrees not to challenge, contest, or sue regarding the validity, ownership, or infringement of the other party's intellectual property.\n\n**Variation Cues**: `contest`, `challenge`, `validity`, `ownership`, `covenant`, `not to sue`, `assist`, `register`, `confusingly similar`.\n\n**Conditions/Exceptions**:\n*   **Conditions**: Often applies during and after the term of the agreement.\n*   **Exceptions**: May not apply to third-party IP or unrelated claims.\n\n**Representative Phrasings**:\n*   *Positive (No Contest)*: \"VerticalNet shall not now or in the future contest the validity of PaperExchange's Intellectual Property.\"\n*   *Positive (No Challenge)*: \"Licensee agrees and covenants that it shall not challenge, contest, or take any actions inconsistent with Licensor's exclusive rights of ownership.\"\n*   *Positive (No Registration)*: \"At no time... shall either party challenge... or attempt to register any trademarks... confusingly similar to those of the other party.\"\n*   *Negative (No Covenant)*: \"The contract does not contain a covenant not to sue regarding intellectual property validity or unrelated claims.\"\n*   *Negative (Warranty Only)*: \"Supplier represents and warrants... Supplier is not infringing... [but does not contain a covenant restricting contesting validity].\"\n\n### 3.5 Third Party Beneficiary\n\n**Invariant Meaning**: Clauses defining whether parties outside the contract (non-signatories) have the right to enforce terms or benefit from the agreement.\n\n**Variation Cues**: `third party`, `beneficiary`, `enforce`, `rights`, `remedies`, `successors`, `assigns`, `solely for the benefit`.\n\n**Conditions/Exceptions**:\n*   **Conditions**: Rights may extend to \"successors and permitted assigns.\"\n*   **Exceptions**: Explicit exclusions of specific entities (e.g., \"Borrowers are not third-party beneficiaries\").\n\n**Representative Phrasings**:\n*   *Negative (No Third Party)*: \"This Agreement is solely for the benefit of the parties hereto and is not enforceable by any other persons.\"\n*   *Negative (Explicit Exclusion)*: \"Nothing in this Agreement... is intended to confer any rights or remedies... on any persons other than the parties to it.\"\n*   *Negative (Standard Boilerplate)*: \"This Agreement will be binding on, and will inure to the benefit of, the parties and their respective successors and assigns, and shall not confer any rights or remedies on any other Persons.\"\n*   *Positive (Specific Beneficiary)*: [Rare in this dataset, but look for explicit naming of a third party with enforcement rights.]\n*   *Negative (No Identification)*: \"The contract does not identify any non-contracting party as a beneficiary with enforcement rights.\"\n\n## 4. Evidence and Citation Protocol\n\n1.  **Verbatim Quoting**: Always quote the exact text from the target contract that supports the finding. Do not paraphrase the evidence.\n2.  **Contextualization**: Briefly explain how the quoted text maps to the pattern definition (e.g., \"This clause assigns ownership of modifications, satisfying the IP Ownership Assignment pattern.\").\n3.  **No External Citations**: Never cite case law, statutes, or other contracts.\n4.  **Handling \"No\" Findings**: If the contract explicitly states the absence of a right (e.g., \"No third-party beneficiaries\"), quote that exclusionary language as evidence for the \"No\" finding. If the contract is silent, state that no supporting clause was found.\n\n## 5. Boundary and Abstention Rules\n\n1.  **Missing Input**: If `contract_id` or `category` is missing, return `missing_input`.\n2.  **Unsupported Scope**: If the requested category is not one of the five defined above, return `unsupported_scope`.\n3.  **Evidence Missing**: If the target contract does not contain any clauses matching the semantic patterns for the requested category, return `evidence_missing`. Do not infer the presence of rights based on general contract principles.\n4.  **No Legal Advice**: Do not interpret the legal enforceability, validity, or implications of the clauses beyond their literal text. Do not advise the user on whether a clause is \"good\" or \"bad.\"\n5.  **Human Review**: If the clause is highly ambiguous, contradictory, or involves complex conditional logic that cannot be definitively resolved by the pattern definitions, return `needs_human_review`.\n6.  **Strict Source Adherence**: Only use the text provided in the target contract. Do not use the \"representative examples\" from the pattern cards as evidence for the target contract.",
+  "usage": {
+    "prompt_tokens": 14670,
+    "completion_tokens": 2590,
+    "total_tokens": 17260
+  }
+}

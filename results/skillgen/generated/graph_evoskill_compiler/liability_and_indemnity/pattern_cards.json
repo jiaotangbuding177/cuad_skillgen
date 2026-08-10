@@ -1,0 +1,994 @@
+{
+  "Uncapped Liability": [
+    {
+      "pattern_id": "PAT-uncapped-liability-01",
+      "category": "Uncapped Liability",
+      "member_count": 39,
+      "source_contract_count": 32,
+      "selection_score": 2.1143,
+      "variation_cues": [
+        "harmless",
+        "hold",
+        "indemnify",
+        "against",
+        "all",
+        "claims",
+        "arising",
+        "including",
+        "losses",
+        "out"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0716",
+          "text": "Each party shall indemnify and hold harmless the other party, and its directors, officers, employees and agents, from and against all losses, liabilities, damages and expenses, including reasonable attorneys' fees and costs (collectively, \"Liabilities\"), resulting from any claims, demands, actions or other proceedings by any third party to the extent resulting from the breach of any representation, warranty or covenant by the breaching party under this Agreement.",
+          "interpretation": "The contract provides for indemnification of all losses and liabilities without specifying a monetary cap, indicating uncapped liability for breaches.",
+          "source_contract_id": "SightLife_Surgical,_Inc._-_STRATEGIC_SALES___MARKETING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0328",
+          "text": "PFHOF agrees to indemnify, defend, and hold harmless the Village Media Company, its Affiliates, and their respective employees, officers, directors, agents, representatives, and successors and assigns from and against any and all claims, demands, liabilities, losses, suits, damages, costs (including, without limitation, costs of investigation), and expenses, including reasonable attorneys' fees, arising out of or relating to (a) the Village Media Company's authorized use of the PFHOF Works, as permitted by, and in accordance with, the terms of this Agreement, (b) any breach by PFHOF of any warranty, representation, obligation, or agreement made under this Agreement, or (c) PFHOF's use of the HOFV Works in breach of this Agreement, or any claim of infringement of any intellectual property right arising out of the misuse or misappropriation of the HOFV Works by PFHOF.",
+          "interpretation": "The contract contains indemnification clauses for both parties that cover 'any and all claims, demands, liabilities, losses, suits, damages, costs... and expenses' without specifying a monetary cap or limitation on the amount of liability.",
+          "source_contract_id": "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0483",
+          "text": "Licensor shall defend, indemnify and hold harmless Licensee and its Affiliates, and their respective officers, directors, employees, agents, shareholders, successors and assigns, (collectively, the \"Licensee Parties\") from and against any claim, suit, demand or action (\"Action\"), and any and all direct losses suffered or incurred by Licensee in connection with any third party claims arising out of or resulting from any breach by Licensor of any provision of this Agreement.",
+          "interpretation": "The contract specifies indemnification for 'any and all direct losses' without stating a monetary cap or limitation on the amount of liability for breaches.",
+          "source_contract_id": "LejuHoldingsLtd_20140121_DRS_(on_F-1)_EX-10.26_8473102_EX-10.26_Content_License_Agreement1"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-uncapped-liability-02",
+      "category": "Uncapped Liability",
+      "member_count": 28,
+      "source_contract_count": 28,
+      "selection_score": 2.0644,
+      "variation_cues": [
+        "damages",
+        "consequential",
+        "liable",
+        "special",
+        "incidental",
+        "indirect",
+        "arising",
+        "event",
+        "except",
+        "liability"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0644",
+          "text": "EXCEPT FOR LIABILITY ARISING FROM SECTION 9.3 [Intellectual Property Infringement], IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOSSES, OR EXPENSES INCLUDING, BUT NOT LIMITED TO, LOSS OF USE, LOSS OF PROFITS, OR LOSS OF GOODWILL, EVEN IF THAT PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGE.",
+          "interpretation": "The contract explicitly excludes the cap on liability for claims arising from Intellectual Property Infringement (Section 9.3), meaning liability for such breaches is uncapped.",
+          "source_contract_id": "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0700",
+          "text": "IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER PARTY FOR LOST PROFITS OR ANY CONSEQUENTIAL, SPECIAL, INCIDENTAL, OR INDIRECT DAMAGES OR SUCH OTHER PARTY, HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, ARISING OUT OF THIS AGREEMENT.",
+          "interpretation": "The contract explicitly excludes liability for lost profits and consequential, special, incidental, or indirect damages, indicating that liability is not uncapped for these types of damages.",
+          "source_contract_id": "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0419",
+          "text": "Except for claims arising out of Articles 4.3 and 7.0, or as may be set forth in a SOW, neither Party will be liable for any consequential damages, lost profits, lost savings, loss of anticipated revenue, or any exemplary, punitive, special or indirect damages, even if advised of their possibility.",
+          "interpretation": "The contract excludes liability for consequential and indirect damages but does not explicitly cap direct damages, implying that liability for direct damages is uncapped.",
+          "source_contract_id": "IbioInc_20200313_8-K_EX-10.1_12052678_EX-10.1_Development_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-uncapped-liability-03",
+      "category": "Uncapped Liability",
+      "member_count": 8,
+      "source_contract_count": 8,
+      "selection_score": 1.7507,
+      "variation_cues": [
+        "consequential",
+        "damages",
+        "indirect",
+        "special",
+        "event",
+        "liable",
+        "incidental",
+        "possibility",
+        "either",
+        "out"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0797",
+          "text": "IN NO EVENT WILL WEBMD OR ITS SUPPLIERS OR LICENSORS BE LIABLE UNDER ANY THEORY OF LIABILITY, HOWEVER ARISING, FOR ANY COSTS OF COVER OR FOR INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY KIND ARISING OUT OF THIS AGREEMENT, OR THE PROVISION OR USE OF CONTENT, EVEN IF WEBMD HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.",
+          "interpretation": "The contract explicitly excludes liability for indirect, special, incidental, or consequential damages, but does not state that liability is uncapped for other types of damages; rather, it sets a specific cap below.",
+          "source_contract_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0047",
+          "text": "IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER PARTY UNDER THIS AGREEMENT IN A DIRECT ACTION BETWEEN THE PARTIES FOR SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, LOSS OF PROFITS) SUFFERED BY THE OTHER PARTY.",
+          "interpretation": "The contract excludes consequential damages but does not explicitly state that liability is uncapped for other types of damages, nor does it provide a specific monetary cap on direct damages.",
+          "source_contract_id": "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0732",
+          "text": "In any event, neither party shall be liable for any special, consequential or incidental damages.",
+          "interpretation": "The contract explicitly excludes liability for special, consequential, or incidental damages, but does not place a monetary cap on other types of liability (such as direct damages), meaning general liability is uncapped.",
+          "source_contract_id": "TALCOTTRESOLUTIONLIFEINSURANCECO-SEPARATEACCOUNTTWELVE_04_30_2020-EX-99.8(L)-SERVICE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-uncapped-liability-04",
+      "category": "Uncapped Liability",
+      "member_count": 6,
+      "source_contract_count": 6,
+      "selection_score": 1.5505,
+      "variation_cues": [
+        "apply",
+        "section",
+        "indemnification",
+        "obligations",
+        "limit",
+        "provisions",
+        "breach",
+        "case",
+        "misconduct",
+        "negligence"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0638",
+          "text": "The foregoing shall not limit the indemnification, defense and hold harmless obligations set forth in this Agreement other than those set forth in Section 5.4 and shall not apply with respect to damages or losses arising from the wrongful termination of this Agreement by LMG, willful misconduct, gross negligence or breach of LMG's obligations under Section 3. 8.",
+          "interpretation": "The contract explicitly states that the limitation of liability does not apply to indemnification obligations (except Section 5.4), wrongful termination, willful misconduct, gross negligence, or breach of Section 3.8, effectively uncapping liability for these specific breaches.",
+          "source_contract_id": "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0411",
+          "text": "PROVIDED, HOWEVER, THAT THIS LIMITATION WILL NOT APPLY TO DAMAGES RESULTING FROM BREACHES BY A PARTY OF ITS DUTY OF CONFIDENTIALITY AND NON-USE IMPOSED UNDER THIS AGREEMENT OR THE CONFIDENTITY AGREEMENT OR SUCH PARTY'S INDEMNIFICATION OBLIGATIONS STATED ABOVE.",
+          "interpretation": "The contract explicitly states that the limitation of liability does not apply to damages resulting from breaches of confidentiality or indemnification obligations, effectively uncapping liability for these specific breaches.",
+          "source_contract_id": "INTERSECTENT,INC_05_11_2020-EX-10.1-SUPPLY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0456",
+          "text": "Nothing in this Section 8.7 shall operate to limit or exclude any liability under Section 8.5 with respect to a Claim, or for fraud, or for breach by a Party of the provisions of Article 7.",
+          "interpretation": "The contract explicitly states that the general limitation of liability does not apply to indemnification claims, fraud, or breaches of confidentiality, effectively leaving liability uncapped for these specific categories.",
+          "source_contract_id": "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-uncapped-liability-05",
+      "category": "Uncapped Liability",
+      "member_count": 6,
+      "source_contract_count": 3,
+      "selection_score": 1.4605,
+      "variation_cues": [
+        "losses",
+        "all",
+        "costs",
+        "claims",
+        "expenses",
+        "indemnify",
+        "harmless",
+        "including",
+        "agrees",
+        "reasonable"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0496",
+          "text": "Liquidmetal agrees to indemnify, defend and hold the Eutectix Indemnified Parties (as defined in Section 12.2) harmless from and against any and all claims, demands liabilities, losses, costs and expenses (including without limitation, costs of investigation and reasonable attorney's fees) irrespective of the theory upon which based, which Eutectix or any other Eutectix Indemnified Party may suffer or incur as a result of any breach of the representations and warranties of Liquidmetal set forth in this Article 4.",
+          "interpretation": "The contract provides for indemnification of 'any and all claims, demands liabilities, losses, costs and expenses' without specifying a monetary cap or limitation on the amount of liability for breaches of representations and warranties.",
+          "source_contract_id": "LiquidmetalTechnologiesInc_20200205_8-K_EX-10.1_11968198_EX-10.1_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0350",
+          "text": "The Company hereby agrees to reimburse and indemnify and hold AGI harmless from and against all losses, claims, charges, costs and expenses (including reasonable attorneys' fees) incurred by AGI as a result of any claim involving or arising in connection with any use other than an Approved Use or a use otherwise approved by AGI in accordance with the terms of this Agreement.",
+          "interpretation": "The Company agrees to indemnify AGI for all losses and expenses arising from unauthorized use of trademarks, without specifying a monetary cap on this liability.",
+          "source_contract_id": "HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0096",
+          "text": "Theismann agrees to defend, indemnify, and hold Bizzingo, and its officers, directors, agents, and employees, harmless against all costs, expenses, and losses (including reasonable attorney fees and costs) incurred through claims of third parties against Bizzingo based on a breach by Theismann of any representation and/or warranty made in this Agreement or with respect to any third-party claims for infringement involving the use of the Property by Bizzingo.",
+          "interpretation": "The contract does not specify a monetary cap on Theismann's indemnification obligations to Bizzingo for breaches of representations or IP infringement claims.",
+          "source_contract_id": "BizzingoInc_20120322_8-K_EX-10.17_7504499_EX-10.17_Endorsement_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-uncapped-liability-06",
+      "category": "Uncapped Liability",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.4243,
+      "variation_cues": [
+        "except",
+        "hereunder",
+        "either",
+        "claim",
+        "event",
+        "liable",
+        "amounts",
+        "liability",
+        "limited",
+        "paid"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0686",
+          "text": "EXCEPT UNDER SECTIONS 15 AND 16, IN NO EVENT WILL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES... THE LIABILITY OF EITHER PARTY FOR DAMAGES OR ALLEGED DAMAGES HEREUNDER (EXCEPT UNDER SECTIONS 15 AND 16)... IS LIMITED TO, AND WILL NOT EXCEED, THE AMOUNTS TO BE PAID BY CLIENT TO INTUIT HEREUNDER.",
+          "interpretation": "The contract explicitly excludes Sections 15 (Confidentiality and User Data) and 16 (Warranty/Indemnity) from the general liability cap, meaning liability for breaches of confidentiality, user data obligations, and warranties/indemnities is uncapped.",
+          "source_contract_id": "STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0754",
+          "text": "EXCEPT IN THE EVENT OF A CLAIM UNDER SECTION 10 OR FAILURE TO PAY UNDER SECTION 6, IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER PARTY IN AN AMOUNT GREATER THAN THE AMOUNT BOXLOT ACTUALLY PAYS TO THEGLOBE HEREUNDER.",
+          "interpretation": "The contract explicitly excludes claims under Section 10 (Indemnity) and Section 6 (Payment) from the liability cap, meaning liability for these specific breaches is uncapped.",
+          "source_contract_id": "TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0758",
+          "text": "Except with regard to a breach of confidentiality, a party's indemnification obligations hereunder, or infringement of intellectual property rights, either party's total liability to the other party under this Agreement shall be limited to the amounts paid or payable by the Reseller to Todos during the twelve-month period preceding the interposition of the claim.",
+          "interpretation": "The contract explicitly excludes breach of confidentiality, indemnification obligations, and IP infringement from the liability cap, meaning liability for these specific breaches is uncapped.",
+          "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+        }
+      ]
+    }
+  ],
+  "Cap on Liability": [
+    {
+      "pattern_id": "PAT-cap-on-liability-01",
+      "category": "Cap on Liability",
+      "member_count": 23,
+      "source_contract_count": 23,
+      "selection_score": 2.0183,
+      "variation_cues": [
+        "liable",
+        "special",
+        "consequential",
+        "damages",
+        "indirect",
+        "arising",
+        "incidental",
+        "possibility",
+        "except",
+        "profits"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0480",
+          "text": "EXCEPT IN CONNECTION WITH A BREACH BY EITHER PARTY OF ARTICLE 9 OR SECTION 10.1.4 [Representations and Warranties] (v) AND THE INDEMNIFICATION OBLIGATIONS OF LEADERSONLINE UNDER SECTION 11.4(i)(c) [Indemnification by LeadersOnline] AND THE INDEMNIFICATION OBLIGATIONS OF VERTICALNET UNDER SECTION 11.5(i)(c) [Indemnification by VerticalNet], NEITHER PARTY WILL BE LIABLE FOR ANY SPECIAL, INDIRECT, CONSEQUENTIAL, EXEMPLARY OR INCIDENTAL DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY (INCLUDING NEGLIGENCE), EVEN IF SUCH PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.",
+          "interpretation": "The contract caps liability by excluding all special, indirect, consequential, exemplary, and incidental damages for general breaches, limiting recovery to direct damages except for specific carved-out obligations.",
+          "source_contract_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0649",
+          "text": "EXCEPT WITH RESPECT TO THE INDEMNIFICATION OBLIGATIONS SET FORTH IN SECTION 9 WITH REGARD TO CLAIMS BY THIRD PARTIES, IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR CONSEQUENTIAL, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE OR ENHANCED DAMAGES, LOST PROFITS OR REVENUES OR DIMINUTION IN VALUE ARISING OUT OF, RELATING TO, OR IN CONNECTION WITH ANY BREACH OF THIS AGREEMENT OR CLAIM HEREUNDER",
+          "interpretation": "The contract includes a limitation of liability clause that caps recovery by excluding consequential, indirect, incidental, special, exemplary, punitive, or enhanced damages, lost profits, and diminution in value, except for third-party indemnification claims.",
+          "source_contract_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0204",
+          "text": "EXCEPT AS SET FORTH IN SECTION 6.3, IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES ARISING OUT OF THIS AGREEMENT OR ITS TERMINATION, WHETHER LIABILITY IS ASSERTED IN CONTRACT, TORT (INCLUDING NEGLIGENCE) STRICT LIABILITY OR OTHERWISE AND IRRESPECTIVE OF WHETHER SUCH PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF ANY SUCH LOSS OR DAMAGE.",
+          "interpretation": "The contract explicitly excludes liability for special, incidental, consequential, or punitive damages, which acts as a cap on the types of recoverable damages, excluding them from general liability.",
+          "source_contract_id": "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-cap-on-liability-02",
+      "category": "Cap on Liability",
+      "member_count": 13,
+      "source_contract_count": 13,
+      "selection_score": 1.826,
+      "variation_cues": [
+        "liability",
+        "exceed",
+        "event",
+        "paid",
+        "amount",
+        "hereunder",
+        "total",
+        "actually",
+        "distributor",
+        "aggregate"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0701",
+          "text": "IN NO EVENT SHALL D2'S LIABILITY HEREUNDER EXCEED THE TOTAL AMOUNT PAID OR OWED BY LICENSEE TO D2 UNDER THIS AGREEMENT.",
+          "interpretation": "The contract establishes a specific monetary cap on D2's liability, limiting it to the total amount paid or owed by the Licensee under the agreement.",
+          "source_contract_id": "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0191",
+          "text": "Company's liability shall not exceed the fees that MA has paid under this Agreement.",
+          "interpretation": "The contract establishes a monetary cap on the Company's liability, limiting it to the total fees paid by the MA.",
+          "source_contract_id": "CybergyHoldingsInc_20140520_10-Q_EX-10.27_8605784_EX-10.27_Affiliate_Agreement"
+        },
+        {
+          "ka_id": "KA-0675",
+          "text": "IN NO EVENT SHALL LICENSOR'S AGGREGATE CUMULATIVE TOTAL LIABILITY UNDER THIS AGREEMENT EXCEED ONE HALF OF THE AMOUNT PAID BY THE LICENSEE TO Licensor HEREUNDER.",
+          "interpretation": "The contract establishes a specific monetary cap on the Licensor's aggregate cumulative liability, limiting it to 50% of the amount paid by the Licensee.",
+          "source_contract_id": "SFGFINANCIALCORP_05_12_2009-EX-10.1-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-cap-on-liability-03",
+      "category": "Cap on Liability",
+      "member_count": 14,
+      "source_contract_count": 14,
+      "selection_score": 1.7713,
+      "variation_cues": [
+        "harmless",
+        "claims",
+        "indemnify",
+        "costs",
+        "hold",
+        "out",
+        "arising",
+        "expenses",
+        "against",
+        "breach"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0329",
+          "text": "PFHOF agrees to indemnify, defend, and hold harmless the Village Media Company, its Affiliates, and their respective employees, officers, directors, agents, representatives, and successors and assigns from and against any and all claims, demands, liabilities, losses, suits, damages, costs (including, without limitation, costs of investigation), and expenses, including reasonable attorneys' fees, arising out of or relating to (a) the Village Media Company's authorized use of the PFHOF Works, as permitted by, and in accordance with, the terms of this Agreement, (b) any breach by PFHOF of any warranty, representation, obligation, or agreement made under this Agreement, or (c) PFHOF's use of the HOFV Works in breach of this Agreement, or any claim of infringement of any intellectual property right arising out of the misuse or misappropriation of the HOFV Works by PFHOF.",
+          "interpretation": "The indemnification clauses do not include any language capping the liability, limiting the maximum amount of recovery, or setting a time limitation for bringing claims, indicating there is no cap on liability.",
+          "source_contract_id": "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0517",
+          "text": "Subject to the provisions herein, the COMPANY and CELEBRITY agree to indemnify, defend and hold each other harmless from and against all demands, claims, actions, losses, damages, liabilities, costs and expenses, including without limitation, interest, penalties and attorneys' fees and expenses asserted against or imposed or incurred by either party by reason of or resulting from any action or a breach of any representation, warranty, covenant, condition, or agreement of the other party to this Agreement.",
+          "interpretation": "The indemnification clause covers 'all' losses and expenses without any stated maximum amount, time limitation for claims, or exclusion of consequential damages, indicating there is no cap on liability.",
+          "source_contract_id": "MARSHALLHOLDINGSINTERNATIONAL,INC_04_14_2004-EX-10.15-ENDORSEMENT_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0173",
+          "text": "WPD hereby agrees to hold harmless and indemnify CNS, its officers, affiliates, employees, and agents (the \"CNS Indemnitees\") from and against any and all third party claims, demands, causes of actions, costs of suit and reasonable and documented attorney's fees (collectively \"Claims\") caused by, arising out of, or resulting from WPD's, its employees, agents', affiliates', licensees', sublicensees' or subcontractors' (i) negligence or willful misconduct; (ii) breach of any warranty or representations set forth herein; (iii) breach or alleged breach of third party intellectual property rights; and (iv) use or sale of Development Products.",
+          "interpretation": "The contract does not contain a specific monetary cap or time limitation on liability for breach of obligations; the indemnification is for 'any and all' claims.",
+          "source_contract_id": "CnsPharmaceuticalsInc_20200326_8-K_EX-10.1_12079626_EX-10.1_Development_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-cap-on-liability-04",
+      "category": "Cap on Liability",
+      "member_count": 7,
+      "source_contract_count": 7,
+      "selection_score": 1.6264,
+      "variation_cues": [
+        "after",
+        "action",
+        "cause",
+        "more",
+        "than",
+        "out",
+        "arising",
+        "brought",
+        "form",
+        "regardless"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0425",
+          "text": "NO ACTIONS, REGARDLESS OF FORM, ARISING OUT OF THIS AGREEMENT, MAY BE BROUGHT BY DISTRIBUTOR MORE THAN ONE (1) YEAR AFTER THE CAUSE OF ACTION HAS ARISEN.",
+          "interpretation": "The contract includes a time limitation (one year) for the Distributor to bring claims, which acts as a cap on liability exposure over time.",
+          "source_contract_id": "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor_Agreement"
+        },
+        {
+          "ka_id": "KA-0429",
+          "text": "Except for claims under Sections 9.4 [INDEMNIFICATION BY IMPRESSE] and 9.5 [INDEMNIFICATION BY VERTICALNET] hereof, neither party may bring a claim or action regardless of form, arising out of or related to this Agreement, including any claim of fraud or misrepresentation, more than two years after the cause of action accrues or becomes known, whichever is later.",
+          "interpretation": "The contract imposes a two-year statute of limitations for bringing claims, which acts as a temporal cap on liability exposure, excluding indemnification claims.",
+          "source_contract_id": "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0275",
+          "text": "EXCEPT FOR DAMAGES FOR WHICH A PARTY IS RESPONSIBLE PURSUANT TO ITS INDEMNIFICATION OBLIGATIONS SET FORTH IN SECTION 10 ABOVE, NO ACTION, REGARDLESS OF FORM, ARISING OUT OF OR RELATED TO THIS AGREEMENT MAY BE BROUGHT BY EITHER PARTY MORE THAN [***] AFTER SUCH PARTY HAS KNOWLEDGE OF THE OCCURRENCE THAT GAVE RISE TO THE CAUSE OF SUCH ACTION.",
+          "interpretation": "The contract includes a time limitation (statute of limitations) for bringing claims, which acts as a cap on liability exposure over time, though the specific duration is redacted.",
+          "source_contract_id": "FUSIONPHARMACEUTICALSINC_06_05_2020-EX-10.17-Supply_Agreement_-_FUSION"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-cap-on-liability-05",
+      "category": "Cap on Liability",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.6068,
+      "variation_cues": [
+        "indirect",
+        "consequential",
+        "damages",
+        "special",
+        "liable",
+        "event",
+        "loss",
+        "limited",
+        "including",
+        "amounts"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0639",
+          "text": "Neither party shall be liable to the other pursuant to this Agreement for any amounts representing loss of profit, loss of business or indirect, consequential, exemplary, or punitive damages of the other party.",
+          "interpretation": "The contract caps liability by excluding indirect, consequential, exemplary, and punitive damages, as well as loss of profit and business.",
+          "source_contract_id": "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0048",
+          "text": "IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER PARTY UNDER THIS AGREEMENT IN A DIRECT ACTION BETWEEN THE PARTIES FOR SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, LOSS OF PROFITS) SUFFERED BY THE OTHER PARTY.",
+          "interpretation": "The contract caps liability by excluding special, indirect, incidental, and consequential damages, but does not specify a maximum monetary amount for direct damages.",
+          "source_contract_id": "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0434",
+          "text": "IN NO EVENT SHALL Erchonia BE LIABLE FOR ANY LOSS OF PROFIT OR ANY OTHER COMMERCIAL DAMAGE, INCLUDING BUT NOT LIMITED TO SPECIAL, INCIDENTAL, CONSEQUENTIAL OR OTHER INDIRECT DAMAGES UNDER ANY CAUSE OF ACTION ARISING OUT OF OR RELATING TO THIS AGREEMENT, INCLUDING, WITHOUT LIMITATION, CLAIMS ARISING FROM MALFUNCTION OR DEFECTS IN THE PRODUCTS.",
+          "interpretation": "The contract includes a limitation of liability clause that caps Erchonia's liability by excluding consequential, incidental, and indirect damages, as well as loss of profit.",
+          "source_contract_id": "InnerscopeHearingTechnologiesInc_20181109_8-K_EX-10.6_11419704_EX-10.6_Distributor_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-cap-on-liability-06",
+      "category": "Cap on Liability",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.3871,
+      "variation_cues": [
+        "consequential",
+        "damages",
+        "liable",
+        "incidental",
+        "event",
+        "breach",
+        "breaches",
+        "dgt",
+        "arising",
+        "company"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0065",
+          "text": "In no event will the Company be liable for incidental or consequential damages.",
+          "interpretation": "The contract caps liability by explicitly excluding the Company's liability for incidental and consequential damages.",
+          "source_contract_id": "BIOPURECORP_06_30_1999-EX-10.13-AGENCY_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0141",
+          "text": "Upon termination of this Agreement, NEITHER PARTY SHALL BE LIABLE TO THE OTHER FOR ANY CONSEQUENTIAL, EXEMPLARY, SPECIAL, INCIDENTAL OR PUNITIVE DAMAGES, EVEN IF IT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, WHICH ARE RELATED TO THE AGREEMENT OR ITS BREACH.",
+          "interpretation": "The contract explicitly excludes consequential, exemplary, special, incidental, and punitive damages, effectively capping liability to direct damages only.",
+          "source_contract_id": "CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE_SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0362",
+          "text": "In no event shall DGT be liable for consequential or incidental damages arising from any breach or breaches of this Agreement.",
+          "interpretation": "DGT is explicitly excluded from liability for consequential or incidental damages, effectively capping recovery to direct damages.",
+          "source_contract_id": "HUBEIMINKANGPHARMACEUTICALLTD_09_19_2006-EX-10.1-OUTSOURCING_AGREEMENT"
+        }
+      ]
+    }
+  ],
+  "Liquidated Damages": [
+    {
+      "pattern_id": "PAT-liquidated-damages-01",
+      "category": "Liquidated Damages",
+      "member_count": 34,
+      "source_contract_count": 34,
+      "selection_score": 2.0808,
+      "variation_cues": [
+        "termination",
+        "event",
+        "prior",
+        "thirty",
+        "liable",
+        "all",
+        "written",
+        "payable",
+        "fee",
+        "except"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0381",
+          "text": "3.1 Either Party may terminate this Agreement by giving the other Party thirty (30) days' prior written notice.",
+          "interpretation": "The contract allows for termination with notice but does not contain any clause awarding liquidated damages or a termination fee upon breach or termination.",
+          "source_contract_id": "HertzGroupRealtyTrustInc_20190920_S-11A_EX-10.8_11816941_EX-10.8_Trademark_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0650",
+          "text": "Each party shall be responsible for its own fees and expenses in connection with the preparation and execution of this Agreement.",
+          "interpretation": "The contract does not contain any clause awarding liquidated damages for breach or a termination fee; it only specifies that each party bears its own preparation costs.",
+          "source_contract_id": "ReedsInc_20191113_10-Q_EX-10.4_11888303_EX-10.4_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0636",
+          "text": "The Parties shall be entitled reasonable attorney fees and costs of enforcement of this Agreement.",
+          "interpretation": "The contract provides for the recovery of attorney fees and costs upon enforcement, but does not contain a specific liquidated damages clause or a fixed termination fee.",
+          "source_contract_id": "PhotronicsInc_20171219_10-QA_EX-10.28_10982650_EX-10.28_Outsourcing_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-liquidated-damages-02",
+      "category": "Liquidated Damages",
+      "member_count": 14,
+      "source_contract_count": 12,
+      "selection_score": 1.7902,
+      "variation_cues": [
+        "per",
+        "rate",
+        "interest",
+        "payment",
+        "charge",
+        "due",
+        "until",
+        "late",
+        "percent",
+        "payments"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0799",
+          "text": "Late payments are subject to an interest charge, at the lower rate of (i) one and one-half percent (1.5%) per month, or (ii) the maximum legal rate.",
+          "interpretation": "The contract specifies an interest charge for late payments, which functions as a penalty for breach of payment obligations, but does not contain a specific liquidated damages clause or termination fee.",
+          "source_contract_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0642",
+          "text": "Any amount not paid when due will thereafter bear interest at the rate of one percent (1%) per month.",
+          "interpretation": "The contract specifies a fixed interest rate for late payments, which functions as a liquidated damage or fee for breach of payment obligations.",
+          "source_contract_id": "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0584",
+          "text": "Overdue payments shall accrue a late payment charge at the lesser of one and one half percent (1 1/2%) per month or the maximum rate allowed under applicable law.",
+          "interpretation": "The contract includes a late payment charge for overdue amounts, which functions as a fee for breach of payment obligations, though it is framed as interest rather than traditional liquidated damages.",
+          "source_contract_id": "OASYSMOBILE,INC_07_05_2001-EX-10.17-OUTSOURCING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-liquidated-damages-03",
+      "category": "Liquidated Damages",
+      "member_count": 8,
+      "source_contract_count": 8,
+      "selection_score": 1.6705,
+      "variation_cues": [
+        "claims",
+        "expenses",
+        "indemnify",
+        "against",
+        "harmless",
+        "including",
+        "arising",
+        "fees",
+        "out",
+        "defend"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0568",
+          "text": "The Parties agree to mutually defend, indemnify and save one another harmless from and against any claims, demands, actions, losses, damages, costs, charges, liabilities and any expenses, including legal fees of whatever kind arising out of or in connection with each parties' activities conducted pursuant to this Agreement.",
+          "interpretation": "The contract does not contain a clause awarding liquidated damages for breach or a specific termination fee; it relies on general indemnification for losses.",
+          "source_contract_id": "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0330",
+          "text": "PFHOF agrees to indemnify, defend, and hold harmless the Village Media Company, its Affiliates, and their respective employees, officers, directors, agents, representatives, and successors and assigns from and against any and all claims, demands, liabilities, losses, suits, damages, costs (including, without limitation, costs of investigation), and expenses, including reasonable attorneys' fees, arising out of or relating to (a) the Village Media Company's authorized use of the PFHOF Works, as permitted by, and in accordance with, the terms of this Agreement, (b) any breach by PFHOF of any warranty, representation, obligation, or agreement made under this Agreement, or (c) PFHOF's use of the HOFV Works in breach of this Agreement, or any claim of infringement of any intellectual property right arising out of the misuse or misappropriation of the HOFV Works by PFHOF.",
+          "interpretation": "The contract provides for indemnification of actual damages, costs, and expenses but does not contain any clause specifying a fixed sum or formula for liquidated damages or a termination fee upon breach or termination.",
+          "source_contract_id": "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0285",
+          "text": "The Supplier shall indemnify the Distributor, defend and hold harmless against any liability incurred by the Distributor in respect of damage to property, death or personal injury arising from any fault or defect in the design of the Products and any reasonable costs, claims, demands and expenses, including reasonable attorneys' fees, arising out of or in connection with that liability (Relevant Claim), except to the extent the liability arises as a result of the wilful misconduct of the Distributor.",
+          "interpretation": "The contract does not contain any clause awarding liquidated damages for breach or a termination fee upon termination.",
+          "source_contract_id": "FuseMedicalInc_20190321_10-K_EX-10.43_11575454_EX-10.43_Distributor_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-liquidated-damages-04",
+      "category": "Liquidated Damages",
+      "member_count": 7,
+      "source_contract_count": 7,
+      "selection_score": 1.6247,
+      "variation_cues": [
+        "special",
+        "liable",
+        "event",
+        "consequential",
+        "damages",
+        "profits",
+        "punitive",
+        "incidental",
+        "either",
+        "arising"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0114",
+          "text": "IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR ANY CONSEQUENTIAL, SPECIAL OR PUNITIVE DAMAGES OR LOST PROFITS ARISING UNDER OR RELATING TO THIS AGREEMENT.",
+          "interpretation": "The contract excludes consequential, special, punitive damages, and lost profits, but does not contain any clause awarding liquidated damages or a termination fee.",
+          "source_contract_id": "CARDAX,INC_08_19_2014-EX-10.1-COLLABORATION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0507",
+          "text": "IN NO EVENT WILL EITHER PARTY BE LIABLE TO THE OTHER UNDER THIS AGREEMENT OR OTHERWISE FOR CONSEQUENTIAL, SPECIAL, INCIDENTAL, EXEMPLARY, STATUTORY, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT.",
+          "interpretation": "The contract excludes consequential and punitive damages but does not contain any clause awarding liquidated damages or a termination fee.",
+          "source_contract_id": "Loop_Industries,_Inc._-_Marketing_Agreement"
+        },
+        {
+          "ka_id": "KA-0760",
+          "text": "IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER PARTY FOR ANY INCIDENTAL, CONSEQUENTIAL, INDIRECT, SPECIAL, OR PUNITIVE DAMAGES (INCLUDING, BUT NOT LIMITED TO, LOST PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR OTHER PECUNIARY LOSS) REGARDLESS OF WHETHER SUCH LIABILITY IS BASED ON BREACH OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, BREACH OF WARRANTIES, FAILURE OF ESSENTIAL PURPOSE OR OTHERWISE AND EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.",
+          "interpretation": "The contract excludes consequential and punitive damages but does not contain any clause awarding liquidated damages or a termination fee for breach or termination.",
+          "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-liquidated-damages-05",
+      "category": "Liquidated Damages",
+      "member_count": 6,
+      "source_contract_count": 6,
+      "selection_score": 1.5663,
+      "variation_cues": [
+        "law",
+        "per",
+        "rate",
+        "month",
+        "due",
+        "interest",
+        "unpaid",
+        "highest",
+        "permitted",
+        "paid"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0431",
+          "text": "All payments not paid by the date such payments are due shall bear interest from the due date to the date payments are actually paid at the lower of (i) 1% per month or (ii) the maximum rate permitted by law.",
+          "interpretation": "The contract specifies interest on late payments but does not contain a clause awarding liquidated damages or a specific termination fee for breach or termination.",
+          "source_contract_id": "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement"
+        },
+        {
+          "ka_id": "KA-0193",
+          "text": "A LATE PAYMENT CHARGE of one and one-half percent (1 ½%) or the maximum rate permitted by applicable law, whichever is less, of the outstanding balance due to Company per month will be imposed on all overdue accounts.",
+          "interpretation": "The contract includes a late payment charge, which functions as a fee for breach of payment obligations, but does not contain a specific termination fee or liquidated damages clause for general breach.",
+          "source_contract_id": "CybergyHoldingsInc_20140520_10-Q_EX-10.27_8605784_EX-10.27_Affiliate_Agreement"
+        },
+        {
+          "ka_id": "KA-0335",
+          "text": "In the event Constellation fails to pay to the HOF Entities when due any sum required by this Agreement to be paid, whether pursuant to this Section 3.4 or otherwise, interest shall accrue from the date due on the unpaid amount at the rate of [***] per month or, if less, the highest rate permitted by law.",
+          "interpretation": "The contract specifies interest accrual for late payments, but does not contain a specific liquidated damages clause or a fixed termination fee for breach or termination.",
+          "source_contract_id": "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-liquidated-damages-06",
+      "category": "Liquidated Damages",
+      "member_count": 5,
+      "source_contract_count": 5,
+      "selection_score": 1.4863,
+      "variation_cues": [
+        "payment",
+        "penalty",
+        "without",
+        "majority",
+        "terminated",
+        "vote",
+        "time",
+        "trustees",
+        "board",
+        "notice"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0358",
+          "text": "There is no payment or compensation contemplated under this Agreement.",
+          "interpretation": "The contract explicitly states there is no payment or compensation, and no clauses for liquidated damages or termination fees are present.",
+          "source_contract_id": "HPILHOLDING_01_07_2015-EX-99.1-COOPERATION_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0041",
+          "text": "This Agreement may be terminated at any time, without the payment of any penalty, upon 60 days' written notice",
+          "interpretation": "The contract explicitly states that termination occurs without the payment of any penalty, indicating the absence of liquidated damages or termination fees.",
+          "source_contract_id": "ArcaUsTreasuryFund_20200207_N-2_EX-99.K5_11971930_EX-99.K5_Development_Agreement"
+        },
+        {
+          "ka_id": "KA-0441",
+          "text": "This Agreement is terminable with respect to the Fund, without penalty, (a) on 60 days' written notice, by vote of a majority of the Qualified Trustees or by vote of a majority (as defined in the 1940 Act) of the outstanding voting securities of the Fund or (b) on 90 days' written notice by Integrity.",
+          "interpretation": "The contract explicitly states that the agreement is terminable 'without penalty,' indicating the absence of liquidated damages or termination fees.",
+          "source_contract_id": "IntegrityFunds_20200121_485BPOS_EX-99.E_UNDR_CONTR_11948727_EX-99.E_UNDR_CONTR_Service_Agreement"
+        }
+      ]
+    }
+  ],
+  "Warranty Duration": [
+    {
+      "pattern_id": "PAT-warranty-duration-01",
+      "category": "Warranty Duration",
+      "member_count": 26,
+      "source_contract_count": 26,
+      "selection_score": 2.06,
+      "variation_cues": [
+        "implied",
+        "warranties",
+        "merchantability",
+        "particular",
+        "purpose",
+        "fitness",
+        "including",
+        "express",
+        "all",
+        "disclaims"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0397",
+          "text": "XIMAGE MAKES NO WARRANTY OF ANY KIND, WHETHER EXPRESS OR IMPLIED (INCLUDING WARRANTIES OR MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE) WITH RESPECT TO THE SERVICES, SOFTWARE OR DOCUMENTS PROVIDED (OR TO BE PROVIDED) HEREUNDER.",
+          "interpretation": "The contract explicitly disclaims all warranties, meaning there is no warranty duration for defects or errors.",
+          "source_contract_id": "IMAGEWARESYSTEMSINC_12_20_1999-EX-10.22-MAINTENANCE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0655",
+          "text": "EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, (A) NO PARTY MAKES ANY REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, WITH RESPECT TO THE MATERIALS AND SERVICES, AS APPLICABLE, PROVIDED HEREUNDER, AND ALL SUCH MATERIALS AND SERVICES, AS APPLICABLE, ARE PROVIDED ON AN \"AS IS\" BASIS AND (B) EACH PARTY DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF MERCHANTABILITY, NON- INFRINGEMENT",
+          "interpretation": "The contract explicitly disclaims all warranties, express or implied, providing services on an 'AS IS' basis, meaning there is no warranty duration for defects or errors.",
+          "source_contract_id": "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service_Agreement"
+        },
+        {
+          "ka_id": "KA-0115",
+          "text": "THE REPRESENTATIONS AND WARRANTIES SET FORTH IN THIS AGREEMENT ARE THE PARTIES' ONLY WARRANTIES AND NO OTHER WARRANTY, EXPRESS, IMPLIED OR STATUTORY, WILL APPLY. EACH PARTY EXPRESSLY DISCLAIMS ALL OTHER WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.",
+          "interpretation": "The contract disclaims all warranties except for the specific representations and warranties listed in Section 7, and does not specify a duration for any warranty against defects or errors in technology, products, or services.",
+          "source_contract_id": "CARDAX,INC_08_19_2014-EX-10.1-COLLABORATION_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-warranty-duration-02",
+      "category": "Warranty Duration",
+      "member_count": 11,
+      "source_contract_count": 11,
+      "selection_score": 1.66,
+      "variation_cues": [
+        "product",
+        "date",
+        "termination",
+        "after",
+        "provisions",
+        "article",
+        "all",
+        "warrants",
+        "hereby",
+        "company"
+      ],
+      "has_condition": true,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0473",
+          "text": "SRP hereby warrants that it has the authority to grant all rights to Baker under this Article 3.",
+          "interpretation": "The contract contains a warranty regarding authority, but does not specify a duration for warranties against defects or errors in technology, products, or services.",
+          "source_contract_id": "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0340",
+          "text": "No",
+          "interpretation": "The contract contains representations and warranties regarding the right to enter the agreement and professional performance, but does not specify a duration for warranties against defects in products or services.",
+          "source_contract_id": "HALITRON,INC_03_01_2005-EX-10.15-SPONSORSHIP_AND_DEVELOPMENT_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0469",
+          "text": "The provisions under this Article VIII will have effect during and after the term of this Agreement.",
+          "interpretation": "While this refers to confidentiality, the contract does not specify a duration for warranties against defects in technology, products, or services, implying no specific warranty duration is defined.",
+          "source_contract_id": "LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET_CHANNEL_COOPERATION_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-warranty-duration-03",
+      "category": "Warranty Duration",
+      "member_count": 4,
+      "source_contract_count": 4,
+      "selection_score": 1.4658,
+      "variation_cues": [
+        "represents",
+        "warrants",
+        "order",
+        "execution",
+        "performance",
+        "violate",
+        "hereunder",
+        "default",
+        "which",
+        "court"
+      ],
+      "has_condition": true,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0814",
+          "text": "11.01. Calm represents and warrants that: (a) it has the legal power and authority to enter into this Agreement and to grant the rights to its Marks granted hereunder, and the execution and performance of this agreement does not violate or put Calm in default of any other agreement, order or judgment by which it is bound or to which it is subject; (b) Calm's Marks do not infringe any third parties' rights and that the Marks were not misappropriated from any third party; (c) it is aware of and will comply with all federal, state and local laws and regulations governing the Products and the Product Collateral in the Territory; and (d) it is the sole and exclusive owner of Calm's Marks.",
+          "interpretation": "The contract contains representations and warranties regarding authority, IP ownership, and compliance, but does not specify a duration for warranties against defects or errors in products or services.",
+          "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+        },
+        {
+          "ka_id": "KA-0723",
+          "text": "Each of the parties represents and warrants to the other party that, (i) the Agreement constitutes a valid, legal and binding obligation of such party and is enforceable against such party in accordance with its terms, (ii) it has the power and authority to execute the Agreement and perform all its terms, and (iii) the execution and performance of this Agreement shall not violate any charter documents of such party, contravene any provisions of law as applicable to such party (including any order, decree, injunction of any competent court) or conflict with the provisions of any material agreement or contract executed by such party.",
+          "interpretation": "The contract contains representations and warranties regarding legal authority and validity, but does not specify a duration for warranties against defects in technology, products, or services.",
+          "source_contract_id": "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise_Agreement"
+        },
+        {
+          "ka_id": "KA-0119",
+          "text": "As of the date hereof, Contractor hereby represents and Warrants to the Company that the execution and delivery of this Agreement, and the performance of Contractor's obligations hereunder, do not and will not conflict with, violate or breach, or constitute a default or require any consent under, any contractual obligation or court or administrative order by which Contractor is bound.",
+          "interpretation": "The contract contains representations and warranties regarding non-conflict with other obligations, but does not specify a duration for warranties against defects in products or services, nor does it define a warranty period for the services provided.",
+          "source_contract_id": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING_AGREEMENT"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-warranty-duration-04",
+      "category": "Warranty Duration",
+      "member_count": 7,
+      "source_contract_count": 7,
+      "selection_score": 1.4618,
+      "variation_cues": [
+        "represents",
+        "laws",
+        "warrants",
+        "all",
+        "duly",
+        "perform",
+        "good",
+        "standing",
+        "obligations",
+        "authority"
+      ],
+      "has_condition": false,
+      "has_exception": false,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0402",
+          "text": "As of the date of this Agreement, IMPCO represents and warrants that it is a company duly incorporated and in good standing under the laws of the State of Delaware USA...",
+          "interpretation": "The contract contains representations and warranties regarding corporate status and authority, but does not specify a duration for warranties against defects in technology, products, or services.",
+          "source_contract_id": "IMPCOTECHNOLOGIESINC_04_15_2003-EX-10.65-JOINT_VENTURE_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0144",
+          "text": "Vendor represents and warrants to Torvec the following: (i) it has the authority to enter into this Agreement and to perform hereunder in accordance with its provisions; (ii) no other person or entity has the right to be the exclusive automotive sponsor of the activities and the events set forth in this Agreement; and (iii) it will perform its obligations under this Agreement in compliance with all applicable laws, rules and regulations.",
+          "interpretation": "The contract contains representations and warranties regarding authority and compliance, but does not specify a duration for warranties against defects in technology, products, or services.",
+          "source_contract_id": "CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE_SPONSORSHIP_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0158",
+          "text": "S2K hereby represents and warrants to the Distributor that: (i) It is a limited liability company duly organized and existing and in good standing under the laws of the State of Delaware;",
+          "interpretation": "The contract contains representations and warranties regarding corporate status and authority, but does not specify a duration for warranties against defects in services or products.",
+          "source_contract_id": "CcRealEstateIncomeFundadv_20181205_POS_8C_EX-99.(H)(3)_11447739_EX-99.(H)(3)_Marketing_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-warranty-duration-05",
+      "category": "Warranty Duration",
+      "member_count": 3,
+      "source_contract_count": 3,
+      "selection_score": 1.3517,
+      "variation_cues": [
+        "implied",
+        "express",
+        "warranty",
+        "licensor",
+        "makes",
+        "forth",
+        "mark",
+        "licensed",
+        "arising",
+        "warranties"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0050",
+          "text": "EXCEPT AS OTHERWISE EXPRESSLY SET FORTH IN THIS AGREEMENT, THE UNIVERSITY MAKES NO REPRESENTATION AND EXTENDS NO WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, WITH RESPECT TO THE SUBJECT MATTER OF THIS AGREEMENT.",
+          "interpretation": "The University explicitly disclaims all warranties, express or implied, regarding the subject matter of the agreement, so there is no warranty duration.",
+          "source_contract_id": "ArtaraTherapeuticsInc_20200110_8-K_EX-10.5_11943350_EX-10.5_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0382",
+          "text": "4.2 LIMITATION OF WARRANTY AND LIABILITY. LICENSOR DOES NOT MAKE WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, RELATED TO OR ARISING OUT OF THE LICENSED MARK OR THIS AGREEMENT.",
+          "interpretation": "The Licensor explicitly disclaims all warranties, meaning there is no warranty duration as no warranties are provided.",
+          "source_contract_id": "HertzGroupRealtyTrustInc_20190920_S-11A_EX-10.8_11816941_EX-10.8_Trademark_License_Agreement"
+        },
+        {
+          "ka_id": "KA-0046",
+          "text": "But for the warranty set forth in section 5.1., supra, Licensor, by this Agreement, makes no warranties or guarantees, either express or implied, arising by law or otherwise with regard to the Licensed Mark and/or the Licensed Products.",
+          "interpretation": "The contract explicitly states that the Licensor makes no warranties or guarantees regarding the Licensed Mark or Licensed Products, other than the non-conflict warranty in Section 5.1, meaning there is no duration for product or technology warranties.",
+          "source_contract_id": "ArconicRolledProductsCorp_20191217_10-12B_EX-2.7_11923804_EX-2.7_Trademark_License_Agreement"
+        }
+      ]
+    },
+    {
+      "pattern_id": "PAT-warranty-duration-06",
+      "category": "Warranty Duration",
+      "member_count": 4,
+      "source_contract_count": 4,
+      "selection_score": 1.3303,
+      "variation_cues": [
+        "period",
+        "accordance",
+        "one",
+        "documentation",
+        "perform",
+        "warrants",
+        "defects",
+        "materials",
+        "free",
+        "workmanship"
+      ],
+      "has_condition": false,
+      "has_exception": true,
+      "representative_examples": [
+        {
+          "ka_id": "KA-0120",
+          "text": "Changepoint warrants that the Software will perform in substantial accordance with the Documentation, and the media on which the Software is distributed will be free from defects in materials and workmanship under normal use, for a period of one hundred twenty (120) days after delivery of the Software to Corio for Acceptance Testing (the \"Warranty Period\").",
+          "interpretation": "The contract specifies a warranty period of 120 days (approximately 4 months) for the software to perform in accordance with documentation and be free from defects.",
+          "source_contract_id": "CHANGEPOINTCORP_03_08_2000-EX-10.6-LICENSE_AND_HOSTING_AGREEMENT"
+        },
+        {
+          "ka_id": "KA-0761",
+          "text": "Todos warrants that for a period of one (1) year from the date of delivery of each Product to the Reseller, the Product, except for those components that have a shorter expiration date as set forth on Exhibit A, shall perform substantially in accordance with the Product's documentation and specifications, and shall be free from all defects in materials, manufacture, and workmanship.",
+          "interpretation": "The warranty against defects in materials, manufacture, and workmanship lasts for one year from the date of delivery of the Product.",
+          "source_contract_id": "TodosMedicalLtd_20190328_20-F_EX-4.10_11587157_EX-4.10_Marketing_Agreement__Reseller_Agreement"
+        },
+        {
+          "ka_id": "KA-0140",
+          "text": "Commerce One warrants that the Software and MarketSite.net Service will perform in substantial accordance with the Documentation, and the media on which the Software is distributed will be free from defects in materials and workmanship under normal use, for a period of sixty (60) days from the Effective Date, but in no event not later than December 31, 1999 (the \"Warranty Period\").",
+          "interpretation": "The warranty against defects in materials and workmanship lasts for a period of sixty (60) days from the Effective Date.",
+          "source_contract_id": "CORIOINC_07_20_2000-EX-10.5-LICENSE_AND_HOSTING_AGREEMENT"
+        }
+      ]
+    }
+  ]
+}

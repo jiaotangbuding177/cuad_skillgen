@@ -2,49 +2,12 @@
   "method": "evoskill_compiler",
   "case_id": "assignment_and_control",
   "model": "ecnu-plus",
-  "pipeline": {
-    "step1_extract": {
-      "contracts_processed": 306,
-      "total_kas_extracted": 515,
-      "avg_kas_per_contract": 1.68,
-      "kas_by_category": {
-        "Change of Control": 240,
-        "Anti-Assignment": 275
-      },
-      "kas_by_contract_sample": {
-        "2ThemartComInc_19990826_10-12G_EX-10.10_6700288_EX-10.10_Co-Branding_Agreement__Agency_Agreement": 2,
-        "ABILITYINC_06_15_2020-EX-4.25-SERVICES_AGREEMENT": 3,
-        "ACCELERATEDTECHNOLOGIESHOLDINGCORP_04_24_2003-EX-10.13-JOINT_VENTURE_AGREEMENT": 2,
-        "ADMA_BioManufacturing,_LLC_-__Amendment_#3_to_Manufacturing_Agreement_": 0,
-        "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY_AGREEMENT": 0,
-        "ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY_AGREEMENT": 0,
-        "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION_AGREEMENT": 2,
-        "AMERICANPHYSICIANSCAPITALINC_03_31_2003-EX-10.26-AGENCY_AGREEMENT": 2,
-        "ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller_Agreement": 2,
-        "ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING_AGREEMENT": 3
-      },
-      "llm_calls": 306
-    },
-    "step2_index": {
-      "total_kas_in_index": 515,
-      "categories_with_evidence": 2
-    },
-    "step3_security": {
-      "required_behaviors_count": 6,
-      "safety_requirements_count": 4
-    },
-    "step4_generate": {
-      "llm_calls": 1
-    },
-    "step5_compile": {
-      "llm_calls": 1
-    }
+  "ka_top_n": 30,
+  "regenerated_at": "2026-08-10 11:52:20",
+  "generation_notes": "Regenerated with top-30 KAs per category",
+  "categories": {
+    "Change of Control": 30,
+    "Anti-Assignment": 30
   },
-  "usage": {
-    "prompt_tokens": 2276219,
-    "completion_tokens": 94874,
-    "total_tokens": 2371093
-  },
-  "duration_seconds": 1853.84,
-  "created_at": "2026-07-22T01:16:58.970969+00:00"
+  "created_at": "2026-08-10T03:52:20.083266+00:00"
 }

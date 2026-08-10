@@ -28,6 +28,7 @@ BASELINES = [
     "summary2skill",
     "document_tool_maker",
     "evoskill_compiler",
+    "graph_evoskill_compiler",
 ]
 
 METHOD_NAMES = {
@@ -36,6 +37,7 @@ METHOD_NAMES = {
     "summary2skill": "summary2skill",
     "document_tool_maker": "document_tool_maker",
     "evoskill_compiler": "evoskill_compiler",
+    "graph_evoskill_compiler": "graph_evoskill_compiler",
 }
 
 

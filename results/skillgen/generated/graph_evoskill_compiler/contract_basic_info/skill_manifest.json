@@ -1,0 +1,35 @@
+{
+  "method": "graph_evoskill_compiler",
+  "case_id": "contract_basic_info",
+  "model": "ecnu-plus",
+  "source_method": "evoskill_compiler",
+  "compilation_protocol": "gesc-1.0",
+  "graph_config": {
+    "graph_ka_limit": 200,
+    "similarity_threshold": 0.24,
+    "max_neighbors": 6,
+    "patterns_per_category": 6,
+    "examples_per_pattern": 3
+  },
+  "graph_statistics": {
+    "node_types": {
+      "Category": 5,
+      "KnowledgeAtom": 1000,
+      "ClausePattern": 30,
+      "Contract": 283
+    },
+    "edge_types": {
+      "BELONGS_TO": 1000,
+      "DERIVED_FROM": 1000,
+      "VARIANT_OF": 2952,
+      "INSTANCE_OF": 708
+    }
+  },
+  "usage": {
+    "prompt_tokens": 12845,
+    "completion_tokens": 4017,
+    "total_tokens": 16862
+  },
+  "duration_seconds": 58.009,
+  "created_at": "2026-08-10T07:42:14.306124+00:00"
+}

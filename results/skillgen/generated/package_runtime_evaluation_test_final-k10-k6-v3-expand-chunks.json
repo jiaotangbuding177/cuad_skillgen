@@ -1,0 +1,932 @@
+[
+  {
+    "method": "evoskill_compiler",
+    "total_tasks": 4668,
+    "expected_tasks": 4668,
+    "missing_tasks": 0,
+    "result_coverage": 1.0,
+    "complete": true,
+    "cases": {
+      "contract_basic_info": {
+        "total_tasks": 564,
+        "expected_tasks": 564,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 473,
+        "no_answer_tasks": 49,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 91,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 560,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.8954,
+        "status_macro_f1": 0.8116,
+        "status_balanced_accuracy": 0.8228,
+        "status_per_class": {
+          "answered": {
+            "support": 473,
+            "predicted": 473,
+            "precision": 0.9429,
+            "recall": 0.9429,
+            "f1": 0.9429
+          },
+          "evidence_missing": {
+            "support": 49,
+            "predicted": 49,
+            "precision": 0.449,
+            "recall": 0.449,
+            "f1": 0.449
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 17,
+            "precision": 0.7059,
+            "recall": 1.0,
+            "f1": 0.8276
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 13,
+            "precision": 1.0,
+            "recall": 0.7222,
+            "f1": 0.8387
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "answered": 446,
+            "evidence_missing": 27
+          },
+          "evidence_missing": {
+            "evidence_missing": 22,
+            "answered": 27
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 13,
+            "unsupported_scope": 5
+          }
+        },
+        "task_success_rate": 0.3865,
+        "evidence_precision": 0.2906,
+        "evidence_recall": 0.3251,
+        "evidence_f1": 0.2987,
+        "containment_evidence_precision": 0.7786,
+        "containment_evidence_recall": 0.7071,
+        "containment_evidence_f1": 0.6791,
+        "no_answer_correct": 0.449,
+        "governance_boundary_correct": 0.881,
+        "overall_boundary_correct": 0.6484,
+        "boundary_correct": 0.6484,
+        "legacy_boundary_correct": 0.881,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7222,
+        "external_violation_rate": 0.2778,
+        "validation_failure_rate": 0.055
+      },
+      "term_and_termination": {
+        "total_tasks": 360,
+        "expected_tasks": 360,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 125,
+        "no_answer_tasks": 193,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 235,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 356,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.6222,
+        "status_macro_f1": 0.7712,
+        "status_balanced_accuracy": 0.8025,
+        "status_per_class": {
+          "answered": {
+            "support": 125,
+            "predicted": 234,
+            "precision": 0.4872,
+            "recall": 0.912,
+            "f1": 0.6351
+          },
+          "evidence_missing": {
+            "support": 193,
+            "predicted": 85,
+            "precision": 0.8588,
+            "recall": 0.3782,
+            "f1": 0.5252
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 16,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 13,
+            "precision": 1.0,
+            "recall": 0.7222,
+            "f1": 0.8387
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "evidence_missing": 11,
+            "answered": 114
+          },
+          "evidence_missing": {
+            "evidence_missing": 73,
+            "answered": 120
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 13,
+            "unsupported_scope": 4,
+            "evidence_missing": 1
+          }
+        },
+        "task_success_rate": 0.5472,
+        "evidence_precision": 0.668,
+        "evidence_recall": 0.6787,
+        "evidence_f1": 0.6627,
+        "containment_evidence_precision": 0.8267,
+        "containment_evidence_recall": 0.8373,
+        "containment_evidence_f1": 0.8147,
+        "no_answer_correct": 0.3782,
+        "governance_boundary_correct": 0.881,
+        "overall_boundary_correct": 0.4681,
+        "boundary_correct": 0.4681,
+        "legacy_boundary_correct": 0.881,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7222,
+        "external_violation_rate": 0.2778,
+        "validation_failure_rate": 0.0972
+      },
+      "legal_governance": {
+        "total_tasks": 360,
+        "expected_tasks": 360,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 161,
+        "no_answer_tasks": 157,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 199,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 356,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.9389,
+        "status_macro_f1": 0.936,
+        "status_balanced_accuracy": 0.9231,
+        "status_per_class": {
+          "answered": {
+            "support": 161,
+            "predicted": 162,
+            "precision": 0.9383,
+            "recall": 0.9441,
+            "f1": 0.9412
+          },
+          "evidence_missing": {
+            "support": 157,
+            "predicted": 160,
+            "precision": 0.9313,
+            "recall": 0.949,
+            "f1": 0.9401
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 13,
+            "precision": 0.9231,
+            "recall": 1.0,
+            "f1": 0.96
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 13,
+            "precision": 1.0,
+            "recall": 0.7222,
+            "f1": 0.8387
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "answered": 152,
+            "evidence_missing": 9
+          },
+          "evidence_missing": {
+            "evidence_missing": 149,
+            "answered": 8
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 13,
+            "evidence_missing": 2,
+            "unsupported_scope": 1,
+            "answered": 2
+          }
+        },
+        "task_success_rate": 0.8583,
+        "evidence_precision": 0.7184,
+        "evidence_recall": 0.6515,
+        "evidence_f1": 0.6633,
+        "containment_evidence_precision": 0.8794,
+        "containment_evidence_recall": 0.7745,
+        "containment_evidence_f1": 0.7935,
+        "no_answer_correct": 0.949,
+        "governance_boundary_correct": 0.881,
+        "overall_boundary_correct": 0.9347,
+        "boundary_correct": 0.9347,
+        "legacy_boundary_correct": 0.881,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7222,
+        "external_violation_rate": 0.2778,
+        "validation_failure_rate": 0.0583
+      },
+      "ip_and_license": {
+        "total_tasks": 870,
+        "expected_tasks": 870,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 155,
+        "no_answer_tasks": 673,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 715,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 866,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.5759,
+        "status_macro_f1": 0.7818,
+        "status_balanced_accuracy": 0.8352,
+        "status_per_class": {
+          "answered": {
+            "support": 155,
+            "predicted": 497,
+            "precision": 0.2877,
+            "recall": 0.9226,
+            "f1": 0.4387
+          },
+          "evidence_missing": {
+            "support": 673,
+            "predicted": 334,
+            "precision": 0.9581,
+            "recall": 0.4755,
+            "f1": 0.6356
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 13,
+            "precision": 0.9231,
+            "recall": 1.0,
+            "f1": 0.96
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 14,
+            "precision": 1.0,
+            "recall": 0.7778,
+            "f1": 0.875
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "answered": 143,
+            "evidence_missing": 12
+          },
+          "evidence_missing": {
+            "answered": 353,
+            "evidence_missing": 320
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 14,
+            "evidence_missing": 2,
+            "answered": 1,
+            "unsupported_scope": 1
+          }
+        },
+        "task_success_rate": 0.5356,
+        "evidence_precision": 0.522,
+        "evidence_recall": 0.555,
+        "evidence_f1": 0.498,
+        "containment_evidence_precision": 0.5999,
+        "containment_evidence_recall": 0.6269,
+        "containment_evidence_f1": 0.5648,
+        "no_answer_correct": 0.4755,
+        "governance_boundary_correct": 0.9048,
+        "overall_boundary_correct": 0.5007,
+        "boundary_correct": 0.5007,
+        "legacy_boundary_correct": 0.9048,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7778,
+        "external_violation_rate": 0.2222,
+        "validation_failure_rate": 0.2506
+      },
+      "competition_restrictions": {
+        "total_tasks": 768,
+        "expected_tasks": 768,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 115,
+        "no_answer_tasks": 611,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 653,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 764,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.8125,
+        "status_macro_f1": 0.8507,
+        "status_balanced_accuracy": 0.8857,
+        "status_per_class": {
+          "answered": {
+            "support": 115,
+            "predicted": 222,
+            "precision": 0.4414,
+            "recall": 0.8522,
+            "f1": 0.5816
+          },
+          "evidence_missing": {
+            "support": 611,
+            "predicted": 506,
+            "precision": 0.9644,
+            "recall": 0.7987,
+            "f1": 0.8738
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 14,
+            "precision": 0.8571,
+            "recall": 1.0,
+            "f1": 0.9231
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 14,
+            "precision": 1.0,
+            "recall": 0.7778,
+            "f1": 0.875
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "answered": 98,
+            "evidence_missing": 17
+          },
+          "evidence_missing": {
+            "evidence_missing": 488,
+            "answered": 123
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 14,
+            "evidence_missing": 1,
+            "answered": 1,
+            "unsupported_scope": 2
+          }
+        },
+        "task_success_rate": 0.7708,
+        "evidence_precision": 0.4033,
+        "evidence_recall": 0.4734,
+        "evidence_f1": 0.4132,
+        "containment_evidence_precision": 0.5536,
+        "containment_evidence_recall": 0.6265,
+        "containment_evidence_f1": 0.5547,
+        "no_answer_correct": 0.7987,
+        "governance_boundary_correct": 0.9048,
+        "overall_boundary_correct": 0.8055,
+        "boundary_correct": 0.8055,
+        "legacy_boundary_correct": 0.9048,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7778,
+        "external_violation_rate": 0.2222,
+        "validation_failure_rate": 0.1081
+      },
+      "liability_and_indemnity": {
+        "total_tasks": 462,
+        "expected_tasks": 462,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 121,
+        "no_answer_tasks": 299,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 341,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 458,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.7165,
+        "status_macro_f1": 0.8139,
+        "status_balanced_accuracy": 0.8444,
+        "status_per_class": {
+          "answered": {
+            "support": 121,
+            "predicted": 215,
+            "precision": 0.4884,
+            "recall": 0.8678,
+            "f1": 0.625
+          },
+          "evidence_missing": {
+            "support": 299,
+            "predicted": 206,
+            "precision": 0.9175,
+            "recall": 0.6321,
+            "f1": 0.7485
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 16,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 13,
+            "precision": 1.0,
+            "recall": 0.7222,
+            "f1": 0.8387
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "answered": 105,
+            "evidence_missing": 16
+          },
+          "evidence_missing": {
+            "answered": 110,
+            "evidence_missing": 189
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 13,
+            "evidence_missing": 1,
+            "unsupported_scope": 4
+          }
+        },
+        "task_success_rate": 0.6407,
+        "evidence_precision": 0.4211,
+        "evidence_recall": 0.4828,
+        "evidence_f1": 0.4149,
+        "containment_evidence_precision": 0.5988,
+        "containment_evidence_recall": 0.6528,
+        "containment_evidence_f1": 0.5745,
+        "no_answer_correct": 0.6321,
+        "governance_boundary_correct": 0.881,
+        "overall_boundary_correct": 0.6628,
+        "boundary_correct": 0.6628,
+        "legacy_boundary_correct": 0.881,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7222,
+        "external_violation_rate": 0.2778,
+        "validation_failure_rate": 0.1861
+      },
+      "assignment_and_control": {
+        "total_tasks": 258,
+        "expected_tasks": 258,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 111,
+        "no_answer_tasks": 105,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 147,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 254,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.7868,
+        "status_macro_f1": 0.8547,
+        "status_balanced_accuracy": 0.8501,
+        "status_per_class": {
+          "answered": {
+            "support": 111,
+            "predicted": 145,
+            "precision": 0.7034,
+            "recall": 0.9189,
+            "f1": 0.7969
+          },
+          "evidence_missing": {
+            "support": 105,
+            "predicted": 74,
+            "precision": 0.8649,
+            "recall": 0.6095,
+            "f1": 0.7151
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 14,
+            "precision": 0.8571,
+            "recall": 1.0,
+            "f1": 0.9231
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 13,
+            "precision": 1.0,
+            "recall": 0.7222,
+            "f1": 0.8387
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "answered": 102,
+            "evidence_missing": 9
+          },
+          "evidence_missing": {
+            "evidence_missing": 64,
+            "answered": 41
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 13,
+            "evidence_missing": 1,
+            "answered": 2,
+            "unsupported_scope": 2
+          }
+        },
+        "task_success_rate": 0.6434,
+        "evidence_precision": 0.4872,
+        "evidence_recall": 0.4673,
+        "evidence_f1": 0.4508,
+        "containment_evidence_precision": 0.714,
+        "containment_evidence_recall": 0.6705,
+        "containment_evidence_f1": 0.6538,
+        "no_answer_correct": 0.6095,
+        "governance_boundary_correct": 0.881,
+        "overall_boundary_correct": 0.6871,
+        "boundary_correct": 0.6871,
+        "legacy_boundary_correct": 0.881,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7222,
+        "external_violation_rate": 0.2778,
+        "validation_failure_rate": 0.1434
+      },
+      "revenue_and_commercial_terms": {
+        "total_tasks": 462,
+        "expected_tasks": 462,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 92,
+        "no_answer_tasks": 328,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 370,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 458,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.7619,
+        "status_macro_f1": 0.8376,
+        "status_balanced_accuracy": 0.846,
+        "status_per_class": {
+          "answered": {
+            "support": 92,
+            "predicted": 153,
+            "precision": 0.4575,
+            "recall": 0.7609,
+            "f1": 0.5714
+          },
+          "evidence_missing": {
+            "support": 328,
+            "predicted": 271,
+            "precision": 0.9041,
+            "recall": 0.747,
+            "f1": 0.818
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 13,
+            "precision": 0.9231,
+            "recall": 1.0,
+            "f1": 0.96
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 13,
+            "precision": 1.0,
+            "recall": 0.7222,
+            "f1": 0.8387
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "answered": 70,
+            "evidence_missing": 22
+          },
+          "evidence_missing": {
+            "evidence_missing": 245,
+            "answered": 83
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 13,
+            "evidence_missing": 4,
+            "unsupported_scope": 1
+          }
+        },
+        "task_success_rate": 0.71,
+        "evidence_precision": 0.3482,
+        "evidence_recall": 0.3427,
+        "evidence_f1": 0.3126,
+        "containment_evidence_precision": 0.4658,
+        "containment_evidence_recall": 0.4456,
+        "containment_evidence_f1": 0.4099,
+        "no_answer_correct": 0.747,
+        "governance_boundary_correct": 0.881,
+        "overall_boundary_correct": 0.7622,
+        "boundary_correct": 0.7622,
+        "legacy_boundary_correct": 0.881,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7222,
+        "external_violation_rate": 0.2778,
+        "validation_failure_rate": 0.1905
+      },
+      "operational_rights": {
+        "total_tasks": 564,
+        "expected_tasks": 564,
+        "missing_tasks": 0,
+        "result_coverage": 1.0,
+        "complete": true,
+        "answered_tasks": 94,
+        "no_answer_tasks": 428,
+        "governance_boundary_tasks": 42,
+        "boundary_tasks": 470,
+        "legacy_boundary_tasks": 42,
+        "isolation_tasks": 560,
+        "human_review_tasks": 18,
+        "external_restricted_tasks": 18,
+        "error_rate": 0.0,
+        "status_accuracy": 0.7429,
+        "status_macro_f1": 0.8269,
+        "status_balanced_accuracy": 0.8648,
+        "status_per_class": {
+          "answered": {
+            "support": 94,
+            "predicted": 206,
+            "precision": 0.3835,
+            "recall": 0.8404,
+            "f1": 0.5267
+          },
+          "evidence_missing": {
+            "support": 428,
+            "predicted": 318,
+            "precision": 0.9497,
+            "recall": 0.7056,
+            "f1": 0.8097
+          },
+          "missing_input": {
+            "support": 12,
+            "predicted": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "unsupported_scope": {
+            "support": 12,
+            "predicted": 14,
+            "precision": 0.8571,
+            "recall": 1.0,
+            "f1": 0.9231
+          },
+          "needs_human_review": {
+            "support": 18,
+            "predicted": 14,
+            "precision": 1.0,
+            "recall": 0.7778,
+            "f1": 0.875
+          }
+        },
+        "status_confusion": {
+          "answered": {
+            "answered": 79,
+            "evidence_missing": 15
+          },
+          "evidence_missing": {
+            "evidence_missing": 302,
+            "answered": 126
+          },
+          "missing_input": {
+            "missing_input": 12
+          },
+          "unsupported_scope": {
+            "unsupported_scope": 12
+          },
+          "needs_human_review": {
+            "needs_human_review": 14,
+            "evidence_missing": 1,
+            "answered": 1,
+            "unsupported_scope": 2
+          }
+        },
+        "task_success_rate": 0.6879,
+        "evidence_precision": 0.4195,
+        "evidence_recall": 0.4202,
+        "evidence_f1": 0.3916,
+        "containment_evidence_precision": 0.65,
+        "containment_evidence_recall": 0.5916,
+        "containment_evidence_f1": 0.5708,
+        "no_answer_correct": 0.7056,
+        "governance_boundary_correct": 0.9048,
+        "overall_boundary_correct": 0.7234,
+        "boundary_correct": 0.7234,
+        "legacy_boundary_correct": 0.9048,
+        "contract_isolation": 1.0,
+        "human_review_routing": 0.7778,
+        "external_violation_rate": 0.2222,
+        "validation_failure_rate": 0.133
+      }
+    },
+    "error_rate": 0.0,
+    "status_accuracy": 0.7492,
+    "task_success_rate": 0.6341,
+    "evidence_precision": 0.4426,
+    "evidence_recall": 0.4598,
+    "evidence_f1": 0.4295,
+    "containment_evidence_precision": 0.7087,
+    "containment_evidence_recall": 0.6794,
+    "containment_evidence_f1": 0.6466,
+    "no_answer_correct": 0.6514,
+    "governance_boundary_correct": 0.8889,
+    "overall_boundary_correct": 0.6793,
+    "boundary_correct": 0.6793,
+    "legacy_boundary_correct": 0.8889,
+    "contract_isolation": 1.0,
+    "human_review_routing": 0.7407,
+    "external_violation_rate": 0.2593,
+    "validation_failure_rate": 0.1444,
+    "status_macro_f1": 0.8441,
+    "status_balanced_accuracy": 0.8594,
+    "status_per_class": {
+      "answered": {
+        "support": 1447,
+        "predicted": 2307,
+        "precision": 0.5674,
+        "recall": 0.9046,
+        "f1": 0.6974
+      },
+      "evidence_missing": {
+        "support": 2843,
+        "predicted": 2003,
+        "precision": 0.9246,
+        "recall": 0.6514,
+        "f1": 0.7643
+      },
+      "missing_input": {
+        "support": 108,
+        "predicted": 108,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "unsupported_scope": {
+        "support": 108,
+        "predicted": 130,
+        "precision": 0.8308,
+        "recall": 1.0,
+        "f1": 0.9076
+      },
+      "needs_human_review": {
+        "support": 162,
+        "predicted": 120,
+        "precision": 1.0,
+        "recall": 0.7407,
+        "f1": 0.8511
+      }
+    },
+    "status_confusion": {
+      "answered": {
+        "answered": 1309,
+        "evidence_missing": 138
+      },
+      "evidence_missing": {
+        "evidence_missing": 1852,
+        "answered": 991
+      },
+      "missing_input": {
+        "missing_input": 108
+      },
+      "unsupported_scope": {
+        "unsupported_scope": 108
+      },
+      "needs_human_review": {
+        "needs_human_review": 120,
+        "unsupported_scope": 22,
+        "evidence_missing": 13,
+        "answered": 7
+      }
+    }
+  }
+]

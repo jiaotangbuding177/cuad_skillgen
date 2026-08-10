@@ -1,0 +1,507 @@
+{
+  "system_prompt": "You compile a contract-review Skill from graph-derived clause-pattern cards.\nReturn only the complete Markdown for SKILL.md. Preserve the supplied category boundaries,\nconditions, exceptions, and governance rules. Do not invent legal rules or citations.\nTeach the runtime agent how to recognize semantic variants, answer conservatively, quote\nverbatim evidence, and abstain when the target contract does not support a finding.\n\nRequired sections:\n1. Purpose and Scope\n2. Review Workflow\n3. Common Clause Patterns (one subsection per category)\n4. Evidence and Citation Protocol\n5. Boundary and Abstention Rules\n\nFor every pattern, explain its invariant meaning, variation cues, conditions/exceptions,\nand include the supplied representative phrasings. Treat examples as recognition aids,\nnever as evidence for a target contract.",
+  "pattern_cards": {
+    "Change of Control": [
+      {
+        "pattern_id": "PAT-change-of-control-01",
+        "category": "Change of Control",
+        "member_count": 31,
+        "source_contract_count": 31,
+        "selection_score": 2.0911,
+        "variation_cues": [
+          "written",
+          "assign",
+          "consent",
+          "rights",
+          "without",
+          "prior",
+          "all",
+          "obligations",
+          "neither",
+          "assets"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0442",
+            "text": "No party may assign any of its rights, obligations or privileges (except by operation of law or other corporate reorganization) hereunder without the prior written consent of the other party, which shall not be unreasonable withheld, provided, that any party shall have the right to assign its rights, obligations and privileges hereunder to a successor in business or an acquirer of all or substantially all of its business or assets to which this Agreement pertains without obtaining the consent of the other party.",
+            "interpretation": "The contract allows assignment to a successor in business or acquirer of substantially all assets without consent, meaning no specific notice or consent is required for a change of control.",
+            "source_contract_id": "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE_LICENSE_AND_MAINTENANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0321",
+            "text": "15.4 No Assignment. Neither party may assign this Agreement or any of its rights or obligations hereunder without the prior written consent of the other party, which consent shall not be unreasonably withheld, conditioned or delayed, provided, however, that either party may assign this Agreement to any successor by merger, consolidation, sale of all or substantially all of its assets or otherwise, in each case to a successor that assumes in writing all of the assigning party's obligations under this Agreement.",
+            "interpretation": "The contract requires prior written consent for assignment but explicitly permits assignment to a successor in the event of a merger, consolidation, or sale of substantially all assets, provided the successor assumes the obligations.",
+            "source_contract_id": "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0345",
+            "text": "Neither party shall assign this Agreement or any rights under it except with the prior written consent of the other.",
+            "interpretation": "The contract requires prior written consent for any assignment, which typically covers assignments resulting from a change of control, merger, or sale of assets.",
+            "source_contract_id": "NATIONALPROCESSINGINC_07_18_1996-EX-10.4-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-change-of-control-02",
+        "category": "Change of Control",
+        "member_count": 18,
+        "source_contract_count": 18,
+        "selection_score": 1.8669,
+        "variation_cues": [
+          "successors",
+          "binding",
+          "assigns",
+          "benefit",
+          "inure",
+          "respective",
+          "written",
+          "consent",
+          "rights",
+          "without"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0372",
+            "text": "This Agreement may not be assigned by either party hereto without the written consent of the other but shall be binding upon the successors of the parties.",
+            "interpretation": "The contract does not contain a specific change of control clause; it only addresses assignment and binding successors, implying no specific termination or consent rights triggered solely by a change of control event distinct from assignment.",
+            "source_contract_id": "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0325",
+            "text": "The terms and conditions of this Agreement shall inure to the benefit of and bind the Company, the Trust and their respective successors, assignees and representatives.",
+            "interpretation": "The contract includes a standard successors and assigns clause but does not contain specific provisions requiring notice, consent, or allowing termination in the event of a change of control.",
+            "source_contract_id": "MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0446",
+            "text": "This Agreement shall be binding on the parties and their respective successors and assigns, but neither party may, or shall have the power to, assign this Agreement without the prior written consent of the other, which consent shall not be unreasonably withheld.",
+            "interpretation": "The contract does not contain specific provisions regarding change of control events such as mergers or asset sales, only general assignment restrictions.",
+            "source_contract_id": "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-change-of-control-03",
+        "category": "Change of Control",
+        "member_count": 5,
+        "source_contract_count": 5,
+        "selection_score": 1.6819,
+        "variation_cues": [
+          "consent",
+          "written",
+          "prior",
+          "without",
+          "law",
+          "operation",
+          "hereunder",
+          "assign",
+          "granted",
+          "assigned"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0406",
+            "text": "This Agreement shall be binding on the parties and their respective successors in interest and assigns, but neither party shall have the power to assign this Agreement without the prior written consent of the other party.",
+            "interpretation": "The contract states it is binding on successors and assigns, but requires prior written consent for assignment, which typically covers assignments by operation of law resulting from a change of control, implying consent is required.",
+            "source_contract_id": "REGANHOLDINGCORP_03_31_2008-EX-10-LICENSE_AND_HOSTING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0509",
+            "text": "Neither party shall have the right to sell, assign, transfer or hypothecate (all hereinafter referred to as \"assign\" or \"assignment\") this Agreement, or delegate any of its obligations hereunder, voluntarily or by operation of law, without the prior written consent of the other party.",
+            "interpretation": "The contract requires prior written consent for any assignment or transfer by operation of law, which covers change of control scenarios.",
+            "source_contract_id": "WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content_License_Agreement"
+          },
+          {
+            "ka_id": "KA-0144",
+            "text": "This Agreement, or the rights granted under it, may not be assigned transferred or sublicense by either party without the express prior written consent of the other party.",
+            "interpretation": "The contract requires express prior written consent for assignment, which typically covers assignments by operation of law resulting from a change of control, thereby restricting such transfers without counterparty approval.",
+            "source_contract_id": "EcoScienceSolutionsInc_20180406_8-K_EX-10.1_11135398_EX-10.1_Sponsorship_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-change-of-control-04",
+        "category": "Change of Control",
+        "member_count": 7,
+        "source_contract_count": 7,
+        "selection_score": 1.6518,
+        "variation_cues": [
+          "assign",
+          "without",
+          "consent",
+          "rights",
+          "written",
+          "hereunder",
+          "prior",
+          "duties",
+          "neither",
+          "set"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0259",
+            "text": "Neither Party may assign its rights or delegate any of its duties under this Agreement without the prior written consent of the other Party. Any unauthorized assignment of this Agreement is void.",
+            "interpretation": "The contract requires prior written consent for assignment but does not explicitly mention change of control events such as mergers or stock sales, so it does not contain a specific change of control clause.",
+            "source_contract_id": "IbioInc_20200313_8-K_EX-10.1_12052678_EX-10.1_Development_Agreement"
+          },
+          {
+            "ka_id": "KA-0431",
+            "text": "No",
+            "interpretation": "The contract does not contain specific provisions regarding change of control events, such as mergers or asset sales, nor does it require notice or consent for such events.",
+            "source_contract_id": "SONUSCORP_03_12_1997-EX-10.11-SPONSORSHIP_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0061",
+            "text": "This Agreement may not be assigned by either party without the prior written consent of the other party.",
+            "interpretation": "The contract restricts assignment but does not explicitly address change of control events such as mergers or stock sales, so no specific change of control rights are identified.",
+            "source_contract_id": "CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-change-of-control-05",
+        "category": "Change of Control",
+        "member_count": 4,
+        "source_contract_count": 4,
+        "selection_score": 1.6148,
+        "variation_cues": [
+          "assets",
+          "all",
+          "substantially",
+          "provided",
+          "either",
+          "merger",
+          "related",
+          "transaction",
+          "successor",
+          "business"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0496",
+            "text": "either Party may assign this Agreement to any entity who acquires (by merger, acquisition, or otherwise) all or substantially all of the business assets of such Party applicable to the subject matter of this Agreement",
+            "interpretation": "The contract allows assignment in the event of a change of control (merger, acquisition, or transfer of substantially all assets) without requiring prior consent from the other party.",
+            "source_contract_id": "VitalibisInc_20180316_8-K_EX-10.2_11100168_EX-10.2_Hosting_Agreement"
+          },
+          {
+            "ka_id": "KA-0264",
+            "text": "provided, however, that either party may transfer this Agreement without prior written consent of the other to an Affiliate of such party, or to the surviving party in a merger or consolidation, or to a purchaser of all or substantially all of its assets.",
+            "interpretation": "The contract explicitly permits assignment to a successor in a merger, consolidation, or asset sale without requiring prior written consent, indicating no specific change of control termination or consent rights are triggered for these events.",
+            "source_contract_id": "ImpresseCorp_20000322_S-1A_EX-10.11_5199234_EX-10.11_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0284",
+            "text": "provided however, that either Party may assign this Agreement without approval or consent to any affiliate or purchaser of all or substantially all of said Party's assets related to the subject matter of this Agreement or to any successor by way of merger, stock sale, consolidation or similar transaction.",
+            "interpretation": "The contract explicitly permits assignment to a successor by way of merger, stock sale, or consolidation without requiring prior approval or consent, indicating no restriction on change of control transactions.",
+            "source_contract_id": "KUBIENT,INC_07_02_2020-EX-10.14-MASTER_SERVICES_AGREEMENT_Part1"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-change-of-control-06",
+        "category": "Change of Control",
+        "member_count": 4,
+        "source_contract_count": 4,
+        "selection_score": 1.5399,
+        "variation_cues": [
+          "all",
+          "assets",
+          "consent",
+          "without",
+          "prior",
+          "written",
+          "substantially",
+          "business",
+          "consolidation",
+          "merger"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0300",
+            "text": "provided, however, that VerticalNet may transfer this Agreement without the prior written consent of LeadersOnline to an Affiliate of VerticalNet, or to the surviving Party in a merger or consolidation, or to a purchaser of all or substantially all of its assets.",
+            "interpretation": "VerticalNet is permitted to assign the agreement to a successor in a merger, consolidation, or asset sale without requiring LeadersOnline's consent, indicating no change of control termination right or consent requirement for VerticalNet in these specific scenarios.",
+            "source_contract_id": "LeadersonlineInc_20000427_S-1A_EX-10.8_4991089_EX-10.8_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0308",
+            "text": "This Agreement shall inure to the benefit of, and shall be binding upon, the Parties and their respective successors and assigns, but neither Party may assign this Agreement without the prior written consent of the other except to a person into which it has merged or who has otherwise succeeded to all or substantially all of the business and assets of the assignor, and who has assumed in writing or by operation of law its obligations under this Agreement.",
+            "interpretation": "The contract permits assignment to a successor in a merger or asset sale without prior consent, provided obligations are assumed, meaning no specific termination right or consent is triggered solely by a change of control event.",
+            "source_contract_id": "Loop_Industries,_Inc._-_Marketing_Agreement"
+          },
+          {
+            "ka_id": "KA-0498",
+            "text": "This Agreement shall be binding upon, and shall inure to the benefit of successors of the Parties hereto, or to any assignee of all of the goodwill and entire business assets of a Party hereto relating to pharmaceuticals, but shall not otherwise be assignable without the prior written consent of the other Party.",
+            "interpretation": "The contract allows assignment to successors or assignees of substantially all assets without consent, implying no specific change of control termination right or consent requirement for such events.",
+            "source_contract_id": "WARNERCHILCOTTPLC_12_31_2003-EX-4.36-DEVELOPMENT_AGREEMENT"
+          }
+        ]
+      }
+    ],
+    "Anti-Assignment": [
+      {
+        "pattern_id": "PAT-anti-assignment-01",
+        "category": "Anti-Assignment",
+        "member_count": 38,
+        "source_contract_count": 38,
+        "selection_score": 2.2194,
+        "variation_cues": [
+          "written",
+          "without",
+          "consent",
+          "prior",
+          "neither",
+          "rights",
+          "assign",
+          "assigned",
+          "obligations",
+          "either"
+        ],
+        "has_condition": false,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0078",
+            "text": "Neither party may assign this Agreement or any rights or obligations hereunder, whether by operation of law or otherwise, without the prior written consent of the other party.",
+            "interpretation": "The contract explicitly prohibits assignment of the agreement or any rights/obligations without the prior written consent of the other party.",
+            "source_contract_id": "CORIOINC_07_20_2000-EX-10.5-LICENSE_AND_HOSTING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0293",
+            "text": "11.1 Without prior written consent of the other Parties, none of the Parties may assign any or all of its rights and obligations under this Agreement to any third party.",
+            "interpretation": "The contract explicitly prohibits assignment of rights or obligations to a third party without the prior written consent of the other parties.",
+            "source_contract_id": "LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET_CHANNEL_COOPERATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0110",
+            "text": "Neither party may assign this Agreement, in whole or in part, without the other party's written consent, which consent will not be unreasonably withheld",
+            "interpretation": "The contract explicitly prohibits assignment of the agreement to a third party without the prior written consent of the other party.",
+            "source_contract_id": "DRKOOPCOMINC_04_21_1999-EX-10.28-SPONSORSHIP_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-anti-assignment-02",
+        "category": "Anti-Assignment",
+        "member_count": 29,
+        "source_contract_count": 29,
+        "selection_score": 2.1001,
+        "variation_cues": [
+          "without",
+          "prior",
+          "rights",
+          "assign",
+          "written",
+          "consent",
+          "obligations",
+          "hereunder",
+          "transfer",
+          "otherwise"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0515",
+            "text": "Neither Party shall assign or transfer this Agreement or its rights hereunder without first obtaining the consent of the other, in writing, which consent shall not unreasonably be withheld or delayed.",
+            "interpretation": "The contract explicitly prohibits either party from assigning or transferring the agreement without the prior written consent of the other party.",
+            "source_contract_id": "XpresspaGroupInc_20190401_10-K_EX-10.28_11599457_EX-10.28_Marketing_Agreement"
+          },
+          {
+            "ka_id": "KA-0220",
+            "text": "No Party may assign its rights or delegate its obligations under this Agreement, whether by operation of law or otherwise, without the prior written consent of the other Party, and any assignment in contravention hereof will be null and void.",
+            "interpretation": "The agreement explicitly prohibits assignment or delegation of obligations without the prior written consent of the other party.",
+            "source_contract_id": "HC2HOLDINGS,INC_05_14_2020-EX-10.1-COOPERATION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0368",
+            "text": "The Sub-Advisor may not assign (within the meaning of the Advisers Act) its rights and obligations under this Agreement without the prior written consent of Oaktree US.",
+            "interpretation": "The Sub-Advisor is prohibited from assigning its rights and obligations under the agreement without obtaining prior written consent from Oaktree US.",
+            "source_contract_id": "OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-anti-assignment-03",
+        "category": "Anti-Assignment",
+        "member_count": 16,
+        "source_contract_count": 16,
+        "selection_score": 1.8941,
+        "variation_cues": [
+          "assign",
+          "written",
+          "without",
+          "consent",
+          "neither",
+          "prior",
+          "rights",
+          "sale",
+          "except",
+          "merger"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0322",
+            "text": "15.4 No Assignment. Neither party may assign this Agreement or any of its rights or obligations hereunder without the prior written consent of the other party, which consent shall not be unreasonably withheld, conditioned or delayed, provided, however, that either party may assign this Agreement to any successor by merger, consolidation, sale of all or substantially all of its assets or otherwise, in each case to a successor that assumes in writing all of the assigning party's obligations under this Agreement.",
+            "interpretation": "The contract prohibits assignment without the prior written consent of the other party, subject to an exception for assignments to successors in mergers or asset sales where obligations are assumed.",
+            "source_contract_id": "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC_ALLIANCE_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0253",
+            "text": "Neither this Agreement nor any interest herein may be assigned, in whole or in part, by either party without the prior written consent of the other, which consent shall not be unreasonably withheld or delayed, except that either party may assign its rights and obligations under this Agreement: (a) to an affiliate, division or subsidiary of such party; and/or (b) to any third party that acquires all or substantially all of the stock or assets of such party, whether by asset sale, stock sale, merger or otherwise, and, in any such event such assignee shall assume the transferring party's obligations hereunder.",
+            "interpretation": "The contract generally prohibits assignment without prior written consent, but provides specific exceptions for assignments to affiliates or in connection with a change of control.",
+            "source_contract_id": "INTERSECTENT,INC_05_11_2020-EX-10.1-SUPPLY_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0040",
+            "text": "Neither party may assign this Agreement without the other's prior written approval, except by operation of law or in connection with the sale of substantially all of the assets of such party's business or the acquisition of such party by a third party.",
+            "interpretation": "The contract requires prior written approval from the other party for any assignment, with specific exceptions for assignments by operation of law or in connection with a sale of substantially all assets or acquisition.",
+            "source_contract_id": "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-anti-assignment-04",
+        "category": "Anti-Assignment",
+        "member_count": 11,
+        "source_contract_count": 11,
+        "selection_score": 1.7647,
+        "variation_cues": [
+          "rights",
+          "obligations",
+          "assign",
+          "except",
+          "consent",
+          "right",
+          "hereunder",
+          "without",
+          "assignment",
+          "written"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0182",
+            "text": "Neither party shall assign any of its rights or obligations hereunder without the prior written consent of the other party.",
+            "interpretation": "The contract explicitly prohibits either party from assigning their rights or obligations to a third party without obtaining prior written consent from the other party.",
+            "source_contract_id": "GAINSCOINC_01_21_2010-EX-10.41-SPONSORSHIP_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0166",
+            "text": "FCC may not assign or delegate its rights or obligations pursuant to this Agreement.",
+            "interpretation": "The contract explicitly prohibits FCC from assigning or delegating its rights or obligations to a third party without restriction, implying consent is not merely required but the action is forbidden.",
+            "source_contract_id": "FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0249",
+            "text": "Except as expressly permitted hereunder or in Exhibit F hereto, neither party may transfer, assign or sublicense this Agreement, or any rights or obligations hereunder, whether by contract or by operation of law, except with the express written consent of the other party, and any attempted transfer, assignment or sublicense by a party in violation of this Section shall be void.",
+            "interpretation": "The agreement prohibits the transfer, assignment, or sublicensing of the contract to a third party without the express written consent of the other party.",
+            "source_contract_id": "INKTOMICORP_06_08_1998-EX-10.14-SOFTWARE_HOSTING_AGREEMENT"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-anti-assignment-05",
+        "category": "Anti-Assignment",
+        "member_count": 10,
+        "source_contract_count": 10,
+        "selection_score": 1.7318,
+        "variation_cues": [
+          "successors",
+          "binding",
+          "assigns",
+          "consent",
+          "written",
+          "without",
+          "respective",
+          "prior",
+          "but",
+          "benefit"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0447",
+            "text": "This Agreement shall be binding on the parties and their respective successors and assigns, but neither party may, or shall have the power to, assign this Agreement without the prior written consent of the other, which consent shall not be unreasonably withheld.",
+            "interpretation": "The contract explicitly prohibits assignment without the prior written consent of the other party, establishing an anti-assignment clause.",
+            "source_contract_id": "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0371",
+            "text": "This Agreement may not be assigned by either party hereto without the written consent of the other but shall be binding upon the successors of the parties.",
+            "interpretation": "The contract explicitly prohibits assignment by either party without the prior written consent of the other party.",
+            "source_contract_id": "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION_AGREEMENT"
+          },
+          {
+            "ka_id": "KA-0309",
+            "text": "This Agreement shall inure to the benefit of, and shall be binding upon, the Parties and their respective successors and assigns, but neither Party may assign this Agreement without the prior written consent of the other except to a person into which it has merged or who has otherwise succeeded to all or substantially all of the business and assets of the assignor, and who has assumed in writing or by operation of law its obligations under this Agreement.",
+            "interpretation": "The contract explicitly prohibits assignment without the prior written consent of the other party, with limited exceptions for mergers or asset sales.",
+            "source_contract_id": "Loop_Industries,_Inc._-_Marketing_Agreement"
+          }
+        ]
+      },
+      {
+        "pattern_id": "PAT-anti-assignment-06",
+        "category": "Anti-Assignment",
+        "member_count": 7,
+        "source_contract_count": 7,
+        "selection_score": 1.7172,
+        "variation_cues": [
+          "prior",
+          "written",
+          "withheld",
+          "unreasonably",
+          "without",
+          "which",
+          "consent",
+          "delayed",
+          "assign",
+          "assigned"
+        ],
+        "has_condition": true,
+        "has_exception": true,
+        "representative_examples": [
+          {
+            "ka_id": "KA-0333",
+            "text": "Neither party will assign this Agreement or any rights hereunder without the prior written consent of the other party, which consent will not be unreasonably withheld.",
+            "interpretation": "The contract requires prior written consent from the other party for any assignment of the agreement or rights thereunder, with the stipulation that such consent cannot be unreasonably withheld.",
+            "source_contract_id": "MTITECHNOLOGYCORP_11_16_2004-EX-10.102-Reseller_Agreement_Premier_Addendum"
+          },
+          {
+            "ka_id": "KA-0153",
+            "text": "Neither party may assign this Agreement or any of its rights or delegate any of its duties under this Agreement without the prior written consent of the other party, not to be unreasonably withheld;",
+            "interpretation": "The contract explicitly requires prior written consent from the other party for any assignment of rights or delegation of duties, establishing an anti-assignment clause.",
+            "source_contract_id": "EmbarkComInc_19991008_S-1A_EX-10.10_6487661_EX-10.10_Co-Branding_Agreement"
+          },
+          {
+            "ka_id": "KA-0507",
+            "text": "Neither Party may assign any right, or delegate any duty under this Agreement, in whole or in part, without the prior written consent of the other Party, which shall not be unreasonably withheld or delayed.",
+            "interpretation": "Assignment of rights or delegation of duties requires the prior written consent of the other party, which cannot be unreasonably withheld.",
+            "source_contract_id": "WaterNowInc_20191120_10-Q_EX-10.12_11900227_EX-10.12_Distributor_Agreement"
+          }
+        ]
+      }
+    ]
+  },
+  "response": "# SKILL.md\n\n## 1. Purpose and Scope\n\nThis skill enables the runtime agent to review target contracts for **Anti-Assignment** and **Change of Control** provisions. The agent must identify whether the contract restricts assignment, requires consent, permits specific exceptions (e.g., mergers, asset sales), or remains silent on these matters.\n\n**Scope:**\n*   **Categories:** `Anti-Assignment`, `Change of Control`.\n*   **Domain:** Contract Review.\n*   **Objective:** Determine the assignability of the agreement and the rights/obligations triggered by a change in control or assignment event.\n\n**Constraints:**\n*   The agent must **only** analyze the provided target contract.\n*   The agent must **never** invent legal rules, cite external statutes, or provide legal advice.\n*   The agent must **abstain** (return `evidence_missing` or `unsupported_scope`) if the target contract does not contain relevant clauses or if the input is invalid.\n\n## 2. Review Workflow\n\n1.  **Input Validation:**\n    *   Check if `contract_id` and `category` are present.\n    *   If missing, return status: `missing_input`.\n    *   Check if the requested `category` is in `[\"Anti-Assignment\", \"Change of Control\"]`.\n    *   If not, return status: `unsupported_scope`.\n\n2.  **Clause Identification:**\n    *   Scan the target contract for keywords associated with assignment, transfer, delegation, successors, assigns, consent, merger, consolidation, and asset sales.\n    *   Identify clauses that restrict, permit, or condition the transfer of rights/obligations.\n\n3.  **Pattern Matching & Analysis:**\n    *   Compare identified clauses against the **Common Clause Patterns** defined in Section 3.\n    *   Determine the **Invariant Meaning**: Does the clause prohibit assignment? Require consent? Allow exceptions?\n    *   Identify **Conditions/Exceptions**: Are there carve-outs for affiliates, mergers, or asset sales? Is consent subject to a \"not unreasonably withheld\" standard?\n\n4.  **Evidence Extraction:**\n    *   Extract the **verbatim text** of the relevant clause(s) from the target contract.\n    *   Ensure the evidence directly supports the finding.\n\n5.  **Response Generation:**\n    *   If relevant clauses are found: Return status `answered`, provide the interpretation based on the pattern, and cite the verbatim evidence.\n    *   If no relevant clauses are found: Return status `evidence_missing`.\n    *   If the interpretation requires high-risk legal judgment or ambiguity that cannot be resolved by the text alone: Return status `needs_human_review`.\n\n## 3. Common Clause Patterns\n\n### Category: Change of Control\n\nThis category covers provisions that specifically address or imply rights/obligations regarding changes in corporate control (mergers, acquisitions, asset sales) and their relationship to assignment.\n\n#### Pattern: PAT-change-of-control-01\n*   **Invariant Meaning:** Assignment is generally prohibited without prior written consent, but explicitly permitted to a successor in business or acquirer of substantially all assets/business without consent.\n*   **Variation Cues:** `written`, `assign`, `consent`, `rights`, `without`, `prior`, `all`, `obligations`, `neither`, `assets`, `successor`, `acquirer`, `substantially all`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required for general assignment.\n    *   **Exception:** No consent required for assignment to a successor in business or acquirer of all/substantially all assets/business.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"No party may assign any of its rights, obligations or privileges... without the prior written consent of the other party... provided, that any party shall have the right to assign its rights, obligations and privileges hereunder to a successor in business or an acquirer of all or substantially all of its business or assets... without obtaining the consent of the other party.\"\n    *   \"Neither party may assign this Agreement... without the prior written consent of the other party... provided, however, that either party may assign this Agreement to any successor by merger, consolidation, sale of all or substantially all of its assets... to a successor that assumes in writing all of the assigning party's obligations.\"\n\n#### Pattern: PAT-change-of-control-02\n*   **Invariant Meaning:** The contract contains a standard \"successors and assigns\" binding clause and a general assignment restriction, but lacks specific provisions defining rights/obligations triggered *solely* by a change of control event distinct from assignment.\n*   **Variation Cues:** `successors`, `binding`, `assigns`, `benefit`, `inure`, `respective`, `written`, `consent`, `rights`, `without`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Binding on successors and assigns.\n    *   **Exception:** None specific to change of control; general assignment restrictions apply.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"This Agreement may not be assigned by either party hereto without the written consent of the other but shall be binding upon the successors of the parties.\"\n    *   \"The terms and conditions of this Agreement shall inure to the benefit of and bind the Company, the Trust and their respective successors, assignees and representatives.\"\n    *   \"This Agreement shall be binding on the parties and their respective successors and assigns, but neither party may, or shall have the power to, assign this Agreement without the prior written consent of the other...\"\n\n#### Pattern: PAT-change-of-control-03\n*   **Invariant Meaning:** The contract is binding on successors/assigns but requires prior written consent for *any* assignment, including those by operation of law (which covers change of control scenarios). No specific exception for change of control is stated.\n*   **Variation Cues:** `consent`, `written`, `prior`, `without`, `law`, `operation`, `hereunder`, `assign`, `granted`, `assigned`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required for all assignments.\n    *   **Exception:** None explicitly for change of control; \"operation of law\" assignments are included in the restriction.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"This Agreement shall be binding on the parties and their respective successors in interest and assigns, but neither party shall have the power to assign this Agreement without the prior written consent of the other party.\"\n    *   \"Neither party shall have the right to sell, assign, transfer or hypothecate... voluntarily or by operation of law, without the prior written consent of the other party.\"\n    *   \"This Agreement, or the rights granted under it, may not be assigned transferred or sublicense by either party without the express prior written consent of the other party.\"\n\n#### Pattern: PAT-change-of-control-04\n*   **Invariant Meaning:** The contract restricts assignment/delegation without consent but does not explicitly address change of control events (mergers, stock sales). No specific change of control rights are identified.\n*   **Variation Cues:** `assign`, `without`, `consent`, `rights`, `written`, `hereunder`, `prior`, `duties`, `neither`, `set`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required for assignment/delegation.\n    *   **Exception:** None specific to change of control.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"Neither Party may assign its rights or delegate any of its duties under this Agreement without the prior written consent of the other Party. Any unauthorized assignment of this Agreement is void.\"\n    *   \"This Agreement may not be assigned by either party without the prior written consent of the other party.\"\n\n#### Pattern: PAT-change-of-control-05\n*   **Invariant Meaning:** The contract explicitly permits assignment to a successor in a merger, acquisition, or sale of substantially all assets/business *without* requiring prior consent.\n*   **Variation Cues:** `assets`, `all`, `substantially`, `provided`, `either`, `merger`, `related`, `transaction`, `successor`, `business`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** None for the specific exception.\n    *   **Exception:** Assignment permitted to affiliate, surviving party in merger/consolidation, or purchaser of all/substantially all assets without consent.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"either Party may assign this Agreement to any entity who acquires (by merger, acquisition, or otherwise) all or substantially all of the business assets of such Party applicable to the subject matter of this Agreement\"\n    *   \"provided, however, that either party may transfer this Agreement without prior written consent of the other to an Affiliate of such party, or to the surviving party in a merger or consolidation, or to a purchaser of all or substantially all of its assets.\"\n    *   \"provided however, that either Party may assign this Agreement without approval or consent to any affiliate or purchaser of all or substantially all of said Party's assets... or to any successor by way of merger, stock sale, consolidation or similar transaction.\"\n\n#### Pattern: PAT-change-of-control-06\n*   **Invariant Meaning:** The contract permits assignment to a successor in a merger or asset sale without prior consent, provided the successor assumes obligations. No specific termination right or consent is triggered solely by the change of control event itself.\n*   **Variation Cues:** `all`, `assets`, `consent`, `without`, `prior`, `written`, `substantially`, `business`, `consolidation`, `merger`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Successor must assume obligations in writing or by operation of law.\n    *   **Exception:** Assignment permitted to person into which party merged or who succeeded to all/substantially all business/assets without prior consent.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"provided, however, that VerticalNet may transfer this Agreement without the prior written consent of LeadersOnline to an Affiliate of VerticalNet, or to the surviving Party in a merger or consolidation, or to a purchaser of all or substantially all of its assets.\"\n    *   \"This Agreement shall inure to the benefit of, and shall be binding upon, the Parties and their respective successors and assigns, but neither Party may assign this Agreement without the prior written consent of the other except to a person into which it has merged or who has otherwise succeeded to all or substantially all of the business and assets of the assignor, and who has assumed in writing or by operation of law its obligations under this Agreement.\"\n    *   \"This Agreement shall be binding upon, and shall inure to the benefit of successors of the Parties hereto, or to any assignee of all of the goodwill and entire business assets of a Party hereto relating to pharmaceuticals, but shall not otherwise be assignable without the prior written consent of the other Party.\"\n\n### Category: Anti-Assignment\n\nThis category covers provisions that generally prohibit the assignment of the agreement or rights/obligations thereunder, often subject to consent requirements.\n\n#### Pattern: PAT-anti-assignment-01\n*   **Invariant Meaning:** Explicit prohibition of assignment of the agreement or any rights/obligations without prior written consent. Covers assignments by operation of law.\n*   **Variation Cues:** `written`, `without`, `consent`, `prior`, `neither`, `rights`, `assign`, `assigned`, `obligations`, `either`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required.\n    *   **Exception:** None explicitly stated in the core restriction.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"Neither party may assign this Agreement or any rights or obligations hereunder, whether by operation of law or otherwise, without the prior written consent of the other party.\"\n    *   \"Without prior written consent of the other Parties, none of the Parties may assign any or all of its rights and obligations under this Agreement to any third party.\"\n    *   \"Neither party may assign this Agreement, in whole or in part, without the other party's written consent, which consent will not be unreasonably withheld\"\n\n#### Pattern: PAT-anti-assignment-02\n*   **Invariant Meaning:** Explicit prohibition of assignment or transfer without prior written consent. May include \"not unreasonably withheld\" standard.\n*   **Variation Cues:** `without`, `prior`, `rights`, `assign`, `written`, `consent`, `obligations`, `hereunder`, `transfer`, `otherwise`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required.\n    *   **Exception:** None explicitly stated in the core restriction.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"Neither Party shall assign or transfer this Agreement or its rights hereunder without first obtaining the consent of the other, in writing, which consent shall not unreasonably be withheld or delayed.\"\n    *   \"No Party may assign its rights or delegate its obligations under this Agreement, whether by operation of law or otherwise, without the prior written consent of the other Party, and any assignment in contravention hereof will be null and void.\"\n    *   \"The Sub-Advisor may not assign... its rights and obligations under this Agreement without the prior written consent of Oaktree US.\"\n\n#### Pattern: PAT-anti-assignment-03\n*   **Invariant Meaning:** General prohibition of assignment without consent, with specific exceptions for affiliates, mergers, consolidations, or sales of substantially all assets/stock.\n*   **Variation Cues:** `assign`, `written`, `without`, `consent`, `neither`, `prior`, `rights`, `sale`, `except`, `merger`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required for general assignment.\n    *   **Exception:** Assignment permitted to affiliates, or in connection with sale of substantially all assets/stock/merger, provided obligations are assumed.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"Neither party may assign this Agreement... without the prior written consent of the other party... provided, however, that either party may assign this Agreement to any successor by merger, consolidation, sale of all or substantially all of its assets... to a successor that assumes in writing all of the assigning party's obligations.\"\n    *   \"Neither this Agreement nor any interest herein may be assigned... without the prior written consent of the other... except that either party may assign its rights and obligations... (a) to an affiliate, division or subsidiary of such party; and/or (b) to any third party that acquires all or substantially all of the stock or assets of such party...\"\n    *   \"Neither party may assign this Agreement without the other's prior written approval, except by operation of law or in connection with the sale of substantially all of the assets of such party's business or the acquisition of such party by a third party.\"\n\n#### Pattern: PAT-anti-assignment-04\n*   **Invariant Meaning:** Explicit prohibition of assignment/delegation without consent. May be absolute (no consent mechanism) or require express written consent.\n*   **Variation Cues:** `rights`, `obligations`, `assign`, `except`, `consent`, `right`, `hereunder`, `without`, `assignment`, `written`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required (or absolute prohibition).\n    *   **Exception:** None explicitly stated in the core restriction.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"Neither party shall assign any of its rights or obligations hereunder without the prior written consent of the other party.\"\n    *   \"FCC may not assign or delegate its rights or obligations pursuant to this Agreement.\"\n    *   \"Except as expressly permitted hereunder... neither party may transfer, assign or sublicense this Agreement... except with the express written consent of the other party...\"\n\n#### Pattern: PAT-anti-assignment-05\n*   **Invariant Meaning:** Contract is binding on successors/assigns, but assignment is prohibited without prior written consent. May include exceptions for mergers/asset sales.\n*   **Variation Cues:** `successors`, `binding`, `assigns`, `consent`, `written`, `without`, `respective`, `prior`, `but`, `benefit`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required.\n    *   **Exception:** May permit assignment to successors in merger/asset sale if obligations assumed.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"This Agreement shall be binding on the parties and their respective successors and assigns, but neither party may, or shall have the power to, assign this Agreement without the prior written consent of the other, which consent shall not be unreasonably withheld.\"\n    *   \"This Agreement may not be assigned by either party hereto without the written consent of the other but shall be binding upon the successors of the parties.\"\n    *   \"This Agreement shall inure to the benefit of, and shall be binding upon, the Parties and their respective successors and assigns, but neither Party may assign this Agreement without the prior written consent of the other except to a person into which it has merged or who has otherwise succeeded to all or substantially all of the business and assets of the assignor...\"\n\n#### Pattern: PAT-anti-assignment-06\n*   **Invariant Meaning:** Assignment/delegation requires prior written consent, which cannot be unreasonably withheld or delayed.\n*   **Variation Cues:** `prior`, `written`, `withheld`, `unreasonably`, `without`, `which`, `consent`, `delayed`, `assign`, `assigned`.\n*   **Conditions/Exceptions:**\n    *   **Condition:** Prior written consent required.\n    *   **Exception:** None explicitly stated in the core restriction.\n*   **Representative Phrasings (Recognition Aids Only):**\n    *   \"Neither party will assign this Agreement or any rights hereunder without the prior written consent of the other party, which consent will not be unreasonably withheld.\"\n    *   \"Neither party may assign this Agreement or any of its rights or delegate any of its duties under this Agreement without the prior written consent of the other party, not to be unreasonably withheld;\"\n    *   \"Neither Party may assign any right, or delegate any duty under this Agreement, in whole or in part, without the prior written consent of the other Party, which shall not be unreasonably withheld or delayed.\"\n\n## 4. Evidence and Citation Protocol\n\n1.  **Verbatim Extraction:** Always quote the exact text from the target contract that supports the finding. Do not paraphrase the evidence.\n2.  **Source Grounding:** Ensure the cited text exists in the target contract. Do not cite text from the representative examples in Section 3.\n3.  **Context:** If the clause is long, quote the relevant portion but ensure the context (e.g., \"provided that...\") is preserved if it affects the meaning.\n4.  **No External Citations:** Do not cite case law, statutes, or other contracts.\n\n## 5. Boundary and Abstention Rules\n\n*   **RB-001:** Answer only using the target contract.\n*   **RB-002:** Cite source-grounded evidence when answering.\n*   **RB-003:** Return `evidence_missing` when no supporting clause exists in the target contract for the requested category.\n*   **RB-004:** Return `missing_input` when `contract_id` or `category` is absent from the request.\n*   **RB-005:** Return `unsupported_scope` when the requested category is not `Anti-Assignment` or `Change of Control`.\n*   **RB-006:** Route legal advice and high-risk interpretation to `needs_human_review`.\n*   **SR-001:** Do not cite non-target contracts.\n*   **SR-002:** Do not fabricate clauses.\n*   **SR-003:** Do not provide legal advice.\n*   **SR-004:** Do not generate externally sendable legal opinions.",
+  "usage": {
+    "prompt_tokens": 6979,
+    "completion_tokens": 4438,
+    "total_tokens": 11417
+  }
+}
