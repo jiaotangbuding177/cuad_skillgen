@@ -1,0 +1,205 @@
+{
+  "domain": "banking_knowledge",
+  "tools": [
+    {
+      "name": "transfer_to_human_agents",
+      "requestor": "assistant",
+      "parameters": [
+        "summary",
+        "reason"
+      ],
+      "description": "Transfer the user to a human agent.\n\nThe proper transfer reason enum can be found in the knowledge base: search it before calling this tool to select the proper applicable reason.\n\nArgs:\n    summary: A summary of the user's issue and what was attempted before transfer.\n    reason: The specific reason code for the transfer.",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "get_current_time",
+      "requestor": "assistant",
+      "parameters": [],
+      "description": "Get the current time. Use this to get the current timestamp for logging verification records.\n\nReturns:\n    The current time in the format \"YYYY-MM-DD HH:MM:SS TZ\"",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "get_user_information_by_id",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id"
+      ],
+      "description": "Get the information (date of birth, email, phone number, address) for a user by their user id.\n\nArgs:\n    user_id: The ID of the user",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "get_user_information_by_name",
+      "requestor": "assistant",
+      "parameters": [
+        "customer_name"
+      ],
+      "description": "Get the information (date of birth, email, phone number, address) for a user by their name. Case Sensitive.\n\nArgs:\n    customer_name: The name of the user",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "get_user_information_by_email",
+      "requestor": "assistant",
+      "parameters": [
+        "email"
+      ],
+      "description": "Get the information (date of birth, email, phone number, address) for a user by their email.\n\nArgs:\n    email: The email of the user",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "change_user_email",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id",
+        "new_email"
+      ],
+      "description": "Change the email address for a user.\n\nArgs:\n    user_id: The ID of the user whose email should be changed\n    new_email: The new email address to set for the user",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "get_referrals_by_user",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id"
+      ],
+      "description": "Get all referrals made by a user.\n\nArgs:\n    user_id: The ID of the user (referrer) to look up referrals for",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "get_credit_card_transactions_by_user",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id"
+      ],
+      "description": "Get all credit card transactions for a user.\n\nArgs:\n    user_id: The ID of the user to look up transactions for",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "get_credit_card_accounts_by_user",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id"
+      ],
+      "description": "Get all credit card accounts for a user.\n\nReturns information about each credit card account including card type,\ndate opened, current balance, and reward points.\n\nArgs:\n    user_id: The ID of the user to look up credit card accounts for",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "log_verification",
+      "requestor": "assistant",
+      "parameters": [
+        "name",
+        "user_id",
+        "address",
+        "email",
+        "phone_number",
+        "date_of_birth",
+        "time_verified"
+      ],
+      "description": "Log a verification record after successfully verifying a user's identity.\n\nCall this tool after you have verified a user by confirming 2 out of 4 identity fields\n(date of birth, email, phone number, address). This creates an audit record of the verification.\n\nArgs:\n    name: The verified user's full name\n    user_id: The verified user's ID\n    address: The verified user's address\n    email: The verified user's email\n    phone_number: The verified user's phone number\n    date_of_birth: The verified user's date of birth (MM/DD/YYYY format)\n    time_verified: The timestamp of the verification (e.g., \"2025-11-14 03:40:00 EST\")",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "give_discoverable_user_tool",
+      "requestor": "assistant",
+      "parameters": [
+        "discoverable_tool_name",
+        "arguments"
+      ],
+      "description": "Pass a tool to the user so they can execute it themselves.\n\nUse this when the knowledge base indicates that the user should perform\nan action themselves (e.g., \"to do X, have the user call tool_name(args)\").\n\nThe user will then be able to call `call_discoverable_tool` with the same\ntool name and arguments to simulate executing the action.\n\nArgs:\n    discoverable_tool_name: The name of the discoverable tool (e.g., \"open_webpage\", \"navigate_to_section\")\n    arguments: JSON string of arguments for the tool (e.g., '{\"url\": \"https://example.com\"}')\n\nReturns:\n    A confirmation message with instructions for the user",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "unlock_discoverable_agent_tool",
+      "requestor": "assistant",
+      "parameters": [
+        "agent_tool_name"
+      ],
+      "description": "Unlock an agent discoverable tool that was found in the knowledge base.\n\nUse this when the knowledge base indicates that you have access to a specialized\ninternal tool. The knowledge base will tell you the tool name to unlock.\n\nAfter unlocking, you can use the tool by calling `call_discoverable_agent_tool` with\nthe tool name and required arguments.\n\nArgs:\n    agent_tool_name: The name of the agent discoverable tool to unlock\n                    (e.g., \"calculate_apr_adjustment_7842\")\n\nReturns:\n    A confirmation message with the tool's description and parameters",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "call_discoverable_agent_tool",
+      "requestor": "assistant",
+      "parameters": [
+        "agent_tool_name",
+        "arguments"
+      ],
+      "description": "Call an agent discoverable tool that you have previously unlocked.\n\nUse this after unlocking a tool with `unlock_discoverable_agent_tool`. The knowledge base\nwill tell you which tool to use and what arguments to provide.\n\nArgs:\n    agent_tool_name: The name of the agent discoverable tool to call\n    arguments: JSON string of arguments for the tool (e.g., '{\"user_id\": \"abc123\"}')\n\nReturns:\n    The result of executing the agent tool",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "list_discoverable_agent_tools",
+      "requestor": "assistant",
+      "parameters": [],
+      "description": "List all agent discoverable tools that you have called.\n\nUse this to see what specialized tools you have used.\n\nReturns:\n    A list of tools that you have called",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "apply_for_credit_card",
+      "requestor": "assistant",
+      "parameters": [
+        "card_type",
+        "customer_name",
+        "annual_income",
+        "rho_bank_subscription"
+      ],
+      "description": "Apply for a credit card.\n\nArgs:\n    card_type: Type of credit card\n    customer_name: Full legal name\n    annual_income: Annual income in USD\n    rho_bank_subscription: Whether user has Rho-Bank+ subscription",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "submit_referral",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id",
+        "account_type"
+      ],
+      "description": "Submit a referral request to refer someone to open an account.\n\nArgs:\n    user_id: Your user ID (the referrer)\n    account_type: The type of account you are referring someone to open",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "call_discoverable_user_tool",
+      "requestor": "assistant",
+      "parameters": [
+        "discoverable_tool_name",
+        "arguments"
+      ],
+      "description": "Call a tool that was given to you by the agent.\n\nUse this when the agent has instructed you to perform an action using\na discoverable tool. The agent will have told you the tool name and arguments.\n\nThis simulates you performing the action in the real world (e.g., opening\na webpage, navigating to a section, clicking a button).\n\nArgs:\n    discoverable_tool_name: The name of the discoverable tool to call (e.g., \"open_webpage\")\n    arguments: JSON string of arguments for the tool (e.g., '{\"url\": \"https://example.com\"}')\n\nReturns:\n    The result of executing the discoverable tool",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "list_discoverable_user_tools",
+      "requestor": "assistant",
+      "parameters": [],
+      "description": "List all tools that have been given to you by the agent.\n\nUse this to see what actions the agent has instructed you to perform.\n\nReturns:\n    A list of tools that have been given to you",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "request_human_agent_transfer",
+      "requestor": "assistant",
+      "parameters": [],
+      "description": "Request to be transferred to a human agent for assistance.\n\nUse this when you want to speak with a real human agent instead of\nthe automated system. Each request will be logged and processed.\n\nReturns:\n    Confirmation that your transfer request has been submitted",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "submit_transaction",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id",
+        "credit_card_type",
+        "merchant_name",
+        "amount",
+        "category"
+      ],
+      "description": "Submit a credit card transaction.\n\nArgs:\n    user_id: Your user ID\n    credit_card_type: Type of credit card used (e.g., \"Bronze Rewards Card\", \"Gold Rewards Card\")\n    merchant_name: Name of the merchant where the purchase was made\n    amount: Transaction amount in USD (e.g., 127.43)\n    category: Transaction category (e.g., \"Groceries\", \"Dining\", \"Travel\", \"Software\", \"Entertainment\", \"Utilities\", \"Shopping\")",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py"
+    },
+    {
+      "name": "KB_search",
+      "requestor": "assistant",
+      "parameters": [
+        "query"
+      ],
+      "description": "Search the Banking knowledge base with the fixed BM25 pipeline and return the top-k source documents.",
+      "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/retrieval_mixins.py"
+    }
+  ]
+}

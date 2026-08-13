@@ -1,0 +1,63 @@
+{
+  "annotation_pairs": 0,
+  "categorical": {
+    "gold_status": {
+      "pairs": 0,
+      "percent_agreement": null,
+      "cohen_kappa": null
+    },
+    "pred_status": {
+      "pairs": 0,
+      "percent_agreement": null,
+      "cohen_kappa": null
+    },
+    "policy_compliant": {
+      "pairs": 0,
+      "percent_agreement": null,
+      "cohen_kappa": null
+    },
+    "provenance_present": {
+      "pairs": 0,
+      "percent_agreement": null,
+      "cohen_kappa": null
+    },
+    "provenance_valid": {
+      "pairs": 0,
+      "percent_agreement": null,
+      "cohen_kappa": null
+    },
+    "gold_requires_skill": {
+      "pairs": 0,
+      "percent_agreement": null,
+      "cohen_kappa": null
+    },
+    "tool_binding_correct": {
+      "pairs": 0,
+      "percent_agreement": null,
+      "cohen_kappa": null
+    }
+  },
+  "numeric": {
+    "precondition_recall": {
+      "pairs": 0,
+      "mean_absolute_difference": null,
+      "exact_agreement": null
+    },
+    "exception_branch_recall": {
+      "pairs": 0,
+      "mean_absolute_difference": null,
+      "exact_agreement": null
+    },
+    "verification_recall": {
+      "pairs": 0,
+      "mean_absolute_difference": null,
+      "exact_agreement": null
+    },
+    "activated_module_utility": {
+      "pairs": 0,
+      "mean_absolute_difference": null,
+      "exact_agreement": null
+    }
+  },
+  "note": "Compute this report on unreconciled double-coded annotations; adjudicated labels are evaluated separately."
+}

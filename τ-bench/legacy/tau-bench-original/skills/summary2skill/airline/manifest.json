@@ -1,0 +1,23 @@
+{
+  "method": "summary2skill",
+  "domain": "airline",
+  "compiler_backend": "deterministic_bootstrap",
+  "formal_llm_generation_required_for_paper_result": true,
+  "input_hash": "2c58300478c541dfd28ca65267b10244786096250deb433ad10260a80112292e",
+  "uses_training_tasks": false,
+  "uses_dev_or_test_tasks": false,
+  "counts": {
+    "policy_sections": 6,
+    "tools": 14,
+    "knowledge_atoms": 20,
+    "training_workflow_patterns": 0,
+    "graph_patterns": 0
+  },
+  "duration_seconds": 0.1481,
+  "artifacts": [
+    "SKILL.md",
+    "evidence_index.json",
+    "security_policy.json",
+    "workflow_patterns.json"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "native": {
+    "num_simulations": 1,
+    "num_tasks": 1,
+    "mean_reward": 1.0,
+    "strict_success_rate": 1.0,
+    "pass_at_k": 1.0,
+    "pass_power_k": 1.0,
+    "reward_components": {
+      "ENV_ASSERTION": 1.0
+    },
+    "mean_agent_cost": 0.01,
+    "mean_duration_seconds": 12.5
+  },
+  "process": {
+    "db": 1.0,
+    "env_assertion_rate": 1,
+    "communication_rate": null,
+    "nl_assertion_rate": null,
+    "action_match_rate": null,
+    "actor_ownership_accuracy": 1.0,
+    "illegal_cross_actor_tool_calls": 0,
+    "package_retrievals": 1,
+    "package_context_chars": 300,
+    "package_unique_items": 1,
+    "required_document_recall": null,
+    "required_document_mrr": null
+  },
+  "rows": [
+    {
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "trial": 0,
+      "reward": 1.0,
+      "db": 1.0,
+      "env_assertion_rate": 1,
+      "communication_rate": null,
+      "nl_assertion_rate": null,
+      "action_match_rate": null,
+      "actor_ownership_accuracy": 1.0,
+      "illegal_cross_actor_tool_calls": 0,
+      "package_retrievals": 1,
+      "package_context_chars": 300,
+      "package_unique_items": 1,
+      "required_document_recall": null,
+      "required_document_mrr": null
+    }
+  ],
+  "limitations": [
+    "Policy compliance, decision-status Macro-F1, exception recall and provenance validity require an annotated trace set; they are not inferred automatically.",
+    "Required-document labels are read only after simulation for offline evaluation."
+  ]
+}

@@ -1,0 +1,1593 @@
+{
+  "atoms": [
+    {
+      "atom_id": "ATOM-0012faec5a",
+      "type": "fact",
+      "subject": "change_user_email",
+      "text": "Change the email address for a user.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "change_user_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-07114fd667",
+      "type": "confirmation",
+      "subject": "unlock_discoverable_agent_tool",
+      "text": "Args: agent_tool_name: The name of the agent discoverable tool to unlock (e.g., \"calculate_apr_adjustment_7842\") Returns: A confirmation message with the tool's description and parameters",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "unlock_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0a02d8eff9",
+      "type": "actor_constraint",
+      "subject": "log_verification",
+      "text": "The log_verification tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0abc6600d4",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "Transfer the user to a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0c5a546280",
+      "type": "required_input",
+      "subject": "submit_transaction",
+      "text": "The submit_transaction tool requires the amount argument.",
+      "object": "amount",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_transaction"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0d8293a6dd",
+      "type": "required_input",
+      "subject": "apply_for_credit_card",
+      "text": "The apply_for_credit_card tool requires the rho_bank_subscription argument.",
+      "object": "rho_bank_subscription",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "apply_for_credit_card"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0dddafc5ec",
+      "type": "required_input",
+      "subject": "unlock_discoverable_agent_tool",
+      "text": "The unlock_discoverable_agent_tool tool requires the agent_tool_name argument.",
+      "object": "agent_tool_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "unlock_discoverable_agent_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0e2d257c16",
+      "type": "fact",
+      "subject": "get_current_time",
+      "text": "Use this to get the current timestamp for logging verification records.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_current_time"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1153e70f4e",
+      "type": "required_input",
+      "subject": "log_verification",
+      "text": "The log_verification tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-140ad7705d",
+      "type": "escalation",
+      "subject": "Guidelines",
+      "text": "If they do, invoke the appropriate transfer_to_human_agents tool.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1480c067b9",
+      "type": "fact",
+      "subject": "Guidelines",
+      "text": "Be polite and professional.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-164843068c",
+      "type": "actor_constraint",
+      "subject": "get_credit_card_accounts_by_user",
+      "text": "The get_credit_card_accounts_by_user tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_accounts_by_user"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-16f963ee59",
+      "type": "fact",
+      "subject": "Rho-Bank Customer Service Policy",
+      "text": "You are a helpful customer service agent for Rho-Bank.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Rho-Bank Customer Service Policy",
+        "line_start": 1,
+        "line_end": 5
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-17186b6ff9",
+      "type": "actor_constraint",
+      "subject": "request_human_agent_transfer",
+      "text": "The request_human_agent_transfer tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "request_human_agent_transfer"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-18691a7ef7",
+      "type": "required_input",
+      "subject": "KB_search",
+      "text": "The KB_search tool requires the query argument.",
+      "object": "query",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/retrieval_mixins.py",
+        "title": "KB_search"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1a8a894cff",
+      "type": "actor_constraint",
+      "subject": "KB_search",
+      "text": "The KB_search tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/retrieval_mixins.py",
+        "title": "KB_search"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1df377a30d",
+      "type": "escalation",
+      "subject": "Guidelines",
+      "text": "If the user asks for a human agent 4 times, then you may invoke the transfer_to_human_agents tool.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1f89d8aaf8",
+      "type": "required_input",
+      "subject": "log_verification",
+      "text": "The log_verification tool requires the phone_number argument.",
+      "object": "phone_number",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-24f7ce76c6",
+      "type": "escalation",
+      "subject": "Guidelines",
+      "text": "Generally, if the issue cannot be resolved or is outside your capabilities, ask the user whether they would like to be transferred to a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-295e7176c6",
+      "type": "fact",
+      "subject": "log_verification",
+      "text": "This creates an audit record of the verification.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2b23ef717a",
+      "type": "required_input",
+      "subject": "change_user_email",
+      "text": "The change_user_email tool requires the new_email argument.",
+      "object": "new_email",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "change_user_email"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-2cd50f81f5",
+      "type": "postcondition",
+      "subject": "log_verification",
+      "text": "Log a verification record after successfully verifying a user's identity.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2f3373201a",
+      "type": "fact",
+      "subject": "call_discoverable_user_tool",
+      "text": "Use this when the agent has instructed you to perform an action using a discoverable tool.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-300259e1fd",
+      "type": "actor_constraint",
+      "subject": "list_discoverable_agent_tools",
+      "text": "The list_discoverable_agent_tools tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "list_discoverable_agent_tools"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-339a5fd1aa",
+      "type": "actor_constraint",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3852642bd2",
+      "type": "required_input",
+      "subject": "log_verification",
+      "text": "The log_verification tool requires the email argument.",
+      "object": "email",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-390b47b844",
+      "type": "required_input",
+      "subject": "submit_transaction",
+      "text": "The submit_transaction tool requires the category argument.",
+      "object": "category",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_transaction"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3b1d80fe44",
+      "type": "fact",
+      "subject": "unlock_discoverable_agent_tool",
+      "text": "Use this when the knowledge base indicates that you have access to a specialized internal tool.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "unlock_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3b26d57a44",
+      "type": "required_input",
+      "subject": "call_discoverable_agent_tool",
+      "text": "The knowledge base will tell you which tool to use and what arguments to provide.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3b5a3c6034",
+      "type": "communication_requirement",
+      "subject": "Guidelines",
+      "text": "Do not give intermediate responses to users while processing that would give away internal rho-bank information/policies.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3c49138928",
+      "type": "fact",
+      "subject": "submit_referral",
+      "text": "Args: user_id: Your user ID (the referrer) account_type: The type of account you are referring someone to open",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_referral"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3e508976c9",
+      "type": "fact",
+      "subject": "give_discoverable_user_tool",
+      "text": "Use this when the knowledge base indicates that the user should perform an action themselves (e.g., \"to do X, have the user call tool_name(args)\").",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "give_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3e8c4b7e20",
+      "type": "escalation",
+      "subject": "Guidelines",
+      "text": "Do not transfer without asking the user first.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-44f7a459be",
+      "type": "communication_requirement",
+      "subject": "get_credit_card_accounts_by_user",
+      "text": "Returns information about each credit card account including card type, date opened, current balance, and reward points.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_accounts_by_user"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4567e24836",
+      "type": "fact",
+      "subject": "get_current_time",
+      "text": "Get the current time.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_current_time"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-47e80ff475",
+      "type": "required_input",
+      "subject": "submit_referral",
+      "text": "The submit_referral tool requires the account_type argument.",
+      "object": "account_type",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_referral"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-48e7214af9",
+      "type": "required_input",
+      "subject": "give_discoverable_user_tool",
+      "text": "The give_discoverable_user_tool tool requires the arguments argument.",
+      "object": "arguments",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "give_discoverable_user_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-4b26209b7c",
+      "type": "required_input",
+      "subject": "call_discoverable_agent_tool",
+      "text": "Args: agent_tool_name: The name of the agent discoverable tool to call arguments: JSON string of arguments for the tool (e.g., '{\"user_id\": \"abc123\"}') Returns: The result of executing the agent tool",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4b6aed6498",
+      "type": "actor_constraint",
+      "subject": "call_discoverable_agent_tool",
+      "text": "The call_discoverable_agent_tool tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_agent_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-4bdbe3e51c",
+      "type": "fact",
+      "subject": "call_discoverable_user_tool",
+      "text": "This simulates you performing the action in the real world (e.g., opening a webpage, navigating to a section, clicking a button).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4c217f194d",
+      "type": "required_input",
+      "subject": "call_discoverable_agent_tool",
+      "text": "The call_discoverable_agent_tool tool requires the arguments argument.",
+      "object": "arguments",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_agent_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-4e933e5ba7",
+      "type": "required_input",
+      "subject": "call_discoverable_user_tool",
+      "text": "The agent will have told you the tool name and arguments.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-514d36ddf6",
+      "type": "fact",
+      "subject": "get_user_information_by_id",
+      "text": "Args: user_id: The ID of the user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-528e3a940d",
+      "type": "fact",
+      "subject": "get_user_information_by_email",
+      "text": "Args: email: The email of the user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-52dfe7e5c8",
+      "type": "actor_constraint",
+      "subject": "unlock_discoverable_agent_tool",
+      "text": "The unlock_discoverable_agent_tool tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "unlock_discoverable_agent_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-53869cb493",
+      "type": "required_input",
+      "subject": "submit_transaction",
+      "text": "The submit_transaction tool requires the credit_card_type argument.",
+      "object": "credit_card_type",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_transaction"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-5537e8afbd",
+      "type": "required_input",
+      "subject": "submit_transaction",
+      "text": "The submit_transaction tool requires the merchant_name argument.",
+      "object": "merchant_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_transaction"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-571b1db832",
+      "type": "fact",
+      "subject": "get_referrals_by_user",
+      "text": "Get all referrals made by a user.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_referrals_by_user"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-580306f695",
+      "type": "fact",
+      "subject": "get_referrals_by_user",
+      "text": "Args: user_id: The ID of the user (referrer) to look up referrals for",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_referrals_by_user"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-58237aa9a2",
+      "type": "permission",
+      "subject": "give_discoverable_user_tool",
+      "text": "Pass a tool to the user so they can execute it themselves.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "give_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5a3a2d91c4",
+      "type": "communication_requirement",
+      "subject": "Guidelines",
+      "text": "Do not make up policies, information or actions that you can take on behalf of the user.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5c7edc2d7e",
+      "type": "actor_constraint",
+      "subject": "get_user_information_by_id",
+      "text": "The get_user_information_by_id tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-5e188fa00d",
+      "type": "required_input",
+      "subject": "call_discoverable_user_tool",
+      "text": "The call_discoverable_user_tool tool requires the discoverable_tool_name argument.",
+      "object": "discoverable_tool_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_user_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-611c5f4de7",
+      "type": "required_input",
+      "subject": "log_verification",
+      "text": "The log_verification tool requires the address argument.",
+      "object": "address",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-62a41348fd",
+      "type": "required_input",
+      "subject": "apply_for_credit_card",
+      "text": "The apply_for_credit_card tool requires the customer_name argument.",
+      "object": "customer_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "apply_for_credit_card"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-6526a891e8",
+      "type": "required_input",
+      "subject": "get_referrals_by_user",
+      "text": "The get_referrals_by_user tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_referrals_by_user"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-675aa6065d",
+      "type": "postcondition",
+      "subject": "unlock_discoverable_agent_tool",
+      "text": "After unlocking, you can use the tool by calling `call_discoverable_agent_tool` with the tool name and required arguments.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "unlock_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-67a4e757e8",
+      "type": "required_input",
+      "subject": "log_verification",
+      "text": "The log_verification tool requires the time_verified argument.",
+      "object": "time_verified",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-686803aa69",
+      "type": "required_input",
+      "subject": "get_user_information_by_email",
+      "text": "The get_user_information_by_email tool requires the email argument.",
+      "object": "email",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_email"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-69c3323355",
+      "type": "fact",
+      "subject": "KB_search",
+      "text": "Search the Banking knowledge base with the fixed BM25 pipeline and return the top-k source documents.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/retrieval_mixins.py",
+        "title": "KB_search"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6d1ed4bb41",
+      "type": "fact",
+      "subject": "change_user_email",
+      "text": "Args: user_id: The ID of the user whose email should be changed new_email: The new email address to set for the user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "change_user_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7185a5da52",
+      "type": "fact",
+      "subject": "apply_for_credit_card",
+      "text": "Args: card_type: Type of credit card customer_name: Full legal name annual_income: Annual income in USD rho_bank_subscription: Whether user has Rho-Bank+ subscription",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "apply_for_credit_card"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-72e6d3f00c",
+      "type": "required_input",
+      "subject": "get_user_information_by_id",
+      "text": "The get_user_information_by_id tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-73236c9585",
+      "type": "required_input",
+      "subject": "change_user_email",
+      "text": "The change_user_email tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "change_user_email"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-7401226f88",
+      "type": "required_input",
+      "subject": "submit_transaction",
+      "text": "The submit_transaction tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_transaction"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-7abaa6750a",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "reason: The specific reason code for the transfer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7e3a7572b4",
+      "type": "required_input",
+      "subject": "get_user_information_by_name",
+      "text": "The get_user_information_by_name tool requires the customer_name argument.",
+      "object": "customer_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_name"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-80cacbcf4a",
+      "type": "prohibition",
+      "subject": "Guidelines",
+      "text": "If you cannot find relevant information, let the user know.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-83ff8337ae",
+      "type": "fact",
+      "subject": "request_human_agent_transfer",
+      "text": "Each request will be logged and processed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "request_human_agent_transfer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8765a28189",
+      "type": "required_input",
+      "subject": "apply_for_credit_card",
+      "text": "The apply_for_credit_card tool requires the annual_income argument.",
+      "object": "annual_income",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "apply_for_credit_card"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-89b0f11636",
+      "type": "escalation",
+      "subject": "Guidelines",
+      "text": "This guidance may be overridden by specific scenario-based transfer guidance in the knowledge base.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-902c069934",
+      "type": "fact",
+      "subject": "call_discoverable_agent_tool",
+      "text": "Call an agent discoverable tool that you have previously unlocked.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9238d58ce6",
+      "type": "actor_constraint",
+      "subject": "get_credit_card_transactions_by_user",
+      "text": "The get_credit_card_transactions_by_user tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_transactions_by_user"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-923ef9f972",
+      "type": "communication_requirement",
+      "subject": "get_user_information_by_id",
+      "text": "Get the information (date of birth, email, phone number, address) for a user by their user id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-95a20b7f90",
+      "type": "fact",
+      "subject": "apply_for_credit_card",
+      "text": "Apply for a credit card.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "apply_for_credit_card"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-974247d819",
+      "type": "communication_requirement",
+      "subject": "unlock_discoverable_agent_tool",
+      "text": "The knowledge base will tell you the tool name to unlock.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "unlock_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9a0afaf2f8",
+      "type": "fact",
+      "subject": "get_credit_card_accounts_by_user",
+      "text": "Args: user_id: The ID of the user to look up credit card accounts for",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_accounts_by_user"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9a0ff7963d",
+      "type": "prohibition",
+      "subject": "Guidelines",
+      "text": "Do this only if you absolutely have to, and you are sure that there are no potential actions you can take as specified in the knowledge base, or in your policy.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9ee50219c7",
+      "type": "actor_constraint",
+      "subject": "call_discoverable_user_tool",
+      "text": "The call_discoverable_user_tool tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_user_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a0135fe4bd",
+      "type": "fact",
+      "subject": "Guidelines",
+      "text": "Do not make up or assume the current time.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a058218994",
+      "type": "fact",
+      "subject": "list_discoverable_user_tools",
+      "text": "List all tools that have been given to you by the agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "list_discoverable_user_tools"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a10adead61",
+      "type": "actor_constraint",
+      "subject": "apply_for_credit_card",
+      "text": "The apply_for_credit_card tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "apply_for_credit_card"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a188a0e156",
+      "type": "required_input",
+      "subject": "give_discoverable_user_tool",
+      "text": "The give_discoverable_user_tool tool requires the discoverable_tool_name argument.",
+      "object": "discoverable_tool_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "give_discoverable_user_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a190c83ec7",
+      "type": "fact",
+      "subject": "list_discoverable_user_tools",
+      "text": "Returns: A list of tools that have been given to you",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "list_discoverable_user_tools"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a1cb1a24fe",
+      "type": "communication_requirement",
+      "subject": "Rho-Bank Customer Service Policy",
+      "text": "Your goal is to help customers by searching the knowledge base and providing accurate information.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Rho-Bank Customer Service Policy",
+        "line_start": 1,
+        "line_end": 5
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a367369312",
+      "type": "communication_requirement",
+      "subject": "get_user_information_by_name",
+      "text": "Get the information (date of birth, email, phone number, address) for a user by their name.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a7f443ce7c",
+      "type": "actor_constraint",
+      "subject": "get_referrals_by_user",
+      "text": "The get_referrals_by_user tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_referrals_by_user"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-b10ff0902f",
+      "type": "fact",
+      "subject": "list_discoverable_agent_tools",
+      "text": "Returns: A list of tools that you have called",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "list_discoverable_agent_tools"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b2d45dcf9f",
+      "type": "escalation",
+      "subject": "request_human_agent_transfer",
+      "text": "Request to be transferred to a human agent for assistance.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "request_human_agent_transfer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b388af3140",
+      "type": "escalation",
+      "subject": "Guidelines",
+      "text": "If an issue falls within your capabilities and the user still wants to be transferred to a human agent, kindly inform the user that you can help them, and try to help them first.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b582a23a33",
+      "type": "exception",
+      "subject": "Guidelines",
+      "text": "from the customer unless it states very clearly in the knowledge base how to process it, and whether you're allowed to do so.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b5cc6eb919",
+      "type": "fact",
+      "subject": "list_discoverable_user_tools",
+      "text": "Use this to see what actions the agent has instructed you to perform.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "list_discoverable_user_tools"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-bc40c9e208",
+      "type": "actor_constraint",
+      "subject": "get_current_time",
+      "text": "The get_current_time tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_current_time"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c01ff0c3ca",
+      "type": "confirmation",
+      "subject": "log_verification",
+      "text": "Call this tool after you have verified a user by confirming 2 out of 4 identity fields (date of birth, email, phone number, address).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c3153f2fe0",
+      "type": "fact",
+      "subject": "submit_referral",
+      "text": "Submit a referral request to refer someone to open an account.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_referral"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c4ac20b4d7",
+      "type": "actor_constraint",
+      "subject": "submit_referral",
+      "text": "The submit_referral tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_referral"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c5ee51c5b7",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "Args: summary: A summary of the user's issue and what was attempted before transfer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c9f1979944",
+      "type": "required_input",
+      "subject": "give_discoverable_user_tool",
+      "text": "The user will then be able to call `call_discoverable_tool` with the same tool name and arguments to simulate executing the action.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "give_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ca87abf678",
+      "type": "actor_constraint",
+      "subject": "list_discoverable_user_tools",
+      "text": "The list_discoverable_user_tools tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "list_discoverable_user_tools"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-cbe04ce46e",
+      "type": "fact",
+      "subject": "get_credit_card_transactions_by_user",
+      "text": "Args: user_id: The ID of the user to look up transactions for",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_transactions_by_user"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-cbe30c5a9b",
+      "type": "required_input",
+      "subject": "submit_referral",
+      "text": "The submit_referral tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_referral"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d0d68f863d",
+      "type": "escalation",
+      "subject": "request_human_agent_transfer",
+      "text": "Returns: Confirmation that your transfer request has been submitted",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "request_human_agent_transfer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d339bc0d80",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "The proper transfer reason enum can be found in the knowledge base: search it before calling this tool to select the proper applicable reason.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d9595f9cfd",
+      "type": "required_input",
+      "subject": "get_credit_card_transactions_by_user",
+      "text": "The get_credit_card_transactions_by_user tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_transactions_by_user"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d95a2cabcc",
+      "type": "fact",
+      "subject": "list_discoverable_agent_tools",
+      "text": "Use this to see what specialized tools you have used.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "list_discoverable_agent_tools"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d9b55f53ee",
+      "type": "fact",
+      "subject": "list_discoverable_agent_tools",
+      "text": "List all agent discoverable tools that you have called.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "list_discoverable_agent_tools"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-db0e7ec5e6",
+      "type": "actor_constraint",
+      "subject": "give_discoverable_user_tool",
+      "text": "The give_discoverable_user_tool tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "give_discoverable_user_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-dc38afef1a",
+      "type": "fact",
+      "subject": "get_credit_card_accounts_by_user",
+      "text": "Get all credit card accounts for a user.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_accounts_by_user"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-dc41a3d7cd",
+      "type": "fact",
+      "subject": "unlock_discoverable_agent_tool",
+      "text": "Unlock an agent discoverable tool that was found in the knowledge base.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "unlock_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-dc5e9702a4",
+      "type": "fact",
+      "subject": "Guidelines",
+      "text": "All instructions will be found here or in the knowledge base.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ddf36e21f8",
+      "type": "required_input",
+      "subject": "apply_for_credit_card",
+      "text": "The apply_for_credit_card tool requires the card_type argument.",
+      "object": "card_type",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "apply_for_credit_card"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ddf8e10444",
+      "type": "postcondition",
+      "subject": "call_discoverable_agent_tool",
+      "text": "Use this after unlocking a tool with `unlock_discoverable_agent_tool`.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_agent_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-de7d4fe283",
+      "type": "fact",
+      "subject": "get_credit_card_transactions_by_user",
+      "text": "Get all credit card transactions for a user.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_transactions_by_user"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-df88754ab6",
+      "type": "required_input",
+      "subject": "log_verification",
+      "text": "The log_verification tool requires the name argument.",
+      "object": "name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e1d653f91f",
+      "type": "required_input",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool requires the summary argument.",
+      "object": "summary",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e3c8149504",
+      "type": "fact",
+      "subject": "get_current_time",
+      "text": "Returns: The current time in the format \"YYYY-MM-DD HH:MM:SS TZ\"",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_current_time"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e639828e56",
+      "type": "required_input",
+      "subject": "call_discoverable_agent_tool",
+      "text": "The call_discoverable_agent_tool tool requires the agent_tool_name argument.",
+      "object": "agent_tool_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_agent_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e69a9e4869",
+      "type": "required_input",
+      "subject": "call_discoverable_user_tool",
+      "text": "The call_discoverable_user_tool tool requires the arguments argument.",
+      "object": "arguments",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_user_tool"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e6baeee1dd",
+      "type": "precondition",
+      "subject": "Guidelines",
+      "text": "If you need the current time, always use the get_current_time() tool.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e6d74af94c",
+      "type": "required_input",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool requires the reason argument.",
+      "object": "reason",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e9d8170d4c",
+      "type": "fact",
+      "subject": "Guidelines",
+      "text": "Do not ask for any documentation, receipts...",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+        "title": "Guidelines",
+        "line_start": 6,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ea5636a1b2",
+      "type": "actor_constraint",
+      "subject": "get_user_information_by_email",
+      "text": "The get_user_information_by_email tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_email"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ed947ea73f",
+      "type": "required_input",
+      "subject": "log_verification",
+      "text": "The log_verification tool requires the date_of_birth argument.",
+      "object": "date_of_birth",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ef4b9aec07",
+      "type": "actor_constraint",
+      "subject": "get_user_information_by_name",
+      "text": "The get_user_information_by_name tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_name"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f29d588e35",
+      "type": "escalation",
+      "subject": "request_human_agent_transfer",
+      "text": "Use this when you want to speak with a real human agent instead of the automated system.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "request_human_agent_transfer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f2d58212ea",
+      "type": "fact",
+      "subject": "log_verification",
+      "text": "Args: name: The verified user's full name user_id: The verified user's ID address: The verified user's address email: The verified user's email phone_number: The verified user's phone number date_of_birth: The verified user's date of birth (MM/DD/YYYY format) time_verified: The timestamp of the verification (e.g., \"2025-11-14 03:40:00 EST\")",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "log_verification"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f34897b180",
+      "type": "actor_constraint",
+      "subject": "submit_transaction",
+      "text": "The submit_transaction tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_transaction"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f4b25ed137",
+      "type": "fact",
+      "subject": "get_user_information_by_name",
+      "text": "Args: customer_name: The name of the user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f623e6f2df",
+      "type": "fact",
+      "subject": "call_discoverable_user_tool",
+      "text": "Call a tool that was given to you by the agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f89d149c6e",
+      "type": "actor_constraint",
+      "subject": "change_user_email",
+      "text": "The change_user_email tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "change_user_email"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f8be505f03",
+      "type": "communication_requirement",
+      "subject": "get_user_information_by_email",
+      "text": "Get the information (date of birth, email, phone number, address) for a user by their email.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_user_information_by_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-fc06651245",
+      "type": "fact",
+      "subject": "submit_transaction",
+      "text": "Args: user_id: Your user ID credit_card_type: Type of credit card used (e.g., \"Bronze Rewards Card\", \"Gold Rewards Card\") merchant_name: Name of the merchant where the purchase was made amount: Transaction amount in USD (e.g., 127.43) category: Transaction category (e.g., \"Groceries\", \"Dining\", \"Travel\", \"Software\", \"Entertainment\", \"Utilities\", \"Shopping\")",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_transaction"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-fd1b7fdfa1",
+      "type": "required_input",
+      "subject": "get_credit_card_accounts_by_user",
+      "text": "The get_credit_card_accounts_by_user tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "get_credit_card_accounts_by_user"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-fd1ff37fa7",
+      "type": "required_input",
+      "subject": "call_discoverable_user_tool",
+      "text": "Args: discoverable_tool_name: The name of the discoverable tool to call (e.g., \"open_webpage\") arguments: JSON string of arguments for the tool (e.g., '{\"url\": \"https://example.com\"}') Returns: The result of executing the discoverable tool",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "call_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-fda0cbeea3",
+      "type": "confirmation",
+      "subject": "give_discoverable_user_tool",
+      "text": "Args: discoverable_tool_name: The name of the discoverable tool (e.g., \"open_webpage\", \"navigate_to_section\") arguments: JSON string of arguments for the tool (e.g., '{\"url\": \"https://example.com\"}') Returns: A confirmation message with instructions for the user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "give_discoverable_user_tool"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ff61d1d6de",
+      "type": "fact",
+      "subject": "submit_transaction",
+      "text": "Submit a credit card transaction.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+        "title": "submit_transaction"
+      },
+      "origin": "tool_description"
+    }
+  ]
+}

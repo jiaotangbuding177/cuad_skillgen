@@ -1,0 +1,86 @@
+{
+  "dataset": "tau3-bench",
+  "package_version": "1.0.1",
+  "upstream_url": "https://github.com/sierra-research/tau2-bench.git",
+  "pinned_commit": "668d3bcd135c02aa3438f987ef45735b7c163ee3",
+  "checked_out_commit": "668d3bcd135c02aa3438f987ef45735b7c163ee3",
+  "license": "MIT",
+  "primary_paper": "https://arxiv.org/abs/2506.07982",
+  "files": [
+    {
+      "path": "vendor/tau3-bench/LICENSE",
+      "sha256": "74741b87a33d4704c6f33e5c71742542446c984233f7a7e4905bf36f4da5a33b",
+      "bytes": 1093
+    },
+    {
+      "path": "vendor/tau3-bench/README.md",
+      "sha256": "361d60562046790fe83241d54c98dee2a72e5b549df0adb084f80afcb54b3f54",
+      "bytes": 10660
+    },
+    {
+      "path": "vendor/tau3-bench/pyproject.toml",
+      "sha256": "504fd345568e09122f2bb9ecc786807d50a10e1d30777d1456c268a87ef5922b",
+      "bytes": 2520
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/retail/tasks.json",
+      "sha256": "f44563d8f36362e2dc58282bb02cfb85010d22f27d9439808758d3e9b2bc16d2",
+      "bytes": 355019
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/retail/split_tasks.json",
+      "sha256": "5f9949b833e6b99584b87e84ef22f9d81789ea67a52e534c6f7aa91eff08adc7",
+      "bytes": 3498
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/airline/tasks.json",
+      "sha256": "34dfcf0622792d0d0fa32aa491d21582e1b5d3ec1948e7743bae881885f878ea",
+      "bytes": 159049
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/airline/split_tasks.json",
+      "sha256": "8249d7af4c654a48e5fa776993c3416c3b68c7213a26d00ec89e976c28363e97",
+      "bytes": 1550
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/telecom/tasks.json",
+      "sha256": "20793073500dba5761f76d038dd32a343903985af442b3eae7eeb3a4e0d5d75d",
+      "bytes": 14340799
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/telecom/split_tasks.json",
+      "sha256": "b862e473e8e9b25a0774d811cd9264790aa4560e620ad794e3f57bd9fd7c54e0",
+      "bytes": 358693
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/tasks.json",
+      "sha256": "8a0111798693163b0a9cbef745ff0bf3c3f8fae14b597f4e12359ecde0ea57a9",
+      "bytes": 1157521
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "sha256": "4313d3fef8acf919f555fa17fbce929cc3ed1cef2dd8f0d35ff5c8c3364de176",
+      "bytes": 6835
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+      "sha256": "7db375ddcce5061cf9f48a5aabe1fc3e52aa2936d6a65b7c5b62e3c7ca54cfe4",
+      "bytes": 7842
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+      "sha256": "3dcd21deb605bcb4e81bc313f997e505694f6757d49e9c073d4dac7d43b20501",
+      "bytes": 5857
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+      "sha256": "9db5c0a19ef917f4d7b38356f036fba50840ad1fffc92ce4ac2389525af92465",
+      "bytes": 17794
+    },
+    {
+      "path": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+      "sha256": "345f2762181e45dc2cafad41bdb1fb0ab2c6655598235b7a91ac4a975dd67810",
+      "bytes": 1793
+    }
+  ]
+}

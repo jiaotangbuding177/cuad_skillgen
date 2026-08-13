@@ -1,0 +1,40 @@
+{
+  "benchmark": "tau3-bench",
+  "domain": "banking_knowledge",
+  "task_counts": {
+    "base": 97
+  },
+  "primary_protocol": "base",
+  "compilation_sources": [
+    "documents/policy_sections.jsonl",
+    "documents/tool_catalog.json",
+    "documents/knowledge_documents.jsonl"
+  ],
+  "held_out_from_compilation": [
+    "tasks/base.jsonl"
+  ],
+  "policy_sections": 2,
+  "tools": 21,
+  "knowledge_documents": 698,
+  "reference_action_distribution": {
+    "apply_for_credit_card": 19,
+    "call_discoverable_agent_tool": 456,
+    "call_discoverable_user_tool": 62,
+    "change_user_email": 1,
+    "get_credit_card_accounts_by_user": 3,
+    "get_referrals_by_user": 4,
+    "give_discoverable_user_tool": 21,
+    "log_verification": 81,
+    "request_human_agent_transfer": 13,
+    "submit_referral": 7,
+    "submit_transaction": 1,
+    "transfer_to_human_agents": 13,
+    "unlock_discoverable_agent_tool": 274
+  },
+  "reward_basis_distribution": {
+    "ACTION": 9,
+    "DB": 88
+  },
+  "task_source_sha256": "8a0111798693163b0a9cbef745ff0bf3c3f8fae14b597f4e12359ecde0ea57a9",
+  "warning": "Reference actions define a target state, not a unique required trajectory, unless ACTION is in reward_basis."
+}

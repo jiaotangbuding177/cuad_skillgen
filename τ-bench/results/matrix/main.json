@@ -1,0 +1,44 @@
+{
+  "units": [
+    {
+      "run_id": "main-a2sc-telecom-s42",
+      "status": "planned",
+      "returncode": 0,
+      "command": [
+        "D:\\skillgen\\τ-bench\\vendor\\tau3-bench\\.venv\\Scripts\\python.exe",
+        "D:\\skillgen\\τ-bench\\scripts\\run_agent_runtime.py",
+        "--method",
+        "a2sc",
+        "--domain",
+        "telecom",
+        "--agent-model",
+        "openai/test-model",
+        "--user-model",
+        "openai/test-model",
+        "--split",
+        "test",
+        "--seed",
+        "42",
+        "--num-trials",
+        "1",
+        "--max-concurrency",
+        "4",
+        "--max-steps",
+        "100",
+        "--run-id",
+        "main-a2sc-telecom-s42",
+        "--runtime-mode",
+        "hard_progressive_advisory",
+        "--progressive-max-catalog-chars",
+        "12000",
+        "--progressive-max-module-chars",
+        "9000",
+        "--progressive-max-active-modules",
+        "2",
+        "--num-tasks",
+        "1",
+        "--dry-run"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "benchmark": "tau3-bench",
+  "method": "g_a2sc",
+  "domain": "telecom",
+  "compiler_backend": "deterministic_bootstrap",
+  "effective_compiler_backend": "deterministic_structured",
+  "model": null,
+  "input_hash": "ddd6fe51a0ce0033968e01a262143bb32c244dc020b25c92da7b1a22113e46b5",
+  "compiler_code_hash": "d1c67980895b00d3a3f68836623b6e65c8a049db2334905c765b15f56c2c5667",
+  "uses_train_tasks": true,
+  "uses_held_out_tasks": false,
+  "counts": {
+    "policy_sections": 51,
+    "tools": 43,
+    "knowledge_documents": 0,
+    "knowledge_atoms": 94,
+    "typed_atoms": 463,
+    "tool_cards": 43,
+    "local_motifs": 37,
+    "action_modules": 43,
+    "workflow_patterns": 67,
+    "graph_patterns": 0,
+    "semantic_graph_edges": 458
+  },
+  "package_contract": "action_modules.v2",
+  "package_contract_hash": "47b371f2b648e8f6a4952ff4d92a6d44a8d110b47b7ba9b54a5366fd214ab67d",
+  "runtime_graph_traversal": false,
+  "llm": {},
+  "duration_seconds": 0.2199
+}

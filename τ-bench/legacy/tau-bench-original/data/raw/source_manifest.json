@@ -1,0 +1,51 @@
+{
+  "dataset": "tau-bench-original",
+  "upstream_url": "https://github.com/sierra-research/tau-bench.git",
+  "pinned_commit": "59a200c6d575d595120f1cb70fea53cef0632f6b",
+  "checked_out_commit": "59a200c6d575d595120f1cb70fea53cef0632f6b",
+  "license": "MIT",
+  "upstream_status": "deprecated_by_upstream_in_favor_of_tau3_bench",
+  "paper": "https://arxiv.org/abs/2406.12045",
+  "files": [
+    {
+      "path": "vendor/tau-bench/LICENSE",
+      "sha256": "b233ad7e9f3b05e2c437ba1ed15d6779ef1e79fc7d6fc9ecd9d482680b7a8bb8",
+      "bytes": 1084
+    },
+    {
+      "path": "vendor/tau-bench/README.md",
+      "sha256": "01f16c030d81e42f83674801bf221ae17ad3abd7cd50e40ab91c98a9e825bae5",
+      "bytes": 8623
+    },
+    {
+      "path": "vendor/tau-bench/tau_bench/envs/retail/wiki.md",
+      "sha256": "e50aad2150625a5bcce494fff461b7dd825a7c7f5db1500b5b61b9bf7327b692",
+      "bytes": 5799
+    },
+    {
+      "path": "vendor/tau-bench/tau_bench/envs/airline/wiki.md",
+      "sha256": "4dec8a697805f5854221246cd7ed270484767deb7b2b96b5e4f4234c932d2fbf",
+      "bytes": 6225
+    },
+    {
+      "path": "vendor/tau-bench/tau_bench/envs/retail/tasks_train.py",
+      "sha256": "d66c0ec6130266f1ca19a96a13708f1b4a0823876a83904742cf654a2fa9fe37",
+      "bytes": 481992
+    },
+    {
+      "path": "vendor/tau-bench/tau_bench/envs/retail/tasks_dev.py",
+      "sha256": "ea6b0148183fedbadec578d86e05b89f29db7a924946d22e32c6cd04da8f1995",
+      "bytes": 19679
+    },
+    {
+      "path": "vendor/tau-bench/tau_bench/envs/retail/tasks_test.py",
+      "sha256": "9bf174fb242bc74f8bdfce058ef8e29bf37f0ece07cfe1a4acfa40df79e3258f",
+      "bytes": 172834
+    },
+    {
+      "path": "vendor/tau-bench/tau_bench/envs/airline/tasks_test.py",
+      "sha256": "64a4f0985238c6693d06b0d15155a43a866d8a4ee161063bb9fa973b06f412bc",
+      "bytes": 68460
+    }
+  ]
+}

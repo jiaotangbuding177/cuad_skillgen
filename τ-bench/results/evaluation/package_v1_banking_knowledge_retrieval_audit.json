@@ -1,0 +1,616 @@
+{
+  "runtime": "package_v1",
+  "domain": "banking_knowledge",
+  "query": "customer asks for a credit card with high cash back and no annual fee",
+  "config": {
+    "mode": "package_v1",
+    "skill_top_k": 4,
+    "atom_top_k": 6,
+    "rule_top_k": 3,
+    "workflow_top_k": 3,
+    "pattern_top_k": 3,
+    "max_context_chars": 12000,
+    "max_item_chars": 1800,
+    "history_messages": 6,
+    "graph_traversal": false
+  },
+  "methods": [
+    {
+      "method": "raw_policy_rag",
+      "profile": [
+        "atom",
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 4,
+        "atom": 23,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 3,
+        "atom": 6
+      },
+      "context_chars": 5565,
+      "items": [
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "SKILL.md",
+          "score": 2.803222,
+          "chars": 225
+        },
+        {
+          "item_id": "KA-00017",
+          "lane": "atom",
+          "title": "apply_for_credit_card",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 9.611684,
+          "chars": 322
+        },
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Guidelines",
+          "source": "SKILL.md",
+          "score": 2.711697,
+          "chars": 1621
+        },
+        {
+          "item_id": "KA-00011",
+          "lane": "atom",
+          "title": "get_credit_card_accounts_by_user",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 7.672142,
+          "chars": 362
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Banking Knowledge τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.493549,
+          "chars": 262
+        },
+        {
+          "item_id": "KA-00001",
+          "lane": "atom",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+          "score": 5.562056,
+          "chars": 306
+        },
+        {
+          "item_id": "KA-00022",
+          "lane": "atom",
+          "title": "submit_transaction",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 5.50266,
+          "chars": 525
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "get_credit_card_transactions_by_user",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 5.249923,
+          "chars": 240
+        },
+        {
+          "item_id": "KA-00002",
+          "lane": "atom",
+          "title": "Guidelines",
+          "source": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+          "score": 3.957489,
+          "chars": 1702
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "native_prompt_skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 4,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4
+      },
+      "context_chars": 3958,
+      "items": [
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Tools",
+          "source": "SKILL.md",
+          "score": 7.505975,
+          "chars": 1845
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Guidelines",
+          "source": "SKILL.md",
+          "score": 3.891329,
+          "chars": 1621
+        },
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "SKILL.md",
+          "score": 2.242834,
+          "chars": 225
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Banking Knowledge τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.174509,
+          "chars": 267
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "schema_prompt_skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 6,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4
+      },
+      "context_chars": 4116,
+      "items": [
+        {
+          "item_id": "SK-0006",
+          "lane": "skill",
+          "title": "Tools",
+          "source": "SKILL.md",
+          "score": 9.087398,
+          "chars": 1845
+        },
+        {
+          "item_id": "SK-0005",
+          "lane": "skill",
+          "title": "Guidelines",
+          "source": "SKILL.md",
+          "score": 4.878776,
+          "chars": 1621
+        },
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "SKILL.md",
+          "score": 3.648768,
+          "chars": 225
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Procedure",
+          "source": "SKILL.md",
+          "score": 0.493684,
+          "chars": 425
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "summary2skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 3,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 3
+      },
+      "context_chars": 1142,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Policy summary",
+          "source": "SKILL.md",
+          "score": 2.570088,
+          "chars": 686
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Training workflow summaries",
+          "source": "SKILL.md",
+          "score": 1.490662,
+          "chars": 195
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Banking Knowledge τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.162517,
+          "chars": 261
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "document_tool_maker",
+      "profile": [
+        "skill",
+        "tool_atom"
+      ],
+      "lane_counts": {
+        "skill": 5,
+        "atom": 21,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "atom": 6
+      },
+      "context_chars": 5964,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Actor-aware tools",
+          "source": "SKILL.md",
+          "score": 8.267856,
+          "chars": 1857
+        },
+        {
+          "item_id": "KA-00017",
+          "lane": "atom",
+          "title": "apply_for_credit_card",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 8.808825,
+          "chars": 322
+        },
+        {
+          "item_id": "SK-0005",
+          "lane": "skill",
+          "title": "Guidelines",
+          "source": "SKILL.md",
+          "score": 4.302277,
+          "chars": 1621
+        },
+        {
+          "item_id": "KA-00011",
+          "lane": "atom",
+          "title": "get_credit_card_accounts_by_user",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 7.22604,
+          "chars": 362
+        },
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "SKILL.md",
+          "score": 2.867089,
+          "chars": 225
+        },
+        {
+          "item_id": "KA-00022",
+          "lane": "atom",
+          "title": "submit_transaction",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 4.95917,
+          "chars": 525
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Tool execution contract",
+          "source": "SKILL.md",
+          "score": 0.17342,
+          "chars": 213
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "get_credit_card_transactions_by_user",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 4.847554,
+          "chars": 240
+        },
+        {
+          "item_id": "KA-00023",
+          "lane": "atom",
+          "title": "KB_search",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/retrieval_mixins.py",
+          "score": 3.172545,
+          "chars": 214
+        },
+        {
+          "item_id": "KA-00021",
+          "lane": "atom",
+          "title": "request_human_agent_transfer",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 2.765091,
+          "chars": 385
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "evoskill_compiler",
+      "profile": [
+        "atom",
+        "rule",
+        "skill",
+        "workflow"
+      ],
+      "lane_counts": {
+        "skill": 4,
+        "atom": 23,
+        "rule": 2,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "rule": 2,
+        "atom": 6
+      },
+      "context_chars": 7812,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Knowledge atoms",
+          "source": "SKILL.md",
+          "score": 9.925893,
+          "chars": 1855
+        },
+        {
+          "item_id": "POL-0002",
+          "lane": "rule",
+          "title": "Guidelines",
+          "source": "KA-00002",
+          "score": 1.682618,
+          "chars": 1621
+        },
+        {
+          "item_id": "KA-00017",
+          "lane": "atom",
+          "title": "apply_for_credit_card",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 9.611684,
+          "chars": 322
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Governance rules",
+          "source": "SKILL.md",
+          "score": 1.190916,
+          "chars": 163
+        },
+        {
+          "item_id": "POL-0001",
+          "lane": "rule",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "KA-00001",
+          "score": 0.934817,
+          "chars": 225
+        },
+        {
+          "item_id": "KA-00011",
+          "lane": "atom",
+          "title": "get_credit_card_accounts_by_user",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 7.672142,
+          "chars": 362
+        },
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Runtime strategy",
+          "source": "SKILL.md",
+          "score": 0.768013,
+          "chars": 226
+        },
+        {
+          "item_id": "KA-00001",
+          "lane": "atom",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+          "score": 5.562056,
+          "chars": 306
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Banking Knowledge τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.591651,
+          "chars": 265
+        },
+        {
+          "item_id": "KA-00022",
+          "lane": "atom",
+          "title": "submit_transaction",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 5.50266,
+          "chars": 525
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "get_credit_card_transactions_by_user",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 5.249923,
+          "chars": 240
+        },
+        {
+          "item_id": "KA-00002",
+          "lane": "atom",
+          "title": "Guidelines",
+          "source": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+          "score": 3.957489,
+          "chars": 1702
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "graph_evoskill_compiler",
+      "profile": [
+        "atom",
+        "pattern",
+        "rule",
+        "skill",
+        "workflow"
+      ],
+      "lane_counts": {
+        "skill": 5,
+        "atom": 23,
+        "rule": 2,
+        "workflow": 0,
+        "pattern": 2
+      },
+      "lane_hits": {
+        "skill": 4,
+        "rule": 2,
+        "atom": 6,
+        "pattern": 1
+      },
+      "context_chars": 6496,
+      "items": [
+        {
+          "item_id": "SK-0005",
+          "lane": "skill",
+          "title": "Governance",
+          "source": "SKILL.md",
+          "score": 1.247666,
+          "chars": 119
+        },
+        {
+          "item_id": "POL-0002",
+          "lane": "rule",
+          "title": "Guidelines",
+          "source": "KA-00002",
+          "score": 1.682618,
+          "chars": 1621
+        },
+        {
+          "item_id": "KA-00017",
+          "lane": "atom",
+          "title": "apply_for_credit_card",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 9.611684,
+          "chars": 322
+        },
+        {
+          "item_id": "PAT-0001",
+          "lane": "pattern",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "KA-00001",
+          "score": 0.965386,
+          "chars": 299
+        },
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Runtime boundary",
+          "source": "SKILL.md",
+          "score": 1.073603,
+          "chars": 183
+        },
+        {
+          "item_id": "POL-0001",
+          "lane": "rule",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "KA-00001",
+          "score": 0.934817,
+          "chars": 225
+        },
+        {
+          "item_id": "KA-00011",
+          "lane": "atom",
+          "title": "get_credit_card_accounts_by_user",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 7.672142,
+          "chars": 362
+        },
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "PAT-0001: Rho-Bank Customer Service Policy",
+          "source": "SKILL.md",
+          "score": 1.024883,
+          "chars": 321
+        },
+        {
+          "item_id": "KA-00001",
+          "lane": "atom",
+          "title": "Rho-Bank Customer Service Policy",
+          "source": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+          "score": 5.562056,
+          "chars": 306
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Banking Knowledge τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.905219,
+          "chars": 271
+        },
+        {
+          "item_id": "KA-00022",
+          "lane": "atom",
+          "title": "submit_transaction",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 5.50266,
+          "chars": 525
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "get_credit_card_transactions_by_user",
+          "source": "vendor/tau3-bench/src/tau2/domains/banking_knowledge/tools.py",
+          "score": 5.249923,
+          "chars": 240
+        },
+        {
+          "item_id": "KA-00002",
+          "lane": "atom",
+          "title": "Guidelines",
+          "source": "vendor/tau3-bench/data/tau2/domains/banking_knowledge/prompts/components/policy_header.md",
+          "score": 3.957489,
+          "chars": 1702
+        }
+      ],
+      "graph_traversal_enabled": false
+    }
+  ],
+  "note": "Offline deterministic retrieval audit; not an Agent benchmark result."
+}

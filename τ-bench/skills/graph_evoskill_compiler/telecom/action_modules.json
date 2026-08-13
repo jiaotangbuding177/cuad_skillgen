@@ -1,0 +1,544 @@
+{
+  "modules": [
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_001",
+      "name": "Telecom τ³ SOP Skill",
+      "description": "graph evoskill compiler guidance section about Telecom τ³ SOP Skill.",
+      "required_tools": [],
+      "instructions": "# Telecom τ³ SOP Skill\n\n> Method: `graph_evoskill_compiler`. Compile-time sources are frozen τ³-bench policy, tool contracts, knowledge documents where applicable, and training tasks only where an official train split exists.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_002",
+      "name": "PAT-0001: Telecom Agent Policy",
+      "description": "graph evoskill compiler guidance section about PAT-0001: Telecom Agent Policy.",
+      "required_tools": [],
+      "instructions": "# PAT-0001: Telecom Agent Policy\n\nCentral atom `KA-00001`; related atoms: KA-00010, KA-00011, KA-00012, KA-00013, KA-00014, KA-00016, KA-00017, KA-00018, KA-00025, KA-00027, KA-00036, KA-00047, KA-00059, KA-00063.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_003",
+      "name": "PAT-0002: Domain Basics",
+      "description": "graph evoskill compiler guidance section about PAT-0002: Domain Basics.",
+      "required_tools": [],
+      "instructions": "# PAT-0002: Domain Basics\n\nCentral atom `KA-00002`; related atoms: none.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_004",
+      "name": "PAT-0003: Customer",
+      "description": "graph evoskill compiler guidance section about PAT-0003: Customer.",
+      "required_tools": [],
+      "instructions": "# PAT-0003: Customer\n\nCentral atom `KA-00003`; related atoms: KA-00004, KA-00005, KA-00007, KA-00008, KA-00009, KA-00011, KA-00012, KA-00013, KA-00025, KA-00036, KA-00039, KA-00052, KA-00054, KA-00056, KA-00057, KA-00059, KA-00060, KA-00064, KA-00071, KA-00094.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_005",
+      "name": "PAT-0004: Payment Method",
+      "description": "graph evoskill compiler guidance section about PAT-0004: Payment Method.",
+      "required_tools": [],
+      "instructions": "# PAT-0004: Payment Method\n\nCentral atom `KA-00004`; related atoms: KA-00003, KA-00007.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_006",
+      "name": "PAT-0005: Line",
+      "description": "graph evoskill compiler guidance section about PAT-0005: Line.",
+      "required_tools": [],
+      "instructions": "# PAT-0005: Line\n\nCentral atom `KA-00005`; related atoms: KA-00003, KA-00006, KA-00007, KA-00008, KA-00011, KA-00012, KA-00013, KA-00014, KA-00027, KA-00031, KA-00036, KA-00039, KA-00056, KA-00057, KA-00060, KA-00064, KA-00065, KA-00066, KA-00071, KA-00074.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_007",
+      "name": "PAT-0006: Plan",
+      "description": "graph evoskill compiler guidance section about PAT-0006: Plan.",
+      "required_tools": [],
+      "instructions": "# PAT-0006: Plan\n\nCentral atom `KA-00006`; related atoms: KA-00005, KA-00012, KA-00039, KA-00060.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_008",
+      "name": "PAT-0007: Device",
+      "description": "graph evoskill compiler guidance section about PAT-0007: Device.",
+      "required_tools": [],
+      "instructions": "# PAT-0007: Device\n\nCentral atom `KA-00007`; related atoms: KA-00003, KA-00004, KA-00005.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_009",
+      "name": "PAT-0008: Bill",
+      "description": "graph evoskill compiler guidance section about PAT-0008: Bill.",
+      "required_tools": [],
+      "instructions": "# PAT-0008: Bill\n\nCentral atom `KA-00008`; related atoms: KA-00003, KA-00005, KA-00010, KA-00011, KA-00059, KA-00060, KA-00064.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_010",
+      "name": "PAT-0009: Customer Lookup",
+      "description": "graph evoskill compiler guidance section about PAT-0009: Customer Lookup.",
+      "required_tools": [],
+      "instructions": "# PAT-0009: Customer Lookup\n\nCentral atom `KA-00009`; related atoms: KA-00003, KA-00012, KA-00013, KA-00014, KA-00052, KA-00054, KA-00060.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_011",
+      "name": "PAT-0010: Overdue Bill Payment",
+      "description": "graph evoskill compiler guidance section about PAT-0010: Overdue Bill Payment.",
+      "required_tools": [],
+      "instructions": "# PAT-0010: Overdue Bill Payment\n\nCentral atom `KA-00010`; related atoms: KA-00001, KA-00008, KA-00011, KA-00012, KA-00013, KA-00014, KA-00016, KA-00017, KA-00024, KA-00025, KA-00027, KA-00036, KA-00047, KA-00048, KA-00049, KA-00059, KA-00063, KA-00083, KA-00093, KA-00094.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_012",
+      "name": "PAT-0011: Line Suspension",
+      "description": "graph evoskill compiler guidance section about PAT-0011: Line Suspension.",
+      "required_tools": [],
+      "instructions": "# PAT-0011: Line Suspension\n\nCentral atom `KA-00011`; related atoms: KA-00001, KA-00003, KA-00005, KA-00008, KA-00010, KA-00012, KA-00013, KA-00014, KA-00017, KA-00021, KA-00022, KA-00024, KA-00027, KA-00030, KA-00031, KA-00036, KA-00039, KA-00043, KA-00049, KA-00055.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_013",
+      "name": "PAT-0012: Data Refueling",
+      "description": "graph evoskill compiler guidance section about PAT-0012: Data Refueling.",
+      "required_tools": [],
+      "instructions": "# PAT-0012: Data Refueling\n\nCentral atom `KA-00012`; related atoms: KA-00001, KA-00003, KA-00005, KA-00006, KA-00009, KA-00010, KA-00011, KA-00013, KA-00014, KA-00024, KA-00027, KA-00028, KA-00031, KA-00032, KA-00036, KA-00037, KA-00039, KA-00040, KA-00043, KA-00047.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_014",
+      "name": "PAT-0013: Change Plan",
+      "description": "graph evoskill compiler guidance section about PAT-0013: Change Plan.",
+      "required_tools": [],
+      "instructions": "# PAT-0013: Change Plan\n\nCentral atom `KA-00013`; related atoms: KA-00001, KA-00003, KA-00005, KA-00009, KA-00010, KA-00011, KA-00012, KA-00014, KA-00016, KA-00017, KA-00036, KA-00039, KA-00045, KA-00047, KA-00052, KA-00063, KA-00073, KA-00081, KA-00083.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_015",
+      "name": "PAT-0014: Data Roaming",
+      "description": "graph evoskill compiler guidance section about PAT-0014: Data Roaming.",
+      "required_tools": [],
+      "instructions": "# PAT-0014: Data Roaming\n\nCentral atom `KA-00014`; related atoms: KA-00001, KA-00005, KA-00009, KA-00010, KA-00011, KA-00012, KA-00013, KA-00016, KA-00017, KA-00020, KA-00021, KA-00022, KA-00024, KA-00025, KA-00026, KA-00027, KA-00029, KA-00030, KA-00031, KA-00032.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_016",
+      "name": "PAT-0015: Technical Support",
+      "description": "graph evoskill compiler guidance section about PAT-0015: Technical Support.",
+      "required_tools": [],
+      "instructions": "# PAT-0015: Technical Support\n\nCentral atom `KA-00015`; related atoms: KA-00017, KA-00030, KA-00053, KA-00055, KA-00058, KA-00080, KA-00093, KA-00094.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_017",
+      "name": "PAT-0016: Introduction",
+      "description": "graph evoskill compiler guidance section about PAT-0016: Introduction.",
+      "required_tools": [],
+      "instructions": "# PAT-0016: Introduction\n\nCentral atom `KA-00016`; related atoms: KA-00001, KA-00010, KA-00013, KA-00014, KA-00018, KA-00019, KA-00020, KA-00021, KA-00025, KA-00028, KA-00029, KA-00030, KA-00031, KA-00034, KA-00035, KA-00036, KA-00038, KA-00041, KA-00043, KA-00044.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_018",
+      "name": "PAT-0017: What the user can do on their device",
+      "description": "graph evoskill compiler guidance section about PAT-0017: What the user can do on their device.",
+      "required_tools": [],
+      "instructions": "# PAT-0017: What the user can do on their device\n\nCentral atom `KA-00017`; related atoms: KA-00001, KA-00010, KA-00011, KA-00013, KA-00014, KA-00015, KA-00022, KA-00024, KA-00027, KA-00030, KA-00040, KA-00049.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_019",
+      "name": "PAT-0018: Diagnostic Actions (Read-only)",
+      "description": "graph evoskill compiler guidance section about PAT-0018: Diagnostic Actions (Read-only).",
+      "required_tools": [],
+      "instructions": "# PAT-0018: Diagnostic Actions (Read-only)\n\nCentral atom `KA-00018`; related atoms: KA-00001, KA-00016, KA-00019, KA-00021, KA-00025, KA-00029, KA-00031, KA-00035, KA-00036, KA-00038, KA-00040, KA-00044, KA-00047, KA-00048, KA-00065, KA-00066, KA-00069, KA-00071, KA-00073, KA-00077.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_020",
+      "name": "PAT-0019: Fix Actions (Write/Modify)",
+      "description": "graph evoskill compiler guidance section about PAT-0019: Fix Actions (Write/Modify).",
+      "required_tools": [],
+      "instructions": "# PAT-0019: Fix Actions (Write/Modify)\n\nCentral atom `KA-00019`; related atoms: KA-00016, KA-00018, KA-00020, KA-00021, KA-00024, KA-00025, KA-00029, KA-00031, KA-00036, KA-00038, KA-00040, KA-00044, KA-00066, KA-00068, KA-00070, KA-00072, KA-00073, KA-00074, KA-00076, KA-00081.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_021",
+      "name": "PAT-0020: Understanding and Troubleshooting Your Phone's Cellular Service",
+      "description": "graph evoskill compiler guidance section about PAT-0020: Understanding and Troubleshooting Your Phone's Cellular Service.",
+      "required_tools": [],
+      "instructions": "# PAT-0020: Understanding and Troubleshooting Your Phone's Cellular Service\n\nCentral atom `KA-00020`; related atoms: KA-00014, KA-00016, KA-00019, KA-00021, KA-00022, KA-00025, KA-00027, KA-00028, KA-00029, KA-00030, KA-00031, KA-00032, KA-00033, KA-00034, KA-00035, KA-00036, KA-00038, KA-00041, KA-00043, KA-00044.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_022",
+      "name": "PAT-0021: Common Service Issues and Their Causes",
+      "description": "graph evoskill compiler guidance section about PAT-0021: Common Service Issues and Their Causes.",
+      "required_tools": [],
+      "instructions": "# PAT-0021: Common Service Issues and Their Causes\n\nCentral atom `KA-00021`; related atoms: KA-00011, KA-00014, KA-00016, KA-00018, KA-00019, KA-00020, KA-00024, KA-00025, KA-00026, KA-00027, KA-00028, KA-00029, KA-00030, KA-00031, KA-00034, KA-00036, KA-00040, KA-00043, KA-00044, KA-00047.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_023",
+      "name": "PAT-0022: Diagnosing Service Issues",
+      "description": "graph evoskill compiler guidance section about PAT-0022: Diagnosing Service Issues.",
+      "required_tools": [],
+      "instructions": "# PAT-0022: Diagnosing Service Issues\n\nCentral atom `KA-00022`; related atoms: KA-00011, KA-00014, KA-00017, KA-00020, KA-00024, KA-00025, KA-00027, KA-00030, KA-00032, KA-00034, KA-00040, KA-00043, KA-00045, KA-00065, KA-00066, KA-00073, KA-00080, KA-00083.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_024",
+      "name": "PAT-0023: Troubleshooting Service Problems",
+      "description": "graph evoskill compiler guidance section about PAT-0023: Troubleshooting Service Problems.",
+      "required_tools": [],
+      "instructions": "# PAT-0023: Troubleshooting Service Problems\n\nCentral atom `KA-00023`; related atoms: KA-00030, KA-00033, KA-00034, KA-00046.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_025",
+      "name": "PAT-0024: Airplane Mode",
+      "description": "graph evoskill compiler guidance section about PAT-0024: Airplane Mode.",
+      "required_tools": [],
+      "instructions": "# PAT-0024: Airplane Mode\n\nCentral atom `KA-00024`; related atoms: KA-00010, KA-00011, KA-00012, KA-00014, KA-00017, KA-00019, KA-00021, KA-00022, KA-00025, KA-00031, KA-00032, KA-00034, KA-00035, KA-00036, KA-00037, KA-00038, KA-00040, KA-00045, KA-00048, KA-00050.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_026",
+      "name": "PAT-0025: SIM Card Issues",
+      "description": "graph evoskill compiler guidance section about PAT-0025: SIM Card Issues.",
+      "required_tools": [],
+      "instructions": "# PAT-0025: SIM Card Issues\n\nCentral atom `KA-00025`; related atoms: KA-00001, KA-00003, KA-00010, KA-00014, KA-00016, KA-00018, KA-00019, KA-00020, KA-00021, KA-00022, KA-00024, KA-00026, KA-00027, KA-00029, KA-00030, KA-00031, KA-00034, KA-00035, KA-00036, KA-00037.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_027",
+      "name": "PAT-0026: Incorrect APN Settings",
+      "description": "graph evoskill compiler guidance section about PAT-0026: Incorrect APN Settings.",
+      "required_tools": [],
+      "instructions": "# PAT-0026: Incorrect APN Settings\n\nCentral atom `KA-00026`; related atoms: KA-00014, KA-00021, KA-00025, KA-00030, KA-00035, KA-00037, KA-00038, KA-00040, KA-00044, KA-00048, KA-00049, KA-00050, KA-00051, KA-00067, KA-00068, KA-00073, KA-00077, KA-00078, KA-00079.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_028",
+      "name": "PAT-0027: Line Suspension",
+      "description": "graph evoskill compiler guidance section about PAT-0027: Line Suspension.",
+      "required_tools": [],
+      "instructions": "# PAT-0027: Line Suspension\n\nCentral atom `KA-00027`; related atoms: KA-00001, KA-00005, KA-00010, KA-00011, KA-00012, KA-00014, KA-00017, KA-00020, KA-00021, KA-00022, KA-00025, KA-00030, KA-00031, KA-00034, KA-00036, KA-00039, KA-00043, KA-00044, KA-00047, KA-00056.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_029",
+      "name": "PAT-0028: Understanding and Troubleshooting Your Phone's Mobile Data",
+      "description": "graph evoskill compiler guidance section about PAT-0028: Understanding and Troubleshooting Your Phone's Mobile Data.",
+      "required_tools": [],
+      "instructions": "# PAT-0028: Understanding and Troubleshooting Your Phone's Mobile Data\n\nCentral atom `KA-00028`; related atoms: KA-00012, KA-00016, KA-00020, KA-00021, KA-00029, KA-00030, KA-00031, KA-00032, KA-00033, KA-00034, KA-00035, KA-00036, KA-00038, KA-00041, KA-00043, KA-00044, KA-00047, KA-00048, KA-00065, KA-00066.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_030",
+      "name": "PAT-0029: What is Mobile Data?",
+      "description": "graph evoskill compiler guidance section about PAT-0029: What is Mobile Data?.",
+      "required_tools": [],
+      "instructions": "# PAT-0029: What is Mobile Data?\n\nCentral atom `KA-00029`; related atoms: KA-00014, KA-00016, KA-00018, KA-00019, KA-00020, KA-00021, KA-00025, KA-00028, KA-00030, KA-00031, KA-00035, KA-00036, KA-00038, KA-00040, KA-00043, KA-00044, KA-00047, KA-00048, KA-00065, KA-00066.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_031",
+      "name": "PAT-0030: Prerequisites for Mobile Data",
+      "description": "graph evoskill compiler guidance section about PAT-0030: Prerequisites for Mobile Data.",
+      "required_tools": [],
+      "instructions": "# PAT-0030: Prerequisites for Mobile Data\n\nCentral atom `KA-00030`; related atoms: KA-00011, KA-00014, KA-00015, KA-00016, KA-00017, KA-00020, KA-00021, KA-00022, KA-00023, KA-00025, KA-00026, KA-00027, KA-00028, KA-00029, KA-00031, KA-00032, KA-00033, KA-00034, KA-00035, KA-00036.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_032",
+      "name": "PAT-0031: Common Mobile Data Issues and Causes",
+      "description": "graph evoskill compiler guidance section about PAT-0031: Common Mobile Data Issues and Causes.",
+      "required_tools": [],
+      "instructions": "# PAT-0031: Common Mobile Data Issues and Causes\n\nCentral atom `KA-00031`; related atoms: KA-00005, KA-00011, KA-00012, KA-00014, KA-00016, KA-00018, KA-00019, KA-00020, KA-00021, KA-00024, KA-00025, KA-00027, KA-00028, KA-00029, KA-00030, KA-00032, KA-00034, KA-00035, KA-00036, KA-00037.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_033",
+      "name": "PAT-0032: Diagnosing Mobile Data Issues",
+      "description": "graph evoskill compiler guidance section about PAT-0032: Diagnosing Mobile Data Issues.",
+      "required_tools": [],
+      "instructions": "# PAT-0032: Diagnosing Mobile Data Issues\n\nCentral atom `KA-00032`; related atoms: KA-00012, KA-00014, KA-00020, KA-00022, KA-00024, KA-00028, KA-00030, KA-00031, KA-00036, KA-00038, KA-00040, KA-00043, KA-00045, KA-00060, KA-00069, KA-00073, KA-00074, KA-00076.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_034",
+      "name": "PAT-0033: Troubleshooting Mobile Data Problems",
+      "description": "graph evoskill compiler guidance section about PAT-0033: Troubleshooting Mobile Data Problems.",
+      "required_tools": [],
+      "instructions": "# PAT-0033: Troubleshooting Mobile Data Problems\n\nCentral atom `KA-00033`; related atoms: KA-00020, KA-00023, KA-00028, KA-00030, KA-00035, KA-00043, KA-00046.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_035",
+      "name": "PAT-0034: Airplane Mode",
+      "description": "graph evoskill compiler guidance section about PAT-0034: Airplane Mode.",
+      "required_tools": [],
+      "instructions": "# PAT-0034: Airplane Mode\n\nCentral atom `KA-00034`; related atoms: KA-00014, KA-00016, KA-00020, KA-00021, KA-00022, KA-00023, KA-00024, KA-00025, KA-00027, KA-00028, KA-00030, KA-00031, KA-00035, KA-00036, KA-00037, KA-00041, KA-00043, KA-00044, KA-00045, KA-00047.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_036",
+      "name": "PAT-0035: Mobile Data Disabled",
+      "description": "graph evoskill compiler guidance section about PAT-0035: Mobile Data Disabled.",
+      "required_tools": [],
+      "instructions": "# PAT-0035: Mobile Data Disabled\n\nCentral atom `KA-00035`; related atoms: KA-00014, KA-00016, KA-00018, KA-00020, KA-00024, KA-00025, KA-00026, KA-00028, KA-00029, KA-00030, KA-00031, KA-00033, KA-00034, KA-00036, KA-00037, KA-00038, KA-00040, KA-00043, KA-00045, KA-00047.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_037",
+      "name": "PAT-0036: Addressing Data Roaming Problems",
+      "description": "graph evoskill compiler guidance section about PAT-0036: Addressing Data Roaming Problems.",
+      "required_tools": [],
+      "instructions": "# PAT-0036: Addressing Data Roaming Problems\n\nCentral atom `KA-00036`; related atoms: KA-00001, KA-00003, KA-00005, KA-00010, KA-00011, KA-00012, KA-00013, KA-00014, KA-00016, KA-00018, KA-00019, KA-00020, KA-00021, KA-00024, KA-00025, KA-00027, KA-00028, KA-00029, KA-00030, KA-00031.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_038",
+      "name": "PAT-0037: Data Saver Mode",
+      "description": "graph evoskill compiler guidance section about PAT-0037: Data Saver Mode.",
+      "required_tools": [],
+      "instructions": "# PAT-0037: Data Saver Mode\n\nCentral atom `KA-00037`; related atoms: KA-00012, KA-00014, KA-00024, KA-00025, KA-00026, KA-00030, KA-00031, KA-00034, KA-00035, KA-00036, KA-00038, KA-00040, KA-00043, KA-00045, KA-00047, KA-00048, KA-00049, KA-00050, KA-00051, KA-00065.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_039",
+      "name": "PAT-0038: VPN Connection Issues",
+      "description": "graph evoskill compiler guidance section about PAT-0038: VPN Connection Issues.",
+      "required_tools": [],
+      "instructions": "# PAT-0038: VPN Connection Issues\n\nCentral atom `KA-00038`; related atoms: KA-00014, KA-00016, KA-00018, KA-00019, KA-00020, KA-00024, KA-00025, KA-00026, KA-00028, KA-00029, KA-00030, KA-00031, KA-00032, KA-00035, KA-00036, KA-00037, KA-00040, KA-00043, KA-00044, KA-00048.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_040",
+      "name": "PAT-0039: Data Plan Limits Reached",
+      "description": "graph evoskill compiler guidance section about PAT-0039: Data Plan Limits Reached.",
+      "required_tools": [],
+      "instructions": "# PAT-0039: Data Plan Limits Reached\n\nCentral atom `KA-00039`; related atoms: KA-00003, KA-00005, KA-00006, KA-00011, KA-00012, KA-00013, KA-00014, KA-00027, KA-00030, KA-00031, KA-00036, KA-00040, KA-00043, KA-00047, KA-00052, KA-00060, KA-00063, KA-00064.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_041",
+      "name": "PAT-0040: Optimizing Network Mode Preferences",
+      "description": "graph evoskill compiler guidance section about PAT-0040: Optimizing Network Mode Preferences.",
+      "required_tools": [],
+      "instructions": "# PAT-0040: Optimizing Network Mode Preferences\n\nCentral atom `KA-00040`; related atoms: KA-00012, KA-00014, KA-00017, KA-00018, KA-00019, KA-00021, KA-00022, KA-00024, KA-00025, KA-00026, KA-00029, KA-00030, KA-00031, KA-00032, KA-00035, KA-00036, KA-00037, KA-00038, KA-00039, KA-00043.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_042",
+      "name": "PAT-0041: Understanding and Troubleshooting MMS (Picture/Video Messaging)",
+      "description": "graph evoskill compiler guidance section about PAT-0041: Understanding and Troubleshooting MMS (Picture/Video Messaging).",
+      "required_tools": [],
+      "instructions": "# PAT-0041: Understanding and Troubleshooting MMS (Picture/Video Messaging)\n\nCentral atom `KA-00041`; related atoms: KA-00016, KA-00020, KA-00028, KA-00030, KA-00034, KA-00042, KA-00043, KA-00047, KA-00048, KA-00049, KA-00082, KA-00083, KA-00091.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_043",
+      "name": "PAT-0042: What is MMS?",
+      "description": "graph evoskill compiler guidance section about PAT-0042: What is MMS?.",
+      "required_tools": [],
+      "instructions": "# PAT-0042: What is MMS?\n\nCentral atom `KA-00042`; related atoms: KA-00036, KA-00041, KA-00047, KA-00049, KA-00091.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_044",
+      "name": "PAT-0043: Prerequisites for MMS",
+      "description": "graph evoskill compiler guidance section about PAT-0043: Prerequisites for MMS.",
+      "required_tools": [],
+      "instructions": "# PAT-0043: Prerequisites for MMS\n\nCentral atom `KA-00043`; related atoms: KA-00011, KA-00012, KA-00014, KA-00016, KA-00020, KA-00021, KA-00022, KA-00025, KA-00027, KA-00028, KA-00029, KA-00030, KA-00031, KA-00032, KA-00033, KA-00034, KA-00035, KA-00036, KA-00037, KA-00038.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_045",
+      "name": "PAT-0044: Common MMS Issues and Causes",
+      "description": "graph evoskill compiler guidance section about PAT-0044: Common MMS Issues and Causes.",
+      "required_tools": [],
+      "instructions": "# PAT-0044: Common MMS Issues and Causes\n\nCentral atom `KA-00044`; related atoms: KA-00014, KA-00016, KA-00018, KA-00019, KA-00020, KA-00021, KA-00025, KA-00026, KA-00027, KA-00028, KA-00029, KA-00030, KA-00031, KA-00034, KA-00036, KA-00038, KA-00043, KA-00047, KA-00048, KA-00049.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_046",
+      "name": "PAT-0045: Diagnosing MMS Issues",
+      "description": "graph evoskill compiler guidance section about PAT-0045: Diagnosing MMS Issues.",
+      "required_tools": [],
+      "instructions": "# PAT-0045: Diagnosing MMS Issues\n\nCentral atom `KA-00045`; related atoms: KA-00013, KA-00014, KA-00020, KA-00022, KA-00024, KA-00025, KA-00030, KA-00032, KA-00034, KA-00035, KA-00037, KA-00040, KA-00043, KA-00047, KA-00050, KA-00073, KA-00074, KA-00078, KA-00081, KA-00087.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_047",
+      "name": "PAT-0046: Troubleshooting MMS Problems",
+      "description": "graph evoskill compiler guidance section about PAT-0046: Troubleshooting MMS Problems.",
+      "required_tools": [],
+      "instructions": "# PAT-0046: Troubleshooting MMS Problems\n\nCentral atom `KA-00046`; related atoms: KA-00023, KA-00033.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_048",
+      "name": "PAT-0047: Ensuring Basic Connectivity for MMS",
+      "description": "graph evoskill compiler guidance section about PAT-0047: Ensuring Basic Connectivity for MMS.",
+      "required_tools": [],
+      "instructions": "# PAT-0047: Ensuring Basic Connectivity for MMS\n\nCentral atom `KA-00047`; related atoms: KA-00001, KA-00010, KA-00012, KA-00013, KA-00014, KA-00016, KA-00018, KA-00020, KA-00021, KA-00025, KA-00027, KA-00028, KA-00029, KA-00030, KA-00031, KA-00034, KA-00035, KA-00036, KA-00037, KA-00039.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_049",
+      "name": "PAT-0048: Unsuitable Network Technology for MMS",
+      "description": "graph evoskill compiler guidance section about PAT-0048: Unsuitable Network Technology for MMS.",
+      "required_tools": [],
+      "instructions": "# PAT-0048: Unsuitable Network Technology for MMS\n\nCentral atom `KA-00048`; related atoms: KA-00010, KA-00014, KA-00016, KA-00018, KA-00020, KA-00021, KA-00024, KA-00025, KA-00026, KA-00028, KA-00029, KA-00030, KA-00031, KA-00034, KA-00035, KA-00036, KA-00037, KA-00038, KA-00040, KA-00041.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_050",
+      "name": "PAT-0049: Verifying APN (MMSC URL) for MMS",
+      "description": "graph evoskill compiler guidance section about PAT-0049: Verifying APN (MMSC URL) for MMS.",
+      "required_tools": [],
+      "instructions": "# PAT-0049: Verifying APN (MMSC URL) for MMS\n\nCentral atom `KA-00049`; related atoms: KA-00010, KA-00011, KA-00016, KA-00017, KA-00021, KA-00025, KA-00026, KA-00030, KA-00036, KA-00037, KA-00038, KA-00040, KA-00041, KA-00042, KA-00043, KA-00044, KA-00047, KA-00048, KA-00050, KA-00051.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_051",
+      "name": "PAT-0050: Investigating Wi-Fi Calling Interference with MMS",
+      "description": "graph evoskill compiler guidance section about PAT-0050: Investigating Wi-Fi Calling Interference with MMS.",
+      "required_tools": [],
+      "instructions": "# PAT-0050: Investigating Wi-Fi Calling Interference with MMS\n\nCentral atom `KA-00050`; related atoms: KA-00014, KA-00024, KA-00025, KA-00026, KA-00035, KA-00037, KA-00038, KA-00040, KA-00045, KA-00048, KA-00049, KA-00051, KA-00073, KA-00074, KA-00083, KA-00091.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_052",
+      "name": "PAT-0051: Messaging App Lacks Necessary Permissions",
+      "description": "graph evoskill compiler guidance section about PAT-0051: Messaging App Lacks Necessary Permissions.",
+      "required_tools": [],
+      "instructions": "# PAT-0051: Messaging App Lacks Necessary Permissions\n\nCentral atom `KA-00051`; related atoms: KA-00014, KA-00026, KA-00030, KA-00035, KA-00037, KA-00038, KA-00040, KA-00044, KA-00048, KA-00049, KA-00050, KA-00088, KA-00089, KA-00090, KA-00091.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_053",
+      "name": "Runtime boundary",
+      "description": "graph evoskill compiler guidance section about Runtime boundary.",
+      "required_tools": [],
+      "instructions": "# Runtime boundary\n\nThe graph changes compile-time organization only. Runtime tools, environment, task evaluator and retrieval budget remain fixed.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "telecom.graph_evoskill_compiler.section_054",
+      "name": "Governance",
+      "description": "graph evoskill compiler guidance section about Governance.",
+      "required_tools": [],
+      "instructions": "# Governance\n\n- `POL-0001` Telecom Agent Policy\n- `POL-0002` Domain Basics\n- `POL-0003` Customer\n- `POL-0004` Payment Method\n- `POL-0005` Line\n- `POL-0006` Plan\n- `POL-0007` Device\n- `POL-0008` Bill\n- `POL-0009` Customer Lookup\n- `POL-0010` Overdue Bill Payment\n- `POL-0011` Line Suspension\n- `POL-0012` Data Refueling\n- `POL-0013` Change Plan\n- `POL-0014` Data Roaming\n- `POL-0015` Technical Support\n- `POL-0016` Introduction\n- `POL-0017` What the user can do on their device\n- `POL-0018` Diagnostic Actions (Read-only)\n- `POL-0019` Fix Actions (Write/Modify)\n- `POL-0020` Understanding and Troubleshooting Your Phone's Cellular Service\n- `POL-0021` Common Service Issues and Their Causes\n- `POL-0022` Diagnosing Service Issues\n- `POL-0023` Troubleshooting Service Problems\n- `POL-0024` Airplane Mode\n- `POL-0025` SIM Card Issues\n- `POL-0026` Incorrect APN Settings\n- `POL-0027` Line Suspension\n- `POL-0028` Understanding and Troubleshooting Your Phone's Mobile Data\n- `POL-0029` What is Mobile Data?\n- `POL-0030` Prerequisites for Mobile Data\n- `POL-0031` Common Mobile Data Issues and Causes\n- `POL-0032` Diagnosing Mobile Data Issues\n- `POL-0033` Troubleshooting Mobile Data Problems\n- `POL-0034` Airplane Mode\n- `POL-0035` Mobile Data Disabled\n- `POL-0036` Addressing Data Roaming Problems\n- `POL-0037` Data Saver Mode\n- `POL-0038` VPN Connection Issues\n- `POL-0039` Data Plan Limits Reached\n- `POL-0040` Optimizing Network Mode Preferences\n- `POL-0041` Understanding and Troubleshooting MMS (Picture/Video Messaging)\n- `POL-0042` What is MMS?\n- `POL-0043` Prerequisites for MMS\n- `POL-0044` Common MMS Issues and Causes\n- `POL-0045` Diagnosing MMS Issues\n- `POL-0046` Troubleshooting MMS Problems\n- `POL-0047` Ensuring Basic Connectivity for MMS\n- `POL-0048` Unsuitable Network Technology for MMS\n- `POL-0049` Verifying APN (MMSC URL) for MMS\n- `POL-0050` Investigating Wi-Fi Calling Interference with MMS\n- `POL-0051` Messaging App Lacks Necessary Permissions",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    }
+  ]
+}

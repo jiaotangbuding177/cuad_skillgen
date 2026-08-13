@@ -1,0 +1,16 @@
+{
+  "decision_statuses": [
+    "execute",
+    "clarify",
+    "deny",
+    "escalate",
+    "no_action",
+    "execution_failed"
+  ],
+  "rules": [],
+  "invariants": [
+    "Never mutate backend state before all policy preconditions are satisfied.",
+    "Use only information returned by the user or tools.",
+    "Record the policy atom and tool observation supporting each consequential action."
+  ]
+}

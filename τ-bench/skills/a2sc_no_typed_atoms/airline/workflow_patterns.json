@@ -1,0 +1,228 @@
+{
+  "patterns": [
+    {
+      "workflow_id": "WF-0001",
+      "steps": [
+        "assistant:get_reservation_details"
+      ],
+      "training_frequency": 3,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0002",
+      "steps": [
+        "assistant:get_user_details",
+        "assistant:get_reservation_details"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0003",
+      "steps": [
+        "assistant:get_user_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0004",
+      "steps": [
+        "assistant:get_user_details"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0005",
+      "steps": [
+        "assistant:update_reservation_flights"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0006",
+      "steps": [
+        "assistant:get_reservation_details",
+        "assistant:get_user_details"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0007",
+      "steps": [
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:update_reservation_flights",
+        "assistant:cancel_reservation",
+        "assistant:cancel_reservation"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0008",
+      "steps": [
+        "assistant:search_direct_flight"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0009",
+      "steps": [
+        "assistant:get_reservation_details",
+        "assistant:search_direct_flight",
+        "assistant:search_direct_flight",
+        "assistant:calculate",
+        "assistant:update_reservation_baggages"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0010",
+      "steps": [
+        "assistant:cancel_reservation",
+        "assistant:book_reservation"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0011",
+      "steps": [
+        "assistant:update_reservation_flights",
+        "assistant:update_reservation_passengers",
+        "assistant:update_reservation_baggages"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0012",
+      "steps": [
+        "assistant:book_reservation"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0013",
+      "steps": [
+        "assistant:update_reservation_flights",
+        "assistant:update_reservation_baggages"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0014",
+      "steps": [
+        "assistant:cancel_reservation",
+        "assistant:book_reservation",
+        "assistant:book_reservation",
+        "assistant:book_reservation"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0015",
+      "steps": [
+        "assistant:get_reservation_details",
+        "assistant:search_direct_flight",
+        "assistant:search_direct_flight",
+        "assistant:update_reservation_flights",
+        "assistant:update_reservation_baggages"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0016",
+      "steps": [
+        "assistant:get_user_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:cancel_reservation",
+        "assistant:cancel_reservation",
+        "assistant:cancel_reservation"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0017",
+      "steps": [
+        "assistant:get_reservation_details",
+        "assistant:update_reservation_passengers"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0018",
+      "steps": [
+        "assistant:get_user_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0019",
+      "steps": [
+        "assistant:get_user_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:get_reservation_details",
+        "assistant:cancel_reservation",
+        "assistant:cancel_reservation"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    }
+  ]
+}

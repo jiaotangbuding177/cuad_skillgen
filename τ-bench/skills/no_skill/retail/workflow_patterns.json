@@ -1,0 +1,728 @@
+{
+  "patterns": [
+    {
+      "workflow_id": "WF-0001",
+      "steps": [
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 5,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0002",
+      "steps": [
+        "assistant:exchange_delivered_order_items"
+      ],
+      "training_frequency": 5,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0003",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:exchange_delivered_order_items"
+      ],
+      "training_frequency": 4,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0004",
+      "steps": [
+        "assistant:cancel_pending_order",
+        "assistant:cancel_pending_order"
+      ],
+      "training_frequency": 3,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0005",
+      "steps": [
+        "assistant:exchange_delivered_order_items",
+        "assistant:exchange_delivered_order_items"
+      ],
+      "training_frequency": 3,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0006",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:exchange_delivered_order_items"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0007",
+      "steps": [
+        "assistant:find_user_id_by_email",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:return_delivered_order_items",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0008",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:calculate",
+        "assistant:return_delivered_order_items",
+        "assistant:calculate"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0009",
+      "steps": [
+        "assistant:modify_pending_order_address",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0010",
+      "steps": [
+        "assistant:modify_pending_order_address",
+        "assistant:modify_user_address",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 2,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0011",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0012",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:get_user_details",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0013",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:get_user_details",
+        "assistant:modify_pending_order_items",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0014",
+      "steps": [
+        "assistant:find_user_id_by_email",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:transfer_to_human_agents"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0015",
+      "steps": [
+        "assistant:find_user_id_by_email",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0016",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0017",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:calculate",
+        "assistant:cancel_pending_order",
+        "assistant:cancel_pending_order",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0018",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0019",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:get_product_details",
+        "assistant:modify_pending_order_items",
+        "assistant:get_order_details"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0020",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_item_details",
+        "assistant:get_item_details",
+        "assistant:get_product_details",
+        "assistant:get_item_details",
+        "assistant:get_product_details",
+        "assistant:calculate",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0021",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:modify_user_address",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:modify_pending_order_address",
+        "assistant:modify_user_address"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0022",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:exchange_delivered_order_items",
+        "assistant:get_product_details",
+        "assistant:exchange_delivered_order_items",
+        "assistant:get_product_details",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0023",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0024",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:return_delivered_order_items",
+        "assistant:return_delivered_order_items",
+        "assistant:return_delivered_order_items",
+        "assistant:get_order_details",
+        "assistant:calculate"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0025",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:exchange_delivered_order_items",
+        "assistant:exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0026",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:return_delivered_order_items",
+        "assistant:get_order_details",
+        "assistant:cancel_pending_order",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0027",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:cancel_pending_order",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0028",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:modify_pending_order_address"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0029",
+      "steps": [
+        "assistant:find_user_id_by_email",
+        "assistant:find_user_id_by_email",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:return_delivered_order_items",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0030",
+      "steps": [
+        "assistant:find_user_id_by_email",
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0031",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:modify_pending_order_address",
+        "assistant:modify_pending_order_address",
+        "assistant:modify_user_address",
+        "assistant:get_product_details",
+        "assistant:get_order_details",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0032",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:modify_user_address"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0033",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:calculate",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0034",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0035",
+      "steps": [
+        "assistant:transfer_to_human_agents"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0036",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0037",
+      "steps": [
+        "assistant:find_user_id_by_email",
+        "assistant:find_user_id_by_email",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:cancel_pending_order",
+        "assistant:cancel_pending_order",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0038",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:cancel_pending_order",
+        "assistant:modify_pending_order_address"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0039",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:get_product_details",
+        "assistant:calculate",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0040",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:get_order_details",
+        "assistant:cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0041",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:find_user_id_by_name_zip",
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0042",
+      "steps": [
+        "assistant:find_user_id_by_name_zip",
+        "assistant:get_user_details",
+        "assistant:get_order_details",
+        "assistant:cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0043",
+      "steps": [
+        "assistant:modify_pending_order_address",
+        "assistant:modify_pending_order_items",
+        "assistant:cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0044",
+      "steps": [
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0045",
+      "steps": [
+        "assistant:modify_pending_order_address",
+        "assistant:modify_pending_order_address",
+        "assistant:modify_pending_order_address",
+        "assistant:modify_user_address"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0046",
+      "steps": [
+        "assistant:cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0047",
+      "steps": [
+        "assistant:return_delivered_order_items",
+        "assistant:exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0048",
+      "steps": [
+        "assistant:return_delivered_order_items",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0049",
+      "steps": [
+        "assistant:exchange_delivered_order_items",
+        "assistant:exchange_delivered_order_items",
+        "assistant:cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0050",
+      "steps": [
+        "assistant:return_delivered_order_items",
+        "assistant:return_delivered_order_items",
+        "assistant:modify_pending_order_address",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0051",
+      "steps": [
+        "assistant:return_delivered_order_items",
+        "assistant:return_delivered_order_items",
+        "assistant:modify_pending_order_address",
+        "assistant:modify_pending_order_items",
+        "assistant:return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0052",
+      "steps": [
+        "assistant:modify_pending_order_items",
+        "assistant:modify_pending_order_address",
+        "assistant:modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    }
+  ]
+}

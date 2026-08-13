@@ -1,0 +1,40 @@
+{
+  "benchmark": "tau3-bench",
+  "domain": "airline",
+  "task_counts": {
+    "train": 30,
+    "test": 20,
+    "base": 50
+  },
+  "primary_protocol": "test",
+  "compilation_sources": [
+    "documents/policy_sections.jsonl",
+    "documents/tool_catalog.json",
+    "tasks/train.jsonl"
+  ],
+  "held_out_from_compilation": [
+    "tasks/test.jsonl",
+    "tasks/base.jsonl"
+  ],
+  "policy_sections": 9,
+  "tools": 14,
+  "knowledge_documents": 0,
+  "reference_action_distribution": {
+    "book_reservation": 10,
+    "calculate": 1,
+    "cancel_reservation": 11,
+    "get_reservation_details": 57,
+    "get_user_details": 14,
+    "search_direct_flight": 20,
+    "transfer_to_human_agents": 1,
+    "update_reservation_baggages": 5,
+    "update_reservation_flights": 20,
+    "update_reservation_passengers": 3
+  },
+  "reward_basis_distribution": {
+    "COMMUNICATE": 50,
+    "DB": 50
+  },
+  "task_source_sha256": "34dfcf0622792d0d0fa32aa491d21582e1b5d3ec1948e7743bae881885f878ea",
+  "warning": "Reference actions define a target state, not a unique required trajectory, unless ACTION is in reward_basis."
+}

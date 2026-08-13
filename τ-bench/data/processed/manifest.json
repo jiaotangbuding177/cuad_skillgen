@@ -1,0 +1,179 @@
+{
+  "benchmark": "tau3-bench",
+  "domains": [
+    {
+      "benchmark": "tau3-bench",
+      "domain": "retail",
+      "task_counts": {
+        "train": 74,
+        "test": 40,
+        "base": 114
+      },
+      "primary_protocol": "test",
+      "compilation_sources": [
+        "documents/policy_sections.jsonl",
+        "documents/tool_catalog.json",
+        "tasks/train.jsonl"
+      ],
+      "held_out_from_compilation": [
+        "tasks/test.jsonl",
+        "tasks/base.jsonl"
+      ],
+      "policy_sections": 12,
+      "tools": 16,
+      "knowledge_documents": 0,
+      "reference_action_distribution": {
+        "calculate": 13,
+        "cancel_pending_order": 25,
+        "exchange_delivered_order_items": 35,
+        "find_user_id_by_email": 14,
+        "find_user_id_by_name_zip": 61,
+        "get_item_details": 3,
+        "get_order_details": 168,
+        "get_product_details": 54,
+        "get_user_details": 57,
+        "modify_pending_order_address": 24,
+        "modify_pending_order_items": 39,
+        "modify_pending_order_payment": 1,
+        "modify_user_address": 11,
+        "return_delivered_order_items": 41,
+        "transfer_to_human_agents": 4
+      },
+      "reward_basis_distribution": {
+        "DB": 114,
+        "NL_ASSERTION": 112
+      },
+      "task_source_sha256": "f44563d8f36362e2dc58282bb02cfb85010d22f27d9439808758d3e9b2bc16d2",
+      "warning": "Reference actions define a target state, not a unique required trajectory, unless ACTION is in reward_basis."
+    },
+    {
+      "benchmark": "tau3-bench",
+      "domain": "airline",
+      "task_counts": {
+        "train": 30,
+        "test": 20,
+        "base": 50
+      },
+      "primary_protocol": "test",
+      "compilation_sources": [
+        "documents/policy_sections.jsonl",
+        "documents/tool_catalog.json",
+        "tasks/train.jsonl"
+      ],
+      "held_out_from_compilation": [
+        "tasks/test.jsonl",
+        "tasks/base.jsonl"
+      ],
+      "policy_sections": 9,
+      "tools": 14,
+      "knowledge_documents": 0,
+      "reference_action_distribution": {
+        "book_reservation": 10,
+        "calculate": 1,
+        "cancel_reservation": 11,
+        "get_reservation_details": 57,
+        "get_user_details": 14,
+        "search_direct_flight": 20,
+        "transfer_to_human_agents": 1,
+        "update_reservation_baggages": 5,
+        "update_reservation_flights": 20,
+        "update_reservation_passengers": 3
+      },
+      "reward_basis_distribution": {
+        "COMMUNICATE": 50,
+        "DB": 50
+      },
+      "task_source_sha256": "34dfcf0622792d0d0fa32aa491d21582e1b5d3ec1948e7743bae881885f878ea",
+      "warning": "Reference actions define a target state, not a unique required trajectory, unless ACTION is in reward_basis."
+    },
+    {
+      "benchmark": "tau3-bench",
+      "domain": "telecom",
+      "task_counts": {
+        "small": 20,
+        "train": 74,
+        "test": 40,
+        "full": 2285,
+        "base": 114
+      },
+      "primary_protocol": "test",
+      "compilation_sources": [
+        "documents/policy_sections.jsonl",
+        "documents/tool_catalog.json",
+        "tasks/train.jsonl"
+      ],
+      "held_out_from_compilation": [
+        "tasks/test.jsonl",
+        "tasks/base.jsonl"
+      ],
+      "policy_sections": 51,
+      "tools": 43,
+      "knowledge_documents": 0,
+      "reference_action_distribution": {
+        "disconnect_vpn": 128,
+        "enable_roaming": 1120,
+        "grant_app_permission": 2048,
+        "make_payment": 8,
+        "reboot_device": 1040,
+        "refuel_data": 1120,
+        "reseat_sim_card": 1000,
+        "reset_apn_settings": 1032,
+        "resume_line": 8,
+        "send_payment_request": 8,
+        "set_network_mode_preference": 1152,
+        "toggle_airplane_mode": 1127,
+        "toggle_data": 1120,
+        "toggle_data_saver_mode": 128,
+        "toggle_roaming": 1120,
+        "toggle_wifi_calling": 1024,
+        "transfer_to_human_agents": 32
+      },
+      "reward_basis_distribution": {
+        "ACTION": 32,
+        "ENV_ASSERTION": 2285
+      },
+      "task_source_sha256": "20793073500dba5761f76d038dd32a343903985af442b3eae7eeb3a4e0d5d75d",
+      "warning": "Reference actions define a target state, not a unique required trajectory, unless ACTION is in reward_basis."
+    },
+    {
+      "benchmark": "tau3-bench",
+      "domain": "banking_knowledge",
+      "task_counts": {
+        "base": 97
+      },
+      "primary_protocol": "base",
+      "compilation_sources": [
+        "documents/policy_sections.jsonl",
+        "documents/tool_catalog.json",
+        "documents/knowledge_documents.jsonl"
+      ],
+      "held_out_from_compilation": [
+        "tasks/base.jsonl"
+      ],
+      "policy_sections": 2,
+      "tools": 21,
+      "knowledge_documents": 698,
+      "reference_action_distribution": {
+        "apply_for_credit_card": 19,
+        "call_discoverable_agent_tool": 456,
+        "call_discoverable_user_tool": 62,
+        "change_user_email": 1,
+        "get_credit_card_accounts_by_user": 3,
+        "get_referrals_by_user": 4,
+        "give_discoverable_user_tool": 21,
+        "log_verification": 81,
+        "request_human_agent_transfer": 13,
+        "submit_referral": 7,
+        "submit_transaction": 1,
+        "transfer_to_human_agents": 13,
+        "unlock_discoverable_agent_tool": 274
+      },
+      "reward_basis_distribution": {
+        "ACTION": 9,
+        "DB": 88
+      },
+      "task_source_sha256": "8a0111798693163b0a9cbef745ff0bf3c3f8fae14b597f4e12359ecde0ea57a9",
+      "warning": "Reference actions define a target state, not a unique required trajectory, unless ACTION is in reward_basis."
+    }
+  ]
+}

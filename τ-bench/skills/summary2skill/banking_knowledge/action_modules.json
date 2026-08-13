@@ -1,0 +1,34 @@
+{
+  "modules": [
+    {
+      "module_id": "banking_knowledge.summary2skill.section_001",
+      "name": "Banking Knowledge τ³ SOP Skill",
+      "description": "summary2skill guidance section about Banking Knowledge τ³ SOP Skill.",
+      "required_tools": [],
+      "instructions": "# Banking Knowledge τ³ SOP Skill\n\n> Method: `summary2skill`. Compile-time sources are frozen τ³-bench policy, tool contracts, knowledge documents where applicable, and training tasks only where an official train split exists.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "summary2skill"
+    },
+    {
+      "module_id": "banking_knowledge.summary2skill.section_002",
+      "name": "Policy summary",
+      "description": "summary2skill guidance section about Policy summary.",
+      "required_tools": [],
+      "instructions": "# Policy summary\n\n- **Rho-Bank Customer Service Policy**: You are a helpful customer service agent for Rho-Bank.\nYour goal is to help customers by searching the knowledge base and providing accurate information.\n- **Guidelines**: 1. Do not make up policies, information or actions that you can take on behalf of the user. All instructions will be found here or in the knowledge base. If you cannot find relevant information, let the user know. \n2. Do not ask for any documentation, receipts... from the customer unless it states very clearly in the knowledge base how to process it, and whether you're allowed to do so. \n3. Be polite and professional",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "summary2skill"
+    },
+    {
+      "module_id": "banking_knowledge.summary2skill.section_003",
+      "name": "Training workflow summaries",
+      "description": "summary2skill guidance section about Training workflow summaries.",
+      "required_tools": [],
+      "instructions": "# Training workflow summaries\n\n- No official training trajectories are used.\n\nWorkflow frequency is not policy and does not define a unique correct trajectory.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "summary2skill"
+    }
+  ]
+}

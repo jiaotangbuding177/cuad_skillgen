@@ -1,0 +1,624 @@
+{
+  "status": "pass",
+  "packages": [
+    {
+      "method": "no_skill",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 0,
+      "catalog_chars": 163,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "no_skill",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 0,
+      "catalog_chars": 163,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "no_skill",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 0,
+      "catalog_chars": 163,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "no_skill",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 0,
+      "catalog_chars": 163,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "raw_policy_rag",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 12,
+      "catalog_chars": 2141,
+      "source_atom_coverage": 0.2653846153846154,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "raw_policy_rag",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 9,
+      "catalog_chars": 1615,
+      "source_atom_coverage": 0.4009009009009009,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "raw_policy_rag",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 51,
+      "catalog_chars": 9597,
+      "source_atom_coverage": 0.5550755939524838,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "raw_policy_rag",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 2,
+      "catalog_chars": 539,
+      "source_atom_coverage": 0.1323529411764706,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "native_prompt_skill",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 14,
+      "catalog_chars": 2935,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "native_prompt_skill",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 10,
+      "catalog_chars": 2117,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "native_prompt_skill",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 50,
+      "catalog_chars": 11039,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "native_prompt_skill",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 4,
+      "catalog_chars": 1037,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "schema_prompt_skill",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 16,
+      "catalog_chars": 3319,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "schema_prompt_skill",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 12,
+      "catalog_chars": 2503,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "schema_prompt_skill",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 52,
+      "catalog_chars": 11425,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "schema_prompt_skill",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 6,
+      "catalog_chars": 1443,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "summary2skill",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 3,
+      "catalog_chars": 754,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "summary2skill",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 3,
+      "catalog_chars": 759,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "summary2skill",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 5,
+      "catalog_chars": 1185,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "summary2skill",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 3,
+      "catalog_chars": 809,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "document_tool_maker",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 16,
+      "catalog_chars": 4671,
+      "source_atom_coverage": 0.7346153846153847,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "document_tool_maker",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 14,
+      "catalog_chars": 4023,
+      "source_atom_coverage": 0.5990990990990991,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "document_tool_maker",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 43,
+      "catalog_chars": 11449,
+      "source_atom_coverage": 0.4449244060475162,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "document_tool_maker",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 21,
+      "catalog_chars": 6509,
+      "source_atom_coverage": 0.8676470588235294,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "evoskill_compiler",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 5,
+      "catalog_chars": 1186,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "evoskill_compiler",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 5,
+      "catalog_chars": 1193,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "evoskill_compiler",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 8,
+      "catalog_chars": 1835,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "evoskill_compiler",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 4,
+      "catalog_chars": 1021,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "graph_evoskill_compiler",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 15,
+      "catalog_chars": 3506,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": [
+        "knowledge_graph.json",
+        "pattern_cards.json"
+      ]
+    },
+    {
+      "method": "graph_evoskill_compiler",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 12,
+      "catalog_chars": 2799,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": [
+        "knowledge_graph.json",
+        "pattern_cards.json"
+      ]
+    },
+    {
+      "method": "graph_evoskill_compiler",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 54,
+      "catalog_chars": 7260,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": [
+        "knowledge_graph.json",
+        "pattern_cards.json"
+      ]
+    },
+    {
+      "method": "graph_evoskill_compiler",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 5,
+      "catalog_chars": 1339,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": [
+        "knowledge_graph.json",
+        "pattern_cards.json"
+      ]
+    },
+    {
+      "method": "tool_schema_compiler",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 16,
+      "catalog_chars": 4671,
+      "source_atom_coverage": 0.21153846153846154,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "tool_schema_compiler",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 14,
+      "catalog_chars": 4023,
+      "source_atom_coverage": 0.22522522522522523,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "tool_schema_compiler",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 43,
+      "catalog_chars": 11449,
+      "source_atom_coverage": 0.15766738660907129,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "tool_schema_compiler",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 21,
+      "catalog_chars": 6509,
+      "source_atom_coverage": 0.41911764705882354,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 16,
+      "catalog_chars": 5204,
+      "source_atom_coverage": 0.8076923076923077,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 14,
+      "catalog_chars": 4138,
+      "source_atom_coverage": 0.6756756756756757,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 43,
+      "catalog_chars": 11449,
+      "source_atom_coverage": 0.7235421166306696,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 21,
+      "catalog_chars": 6509,
+      "source_atom_coverage": 0.9191176470588235,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "g_a2sc",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 16,
+      "catalog_chars": 5204,
+      "source_atom_coverage": 0.8269230769230769,
+      "ignored_compile_time_files": [
+        "knowledge_graph.json"
+      ]
+    },
+    {
+      "method": "g_a2sc",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 14,
+      "catalog_chars": 4138,
+      "source_atom_coverage": 0.6891891891891891,
+      "ignored_compile_time_files": [
+        "knowledge_graph.json"
+      ]
+    },
+    {
+      "method": "g_a2sc",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 43,
+      "catalog_chars": 11449,
+      "source_atom_coverage": 0.7386609071274298,
+      "ignored_compile_time_files": [
+        "knowledge_graph.json"
+      ]
+    },
+    {
+      "method": "g_a2sc",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 21,
+      "catalog_chars": 6509,
+      "source_atom_coverage": 0.9191176470588235,
+      "ignored_compile_time_files": [
+        "knowledge_graph.json"
+      ]
+    },
+    {
+      "method": "a2sc_no_typed_atoms",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 12,
+      "catalog_chars": 2141,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_typed_atoms",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 9,
+      "catalog_chars": 1615,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_typed_atoms",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 51,
+      "catalog_chars": 9597,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_typed_atoms",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 2,
+      "catalog_chars": 539,
+      "source_atom_coverage": 0.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_tool_binding",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 12,
+      "catalog_chars": 2635,
+      "source_atom_coverage": 1.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_tool_binding",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 12,
+      "catalog_chars": 2647,
+      "source_atom_coverage": 1.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_tool_binding",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 14,
+      "catalog_chars": 3039,
+      "source_atom_coverage": 1.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_tool_binding",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 11,
+      "catalog_chars": 2573,
+      "source_atom_coverage": 1.0,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_local_motifs",
+      "domain": "retail",
+      "ok": true,
+      "errors": [],
+      "module_count": 16,
+      "catalog_chars": 4671,
+      "source_atom_coverage": 0.8076923076923077,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_local_motifs",
+      "domain": "airline",
+      "ok": true,
+      "errors": [],
+      "module_count": 14,
+      "catalog_chars": 4023,
+      "source_atom_coverage": 0.6756756756756757,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_local_motifs",
+      "domain": "telecom",
+      "ok": true,
+      "errors": [],
+      "module_count": 43,
+      "catalog_chars": 11449,
+      "source_atom_coverage": 0.7235421166306696,
+      "ignored_compile_time_files": []
+    },
+    {
+      "method": "a2sc_no_local_motifs",
+      "domain": "banking_knowledge",
+      "ok": true,
+      "errors": [],
+      "module_count": 21,
+      "catalog_chars": 6509,
+      "source_atom_coverage": 0.9191176470588235,
+      "ignored_compile_time_files": []
+    }
+  ],
+  "a2sc_graph_alignment": [
+    {
+      "domain": "retail",
+      "same_module_ids": true,
+      "same_primary_tools": true,
+      "same_required_tools": true,
+      "graph_has_compile_time_atom_expansion": true,
+      "runtime_instruction_diff_modules": 2,
+      "ok": true
+    },
+    {
+      "domain": "airline",
+      "same_module_ids": true,
+      "same_primary_tools": true,
+      "same_required_tools": true,
+      "graph_has_compile_time_atom_expansion": true,
+      "runtime_instruction_diff_modules": 2,
+      "ok": true
+    },
+    {
+      "domain": "telecom",
+      "same_module_ids": true,
+      "same_primary_tools": true,
+      "same_required_tools": true,
+      "graph_has_compile_time_atom_expansion": true,
+      "runtime_instruction_diff_modules": 23,
+      "ok": true
+    },
+    {
+      "domain": "banking_knowledge",
+      "same_module_ids": true,
+      "same_primary_tools": true,
+      "same_required_tools": true,
+      "graph_has_compile_time_atom_expansion": false,
+      "runtime_instruction_diff_modules": 0,
+      "ok": true
+    }
+  ],
+  "note": "Static compile/runtime-contract audit only; it is not an Agent benchmark result."
+}

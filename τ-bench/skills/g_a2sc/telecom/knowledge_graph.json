@@ -1,0 +1,4868 @@
+{
+  "nodes": [
+    {
+      "id": "ATOM-005c8bdf0f",
+      "type": "fact",
+      "label": "Without a correct MMSC URL, the user will not be able to send or receive MMS messages."
+    },
+    {
+      "id": "ATOM-00a7e81d24",
+      "type": "escalation",
+      "label": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions."
+    },
+    {
+      "id": "ATOM-014ca61d54",
+      "type": "precondition",
+      "label": "Checks if Wi-Fi Calling is enabled on your device."
+    },
+    {
+      "id": "ATOM-016f8dcac2",
+      "type": "actor_constraint",
+      "label": "The set_network_mode_preference tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-01d4f796e7",
+      "type": "fact",
+      "label": "**toggle_roaming** - Turns Data Roaming ON or OFF."
+    },
+    {
+      "id": "ATOM-02ba62d82a",
+      "type": "fact",
+      "label": "**reset_apn_settings** - Resets your APN settings to the default settings.."
+    },
+    {
+      "id": "ATOM-03244f19a0",
+      "type": "fact",
+      "label": "This will change the status of the bill to AWAITING PAYMENT.."
+    },
+    {
+      "id": "ATOM-033ddc9755",
+      "type": "precondition",
+      "label": "Shows if Wi-Fi is turned on, which network you're connected to (if any), and the signal strength."
+    },
+    {
+      "id": "ATOM-0368b897b9",
+      "type": "fact",
+      "label": "when traveling abroad)."
+    },
+    {
+      "id": "ATOM-037d1602d7",
+      "type": "precondition",
+      "label": "Always check that the bill status is updated to PAID before informing the user that the bill has been paid."
+    },
+    {
+      "id": "ATOM-03f8c8a235",
+      "type": "fact",
+      "label": "Network signal strength (\"📵 No Signal\", \"📶¹ Poor\", \"📶² Fair\", \"📶³ Good\", \"📶⁴ Excellent\")."
+    },
+    {
+      "id": "ATOM-0466f3e6c1",
+      "type": "actor_constraint",
+      "label": "The disable_roaming tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-05353a8533",
+      "type": "actor_constraint",
+      "label": "The check_wifi_calling_status tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-0636bd66db",
+      "type": "fact",
+      "label": "Shows its permissions and background data usage settings."
+    },
+    {
+      "id": "ATOM-064febdf4b",
+      "type": "precondition",
+      "label": "Raises: ValueError: If the customer is not found."
+    },
+    {
+      "id": "ATOM-068fd84271",
+      "type": "communication_requirement",
+      "label": "Inform the user that a payment request has been sent."
+    },
+    {
+      "id": "ATOM-0740aabb26",
+      "type": "precondition",
+      "label": "If it is enabled, it will prevent any cellular connection."
+    },
+    {
+      "id": "ATOM-07d5c49f6f",
+      "type": "confirmation",
+      "label": "Confirm the price."
+    },
+    {
+      "id": "ATOM-0834a4c735",
+      "type": "permission",
+      "label": "This feature allows you to make and receive calls over Wi-Fi instead of the cellular network, which can help in areas with weak cellular signal."
+    },
+    {
+      "id": "ATOM-0943907abb",
+      "type": "fact",
+      "label": "When mobile data is unavailable a speed test should return 'no connection'."
+    },
+    {
+      "id": "ATOM-0aa381d86a",
+      "type": "fact",
+      "label": "To do so you need to follow these steps."
+    },
+    {
+      "id": "ATOM-0acb1a568b",
+      "type": "precondition",
+      "label": "Raises: ValueError: If customer not found, bill not found, or if another bill is already awaiting payment."
+    },
+    {
+      "id": "ATOM-0ae65db436",
+      "type": "actor_constraint",
+      "label": "The disconnect_vpn tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-0afbffe039",
+      "type": "fact",
+      "label": "Data Roaming is turned OFF on the phone.."
+    },
+    {
+      "id": "ATOM-0ba5a9593a",
+      "type": "fact",
+      "label": "data limit (in GB)."
+    },
+    {
+      "id": "ATOM-0bd143b366",
+      "type": "precondition",
+      "label": "You must understand those well since as part of technical support you will have to help the customer perform series of actions"
+    },
+    {
+      "id": "ATOM-0cd7a7427b",
+      "type": "precondition",
+      "label": "Checks: Line status must be Active, Customer owns the line."
+    },
+    {
+      "id": "ATOM-0d4b3a8939",
+      "type": "permission",
+      "label": "Controls whether your phone can use cellular data for internet access when Wi-Fi is unavailable."
+    },
+    {
+      "id": "ATOM-0d66dc1d3e",
+      "type": "precondition",
+      "label": "Raises: ValueError: If customer or line not found."
+    },
+    {
+      "id": "ATOM-0dca85fae5",
+      "type": "fact",
+      "label": "Change to a plan with more data.."
+    },
+    {
+      "id": "ATOM-0df04798e1",
+      "type": "precondition",
+      "label": "MMS requires at least a 3G network connection; 2G networks are generally not suitable."
+    },
+    {
+      "id": "ATOM-0df966efdb",
+      "type": "required_input",
+      "label": "The get_customer_by_phone tool requires the phone_number argument."
+    },
+    {
+      "id": "ATOM-0ea7f73b8a",
+      "type": "fact",
+      "label": "Toggles Wi-Fi Calling ON or OFF."
+    },
+    {
+      "id": "ATOM-0f8ef0d549",
+      "type": "permission",
+      "label": "This feature allows you to make and receive calls over a Wi-Fi network instead of using the cellular network."
+    },
+    {
+      "id": "ATOM-0fa2a0515f",
+      "type": "fact",
+      "label": "Network mode preferences are the settings that determine the type of cellular network the phone will connect to."
+    },
+    {
+      "id": "ATOM-0fd3c09f48",
+      "type": "fact",
+      "label": "**check_network_status** - Checks your phone's connection status to cellular networks and Wi-Fi."
+    },
+    {
+      "id": "ATOM-10e2858a5e",
+      "type": "fact",
+      "label": "Use `check_sim_status()` to check the status of the SIM card."
+    },
+    {
+      "id": "ATOM-11b9116a3f",
+      "type": "precondition",
+      "label": "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously."
+    },
+    {
+      "id": "ATOM-11e8c5efe7",
+      "type": "fact",
+      "label": "Toggles your phone's mobile data connection ON or OFF."
+    },
+    {
+      "id": "ATOM-1280d8d1e0",
+      "type": "fact",
+      "label": "**Incorrect APN Settings**: Specifically, a missing or incorrect MMSC URL.."
+    },
+    {
+      "id": "ATOM-12de65d5c0",
+      "type": "escalation",
+      "label": "Returns: A message indicating the user has been transferred to a human agent."
+    },
+    {
+      "id": "ATOM-135f65099d",
+      "type": "fact",
+      "label": "Bill exists and belongs to the customer."
+    },
+    {
+      "id": "ATOM-139b587f86",
+      "type": "actor_constraint",
+      "label": "The resume_line tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-147edcdc6d",
+      "type": "fact",
+      "label": "Check the bill status to make sure it is overdue.."
+    },
+    {
+      "id": "ATOM-151e3d0885",
+      "type": "required_input",
+      "label": "The check_app_status tool requires the app_name argument."
+    },
+    {
+      "id": "ATOM-1536bdd625",
+      "type": "required_input",
+      "label": "The check_app_permissions tool requires the app_name argument."
+    },
+    {
+      "id": "ATOM-15469c148a",
+      "type": "fact",
+      "label": "Shows current APN name and MMSC URL for picture messaging."
+    },
+    {
+      "id": "ATOM-1566524de5",
+      "type": "fact",
+      "label": "Returns: List of matching Customer objects."
+    },
+    {
+      "id": "ATOM-16af24433c",
+      "type": "actor_constraint",
+      "label": "The get_bills_for_customer tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-1703c850c9",
+      "type": "postcondition",
+      "label": "After you resume the line, the user will have to reboot their device to get service."
+    },
+    {
+      "id": "ATOM-178b7fdd94",
+      "type": "postcondition",
+      "label": "After the payment is made, the bill status will be updated to PAID.."
+    },
+    {
+      "id": "ATOM-18ae09d5af",
+      "type": "fact",
+      "label": "Enables international roaming on a line."
+    },
+    {
+      "id": "ATOM-197af07d2d",
+      "type": "precondition",
+      "label": "Required for some app functions to work properly.."
+    },
+    {
+      "id": "ATOM-19b3cc3611",
+      "type": "precondition",
+      "label": "Checks if your phone has any data-limiting features active."
+    },
+    {
+      "id": "ATOM-19da36176c",
+      "type": "required_input",
+      "label": "The suspend_line tool requires the reason argument."
+    },
+    {
+      "id": "ATOM-1a5073cf7b",
+      "type": "permission",
+      "label": "This feature allows you to make and receive calls over Wi-Fi instead of the cellular network, which can help in areas with weak cellular signal.."
+    },
+    {
+      "id": "ATOM-1ab88876f1",
+      "type": "fact",
+      "label": "Wi-Fi status (\"📡 Connected to [SSID]\" or \"📡 Enabled\")."
+    },
+    {
+      "id": "ATOM-1b8d83f2a1",
+      "type": "actor_constraint",
+      "label": "The check_payment_request tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-1bfd5e7c98",
+      "type": "required_input",
+      "label": "Provides information about connection quality and what activities it can support."
+    },
+    {
+      "id": "ATOM-1c030d02b6",
+      "type": "fact",
+      "label": "MMSC is the Multimedia Messaging Service Center."
+    },
+    {
+      "id": "ATOM-1c4a02f48b",
+      "type": "fact",
+      "label": "Calculate the price of the new plan.."
+    },
+    {
+      "id": "ATOM-1e034c5e4c",
+      "type": "fact",
+      "label": "gb_amount: Amount of data to add in gigabytes."
+    },
+    {
+      "id": "ATOM-1e1ff7eb94",
+      "type": "precondition",
+      "label": "**check_wifi_calling_status** - Checks if Wi-Fi Calling is enabled on your device."
+    },
+    {
+      "id": "ATOM-1e355ace75",
+      "type": "fact",
+      "label": "line_id: ID of the line to enable roaming for."
+    },
+    {
+      "id": "ATOM-1e3d0db53a",
+      "type": "fact",
+      "label": "Returns: The object corresponding to the ID."
+    },
+    {
+      "id": "ATOM-1f19dfeb9d",
+      "type": "precondition",
+      "label": "If `check_app_permissions(app_name=\"messaging\")` shows \"storage\" and \"sms\" permissions are not listed as granted, guide the user to use `grant_app_permission(ap"
+    },
+    {
+      "id": "ATOM-2017d4f5b2",
+      "type": "precondition",
+      "label": "Raises: ValueError: If customer or line not found, or if line is not active."
+    },
+    {
+      "id": "ATOM-205720d885",
+      "type": "precondition",
+      "label": "device ID (if applicable)."
+    },
+    {
+      "id": "ATOM-205bbb0764",
+      "type": "precondition",
+      "label": "**check_data_restriction_status** - Checks if your phone has any data-limiting features active."
+    },
+    {
+      "id": "ATOM-20bab3cb44",
+      "type": "precondition",
+      "label": "Shows if Wi-Fi is turned on, which network you're connected to (if any), and the signal strength.."
+    },
+    {
+      "id": "ATOM-2147e72f4e",
+      "type": "fact",
+      "label": "contract end date."
+    },
+    {
+      "id": "ATOM-21a59cf1fc",
+      "type": "required_input",
+      "label": "It provides detailed procedures and troubleshooting steps to assist users experiencing common issues with their phone's cellular service, mobile data connectivi"
+    },
+    {
+      "id": "ATOM-21f80b2d04",
+      "type": "fact",
+      "label": "Toggles Airplane Mode ON or OFF."
+    },
+    {
+      "id": "ATOM-228a05f62a",
+      "type": "communication_requirement",
+      "label": "Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" and \"Understanding and Troubleshooting Your Phone's Mobile Data\" sections for mor"
+    },
+    {
+      "id": "ATOM-253cc7bf21",
+      "type": "permission",
+      "label": "However in some cases, a VPN can cause speed to drop significantly."
+    },
+    {
+      "id": "ATOM-2562908982",
+      "type": "fact",
+      "label": "Shows airplane mode status, signal strength, network type, whether mobile data is enabled, and whether data roaming is enabled."
+    },
+    {
+      "id": "ATOM-26449fecdb",
+      "type": "actor_constraint",
+      "label": "The refuel_data tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-275b2f3b5c",
+      "type": "precondition",
+      "label": "You are not allowed to lift the suspension if the line's contract end date is in the past, even if the user has paid all their overdue bills."
+    },
+    {
+      "id": "ATOM-27cde4e806",
+      "type": "precondition",
+      "label": "Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" guide if the user does not have service."
+    },
+    {
+      "id": "ATOM-2843488177",
+      "type": "precondition",
+      "label": "If it is not, you should enable it at no cost for the user."
+    },
+    {
+      "id": "ATOM-2a0e46745a",
+      "type": "precondition",
+      "label": "Shows if Data Saver mode is on."
+    },
+    {
+      "id": "ATOM-2a4ed0e713",
+      "type": "fact",
+      "label": "Checks the technical APN settings your phone uses to connect to your carrier's mobile data network."
+    },
+    {
+      "id": "ATOM-2a5dfcf642",
+      "type": "permission",
+      "label": "When ON, your phone can use data networks in areas outside your carrier's coverage."
+    },
+    {
+      "id": "ATOM-2a71a49e2b",
+      "type": "fact",
+      "label": "Retrieves a list of the customer's bills, most recent first."
+    },
+    {
+      "id": "ATOM-2a8fee0695",
+      "type": "required_input",
+      "label": "The refuel_data tool requires the line_id argument."
+    },
+    {
+      "id": "ATOM-2aab1b8ff0",
+      "type": "fact",
+      "label": "**Understanding and Troubleshooting Your Phone's Cellular Service**: Addresses issues related to network connection, signal strength, and SIM card problems.."
+    },
+    {
+      "id": "ATOM-2ab83f556b",
+      "type": "required_input",
+      "label": "The resume_line tool requires the line_id argument."
+    },
+    {
+      "id": "ATOM-2aec9610e8",
+      "type": "escalation",
+      "label": "last eSIM transfer date"
+    },
+    {
+      "id": "ATOM-2b1e8cc071",
+      "type": "required_input",
+      "label": "The get_data_usage tool requires the line_id argument."
+    },
+    {
+      "id": "ATOM-2b576a85bd",
+      "type": "fact",
+      "label": "data usage (in GB)."
+    },
+    {
+      "id": "ATOM-2bd119b2f7",
+      "type": "precondition",
+      "label": "Checks if the agent has sent you a payment request."
+    },
+    {
+      "id": "ATOM-2c930ce389",
+      "type": "actor_constraint",
+      "label": "The run_speed_test tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-2cdcc7220e",
+      "type": "precondition",
+      "label": "If the user is outside their carrier's primary coverage area (roaming) and mobile data isn't working, guide them to use `toggle_roaming()` to ensure Data Roamin"
+    },
+    {
+      "id": "ATOM-2ced10c6fc",
+      "type": "fact",
+      "label": "**Connected to 2G Network**: 2G networks are generally not suitable for MMS.."
+    },
+    {
+      "id": "ATOM-2cfe84ccfc",
+      "type": "fact",
+      "label": "Checks your phone's connection status to cellular networks and Wi-Fi."
+    },
+    {
+      "id": "ATOM-2e5305b9a8",
+      "type": "precondition",
+      "label": "suspension start date (if applicable) There are four line status types: **Active**, **Suspended**, **Pending Activation**, and **Closed**."
+    },
+    {
+      "id": "ATOM-2e8b4824cb",
+      "type": "fact",
+      "label": "Successful MMS messaging relies on fundamental service and data connectivity."
+    },
+    {
+      "id": "ATOM-2ee2eb0ad6",
+      "type": "communication_requirement",
+      "label": "When ON, it disconnects all wireless communications including cellular, Wi-Fi, and Bluetooth."
+    },
+    {
+      "id": "ATOM-2ee99a1b85",
+      "type": "required_input",
+      "label": "The set_apn_settings tool requires the apn_settings argument."
+    },
+    {
+      "id": "ATOM-2ef766a822",
+      "type": "fact",
+      "label": "Args: customer_id: ID of the customer who owns the line."
+    },
+    {
+      "id": "ATOM-2f150c2273",
+      "type": "fact",
+      "label": "**reboot_device** - Restarts your phone completely."
+    },
+    {
+      "id": "ATOM-2fa7ef3cc6",
+      "type": "fact",
+      "label": "The line is not roaming enabled.."
+    },
+    {
+      "id": "ATOM-3105758d71",
+      "type": "fact",
+      "label": "Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" section for instructions on how to check and turn off Airplane Mode."
+    },
+    {
+      "id": "ATOM-31083e0e9c",
+      "type": "fact",
+      "label": "Check the bill amount due."
+    },
+    {
+      "id": "ATOM-3195b943e6",
+      "type": "fact",
+      "label": "**toggle_airplane_mode** - Turns Airplane Mode ON or OFF."
+    },
+    {
+      "id": "ATOM-326e7641b4",
+      "type": "fact",
+      "label": "* **No Cellular Service or Mobile Data Off/Not Working**: The most common reasons."
+    },
+    {
+      "id": "ATOM-32ede81b19",
+      "type": "postcondition",
+      "label": "If the line is suspended and the agent can lift the suspension (per general policy), verify if service is restored.."
+    },
+    {
+      "id": "ATOM-3438a07278",
+      "type": "actor_constraint",
+      "label": "The get_details_by_id tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-352271b71f",
+      "type": "fact",
+      "label": "Access Point Name (APN) settings are crucial for network connectivity."
+    },
+    {
+      "id": "ATOM-35366abec7",
+      "type": "permission",
+      "label": "Controls whether your phone can discover and connect to wireless networks for internet access.."
+    },
+    {
+      "id": "ATOM-355ae9f439",
+      "type": "required_input",
+      "label": "Higher-speed networks (5G, 4G) provide faster data but may use more battery.."
+    },
+    {
+      "id": "ATOM-358e65b33c",
+      "type": "precondition",
+      "label": "If `check_network_mode_preference()` shows \"2G\" or \"3G\", guide the user to use `set_network_mode_preference(mode: str)` with the mode `\"4g_5g_preferred\"` to all"
+    },
+    {
+      "id": "ATOM-35e1975836",
+      "type": "permission",
+      "label": "As a telecom agent, you can help users with **technical support**, **overdue bill payment**, **line suspension**, and **plan options**."
+    },
+    {
+      "id": "ATOM-364bcf4373",
+      "type": "fact",
+      "label": "Returns the new Wi-Fi Calling status."
+    },
+    {
+      "id": "ATOM-36bffca323",
+      "type": "required_input",
+      "label": "The enable_roaming tool requires the line_id argument."
+    },
+    {
+      "id": "ATOM-3702da140b",
+      "type": "fact",
+      "label": "The messaging app needs specific permissions to handle media and send messages."
+    },
+    {
+      "id": "ATOM-3870613f44",
+      "type": "precondition",
+      "label": "Checks if the default messaging app can send MMS messages."
+    },
+    {
+      "id": "ATOM-39970bd67d",
+      "type": "permission",
+      "label": "Wi-Fi Calling settings can sometimes conflict with MMS functionality."
+    },
+    {
+      "id": "ATOM-39fd5ba171",
+      "type": "fact",
+      "label": "bill_id: ID of the bill to send payment request for."
+    },
+    {
+      "id": "ATOM-3a2a184d8f",
+      "type": "actor_constraint",
+      "label": "For MMS to work, the user must have cellular service and mobile data (any speed)."
+    },
+    {
+      "id": "ATOM-3a8754e2db",
+      "type": "actor_constraint",
+      "label": "The get_customer_by_id tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-3b3c2b6e06",
+      "type": "permission",
+      "label": "First, ensure the user can make calls and that their mobile data is working for other apps (e.g., browsing the web)."
+    },
+    {
+      "id": "ATOM-3b4abd7acb",
+      "type": "fact",
+      "label": "Make sure you know what line the user wants to change the plan for.."
+    },
+    {
+      "id": "ATOM-3b5352279d",
+      "type": "fact",
+      "label": "Checks your Wi-Fi connection status."
+    },
+    {
+      "id": "ATOM-3cd213894a",
+      "type": "fact",
+      "label": "Those are specified as part of the APN settings."
+    },
+    {
+      "id": "ATOM-3ce5c91244",
+      "type": "required_input",
+      "label": "The set_network_mode_preference tool requires the mode argument."
+    },
+    {
+      "id": "ATOM-3cef449e5e",
+      "type": "fact",
+      "label": "method type (Credit Card, Debit Card, PayPal)."
+    },
+    {
+      "id": "ATOM-3d1281ccc2",
+      "type": "actor_constraint",
+      "label": "The toggle_wifi_calling tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-3d1f0da1e6",
+      "type": "fact",
+      "label": "last SIM replacement date."
+    },
+    {
+      "id": "ATOM-3d58f907cb",
+      "type": "fact",
+      "label": "Common reasons include:."
+    },
+    {
+      "id": "ATOM-3e063d0483",
+      "type": "postcondition",
+      "label": "You are allowed to lift the suspension after the user has paid all their overdue bills."
+    },
+    {
+      "id": "ATOM-3e444fd226",
+      "type": "actor_constraint",
+      "label": "The connect_vpn tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-3ed9731b84",
+      "type": "fact",
+      "label": "**check_apn_settings** - Checks the technical APN settings your phone uses to connect to your carrier's mobile data network."
+    },
+    {
+      "id": "ATOM-3f2611806c",
+      "type": "precondition",
+      "label": "If there is cellular service, the status bar will return a signal strength indicator."
+    },
+    {
+      "id": "ATOM-3f37e25bec",
+      "type": "fact",
+      "label": "permission: The permission to grant, should be lowercase."
+    },
+    {
+      "id": "ATOM-3ffa262266",
+      "type": "fact",
+      "label": "**run_speed_test** - Measures your current internet connection speed (download speed)."
+    },
+    {
+      "id": "ATOM-4017a0008e",
+      "type": "fact",
+      "label": "Logic: Sets line status to Active, clears suspension_start_date."
+    },
+    {
+      "id": "ATOM-40df000672",
+      "type": "fact",
+      "label": "**Airplane Mode is ON**: This disables all wireless radios, including cellular.."
+    },
+    {
+      "id": "ATOM-40f043dac6",
+      "type": "actor_constraint",
+      "label": "The make_payment tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-425ef6f13c",
+      "type": "permission",
+      "label": "Mobile data switch allows the phone to connect to the internet using the carrier's cellular network."
+    },
+    {
+      "id": "ATOM-42eae58ddf",
+      "type": "permission",
+      "label": "You can help the user make a payment for an overdue bill."
+    },
+    {
+      "id": "ATOM-4373b4f5bf",
+      "type": "fact",
+      "label": "Each plan specify the maxium data usage per month."
+    },
+    {
+      "id": "ATOM-444c6f2c7d",
+      "type": "fact",
+      "label": "Refuels data for a specific line, adding to the customer's bill."
+    },
+    {
+      "id": "ATOM-44c0327391",
+      "type": "precondition",
+      "label": "If `check_data_restriction_status()` shows \"Data Saver mode is ON\", guide the user to use `toggle_data_saver_mode()` to turn it OFF."
+    },
+    {
+      "id": "ATOM-44eacdd0ed",
+      "type": "fact",
+      "label": "**SIM Card Problems**:."
+    },
+    {
+      "id": "ATOM-45659acefd",
+      "type": "precondition",
+      "label": "If `check_network_status()` shows mobile data is disabled, guide the user to use `toggle_data()` to turn mobile data ON."
+    },
+    {
+      "id": "ATOM-45fa63f179",
+      "type": "fact",
+      "label": "Resets your APN settings to the default settings."
+    },
+    {
+      "id": "ATOM-4645aa53fa",
+      "type": "fact",
+      "label": "This document serves as a comprehensive guide for technical support agents."
+    },
+    {
+      "id": "ATOM-46bcaa9c39",
+      "type": "required_input",
+      "label": "The disable_roaming tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-46c264862e",
+      "type": "fact",
+      "label": "Measures your current internet connection speed (download speed)."
+    },
+    {
+      "id": "ATOM-46c9dbd14a",
+      "type": "fact",
+      "label": "Suspends a specific line (max 6 months)."
+    },
+    {
+      "id": "ATOM-46e3a2e7b7",
+      "type": "fact",
+      "label": "No other bills are already awaiting payment for this customer Logic: Sets bill status to AWAITING_PAYMENT and notifies customer."
+    },
+    {
+      "id": "ATOM-47dcc1e4c3",
+      "type": "actor_constraint",
+      "label": "The check_app_status tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-49069fc946",
+      "type": "precondition",
+      "label": "The ID must be a valid ID for a Customer, Line, Device, Bill, or Plan."
+    },
+    {
+      "id": "ATOM-49767fc83f",
+      "type": "fact",
+      "label": "The current time is 2025-02-25 12:08:00 EST."
+    },
+    {
+      "id": "ATOM-49d092cbe6",
+      "type": "communication_requirement",
+      "label": "You can look up customer information using:."
+    },
+    {
+      "id": "ATOM-4a17843804",
+      "type": "actor_constraint",
+      "label": "After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply."
+    },
+    {
+      "id": "ATOM-4a35339427",
+      "type": "fact",
+      "label": "line_id: ID of the line to refuel data for."
+    },
+    {
+      "id": "ATOM-4c958c91c4",
+      "type": "actor_constraint",
+      "label": "The check_installed_apps tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-4e88960ed4",
+      "type": "fact",
+      "label": "Logic: Sets line status to Suspended, records suspension_start_date."
+    },
+    {
+      "id": "ATOM-4f43786dc0",
+      "type": "fact",
+      "label": "line_id: ID of the line to disable roaming for."
+    },
+    {
+      "id": "ATOM-50b9309668",
+      "type": "fact",
+      "label": "Returns: List of Bill objects, ordered by issue date (newest first)."
+    },
+    {
+      "id": "ATOM-5147f242cc",
+      "type": "required_input",
+      "label": "The get_bills_for_customer tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-514b8ecf9b",
+      "type": "fact",
+      "label": "Add more data to the line by \"refueling\" data at a price per GB specified by the plan."
+    },
+    {
+      "id": "ATOM-524a5f1311",
+      "type": "permission",
+      "label": "When ON, it reduces data usage, which may affect data speed."
+    },
+    {
+      "id": "ATOM-52d5a17097",
+      "type": "fact",
+      "label": "Toggles your phone's Wi-Fi radio ON or OFF."
+    },
+    {
+      "id": "ATOM-5379c852f8",
+      "type": "exception",
+      "label": "Returns: Customer object if found, None otherwise."
+    },
+    {
+      "id": "ATOM-53851725a1",
+      "type": "fact",
+      "label": "To refuel data you should:."
+    },
+    {
+      "id": "ATOM-5403b1df7a",
+      "type": "fact",
+      "label": "Each plan specifies:."
+    },
+    {
+      "id": "ATOM-5492c8be75",
+      "type": "permission",
+      "label": "**Data Plan Limits Reached**: The user may have used up their monthly data allowance, and the carrier has slowed down or cut off data.."
+    },
+    {
+      "id": "ATOM-5506ca847f",
+      "type": "fact",
+      "label": "The status bar usually shows icons like \"5G\", \"LTE\", \"4G\", \"3G\", \"H+\", or \"E\" to indicate an active mobile data connection and its type."
+    },
+    {
+      "id": "ATOM-556bff3fbc",
+      "type": "fact",
+      "label": "last plan change date."
+    },
+    {
+      "id": "ATOM-56804160bc",
+      "type": "permission",
+      "label": "A user can only have one bill in the AWAITING PAYMENT status at a time.."
+    },
+    {
+      "id": "ATOM-569ee865eb",
+      "type": "precondition",
+      "label": "If a line is roaming enabled, the user can use their phone's data connection in areas outside their home network."
+    },
+    {
+      "id": "ATOM-56dd53d3be",
+      "type": "permission",
+      "label": "Data roaming allows the user to use their phone's data connection in areas outside their home network (e.g."
+    },
+    {
+      "id": "ATOM-57050dc4ee",
+      "type": "fact",
+      "label": "Connects to your VPN (Virtual Private Network)."
+    },
+    {
+      "id": "ATOM-5a3e4527ea",
+      "type": "fact",
+      "label": "Retrieves a customer directly by their unique ID."
+    },
+    {
+      "id": "ATOM-5a539069b5",
+      "type": "fact",
+      "label": "Sends a payment request to the customer for a specific bill."
+    },
+    {
+      "id": "ATOM-5a6ee39618",
+      "type": "permission",
+      "label": "Mobile data allows the phone to connect to the internet using the carrier's cellular network."
+    },
+    {
+      "id": "ATOM-5af3363f00",
+      "type": "fact",
+      "label": "**connect_vpn** - Connects to your VPN (Virtual Private Network).."
+    },
+    {
+      "id": "ATOM-5bafe658c5",
+      "type": "actor_constraint",
+      "label": "The reset_apn_settings tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-5d9bcc1f6f",
+      "type": "fact",
+      "label": "Args: customer_id: ID of the customer."
+    },
+    {
+      "id": "ATOM-608bbe92c5",
+      "type": "permission",
+      "label": "Signal strength can be \"none\", \"poor\" (1bar), \"fair\" (2 bars), \"good\" (3 bars), \"excellent\" (4+ bars).."
+    },
+    {
+      "id": "ATOM-613cd5c659",
+      "type": "fact",
+      "label": "Each bill contains:."
+    },
+    {
+      "id": "ATOM-6148928af5",
+      "type": "fact",
+      "label": "Displays network signal strength, mobile data status (enabled, disabled, data saver), Wi-Fi status, and battery level."
+    },
+    {
+      "id": "ATOM-61a1fc6364",
+      "type": "precondition",
+      "label": "If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted."
+    },
+    {
+      "id": "ATOM-629284ddc2",
+      "type": "fact",
+      "label": "Shows airplane mode status, signal strength, network type, whether mobile data is enabled, and whether data roaming is enabled."
+    },
+    {
+      "id": "ATOM-62e6ea1fa1",
+      "type": "fact",
+      "label": "line_id: ID of the line to check usage for."
+    },
+    {
+      "id": "ATOM-6365f1046e",
+      "type": "fact",
+      "label": "Incorrect MMSC URL, are a very common cause of MMS issues."
+    },
+    {
+      "id": "ATOM-6390191c26",
+      "type": "precondition",
+      "label": "If it is ON, guide the user to use `toggle_airplane_mode()` to turn it OFF."
+    },
+    {
+      "id": "ATOM-647a901d81",
+      "type": "permission",
+      "label": "This can help resolve recognition issues.."
+    },
+    {
+      "id": "ATOM-65aa5ab680",
+      "type": "fact",
+      "label": "expiration date (MM/YYYY format)"
+    },
+    {
+      "id": "ATOM-66891ef2bb",
+      "type": "fact",
+      "label": "Args: summary: A summary of the user's issue."
+    },
+    {
+      "id": "ATOM-67074befea",
+      "type": "fact",
+      "label": "Args: customer_id: ID of the customer who owns the line."
+    },
+    {
+      "id": "ATOM-6777bb26f7",
+      "type": "fact",
+      "label": "Disables international roaming on a line."
+    },
+    {
+      "id": "ATOM-697215568e",
+      "type": "fact",
+      "label": "Returns the new Wi-Fi status."
+    },
+    {
+      "id": "ATOM-6a5a17b939",
+      "type": "communication_requirement",
+      "label": "This section explains for agents how a user's phone uses mobile data for internet access when Wi-Fi is unavailable, and details troubleshooting for common conne"
+    },
+    {
+      "id": "ATOM-6a667bfca1",
+      "type": "permission",
+      "label": "This can help resolve recognition issues."
+    },
+    {
+      "id": "ATOM-6b950f3b94",
+      "type": "permission",
+      "label": "This can help resolve many temporary software glitches by refreshing all running services and connections."
+    },
+    {
+      "id": "ATOM-6c1d5dc0ac",
+      "type": "permission",
+      "label": "Using older modes like 2G/3G can significantly limit speed."
+    },
+    {
+      "id": "ATOM-6c29508c98",
+      "type": "fact",
+      "label": "**disconnect_vpn** - Disconnects any active VPN (Virtual Private Network) connection."
+    },
+    {
+      "id": "ATOM-6c4298554e",
+      "type": "required_input",
+      "label": "Apply the refueled data to the line associated with the phone number the user provided."
+    },
+    {
+      "id": "ATOM-6c52288479",
+      "type": "fact",
+      "label": "Logic: Adds data to the line and charges customer based on the plan's refueling rate."
+    },
+    {
+      "id": "ATOM-6c9070a435",
+      "type": "actor_constraint",
+      "label": "The check_data_restriction_status tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-6d456324fc",
+      "type": "fact",
+      "label": "Simulates removing and reinserting your SIM card."
+    },
+    {
+      "id": "ATOM-6db8aa2bc2",
+      "type": "precondition",
+      "label": "You can check if Airplane Mode is ON by using `check_status_bar()` or `check_network_status()`."
+    },
+    {
+      "id": "ATOM-6dcba64aa8",
+      "type": "required_input",
+      "label": "The grant_app_permission tool requires the permission argument."
+    },
+    {
+      "id": "ATOM-6decceba79",
+      "type": "fact",
+      "label": "**grant_app_permission** - Gives a specific permission to an app (like access to storage, camera, or location)."
+    },
+    {
+      "id": "ATOM-6e4b363cf7",
+      "type": "precondition",
+      "label": "Investigate if the line is suspended."
+    },
+    {
+      "id": "ATOM-6f29767d2e",
+      "type": "fact",
+      "label": "Battery level (\"🔋 [percentage]%\")."
+    },
+    {
+      "id": "ATOM-6fda08e7fb",
+      "type": "fact",
+      "label": "Here are the actions a user is able to take on their device."
+    },
+    {
+      "id": "ATOM-705284080a",
+      "type": "fact",
+      "label": "**Roaming Issues (When User is Abroad)**:."
+    },
+    {
+      "id": "ATOM-722221a0b5",
+      "type": "actor_constraint",
+      "label": "The toggle_airplane_mode tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-72850c8fd1",
+      "type": "precondition",
+      "label": "If a user is traveling outside their home network, you should check if the line is roaming enabled."
+    },
+    {
+      "id": "ATOM-72e42221cd",
+      "type": "fact",
+      "label": "Check their payment requests using the check_payment_request tool.."
+    },
+    {
+      "id": "ATOM-73438e99ab",
+      "type": "precondition",
+      "label": "Shows if the SIM is active, missing, or locked with a PIN or PUK code."
+    },
+    {
+      "id": "ATOM-7387ffc2f1",
+      "type": "fact",
+      "label": "Args: customer_id: ID of the customer who owns the line."
+    },
+    {
+      "id": "ATOM-73ad32de3f",
+      "type": "precondition",
+      "label": "Good cellular service is required for calls, texts, and mobile data."
+    },
+    {
+      "id": "ATOM-740e725422",
+      "type": "permission",
+      "label": "A line can be suspended for the following reasons:."
+    },
+    {
+      "id": "ATOM-7424f59b8e",
+      "type": "precondition",
+      "label": "**Wi-Fi Calling Configuration**: In some cases, how Wi-Fi Calling is configured can affect MMS, especially if your carrier doesn't support MMS over Wi-Fi.."
+    },
+    {
+      "id": "ATOM-749104f227",
+      "type": "precondition",
+      "label": "Raises: ValueError: If customer, line, or plan not found."
+    },
+    {
+      "id": "ATOM-74bc483010",
+      "type": "communication_requirement",
+      "label": "The SIM card is the physical card that contains the user's information and allows the phone to connect to the cellular network."
+    },
+    {
+      "id": "ATOM-76770a9883",
+      "type": "permission",
+      "label": "You can add more data to the line by \"refueling\" data at a price per GB specified by the plan."
+    },
+    {
+      "id": "ATOM-76c32fd6fa",
+      "type": "actor_constraint",
+      "label": "The check_network_mode_preference tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-76e1ab1f58",
+      "type": "precondition",
+      "label": "If data is available, a speed test will also return the data speed."
+    },
+    {
+      "id": "ATOM-772a69ca2f",
+      "type": "fact",
+      "label": "line_id: ID of the line to resume."
+    },
+    {
+      "id": "ATOM-7835ad50ba",
+      "type": "fact",
+      "label": "**toggle_data_saver_mode** - Turns Data Saver mode ON or OFF."
+    },
+    {
+      "id": "ATOM-786469ef40",
+      "type": "precondition",
+      "label": "Returns: Dictionary with success status, message, and updated line if applicable."
+    },
+    {
+      "id": "ATOM-787b185219",
+      "type": "fact",
+      "label": "This enables browsing websites, using apps, streaming video, and sending/receiving emails when not connected to Wi-Fi."
+    },
+    {
+      "id": "ATOM-787e6eb61a",
+      "type": "fact",
+      "label": "Refer to the general policy for guidelines on those options."
+    },
+    {
+      "id": "ATOM-79057b82f5",
+      "type": "precondition",
+      "label": "Shows if the app has access to features like storage, camera, location, etc.."
+    },
+    {
+      "id": "ATOM-7961056a59",
+      "type": "fact",
+      "label": "Shows what icons are currently visible in your phone's status bar (the area at the top of the screen)."
+    },
+    {
+      "id": "ATOM-7978562352",
+      "type": "required_input",
+      "label": "You should check that the line associated with the phone number the user provided is roaming enabled."
+    },
+    {
+      "id": "ATOM-79d822cfab",
+      "type": "precondition",
+      "label": "Raises: ValueError: If the ID is not found or if the ID format is invalid."
+    },
+    {
+      "id": "ATOM-7a00c11cfe",
+      "type": "fact",
+      "label": "Searches for customers by name and DOB."
+    },
+    {
+      "id": "ATOM-7a38240422",
+      "type": "actor_constraint",
+      "label": "After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply."
+    },
+    {
+      "id": "ATOM-7a736f79a2",
+      "type": "precondition",
+      "label": "You must first identify the customer."
+    },
+    {
+      "id": "ATOM-7bc56d5db0",
+      "type": "fact",
+      "label": "Refer to the general policy for guidelines on enabling roaming."
+    },
+    {
+      "id": "ATOM-7cbd4b4188",
+      "type": "fact",
+      "label": "Args: app_name: The name of the app to grant the permission to."
+    },
+    {
+      "id": "ATOM-7d248f1051",
+      "type": "fact",
+      "label": "**check_network_mode_preference** - Checks your phone's network mode preference."
+    },
+    {
+      "id": "ATOM-7d3510c468",
+      "type": "fact",
+      "label": "Disconnects any active VPN (Virtual Private Network) connection."
+    },
+    {
+      "id": "ATOM-7dbc0fb186",
+      "type": "actor_constraint",
+      "label": "The get_customer_by_name tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-804753dc3b",
+      "type": "fact",
+      "label": "Returns the new data saver mode status."
+    },
+    {
+      "id": "ATOM-816ae647b9",
+      "type": "precondition",
+      "label": "Warning: This method does not check if the bill is already PAID."
+    },
+    {
+      "id": "ATOM-81b53162b4",
+      "type": "fact",
+      "label": "The user has an overdue bill.."
+    },
+    {
+      "id": "ATOM-843b13d560",
+      "type": "fact",
+      "label": "**Bad Network Preferences**: The phone is set to an older network technology like 2G/3G."
+    },
+    {
+      "id": "ATOM-850267c75d",
+      "type": "fact",
+      "label": "device type (phone, tablet, router, watch, other)."
+    },
+    {
+      "id": "ATOM-85bfc4778e",
+      "type": "actor_constraint",
+      "label": "The can_send_mms tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-8727d80fdb",
+      "type": "fact",
+      "label": "VPN status (\"🔒 VPN Connected\" when connected)."
+    },
+    {
+      "id": "ATOM-87542a2c06",
+      "type": "actor_constraint",
+      "label": "The toggle_data_saver_mode tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-87d42c55cf",
+      "type": "actor_constraint",
+      "label": "The check_sim_status tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-87de59878f",
+      "type": "precondition",
+      "label": "If `check_wifi_calling_status()` shows \"Wi-Fi Calling is ON\", guide the user to use `toggle_wifi_calling()` to turn it OFF."
+    },
+    {
+      "id": "ATOM-8802725414",
+      "type": "required_input",
+      "label": "Provides information about connection quality and what activities it can support."
+    },
+    {
+      "id": "ATOM-88833846c3",
+      "type": "precondition",
+      "label": "If the user is experiencing service problems, here are some common causes:."
+    },
+    {
+      "id": "ATOM-8899de6386",
+      "type": "fact",
+      "label": "line IDs associated with their account."
+    },
+    {
+      "id": "ATOM-8936a234b8",
+      "type": "precondition",
+      "label": "`can_send_mms()` tool on the user's phone can be used to check if the user is facing an MMS issue."
+    },
+    {
+      "id": "ATOM-89823da871",
+      "type": "required_input",
+      "label": "The grant_app_permission tool requires the app_name argument."
+    },
+    {
+      "id": "ATOM-89cda38d95",
+      "type": "precondition",
+      "label": "Shows if a VPN is active, connected, and displays any available connection details."
+    },
+    {
+      "id": "ATOM-8a085ef01a",
+      "type": "actor_constraint",
+      "label": "The enable_roaming tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-8a16a26257",
+      "type": "permission",
+      "label": "When ON, roaming is enabled and your phone can use data networks in areas outside your carrier's coverage.."
+    },
+    {
+      "id": "ATOM-8a1731afaa",
+      "type": "fact",
+      "label": "**reseat_sim_card** - Simulates removing and reinserting your SIM card."
+    },
+    {
+      "id": "ATOM-8a7954d091",
+      "type": "fact",
+      "label": "Args: phone_number: The phone number to search for."
+    },
+    {
+      "id": "ATOM-8adfc08dd3",
+      "type": "fact",
+      "label": "Returns: Message indicating the roaming has been enabled."
+    },
+    {
+      "id": "ATOM-8b38c1d270",
+      "type": "fact",
+      "label": "Gather available plans."
+    },
+    {
+      "id": "ATOM-8b72a20cd1",
+      "type": "fact",
+      "label": "Changes the type of cellular network your phone prefers to connect to (e.g., 5G, LTE/4G, 3G)."
+    },
+    {
+      "id": "ATOM-8b77feaa82",
+      "type": "communication_requirement",
+      "label": "Checks detailed information about a specific app."
+    },
+    {
+      "id": "ATOM-8ba20849aa",
+      "type": "communication_requirement",
+      "label": "Returns: Dictionary with usage information."
+    },
+    {
+      "id": "ATOM-8d01cf6365",
+      "type": "communication_requirement",
+      "label": "When ON, it disconnects all wireless communications including cellular, Wi-Fi, and Bluetooth.."
+    },
+    {
+      "id": "ATOM-8d6b8b5b16",
+      "type": "fact",
+      "label": "Finds a customer by their primary contact or line phone number."
+    },
+    {
+      "id": "ATOM-8ee9c78a7f",
+      "type": "precondition",
+      "label": "`check_status_bar()` can be used to check if the user is facing a service issue."
+    },
+    {
+      "id": "ATOM-8f45fd45aa",
+      "type": "fact",
+      "label": "You should deny user requests that are against this policy."
+    },
+    {
+      "id": "ATOM-9012824307",
+      "type": "precondition",
+      "label": "Shows if a VPN is active, connected, and displays any available connection details.."
+    },
+    {
+      "id": "ATOM-9165cd2bec",
+      "type": "actor_constraint",
+      "label": "The check_network_status tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-9264fd8d80",
+      "type": "required_input",
+      "label": "Higher-speed networks (LTE/5G) provide faster data but may use more battery."
+    },
+    {
+      "id": "ATOM-93127797ac",
+      "type": "fact",
+      "label": "**check_wifi_status** - Checks your Wi-Fi connection status."
+    },
+    {
+      "id": "ATOM-93c293f314",
+      "type": "fact",
+      "label": "Returns the name of all installed apps on the phone."
+    },
+    {
+      "id": "ATOM-93e8bb1caa",
+      "type": "fact",
+      "label": "Stops routing your internet traffic through a VPN server, which might affect connection speed or access to content.."
+    },
+    {
+      "id": "ATOM-941049a99e",
+      "type": "required_input",
+      "label": "The disable_roaming tool requires the line_id argument."
+    },
+    {
+      "id": "ATOM-94224f2477",
+      "type": "fact",
+      "label": "Args: customer_id: The unique identifier of the customer."
+    },
+    {
+      "id": "ATOM-94da53fe4a",
+      "type": "precondition",
+      "label": "MMS has specific network requirements; older technologies like 2G are insufficient."
+    },
+    {
+      "id": "ATOM-9597ec3b44",
+      "type": "precondition",
+      "label": "You should always check that the bill is overdue before sending a payment request."
+    },
+    {
+      "id": "ATOM-9614181f9a",
+      "type": "fact",
+      "label": "Args: customer_id: ID of the customer who owns the bill."
+    },
+    {
+      "id": "ATOM-97c7502f6f",
+      "type": "communication_requirement",
+      "label": "**check_app_status** - Checks detailed information about a specific app."
+    },
+    {
+      "id": "ATOM-9845f8f888",
+      "type": "fact",
+      "label": "Any speed below 'Excellent' is considered slow."
+    },
+    {
+      "id": "ATOM-98cfaf4f42",
+      "type": "fact",
+      "label": "When a user sends a photo to a friend via their messaging app, they're typically using MMS."
+    },
+    {
+      "id": "ATOM-991dd616c6",
+      "type": "required_input",
+      "label": "The get_bills_for_customer tool requires the limit argument."
+    },
+    {
+      "id": "ATOM-9996333f0e",
+      "type": "actor_constraint",
+      "label": "The check_app_permissions tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-9a14917082",
+      "type": "precondition",
+      "label": "If the user's data usage for a line associated with the phone number the user provided exceeds the plan's data limit, data connectivity will be lost."
+    },
+    {
+      "id": "ATOM-9c8561b009",
+      "type": "fact",
+      "label": "reason: Reason for suspension."
+    },
+    {
+      "id": "ATOM-9cc09c1b89",
+      "type": "fact",
+      "label": "Airplane Mode is a feature that disables all wireless radios, including cellular."
+    },
+    {
+      "id": "ATOM-9d72629c59",
+      "type": "fact",
+      "label": "The main sections covered are:."
+    },
+    {
+      "id": "ATOM-9d78e25173",
+      "type": "fact",
+      "label": "Returns: Message indicating the payment request has been sent."
+    },
+    {
+      "id": "ATOM-9d9ab7f82e",
+      "type": "fact",
+      "label": "Locked due to incorrect PIN/PUK entries.."
+    },
+    {
+      "id": "ATOM-9df9bcd3e3",
+      "type": "escalation",
+      "label": "the user explicitly asks for a human agent."
+    },
+    {
+      "id": "ATOM-9e261b4854",
+      "type": "fact",
+      "label": "Shows current APN name and MMSC URL for picture messaging.."
+    },
+    {
+      "id": "ATOM-9eed494a42",
+      "type": "actor_constraint",
+      "label": "The transfer_to_human_agents tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-9fe6b18ff3",
+      "type": "fact",
+      "label": "Makes a payment for the bill that the agent has sent you."
+    },
+    {
+      "id": "ATOM-a01eb22839",
+      "type": "fact",
+      "label": "Stops routing your internet traffic through a VPN server, which might affect connection speed or access to content."
+    },
+    {
+      "id": "ATOM-a1aa7b8759",
+      "type": "fact",
+      "label": "Args: id: The ID of the object to retrieve."
+    },
+    {
+      "id": "ATOM-a2c2779167",
+      "type": "fact",
+      "label": "**toggle_wifi** - Turns your phone's Wi-Fi radio ON or OFF."
+    },
+    {
+      "id": "ATOM-a3dd2d480e",
+      "type": "required_input",
+      "label": "The get_customer_by_id tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-a45b15efa8",
+      "type": "precondition",
+      "label": "Shows if the SIM is active, missing, or locked with a PIN or PUK code.."
+    },
+    {
+      "id": "ATOM-a4b811a84f",
+      "type": "fact",
+      "label": "**toggle_data** - Turns your phone's mobile data connection ON or OFF."
+    },
+    {
+      "id": "ATOM-a4c9df5597",
+      "type": "fact",
+      "label": "**check_status_bar** - Shows what icons are currently visible in your phone's status bar (the area at the top of the screen)."
+    },
+    {
+      "id": "ATOM-a522259ce9",
+      "type": "permission",
+      "label": "Problems with the SIM card can lead to a complete loss of service."
+    },
+    {
+      "id": "ATOM-a59fbf657e",
+      "type": "escalation",
+      "label": "To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT."
+    },
+    {
+      "id": "ATOM-a6134382e5",
+      "type": "actor_constraint",
+      "label": "The reseat_sim_card tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-a65b7fece4",
+      "type": "actor_constraint",
+      "label": "The check_status_bar tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-a6daae45be",
+      "type": "fact",
+      "label": "**Mobile Data is Turned OFF**: The main switch for mobile data might be disabled in the phone's settings.."
+    },
+    {
+      "id": "ATOM-a6e22d084d",
+      "type": "fact",
+      "label": "IMEI number (optional)."
+    },
+    {
+      "id": "ATOM-a7054b5099",
+      "type": "fact",
+      "label": "Each payment method includes:."
+    },
+    {
+      "id": "ATOM-a7069da6a5",
+      "type": "precondition",
+      "label": "If `check_apn_settings()` shows \"Incorrect\", guide the user to use `reset_apn_settings()` to reset the APN settings."
+    },
+    {
+      "id": "ATOM-a709264679",
+      "type": "prohibition",
+      "label": "given the policy and the available tools, you cannot solve the user's issue."
+    },
+    {
+      "id": "ATOM-a794591c6a",
+      "type": "fact",
+      "label": "status There are five bill status types: **Draft**, **Issued**, **Paid**, **Overdue**, **Awaiting Payment**, and **Disputed**."
+    },
+    {
+      "id": "ATOM-a7afd9a952",
+      "type": "fact",
+      "label": "**Incorrect Network Settings**: APN settings might be incorrect resulting in a loss of service.."
+    },
+    {
+      "id": "ATOM-a8ab600591",
+      "type": "fact",
+      "label": "Not inserted or improperly seated.."
+    },
+    {
+      "id": "ATOM-a9646e725f",
+      "type": "fact",
+      "label": "**check_installed_apps** - Returns the name of all installed apps on the phone.."
+    },
+    {
+      "id": "ATOM-a9647a82a2",
+      "type": "actor_constraint",
+      "label": "The get_customer_by_phone tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-ab45bceffa",
+      "type": "fact",
+      "label": "**VPN Issues**: An active VPN connection might be slow or misconfigured, affecting data speeds or connectivity.."
+    },
+    {
+      "id": "ATOM-ab604b0646",
+      "type": "fact",
+      "label": "The manual is structured to help agents efficiently diagnose and resolve problems by outlining how these services work, common issues, and the tools available f"
+    },
+    {
+      "id": "ATOM-abeb985e3a",
+      "type": "fact",
+      "label": "Args: customer_id: ID of the customer who owns the line."
+    },
+    {
+      "id": "ATOM-ac9114b66d",
+      "type": "fact",
+      "label": "When a line is suspended, the user will not have service."
+    },
+    {
+      "id": "ATOM-adffb2ee56",
+      "type": "required_input",
+      "label": "The send_payment_request tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-ae445c1ba1",
+      "type": "required_input",
+      "label": "The get_details_by_id tool requires the id argument."
+    },
+    {
+      "id": "ATOM-ae7e297016",
+      "type": "fact",
+      "label": "Network technology (e.g., \"5G\", \"4G\", etc.)."
+    },
+    {
+      "id": "ATOM-aefcb7a14b",
+      "type": "precondition",
+      "label": "If `check_apn_settings()` shows MMSC URL is not set, guide the user to use `reset_apn_settings()` to reset the APN settings."
+    },
+    {
+      "id": "ATOM-af2807c4a7",
+      "type": "precondition",
+      "label": "Checks if your SIM card is working correctly and displays its current status."
+    },
+    {
+      "id": "ATOM-afb4cc9e61",
+      "type": "precondition",
+      "label": "If it shows \"Active\", the SIM itself is likely okay."
+    },
+    {
+      "id": "ATOM-b06a951606",
+      "type": "precondition",
+      "label": "May return multiple matches if names are similar, DOB helps disambiguate."
+    },
+    {
+      "id": "ATOM-b0ee714213",
+      "type": "fact",
+      "label": "The user has 2 options:."
+    },
+    {
+      "id": "ATOM-b0f186e92c",
+      "type": "permission",
+      "label": "When ON, it reduces data usage, which may affect data speed.."
+    },
+    {
+      "id": "ATOM-b1219bb456",
+      "type": "fact",
+      "label": "Airplane mode status (\"✈️ Airplane Mode\" when enabled)."
+    },
+    {
+      "id": "ATOM-b121f27090",
+      "type": "fact",
+      "label": "last extension date (for payment extensions)."
+    },
+    {
+      "id": "ATOM-b1244b801d",
+      "type": "fact",
+      "label": "**App Permissions**: The messaging app needs permission to access storage (for the media files) and usually SMS functionalities."
+    },
+    {
+      "id": "ATOM-b1db9d3e7c",
+      "type": "precondition",
+      "label": "Checks if you're using a VPN (Virtual Private Network) connection."
+    },
+    {
+      "id": "ATOM-b1fca9024d",
+      "type": "precondition",
+      "label": "If it is not, the user will not be able to use their phone's data connection in areas outside their home network."
+    },
+    {
+      "id": "ATOM-b31c45eaa2",
+      "type": "fact",
+      "label": "Each line has the following attributes:."
+    },
+    {
+      "id": "ATOM-b339cfadde",
+      "type": "precondition",
+      "label": "If the user accepts the payment request, use the make_payment tool to make the payment.."
+    },
+    {
+      "id": "ATOM-b363fb42df",
+      "type": "fact",
+      "label": "Even with cellular service, mobile data problems might occur."
+    },
+    {
+      "id": "ATOM-b3d53b971f",
+      "type": "fact",
+      "label": "line items (charges, fees, credits)."
+    },
+    {
+      "id": "ATOM-b421bf605e",
+      "type": "fact",
+      "label": "**Airplane Mode is ON**: Disables all wireless connections, including mobile data.."
+    },
+    {
+      "id": "ATOM-b4735cd999",
+      "type": "fact",
+      "label": "Each plan specify the maxium data usage per month."
+    },
+    {
+      "id": "ATOM-b521bdf793",
+      "type": "fact",
+      "label": "Shows its permissions and background data usage settings.."
+    },
+    {
+      "id": "ATOM-b53327cc3b",
+      "type": "fact",
+      "label": "**set_apn_settings** - Sets the APN settings for the phone.."
+    },
+    {
+      "id": "ATOM-b5aefc438a",
+      "type": "permission",
+      "label": "Controls whether your phone can use cellular data for internet access when Wi-Fi is unavailable.."
+    },
+    {
+      "id": "ATOM-b5b1543ef1",
+      "type": "fact",
+      "label": "Data saver status (\"🔽 Data Saver\" when enabled)."
+    },
+    {
+      "id": "ATOM-b5d040ec0e",
+      "type": "fact",
+      "label": "Returns the new state of airplane_mode."
+    },
+    {
+      "id": "ATOM-b6ad6e2adb",
+      "type": "permission",
+      "label": "You can help the user change to a different plan."
+    },
+    {
+      "id": "ATOM-b6f3e848b9",
+      "type": "fact",
+      "label": "Refer to the general agent policy for guidelines on handling line suspensions.."
+    },
+    {
+      "id": "ATOM-b7a2f1c001",
+      "type": "fact",
+      "label": "Restarts your phone completely."
+    },
+    {
+      "id": "ATOM-b7b1bfb121",
+      "type": "fact",
+      "label": "The most common issue is that the SIM card is not properly seated or the user has entered the wrong PIN or PUK code."
+    },
+    {
+      "id": "ATOM-b801359935",
+      "type": "fact",
+      "label": "Shows the type of cellular network your phone prefers to connect to (e.g., 5G, 4G, 3G, 2G).."
+    },
+    {
+      "id": "ATOM-b875ba65f2",
+      "type": "communication_requirement",
+      "label": "This section explains for agents how to troubleshoot Multimedia Messaging Service (MMS), which allows users to send and receive messages containing pictures, vi"
+    },
+    {
+      "id": "ATOM-b934a842f9",
+      "type": "fact",
+      "label": "activation status."
+    },
+    {
+      "id": "ATOM-ba11ae1fb7",
+      "type": "actor_constraint",
+      "label": "The toggle_data tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-ba5a9f8c08",
+      "type": "fact",
+      "label": "It is the server that handles MMS messages."
+    },
+    {
+      "id": "ATOM-bacef913e0",
+      "type": "fact",
+      "label": "Each customer has a profile containing:."
+    },
+    {
+      "id": "ATOM-baddf12699",
+      "type": "precondition",
+      "label": "Raises: ValueError: If customer or line not found."
+    },
+    {
+      "id": "ATOM-bc305ab2f1",
+      "type": "precondition",
+      "label": "Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" and \"Understanding and Troubleshooting Your Phone's Mobile Data\" sections if need"
+    },
+    {
+      "id": "ATOM-bcae4e5780",
+      "type": "actor_constraint",
+      "label": "The toggle_wifi tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-bce41427fb",
+      "type": "exception",
+      "label": "Raises: ValueError: If customer, line, or plan not found, or if checks fail."
+    },
+    {
+      "id": "ATOM-bdb273fd2c",
+      "type": "escalation",
+      "label": "If the suspension cannot be lifted by the agent (e.g., due to contract end date as mentioned in general policy, or other reasons not resolvable by the agent), *"
+    },
+    {
+      "id": "ATOM-bf0e7f0daf",
+      "type": "fact",
+      "label": "Resumes a suspended line."
+    },
+    {
+      "id": "ATOM-bf12b7526a",
+      "type": "precondition",
+      "label": "Checks: Line status must be Suspended or Pending Activation."
+    },
+    {
+      "id": "ATOM-c09072d58a",
+      "type": "fact",
+      "label": "Args: full_name: The full name of the customer."
+    },
+    {
+      "id": "ATOM-c0b50a0dd5",
+      "type": "actor_constraint",
+      "label": "The set_apn_settings tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-c0fbc64c69",
+      "type": "actor_constraint",
+      "label": "For mobile data to work, the user must first have **cellular service**."
+    },
+    {
+      "id": "ATOM-c24737f0ae",
+      "type": "fact",
+      "label": "Ask the user to select one.."
+    },
+    {
+      "id": "ATOM-c2ce22c271",
+      "type": "permission",
+      "label": "`run_speed_test()` can be used to check for potential issues with mobile data."
+    },
+    {
+      "id": "ATOM-c303d49e03",
+      "type": "permission",
+      "label": "MMS is an extension of SMS (text messaging) that allows for multimedia content."
+    },
+    {
+      "id": "ATOM-c42960f5fb",
+      "type": "fact",
+      "label": "Returns the new data connection status."
+    },
+    {
+      "id": "ATOM-c451f82852",
+      "type": "fact",
+      "label": "dob: Date of birth for verification, in the format YYYY-MM-DD."
+    },
+    {
+      "id": "ATOM-c4d3efbb56",
+      "type": "actor_constraint",
+      "label": "The reboot_device tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-c50966ecd5",
+      "type": "precondition",
+      "label": "Returns: Dictionary with success status, message, charge amount, and updated line if applicable."
+    },
+    {
+      "id": "ATOM-c63b108549",
+      "type": "fact",
+      "label": "Args: customer_id: ID of the customer who owns the line."
+    },
+    {
+      "id": "ATOM-c7cd4d5dbe",
+      "type": "escalation",
+      "label": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+    },
+    {
+      "id": "ATOM-c7d6ade5b6",
+      "type": "required_input",
+      "label": "You should not provide any information, knowledge, or procedures not provided by the user or available tools, or give subjective recommendations or comments."
+    },
+    {
+      "id": "ATOM-c8fee2186a",
+      "type": "actor_constraint",
+      "label": "The get_data_usage tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-c9678e1413",
+      "type": "permission",
+      "label": "This can help resolve many temporary software glitches by refreshing all running services and connections."
+    },
+    {
+      "id": "ATOM-ca1344dc93",
+      "type": "fact",
+      "label": "address (street, city, state, zip code)."
+    },
+    {
+      "id": "ATOM-ca1e372782",
+      "type": "fact",
+      "label": "**check_app_permissions** - Checks what permissions a specific app currently has."
+    },
+    {
+      "id": "ATOM-cc596f8c14",
+      "type": "fact",
+      "label": "limit: Maximum number of bills to return."
+    },
+    {
+      "id": "ATOM-cca539a921",
+      "type": "fact",
+      "label": "We offer data roaming to users who are traveling outside their home network."
+    },
+    {
+      "id": "ATOM-cf2f9c9e2f",
+      "type": "fact",
+      "label": "Retrieves current billing cycle data usage for a line, including data refueling amount, data limit, and cycle end date."
+    },
+    {
+      "id": "ATOM-cf642716d5",
+      "type": "precondition",
+      "label": "If the user's data usage for a line exceeds the plan's data limit, data connectivity will be lost."
+    },
+    {
+      "id": "ATOM-d114ff113f",
+      "type": "actor_constraint",
+      "label": "The grant_app_permission tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-d29efe9c81",
+      "type": "precondition",
+      "label": "The send payement request tool will not check if the bill is overdue."
+    },
+    {
+      "id": "ATOM-d2c4ba9845",
+      "type": "escalation",
+      "label": "Transfer the user to a human agent, with a summary of the user's issue."
+    },
+    {
+      "id": "ATOM-d2f060d0a9",
+      "type": "fact",
+      "label": "account number last 4 digits."
+    },
+    {
+      "id": "ATOM-d46727e4bb",
+      "type": "fact",
+      "label": "Mobile data status (\"📱 Data Enabled\" or \"📵 Data Disabled\")."
+    },
+    {
+      "id": "ATOM-d481b35240",
+      "type": "fact",
+      "label": "Ask them how much data they want to refuel."
+    },
+    {
+      "id": "ATOM-d4cd087629",
+      "type": "precondition",
+      "label": "If you respond to the user, you should not make a tool call at the same time."
+    },
+    {
+      "id": "ATOM-d67b350065",
+      "type": "fact",
+      "label": "Gives a specific permission to an app (like access to storage, camera, or location)."
+    },
+    {
+      "id": "ATOM-d794c275a2",
+      "type": "fact",
+      "label": "Returns: Message indicating the roaming has been enabled."
+    },
+    {
+      "id": "ATOM-d7d213f28f",
+      "type": "actor_constraint",
+      "label": "The suspend_line tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-d8d97207ac",
+      "type": "fact",
+      "label": "billing period (start and end dates)."
+    },
+    {
+      "id": "ATOM-d8db26104f",
+      "type": "permission",
+      "label": "Download speed can be \"unknown\", \"very poor\", \"poor\", \"fair\", \"good\", or \"excellent\".."
+    },
+    {
+      "id": "ATOM-da2d32fb73",
+      "type": "precondition",
+      "label": "Raises: ValueError: If customer or line not found, or if line is not suspended or pending activation."
+    },
+    {
+      "id": "ATOM-db21520889",
+      "type": "actor_constraint",
+      "label": "The check_vpn_status tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-db86dcf94d",
+      "type": "fact",
+      "label": "Args: customer_id: ID of the customer who owns the line."
+    },
+    {
+      "id": "ATOM-dbcd1f47bc",
+      "type": "fact",
+      "label": "Checks what permissions a specific app currently has."
+    },
+    {
+      "id": "ATOM-dbf8fff56c",
+      "type": "permission",
+      "label": "The maximum amount of data that can be refueled is 2GB."
+    },
+    {
+      "id": "ATOM-dcb6cf82e7",
+      "type": "fact",
+      "label": "**Understanding and Troubleshooting MMS (Picture/Video Messaging)**: Covers issues related to sending and receiving multimedia messages."
+    },
+    {
+      "id": "ATOM-dd8a996dfa",
+      "type": "required_input",
+      "label": "The suspend_line tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-de4bce849e",
+      "type": "permission",
+      "label": "**Data Saver Mode is ON**: This feature restricts background data usage and can make some apps or services seem slow or unresponsive to save data.."
+    },
+    {
+      "id": "ATOM-de9c9c0879",
+      "type": "precondition",
+      "label": "**check_vpn_status** - Checks if you're using a VPN (Virtual Private Network) connection."
+    },
+    {
+      "id": "ATOM-deadcf32ab",
+      "type": "confirmation",
+      "label": "Confirm the price.."
+    },
+    {
+      "id": "ATOM-e02e33d990",
+      "type": "permission",
+      "label": "This feature allows you to make and receive calls over a Wi-Fi network instead of using the cellular network.."
+    },
+    {
+      "id": "ATOM-e0a4772fa1",
+      "type": "fact",
+      "label": "Shows the current network mode preference."
+    },
+    {
+      "id": "ATOM-e0c40e18c1",
+      "type": "required_input",
+      "label": "The send_payment_request tool requires the bill_id argument."
+    },
+    {
+      "id": "ATOM-e162eae31c",
+      "type": "required_input",
+      "label": "The refuel_data tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-e1d653f91f",
+      "type": "required_input",
+      "label": "The transfer_to_human_agents tool requires the summary argument."
+    },
+    {
+      "id": "ATOM-e1f39face8",
+      "type": "required_input",
+      "label": "The resume_line tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-e21130d536",
+      "type": "precondition",
+      "label": "Always check the bill status before calling this method."
+    },
+    {
+      "id": "ATOM-e2e0dd441a",
+      "type": "precondition",
+      "label": "This section explains how to check the network type and change it if necessary."
+    },
+    {
+      "id": "ATOM-e34e44e70a",
+      "type": "required_input",
+      "label": "Apply the plan to the line associated with the phone number the user provided."
+    },
+    {
+      "id": "ATOM-e39b4c3c65",
+      "type": "fact",
+      "label": "The line's contract end date is in the past."
+    },
+    {
+      "id": "ATOM-e48d770d2a",
+      "type": "precondition",
+      "label": "Full name with date of birth For name lookup, date of birth is required for verification purposes."
+    },
+    {
+      "id": "ATOM-e65cfd4c76",
+      "type": "actor_constraint",
+      "label": "The toggle_roaming tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-e689ba4b67",
+      "type": "precondition",
+      "label": "Required for some app functions to work properly."
+    },
+    {
+      "id": "ATOM-e6919d2a06",
+      "type": "precondition",
+      "label": "Checks: Line status must be Active."
+    },
+    {
+      "id": "ATOM-e78ce55661",
+      "type": "fact",
+      "label": "PLEASE HOLD ON.' to the user."
+    },
+    {
+      "id": "ATOM-e94572f35f",
+      "type": "fact",
+      "label": "To do so you need to follow these steps:."
+    },
+    {
+      "id": "ATOM-e9efd02554",
+      "type": "precondition",
+      "label": "Returns: Dictionary with success status, message, and updated line if applicable."
+    },
+    {
+      "id": "ATOM-ebce8d67b7",
+      "type": "permission",
+      "label": "Controls whether your phone can discover and connect to wireless networks for internet access."
+    },
+    {
+      "id": "ATOM-ec651ee64f",
+      "type": "required_input",
+      "label": "The refuel_data tool requires the gb_amount argument."
+    },
+    {
+      "id": "ATOM-ec9f91837b",
+      "type": "fact",
+      "label": "Send the user a payment request for the overdue bill.."
+    },
+    {
+      "id": "ATOM-ecb33c2859",
+      "type": "actor_constraint",
+      "label": "The send_payment_request tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-ecbb734325",
+      "type": "fact",
+      "label": "**set_network_mode_preference** - Changes the type of cellular network your phone prefers to connect to (e.g., 5G, 4G, 3G)."
+    },
+    {
+      "id": "ATOM-ece51e2987",
+      "type": "precondition",
+      "label": "Shows if Data Saver mode is on and whether background data usage is restricted globally.."
+    },
+    {
+      "id": "ATOM-ee94e77279",
+      "type": "fact",
+      "label": "data refueling (in GB)."
+    },
+    {
+      "id": "ATOM-eed2373646",
+      "type": "fact",
+      "label": "Sets the APN settings for the phone."
+    },
+    {
+      "id": "ATOM-ef77f5597c",
+      "type": "required_input",
+      "label": "The enable_roaming tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-f04cef67f2",
+      "type": "fact",
+      "label": "data refueling price per GB"
+    },
+    {
+      "id": "ATOM-f076949ff4",
+      "type": "fact",
+      "label": "Retrieves the details for a given ID."
+    },
+    {
+      "id": "ATOM-f0a677e0fa",
+      "type": "precondition",
+      "label": "**check_sim_status** - Checks if your SIM card is working correctly and displays its current status."
+    },
+    {
+      "id": "ATOM-f1440526a4",
+      "type": "precondition",
+      "label": "**can_send_mms** - Checks if the messaging app can send MMS messages."
+    },
+    {
+      "id": "ATOM-f18d9b61cc",
+      "type": "escalation",
+      "label": "You should try your best to resolve the issue for the user before transferring the user to a human agent."
+    },
+    {
+      "id": "ATOM-f1e0a3ce32",
+      "type": "actor_constraint",
+      "label": "The check_wifi_status tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-f2051ce017",
+      "type": "exception",
+      "label": "Returns: Customer object if found, None otherwise."
+    },
+    {
+      "id": "ATOM-f2681b9256",
+      "type": "required_input",
+      "label": "The get_customer_by_name tool requires the dob argument."
+    },
+    {
+      "id": "ATOM-f2a9e53ae4",
+      "type": "required_input",
+      "label": "This section details for agents how a user's phone connects to the cellular network (often referred to as \"service\") and provides procedures to troubleshoot com"
+    },
+    {
+      "id": "ATOM-f4c108941f",
+      "type": "fact",
+      "label": "**Understanding and Troubleshooting Your Phone's Mobile Data**: Focuses on problems with internet access via the cellular network, including speed and connectiv"
+    },
+    {
+      "id": "ATOM-f4c9491b54",
+      "type": "fact",
+      "label": "Toggles Data Roaming ON or OFF."
+    },
+    {
+      "id": "ATOM-f519ff72e8",
+      "type": "required_input",
+      "label": "The suspend_line tool requires the line_id argument."
+    },
+    {
+      "id": "ATOM-f51d1dc2e4",
+      "type": "required_input",
+      "label": "The get_data_usage tool requires the customer_id argument."
+    },
+    {
+      "id": "ATOM-f631e09d12",
+      "type": "precondition",
+      "label": "If `check_network_status()` shows \"2G\", guide the user to use `set_network_mode_preference(mode: str)` to switch to a network mode that includes 3G, 4G, or 5G ("
+    },
+    {
+      "id": "ATOM-f661d0e4d7",
+      "type": "permission",
+      "label": "VPN (Virtual Private Network) is a feature that encrypts internet traffic and can help improve data speeds and security."
+    },
+    {
+      "id": "ATOM-f7584d7fac",
+      "type": "precondition",
+      "label": "Shows if the app has access to features like storage, camera, location, etc."
+    },
+    {
+      "id": "ATOM-f7abf136d0",
+      "type": "postcondition",
+      "label": "This section covers verifying these prerequisites."
+    },
+    {
+      "id": "ATOM-f7c71aa005",
+      "type": "precondition",
+      "label": "If `check_vpn_status()` shows \"VPN is ON and connected\" and performance level is \"Poor\", guide the user to use `disconnect_vpn()` to disconnect the VPN."
+    },
+    {
+      "id": "ATOM-f82d5dcbe9",
+      "type": "actor_constraint",
+      "label": "The check_apn_settings tool is owned by the user actor."
+    },
+    {
+      "id": "ATOM-f841aa1caa",
+      "type": "escalation",
+      "label": "Make sure you try all the possible ways to resolve the user's issue before transferring to a human agent."
+    },
+    {
+      "id": "ATOM-f96a160812",
+      "type": "required_input",
+      "label": "The get_customer_by_name tool requires the full_name argument."
+    },
+    {
+      "id": "ATOM-fa33b9b8fa",
+      "type": "permission",
+      "label": "Data Saver mode is a feature that restricts background data usage and can affect data speeds."
+    },
+    {
+      "id": "ATOM-fb7b599026",
+      "type": "fact",
+      "label": "**toggle_wifi_calling** - Turns Wi-Fi Calling ON or OFF."
+    },
+    {
+      "id": "ATOM-fdb75768be",
+      "type": "fact",
+      "label": "MMS relies on these.."
+    },
+    {
+      "id": "ATOM-fdbce16df4",
+      "type": "fact",
+      "label": "goodwill credit usage for the year There are four account status types: **Active**, **Suspended**, **Pending Verification**, and **Closed**."
+    },
+    {
+      "id": "ATOM-fddd24b9cf",
+      "type": "fact",
+      "label": "line_id: ID of the line to suspend."
+    },
+    {
+      "id": "ATOM-fdf48fc2e3",
+      "type": "fact",
+      "label": "Returns the new data roaming status."
+    },
+    {
+      "id": "ATOM-fef512244d",
+      "type": "fact",
+      "label": "Toggles Data Saver mode ON or OFF."
+    },
+    {
+      "id": "ATOM-ff8e2cb580",
+      "type": "precondition",
+      "label": "If the line is suspended, the user will not have cellular service."
+    },
+    {
+      "id": "ATOM-ffd439158c",
+      "type": "fact",
+      "label": "**Carrier Issues**: Your line might be inactive due to billing problems."
+    },
+    {
+      "id": "TOOL:get_customer_by_phone",
+      "type": "tool",
+      "label": "get_customer_by_phone"
+    },
+    {
+      "id": "TOOL:get_customer_by_id",
+      "type": "tool",
+      "label": "get_customer_by_id"
+    },
+    {
+      "id": "TOOL:get_customer_by_name",
+      "type": "tool",
+      "label": "get_customer_by_name"
+    },
+    {
+      "id": "TOOL:get_details_by_id",
+      "type": "tool",
+      "label": "get_details_by_id"
+    },
+    {
+      "id": "TOOL:suspend_line",
+      "type": "tool",
+      "label": "suspend_line"
+    },
+    {
+      "id": "TOOL:resume_line",
+      "type": "tool",
+      "label": "resume_line"
+    },
+    {
+      "id": "TOOL:get_bills_for_customer",
+      "type": "tool",
+      "label": "get_bills_for_customer"
+    },
+    {
+      "id": "TOOL:send_payment_request",
+      "type": "tool",
+      "label": "send_payment_request"
+    },
+    {
+      "id": "TOOL:get_data_usage",
+      "type": "tool",
+      "label": "get_data_usage"
+    },
+    {
+      "id": "TOOL:enable_roaming",
+      "type": "tool",
+      "label": "enable_roaming"
+    },
+    {
+      "id": "TOOL:disable_roaming",
+      "type": "tool",
+      "label": "disable_roaming"
+    },
+    {
+      "id": "TOOL:transfer_to_human_agents",
+      "type": "tool",
+      "label": "transfer_to_human_agents"
+    },
+    {
+      "id": "TOOL:refuel_data",
+      "type": "tool",
+      "label": "refuel_data"
+    },
+    {
+      "id": "TOOL:check_status_bar",
+      "type": "tool",
+      "label": "check_status_bar"
+    },
+    {
+      "id": "TOOL:check_network_status",
+      "type": "tool",
+      "label": "check_network_status"
+    },
+    {
+      "id": "TOOL:check_network_mode_preference",
+      "type": "tool",
+      "label": "check_network_mode_preference"
+    },
+    {
+      "id": "TOOL:set_network_mode_preference",
+      "type": "tool",
+      "label": "set_network_mode_preference"
+    },
+    {
+      "id": "TOOL:run_speed_test",
+      "type": "tool",
+      "label": "run_speed_test"
+    },
+    {
+      "id": "TOOL:toggle_airplane_mode",
+      "type": "tool",
+      "label": "toggle_airplane_mode"
+    },
+    {
+      "id": "TOOL:check_sim_status",
+      "type": "tool",
+      "label": "check_sim_status"
+    },
+    {
+      "id": "TOOL:reseat_sim_card",
+      "type": "tool",
+      "label": "reseat_sim_card"
+    },
+    {
+      "id": "TOOL:toggle_data",
+      "type": "tool",
+      "label": "toggle_data"
+    },
+    {
+      "id": "TOOL:toggle_roaming",
+      "type": "tool",
+      "label": "toggle_roaming"
+    },
+    {
+      "id": "TOOL:check_data_restriction_status",
+      "type": "tool",
+      "label": "check_data_restriction_status"
+    },
+    {
+      "id": "TOOL:toggle_data_saver_mode",
+      "type": "tool",
+      "label": "toggle_data_saver_mode"
+    },
+    {
+      "id": "TOOL:check_apn_settings",
+      "type": "tool",
+      "label": "check_apn_settings"
+    },
+    {
+      "id": "TOOL:set_apn_settings",
+      "type": "tool",
+      "label": "set_apn_settings"
+    },
+    {
+      "id": "TOOL:reset_apn_settings",
+      "type": "tool",
+      "label": "reset_apn_settings"
+    },
+    {
+      "id": "TOOL:check_wifi_status",
+      "type": "tool",
+      "label": "check_wifi_status"
+    },
+    {
+      "id": "TOOL:toggle_wifi",
+      "type": "tool",
+      "label": "toggle_wifi"
+    },
+    {
+      "id": "TOOL:check_wifi_calling_status",
+      "type": "tool",
+      "label": "check_wifi_calling_status"
+    },
+    {
+      "id": "TOOL:toggle_wifi_calling",
+      "type": "tool",
+      "label": "toggle_wifi_calling"
+    },
+    {
+      "id": "TOOL:check_vpn_status",
+      "type": "tool",
+      "label": "check_vpn_status"
+    },
+    {
+      "id": "TOOL:connect_vpn",
+      "type": "tool",
+      "label": "connect_vpn"
+    },
+    {
+      "id": "TOOL:disconnect_vpn",
+      "type": "tool",
+      "label": "disconnect_vpn"
+    },
+    {
+      "id": "TOOL:check_installed_apps",
+      "type": "tool",
+      "label": "check_installed_apps"
+    },
+    {
+      "id": "TOOL:check_app_status",
+      "type": "tool",
+      "label": "check_app_status"
+    },
+    {
+      "id": "TOOL:check_app_permissions",
+      "type": "tool",
+      "label": "check_app_permissions"
+    },
+    {
+      "id": "TOOL:grant_app_permission",
+      "type": "tool",
+      "label": "grant_app_permission"
+    },
+    {
+      "id": "TOOL:can_send_mms",
+      "type": "tool",
+      "label": "can_send_mms"
+    },
+    {
+      "id": "TOOL:reboot_device",
+      "type": "tool",
+      "label": "reboot_device"
+    },
+    {
+      "id": "TOOL:check_payment_request",
+      "type": "tool",
+      "label": "check_payment_request"
+    },
+    {
+      "id": "TOOL:make_payment",
+      "type": "tool",
+      "label": "make_payment"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ATOM-0df966efdb",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8a7954d091",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8d6b8b5b16",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a9647a82a2",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f2051ce017",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e34e44e70a",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6c4298554e",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9a14917082",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-569ee865eb",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7978562352",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b53327cc3b",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a9646e725f",
+      "target": "TOOL:get_customer_by_phone",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3a8754e2db",
+      "target": "TOOL:get_customer_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5379c852f8",
+      "target": "TOOL:get_customer_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5a3e4527ea",
+      "target": "TOOL:get_customer_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-94224f2477",
+      "target": "TOOL:get_customer_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a3dd2d480e",
+      "target": "TOOL:get_customer_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1566524de5",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7a00c11cfe",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7dbc0fb186",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b06a951606",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c09072d58a",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c451f82852",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f2681b9256",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f96a160812",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e48d770d2a",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-352271b71f",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a9646e725f",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9e261b4854",
+      "target": "TOOL:get_customer_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1e3d0db53a",
+      "target": "TOOL:get_details_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3438a07278",
+      "target": "TOOL:get_details_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-49069fc946",
+      "target": "TOOL:get_details_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-79d822cfab",
+      "target": "TOOL:get_details_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a1aa7b8759",
+      "target": "TOOL:get_details_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ae445c1ba1",
+      "target": "TOOL:get_details_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f076949ff4",
+      "target": "TOOL:get_details_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-19da36176c",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2017d4f5b2",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-46c9dbd14a",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4e88960ed4",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9c8561b009",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c63b108549",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d7d213f28f",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-dd8a996dfa",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e6919d2a06",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e9efd02554",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f519ff72e8",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fddd24b9cf",
+      "target": "TOOL:suspend_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-139b587f86",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2ab83f556b",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4017a0008e",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7387ffc2f1",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-772a69ca2f",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-786469ef40",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-bf0e7f0daf",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-bf12b7526a",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-da2d32fb73",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e1f39face8",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1703c850c9",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2e5305b9a8",
+      "target": "TOOL:resume_line",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-064febdf4b",
+      "target": "TOOL:get_bills_for_customer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-16af24433c",
+      "target": "TOOL:get_bills_for_customer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2a71a49e2b",
+      "target": "TOOL:get_bills_for_customer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-50b9309668",
+      "target": "TOOL:get_bills_for_customer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5147f242cc",
+      "target": "TOOL:get_bills_for_customer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5d9bcc1f6f",
+      "target": "TOOL:get_bills_for_customer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-991dd616c6",
+      "target": "TOOL:get_bills_for_customer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-cc596f8c14",
+      "target": "TOOL:get_bills_for_customer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0acb1a568b",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-135f65099d",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-39fd5ba171",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-46e3a2e7b7",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5a539069b5",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-816ae647b9",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9614181f9a",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9d78e25173",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-adffb2ee56",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e0c40e18c1",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e21130d536",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ecb33c2859",
+      "target": "TOOL:send_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2b1e8cc071",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-62e6ea1fa1",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-749104f227",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8ba20849aa",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c8fee2186a",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-cf2f9c9e2f",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-db86dcf94d",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f51d1dc2e4",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-cf642716d5",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9a14917082",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b4735cd999",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fdbce16df4",
+      "target": "TOOL:get_data_usage",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0d66dc1d3e",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-18ae09d5af",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1e355ace75",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-36bffca323",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8a085ef01a",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8adfc08dd3",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-abeb985e3a",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ef77f5597c",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2fa7ef3cc6",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2843488177",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-72850c8fd1",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-569ee865eb",
+      "target": "TOOL:enable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0466f3e6c1",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2ef766a822",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-46bcaa9c39",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4f43786dc0",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6777bb26f7",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-941049a99e",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-baddf12699",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d794c275a2",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2fa7ef3cc6",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2843488177",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-72850c8fd1",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-569ee865eb",
+      "target": "TOOL:disable_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-12de65d5c0",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-66891ef2bb",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9df9bcd3e3",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9eed494a42",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a709264679",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d2c4ba9845",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e1d653f91f",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a59fbf657e",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-00a7e81d24",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0cd7a7427b",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1e034c5e4c",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-26449fecdb",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2a8fee0695",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-444c6f2c7d",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4a35339427",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-67074befea",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6c52288479",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-bce41427fb",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c50966ecd5",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e162eae31c",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ec651ee64f",
+      "target": "TOOL:refuel_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6148928af5",
+      "target": "TOOL:check_status_bar",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7961056a59",
+      "target": "TOOL:check_status_bar",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a65b7fece4",
+      "target": "TOOL:check_status_bar",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6db8aa2bc2",
+      "target": "TOOL:check_status_bar",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8ee9c78a7f",
+      "target": "TOOL:check_status_bar",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a4c9df5597",
+      "target": "TOOL:check_status_bar",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5506ca847f",
+      "target": "TOOL:check_status_bar",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3f2611806c",
+      "target": "TOOL:check_status_bar",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2562908982",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2cfe84ccfc",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9165cd2bec",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0fd3c09f48",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-45659acefd",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6db8aa2bc2",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f631e09d12",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-629284ddc2",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2aab1b8ff0",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b801359935",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f4c108941f",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ecbb734325",
+      "target": "TOOL:check_network_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-76c32fd6fa",
+      "target": "TOOL:check_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e0a4772fa1",
+      "target": "TOOL:check_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-358e65b33c",
+      "target": "TOOL:check_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7d248f1051",
+      "target": "TOOL:check_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b801359935",
+      "target": "TOOL:check_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-20bab3cb44",
+      "target": "TOOL:check_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-016f8dcac2",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3ce5c91244",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8b72a20cd1",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9264fd8d80",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-358e65b33c",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ecbb734325",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f631e09d12",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7d248f1051",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b801359935",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0fa2a0515f",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5a6ee39618",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-425ef6f13c",
+      "target": "TOOL:set_network_mode_preference",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2c930ce389",
+      "target": "TOOL:run_speed_test",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-46c264862e",
+      "target": "TOOL:run_speed_test",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8802725414",
+      "target": "TOOL:run_speed_test",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3ffa262266",
+      "target": "TOOL:run_speed_test",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c2ce22c271",
+      "target": "TOOL:run_speed_test",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0943907abb",
+      "target": "TOOL:run_speed_test",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-76e1ab1f58",
+      "target": "TOOL:run_speed_test",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-21f80b2d04",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2ee2eb0ad6",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-722221a0b5",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b5d040ec0e",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3195b943e6",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6390191c26",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-40df000672",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9cc09c1b89",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b421bf605e",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3105758d71",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0740aabb26",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b1219bb456",
+      "target": "TOOL:toggle_airplane_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-73438e99ab",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-87d42c55cf",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-af2807c4a7",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-10e2858a5e",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f0a677e0fa",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a45b15efa8",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c7cd4d5dbe",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-61a1fc6364",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-afb4cc9e61",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b7b1bfb121",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a522259ce9",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8a1731afaa",
+      "target": "TOOL:check_sim_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6a667bfca1",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6d456324fc",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a6134382e5",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-61a1fc6364",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8a1731afaa",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-44eacdd0ed",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a522259ce9",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2aab1b8ff0",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-10e2858a5e",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-74bc483010",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f0a677e0fa",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-afb4cc9e61",
+      "target": "TOOL:reseat_sim_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0d4b3a8939",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-11e8c5efe7",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ba11ae1fb7",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c42960f5fb",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-44c0327391",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-45659acefd",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7835ad50ba",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a4b811a84f",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b5aefc438a",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6a5a17b939",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f4c108941f",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-228a05f62a",
+      "target": "TOOL:toggle_data",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2a5dfcf642",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e65cfd4c76",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f4c9491b54",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fdf48fc2e3",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-01d4f796e7",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2cdcc7220e",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8a16a26257",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-569ee865eb",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-56dd53d3be",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b1fca9024d",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0afbffe039",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-72850c8fd1",
+      "target": "TOOL:toggle_roaming",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-19b3cc3611",
+      "target": "TOOL:check_data_restriction_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2a0e46745a",
+      "target": "TOOL:check_data_restriction_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6c9070a435",
+      "target": "TOOL:check_data_restriction_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-205bbb0764",
+      "target": "TOOL:check_data_restriction_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-44c0327391",
+      "target": "TOOL:check_data_restriction_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-524a5f1311",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-804753dc3b",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-87542a2c06",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fef512244d",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-44c0327391",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7835ad50ba",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fa33b9b8fa",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b5b1543ef1",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ece51e2987",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-de4bce849e",
+      "target": "TOOL:toggle_data_saver_mode",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-15469c148a",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2a4ed0e713",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f82d5dcbe9",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3ed9731b84",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a7069da6a5",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-aefcb7a14b",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3cd213894a",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4a17843804",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-352271b71f",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b53327cc3b",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1280d8d1e0",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-02ba62d82a",
+      "target": "TOOL:check_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2ee99a1b85",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c0b50a0dd5",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-eed2373646",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-02ba62d82a",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a7069da6a5",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-aefcb7a14b",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b53327cc3b",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3cd213894a",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7a38240422",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-352271b71f",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4a17843804",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3ed9731b84",
+      "target": "TOOL:set_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-45fa63f179",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5bafe658c5",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-02ba62d82a",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a7069da6a5",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-aefcb7a14b",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b53327cc3b",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3cd213894a",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3ed9731b84",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7a38240422",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4a17843804",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-352271b71f",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1280d8d1e0",
+      "target": "TOOL:reset_apn_settings",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-033ddc9755",
+      "target": "TOOL:check_wifi_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3b5352279d",
+      "target": "TOOL:check_wifi_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f1e0a3ce32",
+      "target": "TOOL:check_wifi_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-93127797ac",
+      "target": "TOOL:check_wifi_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-52d5a17097",
+      "target": "TOOL:toggle_wifi",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-697215568e",
+      "target": "TOOL:toggle_wifi",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-bcae4e5780",
+      "target": "TOOL:toggle_wifi",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ebce8d67b7",
+      "target": "TOOL:toggle_wifi",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-87de59878f",
+      "target": "TOOL:toggle_wifi",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a2c2779167",
+      "target": "TOOL:toggle_wifi",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fb7b599026",
+      "target": "TOOL:toggle_wifi",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-014ca61d54",
+      "target": "TOOL:check_wifi_calling_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-05353a8533",
+      "target": "TOOL:check_wifi_calling_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0f8ef0d549",
+      "target": "TOOL:check_wifi_calling_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1e1ff7eb94",
+      "target": "TOOL:check_wifi_calling_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-87de59878f",
+      "target": "TOOL:check_wifi_calling_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0834a4c735",
+      "target": "TOOL:toggle_wifi_calling",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0ea7f73b8a",
+      "target": "TOOL:toggle_wifi_calling",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-364bcf4373",
+      "target": "TOOL:toggle_wifi_calling",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3d1281ccc2",
+      "target": "TOOL:toggle_wifi_calling",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-87de59878f",
+      "target": "TOOL:toggle_wifi_calling",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fb7b599026",
+      "target": "TOOL:toggle_wifi_calling",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-89cda38d95",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b1db9d3e7c",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-db21520889",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-de9c9c0879",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f7c71aa005",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9012824307",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6c29508c98",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f661d0e4d7",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5af3363f00",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ab45bceffa",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8727d80fdb",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-253cc7bf21",
+      "target": "TOOL:check_vpn_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3e444fd226",
+      "target": "TOOL:connect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-57050dc4ee",
+      "target": "TOOL:connect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5af3363f00",
+      "target": "TOOL:connect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6c29508c98",
+      "target": "TOOL:connect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f7c71aa005",
+      "target": "TOOL:connect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-de9c9c0879",
+      "target": "TOOL:connect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f661d0e4d7",
+      "target": "TOOL:connect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0ae65db436",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7d3510c468",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a01eb22839",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6c29508c98",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f7c71aa005",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-93e8bb1caa",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f661d0e4d7",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5af3363f00",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-de9c9c0879",
+      "target": "TOOL:disconnect_vpn",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4c958c91c4",
+      "target": "TOOL:check_installed_apps",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-93c293f314",
+      "target": "TOOL:check_installed_apps",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a9646e725f",
+      "target": "TOOL:check_installed_apps",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0636bd66db",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-151e3d0885",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-47dcc1e4c3",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8b77feaa82",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-97c7502f6f",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ca1e372782",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3702da140b",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1f19dfeb9d",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b1244b801d",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f1440526a4",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6decceba79",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-79057b82f5",
+      "target": "TOOL:check_app_status",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1536bdd625",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9996333f0e",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-dbcd1f47bc",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f7584d7fac",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1f19dfeb9d",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ca1e372782",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b1244b801d",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3702da140b",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-79057b82f5",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6decceba79",
+      "target": "TOOL:check_app_permissions",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3f37e25bec",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6dcba64aa8",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7cbd4b4188",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-89823da871",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d114ff113f",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d67b350065",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e689ba4b67",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1f19dfeb9d",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6decceba79",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b1244b801d",
+      "target": "TOOL:grant_app_permission",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3870613f44",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-85bfc4778e",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8936a234b8",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f1440526a4",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-005c8bdf0f",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b875ba65f2",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-39970bd67d",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3b3c2b6e06",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7424f59b8e",
+      "target": "TOOL:can_send_mms",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6b950f3b94",
+      "target": "TOOL:reboot_device",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b7a2f1c001",
+      "target": "TOOL:reboot_device",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c4d3efbb56",
+      "target": "TOOL:reboot_device",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2f150c2273",
+      "target": "TOOL:reboot_device",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4a17843804",
+      "target": "TOOL:reboot_device",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7a38240422",
+      "target": "TOOL:reboot_device",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1703c850c9",
+      "target": "TOOL:reboot_device",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1b8d83f2a1",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2bd119b2f7",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-72e42221cd",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-068fd84271",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9597ec3b44",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ec9f91837b",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b339cfadde",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d29efe9c81",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-42eae58ddf",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-00a7e81d24",
+      "target": "TOOL:check_payment_request",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-40f043dac6",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9fe6b18ff3",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b339cfadde",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-42eae58ddf",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-147edcdc6d",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-068fd84271",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9597ec3b44",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ec9f91837b",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-037d1602d7",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-31083e0e9c",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e94572f35f",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-03244f19a0",
+      "target": "TOOL:make_payment",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-00a7e81d24",
+      "target": "ATOM-f18d9b61cc",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3043
+    },
+    {
+      "source": "ATOM-037d1602d7",
+      "target": "ATOM-9597ec3b44",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3158
+    },
+    {
+      "source": "ATOM-07d5c49f6f",
+      "target": "ATOM-deadcf32ab",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 1.0
+    },
+    {
+      "source": "ATOM-11b9116a3f",
+      "target": "ATOM-2843488177",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2941
+    },
+    {
+      "source": "ATOM-11b9116a3f",
+      "target": "ATOM-d4cd087629",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.6667
+    },
+    {
+      "source": "ATOM-1a5073cf7b",
+      "target": "ATOM-e02e33d990",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.619
+    },
+    {
+      "source": "ATOM-27cde4e806",
+      "target": "ATOM-bc305ab2f1",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.5
+    },
+    {
+      "source": "ATOM-27cde4e806",
+      "target": "ATOM-ff8e2cb580",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3529
+    },
+    {
+      "source": "ATOM-2843488177",
+      "target": "ATOM-d4cd087629",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3571
+    },
+    {
+      "source": "ATOM-35366abec7",
+      "target": "ATOM-b5aefc438a",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.4444
+    },
+    {
+      "source": "ATOM-358e65b33c",
+      "target": "ATOM-44c0327391",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3
+    },
+    {
+      "source": "ATOM-358e65b33c",
+      "target": "ATOM-f631e09d12",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.45
+    },
+    {
+      "source": "ATOM-35e1975836",
+      "target": "ATOM-42eae58ddf",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2857
+    },
+    {
+      "source": "ATOM-425ef6f13c",
+      "target": "ATOM-5a6ee39618",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.9167
+    },
+    {
+      "source": "ATOM-42eae58ddf",
+      "target": "ATOM-56804160bc",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3125
+    },
+    {
+      "source": "ATOM-42eae58ddf",
+      "target": "ATOM-b6ad6e2adb",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3846
+    },
+    {
+      "source": "ATOM-44c0327391",
+      "target": "ATOM-45659acefd",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.4375
+    },
+    {
+      "source": "ATOM-44c0327391",
+      "target": "ATOM-6390191c26",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.4615
+    },
+    {
+      "source": "ATOM-44c0327391",
+      "target": "ATOM-87de59878f",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.4667
+    },
+    {
+      "source": "ATOM-44c0327391",
+      "target": "ATOM-f631e09d12",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2857
+    },
+    {
+      "source": "ATOM-45659acefd",
+      "target": "ATOM-6390191c26",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3846
+    },
+    {
+      "source": "ATOM-45659acefd",
+      "target": "ATOM-87de59878f",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.4
+    },
+    {
+      "source": "ATOM-45659acefd",
+      "target": "ATOM-a7069da6a5",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2941
+    },
+    {
+      "source": "ATOM-45659acefd",
+      "target": "ATOM-f631e09d12",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3
+    },
+    {
+      "source": "ATOM-569ee865eb",
+      "target": "ATOM-72850c8fd1",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.4737
+    },
+    {
+      "source": "ATOM-569ee865eb",
+      "target": "ATOM-b1fca9024d",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.6111
+    },
+    {
+      "source": "ATOM-56dd53d3be",
+      "target": "ATOM-8a16a26257",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2857
+    },
+    {
+      "source": "ATOM-608bbe92c5",
+      "target": "ATOM-d8db26104f",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3571
+    },
+    {
+      "source": "ATOM-61a1fc6364",
+      "target": "ATOM-87de59878f",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2941
+    },
+    {
+      "source": "ATOM-6390191c26",
+      "target": "ATOM-87de59878f",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.5455
+    },
+    {
+      "source": "ATOM-6390191c26",
+      "target": "ATOM-a7069da6a5",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2857
+    },
+    {
+      "source": "ATOM-6e4b363cf7",
+      "target": "ATOM-ff8e2cb580",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3
+    },
+    {
+      "source": "ATOM-72850c8fd1",
+      "target": "ATOM-b1fca9024d",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2857
+    },
+    {
+      "source": "ATOM-87de59878f",
+      "target": "ATOM-a7069da6a5",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3125
+    },
+    {
+      "source": "ATOM-8936a234b8",
+      "target": "ATOM-8ee9c78a7f",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.5385
+    },
+    {
+      "source": "ATOM-8a16a26257",
+      "target": "ATOM-b5aefc438a",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2857
+    },
+    {
+      "source": "ATOM-9597ec3b44",
+      "target": "ATOM-d29efe9c81",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.2941
+    },
+    {
+      "source": "ATOM-9a14917082",
+      "target": "ATOM-cf642716d5",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.7059
+    },
+    {
+      "source": "ATOM-a45b15efa8",
+      "target": "ATOM-afb4cc9e61",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.3077
+    },
+    {
+      "source": "ATOM-a7069da6a5",
+      "target": "ATOM-aefcb7a14b",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.6667
+    },
+    {
+      "source": "ATOM-de4bce849e",
+      "target": "ATOM-fa33b9b8fa",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.4286
+    },
+    {
+      "source": "ATOM-f18d9b61cc",
+      "target": "ATOM-f841aa1caa",
+      "type": "SAME_INTENT_VARIANT",
+      "score": 0.5263
+    }
+  ]
+}

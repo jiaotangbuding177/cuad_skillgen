@@ -1,0 +1,25 @@
+{
+  "num_simulations": 1,
+  "tool_calls": 4,
+  "tool_errors": 0,
+  "illegal_cross_actor_tool_calls": 0,
+  "actor_ownership_accuracy": 1.0,
+  "package_retrievals": 1,
+  "package_context_chars": 300,
+  "per_simulation": [
+    {
+      "simulation_id": "synthetic-sim-001",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "tool_calls": 4,
+      "tool_errors": 0,
+      "actor_ownership_accuracy": 1.0,
+      "illegal_cross_actor_tool_calls": 0,
+      "retrieved_document_ids": [],
+      "package_retrievals": 1,
+      "package_context_chars": 300,
+      "package_item_ids": [
+        "KA-00014"
+      ]
+    }
+  ]
+}

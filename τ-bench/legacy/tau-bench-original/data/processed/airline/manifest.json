@@ -1,0 +1,32 @@
+{
+  "domain": "airline",
+  "splits": {
+    "test": 50
+  },
+  "training_task_use_allowed": false,
+  "compilation_sources": [
+    "documents/policy.md",
+    "documents/policy_sections.jsonl",
+    "documents/runtime_rules.json",
+    "documents/tool_catalog.json"
+  ],
+  "held_out_from_compilation": [
+    "tasks/test.jsonl"
+  ],
+  "policy_sha256": "4dec8a697805f5854221246cd7ed270484767deb7b2b96b5e4f4234c932d2fbf",
+  "policy_sections": 6,
+  "tools": 14,
+  "gold_action_distribution_all_splits": {
+    "book_reservation": 9,
+    "calculate": 5,
+    "cancel_reservation": 15,
+    "get_reservation_details": 58,
+    "get_user_details": 14,
+    "search_direct_flight": 21,
+    "send_certificate": 3,
+    "transfer_to_human_agents": 4,
+    "update_reservation_baggages": 6,
+    "update_reservation_flights": 20,
+    "update_reservation_passengers": 3
+  }
+}

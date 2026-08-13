@@ -1,0 +1,30 @@
+{
+  "benchmark": "tau3-bench",
+  "method": "tool_schema_compiler",
+  "domain": "airline",
+  "compiler_backend": "deterministic_bootstrap",
+  "effective_compiler_backend": "deterministic_structured",
+  "model": null,
+  "input_hash": "c63fa9fb7b8c7be08c9e5d84970cd5460078deba42e54b6c66058ca3ebb33a10",
+  "compiler_code_hash": "d1c67980895b00d3a3f68836623b6e65c8a049db2334905c765b15f56c2c5667",
+  "uses_train_tasks": true,
+  "uses_held_out_tasks": false,
+  "counts": {
+    "policy_sections": 9,
+    "tools": 14,
+    "knowledge_documents": 0,
+    "knowledge_atoms": 23,
+    "typed_atoms": 222,
+    "tool_cards": 14,
+    "local_motifs": 5,
+    "action_modules": 14,
+    "workflow_patterns": 19,
+    "graph_patterns": 0,
+    "semantic_graph_edges": 0
+  },
+  "package_contract": "action_modules.v2",
+  "package_contract_hash": "8099b1c9df74494236aa47c17a3e9ce971ddafd32777bfcb7a84b98e17b4e42c",
+  "runtime_graph_traversal": false,
+  "llm": {},
+  "duration_seconds": 0.045
+}

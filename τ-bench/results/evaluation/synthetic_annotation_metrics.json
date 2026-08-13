@@ -1,0 +1,87 @@
+{
+  "num_annotations": 1,
+  "num_completed_status_annotations": 0,
+  "status": {
+    "accuracy": null,
+    "macro_f1": null,
+    "balanced_accuracy": null,
+    "per_class": {
+      "clarify": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 0.0
+      },
+      "complete": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 0.0
+      },
+      "deny": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 0.0
+      },
+      "escalate": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 0.0
+      },
+      "execute": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 0.0
+      },
+      "failed": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 0.0
+      },
+      "instruct_user": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 0.0
+      },
+      "observe": {
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": 0.0
+      }
+    }
+  },
+  "skill_routing": {
+    "annotated_required_tasks": 0,
+    "trigger_recall": null,
+    "route_at_1": null,
+    "activated_module_precision": null,
+    "unnecessary_activation_rate": null,
+    "activated_module_utility": null,
+    "tool_binding_accuracy": null
+  },
+  "governance": {
+    "policy_compliance_rate": null,
+    "precondition_recall": null,
+    "exception_branch_recall": null,
+    "verification_recall": null
+  },
+  "provenance": {
+    "coverage": null,
+    "validity_precision": null
+  },
+  "note": "Inter-annotator agreement must be computed on the unreconciled double-coded file before adjudication."
+}

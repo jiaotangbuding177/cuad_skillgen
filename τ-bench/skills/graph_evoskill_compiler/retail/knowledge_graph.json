@@ -1,0 +1,1436 @@
+{
+  "nodes": [
+    {
+      "id": "KA-00001",
+      "type": "policy_section",
+      "label": "Retail agent policy"
+    },
+    {
+      "id": "KA-00002",
+      "type": "policy_section",
+      "label": "Domain basic"
+    },
+    {
+      "id": "KA-00003",
+      "type": "policy_section",
+      "label": "User"
+    },
+    {
+      "id": "KA-00004",
+      "type": "policy_section",
+      "label": "Product"
+    },
+    {
+      "id": "KA-00005",
+      "type": "policy_section",
+      "label": "Order"
+    },
+    {
+      "id": "KA-00006",
+      "type": "policy_section",
+      "label": "Generic action rules"
+    },
+    {
+      "id": "KA-00007",
+      "type": "policy_section",
+      "label": "Cancel pending order"
+    },
+    {
+      "id": "KA-00008",
+      "type": "policy_section",
+      "label": "Modify pending order"
+    },
+    {
+      "id": "KA-00009",
+      "type": "policy_section",
+      "label": "Modify payment"
+    },
+    {
+      "id": "KA-00010",
+      "type": "policy_section",
+      "label": "Modify items"
+    },
+    {
+      "id": "KA-00011",
+      "type": "policy_section",
+      "label": "Return delivered order"
+    },
+    {
+      "id": "KA-00012",
+      "type": "policy_section",
+      "label": "Exchange delivered order"
+    },
+    {
+      "id": "KA-00013",
+      "type": "tool_contract",
+      "label": "calculate"
+    },
+    {
+      "id": "KA-00014",
+      "type": "tool_contract",
+      "label": "cancel_pending_order"
+    },
+    {
+      "id": "KA-00015",
+      "type": "tool_contract",
+      "label": "exchange_delivered_order_items"
+    },
+    {
+      "id": "KA-00016",
+      "type": "tool_contract",
+      "label": "find_user_id_by_name_zip"
+    },
+    {
+      "id": "KA-00017",
+      "type": "tool_contract",
+      "label": "find_user_id_by_email"
+    },
+    {
+      "id": "KA-00018",
+      "type": "tool_contract",
+      "label": "get_order_details"
+    },
+    {
+      "id": "KA-00019",
+      "type": "tool_contract",
+      "label": "get_product_details"
+    },
+    {
+      "id": "KA-00020",
+      "type": "tool_contract",
+      "label": "get_item_details"
+    },
+    {
+      "id": "KA-00021",
+      "type": "tool_contract",
+      "label": "get_user_details"
+    },
+    {
+      "id": "KA-00022",
+      "type": "tool_contract",
+      "label": "list_all_product_types"
+    },
+    {
+      "id": "KA-00023",
+      "type": "tool_contract",
+      "label": "modify_pending_order_address"
+    },
+    {
+      "id": "KA-00024",
+      "type": "tool_contract",
+      "label": "modify_pending_order_items"
+    },
+    {
+      "id": "KA-00025",
+      "type": "tool_contract",
+      "label": "modify_pending_order_payment"
+    },
+    {
+      "id": "KA-00026",
+      "type": "tool_contract",
+      "label": "modify_user_address"
+    },
+    {
+      "id": "KA-00027",
+      "type": "tool_contract",
+      "label": "return_delivered_order_items"
+    },
+    {
+      "id": "KA-00028",
+      "type": "tool_contract",
+      "label": "transfer_to_human_agents"
+    }
+  ],
+  "edges": [
+    {
+      "source": "KA-00001",
+      "target": "KA-00004",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1156
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00005",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1027
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00006",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1641
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00007",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1301
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00008",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1406
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00010",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1899
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00011",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1295
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.175
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00014",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1173
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1534
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00016",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1159
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1275
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1506
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1299
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1164
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1138
+    },
+    {
+      "source": "KA-00001",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1417
+    },
+    {
+      "source": "KA-00002",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0952
+    },
+    {
+      "source": "KA-00003",
+      "target": "KA-00004",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0984
+    },
+    {
+      "source": "KA-00003",
+      "target": "KA-00005",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1034
+    },
+    {
+      "source": "KA-00003",
+      "target": "KA-00010",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0964
+    },
+    {
+      "source": "KA-00003",
+      "target": "KA-00011",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0909
+    },
+    {
+      "source": "KA-00003",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0964
+    },
+    {
+      "source": "KA-00003",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1304
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00005",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1375
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00008",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1014
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00010",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1683
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1456
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1346
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00020",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0984
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2951
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1415
+    },
+    {
+      "source": "KA-00004",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1048
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00006",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1176
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00007",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1646
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00008",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1587
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00009",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1127
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00010",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1386
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00011",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.12
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.15
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00014",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1613
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1386
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1176
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1238
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1348
+    },
+    {
+      "source": "KA-00005",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1414
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00007",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1429
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00008",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1961
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00009",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0984
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00010",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1573
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00011",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1803
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1444
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0957
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1034
+    },
+    {
+      "source": "KA-00006",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1158
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00008",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2833
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00009",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3387
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00010",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2268
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00011",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.4194
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2526
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00014",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3659
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1333
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1124
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1402
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1413
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.093
+    },
+    {
+      "source": "KA-00007",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1818
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00009",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1636
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00010",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2346
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00011",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2778
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.25
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00014",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1071
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1236
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1091
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1111
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1573
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1316
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1011
+    },
+    {
+      "source": "KA-00008",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0962
+    },
+    {
+      "source": "KA-00009",
+      "target": "KA-00010",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2184
+    },
+    {
+      "source": "KA-00009",
+      "target": "KA-00011",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.25
+    },
+    {
+      "source": "KA-00009",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2326
+    },
+    {
+      "source": "KA-00009",
+      "target": "KA-00014",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2073
+    },
+    {
+      "source": "KA-00009",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1042
+    },
+    {
+      "source": "KA-00009",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1237
+    },
+    {
+      "source": "KA-00009",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1358
+    },
+    {
+      "source": "KA-00009",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1556
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00011",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2472
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.6322
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00014",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1538
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2137
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00016",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.102
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1319
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0991
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2609
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2075
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2069
+    },
+    {
+      "source": "KA-00010",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1
+    },
+    {
+      "source": "KA-00011",
+      "target": "KA-00012",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.4416
+    },
+    {
+      "source": "KA-00011",
+      "target": "KA-00014",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1954
+    },
+    {
+      "source": "KA-00011",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1935
+    },
+    {
+      "source": "KA-00011",
+      "target": "KA-00016",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1
+    },
+    {
+      "source": "KA-00011",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1633
+    },
+    {
+      "source": "KA-00011",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1412
+    },
+    {
+      "source": "KA-00011",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3133
+    },
+    {
+      "source": "KA-00012",
+      "target": "KA-00014",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1638
+    },
+    {
+      "source": "KA-00012",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2456
+    },
+    {
+      "source": "KA-00012",
+      "target": "KA-00016",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.102
+    },
+    {
+      "source": "KA-00012",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1196
+    },
+    {
+      "source": "KA-00012",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2185
+    },
+    {
+      "source": "KA-00012",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1852
+    },
+    {
+      "source": "KA-00012",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2613
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0988
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00016",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1458
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00017",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1765
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00018",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2258
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00019",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1935
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00020",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1875
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00021",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2069
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1129
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0952
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1194
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1228
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1013
+    },
+    {
+      "source": "KA-00013",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0952
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00015",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2736
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00016",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1099
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00017",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1026
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00018",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2921
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2778
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3011
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1957
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.33
+    },
+    {
+      "source": "KA-00014",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0952
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00016",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1134
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00017",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1071
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00018",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2133
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00019",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1538
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00020",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1519
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00021",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1139
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1319
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2979
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.8354
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.5802
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2188
+    },
+    {
+      "source": "KA-00015",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.6279
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00017",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.439
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00018",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1875
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00019",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1667
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00020",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1633
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00021",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0952
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1733
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1212
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1059
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2206
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1277
+    },
+    {
+      "source": "KA-00016",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1404
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00018",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2353
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00019",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2424
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00020",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2353
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00021",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1231
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1034
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1127
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1525
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1375
+    },
+    {
+      "source": "KA-00017",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1111
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00019",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3929
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00020",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3793
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00021",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3704
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2909
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2051
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2623
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1786
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2361
+    },
+    {
+      "source": "KA-00018",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0909
+    },
+    {
+      "source": "KA-00019",
+      "target": "KA-00020",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.7727
+    },
+    {
+      "source": "KA-00019",
+      "target": "KA-00021",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3846
+    },
+    {
+      "source": "KA-00019",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1087
+    },
+    {
+      "source": "KA-00019",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1475
+    },
+    {
+      "source": "KA-00019",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1481
+    },
+    {
+      "source": "KA-00019",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1692
+    },
+    {
+      "source": "KA-00019",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1607
+    },
+    {
+      "source": "KA-00019",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1429
+    },
+    {
+      "source": "KA-00020",
+      "target": "KA-00021",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3704
+    },
+    {
+      "source": "KA-00020",
+      "target": "KA-00022",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1064
+    },
+    {
+      "source": "KA-00020",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1452
+    },
+    {
+      "source": "KA-00020",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1463
+    },
+    {
+      "source": "KA-00020",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1667
+    },
+    {
+      "source": "KA-00020",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1579
+    },
+    {
+      "source": "KA-00020",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.141
+    },
+    {
+      "source": "KA-00021",
+      "target": "KA-00023",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1525
+    },
+    {
+      "source": "KA-00021",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1098
+    },
+    {
+      "source": "KA-00021",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1385
+    },
+    {
+      "source": "KA-00021",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2353
+    },
+    {
+      "source": "KA-00021",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1169
+    },
+    {
+      "source": "KA-00021",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0976
+    },
+    {
+      "source": "KA-00022",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1277
+    },
+    {
+      "source": "KA-00022",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0978
+    },
+    {
+      "source": "KA-00022",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1111
+    },
+    {
+      "source": "KA-00023",
+      "target": "KA-00024",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3298
+    },
+    {
+      "source": "KA-00023",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.4026
+    },
+    {
+      "source": "KA-00023",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.7321
+    },
+    {
+      "source": "KA-00023",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.3043
+    },
+    {
+      "source": "KA-00023",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.0972
+    },
+    {
+      "source": "KA-00024",
+      "target": "KA-00025",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.6173
+    },
+    {
+      "source": "KA-00024",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2371
+    },
+    {
+      "source": "KA-00024",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.5714
+    },
+    {
+      "source": "KA-00025",
+      "target": "KA-00026",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2875
+    },
+    {
+      "source": "KA-00025",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.5366
+    },
+    {
+      "source": "KA-00025",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1039
+    },
+    {
+      "source": "KA-00026",
+      "target": "KA-00027",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.2234
+    },
+    {
+      "source": "KA-00026",
+      "target": "KA-00028",
+      "type": "SEMANTIC_VARIANT_OR_DEPENDENCY",
+      "score": 0.1045
+    }
+  ]
+}

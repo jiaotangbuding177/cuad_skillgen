@@ -1,0 +1,751 @@
+{
+  "modules": [
+    {
+      "module_id": "banking_knowledge.KB_search",
+      "name": "Kb Search",
+      "description": "Use for tasks involving KB search; the declared tool actor is assistant.",
+      "required_tools": [
+        "KB_search"
+      ],
+      "primary_tool": "KB_search",
+      "actor": "assistant",
+      "instructions": "# Kb Search\n\nActor: `assistant`\n\nParameters: query\n\nPurpose: Search the Banking knowledge base with the fixed BM25 pipeline and return the top-k source documents.\n\n## Preconditions\n- The KB_search tool requires the query argument. [ATOM-18691a7ef7]\n\n## Actor constraints\n- The KB_search tool is owned by the assistant actor. [ATOM-1a8a894cff]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-18691a7ef7",
+        "ATOM-1a8a894cff",
+        "ATOM-69c3323355"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-18691a7ef7"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-1a8a894cff",
+          "kind": "actor",
+          "tool": "KB_search",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.apply_for_credit_card",
+      "name": "Apply For Credit Card",
+      "description": "Use for tasks involving apply for credit card; the declared tool actor is assistant.",
+      "required_tools": [
+        "apply_for_credit_card"
+      ],
+      "primary_tool": "apply_for_credit_card",
+      "actor": "assistant",
+      "instructions": "# Apply For Credit Card\n\nActor: `assistant`\n\nParameters: card_type, customer_name, annual_income, rho_bank_subscription\n\nPurpose: Apply for a credit card.\n\nArgs:\n    card_type: Type of credit card\n    customer_name: Full legal name\n    annual_income: Annual income in USD\n    rho_bank_subscription: Whether user has Rho-Bank+ subscription\n\n## Preconditions\n- The apply_for_credit_card tool requires the rho_bank_subscription argument. [ATOM-0d8293a6dd]\n- The apply_for_credit_card tool requires the customer_name argument. [ATOM-62a41348fd]\n- The apply_for_credit_card tool requires the annual_income argument. [ATOM-8765a28189]\n- The apply_for_credit_card tool requires the card_type argument. [ATOM-ddf36e21f8]\n\n## Actor constraints\n- The apply_for_credit_card tool is owned by the assistant actor. [ATOM-a10adead61]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0d8293a6dd",
+        "ATOM-62a41348fd",
+        "ATOM-7185a5da52",
+        "ATOM-8765a28189",
+        "ATOM-95a20b7f90",
+        "ATOM-a10adead61",
+        "ATOM-ddf36e21f8"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0d8293a6dd",
+        "ATOM-62a41348fd",
+        "ATOM-8765a28189",
+        "ATOM-ddf36e21f8"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-a10adead61",
+          "kind": "actor",
+          "tool": "apply_for_credit_card",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.call_discoverable_agent_tool",
+      "name": "Call Discoverable Agent Tool",
+      "description": "Use for tasks involving call discoverable agent tool; the declared tool actor is assistant.",
+      "required_tools": [
+        "call_discoverable_agent_tool"
+      ],
+      "primary_tool": "call_discoverable_agent_tool",
+      "actor": "assistant",
+      "instructions": "# Call Discoverable Agent Tool\n\nActor: `assistant`\n\nParameters: agent_tool_name, arguments\n\nPurpose: Call an agent discoverable tool that you have previously unlocked.\n\nUse this after unlocking a tool with `unlock_discoverable_agent_tool`. The knowledge base\nwill tell you which tool to use and what arguments to provide.\n\nArgs:\n    agent_tool_name: The name of the agent discoverable tool to call\n    arguments: JSON string of arguments for the tool (e.g., '{\"user_id\": \"abc123\"}')\n\nReturns:\n    The result of executing the agent tool\n\n## Preconditions\n- The knowledge base will tell you which tool to use and what arguments to provide. [ATOM-3b26d57a44]\n- Args: agent_tool_name: The name of the agent discoverable tool to call arguments: JSON string of arguments for the tool (e.g., '{\"user_id\": \"abc123\"}') Returns: The result of executing the agent tool [ATOM-4b26209b7c]\n- The call_discoverable_agent_tool tool requires the arguments argument. [ATOM-4c217f194d]\n- The call_discoverable_agent_tool tool requires the agent_tool_name argument. [ATOM-e639828e56]\n\n## Actor constraints\n- The call_discoverable_agent_tool tool is owned by the assistant actor. [ATOM-4b6aed6498]\n\n## Verification\n- Use this after unlocking a tool with `unlock_discoverable_agent_tool`. [ATOM-ddf8e10444]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-3b26d57a44",
+        "ATOM-4b26209b7c",
+        "ATOM-4b6aed6498",
+        "ATOM-4c217f194d",
+        "ATOM-902c069934",
+        "ATOM-ddf8e10444",
+        "ATOM-e639828e56"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-3b26d57a44",
+        "ATOM-4b26209b7c",
+        "ATOM-4c217f194d",
+        "ATOM-e639828e56"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-ddf8e10444"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-4b6aed6498",
+          "kind": "actor",
+          "tool": "call_discoverable_agent_tool",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.call_discoverable_user_tool",
+      "name": "Call Discoverable User Tool",
+      "description": "Use for tasks involving call discoverable user tool; the declared tool actor is assistant.",
+      "required_tools": [
+        "call_discoverable_user_tool"
+      ],
+      "primary_tool": "call_discoverable_user_tool",
+      "actor": "assistant",
+      "instructions": "# Call Discoverable User Tool\n\nActor: `assistant`\n\nParameters: discoverable_tool_name, arguments\n\nPurpose: Call a tool that was given to you by the agent.\n\nUse this when the agent has instructed you to perform an action using\na discoverable tool. The agent will have told you the tool name and arguments.\n\nThis simulates you performing the action in the real world (e.g., opening\na webpage, navigating to a section, clicking a button).\n\nArgs:\n    discoverable_tool_name: The name of the discoverable tool to call (e.g., \"open_webpage\")\n    arguments: JSON string of arguments for the tool (e.g., '{\"url\": \"https://example.com\"}')\n\nReturns:\n    The result of executing the discoverable tool\n\n## Preconditions\n- The agent will have told you the tool name and arguments. [ATOM-4e933e5ba7]\n- The call_discoverable_user_tool tool requires the discoverable_tool_name argument. [ATOM-5e188fa00d]\n- The call_discoverable_user_tool tool requires the arguments argument. [ATOM-e69a9e4869]\n- Args: discoverable_tool_name: The name of the discoverable tool to call (e.g., \"open_webpage\") arguments: JSON string of arguments for the tool (e.g., '{\"url\": \"https://example.com\"}') Returns: The result of executing the discoverable tool [ATOM-fd1ff37fa7]\n\n## Actor constraints\n- The call_discoverable_user_tool tool is owned by the assistant actor. [ATOM-9ee50219c7]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-2f3373201a",
+        "ATOM-4bdbe3e51c",
+        "ATOM-4e933e5ba7",
+        "ATOM-5e188fa00d",
+        "ATOM-9ee50219c7",
+        "ATOM-e69a9e4869",
+        "ATOM-f623e6f2df",
+        "ATOM-fd1ff37fa7"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-4e933e5ba7",
+        "ATOM-5e188fa00d",
+        "ATOM-e69a9e4869",
+        "ATOM-fd1ff37fa7"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-9ee50219c7",
+          "kind": "actor",
+          "tool": "call_discoverable_user_tool",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.change_user_email",
+      "name": "Change User Email",
+      "description": "Use for tasks involving change user email; the declared tool actor is assistant.",
+      "required_tools": [
+        "change_user_email"
+      ],
+      "primary_tool": "change_user_email",
+      "actor": "assistant",
+      "instructions": "# Change User Email\n\nActor: `assistant`\n\nParameters: user_id, new_email\n\nPurpose: Change the email address for a user.\n\nArgs:\n    user_id: The ID of the user whose email should be changed\n    new_email: The new email address to set for the user\n\n## Preconditions\n- The change_user_email tool requires the new_email argument. [ATOM-2b23ef717a]\n- The change_user_email tool requires the user_id argument. [ATOM-73236c9585]\n\n## Actor constraints\n- The change_user_email tool is owned by the assistant actor. [ATOM-f89d149c6e]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0012faec5a",
+        "ATOM-2b23ef717a",
+        "ATOM-6d1ed4bb41",
+        "ATOM-73236c9585",
+        "ATOM-f89d149c6e"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2b23ef717a",
+        "ATOM-73236c9585"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-f89d149c6e",
+          "kind": "actor",
+          "tool": "change_user_email",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.get_credit_card_accounts_by_user",
+      "name": "Get Credit Card Accounts By User",
+      "description": "Use for tasks involving get credit card accounts by user; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_credit_card_accounts_by_user"
+      ],
+      "primary_tool": "get_credit_card_accounts_by_user",
+      "actor": "assistant",
+      "instructions": "# Get Credit Card Accounts By User\n\nActor: `assistant`\n\nParameters: user_id\n\nPurpose: Get all credit card accounts for a user.\n\nReturns information about each credit card account including card type,\ndate opened, current balance, and reward points.\n\nArgs:\n    user_id: The ID of the user to look up credit card accounts for\n\n## Preconditions\n- The get_credit_card_accounts_by_user tool requires the user_id argument. [ATOM-fd1b7fdfa1]\n\n## Actor constraints\n- The get_credit_card_accounts_by_user tool is owned by the assistant actor. [ATOM-164843068c]\n\n## Communication\n- Returns information about each credit card account including card type, date opened, current balance, and reward points. [ATOM-44f7a459be]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-164843068c",
+        "ATOM-44f7a459be",
+        "ATOM-9a0afaf2f8",
+        "ATOM-dc38afef1a",
+        "ATOM-fd1b7fdfa1"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-fd1b7fdfa1"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-164843068c",
+          "kind": "actor",
+          "tool": "get_credit_card_accounts_by_user",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.get_credit_card_transactions_by_user",
+      "name": "Get Credit Card Transactions By User",
+      "description": "Use for tasks involving get credit card transactions by user; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_credit_card_transactions_by_user"
+      ],
+      "primary_tool": "get_credit_card_transactions_by_user",
+      "actor": "assistant",
+      "instructions": "# Get Credit Card Transactions By User\n\nActor: `assistant`\n\nParameters: user_id\n\nPurpose: Get all credit card transactions for a user.\n\nArgs:\n    user_id: The ID of the user to look up transactions for\n\n## Preconditions\n- The get_credit_card_transactions_by_user tool requires the user_id argument. [ATOM-d9595f9cfd]\n\n## Actor constraints\n- The get_credit_card_transactions_by_user tool is owned by the assistant actor. [ATOM-9238d58ce6]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-9238d58ce6",
+        "ATOM-cbe04ce46e",
+        "ATOM-d9595f9cfd",
+        "ATOM-de7d4fe283"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-d9595f9cfd"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-9238d58ce6",
+          "kind": "actor",
+          "tool": "get_credit_card_transactions_by_user",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.get_current_time",
+      "name": "Get Current Time",
+      "description": "Use for tasks involving get current time; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_current_time"
+      ],
+      "primary_tool": "get_current_time",
+      "actor": "assistant",
+      "instructions": "# Get Current Time\n\nActor: `assistant`\n\nParameters: none\n\nPurpose: Get the current time. Use this to get the current timestamp for logging verification records.\n\nReturns:\n    The current time in the format \"YYYY-MM-DD HH:MM:SS TZ\"\n\n## Actor constraints\n- The get_current_time tool is owned by the assistant actor. [ATOM-bc40c9e208]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0e2d257c16",
+        "ATOM-4567e24836",
+        "ATOM-bc40c9e208",
+        "ATOM-e3c8149504"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-e6baeee1dd"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-bc40c9e208",
+          "kind": "actor",
+          "tool": "get_current_time",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.get_referrals_by_user",
+      "name": "Get Referrals By User",
+      "description": "Use for tasks involving get referrals by user; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_referrals_by_user"
+      ],
+      "primary_tool": "get_referrals_by_user",
+      "actor": "assistant",
+      "instructions": "# Get Referrals By User\n\nActor: `assistant`\n\nParameters: user_id\n\nPurpose: Get all referrals made by a user.\n\nArgs:\n    user_id: The ID of the user (referrer) to look up referrals for\n\n## Preconditions\n- The get_referrals_by_user tool requires the user_id argument. [ATOM-6526a891e8]\n\n## Actor constraints\n- The get_referrals_by_user tool is owned by the assistant actor. [ATOM-a7f443ce7c]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-571b1db832",
+        "ATOM-580306f695",
+        "ATOM-6526a891e8",
+        "ATOM-a7f443ce7c"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-6526a891e8"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-a7f443ce7c",
+          "kind": "actor",
+          "tool": "get_referrals_by_user",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.get_user_information_by_email",
+      "name": "Get User Information By Email",
+      "description": "Use for tasks involving get user information by email; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_user_information_by_email"
+      ],
+      "primary_tool": "get_user_information_by_email",
+      "actor": "assistant",
+      "instructions": "# Get User Information By Email\n\nActor: `assistant`\n\nParameters: email\n\nPurpose: Get the information (date of birth, email, phone number, address) for a user by their email.\n\nArgs:\n    email: The email of the user\n\n## Preconditions\n- The get_user_information_by_email tool requires the email argument. [ATOM-686803aa69]\n\n## Actor constraints\n- The get_user_information_by_email tool is owned by the assistant actor. [ATOM-ea5636a1b2]\n\n## Communication\n- Get the information (date of birth, email, phone number, address) for a user by their email. [ATOM-f8be505f03]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-528e3a940d",
+        "ATOM-686803aa69",
+        "ATOM-ea5636a1b2",
+        "ATOM-f8be505f03"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-686803aa69"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-ea5636a1b2",
+          "kind": "actor",
+          "tool": "get_user_information_by_email",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.get_user_information_by_id",
+      "name": "Get User Information By Id",
+      "description": "Use for tasks involving get user information by id; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_user_information_by_id"
+      ],
+      "primary_tool": "get_user_information_by_id",
+      "actor": "assistant",
+      "instructions": "# Get User Information By Id\n\nActor: `assistant`\n\nParameters: user_id\n\nPurpose: Get the information (date of birth, email, phone number, address) for a user by their user id.\n\nArgs:\n    user_id: The ID of the user\n\n## Preconditions\n- The get_user_information_by_id tool requires the user_id argument. [ATOM-72e6d3f00c]\n\n## Actor constraints\n- The get_user_information_by_id tool is owned by the assistant actor. [ATOM-5c7edc2d7e]\n\n## Communication\n- Get the information (date of birth, email, phone number, address) for a user by their user id. [ATOM-923ef9f972]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-514d36ddf6",
+        "ATOM-5c7edc2d7e",
+        "ATOM-72e6d3f00c",
+        "ATOM-923ef9f972"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-72e6d3f00c"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-80cacbcf4a"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-5c7edc2d7e",
+          "kind": "actor",
+          "tool": "get_user_information_by_id",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.get_user_information_by_name",
+      "name": "Get User Information By Name",
+      "description": "Use for tasks involving get user information by name; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_user_information_by_name"
+      ],
+      "primary_tool": "get_user_information_by_name",
+      "actor": "assistant",
+      "instructions": "# Get User Information By Name\n\nActor: `assistant`\n\nParameters: customer_name\n\nPurpose: Get the information (date of birth, email, phone number, address) for a user by their name. Case Sensitive.\n\nArgs:\n    customer_name: The name of the user\n\n## Preconditions\n- The get_user_information_by_name tool requires the customer_name argument. [ATOM-7e3a7572b4]\n\n## Actor constraints\n- The get_user_information_by_name tool is owned by the assistant actor. [ATOM-ef4b9aec07]\n\n## Communication\n- Get the information (date of birth, email, phone number, address) for a user by their name. [ATOM-a367369312]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-7e3a7572b4",
+        "ATOM-a367369312",
+        "ATOM-ef4b9aec07",
+        "ATOM-f4b25ed137"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-7e3a7572b4"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-ef4b9aec07",
+          "kind": "actor",
+          "tool": "get_user_information_by_name",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.give_discoverable_user_tool",
+      "name": "Give Discoverable User Tool",
+      "description": "Use for tasks involving give discoverable user tool; the declared tool actor is assistant.",
+      "required_tools": [
+        "give_discoverable_user_tool"
+      ],
+      "primary_tool": "give_discoverable_user_tool",
+      "actor": "assistant",
+      "instructions": "# Give Discoverable User Tool\n\nActor: `assistant`\n\nParameters: discoverable_tool_name, arguments\n\nPurpose: Pass a tool to the user so they can execute it themselves.\n\nUse this when the knowledge base indicates that the user should perform\nan action themselves (e.g., \"to do X, have the user call tool_name(args)\").\n\nThe user will then be able to call `call_discoverable_tool` with the same\ntool name and arguments to simulate executing the action.\n\nArgs:\n    discoverable_tool_name: The name of the discoverable tool (e.g., \"open_webpage\", \"navigate_to_section\")\n    arguments: JSON string of arguments for the tool (e.g., '{\"url\": \"https://example.com\"}')\n\nReturns:\n    A confirmation message with instructions for the user\n\n## Preconditions\n- The give_discoverable_user_tool tool requires the arguments argument. [ATOM-48e7214af9]\n- The give_discoverable_user_tool tool requires the discoverable_tool_name argument. [ATOM-a188a0e156]\n- The user will then be able to call `call_discoverable_tool` with the same tool name and arguments to simulate executing the action. [ATOM-c9f1979944]\n- Args: discoverable_tool_name: The name of the discoverable tool (e.g., \"open_webpage\", \"navigate_to_section\") arguments: JSON string of arguments for the tool (e.g., '{\"url\": \"https://example.com\"}') Returns: A confirmation message with instructions for the user [ATOM-fda0cbeea3]\n\n## Actor constraints\n- The give_discoverable_user_tool tool is owned by the assistant actor. [ATOM-db0e7ec5e6]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-3e508976c9",
+        "ATOM-48e7214af9",
+        "ATOM-58237aa9a2",
+        "ATOM-a188a0e156",
+        "ATOM-c9f1979944",
+        "ATOM-db0e7ec5e6",
+        "ATOM-fda0cbeea3"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-48e7214af9",
+        "ATOM-a188a0e156",
+        "ATOM-c9f1979944",
+        "ATOM-fda0cbeea3"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-db0e7ec5e6",
+          "kind": "actor",
+          "tool": "give_discoverable_user_tool",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.list_discoverable_agent_tools",
+      "name": "List Discoverable Agent Tools",
+      "description": "Use for tasks involving list discoverable agent tools; the declared tool actor is assistant.",
+      "required_tools": [
+        "list_discoverable_agent_tools"
+      ],
+      "primary_tool": "list_discoverable_agent_tools",
+      "actor": "assistant",
+      "instructions": "# List Discoverable Agent Tools\n\nActor: `assistant`\n\nParameters: none\n\nPurpose: List all agent discoverable tools that you have called.\n\nUse this to see what specialized tools you have used.\n\nReturns:\n    A list of tools that you have called\n\n## Actor constraints\n- The list_discoverable_agent_tools tool is owned by the assistant actor. [ATOM-300259e1fd]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-300259e1fd",
+        "ATOM-b10ff0902f",
+        "ATOM-d95a2cabcc",
+        "ATOM-d9b55f53ee"
+      ],
+      "precondition_atom_ids": [],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-300259e1fd",
+          "kind": "actor",
+          "tool": "list_discoverable_agent_tools",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.list_discoverable_user_tools",
+      "name": "List Discoverable User Tools",
+      "description": "Use for tasks involving list discoverable user tools; the declared tool actor is assistant.",
+      "required_tools": [
+        "list_discoverable_user_tools"
+      ],
+      "primary_tool": "list_discoverable_user_tools",
+      "actor": "assistant",
+      "instructions": "# List Discoverable User Tools\n\nActor: `assistant`\n\nParameters: none\n\nPurpose: List all tools that have been given to you by the agent.\n\nUse this to see what actions the agent has instructed you to perform.\n\nReturns:\n    A list of tools that have been given to you\n\n## Actor constraints\n- The list_discoverable_user_tools tool is owned by the assistant actor. [ATOM-ca87abf678]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-a058218994",
+        "ATOM-a190c83ec7",
+        "ATOM-b5cc6eb919",
+        "ATOM-ca87abf678"
+      ],
+      "precondition_atom_ids": [],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-ca87abf678",
+          "kind": "actor",
+          "tool": "list_discoverable_user_tools",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.log_verification",
+      "name": "Log Verification",
+      "description": "Use for tasks involving log verification; the declared tool actor is assistant.",
+      "required_tools": [
+        "log_verification"
+      ],
+      "primary_tool": "log_verification",
+      "actor": "assistant",
+      "instructions": "# Log Verification\n\nActor: `assistant`\n\nParameters: name, user_id, address, email, phone_number, date_of_birth, time_verified\n\nPurpose: Log a verification record after successfully verifying a user's identity.\n\nCall this tool after you have verified a user by confirming 2 out of 4 identity fields\n(date of birth, email, phone number, address). This creates an audit record of the verification.\n\nArgs:\n    name: The verified user's full name\n    user_id: The verified user's ID\n    address: The verified user's address\n    email: The verified user's email\n    phone_number: The verified user's phone number\n    date_of_birth: The verified user's date of birth (MM/DD/YYYY format)\n    time_verified: The timestamp of the verification (e.g., \"2025-11-14 03:40:00 EST\")\n\n## Preconditions\n- The log_verification tool requires the user_id argument. [ATOM-1153e70f4e]\n- The log_verification tool requires the phone_number argument. [ATOM-1f89d8aaf8]\n- The log_verification tool requires the email argument. [ATOM-3852642bd2]\n- The log_verification tool requires the address argument. [ATOM-611c5f4de7]\n- The log_verification tool requires the time_verified argument. [ATOM-67a4e757e8]\n- The log_verification tool requires the name argument. [ATOM-df88754ab6]\n- The log_verification tool requires the date_of_birth argument. [ATOM-ed947ea73f]\n- Call this tool after you have verified a user by confirming 2 out of 4 identity fields (date of birth, email, phone number, address). [ATOM-c01ff0c3ca]\n\n## Actor constraints\n- The log_verification tool is owned by the assistant actor. [ATOM-0a02d8eff9]\n\n## Verification\n- Log a verification record after successfully verifying a user's identity. [ATOM-2cd50f81f5]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0a02d8eff9",
+        "ATOM-1153e70f4e",
+        "ATOM-1f89d8aaf8",
+        "ATOM-295e7176c6",
+        "ATOM-2cd50f81f5",
+        "ATOM-3852642bd2",
+        "ATOM-611c5f4de7",
+        "ATOM-67a4e757e8",
+        "ATOM-c01ff0c3ca",
+        "ATOM-df88754ab6",
+        "ATOM-ed947ea73f",
+        "ATOM-f2d58212ea"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-1153e70f4e",
+        "ATOM-1f89d8aaf8",
+        "ATOM-3852642bd2",
+        "ATOM-611c5f4de7",
+        "ATOM-67a4e757e8",
+        "ATOM-c01ff0c3ca",
+        "ATOM-df88754ab6",
+        "ATOM-ed947ea73f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-2cd50f81f5"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-0a02d8eff9",
+          "kind": "actor",
+          "tool": "log_verification",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.request_human_agent_transfer",
+      "name": "Request Human Agent Transfer",
+      "description": "Use for tasks involving request human agent transfer; the declared tool actor is assistant.",
+      "required_tools": [
+        "request_human_agent_transfer"
+      ],
+      "primary_tool": "request_human_agent_transfer",
+      "actor": "assistant",
+      "instructions": "# Request Human Agent Transfer\n\nActor: `assistant`\n\nParameters: none\n\nPurpose: Request to be transferred to a human agent for assistance.\n\nUse this when you want to speak with a real human agent instead of\nthe automated system. Each request will be logged and processed.\n\nReturns:\n    Confirmation that your transfer request has been submitted\n\n## Actor constraints\n- The request_human_agent_transfer tool is owned by the assistant actor. [ATOM-17186b6ff9]\n\n## Exceptions\n- Request to be transferred to a human agent for assistance. [ATOM-b2d45dcf9f]\n- Returns: Confirmation that your transfer request has been submitted [ATOM-d0d68f863d]\n- Use this when you want to speak with a real human agent instead of the automated system. [ATOM-f29d588e35]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-17186b6ff9",
+        "ATOM-83ff8337ae",
+        "ATOM-b2d45dcf9f",
+        "ATOM-d0d68f863d",
+        "ATOM-f29d588e35"
+      ],
+      "precondition_atom_ids": [],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-b2d45dcf9f",
+        "ATOM-b388af3140",
+        "ATOM-d0d68f863d",
+        "ATOM-f29d588e35"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-17186b6ff9",
+          "kind": "actor",
+          "tool": "request_human_agent_transfer",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.submit_referral",
+      "name": "Submit Referral",
+      "description": "Use for tasks involving submit referral; the declared tool actor is assistant.",
+      "required_tools": [
+        "submit_referral"
+      ],
+      "primary_tool": "submit_referral",
+      "actor": "assistant",
+      "instructions": "# Submit Referral\n\nActor: `assistant`\n\nParameters: user_id, account_type\n\nPurpose: Submit a referral request to refer someone to open an account.\n\nArgs:\n    user_id: Your user ID (the referrer)\n    account_type: The type of account you are referring someone to open\n\n## Preconditions\n- The submit_referral tool requires the account_type argument. [ATOM-47e80ff475]\n- The submit_referral tool requires the user_id argument. [ATOM-cbe30c5a9b]\n\n## Actor constraints\n- The submit_referral tool is owned by the assistant actor. [ATOM-c4ac20b4d7]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-3c49138928",
+        "ATOM-47e80ff475",
+        "ATOM-c3153f2fe0",
+        "ATOM-c4ac20b4d7",
+        "ATOM-cbe30c5a9b"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-47e80ff475",
+        "ATOM-cbe30c5a9b"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-c4ac20b4d7",
+          "kind": "actor",
+          "tool": "submit_referral",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.submit_transaction",
+      "name": "Submit Transaction",
+      "description": "Use for tasks involving submit transaction; the declared tool actor is assistant.",
+      "required_tools": [
+        "submit_transaction"
+      ],
+      "primary_tool": "submit_transaction",
+      "actor": "assistant",
+      "instructions": "# Submit Transaction\n\nActor: `assistant`\n\nParameters: user_id, credit_card_type, merchant_name, amount, category\n\nPurpose: Submit a credit card transaction.\n\nArgs:\n    user_id: Your user ID\n    credit_card_type: Type of credit card used (e.g., \"Bronze Rewards Card\", \"Gold Rewards Card\")\n    merchant_name: Name of the merchant where the purchase was made\n    amount: Transaction amount in USD (e.g., 127.43)\n    category: Transaction category (e.g., \"Groceries\", \"Dining\", \"Travel\", \"Software\", \"Entertainment\", \"Utilities\", \"Shopping\")\n\n## Preconditions\n- The submit_transaction tool requires the amount argument. [ATOM-0c5a546280]\n- The submit_transaction tool requires the category argument. [ATOM-390b47b844]\n- The submit_transaction tool requires the credit_card_type argument. [ATOM-53869cb493]\n- The submit_transaction tool requires the merchant_name argument. [ATOM-5537e8afbd]\n- The submit_transaction tool requires the user_id argument. [ATOM-7401226f88]\n\n## Actor constraints\n- The submit_transaction tool is owned by the assistant actor. [ATOM-f34897b180]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0c5a546280",
+        "ATOM-390b47b844",
+        "ATOM-53869cb493",
+        "ATOM-5537e8afbd",
+        "ATOM-7401226f88",
+        "ATOM-f34897b180",
+        "ATOM-fc06651245",
+        "ATOM-ff61d1d6de"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0c5a546280",
+        "ATOM-390b47b844",
+        "ATOM-53869cb493",
+        "ATOM-5537e8afbd",
+        "ATOM-7401226f88"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-f34897b180",
+          "kind": "actor",
+          "tool": "submit_transaction",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.transfer_to_human_agents",
+      "name": "Transfer To Human Agents",
+      "description": "Use for tasks involving transfer to human agents; the declared tool actor is assistant.",
+      "required_tools": [
+        "transfer_to_human_agents"
+      ],
+      "primary_tool": "transfer_to_human_agents",
+      "actor": "assistant",
+      "instructions": "# Transfer To Human Agents\n\nActor: `assistant`\n\nParameters: summary, reason\n\nPurpose: Transfer the user to a human agent.\n\nThe proper transfer reason enum can be found in the knowledge base: search it before calling this tool to select the proper applicable reason.\n\nArgs:\n    summary: A summary of the user's issue and what was attempted before transfer.\n    reason: The specific reason code for the transfer.\n\n## Preconditions\n- The transfer_to_human_agents tool requires the summary argument. [ATOM-e1d653f91f]\n- The transfer_to_human_agents tool requires the reason argument. [ATOM-e6d74af94c]\n\n## Actor constraints\n- The transfer_to_human_agents tool is owned by the assistant actor. [ATOM-339a5fd1aa]\n\n## Exceptions\n- Transfer the user to a human agent. [ATOM-0abc6600d4]\n- reason: The specific reason code for the transfer. [ATOM-7abaa6750a]\n- Args: summary: A summary of the user's issue and what was attempted before transfer. [ATOM-c5ee51c5b7]\n- The proper transfer reason enum can be found in the knowledge base: search it before calling this tool to select the proper applicable reason. [ATOM-d339bc0d80]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0abc6600d4",
+        "ATOM-339a5fd1aa",
+        "ATOM-7abaa6750a",
+        "ATOM-c5ee51c5b7",
+        "ATOM-d339bc0d80",
+        "ATOM-e1d653f91f",
+        "ATOM-e6d74af94c"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-e1d653f91f",
+        "ATOM-e6d74af94c"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-0abc6600d4",
+        "ATOM-140ad7705d",
+        "ATOM-1df377a30d",
+        "ATOM-7abaa6750a",
+        "ATOM-c5ee51c5b7",
+        "ATOM-d339bc0d80"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-339a5fd1aa",
+          "kind": "actor",
+          "tool": "transfer_to_human_agents",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    },
+    {
+      "module_id": "banking_knowledge.unlock_discoverable_agent_tool",
+      "name": "Unlock Discoverable Agent Tool",
+      "description": "Use for tasks involving unlock discoverable agent tool; the declared tool actor is assistant.",
+      "required_tools": [
+        "unlock_discoverable_agent_tool"
+      ],
+      "primary_tool": "unlock_discoverable_agent_tool",
+      "actor": "assistant",
+      "instructions": "# Unlock Discoverable Agent Tool\n\nActor: `assistant`\n\nParameters: agent_tool_name\n\nPurpose: Unlock an agent discoverable tool that was found in the knowledge base.\n\nUse this when the knowledge base indicates that you have access to a specialized\ninternal tool. The knowledge base will tell you the tool name to unlock.\n\nAfter unlocking, you can use the tool by calling `call_discoverable_agent_tool` with\nthe tool name and required arguments.\n\nArgs:\n    agent_tool_name: The name of the agent discoverable tool to unlock\n                    (e.g., \"calculate_apr_adjustment_7842\")\n\nReturns:\n    A confirmation message with the tool's description and parameters\n\n## Preconditions\n- The unlock_discoverable_agent_tool tool requires the agent_tool_name argument. [ATOM-0dddafc5ec]\n- Args: agent_tool_name: The name of the agent discoverable tool to unlock (e.g., \"calculate_apr_adjustment_7842\") Returns: A confirmation message with the tool's description and parameters [ATOM-07114fd667]\n\n## Actor constraints\n- The unlock_discoverable_agent_tool tool is owned by the assistant actor. [ATOM-52dfe7e5c8]\n\n## Communication\n- The knowledge base will tell you the tool name to unlock. [ATOM-974247d819]\n\n## Verification\n- After unlocking, you can use the tool by calling `call_discoverable_agent_tool` with the tool name and required arguments. [ATOM-675aa6065d]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-07114fd667",
+        "ATOM-0dddafc5ec",
+        "ATOM-3b1d80fe44",
+        "ATOM-52dfe7e5c8",
+        "ATOM-675aa6065d",
+        "ATOM-974247d819",
+        "ATOM-dc41a3d7cd"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-07114fd667",
+        "ATOM-0dddafc5ec"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-675aa6065d"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-52dfe7e5c8",
+          "kind": "actor",
+          "tool": "unlock_discoverable_agent_tool",
+          "actor": "assistant"
+        }
+      ],
+      "method": "document_tool_maker"
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "nodes": [
+    {
+      "id": "KA-0001",
+      "type": "policy_section",
+      "label": "Airline Agent Policy"
+    },
+    {
+      "id": "KA-0002",
+      "type": "policy_section",
+      "label": "Domain Basic"
+    },
+    {
+      "id": "KA-0003",
+      "type": "policy_section",
+      "label": "Book flight"
+    },
+    {
+      "id": "KA-0004",
+      "type": "policy_section",
+      "label": "Modify flight"
+    },
+    {
+      "id": "KA-0005",
+      "type": "policy_section",
+      "label": "Cancel flight"
+    },
+    {
+      "id": "KA-0006",
+      "type": "policy_section",
+      "label": "Refund"
+    },
+    {
+      "id": "KA-0007",
+      "type": "tool_contract",
+      "label": "book_reservation"
+    },
+    {
+      "id": "KA-0008",
+      "type": "tool_contract",
+      "label": "calculate"
+    },
+    {
+      "id": "KA-0009",
+      "type": "tool_contract",
+      "label": "cancel_reservation"
+    },
+    {
+      "id": "KA-0010",
+      "type": "tool_contract",
+      "label": "get_reservation_details"
+    },
+    {
+      "id": "KA-0011",
+      "type": "tool_contract",
+      "label": "get_user_details"
+    },
+    {
+      "id": "KA-0012",
+      "type": "tool_contract",
+      "label": "list_all_airports"
+    },
+    {
+      "id": "KA-0013",
+      "type": "tool_contract",
+      "label": "search_direct_flight"
+    },
+    {
+      "id": "KA-0014",
+      "type": "tool_contract",
+      "label": "search_onestop_flight"
+    },
+    {
+      "id": "KA-0015",
+      "type": "tool_contract",
+      "label": "send_certificate"
+    },
+    {
+      "id": "KA-0016",
+      "type": "tool_contract",
+      "label": "think"
+    },
+    {
+      "id": "KA-0017",
+      "type": "tool_contract",
+      "label": "transfer_to_human_agents"
+    },
+    {
+      "id": "KA-0018",
+      "type": "tool_contract",
+      "label": "update_reservation_baggages"
+    },
+    {
+      "id": "KA-0019",
+      "type": "tool_contract",
+      "label": "update_reservation_flights"
+    },
+    {
+      "id": "KA-0020",
+      "type": "tool_contract",
+      "label": "update_reservation_passengers"
+    }
+  ],
+  "edges": [
+    {
+      "source": "KA-0001",
+      "target": "KA-0003",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1111
+    },
+    {
+      "source": "KA-0001",
+      "target": "KA-0004",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1533
+    },
+    {
+      "source": "KA-0001",
+      "target": "KA-0005",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1525
+    },
+    {
+      "source": "KA-0002",
+      "target": "KA-0003",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1727
+    },
+    {
+      "source": "KA-0002",
+      "target": "KA-0004",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1417
+    },
+    {
+      "source": "KA-0002",
+      "target": "KA-0005",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1275
+    },
+    {
+      "source": "KA-0002",
+      "target": "KA-0006",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1149
+    },
+    {
+      "source": "KA-0003",
+      "target": "KA-0004",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.2424
+    },
+    {
+      "source": "KA-0003",
+      "target": "KA-0005",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1833
+    },
+    {
+      "source": "KA-0003",
+      "target": "KA-0006",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.181
+    },
+    {
+      "source": "KA-0004",
+      "target": "KA-0005",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.2712
+    },
+    {
+      "source": "KA-0004",
+      "target": "KA-0006",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1282
+    },
+    {
+      "source": "KA-0004",
+      "target": "KA-0016",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.0808
+    },
+    {
+      "source": "KA-0005",
+      "target": "KA-0006",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1458
+    },
+    {
+      "source": "KA-0007",
+      "target": "KA-0009",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1667
+    },
+    {
+      "source": "KA-0007",
+      "target": "KA-0010",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1667
+    },
+    {
+      "source": "KA-0007",
+      "target": "KA-0018",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1429
+    },
+    {
+      "source": "KA-0007",
+      "target": "KA-0019",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1429
+    },
+    {
+      "source": "KA-0007",
+      "target": "KA-0020",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1429
+    },
+    {
+      "source": "KA-0009",
+      "target": "KA-0010",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.1429
+    },
+    {
+      "source": "KA-0009",
+      "target": "KA-0018",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.125
+    },
+    {
+      "source": "KA-0009",
+      "target": "KA-0019",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.125
+    },
+    {
+      "source": "KA-0009",
+      "target": "KA-0020",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.125
+    },
+    {
+      "source": "KA-0010",
+      "target": "KA-0011",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.25
+    },
+    {
+      "source": "KA-0010",
+      "target": "KA-0018",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.125
+    },
+    {
+      "source": "KA-0010",
+      "target": "KA-0019",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.125
+    },
+    {
+      "source": "KA-0010",
+      "target": "KA-0020",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.125
+    },
+    {
+      "source": "KA-0011",
+      "target": "KA-0012",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.0909
+    },
+    {
+      "source": "KA-0013",
+      "target": "KA-0014",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.8
+    },
+    {
+      "source": "KA-0018",
+      "target": "KA-0019",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.4286
+    },
+    {
+      "source": "KA-0018",
+      "target": "KA-0020",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.4286
+    },
+    {
+      "source": "KA-0019",
+      "target": "KA-0020",
+      "type": "RELATED_POLICY_OR_TOOL",
+      "score": 0.4286
+    }
+  ]
+}

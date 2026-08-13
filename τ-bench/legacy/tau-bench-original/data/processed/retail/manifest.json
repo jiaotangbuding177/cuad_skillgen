@@ -1,0 +1,40 @@
+{
+  "domain": "retail",
+  "splits": {
+    "train": 500,
+    "dev": 20,
+    "test": 115
+  },
+  "training_task_use_allowed": true,
+  "compilation_sources": [
+    "documents/policy.md",
+    "documents/policy_sections.jsonl",
+    "documents/runtime_rules.json",
+    "documents/tool_catalog.json",
+    "tasks/train.jsonl"
+  ],
+  "held_out_from_compilation": [
+    "tasks/dev.jsonl",
+    "tasks/test.jsonl"
+  ],
+  "policy_sha256": "e50aad2150625a5bcce494fff461b7dd825a7c7f5db1500b5b61b9bf7327b692",
+  "policy_sections": 8,
+  "tools": 16,
+  "gold_action_distribution_all_splits": {
+    "calculate": 14,
+    "cancel_pending_order": 207,
+    "exchange_delivered_order_items": 197,
+    "find_user_id_by_email": 15,
+    "find_user_id_by_name_zip": 62,
+    "get_order_details": 171,
+    "get_product_details": 73,
+    "get_user_details": 59,
+    "list_all_product_types": 6,
+    "modify_pending_order_address": 73,
+    "modify_pending_order_items": 250,
+    "modify_pending_order_payment": 38,
+    "modify_user_address": 11,
+    "return_delivered_order_items": 195,
+    "transfer_to_human_agents": 4
+  }
+}

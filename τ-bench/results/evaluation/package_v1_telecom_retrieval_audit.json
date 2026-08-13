@@ -1,0 +1,656 @@
+{
+  "runtime": "package_v1",
+  "domain": "telecom",
+  "query": "customer abroad has slow mobile data with roaming and data saver",
+  "config": {
+    "mode": "package_v1",
+    "skill_top_k": 4,
+    "atom_top_k": 6,
+    "rule_top_k": 3,
+    "workflow_top_k": 3,
+    "pattern_top_k": 3,
+    "max_context_chars": 12000,
+    "max_item_chars": 1800,
+    "history_messages": 6,
+    "graph_traversal": false
+  },
+  "methods": [
+    {
+      "method": "raw_policy_rag",
+      "profile": [
+        "atom",
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 49,
+        "atom": 94,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "atom": 6
+      },
+      "context_chars": 5277,
+      "items": [
+        {
+          "item_id": "SK-0031",
+          "lane": "skill",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "SKILL.md",
+          "score": 18.071154,
+          "chars": 994
+        },
+        {
+          "item_id": "KA-00031",
+          "lane": "atom",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 18.40947,
+          "chars": 1052
+        },
+        {
+          "item_id": "SK-0035",
+          "lane": "skill",
+          "title": "Addressing Data Roaming Problems",
+          "source": "SKILL.md",
+          "score": 12.438814,
+          "chars": 652
+        },
+        {
+          "item_id": "KA-00036",
+          "lane": "atom",
+          "title": "Addressing Data Roaming Problems",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 13.051734,
+          "chars": 710
+        },
+        {
+          "item_id": "SK-0032",
+          "lane": "skill",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "SKILL.md",
+          "score": 10.866488,
+          "chars": 339
+        },
+        {
+          "item_id": "KA-00032",
+          "lane": "atom",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 12.380386,
+          "chars": 397
+        },
+        {
+          "item_id": "SK-0036",
+          "lane": "skill",
+          "title": "Data Saver Mode",
+          "source": "SKILL.md",
+          "score": 9.300188,
+          "chars": 281
+        },
+        {
+          "item_id": "KA-00037",
+          "lane": "atom",
+          "title": "Data Saver Mode",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 10.05594,
+          "chars": 339
+        },
+        {
+          "item_id": "KA-00075",
+          "lane": "atom",
+          "title": "check_data_restriction_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 9.649432,
+          "chars": 208
+        },
+        {
+          "item_id": "KA-00066",
+          "lane": "atom",
+          "title": "check_network_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 9.228147,
+          "chars": 305
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "native_prompt_skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 49,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4
+      },
+      "context_chars": 3830,
+      "items": [
+        {
+          "item_id": "SK-0030",
+          "lane": "skill",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "SKILL.md",
+          "score": 19.406414,
+          "chars": 994
+        },
+        {
+          "item_id": "SK-0034",
+          "lane": "skill",
+          "title": "Addressing Data Roaming Problems",
+          "source": "SKILL.md",
+          "score": 12.95205,
+          "chars": 652
+        },
+        {
+          "item_id": "SK-0049",
+          "lane": "skill",
+          "title": "Tools",
+          "source": "SKILL.md",
+          "score": 12.157407,
+          "chars": 1845
+        },
+        {
+          "item_id": "SK-0031",
+          "lane": "skill",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "SKILL.md",
+          "score": 11.136269,
+          "chars": 339
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "schema_prompt_skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 51,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4
+      },
+      "context_chars": 3830,
+      "items": [
+        {
+          "item_id": "SK-0032",
+          "lane": "skill",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "SKILL.md",
+          "score": 19.692556,
+          "chars": 994
+        },
+        {
+          "item_id": "SK-0036",
+          "lane": "skill",
+          "title": "Addressing Data Roaming Problems",
+          "source": "SKILL.md",
+          "score": 13.211629,
+          "chars": 652
+        },
+        {
+          "item_id": "SK-0051",
+          "lane": "skill",
+          "title": "Tools",
+          "source": "SKILL.md",
+          "score": 12.311971,
+          "chars": 1845
+        },
+        {
+          "item_id": "SK-0033",
+          "lane": "skill",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "SKILL.md",
+          "score": 11.428672,
+          "chars": 339
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "summary2skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 3,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 3
+      },
+      "context_chars": 3972,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Policy summary",
+          "source": "SKILL.md",
+          "score": 17.597488,
+          "chars": 1854
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Telecom τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.23622,
+          "chars": 251
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Training workflow summaries",
+          "source": "SKILL.md",
+          "score": 0.18919,
+          "chars": 1867
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "document_tool_maker",
+      "profile": [
+        "skill",
+        "tool_atom"
+      ],
+      "lane_counts": {
+        "skill": 50,
+        "atom": 43,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "atom": 6
+      },
+      "context_chars": 5617,
+      "items": [
+        {
+          "item_id": "SK-0032",
+          "lane": "skill",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "SKILL.md",
+          "score": 19.521224,
+          "chars": 994
+        },
+        {
+          "item_id": "KA-00075",
+          "lane": "atom",
+          "title": "check_data_restriction_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 9.585231,
+          "chars": 208
+        },
+        {
+          "item_id": "SK-0036",
+          "lane": "skill",
+          "title": "Addressing Data Roaming Problems",
+          "source": "SKILL.md",
+          "score": 13.065563,
+          "chars": 652
+        },
+        {
+          "item_id": "KA-00066",
+          "lane": "atom",
+          "title": "check_network_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 9.507626,
+          "chars": 305
+        },
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Actor-aware tools",
+          "source": "SKILL.md",
+          "score": 12.189653,
+          "chars": 1857
+        },
+        {
+          "item_id": "KA-00076",
+          "lane": "atom",
+          "title": "toggle_data_saver_mode",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 8.897626,
+          "chars": 245
+        },
+        {
+          "item_id": "SK-0033",
+          "lane": "skill",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "SKILL.md",
+          "score": 11.283835,
+          "chars": 339
+        },
+        {
+          "item_id": "KA-00065",
+          "lane": "atom",
+          "title": "check_status_bar",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 8.809144,
+          "chars": 325
+        },
+        {
+          "item_id": "KA-00074",
+          "lane": "atom",
+          "title": "toggle_roaming",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 8.061602,
+          "chars": 254
+        },
+        {
+          "item_id": "KA-00060",
+          "lane": "atom",
+          "title": "get_data_usage",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "score": 7.324187,
+          "chars": 438
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "evoskill_compiler",
+      "profile": [
+        "atom",
+        "rule",
+        "skill",
+        "workflow"
+      ],
+      "lane_counts": {
+        "skill": 4,
+        "atom": 94,
+        "rule": 51,
+        "workflow": 67,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "rule": 3,
+        "atom": 6
+      },
+      "context_chars": 9188,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Knowledge atoms",
+          "source": "SKILL.md",
+          "score": 14.631807,
+          "chars": 1855
+        },
+        {
+          "item_id": "POL-0031",
+          "lane": "rule",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "KA-00031",
+          "score": 17.964426,
+          "chars": 994
+        },
+        {
+          "item_id": "KA-00031",
+          "lane": "atom",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 18.40947,
+          "chars": 1052
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Governance rules",
+          "source": "SKILL.md",
+          "score": 9.449087,
+          "chars": 1856
+        },
+        {
+          "item_id": "POL-0036",
+          "lane": "rule",
+          "title": "Addressing Data Roaming Problems",
+          "source": "KA-00036",
+          "score": 12.413421,
+          "chars": 652
+        },
+        {
+          "item_id": "KA-00036",
+          "lane": "atom",
+          "title": "Addressing Data Roaming Problems",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 13.051734,
+          "chars": 710
+        },
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Runtime strategy",
+          "source": "SKILL.md",
+          "score": 0.232343,
+          "chars": 226
+        },
+        {
+          "item_id": "POL-0032",
+          "lane": "rule",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "KA-00032",
+          "score": 10.76422,
+          "chars": 339
+        },
+        {
+          "item_id": "KA-00032",
+          "lane": "atom",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 12.380386,
+          "chars": 397
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Telecom τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.18749,
+          "chars": 255
+        },
+        {
+          "item_id": "KA-00037",
+          "lane": "atom",
+          "title": "Data Saver Mode",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 10.05594,
+          "chars": 339
+        },
+        {
+          "item_id": "KA-00075",
+          "lane": "atom",
+          "title": "check_data_restriction_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 9.649432,
+          "chars": 208
+        },
+        {
+          "item_id": "KA-00066",
+          "lane": "atom",
+          "title": "check_network_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 9.228147,
+          "chars": 305
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "graph_evoskill_compiler",
+      "profile": [
+        "atom",
+        "pattern",
+        "rule",
+        "skill",
+        "workflow"
+      ],
+      "lane_counts": {
+        "skill": 54,
+        "atom": 94,
+        "rule": 51,
+        "workflow": 67,
+        "pattern": 51
+      },
+      "lane_hits": {
+        "skill": 4,
+        "rule": 3,
+        "atom": 6,
+        "pattern": 3
+      },
+      "context_chars": 8732,
+      "items": [
+        {
+          "item_id": "SK-0054",
+          "lane": "skill",
+          "title": "Governance",
+          "source": "SKILL.md",
+          "score": 14.474813,
+          "chars": 1850
+        },
+        {
+          "item_id": "POL-0031",
+          "lane": "rule",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "KA-00031",
+          "score": 17.964426,
+          "chars": 994
+        },
+        {
+          "item_id": "KA-00031",
+          "lane": "atom",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 18.40947,
+          "chars": 1052
+        },
+        {
+          "item_id": "PAT-0031",
+          "lane": "pattern",
+          "title": "Common Mobile Data Issues and Causes",
+          "source": "KA-00031",
+          "score": 8.920595,
+          "chars": 303
+        },
+        {
+          "item_id": "SK-0032",
+          "lane": "skill",
+          "title": "PAT-0031: Common Mobile Data Issues and Causes",
+          "source": "SKILL.md",
+          "score": 8.667775,
+          "chars": 325
+        },
+        {
+          "item_id": "POL-0036",
+          "lane": "rule",
+          "title": "Addressing Data Roaming Problems",
+          "source": "KA-00036",
+          "score": 12.413421,
+          "chars": 652
+        },
+        {
+          "item_id": "KA-00036",
+          "lane": "atom",
+          "title": "Addressing Data Roaming Problems",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 13.051734,
+          "chars": 710
+        },
+        {
+          "item_id": "PAT-0028",
+          "lane": "pattern",
+          "title": "Understanding and Troubleshooting Your Phone's Mobile Data",
+          "source": "KA-00028",
+          "score": 8.800242,
+          "chars": 325
+        },
+        {
+          "item_id": "SK-0029",
+          "lane": "skill",
+          "title": "PAT-0028: Understanding and Troubleshooting Your Phone's Mobile Data",
+          "source": "SKILL.md",
+          "score": 8.568286,
+          "chars": 347
+        },
+        {
+          "item_id": "POL-0032",
+          "lane": "rule",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "KA-00032",
+          "score": 10.76422,
+          "chars": 339
+        },
+        {
+          "item_id": "KA-00032",
+          "lane": "atom",
+          "title": "Diagnosing Mobile Data Issues",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 12.380386,
+          "chars": 397
+        },
+        {
+          "item_id": "PAT-0037",
+          "lane": "pattern",
+          "title": "Data Saver Mode",
+          "source": "KA-00037",
+          "score": 8.665554,
+          "chars": 282
+        },
+        {
+          "item_id": "SK-0038",
+          "lane": "skill",
+          "title": "PAT-0037: Data Saver Mode",
+          "source": "SKILL.md",
+          "score": 8.237501,
+          "chars": 304
+        },
+        {
+          "item_id": "KA-00037",
+          "lane": "atom",
+          "title": "Data Saver Mode",
+          "source": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+          "score": 10.05594,
+          "chars": 339
+        },
+        {
+          "item_id": "KA-00075",
+          "lane": "atom",
+          "title": "check_data_restriction_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 9.649432,
+          "chars": 208
+        },
+        {
+          "item_id": "KA-00066",
+          "lane": "atom",
+          "title": "check_network_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+          "score": 9.228147,
+          "chars": 305
+        }
+      ],
+      "graph_traversal_enabled": false
+    }
+  ],
+  "note": "Offline deterministic retrieval audit; not an Agent benchmark result."
+}

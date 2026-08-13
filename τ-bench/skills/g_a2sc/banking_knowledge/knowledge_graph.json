@@ -1,0 +1,1416 @@
+{
+  "nodes": [
+    {
+      "id": "ATOM-0012faec5a",
+      "type": "fact",
+      "label": "Change the email address for a user."
+    },
+    {
+      "id": "ATOM-07114fd667",
+      "type": "confirmation",
+      "label": "Args: agent_tool_name: The name of the agent discoverable tool to unlock (e.g., \"calculate_apr_adjustment_7842\") Returns: A confirmation message with the tool's"
+    },
+    {
+      "id": "ATOM-0a02d8eff9",
+      "type": "actor_constraint",
+      "label": "The log_verification tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-0abc6600d4",
+      "type": "escalation",
+      "label": "Transfer the user to a human agent."
+    },
+    {
+      "id": "ATOM-0c5a546280",
+      "type": "required_input",
+      "label": "The submit_transaction tool requires the amount argument."
+    },
+    {
+      "id": "ATOM-0d8293a6dd",
+      "type": "required_input",
+      "label": "The apply_for_credit_card tool requires the rho_bank_subscription argument."
+    },
+    {
+      "id": "ATOM-0dddafc5ec",
+      "type": "required_input",
+      "label": "The unlock_discoverable_agent_tool tool requires the agent_tool_name argument."
+    },
+    {
+      "id": "ATOM-0e2d257c16",
+      "type": "fact",
+      "label": "Use this to get the current timestamp for logging verification records."
+    },
+    {
+      "id": "ATOM-1153e70f4e",
+      "type": "required_input",
+      "label": "The log_verification tool requires the user_id argument."
+    },
+    {
+      "id": "ATOM-140ad7705d",
+      "type": "escalation",
+      "label": "If they do, invoke the appropriate transfer_to_human_agents tool."
+    },
+    {
+      "id": "ATOM-1480c067b9",
+      "type": "fact",
+      "label": "Be polite and professional."
+    },
+    {
+      "id": "ATOM-164843068c",
+      "type": "actor_constraint",
+      "label": "The get_credit_card_accounts_by_user tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-16f963ee59",
+      "type": "fact",
+      "label": "You are a helpful customer service agent for Rho-Bank."
+    },
+    {
+      "id": "ATOM-17186b6ff9",
+      "type": "actor_constraint",
+      "label": "The request_human_agent_transfer tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-18691a7ef7",
+      "type": "required_input",
+      "label": "The KB_search tool requires the query argument."
+    },
+    {
+      "id": "ATOM-1a8a894cff",
+      "type": "actor_constraint",
+      "label": "The KB_search tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-1df377a30d",
+      "type": "escalation",
+      "label": "If the user asks for a human agent 4 times, then you may invoke the transfer_to_human_agents tool."
+    },
+    {
+      "id": "ATOM-1f89d8aaf8",
+      "type": "required_input",
+      "label": "The log_verification tool requires the phone_number argument."
+    },
+    {
+      "id": "ATOM-24f7ce76c6",
+      "type": "escalation",
+      "label": "Generally, if the issue cannot be resolved or is outside your capabilities, ask the user whether they would like to be transferred to a human agent."
+    },
+    {
+      "id": "ATOM-295e7176c6",
+      "type": "fact",
+      "label": "This creates an audit record of the verification."
+    },
+    {
+      "id": "ATOM-2b23ef717a",
+      "type": "required_input",
+      "label": "The change_user_email tool requires the new_email argument."
+    },
+    {
+      "id": "ATOM-2cd50f81f5",
+      "type": "postcondition",
+      "label": "Log a verification record after successfully verifying a user's identity."
+    },
+    {
+      "id": "ATOM-2f3373201a",
+      "type": "fact",
+      "label": "Use this when the agent has instructed you to perform an action using a discoverable tool."
+    },
+    {
+      "id": "ATOM-300259e1fd",
+      "type": "actor_constraint",
+      "label": "The list_discoverable_agent_tools tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-339a5fd1aa",
+      "type": "actor_constraint",
+      "label": "The transfer_to_human_agents tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-3852642bd2",
+      "type": "required_input",
+      "label": "The log_verification tool requires the email argument."
+    },
+    {
+      "id": "ATOM-390b47b844",
+      "type": "required_input",
+      "label": "The submit_transaction tool requires the category argument."
+    },
+    {
+      "id": "ATOM-3b1d80fe44",
+      "type": "fact",
+      "label": "Use this when the knowledge base indicates that you have access to a specialized internal tool."
+    },
+    {
+      "id": "ATOM-3b26d57a44",
+      "type": "required_input",
+      "label": "The knowledge base will tell you which tool to use and what arguments to provide."
+    },
+    {
+      "id": "ATOM-3b5a3c6034",
+      "type": "communication_requirement",
+      "label": "Do not give intermediate responses to users while processing that would give away internal rho-bank information/policies."
+    },
+    {
+      "id": "ATOM-3c49138928",
+      "type": "fact",
+      "label": "Args: user_id: Your user ID (the referrer) account_type: The type of account you are referring someone to open"
+    },
+    {
+      "id": "ATOM-3e508976c9",
+      "type": "fact",
+      "label": "Use this when the knowledge base indicates that the user should perform an action themselves (e.g., \"to do X, have the user call tool_name(args)\")."
+    },
+    {
+      "id": "ATOM-3e8c4b7e20",
+      "type": "escalation",
+      "label": "Do not transfer without asking the user first."
+    },
+    {
+      "id": "ATOM-44f7a459be",
+      "type": "communication_requirement",
+      "label": "Returns information about each credit card account including card type, date opened, current balance, and reward points."
+    },
+    {
+      "id": "ATOM-4567e24836",
+      "type": "fact",
+      "label": "Get the current time."
+    },
+    {
+      "id": "ATOM-47e80ff475",
+      "type": "required_input",
+      "label": "The submit_referral tool requires the account_type argument."
+    },
+    {
+      "id": "ATOM-48e7214af9",
+      "type": "required_input",
+      "label": "The give_discoverable_user_tool tool requires the arguments argument."
+    },
+    {
+      "id": "ATOM-4b26209b7c",
+      "type": "required_input",
+      "label": "Args: agent_tool_name: The name of the agent discoverable tool to call arguments: JSON string of arguments for the tool (e.g., '{\"user_id\": \"abc123\"}') Returns:"
+    },
+    {
+      "id": "ATOM-4b6aed6498",
+      "type": "actor_constraint",
+      "label": "The call_discoverable_agent_tool tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-4bdbe3e51c",
+      "type": "fact",
+      "label": "This simulates you performing the action in the real world (e.g., opening a webpage, navigating to a section, clicking a button)."
+    },
+    {
+      "id": "ATOM-4c217f194d",
+      "type": "required_input",
+      "label": "The call_discoverable_agent_tool tool requires the arguments argument."
+    },
+    {
+      "id": "ATOM-4e933e5ba7",
+      "type": "required_input",
+      "label": "The agent will have told you the tool name and arguments."
+    },
+    {
+      "id": "ATOM-514d36ddf6",
+      "type": "fact",
+      "label": "Args: user_id: The ID of the user"
+    },
+    {
+      "id": "ATOM-528e3a940d",
+      "type": "fact",
+      "label": "Args: email: The email of the user"
+    },
+    {
+      "id": "ATOM-52dfe7e5c8",
+      "type": "actor_constraint",
+      "label": "The unlock_discoverable_agent_tool tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-53869cb493",
+      "type": "required_input",
+      "label": "The submit_transaction tool requires the credit_card_type argument."
+    },
+    {
+      "id": "ATOM-5537e8afbd",
+      "type": "required_input",
+      "label": "The submit_transaction tool requires the merchant_name argument."
+    },
+    {
+      "id": "ATOM-571b1db832",
+      "type": "fact",
+      "label": "Get all referrals made by a user."
+    },
+    {
+      "id": "ATOM-580306f695",
+      "type": "fact",
+      "label": "Args: user_id: The ID of the user (referrer) to look up referrals for"
+    },
+    {
+      "id": "ATOM-58237aa9a2",
+      "type": "permission",
+      "label": "Pass a tool to the user so they can execute it themselves."
+    },
+    {
+      "id": "ATOM-5a3a2d91c4",
+      "type": "communication_requirement",
+      "label": "Do not make up policies, information or actions that you can take on behalf of the user."
+    },
+    {
+      "id": "ATOM-5c7edc2d7e",
+      "type": "actor_constraint",
+      "label": "The get_user_information_by_id tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-5e188fa00d",
+      "type": "required_input",
+      "label": "The call_discoverable_user_tool tool requires the discoverable_tool_name argument."
+    },
+    {
+      "id": "ATOM-611c5f4de7",
+      "type": "required_input",
+      "label": "The log_verification tool requires the address argument."
+    },
+    {
+      "id": "ATOM-62a41348fd",
+      "type": "required_input",
+      "label": "The apply_for_credit_card tool requires the customer_name argument."
+    },
+    {
+      "id": "ATOM-6526a891e8",
+      "type": "required_input",
+      "label": "The get_referrals_by_user tool requires the user_id argument."
+    },
+    {
+      "id": "ATOM-675aa6065d",
+      "type": "postcondition",
+      "label": "After unlocking, you can use the tool by calling `call_discoverable_agent_tool` with the tool name and required arguments."
+    },
+    {
+      "id": "ATOM-67a4e757e8",
+      "type": "required_input",
+      "label": "The log_verification tool requires the time_verified argument."
+    },
+    {
+      "id": "ATOM-686803aa69",
+      "type": "required_input",
+      "label": "The get_user_information_by_email tool requires the email argument."
+    },
+    {
+      "id": "ATOM-69c3323355",
+      "type": "fact",
+      "label": "Search the Banking knowledge base with the fixed BM25 pipeline and return the top-k source documents."
+    },
+    {
+      "id": "ATOM-6d1ed4bb41",
+      "type": "fact",
+      "label": "Args: user_id: The ID of the user whose email should be changed new_email: The new email address to set for the user"
+    },
+    {
+      "id": "ATOM-7185a5da52",
+      "type": "fact",
+      "label": "Args: card_type: Type of credit card customer_name: Full legal name annual_income: Annual income in USD rho_bank_subscription: Whether user has Rho-Bank+ subscr"
+    },
+    {
+      "id": "ATOM-72e6d3f00c",
+      "type": "required_input",
+      "label": "The get_user_information_by_id tool requires the user_id argument."
+    },
+    {
+      "id": "ATOM-73236c9585",
+      "type": "required_input",
+      "label": "The change_user_email tool requires the user_id argument."
+    },
+    {
+      "id": "ATOM-7401226f88",
+      "type": "required_input",
+      "label": "The submit_transaction tool requires the user_id argument."
+    },
+    {
+      "id": "ATOM-7abaa6750a",
+      "type": "escalation",
+      "label": "reason: The specific reason code for the transfer."
+    },
+    {
+      "id": "ATOM-7e3a7572b4",
+      "type": "required_input",
+      "label": "The get_user_information_by_name tool requires the customer_name argument."
+    },
+    {
+      "id": "ATOM-80cacbcf4a",
+      "type": "prohibition",
+      "label": "If you cannot find relevant information, let the user know."
+    },
+    {
+      "id": "ATOM-83ff8337ae",
+      "type": "fact",
+      "label": "Each request will be logged and processed."
+    },
+    {
+      "id": "ATOM-8765a28189",
+      "type": "required_input",
+      "label": "The apply_for_credit_card tool requires the annual_income argument."
+    },
+    {
+      "id": "ATOM-89b0f11636",
+      "type": "escalation",
+      "label": "This guidance may be overridden by specific scenario-based transfer guidance in the knowledge base."
+    },
+    {
+      "id": "ATOM-902c069934",
+      "type": "fact",
+      "label": "Call an agent discoverable tool that you have previously unlocked."
+    },
+    {
+      "id": "ATOM-9238d58ce6",
+      "type": "actor_constraint",
+      "label": "The get_credit_card_transactions_by_user tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-923ef9f972",
+      "type": "communication_requirement",
+      "label": "Get the information (date of birth, email, phone number, address) for a user by their user id."
+    },
+    {
+      "id": "ATOM-95a20b7f90",
+      "type": "fact",
+      "label": "Apply for a credit card."
+    },
+    {
+      "id": "ATOM-974247d819",
+      "type": "communication_requirement",
+      "label": "The knowledge base will tell you the tool name to unlock."
+    },
+    {
+      "id": "ATOM-9a0afaf2f8",
+      "type": "fact",
+      "label": "Args: user_id: The ID of the user to look up credit card accounts for"
+    },
+    {
+      "id": "ATOM-9a0ff7963d",
+      "type": "prohibition",
+      "label": "Do this only if you absolutely have to, and you are sure that there are no potential actions you can take as specified in the knowledge base, or in your policy."
+    },
+    {
+      "id": "ATOM-9ee50219c7",
+      "type": "actor_constraint",
+      "label": "The call_discoverable_user_tool tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-a0135fe4bd",
+      "type": "fact",
+      "label": "Do not make up or assume the current time."
+    },
+    {
+      "id": "ATOM-a058218994",
+      "type": "fact",
+      "label": "List all tools that have been given to you by the agent."
+    },
+    {
+      "id": "ATOM-a10adead61",
+      "type": "actor_constraint",
+      "label": "The apply_for_credit_card tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-a188a0e156",
+      "type": "required_input",
+      "label": "The give_discoverable_user_tool tool requires the discoverable_tool_name argument."
+    },
+    {
+      "id": "ATOM-a190c83ec7",
+      "type": "fact",
+      "label": "Returns: A list of tools that have been given to you"
+    },
+    {
+      "id": "ATOM-a1cb1a24fe",
+      "type": "communication_requirement",
+      "label": "Your goal is to help customers by searching the knowledge base and providing accurate information."
+    },
+    {
+      "id": "ATOM-a367369312",
+      "type": "communication_requirement",
+      "label": "Get the information (date of birth, email, phone number, address) for a user by their name."
+    },
+    {
+      "id": "ATOM-a7f443ce7c",
+      "type": "actor_constraint",
+      "label": "The get_referrals_by_user tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-b10ff0902f",
+      "type": "fact",
+      "label": "Returns: A list of tools that you have called"
+    },
+    {
+      "id": "ATOM-b2d45dcf9f",
+      "type": "escalation",
+      "label": "Request to be transferred to a human agent for assistance."
+    },
+    {
+      "id": "ATOM-b388af3140",
+      "type": "escalation",
+      "label": "If an issue falls within your capabilities and the user still wants to be transferred to a human agent, kindly inform the user that you can help them, and try t"
+    },
+    {
+      "id": "ATOM-b582a23a33",
+      "type": "exception",
+      "label": "from the customer unless it states very clearly in the knowledge base how to process it, and whether you're allowed to do so."
+    },
+    {
+      "id": "ATOM-b5cc6eb919",
+      "type": "fact",
+      "label": "Use this to see what actions the agent has instructed you to perform."
+    },
+    {
+      "id": "ATOM-bc40c9e208",
+      "type": "actor_constraint",
+      "label": "The get_current_time tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-c01ff0c3ca",
+      "type": "confirmation",
+      "label": "Call this tool after you have verified a user by confirming 2 out of 4 identity fields (date of birth, email, phone number, address)."
+    },
+    {
+      "id": "ATOM-c3153f2fe0",
+      "type": "fact",
+      "label": "Submit a referral request to refer someone to open an account."
+    },
+    {
+      "id": "ATOM-c4ac20b4d7",
+      "type": "actor_constraint",
+      "label": "The submit_referral tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-c5ee51c5b7",
+      "type": "escalation",
+      "label": "Args: summary: A summary of the user's issue and what was attempted before transfer."
+    },
+    {
+      "id": "ATOM-c9f1979944",
+      "type": "required_input",
+      "label": "The user will then be able to call `call_discoverable_tool` with the same tool name and arguments to simulate executing the action."
+    },
+    {
+      "id": "ATOM-ca87abf678",
+      "type": "actor_constraint",
+      "label": "The list_discoverable_user_tools tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-cbe04ce46e",
+      "type": "fact",
+      "label": "Args: user_id: The ID of the user to look up transactions for"
+    },
+    {
+      "id": "ATOM-cbe30c5a9b",
+      "type": "required_input",
+      "label": "The submit_referral tool requires the user_id argument."
+    },
+    {
+      "id": "ATOM-d0d68f863d",
+      "type": "escalation",
+      "label": "Returns: Confirmation that your transfer request has been submitted"
+    },
+    {
+      "id": "ATOM-d339bc0d80",
+      "type": "escalation",
+      "label": "The proper transfer reason enum can be found in the knowledge base: search it before calling this tool to select the proper applicable reason."
+    },
+    {
+      "id": "ATOM-d9595f9cfd",
+      "type": "required_input",
+      "label": "The get_credit_card_transactions_by_user tool requires the user_id argument."
+    },
+    {
+      "id": "ATOM-d95a2cabcc",
+      "type": "fact",
+      "label": "Use this to see what specialized tools you have used."
+    },
+    {
+      "id": "ATOM-d9b55f53ee",
+      "type": "fact",
+      "label": "List all agent discoverable tools that you have called."
+    },
+    {
+      "id": "ATOM-db0e7ec5e6",
+      "type": "actor_constraint",
+      "label": "The give_discoverable_user_tool tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-dc38afef1a",
+      "type": "fact",
+      "label": "Get all credit card accounts for a user."
+    },
+    {
+      "id": "ATOM-dc41a3d7cd",
+      "type": "fact",
+      "label": "Unlock an agent discoverable tool that was found in the knowledge base."
+    },
+    {
+      "id": "ATOM-dc5e9702a4",
+      "type": "fact",
+      "label": "All instructions will be found here or in the knowledge base."
+    },
+    {
+      "id": "ATOM-ddf36e21f8",
+      "type": "required_input",
+      "label": "The apply_for_credit_card tool requires the card_type argument."
+    },
+    {
+      "id": "ATOM-ddf8e10444",
+      "type": "postcondition",
+      "label": "Use this after unlocking a tool with `unlock_discoverable_agent_tool`."
+    },
+    {
+      "id": "ATOM-de7d4fe283",
+      "type": "fact",
+      "label": "Get all credit card transactions for a user."
+    },
+    {
+      "id": "ATOM-df88754ab6",
+      "type": "required_input",
+      "label": "The log_verification tool requires the name argument."
+    },
+    {
+      "id": "ATOM-e1d653f91f",
+      "type": "required_input",
+      "label": "The transfer_to_human_agents tool requires the summary argument."
+    },
+    {
+      "id": "ATOM-e3c8149504",
+      "type": "fact",
+      "label": "Returns: The current time in the format \"YYYY-MM-DD HH:MM:SS TZ\""
+    },
+    {
+      "id": "ATOM-e639828e56",
+      "type": "required_input",
+      "label": "The call_discoverable_agent_tool tool requires the agent_tool_name argument."
+    },
+    {
+      "id": "ATOM-e69a9e4869",
+      "type": "required_input",
+      "label": "The call_discoverable_user_tool tool requires the arguments argument."
+    },
+    {
+      "id": "ATOM-e6baeee1dd",
+      "type": "precondition",
+      "label": "If you need the current time, always use the get_current_time() tool."
+    },
+    {
+      "id": "ATOM-e6d74af94c",
+      "type": "required_input",
+      "label": "The transfer_to_human_agents tool requires the reason argument."
+    },
+    {
+      "id": "ATOM-e9d8170d4c",
+      "type": "fact",
+      "label": "Do not ask for any documentation, receipts..."
+    },
+    {
+      "id": "ATOM-ea5636a1b2",
+      "type": "actor_constraint",
+      "label": "The get_user_information_by_email tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-ed947ea73f",
+      "type": "required_input",
+      "label": "The log_verification tool requires the date_of_birth argument."
+    },
+    {
+      "id": "ATOM-ef4b9aec07",
+      "type": "actor_constraint",
+      "label": "The get_user_information_by_name tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-f29d588e35",
+      "type": "escalation",
+      "label": "Use this when you want to speak with a real human agent instead of the automated system."
+    },
+    {
+      "id": "ATOM-f2d58212ea",
+      "type": "fact",
+      "label": "Args: name: The verified user's full name user_id: The verified user's ID address: The verified user's address email: The verified user's email phone_number: Th"
+    },
+    {
+      "id": "ATOM-f34897b180",
+      "type": "actor_constraint",
+      "label": "The submit_transaction tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-f4b25ed137",
+      "type": "fact",
+      "label": "Args: customer_name: The name of the user"
+    },
+    {
+      "id": "ATOM-f623e6f2df",
+      "type": "fact",
+      "label": "Call a tool that was given to you by the agent."
+    },
+    {
+      "id": "ATOM-f89d149c6e",
+      "type": "actor_constraint",
+      "label": "The change_user_email tool is owned by the assistant actor."
+    },
+    {
+      "id": "ATOM-f8be505f03",
+      "type": "communication_requirement",
+      "label": "Get the information (date of birth, email, phone number, address) for a user by their email."
+    },
+    {
+      "id": "ATOM-fc06651245",
+      "type": "fact",
+      "label": "Args: user_id: Your user ID credit_card_type: Type of credit card used (e.g., \"Bronze Rewards Card\", \"Gold Rewards Card\") merchant_name: Name of the merchant wh"
+    },
+    {
+      "id": "ATOM-fd1b7fdfa1",
+      "type": "required_input",
+      "label": "The get_credit_card_accounts_by_user tool requires the user_id argument."
+    },
+    {
+      "id": "ATOM-fd1ff37fa7",
+      "type": "required_input",
+      "label": "Args: discoverable_tool_name: The name of the discoverable tool to call (e.g., \"open_webpage\") arguments: JSON string of arguments for the tool (e.g., '{\"url\": "
+    },
+    {
+      "id": "ATOM-fda0cbeea3",
+      "type": "confirmation",
+      "label": "Args: discoverable_tool_name: The name of the discoverable tool (e.g., \"open_webpage\", \"navigate_to_section\") arguments: JSON string of arguments for the tool ("
+    },
+    {
+      "id": "ATOM-ff61d1d6de",
+      "type": "fact",
+      "label": "Submit a credit card transaction."
+    },
+    {
+      "id": "TOOL:transfer_to_human_agents",
+      "type": "tool",
+      "label": "transfer_to_human_agents"
+    },
+    {
+      "id": "TOOL:get_current_time",
+      "type": "tool",
+      "label": "get_current_time"
+    },
+    {
+      "id": "TOOL:get_user_information_by_id",
+      "type": "tool",
+      "label": "get_user_information_by_id"
+    },
+    {
+      "id": "TOOL:get_user_information_by_name",
+      "type": "tool",
+      "label": "get_user_information_by_name"
+    },
+    {
+      "id": "TOOL:get_user_information_by_email",
+      "type": "tool",
+      "label": "get_user_information_by_email"
+    },
+    {
+      "id": "TOOL:change_user_email",
+      "type": "tool",
+      "label": "change_user_email"
+    },
+    {
+      "id": "TOOL:get_referrals_by_user",
+      "type": "tool",
+      "label": "get_referrals_by_user"
+    },
+    {
+      "id": "TOOL:get_credit_card_transactions_by_user",
+      "type": "tool",
+      "label": "get_credit_card_transactions_by_user"
+    },
+    {
+      "id": "TOOL:get_credit_card_accounts_by_user",
+      "type": "tool",
+      "label": "get_credit_card_accounts_by_user"
+    },
+    {
+      "id": "TOOL:log_verification",
+      "type": "tool",
+      "label": "log_verification"
+    },
+    {
+      "id": "TOOL:give_discoverable_user_tool",
+      "type": "tool",
+      "label": "give_discoverable_user_tool"
+    },
+    {
+      "id": "TOOL:unlock_discoverable_agent_tool",
+      "type": "tool",
+      "label": "unlock_discoverable_agent_tool"
+    },
+    {
+      "id": "TOOL:call_discoverable_agent_tool",
+      "type": "tool",
+      "label": "call_discoverable_agent_tool"
+    },
+    {
+      "id": "TOOL:list_discoverable_agent_tools",
+      "type": "tool",
+      "label": "list_discoverable_agent_tools"
+    },
+    {
+      "id": "TOOL:apply_for_credit_card",
+      "type": "tool",
+      "label": "apply_for_credit_card"
+    },
+    {
+      "id": "TOOL:submit_referral",
+      "type": "tool",
+      "label": "submit_referral"
+    },
+    {
+      "id": "TOOL:call_discoverable_user_tool",
+      "type": "tool",
+      "label": "call_discoverable_user_tool"
+    },
+    {
+      "id": "TOOL:list_discoverable_user_tools",
+      "type": "tool",
+      "label": "list_discoverable_user_tools"
+    },
+    {
+      "id": "TOOL:request_human_agent_transfer",
+      "type": "tool",
+      "label": "request_human_agent_transfer"
+    },
+    {
+      "id": "TOOL:submit_transaction",
+      "type": "tool",
+      "label": "submit_transaction"
+    },
+    {
+      "id": "TOOL:KB_search",
+      "type": "tool",
+      "label": "KB_search"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ATOM-0abc6600d4",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-339a5fd1aa",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7abaa6750a",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c5ee51c5b7",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d339bc0d80",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e1d653f91f",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e6d74af94c",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-140ad7705d",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1df377a30d",
+      "target": "TOOL:transfer_to_human_agents",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0e2d257c16",
+      "target": "TOOL:get_current_time",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4567e24836",
+      "target": "TOOL:get_current_time",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-bc40c9e208",
+      "target": "TOOL:get_current_time",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e3c8149504",
+      "target": "TOOL:get_current_time",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e6baeee1dd",
+      "target": "TOOL:get_current_time",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a0135fe4bd",
+      "target": "TOOL:get_current_time",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-514d36ddf6",
+      "target": "TOOL:get_user_information_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5c7edc2d7e",
+      "target": "TOOL:get_user_information_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-72e6d3f00c",
+      "target": "TOOL:get_user_information_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-923ef9f972",
+      "target": "TOOL:get_user_information_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-80cacbcf4a",
+      "target": "TOOL:get_user_information_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5a3a2d91c4",
+      "target": "TOOL:get_user_information_by_id",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7e3a7572b4",
+      "target": "TOOL:get_user_information_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a367369312",
+      "target": "TOOL:get_user_information_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ef4b9aec07",
+      "target": "TOOL:get_user_information_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f4b25ed137",
+      "target": "TOOL:get_user_information_by_name",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-528e3a940d",
+      "target": "TOOL:get_user_information_by_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-686803aa69",
+      "target": "TOOL:get_user_information_by_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ea5636a1b2",
+      "target": "TOOL:get_user_information_by_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f8be505f03",
+      "target": "TOOL:get_user_information_by_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0012faec5a",
+      "target": "TOOL:change_user_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2b23ef717a",
+      "target": "TOOL:change_user_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6d1ed4bb41",
+      "target": "TOOL:change_user_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-73236c9585",
+      "target": "TOOL:change_user_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f89d149c6e",
+      "target": "TOOL:change_user_email",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-571b1db832",
+      "target": "TOOL:get_referrals_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-580306f695",
+      "target": "TOOL:get_referrals_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-6526a891e8",
+      "target": "TOOL:get_referrals_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a7f443ce7c",
+      "target": "TOOL:get_referrals_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9238d58ce6",
+      "target": "TOOL:get_credit_card_transactions_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-cbe04ce46e",
+      "target": "TOOL:get_credit_card_transactions_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d9595f9cfd",
+      "target": "TOOL:get_credit_card_transactions_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-de7d4fe283",
+      "target": "TOOL:get_credit_card_transactions_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-164843068c",
+      "target": "TOOL:get_credit_card_accounts_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-44f7a459be",
+      "target": "TOOL:get_credit_card_accounts_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9a0afaf2f8",
+      "target": "TOOL:get_credit_card_accounts_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-dc38afef1a",
+      "target": "TOOL:get_credit_card_accounts_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fd1b7fdfa1",
+      "target": "TOOL:get_credit_card_accounts_by_user",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0a02d8eff9",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1153e70f4e",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1f89d8aaf8",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-295e7176c6",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2cd50f81f5",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3852642bd2",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-611c5f4de7",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-67a4e757e8",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c01ff0c3ca",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-df88754ab6",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ed947ea73f",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f2d58212ea",
+      "target": "TOOL:log_verification",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3e508976c9",
+      "target": "TOOL:give_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-48e7214af9",
+      "target": "TOOL:give_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-58237aa9a2",
+      "target": "TOOL:give_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a188a0e156",
+      "target": "TOOL:give_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c9f1979944",
+      "target": "TOOL:give_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-db0e7ec5e6",
+      "target": "TOOL:give_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fda0cbeea3",
+      "target": "TOOL:give_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-07114fd667",
+      "target": "TOOL:unlock_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0dddafc5ec",
+      "target": "TOOL:unlock_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3b1d80fe44",
+      "target": "TOOL:unlock_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-52dfe7e5c8",
+      "target": "TOOL:unlock_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-675aa6065d",
+      "target": "TOOL:unlock_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-974247d819",
+      "target": "TOOL:unlock_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-dc41a3d7cd",
+      "target": "TOOL:unlock_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3b26d57a44",
+      "target": "TOOL:call_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4b26209b7c",
+      "target": "TOOL:call_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4b6aed6498",
+      "target": "TOOL:call_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4c217f194d",
+      "target": "TOOL:call_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-902c069934",
+      "target": "TOOL:call_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ddf8e10444",
+      "target": "TOOL:call_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e639828e56",
+      "target": "TOOL:call_discoverable_agent_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-300259e1fd",
+      "target": "TOOL:list_discoverable_agent_tools",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b10ff0902f",
+      "target": "TOOL:list_discoverable_agent_tools",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d95a2cabcc",
+      "target": "TOOL:list_discoverable_agent_tools",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d9b55f53ee",
+      "target": "TOOL:list_discoverable_agent_tools",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0d8293a6dd",
+      "target": "TOOL:apply_for_credit_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-62a41348fd",
+      "target": "TOOL:apply_for_credit_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7185a5da52",
+      "target": "TOOL:apply_for_credit_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-8765a28189",
+      "target": "TOOL:apply_for_credit_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-95a20b7f90",
+      "target": "TOOL:apply_for_credit_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a10adead61",
+      "target": "TOOL:apply_for_credit_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ddf36e21f8",
+      "target": "TOOL:apply_for_credit_card",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-3c49138928",
+      "target": "TOOL:submit_referral",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-47e80ff475",
+      "target": "TOOL:submit_referral",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c3153f2fe0",
+      "target": "TOOL:submit_referral",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-c4ac20b4d7",
+      "target": "TOOL:submit_referral",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-cbe30c5a9b",
+      "target": "TOOL:submit_referral",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-2f3373201a",
+      "target": "TOOL:call_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4bdbe3e51c",
+      "target": "TOOL:call_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-4e933e5ba7",
+      "target": "TOOL:call_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5e188fa00d",
+      "target": "TOOL:call_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-9ee50219c7",
+      "target": "TOOL:call_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-e69a9e4869",
+      "target": "TOOL:call_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f623e6f2df",
+      "target": "TOOL:call_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fd1ff37fa7",
+      "target": "TOOL:call_discoverable_user_tool",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a058218994",
+      "target": "TOOL:list_discoverable_user_tools",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-a190c83ec7",
+      "target": "TOOL:list_discoverable_user_tools",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b5cc6eb919",
+      "target": "TOOL:list_discoverable_user_tools",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ca87abf678",
+      "target": "TOOL:list_discoverable_user_tools",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-17186b6ff9",
+      "target": "TOOL:request_human_agent_transfer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-83ff8337ae",
+      "target": "TOOL:request_human_agent_transfer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b2d45dcf9f",
+      "target": "TOOL:request_human_agent_transfer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-d0d68f863d",
+      "target": "TOOL:request_human_agent_transfer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f29d588e35",
+      "target": "TOOL:request_human_agent_transfer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-b388af3140",
+      "target": "TOOL:request_human_agent_transfer",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-0c5a546280",
+      "target": "TOOL:submit_transaction",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-390b47b844",
+      "target": "TOOL:submit_transaction",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-53869cb493",
+      "target": "TOOL:submit_transaction",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-5537e8afbd",
+      "target": "TOOL:submit_transaction",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-7401226f88",
+      "target": "TOOL:submit_transaction",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-f34897b180",
+      "target": "TOOL:submit_transaction",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-fc06651245",
+      "target": "TOOL:submit_transaction",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-ff61d1d6de",
+      "target": "TOOL:submit_transaction",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-18691a7ef7",
+      "target": "TOOL:KB_search",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-1a8a894cff",
+      "target": "TOOL:KB_search",
+      "type": "GROUNDS_TOOL"
+    },
+    {
+      "source": "ATOM-69c3323355",
+      "target": "TOOL:KB_search",
+      "type": "GROUNDS_TOOL"
+    }
+  ]
+}

@@ -1,0 +1,2349 @@
+{
+  "case_type": "minimal_extractor_comparison_not_a_benchmark_result",
+  "domain": "telecom",
+  "max_sections": 3,
+  "similarity_threshold": 0.55,
+  "model": "ecnu-plus",
+  "base_url_host": "chat.ecnu.edu.cn",
+  "input_sha256": "271dea2233641e3332119845753c203b9e77e366da895f815fac2359efc1f6d7",
+  "held_out_boundary": {
+    "uses_test_tasks": false,
+    "uses_train_tasks": false,
+    "uses_reward_labels": false
+  },
+  "comparison": {
+    "rule_atom_count": 86,
+    "llm_atom_count": 19,
+    "text_match_count": 12,
+    "text_recall": 0.13953488372093023,
+    "llm_precision": 0.631578947368421,
+    "type_accuracy_on_matches": 0.3333333333333333,
+    "type_confusions": {
+      "precondition->prohibition": 1,
+      "permission->actor_constraint": 1,
+      "fact->postcondition": 2,
+      "fact->precondition": 1,
+      "fact->prohibition": 1,
+      "required_input->prohibition": 1,
+      "escalation->actor_constraint": 1
+    },
+    "matches": [
+      {
+        "rule_atom_id": "ATOM-00a7e81d24",
+        "llm_atom_id": "LLM-0007",
+        "similarity": 0.9048,
+        "rule_type": "escalation",
+        "llm_type": "escalation",
+        "type_match": true,
+        "rule_text": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions.",
+        "llm_text": "Transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions."
+      },
+      {
+        "rule_atom_id": "ATOM-11b9116a3f",
+        "llm_atom_id": "LLM-0004",
+        "similarity": 0.6667,
+        "rule_type": "precondition",
+        "llm_type": "prohibition",
+        "type_match": false,
+        "rule_text": "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously.",
+        "llm_text": "Should not make a tool call and respond to the user simultaneously."
+      },
+      {
+        "rule_atom_id": "ATOM-35e1975836",
+        "llm_atom_id": "LLM-0001",
+        "similarity": 0.7368,
+        "rule_type": "permission",
+        "llm_type": "actor_constraint",
+        "type_match": false,
+        "rule_text": "As a telecom agent, you can help users with **technical support**, **overdue bill payment**, **line suspension**, and **plan options**.",
+        "llm_text": "Can help users with technical support, overdue bill payment, line suspension, and plan options."
+      },
+      {
+        "rule_atom_id": "ATOM-4017a0008e",
+        "llm_atom_id": "LLM-0018",
+        "similarity": 0.875,
+        "rule_type": "fact",
+        "llm_type": "postcondition",
+        "type_match": false,
+        "rule_text": "Logic: Sets line status to Active, clears suspension_start_date.",
+        "llm_text": "Sets line status to Active, clears suspension_start_date."
+      },
+      {
+        "rule_atom_id": "ATOM-46e3a2e7b7",
+        "llm_atom_id": "LLM-0016",
+        "similarity": 0.5556,
+        "rule_type": "fact",
+        "llm_type": "precondition",
+        "type_match": false,
+        "rule_text": "No other bills are already awaiting payment for this customer Logic: Sets bill status to AWAITING_PAYMENT and notifies customer.",
+        "llm_text": "No other bills are already awaiting payment for this customer."
+      },
+      {
+        "rule_atom_id": "ATOM-4e88960ed4",
+        "llm_atom_id": "LLM-0017",
+        "similarity": 0.875,
+        "rule_type": "fact",
+        "llm_type": "postcondition",
+        "type_match": false,
+        "rule_text": "Logic: Sets line status to Suspended, records suspension_start_date.",
+        "llm_text": "Sets line status to Suspended, records suspension_start_date."
+      },
+      {
+        "rule_atom_id": "ATOM-8f45fd45aa",
+        "llm_atom_id": "LLM-0006",
+        "similarity": 0.9,
+        "rule_type": "fact",
+        "llm_type": "prohibition",
+        "type_match": false,
+        "rule_text": "You should deny user requests that are against this policy.",
+        "llm_text": "Should deny user requests that are against this policy."
+      },
+      {
+        "rule_atom_id": "ATOM-bf12b7526a",
+        "llm_atom_id": "LLM-0015",
+        "similarity": 0.8889,
+        "rule_type": "precondition",
+        "llm_type": "precondition",
+        "type_match": true,
+        "rule_text": "Checks: Line status must be Suspended or Pending Activation.",
+        "llm_text": "Line status must be Suspended or Pending Activation."
+      },
+      {
+        "rule_atom_id": "ATOM-c7d6ade5b6",
+        "llm_atom_id": "LLM-0002",
+        "similarity": 0.7368,
+        "rule_type": "required_input",
+        "llm_type": "prohibition",
+        "type_match": false,
+        "rule_text": "You should not provide any information, knowledge, or procedures not provided by the user or available tools, or give subjective recommendations or comments.",
+        "llm_text": "Should not provide any information, knowledge, or procedures not provided by the user or available tools."
+      },
+      {
+        "rule_atom_id": "ATOM-e6919d2a06",
+        "llm_atom_id": "LLM-0014",
+        "similarity": 0.8333,
+        "rule_type": "precondition",
+        "llm_type": "precondition",
+        "type_match": true,
+        "rule_text": "Checks: Line status must be Active.",
+        "llm_text": "Line status must be Active."
+      },
+      {
+        "rule_atom_id": "ATOM-f18d9b61cc",
+        "llm_atom_id": "LLM-0010",
+        "similarity": 0.8125,
+        "rule_type": "escalation",
+        "llm_type": "actor_constraint",
+        "type_match": false,
+        "rule_text": "You should try your best to resolve the issue for the user before transferring the user to a human agent.",
+        "llm_text": "Try best to resolve the issue for the user before transferring to a human agent."
+      },
+      {
+        "rule_atom_id": "ATOM-fdbce16df4",
+        "llm_atom_id": "LLM-0012",
+        "similarity": 0.6667,
+        "rule_type": "fact",
+        "llm_type": "fact",
+        "type_match": true,
+        "rule_text": "goodwill credit usage for the year There are four account status types: **Active**, **Suspended**, **Pending Verification**, and **Closed**.",
+        "llm_text": "There are four account status types: Active, Suspended, Pending Verification, and Closed."
+      }
+    ],
+    "llm_unmatched_atoms": [
+      {
+        "atom_id": "LLM-0003",
+        "type": "prohibition",
+        "subject": "Telecom Agent",
+        "text": "Should not give subjective recommendations or comments.",
+        "object": "subjective recommendations or comments",
+        "source": {
+          "title": "Telecom Agent Policy"
+        },
+        "origin": "llm_extractor"
+      },
+      {
+        "atom_id": "LLM-0005",
+        "type": "actor_constraint",
+        "subject": "Telecom Agent",
+        "text": "Should only make one tool call at a time.",
+        "object": "one tool call at a time",
+        "source": {
+          "title": "Telecom Agent Policy"
+        },
+        "origin": "llm_extractor"
+      },
+      {
+        "atom_id": "LLM-0008",
+        "type": "required_input",
+        "subject": "Telecom Agent",
+        "text": "To transfer, first make a tool call to transfer_to_human_agents.",
+        "object": "transfer_to_human_agents tool call",
+        "source": {
+          "title": "Telecom Agent Policy"
+        },
+        "origin": "llm_extractor"
+      },
+      {
+        "atom_id": "LLM-0009",
+        "type": "confirmation",
+        "subject": "Telecom Agent",
+        "text": "After transferring, send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user.",
+        "object": "YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.",
+        "source": {
+          "title": "Telecom Agent Policy"
+        },
+        "origin": "llm_extractor"
+      },
+      {
+        "atom_id": "LLM-0011",
+        "type": "fact",
+        "subject": "Customer Profile",
+        "text": "Contains customer ID, full name, date of birth, email, phone number, address, account status, created date, payment methods, line IDs, bill IDs, last extension date, and goodwill credit usage.",
+        "object": "customer profile fields",
+        "source": {
+          "title": "Customer"
+        },
+        "origin": "llm_extractor"
+      },
+      {
+        "atom_id": "LLM-0013",
+        "type": "fact",
+        "subject": "Payment Method",
+        "text": "Includes method type (Credit Card, Debit Card, PayPal), account number last 4 digits, and expiration date (MM/YYYY format).",
+        "object": "payment method fields",
+        "source": {
+          "title": "Payment Method"
+        },
+        "origin": "llm_extractor"
+      },
+      {
+        "atom_id": "LLM-0019",
+        "type": "postcondition",
+        "subject": "send_payment_request",
+        "text": "Sets bill status to AWAITING_PAYMENT and notifies customer.",
+        "object": "Bill status AWAITING_PAYMENT, customer notified",
+        "source": {
+          "title": "Tool Contracts"
+        },
+        "origin": "llm_extractor"
+      }
+    ],
+    "rule_unmatched_atoms": [
+      {
+        "atom_id": "ATOM-064febdf4b",
+        "type": "precondition",
+        "subject": "get_bills_for_customer",
+        "text": "Raises: ValueError: If the customer is not found.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_bills_for_customer"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-0acb1a568b",
+        "type": "precondition",
+        "subject": "send_payment_request",
+        "text": "Raises: ValueError: If customer not found, bill not found, or if another bill is already awaiting payment.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-0df966efdb",
+        "type": "required_input",
+        "subject": "get_customer_by_phone",
+        "text": "The get_customer_by_phone tool requires the phone_number argument.",
+        "object": "phone_number",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_phone"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-135f65099d",
+        "type": "fact",
+        "subject": "send_payment_request",
+        "text": "Bill exists and belongs to the customer.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-139b587f86",
+        "type": "actor_constraint",
+        "subject": "resume_line",
+        "text": "The resume_line tool is owned by the assistant actor.",
+        "object": "assistant",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "resume_line"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-1566524de5",
+        "type": "fact",
+        "subject": "get_customer_by_name",
+        "text": "Returns: List of matching Customer objects.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_name"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-16af24433c",
+        "type": "actor_constraint",
+        "subject": "get_bills_for_customer",
+        "text": "The get_bills_for_customer tool is owned by the assistant actor.",
+        "object": "assistant",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_bills_for_customer"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-19da36176c",
+        "type": "required_input",
+        "subject": "suspend_line",
+        "text": "The suspend_line tool requires the reason argument.",
+        "object": "reason",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-1e3d0db53a",
+        "type": "fact",
+        "subject": "get_details_by_id",
+        "text": "Returns: The object corresponding to the ID.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_details_by_id"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-2017d4f5b2",
+        "type": "precondition",
+        "subject": "suspend_line",
+        "text": "Raises: ValueError: If customer or line not found, or if line is not active.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-2a71a49e2b",
+        "type": "fact",
+        "subject": "get_bills_for_customer",
+        "text": "Retrieves a list of the customer's bills, most recent first.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_bills_for_customer"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-2ab83f556b",
+        "type": "required_input",
+        "subject": "resume_line",
+        "text": "The resume_line tool requires the line_id argument.",
+        "object": "line_id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "resume_line"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-3438a07278",
+        "type": "actor_constraint",
+        "subject": "get_details_by_id",
+        "text": "The get_details_by_id tool is owned by the assistant actor.",
+        "object": "assistant",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_details_by_id"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-39fd5ba171",
+        "type": "fact",
+        "subject": "send_payment_request",
+        "text": "bill_id: ID of the bill to send payment request for.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-3a8754e2db",
+        "type": "actor_constraint",
+        "subject": "get_customer_by_id",
+        "text": "The get_customer_by_id tool is owned by the assistant actor.",
+        "object": "assistant",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_id"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-3cef449e5e",
+        "type": "fact",
+        "subject": "Payment Method",
+        "text": "method type (Credit Card, Debit Card, PayPal).",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Payment Method",
+          "line_start": 37,
+          "line_end": 42
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-46c9dbd14a",
+        "type": "fact",
+        "subject": "suspend_line",
+        "text": "Suspends a specific line (max 6 months).",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-49069fc946",
+        "type": "precondition",
+        "subject": "get_details_by_id",
+        "text": "The ID must be a valid ID for a Customer, Line, Device, Bill, or Plan.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_details_by_id"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-49767fc83f",
+        "type": "fact",
+        "subject": "Telecom Agent Policy",
+        "text": "The current time is 2025-02-25 12:08:00 EST.",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Telecom Agent Policy",
+          "line_start": 1,
+          "line_end": 16
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-50b9309668",
+        "type": "fact",
+        "subject": "get_bills_for_customer",
+        "text": "Returns: List of Bill objects, ordered by issue date (newest first).",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_bills_for_customer"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-5147f242cc",
+        "type": "required_input",
+        "subject": "get_bills_for_customer",
+        "text": "The get_bills_for_customer tool requires the customer_id argument.",
+        "object": "customer_id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_bills_for_customer"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-5379c852f8",
+        "type": "exception",
+        "subject": "get_customer_by_id",
+        "text": "Returns: Customer object if found, None otherwise.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_id"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-5a3e4527ea",
+        "type": "fact",
+        "subject": "get_customer_by_id",
+        "text": "Retrieves a customer directly by their unique ID.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_id"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-5a539069b5",
+        "type": "fact",
+        "subject": "send_payment_request",
+        "text": "Sends a payment request to the customer for a specific bill.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-5d9bcc1f6f",
+        "type": "fact",
+        "subject": "get_bills_for_customer",
+        "text": "Args: customer_id: ID of the customer.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_bills_for_customer"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-65aa5ab680",
+        "type": "fact",
+        "subject": "Payment Method",
+        "text": "expiration date (MM/YYYY format)",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Payment Method",
+          "line_start": 37,
+          "line_end": 42
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-7387ffc2f1",
+        "type": "fact",
+        "subject": "resume_line",
+        "text": "Args: customer_id: ID of the customer who owns the line.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "resume_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-772a69ca2f",
+        "type": "fact",
+        "subject": "resume_line",
+        "text": "line_id: ID of the line to resume.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "resume_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-786469ef40",
+        "type": "precondition",
+        "subject": "resume_line",
+        "text": "Returns: Dictionary with success status, message, and updated line if applicable.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "resume_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-79d822cfab",
+        "type": "precondition",
+        "subject": "get_details_by_id",
+        "text": "Raises: ValueError: If the ID is not found or if the ID format is invalid.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_details_by_id"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-7a00c11cfe",
+        "type": "fact",
+        "subject": "get_customer_by_name",
+        "text": "Searches for customers by name and DOB.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_name"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-7dbc0fb186",
+        "type": "actor_constraint",
+        "subject": "get_customer_by_name",
+        "text": "The get_customer_by_name tool is owned by the assistant actor.",
+        "object": "assistant",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_name"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-816ae647b9",
+        "type": "precondition",
+        "subject": "send_payment_request",
+        "text": "Warning: This method does not check if the bill is already PAID.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-8899de6386",
+        "type": "fact",
+        "subject": "Customer",
+        "text": "line IDs associated with their account.",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Customer",
+          "line_start": 19,
+          "line_end": 36
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-8a7954d091",
+        "type": "fact",
+        "subject": "get_customer_by_phone",
+        "text": "Args: phone_number: The phone number to search for.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_phone"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-8d6b8b5b16",
+        "type": "fact",
+        "subject": "get_customer_by_phone",
+        "text": "Finds a customer by their primary contact or line phone number.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_phone"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-94224f2477",
+        "type": "fact",
+        "subject": "get_customer_by_id",
+        "text": "Args: customer_id: The unique identifier of the customer.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_id"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-9614181f9a",
+        "type": "fact",
+        "subject": "send_payment_request",
+        "text": "Args: customer_id: ID of the customer who owns the bill.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-991dd616c6",
+        "type": "required_input",
+        "subject": "get_bills_for_customer",
+        "text": "The get_bills_for_customer tool requires the limit argument.",
+        "object": "limit",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_bills_for_customer"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-9c8561b009",
+        "type": "fact",
+        "subject": "suspend_line",
+        "text": "reason: Reason for suspension.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-9d78e25173",
+        "type": "fact",
+        "subject": "send_payment_request",
+        "text": "Returns: Message indicating the payment request has been sent.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-a1aa7b8759",
+        "type": "fact",
+        "subject": "get_details_by_id",
+        "text": "Args: id: The ID of the object to retrieve.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_details_by_id"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-a3dd2d480e",
+        "type": "required_input",
+        "subject": "get_customer_by_id",
+        "text": "The get_customer_by_id tool requires the customer_id argument.",
+        "object": "customer_id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_id"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-a59fbf657e",
+        "type": "escalation",
+        "subject": "Telecom Agent Policy",
+        "text": "To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT.",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Telecom Agent Policy",
+          "line_start": 1,
+          "line_end": 16
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-a7054b5099",
+        "type": "fact",
+        "subject": "Payment Method",
+        "text": "Each payment method includes:.",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Payment Method",
+          "line_start": 37,
+          "line_end": 42
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-a9647a82a2",
+        "type": "actor_constraint",
+        "subject": "get_customer_by_phone",
+        "text": "The get_customer_by_phone tool is owned by the assistant actor.",
+        "object": "assistant",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_phone"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-adffb2ee56",
+        "type": "required_input",
+        "subject": "send_payment_request",
+        "text": "The send_payment_request tool requires the customer_id argument.",
+        "object": "customer_id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-ae445c1ba1",
+        "type": "required_input",
+        "subject": "get_details_by_id",
+        "text": "The get_details_by_id tool requires the id argument.",
+        "object": "id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_details_by_id"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-b06a951606",
+        "type": "precondition",
+        "subject": "get_customer_by_name",
+        "text": "May return multiple matches if names are similar, DOB helps disambiguate.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_name"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-b121f27090",
+        "type": "fact",
+        "subject": "Customer",
+        "text": "last extension date (for payment extensions).",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Customer",
+          "line_start": 19,
+          "line_end": 36
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-bacef913e0",
+        "type": "fact",
+        "subject": "Customer",
+        "text": "Each customer has a profile containing:.",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Customer",
+          "line_start": 19,
+          "line_end": 36
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-bf0e7f0daf",
+        "type": "fact",
+        "subject": "resume_line",
+        "text": "Resumes a suspended line.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "resume_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-c09072d58a",
+        "type": "fact",
+        "subject": "get_customer_by_name",
+        "text": "Args: full_name: The full name of the customer.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_name"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-c451f82852",
+        "type": "fact",
+        "subject": "get_customer_by_name",
+        "text": "dob: Date of birth for verification, in the format YYYY-MM-DD.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_name"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-c63b108549",
+        "type": "fact",
+        "subject": "suspend_line",
+        "text": "Args: customer_id: ID of the customer who owns the line.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-ca1344dc93",
+        "type": "fact",
+        "subject": "Customer",
+        "text": "address (street, city, state, zip code).",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Customer",
+          "line_start": 19,
+          "line_end": 36
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-cc596f8c14",
+        "type": "fact",
+        "subject": "get_bills_for_customer",
+        "text": "limit: Maximum number of bills to return.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_bills_for_customer"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-d2f060d0a9",
+        "type": "fact",
+        "subject": "Payment Method",
+        "text": "account number last 4 digits.",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Payment Method",
+          "line_start": 37,
+          "line_end": 42
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-d4cd087629",
+        "type": "precondition",
+        "subject": "Telecom Agent Policy",
+        "text": "If you respond to the user, you should not make a tool call at the same time.",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Telecom Agent Policy",
+          "line_start": 1,
+          "line_end": 16
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-d7d213f28f",
+        "type": "actor_constraint",
+        "subject": "suspend_line",
+        "text": "The suspend_line tool is owned by the assistant actor.",
+        "object": "assistant",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-da2d32fb73",
+        "type": "precondition",
+        "subject": "resume_line",
+        "text": "Raises: ValueError: If customer or line not found, or if line is not suspended or pending activation.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "resume_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-dd8a996dfa",
+        "type": "required_input",
+        "subject": "suspend_line",
+        "text": "The suspend_line tool requires the customer_id argument.",
+        "object": "customer_id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-e0c40e18c1",
+        "type": "required_input",
+        "subject": "send_payment_request",
+        "text": "The send_payment_request tool requires the bill_id argument.",
+        "object": "bill_id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-e1f39face8",
+        "type": "required_input",
+        "subject": "resume_line",
+        "text": "The resume_line tool requires the customer_id argument.",
+        "object": "customer_id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "resume_line"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-e21130d536",
+        "type": "precondition",
+        "subject": "send_payment_request",
+        "text": "Always check the bill status before calling this method.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-e78ce55661",
+        "type": "fact",
+        "subject": "Telecom Agent Policy",
+        "text": "PLEASE HOLD ON.' to the user.",
+        "source": {
+          "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+          "title": "Telecom Agent Policy",
+          "line_start": 1,
+          "line_end": 16
+        },
+        "origin": "policy"
+      },
+      {
+        "atom_id": "ATOM-e9efd02554",
+        "type": "precondition",
+        "subject": "suspend_line",
+        "text": "Returns: Dictionary with success status, message, and updated line if applicable.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-ecb33c2859",
+        "type": "actor_constraint",
+        "subject": "send_payment_request",
+        "text": "The send_payment_request tool is owned by the assistant actor.",
+        "object": "assistant",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "send_payment_request"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-f076949ff4",
+        "type": "fact",
+        "subject": "get_details_by_id",
+        "text": "Retrieves the details for a given ID.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_details_by_id"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-f2051ce017",
+        "type": "exception",
+        "subject": "get_customer_by_phone",
+        "text": "Returns: Customer object if found, None otherwise.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_phone"
+        },
+        "origin": "tool_description"
+      },
+      {
+        "atom_id": "ATOM-f2681b9256",
+        "type": "required_input",
+        "subject": "get_customer_by_name",
+        "text": "The get_customer_by_name tool requires the dob argument.",
+        "object": "dob",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_name"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-f519ff72e8",
+        "type": "required_input",
+        "subject": "suspend_line",
+        "text": "The suspend_line tool requires the line_id argument.",
+        "object": "line_id",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-f96a160812",
+        "type": "required_input",
+        "subject": "get_customer_by_name",
+        "text": "The get_customer_by_name tool requires the full_name argument.",
+        "object": "full_name",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "get_customer_by_name"
+        },
+        "origin": "tool_schema"
+      },
+      {
+        "atom_id": "ATOM-fddd24b9cf",
+        "type": "fact",
+        "subject": "suspend_line",
+        "text": "line_id: ID of the line to suspend.",
+        "source": {
+          "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+          "title": "suspend_line"
+        },
+        "origin": "tool_description"
+      }
+    ],
+    "rule_type_distribution": {
+      "escalation": 3,
+      "precondition": 15,
+      "required_input": 15,
+      "fact": 42,
+      "actor_constraint": 8,
+      "permission": 1,
+      "exception": 2
+    },
+    "llm_type_distribution": {
+      "actor_constraint": 3,
+      "prohibition": 4,
+      "escalation": 1,
+      "required_input": 1,
+      "confirmation": 1,
+      "fact": 3,
+      "precondition": 3,
+      "postcondition": 3
+    }
+  },
+  "llm_meta": {
+    "invalid_atoms": [],
+    "usage": {
+      "prompt_tokens": 1527,
+      "total_tokens": 2907,
+      "completion_tokens": 1380,
+      "prompt_tokens_details": null,
+      "reasoning_tokens": 0
+    },
+    "request_id": "5abac2bcb2c94be88c9acf6ab176f44f",
+    "response_shape": "array"
+  },
+  "rule_atoms": [
+    {
+      "atom_id": "ATOM-00a7e81d24",
+      "type": "escalation",
+      "subject": "Telecom Agent Policy",
+      "text": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-064febdf4b",
+      "type": "precondition",
+      "subject": "get_bills_for_customer",
+      "text": "Raises: ValueError: If the customer is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0acb1a568b",
+      "type": "precondition",
+      "subject": "send_payment_request",
+      "text": "Raises: ValueError: If customer not found, bill not found, or if another bill is already awaiting payment.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0df966efdb",
+      "type": "required_input",
+      "subject": "get_customer_by_phone",
+      "text": "The get_customer_by_phone tool requires the phone_number argument.",
+      "object": "phone_number",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-11b9116a3f",
+      "type": "precondition",
+      "subject": "Telecom Agent Policy",
+      "text": "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-135f65099d",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "Bill exists and belongs to the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-139b587f86",
+      "type": "actor_constraint",
+      "subject": "resume_line",
+      "text": "The resume_line tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1566524de5",
+      "type": "fact",
+      "subject": "get_customer_by_name",
+      "text": "Returns: List of matching Customer objects.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-16af24433c",
+      "type": "actor_constraint",
+      "subject": "get_bills_for_customer",
+      "text": "The get_bills_for_customer tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-19da36176c",
+      "type": "required_input",
+      "subject": "suspend_line",
+      "text": "The suspend_line tool requires the reason argument.",
+      "object": "reason",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1e3d0db53a",
+      "type": "fact",
+      "subject": "get_details_by_id",
+      "text": "Returns: The object corresponding to the ID.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2017d4f5b2",
+      "type": "precondition",
+      "subject": "suspend_line",
+      "text": "Raises: ValueError: If customer or line not found, or if line is not active.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2a71a49e2b",
+      "type": "fact",
+      "subject": "get_bills_for_customer",
+      "text": "Retrieves a list of the customer's bills, most recent first.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2ab83f556b",
+      "type": "required_input",
+      "subject": "resume_line",
+      "text": "The resume_line tool requires the line_id argument.",
+      "object": "line_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3438a07278",
+      "type": "actor_constraint",
+      "subject": "get_details_by_id",
+      "text": "The get_details_by_id tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-35e1975836",
+      "type": "permission",
+      "subject": "Telecom Agent Policy",
+      "text": "As a telecom agent, you can help users with **technical support**, **overdue bill payment**, **line suspension**, and **plan options**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-39fd5ba171",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "bill_id: ID of the bill to send payment request for.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3a8754e2db",
+      "type": "actor_constraint",
+      "subject": "get_customer_by_id",
+      "text": "The get_customer_by_id tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3cef449e5e",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "method type (Credit Card, Debit Card, PayPal).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Payment Method",
+        "line_start": 37,
+        "line_end": 42
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4017a0008e",
+      "type": "fact",
+      "subject": "resume_line",
+      "text": "Logic: Sets line status to Active, clears suspension_start_date.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-46c9dbd14a",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "Suspends a specific line (max 6 months).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-46e3a2e7b7",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "No other bills are already awaiting payment for this customer Logic: Sets bill status to AWAITING_PAYMENT and notifies customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-49069fc946",
+      "type": "precondition",
+      "subject": "get_details_by_id",
+      "text": "The ID must be a valid ID for a Customer, Line, Device, Bill, or Plan.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-49767fc83f",
+      "type": "fact",
+      "subject": "Telecom Agent Policy",
+      "text": "The current time is 2025-02-25 12:08:00 EST.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4e88960ed4",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "Logic: Sets line status to Suspended, records suspension_start_date.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-50b9309668",
+      "type": "fact",
+      "subject": "get_bills_for_customer",
+      "text": "Returns: List of Bill objects, ordered by issue date (newest first).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5147f242cc",
+      "type": "required_input",
+      "subject": "get_bills_for_customer",
+      "text": "The get_bills_for_customer tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-5379c852f8",
+      "type": "exception",
+      "subject": "get_customer_by_id",
+      "text": "Returns: Customer object if found, None otherwise.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5a3e4527ea",
+      "type": "fact",
+      "subject": "get_customer_by_id",
+      "text": "Retrieves a customer directly by their unique ID.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5a539069b5",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "Sends a payment request to the customer for a specific bill.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5d9bcc1f6f",
+      "type": "fact",
+      "subject": "get_bills_for_customer",
+      "text": "Args: customer_id: ID of the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-65aa5ab680",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "expiration date (MM/YYYY format)",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Payment Method",
+        "line_start": 37,
+        "line_end": 42
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7387ffc2f1",
+      "type": "fact",
+      "subject": "resume_line",
+      "text": "Args: customer_id: ID of the customer who owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-772a69ca2f",
+      "type": "fact",
+      "subject": "resume_line",
+      "text": "line_id: ID of the line to resume.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-786469ef40",
+      "type": "precondition",
+      "subject": "resume_line",
+      "text": "Returns: Dictionary with success status, message, and updated line if applicable.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-79d822cfab",
+      "type": "precondition",
+      "subject": "get_details_by_id",
+      "text": "Raises: ValueError: If the ID is not found or if the ID format is invalid.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7a00c11cfe",
+      "type": "fact",
+      "subject": "get_customer_by_name",
+      "text": "Searches for customers by name and DOB.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7dbc0fb186",
+      "type": "actor_constraint",
+      "subject": "get_customer_by_name",
+      "text": "The get_customer_by_name tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-816ae647b9",
+      "type": "precondition",
+      "subject": "send_payment_request",
+      "text": "Warning: This method does not check if the bill is already PAID.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8899de6386",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "line IDs associated with their account.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8a7954d091",
+      "type": "fact",
+      "subject": "get_customer_by_phone",
+      "text": "Args: phone_number: The phone number to search for.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8d6b8b5b16",
+      "type": "fact",
+      "subject": "get_customer_by_phone",
+      "text": "Finds a customer by their primary contact or line phone number.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8f45fd45aa",
+      "type": "fact",
+      "subject": "Telecom Agent Policy",
+      "text": "You should deny user requests that are against this policy.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-94224f2477",
+      "type": "fact",
+      "subject": "get_customer_by_id",
+      "text": "Args: customer_id: The unique identifier of the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9614181f9a",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "Args: customer_id: ID of the customer who owns the bill.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-991dd616c6",
+      "type": "required_input",
+      "subject": "get_bills_for_customer",
+      "text": "The get_bills_for_customer tool requires the limit argument.",
+      "object": "limit",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-9c8561b009",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "reason: Reason for suspension.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9d78e25173",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "Returns: Message indicating the payment request has been sent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a1aa7b8759",
+      "type": "fact",
+      "subject": "get_details_by_id",
+      "text": "Args: id: The ID of the object to retrieve.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a3dd2d480e",
+      "type": "required_input",
+      "subject": "get_customer_by_id",
+      "text": "The get_customer_by_id tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a59fbf657e",
+      "type": "escalation",
+      "subject": "Telecom Agent Policy",
+      "text": "To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a7054b5099",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "Each payment method includes:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Payment Method",
+        "line_start": 37,
+        "line_end": 42
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a9647a82a2",
+      "type": "actor_constraint",
+      "subject": "get_customer_by_phone",
+      "text": "The get_customer_by_phone tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-adffb2ee56",
+      "type": "required_input",
+      "subject": "send_payment_request",
+      "text": "The send_payment_request tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ae445c1ba1",
+      "type": "required_input",
+      "subject": "get_details_by_id",
+      "text": "The get_details_by_id tool requires the id argument.",
+      "object": "id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-b06a951606",
+      "type": "precondition",
+      "subject": "get_customer_by_name",
+      "text": "May return multiple matches if names are similar, DOB helps disambiguate.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b121f27090",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "last extension date (for payment extensions).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-bacef913e0",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "Each customer has a profile containing:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-bf0e7f0daf",
+      "type": "fact",
+      "subject": "resume_line",
+      "text": "Resumes a suspended line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-bf12b7526a",
+      "type": "precondition",
+      "subject": "resume_line",
+      "text": "Checks: Line status must be Suspended or Pending Activation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c09072d58a",
+      "type": "fact",
+      "subject": "get_customer_by_name",
+      "text": "Args: full_name: The full name of the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c451f82852",
+      "type": "fact",
+      "subject": "get_customer_by_name",
+      "text": "dob: Date of birth for verification, in the format YYYY-MM-DD.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c63b108549",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "Args: customer_id: ID of the customer who owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c7d6ade5b6",
+      "type": "required_input",
+      "subject": "Telecom Agent Policy",
+      "text": "You should not provide any information, knowledge, or procedures not provided by the user or available tools, or give subjective recommendations or comments.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ca1344dc93",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "address (street, city, state, zip code).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-cc596f8c14",
+      "type": "fact",
+      "subject": "get_bills_for_customer",
+      "text": "limit: Maximum number of bills to return.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d2f060d0a9",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "account number last 4 digits.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Payment Method",
+        "line_start": 37,
+        "line_end": 42
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d4cd087629",
+      "type": "precondition",
+      "subject": "Telecom Agent Policy",
+      "text": "If you respond to the user, you should not make a tool call at the same time.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d7d213f28f",
+      "type": "actor_constraint",
+      "subject": "suspend_line",
+      "text": "The suspend_line tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-da2d32fb73",
+      "type": "precondition",
+      "subject": "resume_line",
+      "text": "Raises: ValueError: If customer or line not found, or if line is not suspended or pending activation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-dd8a996dfa",
+      "type": "required_input",
+      "subject": "suspend_line",
+      "text": "The suspend_line tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e0c40e18c1",
+      "type": "required_input",
+      "subject": "send_payment_request",
+      "text": "The send_payment_request tool requires the bill_id argument.",
+      "object": "bill_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e1f39face8",
+      "type": "required_input",
+      "subject": "resume_line",
+      "text": "The resume_line tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e21130d536",
+      "type": "precondition",
+      "subject": "send_payment_request",
+      "text": "Always check the bill status before calling this method.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e6919d2a06",
+      "type": "precondition",
+      "subject": "suspend_line",
+      "text": "Checks: Line status must be Active.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e78ce55661",
+      "type": "fact",
+      "subject": "Telecom Agent Policy",
+      "text": "PLEASE HOLD ON.' to the user.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e9efd02554",
+      "type": "precondition",
+      "subject": "suspend_line",
+      "text": "Returns: Dictionary with success status, message, and updated line if applicable.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ecb33c2859",
+      "type": "actor_constraint",
+      "subject": "send_payment_request",
+      "text": "The send_payment_request tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f076949ff4",
+      "type": "fact",
+      "subject": "get_details_by_id",
+      "text": "Retrieves the details for a given ID.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f18d9b61cc",
+      "type": "escalation",
+      "subject": "Telecom Agent Policy",
+      "text": "You should try your best to resolve the issue for the user before transferring the user to a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f2051ce017",
+      "type": "exception",
+      "subject": "get_customer_by_phone",
+      "text": "Returns: Customer object if found, None otherwise.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f2681b9256",
+      "type": "required_input",
+      "subject": "get_customer_by_name",
+      "text": "The get_customer_by_name tool requires the dob argument.",
+      "object": "dob",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f519ff72e8",
+      "type": "required_input",
+      "subject": "suspend_line",
+      "text": "The suspend_line tool requires the line_id argument.",
+      "object": "line_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f96a160812",
+      "type": "required_input",
+      "subject": "get_customer_by_name",
+      "text": "The get_customer_by_name tool requires the full_name argument.",
+      "object": "full_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-fdbce16df4",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "goodwill credit usage for the year There are four account status types: **Active**, **Suspended**, **Pending Verification**, and **Closed**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-fddd24b9cf",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "line_id: ID of the line to suspend.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    }
+  ],
+  "llm_atoms": [
+    {
+      "atom_id": "LLM-0001",
+      "type": "actor_constraint",
+      "subject": "Telecom Agent",
+      "text": "Can help users with technical support, overdue bill payment, line suspension, and plan options.",
+      "object": "technical support, overdue bill payment, line suspension, and plan options",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0002",
+      "type": "prohibition",
+      "subject": "Telecom Agent",
+      "text": "Should not provide any information, knowledge, or procedures not provided by the user or available tools.",
+      "object": "information, knowledge, or procedures not provided by the user or available tools",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0003",
+      "type": "prohibition",
+      "subject": "Telecom Agent",
+      "text": "Should not give subjective recommendations or comments.",
+      "object": "subjective recommendations or comments",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0004",
+      "type": "prohibition",
+      "subject": "Telecom Agent",
+      "text": "Should not make a tool call and respond to the user simultaneously.",
+      "object": "simultaneous tool call and user response",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0005",
+      "type": "actor_constraint",
+      "subject": "Telecom Agent",
+      "text": "Should only make one tool call at a time.",
+      "object": "one tool call at a time",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0006",
+      "type": "prohibition",
+      "subject": "Telecom Agent",
+      "text": "Should deny user requests that are against this policy.",
+      "object": "user requests against policy",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0007",
+      "type": "escalation",
+      "subject": "Telecom Agent",
+      "text": "Transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions.",
+      "object": "request cannot be handled within scope",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0008",
+      "type": "required_input",
+      "subject": "Telecom Agent",
+      "text": "To transfer, first make a tool call to transfer_to_human_agents.",
+      "object": "transfer_to_human_agents tool call",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0009",
+      "type": "confirmation",
+      "subject": "Telecom Agent",
+      "text": "After transferring, send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user.",
+      "object": "YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0010",
+      "type": "actor_constraint",
+      "subject": "Telecom Agent",
+      "text": "Try best to resolve the issue for the user before transferring to a human agent.",
+      "object": "resolve issue before transfer",
+      "source": {
+        "title": "Telecom Agent Policy"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0011",
+      "type": "fact",
+      "subject": "Customer Profile",
+      "text": "Contains customer ID, full name, date of birth, email, phone number, address, account status, created date, payment methods, line IDs, bill IDs, last extension date, and goodwill credit usage.",
+      "object": "customer profile fields",
+      "source": {
+        "title": "Customer"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0012",
+      "type": "fact",
+      "subject": "Account Status",
+      "text": "There are four account status types: Active, Suspended, Pending Verification, and Closed.",
+      "object": "Active, Suspended, Pending Verification, Closed",
+      "source": {
+        "title": "Customer"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0013",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "Includes method type (Credit Card, Debit Card, PayPal), account number last 4 digits, and expiration date (MM/YYYY format).",
+      "object": "payment method fields",
+      "source": {
+        "title": "Payment Method"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0014",
+      "type": "precondition",
+      "subject": "suspend_line",
+      "text": "Line status must be Active.",
+      "object": "Line status is Active",
+      "source": {
+        "title": "Tool Contracts"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0015",
+      "type": "precondition",
+      "subject": "resume_line",
+      "text": "Line status must be Suspended or Pending Activation.",
+      "object": "Line status is Suspended or Pending Activation",
+      "source": {
+        "title": "Tool Contracts"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0016",
+      "type": "precondition",
+      "subject": "send_payment_request",
+      "text": "No other bills are already awaiting payment for this customer.",
+      "object": "No other bills awaiting payment",
+      "source": {
+        "title": "Tool Contracts"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0017",
+      "type": "postcondition",
+      "subject": "suspend_line",
+      "text": "Sets line status to Suspended, records suspension_start_date.",
+      "object": "Line status Suspended, suspension_start_date recorded",
+      "source": {
+        "title": "Tool Contracts"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0018",
+      "type": "postcondition",
+      "subject": "resume_line",
+      "text": "Sets line status to Active, clears suspension_start_date.",
+      "object": "Line status Active, suspension_start_date cleared",
+      "source": {
+        "title": "Tool Contracts"
+      },
+      "origin": "llm_extractor"
+    },
+    {
+      "atom_id": "LLM-0019",
+      "type": "postcondition",
+      "subject": "send_payment_request",
+      "text": "Sets bill status to AWAITING_PAYMENT and notifies customer.",
+      "object": "Bill status AWAITING_PAYMENT, customer notified",
+      "source": {
+        "title": "Tool Contracts"
+      },
+      "origin": "llm_extractor"
+    }
+  ],
+  "interpretation": [
+    "Text matching is a lexical diagnostic, not semantic ground truth.",
+    "Type accuracy is computed only on text-matched pairs.",
+    "A small case cannot establish that LLM extraction improves downstream τ³ performance."
+  ]
+}

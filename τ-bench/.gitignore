@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.uv-cache/
+vendor/tau3-bench/.venv/
+.coverage
+
+# API keys — never commit.
+.env
+
+# Formal live outputs can be large and may contain model traces.
+results/runs/
+skills_formal/
+results/runs/*/results.json
+results/runs/*/simulations/
+*.pyc
+__pycache__/
+.pytest_cache/

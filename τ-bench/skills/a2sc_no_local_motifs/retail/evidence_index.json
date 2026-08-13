@@ -1,0 +1,310 @@
+{
+  "knowledge_atoms": [
+    {
+      "ka_id": "KA-00001",
+      "kind": "policy_section",
+      "title": "Retail agent policy",
+      "text": "As a retail agent, you can help users:\n\n- **cancel or modify pending orders**\n- **return or exchange delivered orders**\n- **modify their default user address**\n- **provide information about their own profile, orders, and related products**\n\nAt the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code. This has to be done even when the user already provides the user id.\n\nOnce the user has been authenticated, you can provide the user with information about order, product, profile information, e.g. help the user look up order id.\n\nYou can only help one user per conversation (but you can handle multiple requests from the same user), and must deny any requests for tasks related to any other user.\n\nBefore taking any action that updates the database (cancel, modify, return, exchange), you must list the action details and obtain explicit user confirmation (yes) to proceed.\n\nYou should not make up any information or knowledge or procedures not provided by the user or the tools, or give subjective recommendations or comments.\n\nYou should at most make one tool call at a time, and if you take a tool call, you should not respond to the user at the same time. If you respond to the user, you should not make a tool call at the same time.\n\nYou should deny user requests that are against this policy.\n\nYou should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 1,
+      "line_end": 25
+    },
+    {
+      "ka_id": "KA-00002",
+      "kind": "policy_section",
+      "title": "Domain basic",
+      "text": "- All times in the database are EST and 24 hour based. For example \"02:30:00\" means 2:30 AM EST.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 26,
+      "line_end": 29
+    },
+    {
+      "ka_id": "KA-00003",
+      "kind": "policy_section",
+      "title": "User",
+      "text": "Each user has a profile containing:\n\n- unique user id\n- email\n- default address\n- payment methods.\n\nThere are three types of payment methods: **gift card**, **paypal account**, **credit card**.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 30,
+      "line_end": 40
+    },
+    {
+      "ka_id": "KA-00004",
+      "kind": "policy_section",
+      "title": "Product",
+      "text": "Our retail store has 50 types of products.\n\nFor each **type of product**, there are **variant items** of different **options**.\n\nFor example, for a 't-shirt' product, there could be a variant item with option 'color blue size M', and another variant item with option 'color red size L'.\n\nEach product has the following attributes:\n\n- unique product id\n- name\n- list of variants\n\nEach variant item has the following attributes:\n\n- unique item id\n- information about the value of the product options for this item.\n- availability\n- price\n\nNote: Product ID and Item ID have no relations and should not be confused!",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 41,
+      "line_end": 63
+    },
+    {
+      "ka_id": "KA-00005",
+      "kind": "policy_section",
+      "title": "Order",
+      "text": "Each order has the following attributes:\n\n- unique order id\n- user id\n- address\n- items ordered\n- status\n- fullfilments info (tracking id and item ids)\n- payment history\n\nThe status of an order can be: **pending**, **processed**, **delivered**, or **cancelled**.\n\nOrders can have other optional attributes based on the actions that have been taken (cancellation reason, which items have been exchanged, what was the exchane price difference etc)",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 64,
+      "line_end": 79
+    },
+    {
+      "ka_id": "KA-00006",
+      "kind": "policy_section",
+      "title": "Generic action rules",
+      "text": "Generally, you can only take action on pending or delivered orders.\n\nExchange or modify order tools can only be called once per order. Be sure that all items to be changed are collected into a list before making the tool call!!!",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 80,
+      "line_end": 85
+    },
+    {
+      "ka_id": "KA-00007",
+      "kind": "policy_section",
+      "title": "Cancel pending order",
+      "text": "An order can only be cancelled if its status is 'pending', and you should check its status before taking the action.\n\nThe user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. Other reasons are not acceptable.\n\nAfter user confirmation, the order status will be changed to 'cancelled', and the total will be refunded via the original payment method immediately if it is gift card, otherwise in 5 to 7 business days.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 86,
+      "line_end": 93
+    },
+    {
+      "ka_id": "KA-00008",
+      "kind": "policy_section",
+      "title": "Modify pending order",
+      "text": "An order can only be modified if its status is 'pending', and you should check its status before taking the action.\n\nFor a pending order, you can take actions to modify its shipping address, payment method, or product item options, but nothing else.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 94,
+      "line_end": 99
+    },
+    {
+      "ka_id": "KA-00009",
+      "kind": "policy_section",
+      "title": "Modify payment",
+      "text": "The user can only choose a single payment method different from the original payment method.\n\nIf the user wants the modify the payment method to gift card, it must have enough balance to cover the total amount.\n\nAfter user confirmation, the order status will be kept as 'pending'. The original payment method will be refunded immediately if it is a gift card, otherwise it will be refunded within 5 to 7 business days.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 100,
+      "line_end": 107
+    },
+    {
+      "ka_id": "KA-00010",
+      "kind": "policy_section",
+      "title": "Modify items",
+      "text": "This action can only be called once, and will change the order status to 'pending (items modifed)'. The agent will not be able to modify or cancel the order anymore. So you must confirm all the details are correct and be cautious before taking this action. In particular, remember to remind the customer to confirm they have provided all the items they want to modify.\n\nFor a pending order, each item can be modified to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe.\n\nThe user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 108,
+      "line_end": 115
+    },
+    {
+      "ka_id": "KA-00011",
+      "kind": "policy_section",
+      "title": "Return delivered order",
+      "text": "An order can only be returned if its status is 'delivered', and you should check its status before taking the action.\n\nThe user needs to confirm the order id and the list of items to be returned.\n\nThe user needs to provide a payment method to receive the refund.\n\nThe refund must either go to the original payment method, or an existing gift card.\n\nAfter user confirmation, the order status will be changed to 'return requested', and the user will receive an email regarding how to return items.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 116,
+      "line_end": 127
+    },
+    {
+      "ka_id": "KA-00012",
+      "kind": "policy_section",
+      "title": "Exchange delivered order",
+      "text": "An order can only be exchanged if its status is 'delivered', and you should check its status before taking the action. In particular, remember to remind the customer to confirm they have provided all items to be exchanged.\n\nFor a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe.\n\nThe user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference.\n\nAfter user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items. There is no need to place a new order.",
+      "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+      "line_start": 128,
+      "line_end": 136
+    },
+    {
+      "ka_id": "KA-00013",
+      "kind": "tool_contract",
+      "title": "calculate",
+      "text": "Calculate the result of a mathematical expression.\n\nArgs:\n    expression: The mathematical expression to calculate, such as '2 + 2'. The expression can contain numbers, operators (+, -, *, /), parentheses, and spaces.\n\nReturns:\n    The result of the mathematical expression.\n\nRaises:\n    ValueError: If the expression is invalid.",
+      "requestor": "assistant",
+      "parameters": [
+        "expression"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00014",
+      "kind": "tool_contract",
+      "title": "cancel_pending_order",
+      "text": "Cancel a pending order. If the order is already processed or delivered,\nit cannot be cancelled. The agent needs to explain the cancellation detail\nand ask for explicit user confirmation (yes/no) to proceed. If the user confirms,\nthe order status will be changed to 'cancelled' and the payment will be refunded.\nThe refund will be added to the user's gift card balance immediately if the payment\nwas made using a gift card, otherwise the refund would take 5-7 business days to process.\nThe function returns the order details after the cancellation.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    reason: The reason for cancellation, which should be either 'no longer needed' or 'ordered by mistake'.\n\nReturns:\n    Order: The order details after the cancellation.",
+      "requestor": "assistant",
+      "parameters": [
+        "order_id",
+        "reason"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00015",
+      "kind": "tool_contract",
+      "title": "exchange_delivered_order_items",
+      "text": "Exchange items in a delivered order to new items of the same product type.\nFor a delivered order, return or exchange can be only done once by the agent.\nThe agent needs to explain the exchange detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be exchanged, each such as '1008292230'. There could be duplicate items in the list.\n    new_item_ids: The item ids to be exchanged for, each such as '1008292230'.\n                 There could be duplicate items in the list. Each new item id should match the item id\n                 in the same position and be of the same product.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference,\n                     such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up\n                     from the user or order details.\n\nReturns:\n    Order: The order details after the exchange.\n\nRaises:\n    ValueError: If the order is not delivered.\n    ValueError: If the items to be exchanged do not exist.\n    ValueError: If the new items do not exist or do not match the old items.\n    ValueError: If the number of items to be exchanged does not match.",
+      "requestor": "assistant",
+      "parameters": [
+        "order_id",
+        "item_ids",
+        "new_item_ids",
+        "payment_method_id"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00016",
+      "kind": "tool_contract",
+      "title": "find_user_id_by_name_zip",
+      "text": "Find user id by first name, last name, and zip code. If the user is not found, the function\nwill return an error message. By default, find user id by email, and only call this function\nif the user is not found by email or cannot remember email.\n\nArgs:\n    first_name: The first name of the customer, such as 'John'.\n    last_name: The last name of the customer, such as 'Doe'.\n    zip: The zip code of the customer, such as '12345'.\n\nReturns:\n    str: The user id if found, otherwise an error message.\n\nRaises:\n    ValueError: If the user is not found.",
+      "requestor": "assistant",
+      "parameters": [
+        "first_name",
+        "last_name",
+        "zip"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00017",
+      "kind": "tool_contract",
+      "title": "find_user_id_by_email",
+      "text": "Find user id by email. If the user is not found, the function will return an error message.\n\nArgs:\n    email: The email of the user, such as 'something@example.com'.\n\nReturns:\n    str: The user id if found, otherwise an error message.\n\nRaises:\n    ValueError: If the user is not found.",
+      "requestor": "assistant",
+      "parameters": [
+        "email"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00018",
+      "kind": "tool_contract",
+      "title": "get_order_details",
+      "text": "Get the status and details of an order.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n\nReturns:\n    Order: The order details.\n\nRaises:\n    ValueError: If the order is not found.",
+      "requestor": "assistant",
+      "parameters": [
+        "order_id"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00019",
+      "kind": "tool_contract",
+      "title": "get_product_details",
+      "text": "Get the inventory details of a product.\n\nArgs:\n    product_id: The product id, such as '6086499569'. Be careful the product id is different from the item id.\n\nReturns:\n    Product: The product details.\n\nRaises:\n    ValueError: If the product is not found.",
+      "requestor": "assistant",
+      "parameters": [
+        "product_id"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00020",
+      "kind": "tool_contract",
+      "title": "get_item_details",
+      "text": "Get the inventory details of an item.\n\nArgs:\n    item_id: The item id, such as '6086499569'. Be careful the item id is different from the product id.\n\nReturns:\n    Variant: The item details.\n\nRaises:\n    ValueError: If the item is not found.",
+      "requestor": "assistant",
+      "parameters": [
+        "item_id"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00021",
+      "kind": "tool_contract",
+      "title": "get_user_details",
+      "text": "Get the details of a user, including their orders.\n\nArgs:\n    user_id: The user id, such as 'sara_doe_496'.\n\nReturns:\n    User: The user details.\n\nRaises:\n    ValueError: If the user is not found.",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00022",
+      "kind": "tool_contract",
+      "title": "list_all_product_types",
+      "text": "List the name and product id of all product types.\nEach product type has a variety of different items with unique item ids and options.\nThere are only 50 product types in the store.\n\nReturns:\n    str: A JSON string mapping product names to their product IDs, sorted alphabetically by name.",
+      "requestor": "assistant",
+      "parameters": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00023",
+      "kind": "tool_contract",
+      "title": "modify_pending_order_address",
+      "text": "Modify the shipping address of a pending order. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    address1: The first line of the address, such as '123 Main St'.\n    address2: The second line of the address, such as 'Apt 1' or ''.\n    city: The city, such as 'San Francisco'.\n    state: The state, such as 'CA'.\n    country: The country, such as 'USA'.\n    zip: The zip code, such as '12345'.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.",
+      "requestor": "assistant",
+      "parameters": [
+        "order_id",
+        "address1",
+        "address2",
+        "city",
+        "state",
+        "country",
+        "zip"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00024",
+      "kind": "tool_contract",
+      "title": "modify_pending_order_items",
+      "text": "Modify items in a pending order to new items of the same product type. For a pending order, this function can only be called once. The agent needs to explain the exchange detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be modified, each such as '1008292230'. There could be duplicate items in the list.\n    new_item_ids: The item ids to be modified for, each such as '1008292230'. There could be duplicate items in the list. Each new item id should match the item id in the same position and be of the same product.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.\n    ValueError: If the items to be modified do not exist.\n    ValueError: If the new items do not exist or do not match the old items.\n    ValueError: If the number of items to be modified does not match.",
+      "requestor": "assistant",
+      "parameters": [
+        "order_id",
+        "item_ids",
+        "new_item_ids",
+        "payment_method_id"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00025",
+      "kind": "tool_contract",
+      "title": "modify_pending_order_payment",
+      "text": "Modify the payment method of a pending order. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.\n    ValueError: If the payment method does not exist.\n    ValueError: If the payment history has more than one payment.\n    ValueError: If the new payment method is the same as the current one.",
+      "requestor": "assistant",
+      "parameters": [
+        "order_id",
+        "payment_method_id"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00026",
+      "kind": "tool_contract",
+      "title": "modify_user_address",
+      "text": "Modify the default address of a user. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    user_id: The user id, such as 'sara_doe_496'.\n    address1: The first line of the address, such as '123 Main St'.\n    address2: The second line of the address, such as 'Apt 1' or ''.\n    city: The city, such as 'San Francisco'.\n    state: The state, such as 'CA'.\n    country: The country, such as 'USA'.\n    zip: The zip code, such as '12345'.\n\nReturns:\n    User: The user details after the modification.\n\nRaises:\n    ValueError: If the user is not found.",
+      "requestor": "assistant",
+      "parameters": [
+        "user_id",
+        "address1",
+        "address2",
+        "city",
+        "state",
+        "country",
+        "zip"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00027",
+      "kind": "tool_contract",
+      "title": "return_delivered_order_items",
+      "text": "Return some items of a delivered order.\nThe order status will be changed to 'return requested'.\nThe agent needs to explain the return detail and ask for explicit user confirmation (yes/no) to proceed.\nThe user will receive follow-up email for how and where to return the item.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be returned, each such as '1008292230'. There could be duplicate items in the list.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'.\n                     These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after requesting the return.\n\nRaises:\n    ValueError: If the order is not delivered.\n    ValueError: If the payment method is not the original payment method or a gift card.\n    ValueError: If the items to be returned do not exist.",
+      "requestor": "assistant",
+      "parameters": [
+        "order_id",
+        "item_ids",
+        "payment_method_id"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "ka_id": "KA-00028",
+      "kind": "tool_contract",
+      "title": "transfer_to_human_agents",
+      "text": "Transfer the user to a human agent, with a summary of the user's issue.\nOnly transfer if\n -  the user explicitly asks for a human agent\n -  given the policy and the available tools, you cannot solve the user's issue.\n\nArgs:\n    summary: A summary of the user's issue.\n\nReturns:\n    A message indicating the user has been transferred to a human agent.",
+      "requestor": "assistant",
+      "parameters": [
+        "summary"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    }
+  ]
+}

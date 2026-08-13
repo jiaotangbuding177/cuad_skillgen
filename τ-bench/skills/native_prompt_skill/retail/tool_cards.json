@@ -1,0 +1,644 @@
+{
+  "tools": [
+    {
+      "tool": "calculate",
+      "actor": "assistant",
+      "description": "Calculate the result of a mathematical expression.\n\nArgs:\n    expression: The mathematical expression to calculate, such as '2 + 2'. The expression can contain numbers, operators (+, -, *, /), parentheses, and spaces.\n\nReturns:\n    The result of the mathematical expression.\n\nRaises:\n    ValueError: If the expression is invalid.",
+      "parameters": [
+        "expression"
+      ],
+      "consequential": false,
+      "observation": true,
+      "bound_atom_ids": [
+        "ATOM-08bca5db26",
+        "ATOM-5bd4bf60d3",
+        "ATOM-69e2b0db33",
+        "ATOM-72e4d69e80",
+        "ATOM-7b6db676dd",
+        "ATOM-ac22ba0c20",
+        "ATOM-e4fafebef0"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-69e2b0db33",
+        "ATOM-e4fafebef0"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "cancel_pending_order",
+      "actor": "assistant",
+      "description": "Cancel a pending order. If the order is already processed or delivered,\nit cannot be cancelled. The agent needs to explain the cancellation detail\nand ask for explicit user confirmation (yes/no) to proceed. If the user confirms,\nthe order status will be changed to 'cancelled' and the payment will be refunded.\nThe refund will be added to the user's gift card balance immediately if the payment\nwas made using a gift card, otherwise the refund would take 5-7 business days to process.\nThe function returns the order details after the cancellation.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    reason: The reason for cancellation, which should be either 'no longer needed' or 'ordered by mistake'.\n\nReturns:\n    Order: The order details after the cancellation.",
+      "parameters": [
+        "order_id",
+        "reason"
+      ],
+      "consequential": true,
+      "observation": false,
+      "bound_atom_ids": [
+        "ATOM-2dbb52706f",
+        "ATOM-46e1a93fa1",
+        "ATOM-4e44eefc06",
+        "ATOM-594cc8e6e8",
+        "ATOM-8cd151d3fe",
+        "ATOM-955c6e840d",
+        "ATOM-95989e2ed8",
+        "ATOM-a915940ba8",
+        "ATOM-d4bac08529",
+        "ATOM-e727db2a7b",
+        "ATOM-f2916b6e94",
+        "ATOM-f8f4b07255",
+        "ATOM-fd61aff76a"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2dbb52706f",
+        "ATOM-8cd151d3fe",
+        "ATOM-a915940ba8",
+        "ATOM-fd61aff76a"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-f8f4b07255"
+      ],
+      "verification_atom_ids": [
+        "ATOM-4e44eefc06",
+        "ATOM-594cc8e6e8"
+      ],
+      "exception_atom_ids": [
+        "ATOM-955c6e840d"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "exchange_delivered_order_items",
+      "actor": "assistant",
+      "description": "Exchange items in a delivered order to new items of the same product type.\nFor a delivered order, return or exchange can be only done once by the agent.\nThe agent needs to explain the exchange detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be exchanged, each such as '1008292230'. There could be duplicate items in the list.\n    new_item_ids: The item ids to be exchanged for, each such as '1008292230'.\n                 There could be duplicate items in the list. Each new item id should match the item id\n                 in the same position and be of the same product.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference,\n                     such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up\n                     from the user or order details.\n\nReturns:\n    Order: The order details after the exchange.\n\nRaises:\n    ValueError: If the order is not delivered.\n    ValueError: If the items to be exchanged do not exist.\n    ValueError: If the new items do not exist or do not match the old items.\n    ValueError: If the number of items to be exchanged does not match.",
+      "parameters": [
+        "order_id",
+        "item_ids",
+        "new_item_ids",
+        "payment_method_id"
+      ],
+      "consequential": true,
+      "observation": false,
+      "bound_atom_ids": [
+        "ATOM-05900c8637",
+        "ATOM-088931f87f",
+        "ATOM-2ec67e2e65",
+        "ATOM-3a3bef285b",
+        "ATOM-402725bf34",
+        "ATOM-4489418b2f",
+        "ATOM-45a2e45c9e",
+        "ATOM-4e89c646f3",
+        "ATOM-52fe9572d5",
+        "ATOM-639877b320",
+        "ATOM-642f132b2c",
+        "ATOM-7a78373ac4",
+        "ATOM-912ecae119",
+        "ATOM-9c936541a8",
+        "ATOM-babaf4cb09",
+        "ATOM-d5ffe3b2ca",
+        "ATOM-d6e4fa58ab",
+        "ATOM-f34967edb8",
+        "ATOM-f3d43ccbc5",
+        "ATOM-fb1df1e8a6",
+        "ATOM-fd6e4e0692"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-05900c8637",
+        "ATOM-088931f87f",
+        "ATOM-4489418b2f",
+        "ATOM-4e89c646f3",
+        "ATOM-639877b320",
+        "ATOM-7a78373ac4",
+        "ATOM-912ecae119",
+        "ATOM-f34967edb8",
+        "ATOM-f3d43ccbc5"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-45a2e45c9e"
+      ],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "find_user_id_by_name_zip",
+      "actor": "assistant",
+      "description": "Find user id by first name, last name, and zip code. If the user is not found, the function\nwill return an error message. By default, find user id by email, and only call this function\nif the user is not found by email or cannot remember email.\n\nArgs:\n    first_name: The first name of the customer, such as 'John'.\n    last_name: The last name of the customer, such as 'Doe'.\n    zip: The zip code of the customer, such as '12345'.\n\nReturns:\n    str: The user id if found, otherwise an error message.\n\nRaises:\n    ValueError: If the user is not found.",
+      "parameters": [
+        "first_name",
+        "last_name",
+        "zip"
+      ],
+      "consequential": false,
+      "observation": true,
+      "bound_atom_ids": [
+        "ATOM-13c4241fbc",
+        "ATOM-150f278b9d",
+        "ATOM-23751e2ab7",
+        "ATOM-23b6a182ac",
+        "ATOM-49c7c4301a",
+        "ATOM-52cb44641d",
+        "ATOM-6fe87e3921",
+        "ATOM-747f7efb4b",
+        "ATOM-8f055b97ec",
+        "ATOM-9f703bf209",
+        "ATOM-a3c20afaab",
+        "ATOM-df38d420ea"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-23751e2ab7",
+        "ATOM-49c7c4301a",
+        "ATOM-8f055b97ec",
+        "ATOM-a3c20afaab",
+        "ATOM-df38d420ea"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-52cb44641d"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-9f703bf209"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "find_user_id_by_email",
+      "actor": "assistant",
+      "description": "Find user id by email. If the user is not found, the function will return an error message.\n\nArgs:\n    email: The email of the user, such as 'something@example.com'.\n\nReturns:\n    str: The user id if found, otherwise an error message.\n\nRaises:\n    ValueError: If the user is not found.",
+      "parameters": [
+        "email"
+      ],
+      "consequential": false,
+      "observation": true,
+      "bound_atom_ids": [
+        "ATOM-07657cdfd5",
+        "ATOM-0d5e1b0c1e",
+        "ATOM-0d63847574",
+        "ATOM-1048aeed78",
+        "ATOM-1c0d253527",
+        "ATOM-6288f52aa3",
+        "ATOM-c2b8209d3c",
+        "ATOM-83418549b0",
+        "ATOM-d4634d0f89",
+        "ATOM-2d966a44f8"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0d63847574",
+        "ATOM-1c0d253527",
+        "ATOM-2d966a44f8",
+        "ATOM-83418549b0",
+        "ATOM-c2b8209d3c",
+        "ATOM-d4634d0f89"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-07657cdfd5"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "get_order_details",
+      "actor": "assistant",
+      "description": "Get the status and details of an order.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n\nReturns:\n    Order: The order details.\n\nRaises:\n    ValueError: If the order is not found.",
+      "parameters": [
+        "order_id"
+      ],
+      "consequential": false,
+      "observation": true,
+      "bound_atom_ids": [
+        "ATOM-366d0a8b12",
+        "ATOM-593781d6d7",
+        "ATOM-660cecd6e0",
+        "ATOM-7a285b40ae",
+        "ATOM-acee55a823",
+        "ATOM-d9502fe4a0",
+        "ATOM-e2c30e5cca",
+        "ATOM-fc1424007a",
+        "ATOM-b28d7686bf",
+        "ATOM-33ae4eac99",
+        "ATOM-4884005167",
+        "ATOM-890f5e6b32"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-33ae4eac99",
+        "ATOM-366d0a8b12",
+        "ATOM-890f5e6b32",
+        "ATOM-b28d7686bf",
+        "ATOM-e2c30e5cca"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "get_product_details",
+      "actor": "assistant",
+      "description": "Get the inventory details of a product.\n\nArgs:\n    product_id: The product id, such as '6086499569'. Be careful the product id is different from the item id.\n\nReturns:\n    Product: The product details.\n\nRaises:\n    ValueError: If the product is not found.",
+      "parameters": [
+        "product_id"
+      ],
+      "consequential": false,
+      "observation": true,
+      "bound_atom_ids": [
+        "ATOM-1e879e780f",
+        "ATOM-8d818a3eb9",
+        "ATOM-a4584cca9a",
+        "ATOM-b94f8e72bb",
+        "ATOM-c93104d073",
+        "ATOM-cbafdd1a4b",
+        "ATOM-ddbcb14f48",
+        "ATOM-28f361e03c",
+        "ATOM-067f71d6f4",
+        "ATOM-332db8a3fa",
+        "ATOM-18d3ed4941",
+        "ATOM-b337c797df"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-b94f8e72bb",
+        "ATOM-cbafdd1a4b"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "get_item_details",
+      "actor": "assistant",
+      "description": "Get the inventory details of an item.\n\nArgs:\n    item_id: The item id, such as '6086499569'. Be careful the item id is different from the product id.\n\nReturns:\n    Variant: The item details.\n\nRaises:\n    ValueError: If the item is not found.",
+      "parameters": [
+        "item_id"
+      ],
+      "consequential": false,
+      "observation": true,
+      "bound_atom_ids": [
+        "ATOM-18c86282d0",
+        "ATOM-360eb64f29",
+        "ATOM-3b08ed1076",
+        "ATOM-5136f6ff1a",
+        "ATOM-77807017a1",
+        "ATOM-7dea1d9562",
+        "ATOM-b957544935",
+        "ATOM-18d3ed4941",
+        "ATOM-28f361e03c",
+        "ATOM-067f71d6f4",
+        "ATOM-332db8a3fa",
+        "ATOM-b337c797df"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-18c86282d0",
+        "ATOM-5136f6ff1a"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "get_user_details",
+      "actor": "assistant",
+      "description": "Get the details of a user, including their orders.\n\nArgs:\n    user_id: The user id, such as 'sara_doe_496'.\n\nReturns:\n    User: The user details.\n\nRaises:\n    ValueError: If the user is not found.",
+      "parameters": [
+        "user_id"
+      ],
+      "consequential": false,
+      "observation": true,
+      "bound_atom_ids": [
+        "ATOM-2175c6bc69",
+        "ATOM-4f4d46731d",
+        "ATOM-6b1b18e1e9",
+        "ATOM-94a974abe0",
+        "ATOM-d0c3981fcf",
+        "ATOM-db5adf0e28",
+        "ATOM-ed92b2777e"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-94a974abe0",
+        "ATOM-d0c3981fcf",
+        "ATOM-ed92b2777e"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "list_all_product_types",
+      "actor": "assistant",
+      "description": "List the name and product id of all product types.\nEach product type has a variety of different items with unique item ids and options.\nThere are only 50 product types in the store.\n\nReturns:\n    str: A JSON string mapping product names to their product IDs, sorted alphabetically by name.",
+      "parameters": [],
+      "consequential": false,
+      "observation": true,
+      "bound_atom_ids": [
+        "ATOM-0143457ae8",
+        "ATOM-029c18b5ae",
+        "ATOM-6b26f6a1af",
+        "ATOM-b906dd18e4",
+        "ATOM-d466c56517",
+        "ATOM-87d6dbc9e1",
+        "ATOM-28f5179fc6",
+        "ATOM-7b1cf0a468"
+      ],
+      "precondition_atom_ids": [],
+      "prohibition_atom_ids": [
+        "ATOM-28f5179fc6",
+        "ATOM-7b1cf0a468"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "modify_pending_order_address",
+      "actor": "assistant",
+      "description": "Modify the shipping address of a pending order. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    address1: The first line of the address, such as '123 Main St'.\n    address2: The second line of the address, such as 'Apt 1' or ''.\n    city: The city, such as 'San Francisco'.\n    state: The state, such as 'CA'.\n    country: The country, such as 'USA'.\n    zip: The zip code, such as '12345'.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.",
+      "parameters": [
+        "order_id",
+        "address1",
+        "address2",
+        "city",
+        "state",
+        "country",
+        "zip"
+      ],
+      "consequential": true,
+      "observation": false,
+      "bound_atom_ids": [
+        "ATOM-10707934e0",
+        "ATOM-107953ceed",
+        "ATOM-1587d2c89e",
+        "ATOM-212e3d14da",
+        "ATOM-3dd807705a",
+        "ATOM-3f56c047dc",
+        "ATOM-5867688fb8",
+        "ATOM-5949083008",
+        "ATOM-5c1233a517",
+        "ATOM-5fcdb6745f",
+        "ATOM-61267b4d94",
+        "ATOM-6e382de4f5",
+        "ATOM-7cfa83e24b",
+        "ATOM-a2ad7f4d7c",
+        "ATOM-b3acba7df3",
+        "ATOM-c133d941f6",
+        "ATOM-c502b8d4a2",
+        "ATOM-c916aec9c1",
+        "ATOM-d86303f7ed",
+        "ATOM-e784526d23"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-10707934e0",
+        "ATOM-1587d2c89e",
+        "ATOM-212e3d14da",
+        "ATOM-3f56c047dc",
+        "ATOM-6e382de4f5",
+        "ATOM-7cfa83e24b",
+        "ATOM-a2ad7f4d7c",
+        "ATOM-c916aec9c1",
+        "ATOM-d86303f7ed"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-3dd807705a"
+      ],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "modify_pending_order_items",
+      "actor": "assistant",
+      "description": "Modify items in a pending order to new items of the same product type. For a pending order, this function can only be called once. The agent needs to explain the exchange detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be modified, each such as '1008292230'. There could be duplicate items in the list.\n    new_item_ids: The item ids to be modified for, each such as '1008292230'. There could be duplicate items in the list. Each new item id should match the item id in the same position and be of the same product.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.\n    ValueError: If the items to be modified do not exist.\n    ValueError: If the new items do not exist or do not match the old items.\n    ValueError: If the number of items to be modified does not match.",
+      "parameters": [
+        "order_id",
+        "item_ids",
+        "new_item_ids",
+        "payment_method_id"
+      ],
+      "consequential": true,
+      "observation": false,
+      "bound_atom_ids": [
+        "ATOM-1ae4a2f11d",
+        "ATOM-358836fa45",
+        "ATOM-3c78cc304b",
+        "ATOM-4019e66db9",
+        "ATOM-440ca78059",
+        "ATOM-5608ae9a10",
+        "ATOM-579ded6094",
+        "ATOM-6a4bd73b64",
+        "ATOM-701247968f",
+        "ATOM-746fe4b447",
+        "ATOM-7718e29f9c",
+        "ATOM-8959ddb239",
+        "ATOM-8ebbd2b017",
+        "ATOM-9579dbe8c8",
+        "ATOM-9f304cddfd",
+        "ATOM-a27ec85046",
+        "ATOM-c222934507",
+        "ATOM-cedb68d142",
+        "ATOM-d261b065cd",
+        "ATOM-e4af87ffc0",
+        "ATOM-f938ca20af"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-4019e66db9",
+        "ATOM-5608ae9a10",
+        "ATOM-6a4bd73b64",
+        "ATOM-701247968f",
+        "ATOM-746fe4b447",
+        "ATOM-8959ddb239",
+        "ATOM-8ebbd2b017",
+        "ATOM-9579dbe8c8",
+        "ATOM-a27ec85046"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-c222934507"
+      ],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "modify_pending_order_payment",
+      "actor": "assistant",
+      "description": "Modify the payment method of a pending order. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.\n    ValueError: If the payment method does not exist.\n    ValueError: If the payment history has more than one payment.\n    ValueError: If the new payment method is the same as the current one.",
+      "parameters": [
+        "order_id",
+        "payment_method_id"
+      ],
+      "consequential": true,
+      "observation": false,
+      "bound_atom_ids": [
+        "ATOM-0b24946f41",
+        "ATOM-12c0c3db8d",
+        "ATOM-25aeefdaf8",
+        "ATOM-35749a7cdc",
+        "ATOM-4f3a2374fc",
+        "ATOM-5268a36743",
+        "ATOM-57cc133276",
+        "ATOM-5826a2c881",
+        "ATOM-979e69dbef",
+        "ATOM-985ca62283",
+        "ATOM-9df80558fa",
+        "ATOM-c41e84d32a",
+        "ATOM-e79971c8e8",
+        "ATOM-f266ae9a21"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-12c0c3db8d",
+        "ATOM-25aeefdaf8",
+        "ATOM-35749a7cdc",
+        "ATOM-5268a36743",
+        "ATOM-57cc133276",
+        "ATOM-5826a2c881",
+        "ATOM-979e69dbef"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-e79971c8e8"
+      ],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "modify_user_address",
+      "actor": "assistant",
+      "description": "Modify the default address of a user. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    user_id: The user id, such as 'sara_doe_496'.\n    address1: The first line of the address, such as '123 Main St'.\n    address2: The second line of the address, such as 'Apt 1' or ''.\n    city: The city, such as 'San Francisco'.\n    state: The state, such as 'CA'.\n    country: The country, such as 'USA'.\n    zip: The zip code, such as '12345'.\n\nReturns:\n    User: The user details after the modification.\n\nRaises:\n    ValueError: If the user is not found.",
+      "parameters": [
+        "user_id",
+        "address1",
+        "address2",
+        "city",
+        "state",
+        "country",
+        "zip"
+      ],
+      "consequential": true,
+      "observation": false,
+      "bound_atom_ids": [
+        "ATOM-025411ecd1",
+        "ATOM-0a421f9afd",
+        "ATOM-0aaa1713db",
+        "ATOM-199569053a",
+        "ATOM-20c3a25e6e",
+        "ATOM-228ea16b33",
+        "ATOM-2effcb99eb",
+        "ATOM-3a6e782d17",
+        "ATOM-498348a4bc",
+        "ATOM-5497238ea1",
+        "ATOM-5643eb0908",
+        "ATOM-5d0edc5853",
+        "ATOM-72b9914659",
+        "ATOM-813fbe58ca",
+        "ATOM-8ed2cb12a1",
+        "ATOM-d70a9cd0bc",
+        "ATOM-df55822fd4",
+        "ATOM-e374f798a7",
+        "ATOM-fe1093307f"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-025411ecd1",
+        "ATOM-0a421f9afd",
+        "ATOM-2effcb99eb",
+        "ATOM-5643eb0908",
+        "ATOM-72b9914659",
+        "ATOM-d70a9cd0bc",
+        "ATOM-df55822fd4",
+        "ATOM-e374f798a7",
+        "ATOM-fe1093307f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-0aaa1713db"
+      ],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "return_delivered_order_items",
+      "actor": "assistant",
+      "description": "Return some items of a delivered order.\nThe order status will be changed to 'return requested'.\nThe agent needs to explain the return detail and ask for explicit user confirmation (yes/no) to proceed.\nThe user will receive follow-up email for how and where to return the item.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be returned, each such as '1008292230'. There could be duplicate items in the list.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'.\n                     These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after requesting the return.\n\nRaises:\n    ValueError: If the order is not delivered.\n    ValueError: If the payment method is not the original payment method or a gift card.\n    ValueError: If the items to be returned do not exist.",
+      "parameters": [
+        "order_id",
+        "item_ids",
+        "payment_method_id"
+      ],
+      "consequential": true,
+      "observation": false,
+      "bound_atom_ids": [
+        "ATOM-0806cff1d1",
+        "ATOM-190c5a7505",
+        "ATOM-204a772ecd",
+        "ATOM-357f314911",
+        "ATOM-441010bb68",
+        "ATOM-46ef6ff61a",
+        "ATOM-48051c03e4",
+        "ATOM-4912b08889",
+        "ATOM-7d56013467",
+        "ATOM-806dd9f20b",
+        "ATOM-96af96cdac",
+        "ATOM-babfd09903",
+        "ATOM-bcb503a5ad",
+        "ATOM-c94a9b53c9",
+        "ATOM-e2d01165fd",
+        "ATOM-eb39fbc61d",
+        "ATOM-eddd9b767f",
+        "ATOM-edf68f625b"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0806cff1d1",
+        "ATOM-357f314911",
+        "ATOM-7d56013467",
+        "ATOM-806dd9f20b",
+        "ATOM-96af96cdac",
+        "ATOM-e2d01165fd",
+        "ATOM-eddd9b767f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-bcb503a5ad"
+      ],
+      "exception_atom_ids": [],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    },
+    {
+      "tool": "transfer_to_human_agents",
+      "actor": "assistant",
+      "description": "Transfer the user to a human agent, with a summary of the user's issue.\nOnly transfer if\n -  the user explicitly asks for a human agent\n -  given the policy and the available tools, you cannot solve the user's issue.\n\nArgs:\n    summary: A summary of the user's issue.\n\nReturns:\n    A message indicating the user has been transferred to a human agent.",
+      "parameters": [
+        "summary"
+      ],
+      "consequential": true,
+      "observation": false,
+      "bound_atom_ids": [
+        "ATOM-12de65d5c0",
+        "ATOM-66891ef2bb",
+        "ATOM-9df9bcd3e3",
+        "ATOM-a709264679",
+        "ATOM-b99d707eea",
+        "ATOM-d2c4ba9845",
+        "ATOM-e1d653f91f",
+        "ATOM-27cc954968",
+        "ATOM-9cea717d24"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-e1d653f91f"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-a709264679"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-12de65d5c0",
+        "ATOM-27cc954968",
+        "ATOM-9cea717d24",
+        "ATOM-9df9bcd3e3",
+        "ATOM-d2c4ba9845"
+      ],
+      "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py"
+    }
+  ]
+}

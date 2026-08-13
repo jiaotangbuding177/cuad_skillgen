@@ -1,0 +1,1144 @@
+{
+  "modules": [
+    {
+      "module_id": "retail.calculate",
+      "name": "Calculate",
+      "description": "Use for tasks involving calculate; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_order_details",
+        "get_product_details",
+        "calculate"
+      ],
+      "primary_tool": "calculate",
+      "actor": "assistant",
+      "instructions": "# Calculate\n\nActor: `assistant`\n\nParameters: expression\n\nPurpose: Calculate the result of a mathematical expression.\n\nArgs:\n    expression: The mathematical expression to calculate, such as '2 + 2'. The expression can contain numbers, operators (+, -, *, /), parentheses, and spaces.\n\nReturns:\n    The result of the mathematical expression.\n\nRaises:\n    ValueError: If the expression is invalid.\n\nObserve/check before: get_order_details, get_product_details\n\n## Preconditions\n- Raises: ValueError: If the expression is invalid. [ATOM-e4fafebef0]\n- The calculate tool requires the expression argument. [ATOM-69e2b0db33]\n\n## Actor constraints\n- The calculate tool is owned by the assistant actor. [ATOM-7b6db676dd]\n\n## Soft local continuations\n- Consider `modify_pending_order_items` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-08bca5db26",
+        "ATOM-5bd4bf60d3",
+        "ATOM-69e2b0db33",
+        "ATOM-72e4d69e80",
+        "ATOM-7b6db676dd",
+        "ATOM-ac22ba0c20",
+        "ATOM-e4fafebef0"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-69e2b0db33",
+        "ATOM-e4fafebef0"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-7b6db676dd",
+          "kind": "actor",
+          "tool": "calculate",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-63b7aaa8be",
+          "kind": "ordering",
+          "before_tool": "get_order_details",
+          "after_tool": "calculate",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-8511e0a54b",
+          "kind": "ordering",
+          "before_tool": "calculate",
+          "after_tool": "modify_pending_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-227887b85b",
+          "kind": "ordering",
+          "before_tool": "get_product_details",
+          "after_tool": "calculate",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.cancel_pending_order",
+      "name": "Cancel Pending Order",
+      "description": "Use for tasks involving cancel pending order; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_order_details",
+        "cancel_pending_order"
+      ],
+      "primary_tool": "cancel_pending_order",
+      "actor": "assistant",
+      "instructions": "# Cancel Pending Order\n\nActor: `assistant`\n\nParameters: order_id, reason\n\nPurpose: Cancel a pending order. If the order is already processed or delivered,\nit cannot be cancelled. The agent needs to explain the cancellation detail\nand ask for explicit user confirmation (yes/no) to proceed. If the user confirms,\nthe order status will be changed to 'cancelled' and the payment will be refunded.\nThe refund will be added to the user's gift card balance immediately if the payment\nwas made using a gift card, otherwise the refund would take 5-7 business days to process.\nThe function returns the order details after the cancellation.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    reason: The reason for cancellation, which should be either 'no longer needed' or 'ordered by mistake'.\n\nReturns:\n    Order: The order details after the cancellation.\n\nObserve/check before: get_order_details\n\n## Preconditions\n- The cancel_pending_order tool requires the order_id argument. [ATOM-8cd151d3fe]\n- The cancel_pending_order tool requires the reason argument. [ATOM-fd61aff76a]\n- The agent needs to explain the cancellation detail and ask for explicit user confirmation (yes/no) to proceed. [ATOM-2dbb52706f]\n- If the user confirms, the order status will be changed to 'cancelled' and the payment will be refunded. [ATOM-a915940ba8]\n\n## Prohibitions\n- If the order is already processed or delivered, it cannot be cancelled. [ATOM-f8f4b07255]\n\n## Actor constraints\n- The cancel_pending_order tool is owned by the assistant actor. [ATOM-46e1a93fa1]\n\n## Exceptions\n- The refund will be added to the user's gift card balance immediately if the payment was made using a gift card, otherwise the refund would take 5-7 business days to process. [ATOM-955c6e840d]\n\n## Verification\n- The function returns the order details after the cancellation. [ATOM-4e44eefc06]\n- Returns: Order: The order details after the cancellation. [ATOM-594cc8e6e8]\n\n## Soft local continuations\n- Consider `get_order_details` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-2dbb52706f",
+        "ATOM-46e1a93fa1",
+        "ATOM-4e44eefc06",
+        "ATOM-594cc8e6e8",
+        "ATOM-8cd151d3fe",
+        "ATOM-955c6e840d",
+        "ATOM-95989e2ed8",
+        "ATOM-a915940ba8",
+        "ATOM-d4bac08529",
+        "ATOM-e727db2a7b",
+        "ATOM-f2916b6e94",
+        "ATOM-f8f4b07255",
+        "ATOM-fd61aff76a"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2dbb52706f",
+        "ATOM-8cd151d3fe",
+        "ATOM-a915940ba8",
+        "ATOM-fd61aff76a"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-f8f4b07255"
+      ],
+      "verification_atom_ids": [
+        "ATOM-4e44eefc06",
+        "ATOM-594cc8e6e8"
+      ],
+      "exception_atom_ids": [
+        "ATOM-955c6e840d"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-46e1a93fa1",
+          "kind": "actor",
+          "tool": "cancel_pending_order",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-a1b25e7f53",
+          "kind": "ordering",
+          "before_tool": "get_order_details",
+          "after_tool": "cancel_pending_order",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-652770d0dc",
+          "kind": "ordering",
+          "before_tool": "cancel_pending_order",
+          "after_tool": "get_order_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-e5d03f469d",
+          "kind": "precondition",
+          "evidence_tool": "get_order_details",
+          "action_tool": "cancel_pending_order",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-cbd7b66b4e",
+          "kind": "verification",
+          "action_tool": "cancel_pending_order",
+          "verification_tool": "get_order_details",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.exchange_delivered_order_items",
+      "name": "Exchange Delivered Order Items",
+      "description": "Use for tasks involving exchange delivered order items; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_product_details",
+        "exchange_delivered_order_items"
+      ],
+      "primary_tool": "exchange_delivered_order_items",
+      "actor": "assistant",
+      "instructions": "# Exchange Delivered Order Items\n\nActor: `assistant`\n\nParameters: order_id, item_ids, new_item_ids, payment_method_id\n\nPurpose: Exchange items in a delivered order to new items of the same product type.\nFor a delivered order, return or exchange can be only done once by the agent.\nThe agent needs to explain the exchange detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be exchanged, each such as '1008292230'. There could be duplicate items in the list.\n    new_item_ids: The item ids to be exchanged for, each such as '1008292230'.\n                 There could be duplicate items in the list. Each new item id should match the item id\n                 in the same position and be of the same product.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference,\n                     such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up\n                     from the user or order details.\n\nReturns:\n    Order: The order details after the exchange.\n\nRaises:\n    ValueError: If the order is not delivered.\n    ValueError: If the items to be exchanged do not exist.\n    ValueError: If the new items do not exist or do not match the old items.\n    ValueError: If the number of items to be exchanged does not match.\n\nObserve/check before: get_product_details\n\n## Preconditions\n- ValueError: If the new items do not exist or do not match the old items. [ATOM-4e89c646f3]\n- ValueError: If the items to be exchanged do not exist. [ATOM-7a78373ac4]\n- Raises: ValueError: If the order is not delivered. [ATOM-f34967edb8]\n- ValueError: If the number of items to be exchanged does not match. [ATOM-f3d43ccbc5]\n- The exchange_delivered_order_items tool requires the order_id argument. [ATOM-05900c8637]\n- The exchange_delivered_order_items tool requires the new_item_ids argument. [ATOM-088931f87f]\n- The exchange_delivered_order_items tool requires the item_ids argument. [ATOM-4489418b2f]\n- The exchange_delivered_order_items tool requires the payment_method_id argument. [ATOM-912ecae119]\n\n## Actor constraints\n- The exchange_delivered_order_items tool is owned by the assistant actor. [ATOM-52fe9572d5]\n\n## Verification\n- Returns: Order: The order details after the exchange. [ATOM-45a2e45c9e]\n\n## Soft local continuations\n- Consider `get_product_details` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-05900c8637",
+        "ATOM-088931f87f",
+        "ATOM-2ec67e2e65",
+        "ATOM-3a3bef285b",
+        "ATOM-402725bf34",
+        "ATOM-4489418b2f",
+        "ATOM-45a2e45c9e",
+        "ATOM-4e89c646f3",
+        "ATOM-52fe9572d5",
+        "ATOM-639877b320",
+        "ATOM-642f132b2c",
+        "ATOM-7a78373ac4",
+        "ATOM-912ecae119",
+        "ATOM-9c936541a8",
+        "ATOM-babaf4cb09",
+        "ATOM-d5ffe3b2ca",
+        "ATOM-d6e4fa58ab",
+        "ATOM-f34967edb8",
+        "ATOM-f3d43ccbc5",
+        "ATOM-fb1df1e8a6",
+        "ATOM-fd6e4e0692"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-05900c8637",
+        "ATOM-088931f87f",
+        "ATOM-4489418b2f",
+        "ATOM-4e89c646f3",
+        "ATOM-639877b320",
+        "ATOM-7a78373ac4",
+        "ATOM-912ecae119",
+        "ATOM-f34967edb8",
+        "ATOM-f3d43ccbc5"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-45a2e45c9e"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-52fe9572d5",
+          "kind": "actor",
+          "tool": "exchange_delivered_order_items",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-343080ba0e",
+          "kind": "ordering",
+          "before_tool": "get_product_details",
+          "after_tool": "exchange_delivered_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-9ba85222ff",
+          "kind": "ordering",
+          "before_tool": "exchange_delivered_order_items",
+          "after_tool": "get_product_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-37f4683676",
+          "kind": "precondition",
+          "evidence_tool": "get_product_details",
+          "action_tool": "exchange_delivered_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-365442fd41",
+          "kind": "verification",
+          "action_tool": "exchange_delivered_order_items",
+          "verification_tool": "get_product_details",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.find_user_id_by_email",
+      "name": "Find User Id By Email",
+      "description": "Use for tasks involving find user id by email; the declared tool actor is assistant.",
+      "required_tools": [
+        "find_user_id_by_email",
+        "get_user_details"
+      ],
+      "primary_tool": "find_user_id_by_email",
+      "actor": "assistant",
+      "instructions": "# Find User Id By Email\n\nActor: `assistant`\n\nParameters: email\n\nPurpose: Find user id by email. If the user is not found, the function will return an error message.\n\nArgs:\n    email: The email of the user, such as 'something@example.com'.\n\nReturns:\n    str: The user id if found, otherwise an error message.\n\nRaises:\n    ValueError: If the user is not found.\n\n## Preconditions\n- Raises: ValueError: If the user is not found. [ATOM-0d63847574]\n- If the user is not found, the function will return an error message. [ATOM-1c0d253527]\n- The find_user_id_by_email tool requires the email argument. [ATOM-c2b8209d3c]\n- **provide information about their own profile, orders, and related products** At the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code. [ATOM-2d966a44f8]\n- After user confirmation, the order status will be changed to 'return requested', and the user will receive an email regarding how to return items. [ATOM-83418549b0]\n- After user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items. [ATOM-d4634d0f89]\n\n## Actor constraints\n- The find_user_id_by_email tool is owned by the assistant actor. [ATOM-1048aeed78]\n\n## Exceptions\n- Returns: str: The user id if found, otherwise an error message. [ATOM-07657cdfd5]\n\n## Soft local continuations\n- Consider `get_user_details` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-07657cdfd5",
+        "ATOM-0d5e1b0c1e",
+        "ATOM-0d63847574",
+        "ATOM-1048aeed78",
+        "ATOM-1c0d253527",
+        "ATOM-6288f52aa3",
+        "ATOM-c2b8209d3c",
+        "ATOM-83418549b0",
+        "ATOM-d4634d0f89",
+        "ATOM-2d966a44f8"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0d63847574",
+        "ATOM-1c0d253527",
+        "ATOM-2d966a44f8",
+        "ATOM-83418549b0",
+        "ATOM-c2b8209d3c",
+        "ATOM-d4634d0f89"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-07657cdfd5"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-1048aeed78",
+          "kind": "actor",
+          "tool": "find_user_id_by_email",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-cfcef2f750",
+          "kind": "ordering",
+          "before_tool": "find_user_id_by_email",
+          "after_tool": "get_user_details",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.find_user_id_by_name_zip",
+      "name": "Find User Id By Name Zip",
+      "description": "Use for tasks involving find user id by name zip; the declared tool actor is assistant.",
+      "required_tools": [
+        "find_user_id_by_name_zip",
+        "get_user_details",
+        "get_order_details",
+        "get_product_details"
+      ],
+      "primary_tool": "find_user_id_by_name_zip",
+      "actor": "assistant",
+      "instructions": "# Find User Id By Name Zip\n\nActor: `assistant`\n\nParameters: first_name, last_name, zip\n\nPurpose: Find user id by first name, last name, and zip code. If the user is not found, the function\nwill return an error message. By default, find user id by email, and only call this function\nif the user is not found by email or cannot remember email.\n\nArgs:\n    first_name: The first name of the customer, such as 'John'.\n    last_name: The last name of the customer, such as 'Doe'.\n    zip: The zip code of the customer, such as '12345'.\n\nReturns:\n    str: The user id if found, otherwise an error message.\n\nRaises:\n    ValueError: If the user is not found.\n\n## Preconditions\n- If the user is not found, the function will return an error message. [ATOM-23751e2ab7]\n- Raises: ValueError: If the user is not found. [ATOM-df38d420ea]\n- The find_user_id_by_name_zip tool requires the last_name argument. [ATOM-49c7c4301a]\n- The find_user_id_by_name_zip tool requires the first_name argument. [ATOM-8f055b97ec]\n- The find_user_id_by_name_zip tool requires the zip argument. [ATOM-a3c20afaab]\n\n## Prohibitions\n- By default, find user id by email, and only call this function if the user is not found by email or cannot remember email. [ATOM-52cb44641d]\n\n## Actor constraints\n- The find_user_id_by_name_zip tool is owned by the assistant actor. [ATOM-747f7efb4b]\n\n## Exceptions\n- Returns: str: The user id if found, otherwise an error message. [ATOM-9f703bf209]\n\n## Soft local continuations\n- Consider `get_user_details` after this action when relevant.\n- Consider `get_order_details` after this action when relevant.\n- Consider `get_product_details` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-13c4241fbc",
+        "ATOM-150f278b9d",
+        "ATOM-23751e2ab7",
+        "ATOM-23b6a182ac",
+        "ATOM-49c7c4301a",
+        "ATOM-52cb44641d",
+        "ATOM-6fe87e3921",
+        "ATOM-747f7efb4b",
+        "ATOM-8f055b97ec",
+        "ATOM-9f703bf209",
+        "ATOM-a3c20afaab",
+        "ATOM-df38d420ea"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-23751e2ab7",
+        "ATOM-49c7c4301a",
+        "ATOM-8f055b97ec",
+        "ATOM-a3c20afaab",
+        "ATOM-df38d420ea"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-52cb44641d"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-9f703bf209"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-747f7efb4b",
+          "kind": "actor",
+          "tool": "find_user_id_by_name_zip",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-53b5bcdf87",
+          "kind": "ordering",
+          "before_tool": "find_user_id_by_name_zip",
+          "after_tool": "get_user_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-879801edaf",
+          "kind": "ordering",
+          "before_tool": "find_user_id_by_name_zip",
+          "after_tool": "get_order_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-ad16458968",
+          "kind": "ordering",
+          "before_tool": "find_user_id_by_name_zip",
+          "after_tool": "get_product_details",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.get_item_details",
+      "name": "Get Item Details",
+      "description": "Use for tasks involving get item details; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_item_details",
+        "get_product_details"
+      ],
+      "primary_tool": "get_item_details",
+      "actor": "assistant",
+      "instructions": "# Get Item Details\n\nActor: `assistant`\n\nParameters: item_id\n\nPurpose: Get the inventory details of an item.\n\nArgs:\n    item_id: The item id, such as '6086499569'. Be careful the item id is different from the product id.\n\nReturns:\n    Variant: The item details.\n\nRaises:\n    ValueError: If the item is not found.\n\n## Preconditions\n- Raises: ValueError: If the item is not found. [ATOM-18c86282d0]\n- The get_item_details tool requires the item_id argument. [ATOM-5136f6ff1a]\n\n## Actor constraints\n- The get_item_details tool is owned by the assistant actor. [ATOM-3b08ed1076]\n\n## Communication\n- information about the value of the product options for this item.. [ATOM-332db8a3fa]\n\n## Soft local continuations\n- Consider `get_product_details` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-18c86282d0",
+        "ATOM-360eb64f29",
+        "ATOM-3b08ed1076",
+        "ATOM-5136f6ff1a",
+        "ATOM-77807017a1",
+        "ATOM-7dea1d9562",
+        "ATOM-b957544935",
+        "ATOM-18d3ed4941",
+        "ATOM-28f361e03c",
+        "ATOM-067f71d6f4",
+        "ATOM-332db8a3fa",
+        "ATOM-b337c797df"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-18c86282d0",
+        "ATOM-5136f6ff1a"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-3b08ed1076",
+          "kind": "actor",
+          "tool": "get_item_details",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-3ef1cc90e7",
+          "kind": "ordering",
+          "before_tool": "get_item_details",
+          "after_tool": "get_product_details",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.get_order_details",
+      "name": "Get Order Details",
+      "description": "Use for tasks involving get order details; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_user_details",
+        "find_user_id_by_name_zip",
+        "get_order_details",
+        "get_product_details",
+        "calculate"
+      ],
+      "primary_tool": "get_order_details",
+      "actor": "assistant",
+      "instructions": "# Get Order Details\n\nActor: `assistant`\n\nParameters: order_id\n\nPurpose: Get the status and details of an order.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n\nReturns:\n    Order: The order details.\n\nRaises:\n    ValueError: If the order is not found.\n\nObserve/check before: get_user_details, find_user_id_by_name_zip\n\n## Preconditions\n- Raises: ValueError: If the order is not found. [ATOM-366d0a8b12]\n- An order can only be cancelled if its status is 'pending', and you should check its status before taking the action. [ATOM-890f5e6b32]\n- The get_order_details tool requires the order_id argument. [ATOM-e2c30e5cca]\n- The user needs to confirm the order id and the list of items to be returned. [ATOM-b28d7686bf]\n- The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. [ATOM-33ae4eac99]\n\n## Actor constraints\n- The get_order_details tool is owned by the assistant actor. [ATOM-660cecd6e0]\n\n## Soft local continuations\n- Consider `get_product_details` after this action when relevant.\n- Consider `calculate` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-366d0a8b12",
+        "ATOM-593781d6d7",
+        "ATOM-660cecd6e0",
+        "ATOM-7a285b40ae",
+        "ATOM-acee55a823",
+        "ATOM-d9502fe4a0",
+        "ATOM-e2c30e5cca",
+        "ATOM-fc1424007a",
+        "ATOM-b28d7686bf",
+        "ATOM-33ae4eac99",
+        "ATOM-4884005167",
+        "ATOM-890f5e6b32"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-33ae4eac99",
+        "ATOM-366d0a8b12",
+        "ATOM-890f5e6b32",
+        "ATOM-b28d7686bf",
+        "ATOM-e2c30e5cca"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-660cecd6e0",
+          "kind": "actor",
+          "tool": "get_order_details",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-cc13589890",
+          "kind": "ordering",
+          "before_tool": "get_user_details",
+          "after_tool": "get_order_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-9cffc11fa7",
+          "kind": "ordering",
+          "before_tool": "get_order_details",
+          "after_tool": "get_product_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-879801edaf",
+          "kind": "ordering",
+          "before_tool": "find_user_id_by_name_zip",
+          "after_tool": "get_order_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-63b7aaa8be",
+          "kind": "ordering",
+          "before_tool": "get_order_details",
+          "after_tool": "calculate",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.get_product_details",
+      "name": "Get Product Details",
+      "description": "Use for tasks involving get product details; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_order_details",
+        "find_user_id_by_name_zip",
+        "get_item_details",
+        "get_product_details",
+        "get_user_details",
+        "calculate"
+      ],
+      "primary_tool": "get_product_details",
+      "actor": "assistant",
+      "instructions": "# Get Product Details\n\nActor: `assistant`\n\nParameters: product_id\n\nPurpose: Get the inventory details of a product.\n\nArgs:\n    product_id: The product id, such as '6086499569'. Be careful the product id is different from the item id.\n\nReturns:\n    Product: The product details.\n\nRaises:\n    ValueError: If the product is not found.\n\nObserve/check before: get_order_details, find_user_id_by_name_zip, get_item_details\n\n## Preconditions\n- Raises: ValueError: If the product is not found. [ATOM-cbafdd1a4b]\n- The get_product_details tool requires the product_id argument. [ATOM-b94f8e72bb]\n\n## Actor constraints\n- The get_product_details tool is owned by the assistant actor. [ATOM-a4584cca9a]\n\n## Communication\n- information about the value of the product options for this item.. [ATOM-332db8a3fa]\n\n## Soft local continuations\n- Consider `get_user_details` after this action when relevant.\n- Consider `calculate` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-1e879e780f",
+        "ATOM-8d818a3eb9",
+        "ATOM-a4584cca9a",
+        "ATOM-b94f8e72bb",
+        "ATOM-c93104d073",
+        "ATOM-cbafdd1a4b",
+        "ATOM-ddbcb14f48",
+        "ATOM-28f361e03c",
+        "ATOM-067f71d6f4",
+        "ATOM-332db8a3fa",
+        "ATOM-18d3ed4941",
+        "ATOM-b337c797df"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-b94f8e72bb",
+        "ATOM-cbafdd1a4b"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-a4584cca9a",
+          "kind": "actor",
+          "tool": "get_product_details",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-9cffc11fa7",
+          "kind": "ordering",
+          "before_tool": "get_order_details",
+          "after_tool": "get_product_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-d977ea416d",
+          "kind": "ordering",
+          "before_tool": "get_product_details",
+          "after_tool": "get_user_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-ad16458968",
+          "kind": "ordering",
+          "before_tool": "find_user_id_by_name_zip",
+          "after_tool": "get_product_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-227887b85b",
+          "kind": "ordering",
+          "before_tool": "get_product_details",
+          "after_tool": "calculate",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-3ef1cc90e7",
+          "kind": "ordering",
+          "before_tool": "get_item_details",
+          "after_tool": "get_product_details",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.get_user_details",
+      "name": "Get User Details",
+      "description": "Use for tasks involving get user details; the declared tool actor is assistant.",
+      "required_tools": [
+        "find_user_id_by_name_zip",
+        "find_user_id_by_email",
+        "get_product_details",
+        "get_user_details",
+        "get_order_details"
+      ],
+      "primary_tool": "get_user_details",
+      "actor": "assistant",
+      "instructions": "# Get User Details\n\nActor: `assistant`\n\nParameters: user_id\n\nPurpose: Get the details of a user, including their orders.\n\nArgs:\n    user_id: The user id, such as 'sara_doe_496'.\n\nReturns:\n    User: The user details.\n\nRaises:\n    ValueError: If the user is not found.\n\nObserve/check before: find_user_id_by_name_zip, find_user_id_by_email, get_product_details\n\n## Preconditions\n- Raises: ValueError: If the user is not found. [ATOM-94a974abe0]\n- The get_user_details tool requires the user_id argument. [ATOM-d0c3981fcf]\n- Before taking any action that updates the database (cancel, modify, return, exchange), you must list the action details and obtain explicit user confirmation (yes) to proceed. [ATOM-ed92b2777e]\n\n## Actor constraints\n- The get_user_details tool is owned by the assistant actor. [ATOM-2175c6bc69]\n\n## Soft local continuations\n- Consider `get_order_details` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-2175c6bc69",
+        "ATOM-4f4d46731d",
+        "ATOM-6b1b18e1e9",
+        "ATOM-94a974abe0",
+        "ATOM-d0c3981fcf",
+        "ATOM-db5adf0e28",
+        "ATOM-ed92b2777e"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-94a974abe0",
+        "ATOM-d0c3981fcf",
+        "ATOM-ed92b2777e"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-2175c6bc69",
+          "kind": "actor",
+          "tool": "get_user_details",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-cc13589890",
+          "kind": "ordering",
+          "before_tool": "get_user_details",
+          "after_tool": "get_order_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-53b5bcdf87",
+          "kind": "ordering",
+          "before_tool": "find_user_id_by_name_zip",
+          "after_tool": "get_user_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-cfcef2f750",
+          "kind": "ordering",
+          "before_tool": "find_user_id_by_email",
+          "after_tool": "get_user_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-d977ea416d",
+          "kind": "ordering",
+          "before_tool": "get_product_details",
+          "after_tool": "get_user_details",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.list_all_product_types",
+      "name": "List All Product Types",
+      "description": "Use for tasks involving list all product types; the declared tool actor is assistant.",
+      "required_tools": [
+        "list_all_product_types"
+      ],
+      "primary_tool": "list_all_product_types",
+      "actor": "assistant",
+      "instructions": "# List All Product Types\n\nActor: `assistant`\n\nParameters: none\n\nPurpose: List the name and product id of all product types.\nEach product type has a variety of different items with unique item ids and options.\nThere are only 50 product types in the store.\n\nReturns:\n    str: A JSON string mapping product names to their product IDs, sorted alphabetically by name.\n\n## Prohibitions\n- There cannot be any change of product types, e.g. [ATOM-28f5179fc6]\n- There cannot be any change of product types, e.g. [ATOM-7b1cf0a468]\n\n## Actor constraints\n- The list_all_product_types tool is owned by the assistant actor. [ATOM-0143457ae8]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0143457ae8",
+        "ATOM-029c18b5ae",
+        "ATOM-6b26f6a1af",
+        "ATOM-b906dd18e4",
+        "ATOM-d466c56517",
+        "ATOM-87d6dbc9e1",
+        "ATOM-28f5179fc6",
+        "ATOM-7b1cf0a468"
+      ],
+      "precondition_atom_ids": [],
+      "prohibition_atom_ids": [
+        "ATOM-28f5179fc6",
+        "ATOM-7b1cf0a468"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-0143457ae8",
+          "kind": "actor",
+          "tool": "list_all_product_types",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.modify_pending_order_address",
+      "name": "Modify Pending Order Address",
+      "description": "Use for tasks involving modify pending order address; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_order_details",
+        "modify_pending_order_address"
+      ],
+      "primary_tool": "modify_pending_order_address",
+      "actor": "assistant",
+      "instructions": "# Modify Pending Order Address\n\nActor: `assistant`\n\nParameters: order_id, address1, address2, city, state, country, zip\n\nPurpose: Modify the shipping address of a pending order. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    address1: The first line of the address, such as '123 Main St'.\n    address2: The second line of the address, such as 'Apt 1' or ''.\n    city: The city, such as 'San Francisco'.\n    state: The state, such as 'CA'.\n    country: The country, such as 'USA'.\n    zip: The zip code, such as '12345'.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.\n\nObserve/check before: get_order_details\n\n## Preconditions\n- Raises: ValueError: If the order is not pending. [ATOM-1587d2c89e]\n- The modify_pending_order_address tool requires the order_id argument. [ATOM-10707934e0]\n- The modify_pending_order_address tool requires the country argument. [ATOM-212e3d14da]\n- The modify_pending_order_address tool requires the address1 argument. [ATOM-3f56c047dc]\n- The modify_pending_order_address tool requires the state argument. [ATOM-7cfa83e24b]\n- The modify_pending_order_address tool requires the zip argument. [ATOM-a2ad7f4d7c]\n- The modify_pending_order_address tool requires the address2 argument. [ATOM-c916aec9c1]\n- The modify_pending_order_address tool requires the city argument. [ATOM-d86303f7ed]\n\n## Actor constraints\n- The modify_pending_order_address tool is owned by the assistant actor. [ATOM-c502b8d4a2]\n\n## Verification\n- Returns: Order: The order details after the modification. [ATOM-3dd807705a]\n\n## Soft local continuations\n- Consider `modify_pending_order_items` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-10707934e0",
+        "ATOM-107953ceed",
+        "ATOM-1587d2c89e",
+        "ATOM-212e3d14da",
+        "ATOM-3dd807705a",
+        "ATOM-3f56c047dc",
+        "ATOM-5867688fb8",
+        "ATOM-5949083008",
+        "ATOM-5c1233a517",
+        "ATOM-5fcdb6745f",
+        "ATOM-61267b4d94",
+        "ATOM-6e382de4f5",
+        "ATOM-7cfa83e24b",
+        "ATOM-a2ad7f4d7c",
+        "ATOM-b3acba7df3",
+        "ATOM-c133d941f6",
+        "ATOM-c502b8d4a2",
+        "ATOM-c916aec9c1",
+        "ATOM-d86303f7ed",
+        "ATOM-e784526d23"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-10707934e0",
+        "ATOM-1587d2c89e",
+        "ATOM-212e3d14da",
+        "ATOM-3f56c047dc",
+        "ATOM-6e382de4f5",
+        "ATOM-7cfa83e24b",
+        "ATOM-a2ad7f4d7c",
+        "ATOM-c916aec9c1",
+        "ATOM-d86303f7ed"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-3dd807705a"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-c502b8d4a2",
+          "kind": "actor",
+          "tool": "modify_pending_order_address",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-5e24a96255",
+          "kind": "ordering",
+          "before_tool": "modify_pending_order_address",
+          "after_tool": "modify_pending_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-491ea49b33",
+          "kind": "ordering",
+          "before_tool": "get_order_details",
+          "after_tool": "modify_pending_order_address",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-969a1db583",
+          "kind": "precondition",
+          "evidence_tool": "get_order_details",
+          "action_tool": "modify_pending_order_address",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.modify_pending_order_items",
+      "name": "Modify Pending Order Items",
+      "description": "Use for tasks involving modify pending order items; the declared tool actor is assistant.",
+      "required_tools": [
+        "calculate",
+        "get_user_details",
+        "modify_pending_order_items"
+      ],
+      "primary_tool": "modify_pending_order_items",
+      "actor": "assistant",
+      "instructions": "# Modify Pending Order Items\n\nActor: `assistant`\n\nParameters: order_id, item_ids, new_item_ids, payment_method_id\n\nPurpose: Modify items in a pending order to new items of the same product type. For a pending order, this function can only be called once. The agent needs to explain the exchange detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be modified, each such as '1008292230'. There could be duplicate items in the list.\n    new_item_ids: The item ids to be modified for, each such as '1008292230'. There could be duplicate items in the list. Each new item id should match the item id in the same position and be of the same product.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.\n    ValueError: If the items to be modified do not exist.\n    ValueError: If the new items do not exist or do not match the old items.\n    ValueError: If the number of items to be modified does not match.\n\nObserve/check before: calculate, get_user_details\n\n## Preconditions\n- ValueError: If the number of items to be modified does not match. [ATOM-5608ae9a10]\n- ValueError: If the items to be modified do not exist. [ATOM-746fe4b447]\n- Raises: ValueError: If the order is not pending. [ATOM-9579dbe8c8]\n- ValueError: If the new items do not exist or do not match the old items. [ATOM-a27ec85046]\n- The modify_pending_order_items tool requires the payment_method_id argument. [ATOM-4019e66db9]\n- The modify_pending_order_items tool requires the order_id argument. [ATOM-701247968f]\n- The modify_pending_order_items tool requires the item_ids argument. [ATOM-8959ddb239]\n- The modify_pending_order_items tool requires the new_item_ids argument. [ATOM-8ebbd2b017]\n\n## Actor constraints\n- The modify_pending_order_items tool is owned by the assistant actor. [ATOM-7718e29f9c]\n\n## Verification\n- Returns: Order: The order details after the modification. [ATOM-c222934507]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-1ae4a2f11d",
+        "ATOM-358836fa45",
+        "ATOM-3c78cc304b",
+        "ATOM-4019e66db9",
+        "ATOM-440ca78059",
+        "ATOM-5608ae9a10",
+        "ATOM-579ded6094",
+        "ATOM-6a4bd73b64",
+        "ATOM-701247968f",
+        "ATOM-746fe4b447",
+        "ATOM-7718e29f9c",
+        "ATOM-8959ddb239",
+        "ATOM-8ebbd2b017",
+        "ATOM-9579dbe8c8",
+        "ATOM-9f304cddfd",
+        "ATOM-a27ec85046",
+        "ATOM-c222934507",
+        "ATOM-cedb68d142",
+        "ATOM-d261b065cd",
+        "ATOM-e4af87ffc0",
+        "ATOM-f938ca20af"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-4019e66db9",
+        "ATOM-5608ae9a10",
+        "ATOM-6a4bd73b64",
+        "ATOM-701247968f",
+        "ATOM-746fe4b447",
+        "ATOM-8959ddb239",
+        "ATOM-8ebbd2b017",
+        "ATOM-9579dbe8c8",
+        "ATOM-a27ec85046"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-c222934507"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-7718e29f9c",
+          "kind": "actor",
+          "tool": "modify_pending_order_items",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-5e24a96255",
+          "kind": "ordering",
+          "before_tool": "modify_pending_order_address",
+          "after_tool": "modify_pending_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-8511e0a54b",
+          "kind": "ordering",
+          "before_tool": "calculate",
+          "after_tool": "modify_pending_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-b0032a6e01",
+          "kind": "ordering",
+          "before_tool": "get_user_details",
+          "after_tool": "modify_pending_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-30b37f2ef1",
+          "kind": "ordering",
+          "before_tool": "get_product_details",
+          "after_tool": "modify_pending_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-659734a107",
+          "kind": "ordering",
+          "before_tool": "modify_user_address",
+          "after_tool": "modify_pending_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-9299f2f053",
+          "kind": "precondition",
+          "evidence_tool": "calculate",
+          "action_tool": "modify_pending_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-e278c5277a",
+          "kind": "precondition",
+          "evidence_tool": "get_user_details",
+          "action_tool": "modify_pending_order_items",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.modify_pending_order_payment",
+      "name": "Modify Pending Order Payment",
+      "description": "Use for tasks involving modify pending order payment; the declared tool actor is assistant.",
+      "required_tools": [
+        "modify_pending_order_payment"
+      ],
+      "primary_tool": "modify_pending_order_payment",
+      "actor": "assistant",
+      "instructions": "# Modify Pending Order Payment\n\nActor: `assistant`\n\nParameters: order_id, payment_method_id\n\nPurpose: Modify the payment method of a pending order. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'. These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after the modification.\n\nRaises:\n    ValueError: If the order is not pending.\n    ValueError: If the payment method does not exist.\n    ValueError: If the payment history has more than one payment.\n    ValueError: If the new payment method is the same as the current one.\n\n## Preconditions\n- Raises: ValueError: If the order is not pending. [ATOM-12c0c3db8d]\n- ValueError: If the payment method does not exist. [ATOM-35749a7cdc]\n- ValueError: If the new payment method is the same as the current one. [ATOM-5268a36743]\n- ValueError: If the payment history has more than one payment. [ATOM-5826a2c881]\n- The modify_pending_order_payment tool requires the order_id argument. [ATOM-25aeefdaf8]\n- The modify_pending_order_payment tool requires the payment_method_id argument. [ATOM-979e69dbef]\n- The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed. [ATOM-57cc133276]\n\n## Actor constraints\n- The modify_pending_order_payment tool is owned by the assistant actor. [ATOM-9df80558fa]\n\n## Verification\n- Returns: Order: The order details after the modification. [ATOM-e79971c8e8]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0b24946f41",
+        "ATOM-12c0c3db8d",
+        "ATOM-25aeefdaf8",
+        "ATOM-35749a7cdc",
+        "ATOM-4f3a2374fc",
+        "ATOM-5268a36743",
+        "ATOM-57cc133276",
+        "ATOM-5826a2c881",
+        "ATOM-979e69dbef",
+        "ATOM-985ca62283",
+        "ATOM-9df80558fa",
+        "ATOM-c41e84d32a",
+        "ATOM-e79971c8e8",
+        "ATOM-f266ae9a21"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-12c0c3db8d",
+        "ATOM-25aeefdaf8",
+        "ATOM-35749a7cdc",
+        "ATOM-5268a36743",
+        "ATOM-57cc133276",
+        "ATOM-5826a2c881",
+        "ATOM-979e69dbef"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-e79971c8e8"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-9df80558fa",
+          "kind": "actor",
+          "tool": "modify_pending_order_payment",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.modify_user_address",
+      "name": "Modify User Address",
+      "description": "Use for tasks involving modify user address; the declared tool actor is assistant.",
+      "required_tools": [
+        "modify_user_address"
+      ],
+      "primary_tool": "modify_user_address",
+      "actor": "assistant",
+      "instructions": "# Modify User Address\n\nActor: `assistant`\n\nParameters: user_id, address1, address2, city, state, country, zip\n\nPurpose: Modify the default address of a user. The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.\n\nArgs:\n    user_id: The user id, such as 'sara_doe_496'.\n    address1: The first line of the address, such as '123 Main St'.\n    address2: The second line of the address, such as 'Apt 1' or ''.\n    city: The city, such as 'San Francisco'.\n    state: The state, such as 'CA'.\n    country: The country, such as 'USA'.\n    zip: The zip code, such as '12345'.\n\nReturns:\n    User: The user details after the modification.\n\nRaises:\n    ValueError: If the user is not found.\n\n## Preconditions\n- Raises: ValueError: If the user is not found. [ATOM-025411ecd1]\n- The modify_user_address tool requires the country argument. [ATOM-0a421f9afd]\n- The modify_user_address tool requires the user_id argument. [ATOM-5643eb0908]\n- The modify_user_address tool requires the city argument. [ATOM-72b9914659]\n- The modify_user_address tool requires the address2 argument. [ATOM-d70a9cd0bc]\n- The modify_user_address tool requires the zip argument. [ATOM-df55822fd4]\n- The modify_user_address tool requires the address1 argument. [ATOM-e374f798a7]\n- The modify_user_address tool requires the state argument. [ATOM-fe1093307f]\n\n## Actor constraints\n- The modify_user_address tool is owned by the assistant actor. [ATOM-5497238ea1]\n\n## Verification\n- Returns: User: The user details after the modification. [ATOM-0aaa1713db]\n\n## Soft local continuations\n- Consider `modify_pending_order_items` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-025411ecd1",
+        "ATOM-0a421f9afd",
+        "ATOM-0aaa1713db",
+        "ATOM-199569053a",
+        "ATOM-20c3a25e6e",
+        "ATOM-228ea16b33",
+        "ATOM-2effcb99eb",
+        "ATOM-3a6e782d17",
+        "ATOM-498348a4bc",
+        "ATOM-5497238ea1",
+        "ATOM-5643eb0908",
+        "ATOM-5d0edc5853",
+        "ATOM-72b9914659",
+        "ATOM-813fbe58ca",
+        "ATOM-8ed2cb12a1",
+        "ATOM-d70a9cd0bc",
+        "ATOM-df55822fd4",
+        "ATOM-e374f798a7",
+        "ATOM-fe1093307f"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-025411ecd1",
+        "ATOM-0a421f9afd",
+        "ATOM-2effcb99eb",
+        "ATOM-5643eb0908",
+        "ATOM-72b9914659",
+        "ATOM-d70a9cd0bc",
+        "ATOM-df55822fd4",
+        "ATOM-e374f798a7",
+        "ATOM-fe1093307f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-0aaa1713db"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-5497238ea1",
+          "kind": "actor",
+          "tool": "modify_user_address",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-659734a107",
+          "kind": "ordering",
+          "before_tool": "modify_user_address",
+          "after_tool": "modify_pending_order_items",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.return_delivered_order_items",
+      "name": "Return Delivered Order Items",
+      "description": "Use for tasks involving return delivered order items; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_order_details",
+        "get_product_details",
+        "calculate",
+        "return_delivered_order_items"
+      ],
+      "primary_tool": "return_delivered_order_items",
+      "actor": "assistant",
+      "instructions": "# Return Delivered Order Items\n\nActor: `assistant`\n\nParameters: order_id, item_ids, payment_method_id\n\nPurpose: Return some items of a delivered order.\nThe order status will be changed to 'return requested'.\nThe agent needs to explain the return detail and ask for explicit user confirmation (yes/no) to proceed.\nThe user will receive follow-up email for how and where to return the item.\n\nArgs:\n    order_id: The order id, such as '#W0000000'. Be careful there is a '#' symbol at the beginning of the order id.\n    item_ids: The item ids to be returned, each such as '1008292230'. There could be duplicate items in the list.\n    payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'.\n                     These can be looked up from the user or order details.\n\nReturns:\n    Order: The order details after requesting the return.\n\nRaises:\n    ValueError: If the order is not delivered.\n    ValueError: If the payment method is not the original payment method or a gift card.\n    ValueError: If the items to be returned do not exist.\n\nObserve/check before: get_order_details, get_product_details, calculate\n\n## Preconditions\n- Raises: ValueError: If the order is not delivered. [ATOM-0806cff1d1]\n- ValueError: If the payment method is not the original payment method or a gift card. [ATOM-357f314911]\n- ValueError: If the items to be returned do not exist. [ATOM-e2d01165fd]\n- The return_delivered_order_items tool requires the order_id argument. [ATOM-7d56013467]\n- The return_delivered_order_items tool requires the item_ids argument. [ATOM-806dd9f20b]\n- The return_delivered_order_items tool requires the payment_method_id argument. [ATOM-96af96cdac]\n- The agent needs to explain the return detail and ask for explicit user confirmation (yes/no) to proceed. [ATOM-eddd9b767f]\n\n## Actor constraints\n- The return_delivered_order_items tool is owned by the assistant actor. [ATOM-190c5a7505]\n\n## Verification\n- Returns: Order: The order details after requesting the return. [ATOM-bcb503a5ad]\n\n## Soft local continuations\n- Consider `get_order_details` after this action when relevant.\n- Consider `calculate` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0806cff1d1",
+        "ATOM-190c5a7505",
+        "ATOM-204a772ecd",
+        "ATOM-357f314911",
+        "ATOM-441010bb68",
+        "ATOM-46ef6ff61a",
+        "ATOM-48051c03e4",
+        "ATOM-4912b08889",
+        "ATOM-7d56013467",
+        "ATOM-806dd9f20b",
+        "ATOM-96af96cdac",
+        "ATOM-babfd09903",
+        "ATOM-bcb503a5ad",
+        "ATOM-c94a9b53c9",
+        "ATOM-e2d01165fd",
+        "ATOM-eb39fbc61d",
+        "ATOM-eddd9b767f",
+        "ATOM-edf68f625b"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0806cff1d1",
+        "ATOM-357f314911",
+        "ATOM-7d56013467",
+        "ATOM-806dd9f20b",
+        "ATOM-96af96cdac",
+        "ATOM-e2d01165fd",
+        "ATOM-eddd9b767f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-bcb503a5ad"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-190c5a7505",
+          "kind": "actor",
+          "tool": "return_delivered_order_items",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-b164384d64",
+          "kind": "ordering",
+          "before_tool": "get_order_details",
+          "after_tool": "return_delivered_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-782cca436d",
+          "kind": "ordering",
+          "before_tool": "get_product_details",
+          "after_tool": "return_delivered_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-75a0a447e7",
+          "kind": "ordering",
+          "before_tool": "calculate",
+          "after_tool": "return_delivered_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-233693ba56",
+          "kind": "ordering",
+          "before_tool": "return_delivered_order_items",
+          "after_tool": "get_order_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-e326699f4b",
+          "kind": "ordering",
+          "before_tool": "return_delivered_order_items",
+          "after_tool": "calculate",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-75a54c0fe0",
+          "kind": "precondition",
+          "evidence_tool": "get_order_details",
+          "action_tool": "return_delivered_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-5511e1533e",
+          "kind": "precondition",
+          "evidence_tool": "get_product_details",
+          "action_tool": "return_delivered_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-72b07f3bb1",
+          "kind": "precondition",
+          "evidence_tool": "calculate",
+          "action_tool": "return_delivered_order_items",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-9b05b6b79d",
+          "kind": "verification",
+          "action_tool": "return_delivered_order_items",
+          "verification_tool": "get_order_details",
+          "soft": true
+        },
+        {
+          "requirement_id": "REQ-8481370640",
+          "kind": "verification",
+          "action_tool": "return_delivered_order_items",
+          "verification_tool": "calculate",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "retail.transfer_to_human_agents",
+      "name": "Transfer To Human Agents",
+      "description": "Use for tasks involving transfer to human agents; the declared tool actor is assistant.",
+      "required_tools": [
+        "transfer_to_human_agents"
+      ],
+      "primary_tool": "transfer_to_human_agents",
+      "actor": "assistant",
+      "instructions": "# Transfer To Human Agents\n\nActor: `assistant`\n\nParameters: summary\n\nPurpose: Transfer the user to a human agent, with a summary of the user's issue.\nOnly transfer if\n -  the user explicitly asks for a human agent\n -  given the policy and the available tools, you cannot solve the user's issue.\n\nArgs:\n    summary: A summary of the user's issue.\n\nReturns:\n    A message indicating the user has been transferred to a human agent.\n\n## Preconditions\n- The transfer_to_human_agents tool requires the summary argument. [ATOM-e1d653f91f]\n\n## Prohibitions\n- given the policy and the available tools, you cannot solve the user's issue. [ATOM-a709264679]\n\n## Actor constraints\n- The transfer_to_human_agents tool is owned by the assistant actor. [ATOM-b99d707eea]\n\n## Exceptions\n- Returns: A message indicating the user has been transferred to a human agent. [ATOM-12de65d5c0]\n- the user explicitly asks for a human agent. [ATOM-9df9bcd3e3]\n- Transfer the user to a human agent, with a summary of the user's issue. [ATOM-d2c4ba9845]\n- To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. [ATOM-27cc954968]\n- You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. [ATOM-9cea717d24]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-12de65d5c0",
+        "ATOM-66891ef2bb",
+        "ATOM-9df9bcd3e3",
+        "ATOM-a709264679",
+        "ATOM-b99d707eea",
+        "ATOM-d2c4ba9845",
+        "ATOM-e1d653f91f",
+        "ATOM-27cc954968",
+        "ATOM-9cea717d24"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-e1d653f91f"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-a709264679"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-12de65d5c0",
+        "ATOM-27cc954968",
+        "ATOM-9cea717d24",
+        "ATOM-9df9bcd3e3",
+        "ATOM-d2c4ba9845"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-b99d707eea",
+          "kind": "actor",
+          "tool": "transfer_to_human_agents",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    }
+  ]
+}

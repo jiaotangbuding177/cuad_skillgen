@@ -1,0 +1,3057 @@
+{
+  "atoms": [
+    {
+      "atom_id": "ATOM-010308bbec",
+      "type": "required_input",
+      "subject": "Return delivered order",
+      "text": "The user needs to provide a payment method to receive the refund.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Return delivered order",
+        "line_start": 116,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0143457ae8",
+      "type": "actor_constraint",
+      "subject": "list_all_product_types",
+      "text": "The list_all_product_types tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "list_all_product_types"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-01c5845c4f",
+      "type": "confirmation",
+      "subject": "Modify payment",
+      "text": "After user confirmation, the order status will be kept as 'pending'.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify payment",
+        "line_start": 100,
+        "line_end": 107
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-025411ecd1",
+      "type": "precondition",
+      "subject": "modify_user_address",
+      "text": "Raises: ValueError: If the user is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-029c18b5ae",
+      "type": "fact",
+      "subject": "list_all_product_types",
+      "text": "List the name and product id of all product types.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "list_all_product_types"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-05900c8637",
+      "type": "required_input",
+      "subject": "exchange_delivered_order_items",
+      "text": "The exchange_delivered_order_items tool requires the order_id argument.",
+      "object": "order_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-067f71d6f4",
+      "type": "permission",
+      "subject": "Modify items",
+      "text": "For a pending order, each item can be modified to an available new item of the same product but of different product option.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-07657cdfd5",
+      "type": "exception",
+      "subject": "find_user_id_by_email",
+      "text": "Returns: str: The user id if found, otherwise an error message.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0806cff1d1",
+      "type": "precondition",
+      "subject": "return_delivered_order_items",
+      "text": "Raises: ValueError: If the order is not delivered.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-088931f87f",
+      "type": "required_input",
+      "subject": "exchange_delivered_order_items",
+      "text": "The exchange_delivered_order_items tool requires the new_item_ids argument.",
+      "object": "new_item_ids",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-08bca5db26",
+      "type": "fact",
+      "subject": "calculate",
+      "text": "Calculate the result of a mathematical expression.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0a421f9afd",
+      "type": "required_input",
+      "subject": "modify_user_address",
+      "text": "The modify_user_address tool requires the country argument.",
+      "object": "country",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0aaa1713db",
+      "type": "postcondition",
+      "subject": "modify_user_address",
+      "text": "Returns: User: The user details after the modification.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0b22adb2fc",
+      "type": "required_input",
+      "subject": "Retail agent policy",
+      "text": "You should not make up any information or knowledge or procedures not provided by the user or the tools, or give subjective recommendations or comments.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0b24946f41",
+      "type": "fact",
+      "subject": "modify_pending_order_payment",
+      "text": "payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0d5e1b0c1e",
+      "type": "fact",
+      "subject": "find_user_id_by_email",
+      "text": "Find user id by email.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0d63847574",
+      "type": "precondition",
+      "subject": "find_user_id_by_email",
+      "text": "Raises: ValueError: If the user is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1048aeed78",
+      "type": "actor_constraint",
+      "subject": "find_user_id_by_email",
+      "text": "The find_user_id_by_email tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_email"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-10707934e0",
+      "type": "required_input",
+      "subject": "modify_pending_order_address",
+      "text": "The modify_pending_order_address tool requires the order_id argument.",
+      "object": "order_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-107953ceed",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "country: The country, such as 'USA'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-127ee1a9aa",
+      "type": "precondition",
+      "subject": "Retail agent policy",
+      "text": "You can only help one user per conversation (but you can handle multiple requests from the same user), and must deny any requests for tasks related to any other user.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-12c0c3db8d",
+      "type": "precondition",
+      "subject": "modify_pending_order_payment",
+      "text": "Raises: ValueError: If the order is not pending.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-12de65d5c0",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "Returns: A message indicating the user has been transferred to a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-13c4241fbc",
+      "type": "fact",
+      "subject": "find_user_id_by_name_zip",
+      "text": "last_name: The last name of the customer, such as 'Doe'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-150f278b9d",
+      "type": "fact",
+      "subject": "find_user_id_by_name_zip",
+      "text": "Args: first_name: The first name of the customer, such as 'John'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-156133fbb6",
+      "type": "permission",
+      "subject": "Modify payment",
+      "text": "The user can only choose a single payment method different from the original payment method.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify payment",
+        "line_start": 100,
+        "line_end": 107
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1587d2c89e",
+      "type": "precondition",
+      "subject": "modify_pending_order_address",
+      "text": "Raises: ValueError: If the order is not pending.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-16e54f2364",
+      "type": "permission",
+      "subject": "Generic action rules",
+      "text": "Generally, you can only take action on pending or delivered orders.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Generic action rules",
+        "line_start": 80,
+        "line_end": 85
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-18c86282d0",
+      "type": "precondition",
+      "subject": "get_item_details",
+      "text": "Raises: ValueError: If the item is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_item_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-18d3ed4941",
+      "type": "fact",
+      "subject": "Product",
+      "text": "list of variants Each variant item has the following attributes:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Product",
+        "line_start": 41,
+        "line_end": 63
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-190c5a7505",
+      "type": "actor_constraint",
+      "subject": "return_delivered_order_items",
+      "text": "The return_delivered_order_items tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-199569053a",
+      "type": "fact",
+      "subject": "modify_user_address",
+      "text": "address2: The second line of the address, such as 'Apt 1' or ''.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1ae4a2f11d",
+      "type": "permission",
+      "subject": "modify_pending_order_items",
+      "text": "These can be looked up from the user or order details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1c0d253527",
+      "type": "precondition",
+      "subject": "find_user_id_by_email",
+      "text": "If the user is not found, the function will return an error message.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1e21beea33",
+      "type": "permission",
+      "subject": "Order",
+      "text": "payment history The status of an order can be: **pending**, **processed**, **delivered**, or **cancelled**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Order",
+        "line_start": 64,
+        "line_end": 79
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1e879e780f",
+      "type": "fact",
+      "subject": "get_product_details",
+      "text": "Args: product_id: The product id, such as '6086499569'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_product_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-204a772ecd",
+      "type": "fact",
+      "subject": "return_delivered_order_items",
+      "text": "There could be duplicate items in the list.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-20c3a25e6e",
+      "type": "fact",
+      "subject": "modify_user_address",
+      "text": "Modify the default address of a user.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-212e3d14da",
+      "type": "required_input",
+      "subject": "modify_pending_order_address",
+      "text": "The modify_pending_order_address tool requires the country argument.",
+      "object": "country",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-2175c6bc69",
+      "type": "actor_constraint",
+      "subject": "get_user_details",
+      "text": "The get_user_details tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-228ea16b33",
+      "type": "fact",
+      "subject": "modify_user_address",
+      "text": "zip: The zip code, such as '12345'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-23751e2ab7",
+      "type": "precondition",
+      "subject": "find_user_id_by_name_zip",
+      "text": "If the user is not found, the function will return an error message.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-23b6a182ac",
+      "type": "fact",
+      "subject": "find_user_id_by_name_zip",
+      "text": "Find user id by first name, last name, and zip code.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-23c47c24c8",
+      "type": "prohibition",
+      "subject": "Retail agent policy",
+      "text": "You should at most make one tool call at a time, and if you take a tool call, you should not respond to the user at the same time.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-25aeefdaf8",
+      "type": "required_input",
+      "subject": "modify_pending_order_payment",
+      "text": "The modify_pending_order_payment tool requires the order_id argument.",
+      "object": "order_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-27cc954968",
+      "type": "escalation",
+      "subject": "Retail agent policy",
+      "text": "To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-28f361e03c",
+      "type": "permission",
+      "subject": "Exchange delivered order",
+      "text": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-28f5179fc6",
+      "type": "prohibition",
+      "subject": "Modify items",
+      "text": "There cannot be any change of product types, e.g.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2ba91a8c38",
+      "type": "fact",
+      "subject": "Domain basic",
+      "text": "All times in the database are EST and 24 hour based.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Domain basic",
+        "line_start": 26,
+        "line_end": 29
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2cd7c7691b",
+      "type": "permission",
+      "subject": "Retail agent policy",
+      "text": "As a retail agent, you can help users:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2d966a44f8",
+      "type": "required_input",
+      "subject": "Retail agent policy",
+      "text": "**provide information about their own profile, orders, and related products** At the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2dbb52706f",
+      "type": "confirmation",
+      "subject": "cancel_pending_order",
+      "text": "The agent needs to explain the cancellation detail and ask for explicit user confirmation (yes/no) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2dc7b71b8a",
+      "type": "fact",
+      "subject": "Retail agent policy",
+      "text": "**return or exchange delivered orders**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2ec67e2e65",
+      "type": "fact",
+      "subject": "exchange_delivered_order_items",
+      "text": "Be careful there is a '#' symbol at the beginning of the order id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2effcb99eb",
+      "type": "confirmation",
+      "subject": "modify_user_address",
+      "text": "The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2f2e8f777c",
+      "type": "confirmation",
+      "subject": "Modify items",
+      "text": "In particular, remember to remind the customer to confirm they have provided all the items they want to modify.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-30cdfc3d5c",
+      "type": "actor_constraint",
+      "subject": "Modify items",
+      "text": "The user must provide a payment method to pay or receive refund of the price difference.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-332db8a3fa",
+      "type": "communication_requirement",
+      "subject": "Product",
+      "text": "information about the value of the product options for this item..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Product",
+        "line_start": 41,
+        "line_end": 63
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-33ae4eac99",
+      "type": "confirmation",
+      "subject": "Cancel pending order",
+      "text": "The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Cancel pending order",
+        "line_start": 86,
+        "line_end": 93
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-35749a7cdc",
+      "type": "precondition",
+      "subject": "modify_pending_order_payment",
+      "text": "ValueError: If the payment method does not exist.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-357f314911",
+      "type": "precondition",
+      "subject": "return_delivered_order_items",
+      "text": "ValueError: If the payment method is not the original payment method or a gift card.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-358836fa45",
+      "type": "fact",
+      "subject": "modify_pending_order_items",
+      "text": "Each new item id should match the item id in the same position and be of the same product.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-360eb64f29",
+      "type": "fact",
+      "subject": "get_item_details",
+      "text": "Get the inventory details of an item.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_item_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-366d0a8b12",
+      "type": "precondition",
+      "subject": "get_order_details",
+      "text": "Raises: ValueError: If the order is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_order_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3a3bef285b",
+      "type": "fact",
+      "subject": "exchange_delivered_order_items",
+      "text": "Each new item id should match the item id in the same position and be of the same product.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3a6e782d17",
+      "type": "fact",
+      "subject": "modify_user_address",
+      "text": "country: The country, such as 'USA'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3b08ed1076",
+      "type": "actor_constraint",
+      "subject": "get_item_details",
+      "text": "The get_item_details tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_item_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3c78cc304b",
+      "type": "fact",
+      "subject": "modify_pending_order_items",
+      "text": "Modify items in a pending order to new items of the same product type.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3d655e2fde",
+      "type": "fact",
+      "subject": "Retail agent policy",
+      "text": "You should deny user requests that are against this policy.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3dd807705a",
+      "type": "postcondition",
+      "subject": "modify_pending_order_address",
+      "text": "Returns: Order: The order details after the modification.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3f56c047dc",
+      "type": "required_input",
+      "subject": "modify_pending_order_address",
+      "text": "The modify_pending_order_address tool requires the address1 argument.",
+      "object": "address1",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-4019e66db9",
+      "type": "required_input",
+      "subject": "modify_pending_order_items",
+      "text": "The modify_pending_order_items tool requires the payment_method_id argument.",
+      "object": "payment_method_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-402725bf34",
+      "type": "fact",
+      "subject": "exchange_delivered_order_items",
+      "text": "new_item_ids: The item ids to be exchanged for, each such as '1008292230'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-440ca78059",
+      "type": "fact",
+      "subject": "modify_pending_order_items",
+      "text": "Args: order_id: The order id, such as '#W0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-441010bb68",
+      "type": "fact",
+      "subject": "return_delivered_order_items",
+      "text": "Args: order_id: The order id, such as '#W0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4489418b2f",
+      "type": "required_input",
+      "subject": "exchange_delivered_order_items",
+      "text": "The exchange_delivered_order_items tool requires the item_ids argument.",
+      "object": "item_ids",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-45a2e45c9e",
+      "type": "postcondition",
+      "subject": "exchange_delivered_order_items",
+      "text": "Returns: Order: The order details after the exchange.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-46e1a93fa1",
+      "type": "actor_constraint",
+      "subject": "cancel_pending_order",
+      "text": "The cancel_pending_order tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-46ef6ff61a",
+      "type": "fact",
+      "subject": "return_delivered_order_items",
+      "text": "item_ids: The item ids to be returned, each such as '1008292230'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-48051c03e4",
+      "type": "fact",
+      "subject": "return_delivered_order_items",
+      "text": "payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4884005167",
+      "type": "permission",
+      "subject": "Modify items",
+      "text": "This action can only be called once, and will change the order status to 'pending (items modifed)'.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4912b08889",
+      "type": "permission",
+      "subject": "return_delivered_order_items",
+      "text": "These can be looked up from the user or order details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-498348a4bc",
+      "type": "fact",
+      "subject": "modify_user_address",
+      "text": "address1: The first line of the address, such as '123 Main St'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-49c7c4301a",
+      "type": "required_input",
+      "subject": "find_user_id_by_name_zip",
+      "text": "The find_user_id_by_name_zip tool requires the last_name argument.",
+      "object": "last_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-4e44eefc06",
+      "type": "postcondition",
+      "subject": "cancel_pending_order",
+      "text": "The function returns the order details after the cancellation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4e89c646f3",
+      "type": "precondition",
+      "subject": "exchange_delivered_order_items",
+      "text": "ValueError: If the new items do not exist or do not match the old items.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4f3a2374fc",
+      "type": "permission",
+      "subject": "modify_pending_order_payment",
+      "text": "These can be looked up from the user or order details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4f4d46731d",
+      "type": "fact",
+      "subject": "get_user_details",
+      "text": "Args: user_id: The user id, such as 'sara_doe_496'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5136f6ff1a",
+      "type": "required_input",
+      "subject": "get_item_details",
+      "text": "The get_item_details tool requires the item_id argument.",
+      "object": "item_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_item_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-5268a36743",
+      "type": "precondition",
+      "subject": "modify_pending_order_payment",
+      "text": "ValueError: If the new payment method is the same as the current one.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-52cb44641d",
+      "type": "prohibition",
+      "subject": "find_user_id_by_name_zip",
+      "text": "By default, find user id by email, and only call this function if the user is not found by email or cannot remember email.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-52fe9572d5",
+      "type": "actor_constraint",
+      "subject": "exchange_delivered_order_items",
+      "text": "The exchange_delivered_order_items tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-5386524172",
+      "type": "permission",
+      "subject": "Generic action rules",
+      "text": "Exchange or modify order tools can only be called once per order.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Generic action rules",
+        "line_start": 80,
+        "line_end": 85
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5497238ea1",
+      "type": "actor_constraint",
+      "subject": "modify_user_address",
+      "text": "The modify_user_address tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-5608ae9a10",
+      "type": "precondition",
+      "subject": "modify_pending_order_items",
+      "text": "ValueError: If the number of items to be modified does not match.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5643eb0908",
+      "type": "required_input",
+      "subject": "modify_user_address",
+      "text": "The modify_user_address tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-579ded6094",
+      "type": "permission",
+      "subject": "modify_pending_order_items",
+      "text": "For a pending order, this function can only be called once.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-57cc133276",
+      "type": "confirmation",
+      "subject": "modify_pending_order_payment",
+      "text": "The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5826a2c881",
+      "type": "precondition",
+      "subject": "modify_pending_order_payment",
+      "text": "ValueError: If the payment history has more than one payment.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5867688fb8",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "Args: order_id: The order id, such as '#W0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-58f7216621",
+      "type": "precondition",
+      "subject": "Return delivered order",
+      "text": "The refund must either go to the original payment method, or an existing gift card.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Return delivered order",
+        "line_start": 116,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5925441b00",
+      "type": "fact",
+      "subject": "Exchange delivered order",
+      "text": "modify shirt to shoe.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-593781d6d7",
+      "type": "fact",
+      "subject": "get_order_details",
+      "text": "Args: order_id: The order id, such as '#W0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_order_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5949083008",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "zip: The zip code, such as '12345'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-594cc8e6e8",
+      "type": "postcondition",
+      "subject": "cancel_pending_order",
+      "text": "Returns: Order: The order details after the cancellation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5ab42e40fc",
+      "type": "fact",
+      "subject": "Modify items",
+      "text": "modify shirt to shoe.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5bd4bf60d3",
+      "type": "fact",
+      "subject": "calculate",
+      "text": "Args: expression: The mathematical expression to calculate, such as '2 + 2'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5c1233a517",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "address1: The first line of the address, such as '123 Main St'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5d0edc5853",
+      "type": "fact",
+      "subject": "modify_user_address",
+      "text": "state: The state, such as 'CA'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5e48330acd",
+      "type": "fact",
+      "subject": "Retail agent policy",
+      "text": "**modify their default user address**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5fcdb6745f",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "Be careful there is a '#' symbol at the beginning of the order id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-61267b4d94",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "state: The state, such as 'CA'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6288f52aa3",
+      "type": "fact",
+      "subject": "find_user_id_by_email",
+      "text": "Args: email: The email of the user, such as 'something@example.com'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_email"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-639877b320",
+      "type": "confirmation",
+      "subject": "exchange_delivered_order_items",
+      "text": "The agent needs to explain the exchange detail and ask for explicit user confirmation (yes/no) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-642f132b2c",
+      "type": "fact",
+      "subject": "exchange_delivered_order_items",
+      "text": "payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6431d44fb1",
+      "type": "precondition",
+      "subject": "Modify payment",
+      "text": "If the user wants the modify the payment method to gift card, it must have enough balance to cover the total amount.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify payment",
+        "line_start": 100,
+        "line_end": 107
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-660cecd6e0",
+      "type": "actor_constraint",
+      "subject": "get_order_details",
+      "text": "The get_order_details tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_order_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-66891ef2bb",
+      "type": "fact",
+      "subject": "transfer_to_human_agents",
+      "text": "Args: summary: A summary of the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-69e2b0db33",
+      "type": "required_input",
+      "subject": "calculate",
+      "text": "The calculate tool requires the expression argument.",
+      "object": "expression",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-6a4bd73b64",
+      "type": "confirmation",
+      "subject": "modify_pending_order_items",
+      "text": "The agent needs to explain the exchange detail and ask for explicit user confirmation (yes/no) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6b1b18e1e9",
+      "type": "fact",
+      "subject": "get_user_details",
+      "text": "Returns: User: The user details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6b26f6a1af",
+      "type": "fact",
+      "subject": "list_all_product_types",
+      "text": "Each product type has a variety of different items with unique item ids and options.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "list_all_product_types"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6e382de4f5",
+      "type": "confirmation",
+      "subject": "modify_pending_order_address",
+      "text": "The agent needs to explain the modification detail and ask for explicit user confirmation (yes/no) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6fe87e3921",
+      "type": "fact",
+      "subject": "find_user_id_by_name_zip",
+      "text": "zip: The zip code of the customer, such as '12345'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-701247968f",
+      "type": "required_input",
+      "subject": "modify_pending_order_items",
+      "text": "The modify_pending_order_items tool requires the order_id argument.",
+      "object": "order_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-72b9914659",
+      "type": "required_input",
+      "subject": "modify_user_address",
+      "text": "The modify_user_address tool requires the city argument.",
+      "object": "city",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-72e4d69e80",
+      "type": "fact",
+      "subject": "calculate",
+      "text": "Returns: The result of the mathematical expression.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-746fe4b447",
+      "type": "precondition",
+      "subject": "modify_pending_order_items",
+      "text": "ValueError: If the items to be modified do not exist.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-747f7efb4b",
+      "type": "actor_constraint",
+      "subject": "find_user_id_by_name_zip",
+      "text": "The find_user_id_by_name_zip tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-758d971411",
+      "type": "confirmation",
+      "subject": "Modify items",
+      "text": "So you must confirm all the details are correct and be cautious before taking this action.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-75bdd36190",
+      "type": "permission",
+      "subject": "Order",
+      "text": "Orders can have other optional attributes based on the actions that have been taken (cancellation reason, which items have been exchanged, what was the exchane price difference etc)",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Order",
+        "line_start": 64,
+        "line_end": 79
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7718e29f9c",
+      "type": "actor_constraint",
+      "subject": "modify_pending_order_items",
+      "text": "The modify_pending_order_items tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-77807017a1",
+      "type": "fact",
+      "subject": "get_item_details",
+      "text": "Args: item_id: The item id, such as '6086499569'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_item_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-795f72989e",
+      "type": "fact",
+      "subject": "Cancel pending order",
+      "text": "Other reasons are not acceptable.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Cancel pending order",
+        "line_start": 86,
+        "line_end": 93
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-79b39556c7",
+      "type": "fact",
+      "subject": "Product",
+      "text": "For each **type of product**, there are **variant items** of different **options**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Product",
+        "line_start": 41,
+        "line_end": 63
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7a285b40ae",
+      "type": "fact",
+      "subject": "get_order_details",
+      "text": "Be careful there is a '#' symbol at the beginning of the order id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_order_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7a78373ac4",
+      "type": "precondition",
+      "subject": "exchange_delivered_order_items",
+      "text": "ValueError: If the items to be exchanged do not exist.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7abb6f12d3",
+      "type": "fact",
+      "subject": "User",
+      "text": "Each user has a profile containing:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "User",
+        "line_start": 30,
+        "line_end": 40
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7b1cf0a468",
+      "type": "prohibition",
+      "subject": "Exchange delivered order",
+      "text": "There cannot be any change of product types, e.g.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7b6db676dd",
+      "type": "actor_constraint",
+      "subject": "calculate",
+      "text": "The calculate tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-7cfa83e24b",
+      "type": "required_input",
+      "subject": "modify_pending_order_address",
+      "text": "The modify_pending_order_address tool requires the state argument.",
+      "object": "state",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-7d56013467",
+      "type": "required_input",
+      "subject": "return_delivered_order_items",
+      "text": "The return_delivered_order_items tool requires the order_id argument.",
+      "object": "order_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-7d675d7a14",
+      "type": "fact",
+      "subject": "User",
+      "text": "There are three types of payment methods: **gift card**, **paypal account**, **credit card**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "User",
+        "line_start": 30,
+        "line_end": 40
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7dea1d9562",
+      "type": "fact",
+      "subject": "get_item_details",
+      "text": "Be careful the item id is different from the product id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_item_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7f600a5610",
+      "type": "precondition",
+      "subject": "Modify items",
+      "text": "If the user provides a gift card, it must have enough balance to cover the price difference.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-806dd9f20b",
+      "type": "required_input",
+      "subject": "return_delivered_order_items",
+      "text": "The return_delivered_order_items tool requires the item_ids argument.",
+      "object": "item_ids",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-813fbe58ca",
+      "type": "fact",
+      "subject": "modify_user_address",
+      "text": "city: The city, such as 'San Francisco'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-83418549b0",
+      "type": "confirmation",
+      "subject": "Return delivered order",
+      "text": "After user confirmation, the order status will be changed to 'return requested', and the user will receive an email regarding how to return items.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Return delivered order",
+        "line_start": 116,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-87d6dbc9e1",
+      "type": "fact",
+      "subject": "Product",
+      "text": "Our retail store has 50 types of products.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Product",
+        "line_start": 41,
+        "line_end": 63
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-890f5e6b32",
+      "type": "precondition",
+      "subject": "Cancel pending order",
+      "text": "An order can only be cancelled if its status is 'pending', and you should check its status before taking the action.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Cancel pending order",
+        "line_start": 86,
+        "line_end": 93
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8959ddb239",
+      "type": "required_input",
+      "subject": "modify_pending_order_items",
+      "text": "The modify_pending_order_items tool requires the item_ids argument.",
+      "object": "item_ids",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-89db0b4c7f",
+      "type": "fact",
+      "subject": "Product",
+      "text": "For example, for a 't-shirt' product, there could be a variant item with option 'color blue size M', and another variant item with option 'color red size L'.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Product",
+        "line_start": 41,
+        "line_end": 63
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8cac261df6",
+      "type": "required_input",
+      "subject": "Retail agent policy",
+      "text": "Once the user has been authenticated, you can provide the user with information about order, product, profile information, e.g.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8cd151d3fe",
+      "type": "required_input",
+      "subject": "cancel_pending_order",
+      "text": "The cancel_pending_order tool requires the order_id argument.",
+      "object": "order_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-8d43dfea76",
+      "type": "permission",
+      "subject": "Modify pending order",
+      "text": "For a pending order, you can take actions to modify its shipping address, payment method, or product item options, but nothing else.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify pending order",
+        "line_start": 94,
+        "line_end": 99
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8d818a3eb9",
+      "type": "fact",
+      "subject": "get_product_details",
+      "text": "Be careful the product id is different from the item id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_product_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8ebbd2b017",
+      "type": "required_input",
+      "subject": "modify_pending_order_items",
+      "text": "The modify_pending_order_items tool requires the new_item_ids argument.",
+      "object": "new_item_ids",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-8ed2cb12a1",
+      "type": "fact",
+      "subject": "modify_user_address",
+      "text": "Args: user_id: The user id, such as 'sara_doe_496'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8f055b97ec",
+      "type": "required_input",
+      "subject": "find_user_id_by_name_zip",
+      "text": "The find_user_id_by_name_zip tool requires the first_name argument.",
+      "object": "first_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-912ecae119",
+      "type": "required_input",
+      "subject": "exchange_delivered_order_items",
+      "text": "The exchange_delivered_order_items tool requires the payment_method_id argument.",
+      "object": "payment_method_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-94a974abe0",
+      "type": "precondition",
+      "subject": "get_user_details",
+      "text": "Raises: ValueError: If the user is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-955c6e840d",
+      "type": "exception",
+      "subject": "cancel_pending_order",
+      "text": "The refund will be added to the user's gift card balance immediately if the payment was made using a gift card, otherwise the refund would take 5-7 business days to process.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9579dbe8c8",
+      "type": "precondition",
+      "subject": "modify_pending_order_items",
+      "text": "Raises: ValueError: If the order is not pending.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-95989e2ed8",
+      "type": "fact",
+      "subject": "cancel_pending_order",
+      "text": "Be careful there is a '#' symbol at the beginning of the order id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-96af96cdac",
+      "type": "required_input",
+      "subject": "return_delivered_order_items",
+      "text": "The return_delivered_order_items tool requires the payment_method_id argument.",
+      "object": "payment_method_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-979e69dbef",
+      "type": "required_input",
+      "subject": "modify_pending_order_payment",
+      "text": "The modify_pending_order_payment tool requires the payment_method_id argument.",
+      "object": "payment_method_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-985ca62283",
+      "type": "fact",
+      "subject": "modify_pending_order_payment",
+      "text": "Args: order_id: The order id, such as '#W0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9a09ba3842",
+      "type": "fact",
+      "subject": "Product",
+      "text": "Each product has the following attributes:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Product",
+        "line_start": 41,
+        "line_end": 63
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9c936541a8",
+      "type": "fact",
+      "subject": "exchange_delivered_order_items",
+      "text": "item_ids: The item ids to be exchanged, each such as '1008292230'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9cea717d24",
+      "type": "escalation",
+      "subject": "Retail agent policy",
+      "text": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9d5a9ddfa6",
+      "type": "precondition",
+      "subject": "Generic action rules",
+      "text": "Be sure that all items to be changed are collected into a list before making the tool call!!!",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Generic action rules",
+        "line_start": 80,
+        "line_end": 85
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9df80558fa",
+      "type": "actor_constraint",
+      "subject": "modify_pending_order_payment",
+      "text": "The modify_pending_order_payment tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-9df9bcd3e3",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "the user explicitly asks for a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9f304cddfd",
+      "type": "fact",
+      "subject": "modify_pending_order_items",
+      "text": "Be careful there is a '#' symbol at the beginning of the order id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9f703bf209",
+      "type": "exception",
+      "subject": "find_user_id_by_name_zip",
+      "text": "Returns: str: The user id if found, otherwise an error message.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a061539a50",
+      "type": "fact",
+      "subject": "Retail agent policy",
+      "text": "help the user look up order id.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a06d24514f",
+      "type": "required_input",
+      "subject": "Retail agent policy",
+      "text": "This has to be done even when the user already provides the user id.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a27ec85046",
+      "type": "precondition",
+      "subject": "modify_pending_order_items",
+      "text": "ValueError: If the new items do not exist or do not match the old items.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a2ad7f4d7c",
+      "type": "required_input",
+      "subject": "modify_pending_order_address",
+      "text": "The modify_pending_order_address tool requires the zip argument.",
+      "object": "zip",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a3c20afaab",
+      "type": "required_input",
+      "subject": "find_user_id_by_name_zip",
+      "text": "The find_user_id_by_name_zip tool requires the zip argument.",
+      "object": "zip",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a4584cca9a",
+      "type": "actor_constraint",
+      "subject": "get_product_details",
+      "text": "The get_product_details tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_product_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a64ce64705",
+      "type": "precondition",
+      "subject": "Exchange delivered order",
+      "text": "An order can only be exchanged if its status is 'delivered', and you should check its status before taking the action.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a709264679",
+      "type": "prohibition",
+      "subject": "transfer_to_human_agents",
+      "text": "given the policy and the available tools, you cannot solve the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a7bb6fec8a",
+      "type": "fact",
+      "subject": "Order",
+      "text": "fullfilments info (tracking id and item ids).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Order",
+        "line_start": 64,
+        "line_end": 79
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a915940ba8",
+      "type": "confirmation",
+      "subject": "cancel_pending_order",
+      "text": "If the user confirms, the order status will be changed to 'cancelled' and the payment will be refunded.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-aa5260653f",
+      "type": "fact",
+      "subject": "Retail agent policy",
+      "text": "PLEASE HOLD ON.' to the user.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ac22ba0c20",
+      "type": "permission",
+      "subject": "calculate",
+      "text": "The expression can contain numbers, operators (+, -, *, /), parentheses, and spaces.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-acee55a823",
+      "type": "fact",
+      "subject": "get_order_details",
+      "text": "Get the status and details of an order.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_order_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b28d7686bf",
+      "type": "confirmation",
+      "subject": "Return delivered order",
+      "text": "The user needs to confirm the order id and the list of items to be returned.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Return delivered order",
+        "line_start": 116,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b337c797df",
+      "type": "fact",
+      "subject": "Product",
+      "text": "price Note: Product ID and Item ID have no relations and should not be confused!",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Product",
+        "line_start": 41,
+        "line_end": 63
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b356001707",
+      "type": "precondition",
+      "subject": "Modify pending order",
+      "text": "An order can only be modified if its status is 'pending', and you should check its status before taking the action.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify pending order",
+        "line_start": 94,
+        "line_end": 99
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b3acba7df3",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "Modify the shipping address of a pending order.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b54cb9519d",
+      "type": "actor_constraint",
+      "subject": "Exchange delivered order",
+      "text": "The user must provide a payment method to pay or receive refund of the price difference.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b8cd0ea25d",
+      "type": "confirmation",
+      "subject": "Cancel pending order",
+      "text": "After user confirmation, the order status will be changed to 'cancelled', and the total will be refunded via the original payment method immediately if it is gift card, otherwise in 5 to 7 business days.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Cancel pending order",
+        "line_start": 86,
+        "line_end": 93
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b906dd18e4",
+      "type": "fact",
+      "subject": "list_all_product_types",
+      "text": "There are only 50 product types in the store.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "list_all_product_types"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b94f8e72bb",
+      "type": "required_input",
+      "subject": "get_product_details",
+      "text": "The get_product_details tool requires the product_id argument.",
+      "object": "product_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_product_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-b957544935",
+      "type": "fact",
+      "subject": "get_item_details",
+      "text": "Returns: Variant: The item details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_item_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b99d707eea",
+      "type": "actor_constraint",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-babaf4cb09",
+      "type": "fact",
+      "subject": "exchange_delivered_order_items",
+      "text": "Exchange items in a delivered order to new items of the same product type.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-babfd09903",
+      "type": "fact",
+      "subject": "return_delivered_order_items",
+      "text": "Return some items of a delivered order.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-bcb503a5ad",
+      "type": "postcondition",
+      "subject": "return_delivered_order_items",
+      "text": "Returns: Order: The order details after requesting the return.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c133d941f6",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "city: The city, such as 'San Francisco'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c1900eaea4",
+      "type": "fact",
+      "subject": "Product",
+      "text": "unique product id.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Product",
+        "line_start": 41,
+        "line_end": 63
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c222934507",
+      "type": "postcondition",
+      "subject": "modify_pending_order_items",
+      "text": "Returns: Order: The order details after the modification.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c24039d016",
+      "type": "precondition",
+      "subject": "Exchange delivered order",
+      "text": "If the user provides a gift card, it must have enough balance to cover the price difference.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c2b8209d3c",
+      "type": "required_input",
+      "subject": "find_user_id_by_email",
+      "text": "The find_user_id_by_email tool requires the email argument.",
+      "object": "email",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_email"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c355416ba1",
+      "type": "fact",
+      "subject": "Order",
+      "text": "Each order has the following attributes:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Order",
+        "line_start": 64,
+        "line_end": 79
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c41e84d32a",
+      "type": "fact",
+      "subject": "modify_pending_order_payment",
+      "text": "Be careful there is a '#' symbol at the beginning of the order id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c502b8d4a2",
+      "type": "actor_constraint",
+      "subject": "modify_pending_order_address",
+      "text": "The modify_pending_order_address tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c860e9c9ab",
+      "type": "fact",
+      "subject": "Retail agent policy",
+      "text": "**cancel or modify pending orders**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c884f70641",
+      "type": "fact",
+      "subject": "Domain basic",
+      "text": "For example \"02:30:00\" means 2:30 AM EST.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Domain basic",
+        "line_start": 26,
+        "line_end": 29
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c916aec9c1",
+      "type": "required_input",
+      "subject": "modify_pending_order_address",
+      "text": "The modify_pending_order_address tool requires the address2 argument.",
+      "object": "address2",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c93104d073",
+      "type": "fact",
+      "subject": "get_product_details",
+      "text": "Returns: Product: The product details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_product_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c94a9b53c9",
+      "type": "fact",
+      "subject": "return_delivered_order_items",
+      "text": "The order status will be changed to 'return requested'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-cbafdd1a4b",
+      "type": "precondition",
+      "subject": "get_product_details",
+      "text": "Raises: ValueError: If the product is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_product_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-cedb68d142",
+      "type": "fact",
+      "subject": "modify_pending_order_items",
+      "text": "payment_method_id: The payment method id to pay or receive refund for the item price difference, such as 'gift_card_0000000' or 'credit_card_0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d0c3981fcf",
+      "type": "required_input",
+      "subject": "get_user_details",
+      "text": "The get_user_details tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d1aa98c73c",
+      "type": "fact",
+      "subject": "Exchange delivered order",
+      "text": "There is no need to place a new order.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d261b065cd",
+      "type": "fact",
+      "subject": "modify_pending_order_items",
+      "text": "item_ids: The item ids to be modified, each such as '1008292230'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d2c4ba9845",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "Transfer the user to a human agent, with a summary of the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d4634d0f89",
+      "type": "confirmation",
+      "subject": "Exchange delivered order",
+      "text": "After user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d466c56517",
+      "type": "fact",
+      "subject": "list_all_product_types",
+      "text": "Returns: str: A JSON string mapping product names to their product IDs, sorted alphabetically by name.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "list_all_product_types"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d49b92ce05",
+      "type": "precondition",
+      "subject": "Retail agent policy",
+      "text": "If you respond to the user, you should not make a tool call at the same time.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d4bac08529",
+      "type": "fact",
+      "subject": "cancel_pending_order",
+      "text": "Cancel a pending order.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d5ffe3b2ca",
+      "type": "permission",
+      "subject": "exchange_delivered_order_items",
+      "text": "For a delivered order, return or exchange can be only done once by the agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d6e4fa58ab",
+      "type": "fact",
+      "subject": "exchange_delivered_order_items",
+      "text": "There could be duplicate items in the list.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d70a9cd0bc",
+      "type": "required_input",
+      "subject": "modify_user_address",
+      "text": "The modify_user_address tool requires the address2 argument.",
+      "object": "address2",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d86303f7ed",
+      "type": "required_input",
+      "subject": "modify_pending_order_address",
+      "text": "The modify_pending_order_address tool requires the city argument.",
+      "object": "city",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d9502fe4a0",
+      "type": "fact",
+      "subject": "get_order_details",
+      "text": "Returns: Order: The order details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_order_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-db5adf0e28",
+      "type": "fact",
+      "subject": "get_user_details",
+      "text": "Get the details of a user, including their orders.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ddbcb14f48",
+      "type": "fact",
+      "subject": "get_product_details",
+      "text": "Get the inventory details of a product.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_product_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-dea6488ca0",
+      "type": "confirmation",
+      "subject": "Exchange delivered order",
+      "text": "In particular, remember to remind the customer to confirm they have provided all items to be exchanged.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Exchange delivered order",
+        "line_start": 128,
+        "line_end": 136
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-df38d420ea",
+      "type": "precondition",
+      "subject": "find_user_id_by_name_zip",
+      "text": "Raises: ValueError: If the user is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "find_user_id_by_name_zip"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-df55822fd4",
+      "type": "required_input",
+      "subject": "modify_user_address",
+      "text": "The modify_user_address tool requires the zip argument.",
+      "object": "zip",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e15103bf93",
+      "type": "precondition",
+      "subject": "Return delivered order",
+      "text": "An order can only be returned if its status is 'delivered', and you should check its status before taking the action.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Return delivered order",
+        "line_start": 116,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e198db431f",
+      "type": "exception",
+      "subject": "Modify payment",
+      "text": "The original payment method will be refunded immediately if it is a gift card, otherwise it will be refunded within 5 to 7 business days.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify payment",
+        "line_start": 100,
+        "line_end": 107
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e1d653f91f",
+      "type": "required_input",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool requires the summary argument.",
+      "object": "summary",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e2c30e5cca",
+      "type": "required_input",
+      "subject": "get_order_details",
+      "text": "The get_order_details tool requires the order_id argument.",
+      "object": "order_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "get_order_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e2d01165fd",
+      "type": "precondition",
+      "subject": "return_delivered_order_items",
+      "text": "ValueError: If the items to be returned do not exist.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e374f798a7",
+      "type": "required_input",
+      "subject": "modify_user_address",
+      "text": "The modify_user_address tool requires the address1 argument.",
+      "object": "address1",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e4af87ffc0",
+      "type": "fact",
+      "subject": "modify_pending_order_items",
+      "text": "There could be duplicate items in the list.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e4fafebef0",
+      "type": "precondition",
+      "subject": "calculate",
+      "text": "Raises: ValueError: If the expression is invalid.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e727db2a7b",
+      "type": "fact",
+      "subject": "cancel_pending_order",
+      "text": "reason: The reason for cancellation, which should be either 'no longer needed' or 'ordered by mistake'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e784526d23",
+      "type": "fact",
+      "subject": "modify_pending_order_address",
+      "text": "address2: The second line of the address, such as 'Apt 1' or ''.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_address"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e79971c8e8",
+      "type": "postcondition",
+      "subject": "modify_pending_order_payment",
+      "text": "Returns: Order: The order details after the modification.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-eb39fbc61d",
+      "type": "fact",
+      "subject": "return_delivered_order_items",
+      "text": "Be careful there is a '#' symbol at the beginning of the order id.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ed92b2777e",
+      "type": "confirmation",
+      "subject": "Retail agent policy",
+      "text": "Before taking any action that updates the database (cancel, modify, return, exchange), you must list the action details and obtain explicit user confirmation (yes) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Retail agent policy",
+        "line_start": 1,
+        "line_end": 25
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-eddd9b767f",
+      "type": "confirmation",
+      "subject": "return_delivered_order_items",
+      "text": "The agent needs to explain the return detail and ask for explicit user confirmation (yes/no) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-edf68f625b",
+      "type": "fact",
+      "subject": "return_delivered_order_items",
+      "text": "The user will receive follow-up email for how and where to return the item.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "return_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f266ae9a21",
+      "type": "fact",
+      "subject": "modify_pending_order_payment",
+      "text": "Modify the payment method of a pending order.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f2916b6e94",
+      "type": "fact",
+      "subject": "cancel_pending_order",
+      "text": "Args: order_id: The order id, such as '#W0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f34967edb8",
+      "type": "precondition",
+      "subject": "exchange_delivered_order_items",
+      "text": "Raises: ValueError: If the order is not delivered.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f3d43ccbc5",
+      "type": "precondition",
+      "subject": "exchange_delivered_order_items",
+      "text": "ValueError: If the number of items to be exchanged does not match.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f8f4b07255",
+      "type": "prohibition",
+      "subject": "cancel_pending_order",
+      "text": "If the order is already processed or delivered, it cannot be cancelled.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f938ca20af",
+      "type": "fact",
+      "subject": "modify_pending_order_items",
+      "text": "new_item_ids: The item ids to be modified for, each such as '1008292230'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_pending_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-fb1df1e8a6",
+      "type": "permission",
+      "subject": "exchange_delivered_order_items",
+      "text": "These can be looked up from the user or order details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-fc1424007a",
+      "type": "fact",
+      "subject": "Modify items",
+      "text": "The agent will not be able to modify or cancel the order anymore.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+        "title": "Modify items",
+        "line_start": 108,
+        "line_end": 115
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-fd61aff76a",
+      "type": "required_input",
+      "subject": "cancel_pending_order",
+      "text": "The cancel_pending_order tool requires the reason argument.",
+      "object": "reason",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "cancel_pending_order"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-fd6e4e0692",
+      "type": "fact",
+      "subject": "exchange_delivered_order_items",
+      "text": "Args: order_id: The order id, such as '#W0000000'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "exchange_delivered_order_items"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-fe1093307f",
+      "type": "required_input",
+      "subject": "modify_user_address",
+      "text": "The modify_user_address tool requires the state argument.",
+      "object": "state",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+        "title": "modify_user_address"
+      },
+      "origin": "tool_schema"
+    }
+  ]
+}

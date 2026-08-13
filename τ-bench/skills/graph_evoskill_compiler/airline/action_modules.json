@@ -1,0 +1,124 @@
+{
+  "modules": [
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_001",
+      "name": "Airline τ³ SOP Skill",
+      "description": "graph evoskill compiler guidance section about Airline τ³ SOP Skill.",
+      "required_tools": [],
+      "instructions": "# Airline τ³ SOP Skill\n\n> Method: `graph_evoskill_compiler`. Compile-time sources are frozen τ³-bench policy, tool contracts, knowledge documents where applicable, and training tasks only where an official train split exists.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_002",
+      "name": "PAT-0001: Airline Agent Policy",
+      "description": "graph evoskill compiler guidance section about PAT-0001: Airline Agent Policy.",
+      "required_tools": [],
+      "instructions": "# PAT-0001: Airline Agent Policy\n\nCentral atom `KA-00001`; related atoms: KA-00006, KA-00007, KA-00008, KA-00009, KA-00019, KA-00021.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_003",
+      "name": "PAT-0002: Domain Basic",
+      "description": "graph evoskill compiler guidance section about PAT-0002: Domain Basic.",
+      "required_tools": [],
+      "instructions": "# PAT-0002: Domain Basic\n\nCentral atom `KA-00002`; related atoms: none.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_004",
+      "name": "PAT-0003: User",
+      "description": "graph evoskill compiler guidance section about PAT-0003: User.",
+      "required_tools": [],
+      "instructions": "# PAT-0003: User\n\nCentral atom `KA-00003`; related atoms: KA-00005, KA-00006, KA-00009, KA-00020, KA-00021.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_005",
+      "name": "PAT-0004: Flight",
+      "description": "graph evoskill compiler guidance section about PAT-0004: Flight.",
+      "required_tools": [],
+      "instructions": "# PAT-0004: Flight\n\nCentral atom `KA-00004`; related atoms: KA-00005, KA-00006, KA-00007, KA-00008, KA-00009, KA-00010, KA-00016, KA-00017, KA-00023.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_006",
+      "name": "PAT-0005: Reservation",
+      "description": "graph evoskill compiler guidance section about PAT-0005: Reservation.",
+      "required_tools": [],
+      "instructions": "# PAT-0005: Reservation\n\nCentral atom `KA-00005`; related atoms: KA-00003, KA-00004, KA-00006, KA-00007, KA-00008, KA-00009, KA-00010, KA-00021, KA-00022.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_007",
+      "name": "PAT-0006: Book flight",
+      "description": "graph evoskill compiler guidance section about PAT-0006: Book flight.",
+      "required_tools": [],
+      "instructions": "# PAT-0006: Book flight\n\nCentral atom `KA-00006`; related atoms: KA-00001, KA-00003, KA-00004, KA-00005, KA-00007, KA-00008, KA-00009, KA-00010, KA-00020, KA-00021.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_008",
+      "name": "PAT-0007: Modify flight",
+      "description": "graph evoskill compiler guidance section about PAT-0007: Modify flight.",
+      "required_tools": [],
+      "instructions": "# PAT-0007: Modify flight\n\nCentral atom `KA-00007`; related atoms: KA-00001, KA-00004, KA-00005, KA-00006, KA-00008, KA-00009, KA-00010, KA-00020, KA-00021.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_009",
+      "name": "PAT-0008: Cancel flight",
+      "description": "graph evoskill compiler guidance section about PAT-0008: Cancel flight.",
+      "required_tools": [],
+      "instructions": "# PAT-0008: Cancel flight\n\nCentral atom `KA-00008`; related atoms: KA-00001, KA-00004, KA-00005, KA-00006, KA-00007, KA-00009, KA-00019.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_010",
+      "name": "PAT-0009: Refunds and Compensation",
+      "description": "graph evoskill compiler guidance section about PAT-0009: Refunds and Compensation.",
+      "required_tools": [],
+      "instructions": "# PAT-0009: Refunds and Compensation\n\nCentral atom `KA-00009`; related atoms: KA-00001, KA-00003, KA-00004, KA-00005, KA-00006, KA-00007, KA-00008, KA-00010, KA-00019.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_011",
+      "name": "Runtime boundary",
+      "description": "graph evoskill compiler guidance section about Runtime boundary.",
+      "required_tools": [],
+      "instructions": "# Runtime boundary\n\nThe graph changes compile-time organization only. Runtime tools, environment, task evaluator and retrieval budget remain fixed.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "airline.graph_evoskill_compiler.section_012",
+      "name": "Governance",
+      "description": "graph evoskill compiler guidance section about Governance.",
+      "required_tools": [],
+      "instructions": "# Governance\n\n- `POL-0001` Airline Agent Policy\n- `POL-0002` Domain Basic\n- `POL-0003` User\n- `POL-0004` Flight\n- `POL-0005` Reservation\n- `POL-0006` Book flight\n- `POL-0007` Modify flight\n- `POL-0008` Cancel flight\n- `POL-0009` Refunds and Compensation",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    }
+  ]
+}

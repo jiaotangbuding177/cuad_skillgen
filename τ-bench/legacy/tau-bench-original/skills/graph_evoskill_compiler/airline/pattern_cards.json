@@ -1,0 +1,186 @@
+{
+  "patterns": [
+    {
+      "pattern_id": "PAT-001",
+      "name": "Airline Agent Policy",
+      "central_ka_id": "KA-0001",
+      "member_ka_ids": [
+        "KA-0002",
+        "KA-0003",
+        "KA-0004",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013",
+        "KA-0014"
+      ],
+      "tools": [
+        "book_reservation",
+        "cancel_reservation",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ]
+    },
+    {
+      "pattern_id": "PAT-002",
+      "name": "Domain Basic",
+      "central_ka_id": "KA-0002",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0003",
+        "KA-0004",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0009",
+        "KA-0010",
+        "KA-0013",
+        "KA-0014",
+        "KA-0016",
+        "KA-0017"
+      ],
+      "tools": [
+        "book_reservation",
+        "cancel_reservation",
+        "get_reservation_details",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ]
+    },
+    {
+      "pattern_id": "PAT-003",
+      "name": "Book flight",
+      "central_ka_id": "KA-0003",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0004",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0009",
+        "KA-0010",
+        "KA-0012",
+        "KA-0013",
+        "KA-0014",
+        "KA-0015"
+      ],
+      "tools": [
+        "book_reservation",
+        "cancel_reservation",
+        "get_reservation_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ]
+    },
+    {
+      "pattern_id": "PAT-004",
+      "name": "Modify flight",
+      "central_ka_id": "KA-0004",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0003",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013",
+        "KA-0014"
+      ],
+      "tools": [
+        "book_reservation",
+        "cancel_reservation",
+        "get_reservation_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ]
+    },
+    {
+      "pattern_id": "PAT-005",
+      "name": "Cancel flight",
+      "central_ka_id": "KA-0005",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0003",
+        "KA-0004",
+        "KA-0006",
+        "KA-0007",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013",
+        "KA-0014"
+      ],
+      "tools": [
+        "book_reservation",
+        "cancel_reservation",
+        "get_reservation_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ]
+    },
+    {
+      "pattern_id": "PAT-006",
+      "name": "Refund",
+      "central_ka_id": "KA-0006",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0003",
+        "KA-0004",
+        "KA-0005",
+        "KA-0007",
+        "KA-0009",
+        "KA-0010",
+        "KA-0013",
+        "KA-0014",
+        "KA-0015",
+        "KA-0016"
+      ],
+      "tools": [
+        "book_reservation",
+        "cancel_reservation",
+        "get_reservation_details",
+        "send_certificate",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ]
+    }
+  ]
+}

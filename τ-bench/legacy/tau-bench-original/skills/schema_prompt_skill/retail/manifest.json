@@ -1,0 +1,23 @@
+{
+  "method": "schema_prompt_skill",
+  "domain": "retail",
+  "compiler_backend": "deterministic_bootstrap",
+  "formal_llm_generation_required_for_paper_result": true,
+  "input_hash": "7b796d79cab05149bb29339463d5f0bd3b40b4371adcfe6ce6db726d807e7f50",
+  "uses_training_tasks": true,
+  "uses_dev_or_test_tasks": false,
+  "counts": {
+    "policy_sections": 8,
+    "tools": 16,
+    "knowledge_atoms": 31,
+    "training_workflow_patterns": 68,
+    "graph_patterns": 0
+  },
+  "duration_seconds": 0.1617,
+  "artifacts": [
+    "SKILL.md",
+    "evidence_index.json",
+    "security_policy.json",
+    "workflow_patterns.json"
+  ]
+}

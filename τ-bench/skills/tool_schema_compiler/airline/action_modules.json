@@ -1,0 +1,514 @@
+{
+  "modules": [
+    {
+      "module_id": "airline.book_reservation",
+      "name": "Book Reservation",
+      "description": "Use for tasks involving book reservation; the declared tool actor is assistant.",
+      "required_tools": [
+        "book_reservation"
+      ],
+      "primary_tool": "book_reservation",
+      "actor": "assistant",
+      "instructions": "# Book Reservation\n\nActor: `assistant`\n\nParameters: user_id, origin, destination, flight_type, cabin, flights, passengers, payment_methods, total_baggages, nonfree_baggages, insurance\n\nPurpose: Book a reservation.\n\nArgs:\n    user_id: The ID of the user to book the reservation such as 'sara_doe_496'`.\n    origin: The IATA code for the origin city such as 'SFO'.\n    destination: The IATA code for the destination city such as 'JFK'.\n    flight_type: The type of flight such as 'one_way' or 'round_trip'.\n    cabin: The cabin class such as 'basic_economy', 'economy', or 'business'.\n    flights: An array of objects containing details about each piece of flight.\n    passengers: An array of objects containing details about each passenger.\n    payment_methods: An array of objects containing details about each payment method.\n    total_baggages: The total number of baggage items to book the reservation.\n    nonfree_baggages: The number of non-free baggage items to book the reservation.\n    insurance: Whether the reservation has insurance.\n\n## Preconditions\n- The book_reservation tool requires the insurance argument. [ATOM-15782611df]\n- The book_reservation tool requires the nonfree_baggages argument. [ATOM-4351ca7f9e]\n- The book_reservation tool requires the passengers argument. [ATOM-55483c1ca6]\n- The book_reservation tool requires the origin argument. [ATOM-86fdadaa48]\n- The book_reservation tool requires the user_id argument. [ATOM-915667fb2b]\n- The book_reservation tool requires the total_baggages argument. [ATOM-a29508cf04]\n- The book_reservation tool requires the cabin argument. [ATOM-a627a6b55a]\n- The book_reservation tool requires the payment_methods argument. [ATOM-c465a3f462]\n\n## Actor constraints\n- The book_reservation tool is owned by the assistant actor. [ATOM-9561f6daae]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-15782611df",
+        "ATOM-4351ca7f9e",
+        "ATOM-55483c1ca6",
+        "ATOM-86fdadaa48",
+        "ATOM-915667fb2b",
+        "ATOM-9561f6daae",
+        "ATOM-a29508cf04",
+        "ATOM-a627a6b55a",
+        "ATOM-c465a3f462",
+        "ATOM-c724ec8102",
+        "ATOM-c89a0ec139",
+        "ATOM-d07dbd81a4"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-15782611df",
+        "ATOM-4351ca7f9e",
+        "ATOM-55483c1ca6",
+        "ATOM-86fdadaa48",
+        "ATOM-915667fb2b",
+        "ATOM-a29508cf04",
+        "ATOM-a627a6b55a",
+        "ATOM-c465a3f462",
+        "ATOM-c724ec8102",
+        "ATOM-c89a0ec139",
+        "ATOM-d07dbd81a4"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-9561f6daae",
+          "kind": "actor",
+          "tool": "book_reservation",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.calculate",
+      "name": "Calculate",
+      "description": "Use for tasks involving calculate; the declared tool actor is assistant.",
+      "required_tools": [
+        "calculate"
+      ],
+      "primary_tool": "calculate",
+      "actor": "assistant",
+      "instructions": "# Calculate\n\nActor: `assistant`\n\nParameters: expression\n\nPurpose: Calculate the result of a mathematical expression.\n\nArgs:\n    expression: The mathematical expression to calculate, such as '2 + 2'. The expression can contain numbers, operators (+, -, *, /), parentheses, and spaces.\n\nReturns:\n    The result of the mathematical expression.\n\nRaises:\n    ValueError: If the expression is invalid.\n\n## Preconditions\n- The calculate tool requires the expression argument. [ATOM-69e2b0db33]\n\n## Actor constraints\n- The calculate tool is owned by the assistant actor. [ATOM-5e48d3d330]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-5e48d3d330",
+        "ATOM-69e2b0db33"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-69e2b0db33",
+        "ATOM-e4fafebef0"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-5e48d3d330",
+          "kind": "actor",
+          "tool": "calculate",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.cancel_reservation",
+      "name": "Cancel Reservation",
+      "description": "Use for tasks involving cancel reservation; the declared tool actor is assistant.",
+      "required_tools": [
+        "cancel_reservation"
+      ],
+      "primary_tool": "cancel_reservation",
+      "actor": "assistant",
+      "instructions": "# Cancel Reservation\n\nActor: `assistant`\n\nParameters: reservation_id\n\nPurpose: Cancel the whole reservation.\n\nArgs:\n    reservation_id: The reservation ID, such as 'ZFA04Y'.\n\nReturns:\n    The updated reservation.\n\nRaises:\n    ValueError: If the reservation is not found.\n\n## Preconditions\n- The cancel_reservation tool requires the reservation_id argument. [ATOM-8fb91c8928]\n\n## Actor constraints\n- The cancel_reservation tool is owned by the assistant actor. [ATOM-4f65aec289]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-4f65aec289",
+        "ATOM-8fb91c8928"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0d03d2ed86",
+        "ATOM-3dcd41a77d",
+        "ATOM-489f8b098b",
+        "ATOM-48a5df5779",
+        "ATOM-8fb91c8928"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-4f65aec289",
+          "kind": "actor",
+          "tool": "cancel_reservation",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.get_flight_status",
+      "name": "Get Flight Status",
+      "description": "Use for tasks involving get flight status; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_flight_status"
+      ],
+      "primary_tool": "get_flight_status",
+      "actor": "assistant",
+      "instructions": "# Get Flight Status\n\nActor: `assistant`\n\nParameters: flight_number, date\n\nPurpose: Get the status of a flight.\n\nArgs:\n    flight_number: The flight number.\n    date: The date of the flight.\n\nReturns:\n    The status of the flight.\n\nRaises:\n    ValueError: If the flight is not found.\n\n## Preconditions\n- The get_flight_status tool requires the flight_number argument. [ATOM-6806fab2a1]\n- The get_flight_status tool requires the date argument. [ATOM-dfdb2e9bb6]\n\n## Actor constraints\n- The get_flight_status tool is owned by the assistant actor. [ATOM-6213ed6030]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-6213ed6030",
+        "ATOM-6806fab2a1",
+        "ATOM-dfdb2e9bb6"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-6806fab2a1",
+        "ATOM-dfdb2e9bb6",
+        "ATOM-ed13d24c3c"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-9d6ba529b8"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-020129020e"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-6213ed6030",
+          "kind": "actor",
+          "tool": "get_flight_status",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.get_reservation_details",
+      "name": "Get Reservation Details",
+      "description": "Use for tasks involving get reservation details; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_reservation_details"
+      ],
+      "primary_tool": "get_reservation_details",
+      "actor": "assistant",
+      "instructions": "# Get Reservation Details\n\nActor: `assistant`\n\nParameters: reservation_id\n\nPurpose: Get the details of a reservation.\n\nArgs:\n    reservation_id: The reservation ID, such as '8JX2WO'.\n\nReturns:\n    The reservation details.\n\nRaises:\n    ValueError: If the reservation is not found.\n\n## Preconditions\n- The get_reservation_details tool requires the reservation_id argument. [ATOM-f668ae720b]\n\n## Actor constraints\n- The get_reservation_details tool is owned by the assistant actor. [ATOM-a1df230424]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-a1df230424",
+        "ATOM-f668ae720b"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-489f8b098b",
+        "ATOM-6d23271322",
+        "ATOM-874c8a8c26",
+        "ATOM-a0bf8fc687",
+        "ATOM-b71eb06713",
+        "ATOM-f668ae720b"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-766b230f21"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-a1df230424",
+          "kind": "actor",
+          "tool": "get_reservation_details",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.get_user_details",
+      "name": "Get User Details",
+      "description": "Use for tasks involving get user details; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_user_details"
+      ],
+      "primary_tool": "get_user_details",
+      "actor": "assistant",
+      "instructions": "# Get User Details\n\nActor: `assistant`\n\nParameters: user_id\n\nPurpose: Get the details of a user, including their reservations.\n\nArgs:\n    user_id: The user ID, such as 'sara_doe_496'.\n\nReturns:\n    The user details.\n\nRaises:\n    ValueError: If the user is not found.\n\n## Preconditions\n- The get_user_details tool requires the user_id argument. [ATOM-d0c3981fcf]\n\n## Actor constraints\n- The get_user_details tool is owned by the assistant actor. [ATOM-55e4ca386a]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-55e4ca386a",
+        "ATOM-d0c3981fcf"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-5b60daafde",
+        "ATOM-94a974abe0",
+        "ATOM-d0c3981fcf"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-55e4ca386a",
+          "kind": "actor",
+          "tool": "get_user_details",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.list_all_airports",
+      "name": "List All Airports",
+      "description": "Use for tasks involving list all airports; the declared tool actor is assistant.",
+      "required_tools": [
+        "list_all_airports"
+      ],
+      "primary_tool": "list_all_airports",
+      "actor": "assistant",
+      "instructions": "# List All Airports\n\nActor: `assistant`\n\nParameters: none\n\nPurpose: Returns a list of all available airports.\n\nReturns:\n    A dictionary mapping IATA codes to AirportInfo objects.\n\n## Actor constraints\n- The list_all_airports tool is owned by the assistant actor. [ATOM-f962e923b8]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-f962e923b8"
+      ],
+      "precondition_atom_ids": [],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-f962e923b8",
+          "kind": "actor",
+          "tool": "list_all_airports",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.search_direct_flight",
+      "name": "Search Direct Flight",
+      "description": "Use for tasks involving search direct flight; the declared tool actor is assistant.",
+      "required_tools": [
+        "search_direct_flight"
+      ],
+      "primary_tool": "search_direct_flight",
+      "actor": "assistant",
+      "instructions": "# Search Direct Flight\n\nActor: `assistant`\n\nParameters: origin, destination, date\n\nPurpose: Search for direct flights between two cities on a specific date.\n\nArgs:\n    origin: The origin city airport in three letters, such as 'JFK'.\n    destination: The destination city airport in three letters, such as 'LAX'.\n    date: The date of the flight in the format 'YYYY-MM-DD', such as '2024-01-01'.\n\nReturns:\n    The direct flights between the two cities on the specific date.\n\n## Preconditions\n- The search_direct_flight tool requires the origin argument. [ATOM-459af37ea8]\n- The search_direct_flight tool requires the date argument. [ATOM-543ab6c4b7]\n- The search_direct_flight tool requires the destination argument. [ATOM-b8bf8728b5]\n\n## Actor constraints\n- The search_direct_flight tool is owned by the assistant actor. [ATOM-ab63e25722]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-459af37ea8",
+        "ATOM-543ab6c4b7",
+        "ATOM-ab63e25722",
+        "ATOM-b8bf8728b5"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-459af37ea8",
+        "ATOM-543ab6c4b7",
+        "ATOM-b8bf8728b5"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-ab63e25722",
+          "kind": "actor",
+          "tool": "search_direct_flight",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.search_onestop_flight",
+      "name": "Search Onestop Flight",
+      "description": "Use for tasks involving search onestop flight; the declared tool actor is assistant.",
+      "required_tools": [
+        "search_onestop_flight"
+      ],
+      "primary_tool": "search_onestop_flight",
+      "actor": "assistant",
+      "instructions": "# Search Onestop Flight\n\nActor: `assistant`\n\nParameters: origin, destination, date\n\nPurpose: Search for one-stop flights between two cities on a specific date.\n\nArgs:\n    origin: The origin city airport in three letters, such as 'JFK'.\n    destination: The destination city airport in three letters, such as 'LAX'.\n    date: The date of the flight in the format 'YYYY-MM-DD', such as '2024-05-01'.\n\nReturns:\n    A list of pairs of DirectFlight objects.\n\n## Preconditions\n- The search_onestop_flight tool requires the date argument. [ATOM-1840456a0b]\n- The search_onestop_flight tool requires the origin argument. [ATOM-e18e912ef8]\n- The search_onestop_flight tool requires the destination argument. [ATOM-f927792cac]\n\n## Actor constraints\n- The search_onestop_flight tool is owned by the assistant actor. [ATOM-a59bf14327]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-1840456a0b",
+        "ATOM-a59bf14327",
+        "ATOM-e18e912ef8",
+        "ATOM-f927792cac"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-1840456a0b",
+        "ATOM-e18e912ef8",
+        "ATOM-f927792cac"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-a59bf14327",
+          "kind": "actor",
+          "tool": "search_onestop_flight",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.send_certificate",
+      "name": "Send Certificate",
+      "description": "Use for tasks involving send certificate; the declared tool actor is assistant.",
+      "required_tools": [
+        "send_certificate"
+      ],
+      "primary_tool": "send_certificate",
+      "actor": "assistant",
+      "instructions": "# Send Certificate\n\nActor: `assistant`\n\nParameters: user_id, amount\n\nPurpose: Send a certificate to a user. Be careful!\n\nArgs:\n    user_id: The ID of the user to book the reservation, such as 'sara_doe_496'.\n    amount: The amount of the certificate to send.\n\nReturns:\n    A message indicating the certificate was sent.\n\nRaises:\n    ValueError: If the user is not found.\n\n## Preconditions\n- The send_certificate tool requires the amount argument. [ATOM-6c0b8a89ec]\n- The send_certificate tool requires the user_id argument. [ATOM-c4cf41da95]\n\n## Actor constraints\n- The send_certificate tool is owned by the assistant actor. [ATOM-d39bc56688]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-6c0b8a89ec",
+        "ATOM-c4cf41da95",
+        "ATOM-d39bc56688"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-1f6adffab6",
+        "ATOM-6c0b8a89ec",
+        "ATOM-c4cf41da95"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-d39bc56688",
+          "kind": "actor",
+          "tool": "send_certificate",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.transfer_to_human_agents",
+      "name": "Transfer To Human Agents",
+      "description": "Use for tasks involving transfer to human agents; the declared tool actor is assistant.",
+      "required_tools": [
+        "transfer_to_human_agents"
+      ],
+      "primary_tool": "transfer_to_human_agents",
+      "actor": "assistant",
+      "instructions": "# Transfer To Human Agents\n\nActor: `assistant`\n\nParameters: summary\n\nPurpose: Transfer the user to a human agent, with a summary of the user's issue.\nOnly transfer if\n -  the user explicitly asks for a human agent\n -  given the policy and the available tools, you cannot solve the user's issue.\n\nArgs:\n    summary: A summary of the user's issue.\n\nReturns:\n    A message indicating the user has been transferred to a human agent.\n\n## Preconditions\n- The transfer_to_human_agents tool requires the summary argument. [ATOM-e1d653f91f]\n\n## Actor constraints\n- The transfer_to_human_agents tool is owned by the assistant actor. [ATOM-22233662e6]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-22233662e6",
+        "ATOM-e1d653f91f"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-e1d653f91f"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-a709264679"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-12de65d5c0",
+        "ATOM-787ac0e5d1",
+        "ATOM-9110e765df",
+        "ATOM-9df9bcd3e3",
+        "ATOM-d2c4ba9845"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-22233662e6",
+          "kind": "actor",
+          "tool": "transfer_to_human_agents",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.update_reservation_baggages",
+      "name": "Update Reservation Baggages",
+      "description": "Use for tasks involving update reservation baggages; the declared tool actor is assistant.",
+      "required_tools": [
+        "update_reservation_baggages"
+      ],
+      "primary_tool": "update_reservation_baggages",
+      "actor": "assistant",
+      "instructions": "# Update Reservation Baggages\n\nActor: `assistant`\n\nParameters: reservation_id, total_baggages, nonfree_baggages, payment_id\n\nPurpose: Update the baggage information of a reservation.\n\nArgs:\n    reservation_id: The reservation ID, such as 'ZFA04Y'\n    total_baggages: The updated total number of baggage items included in the reservation.\n    nonfree_baggages: The updated number of non-free baggage items included in the reservation.\n    payment_id: The payment id stored in user profile, such as 'credit_card_7815826', 'gift_card_7815826', 'certificate_7815826'.\n\nReturns:\n    The updated reservation.\n\nRaises:\n    ValueError: If the reservation is not found.\n    ValueError: If the user is not found.\n    ValueError: If the payment method is not found.\n    ValueError: If the certificate cannot be used to update reservation.\n    ValueError: If the gift card balance is not enough.\n\n## Preconditions\n- The update_reservation_baggages tool requires the reservation_id argument. [ATOM-0ea681bd57]\n- The update_reservation_baggages tool requires the nonfree_baggages argument. [ATOM-11f4a56507]\n- The update_reservation_baggages tool requires the payment_id argument. [ATOM-67237fecd8]\n- The update_reservation_baggages tool requires the total_baggages argument. [ATOM-68c5e8b248]\n\n## Actor constraints\n- The update_reservation_baggages tool is owned by the assistant actor. [ATOM-25f7380261]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0ea681bd57",
+        "ATOM-11f4a56507",
+        "ATOM-25f7380261",
+        "ATOM-67237fecd8",
+        "ATOM-68c5e8b248"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0ea681bd57",
+        "ATOM-11f4a56507",
+        "ATOM-207f297b5f",
+        "ATOM-5f8bfe8fb3",
+        "ATOM-67237fecd8",
+        "ATOM-68c5e8b248",
+        "ATOM-a6f76da81d",
+        "ATOM-d2a8fbe9fb"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-aaf2ff15c4"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-25f7380261",
+          "kind": "actor",
+          "tool": "update_reservation_baggages",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.update_reservation_flights",
+      "name": "Update Reservation Flights",
+      "description": "Use for tasks involving update reservation flights; the declared tool actor is assistant.",
+      "required_tools": [
+        "update_reservation_flights"
+      ],
+      "primary_tool": "update_reservation_flights",
+      "actor": "assistant",
+      "instructions": "# Update Reservation Flights\n\nActor: `assistant`\n\nParameters: reservation_id, cabin, flights, payment_id\n\nPurpose: Update the flight information of a reservation.\n\n\nArgs:\n    reservation_id: The reservation ID, such as 'ZFA04Y'.\n    cabin: The cabin class of the reservation\n    flights: An array of objects containing details about each piece of flight in the ENTIRE new reservation. Even if the a flight segment is not changed, it should still be included in the array.\n    payment_id: The payment id stored in user profile, such as 'credit_card_7815826', 'gift_card_7815826', 'certificate_7815826'.\n\nReturns:\n    The updated reservation.\n\nRaises:\n    ValueError: If the reservation is not found.\n    ValueError: If the user is not found.\n    ValueError: If the payment method is not found.\n    ValueError: If the certificate cannot be used to update reservation.\n    ValueError: If the gift card balance is not enough.\n\n## Preconditions\n- The update_reservation_flights tool requires the reservation_id argument. [ATOM-043453d02d]\n- The update_reservation_flights tool requires the cabin argument. [ATOM-e469c1995c]\n- The update_reservation_flights tool requires the payment_id argument. [ATOM-fb7d129b0d]\n- The update_reservation_flights tool requires the flights argument. [ATOM-fc2ad72407]\n\n## Actor constraints\n- The update_reservation_flights tool is owned by the assistant actor. [ATOM-93728f7e15]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-043453d02d",
+        "ATOM-93728f7e15",
+        "ATOM-e469c1995c",
+        "ATOM-fb7d129b0d",
+        "ATOM-fc2ad72407"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-043453d02d",
+        "ATOM-20beff55f6",
+        "ATOM-481b32746b",
+        "ATOM-896ad146d7",
+        "ATOM-a6a85f0f7c",
+        "ATOM-a71ebdb48e",
+        "ATOM-e469c1995c",
+        "ATOM-fb7d129b0d",
+        "ATOM-fc2ad72407"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-dc6554c235"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-93728f7e15",
+          "kind": "actor",
+          "tool": "update_reservation_flights",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    },
+    {
+      "module_id": "airline.update_reservation_passengers",
+      "name": "Update Reservation Passengers",
+      "description": "Use for tasks involving update reservation passengers; the declared tool actor is assistant.",
+      "required_tools": [
+        "update_reservation_passengers"
+      ],
+      "primary_tool": "update_reservation_passengers",
+      "actor": "assistant",
+      "instructions": "# Update Reservation Passengers\n\nActor: `assistant`\n\nParameters: reservation_id, passengers\n\nPurpose: Update the passenger information of a reservation.\n\nArgs:\n    reservation_id: The reservation ID, such as 'ZFA04Y'.\n    passengers: An array of objects containing details about each passenger.\n\nReturns:\n    The updated reservation.\n\nRaises:\n    ValueError: If the reservation is not found.\n    ValueError: If the number of passengers does not match.\n\n## Preconditions\n- The update_reservation_passengers tool requires the reservation_id argument. [ATOM-48bb7687ef]\n- The update_reservation_passengers tool requires the passengers argument. [ATOM-fd2d7fc576]\n\n## Actor constraints\n- The update_reservation_passengers tool is owned by the assistant actor. [ATOM-65cd15915b]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-48bb7687ef",
+        "ATOM-65cd15915b",
+        "ATOM-fd2d7fc576"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-3dcd41a77d",
+        "ATOM-48bb7687ef",
+        "ATOM-668e12c721",
+        "ATOM-7202c1e0db",
+        "ATOM-9a2749bb6f",
+        "ATOM-fd2d7fc576"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-27c33841c9"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-65cd15915b",
+          "kind": "actor",
+          "tool": "update_reservation_passengers",
+          "actor": "assistant"
+        }
+      ],
+      "method": "tool_schema_compiler"
+    }
+  ]
+}

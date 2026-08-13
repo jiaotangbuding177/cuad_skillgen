@@ -1,0 +1,35 @@
+{
+  "dataset_version": {
+    "name": "tau-bench-original",
+    "commit": "59a200c6d575d595120f1cb70fea53cef0632f6b",
+    "status": "frozen_original_deprecated_upstream"
+  },
+  "domains": ["retail", "airline"],
+  "methods": [
+    "raw_policy_rag",
+    "native_prompt_skill",
+    "schema_prompt_skill",
+    "summary2skill",
+    "document_tool_maker",
+    "evoskill_compiler",
+    "graph_evoskill_compiler"
+  ],
+  "formal_protocol": {
+    "runtime_agent": "tau_bench_tool_calling_agent",
+    "temperature": 0.0,
+    "max_steps": 30,
+    "num_trials": 4,
+    "primary_split": "test",
+    "retail_skill_sources": ["policy", "runtime_rules", "tool_contracts", "train_tasks"],
+    "airline_skill_sources": ["policy", "runtime_rules", "tool_contracts"],
+    "forbidden_compilation_sources": ["dev_tasks", "test_tasks", "historical_test_trajectories"]
+  },
+  "primary_metrics": [
+    "pass_hat_k",
+    "governed_task_success",
+    "decision_status_macro_f1",
+    "policy_compliance",
+    "policy_provenance_coverage"
+  ]
+}
+

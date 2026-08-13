@@ -1,0 +1,245 @@
+{
+  "patterns": [
+    {
+      "pattern_id": "PAT-0001",
+      "name": "Retail agent policy",
+      "central_ka_id": "KA-00001",
+      "member_ka_ids": [
+        "KA-00004",
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00010",
+        "KA-00011",
+        "KA-00012",
+        "KA-00014",
+        "KA-00015",
+        "KA-00016",
+        "KA-00023",
+        "KA-00024",
+        "KA-00025",
+        "KA-00026",
+        "KA-00027",
+        "KA-00028"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0002",
+      "name": "Domain basic",
+      "central_ka_id": "KA-00002",
+      "member_ka_ids": [
+        "KA-00022"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0003",
+      "name": "User",
+      "central_ka_id": "KA-00003",
+      "member_ka_ids": [
+        "KA-00004",
+        "KA-00005",
+        "KA-00010",
+        "KA-00011",
+        "KA-00012",
+        "KA-00022"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0004",
+      "name": "Product",
+      "central_ka_id": "KA-00004",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00003",
+        "KA-00005",
+        "KA-00008",
+        "KA-00010",
+        "KA-00012",
+        "KA-00015",
+        "KA-00020",
+        "KA-00022",
+        "KA-00024",
+        "KA-00027"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0005",
+      "name": "Order",
+      "central_ka_id": "KA-00005",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00003",
+        "KA-00004",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00011",
+        "KA-00012",
+        "KA-00014",
+        "KA-00015",
+        "KA-00022",
+        "KA-00024",
+        "KA-00025",
+        "KA-00027"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0006",
+      "name": "Generic action rules",
+      "central_ka_id": "KA-00006",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00005",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00011",
+        "KA-00012",
+        "KA-00015",
+        "KA-00022",
+        "KA-00024"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0007",
+      "name": "Cancel pending order",
+      "central_ka_id": "KA-00007",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00005",
+        "KA-00006",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00011",
+        "KA-00012",
+        "KA-00014",
+        "KA-00015",
+        "KA-00023",
+        "KA-00024",
+        "KA-00025",
+        "KA-00026",
+        "KA-00027"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0008",
+      "name": "Modify pending order",
+      "central_ka_id": "KA-00008",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00004",
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00009",
+        "KA-00010",
+        "KA-00011",
+        "KA-00012",
+        "KA-00014",
+        "KA-00015",
+        "KA-00022",
+        "KA-00023",
+        "KA-00024",
+        "KA-00025",
+        "KA-00027",
+        "KA-00028"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0009",
+      "name": "Modify payment",
+      "central_ka_id": "KA-00009",
+      "member_ka_ids": [
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00010",
+        "KA-00011",
+        "KA-00012",
+        "KA-00014",
+        "KA-00015",
+        "KA-00024",
+        "KA-00025",
+        "KA-00027"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0010",
+      "name": "Modify items",
+      "central_ka_id": "KA-00010",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00003",
+        "KA-00004",
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00011",
+        "KA-00012",
+        "KA-00014",
+        "KA-00015",
+        "KA-00016",
+        "KA-00022",
+        "KA-00023",
+        "KA-00024",
+        "KA-00025",
+        "KA-00027",
+        "KA-00028"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0011",
+      "name": "Return delivered order",
+      "central_ka_id": "KA-00011",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00003",
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00012",
+        "KA-00014",
+        "KA-00015",
+        "KA-00016",
+        "KA-00024",
+        "KA-00025",
+        "KA-00027"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0012",
+      "name": "Exchange delivered order",
+      "central_ka_id": "KA-00012",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00003",
+        "KA-00004",
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00011",
+        "KA-00014",
+        "KA-00015",
+        "KA-00016",
+        "KA-00022",
+        "KA-00024",
+        "KA-00025",
+        "KA-00027"
+      ]
+    }
+  ]
+}

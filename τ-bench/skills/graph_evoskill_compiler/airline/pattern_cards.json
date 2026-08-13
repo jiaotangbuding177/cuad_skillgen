@@ -1,0 +1,130 @@
+{
+  "patterns": [
+    {
+      "pattern_id": "PAT-0001",
+      "name": "Airline Agent Policy",
+      "central_ka_id": "KA-00001",
+      "member_ka_ids": [
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00019",
+        "KA-00021"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0002",
+      "name": "Domain Basic",
+      "central_ka_id": "KA-00002",
+      "member_ka_ids": []
+    },
+    {
+      "pattern_id": "PAT-0003",
+      "name": "User",
+      "central_ka_id": "KA-00003",
+      "member_ka_ids": [
+        "KA-00005",
+        "KA-00006",
+        "KA-00009",
+        "KA-00020",
+        "KA-00021"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0004",
+      "name": "Flight",
+      "central_ka_id": "KA-00004",
+      "member_ka_ids": [
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00016",
+        "KA-00017",
+        "KA-00023"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0005",
+      "name": "Reservation",
+      "central_ka_id": "KA-00005",
+      "member_ka_ids": [
+        "KA-00003",
+        "KA-00004",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00021",
+        "KA-00022"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0006",
+      "name": "Book flight",
+      "central_ka_id": "KA-00006",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00003",
+        "KA-00004",
+        "KA-00005",
+        "KA-00007",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00020",
+        "KA-00021"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0007",
+      "name": "Modify flight",
+      "central_ka_id": "KA-00007",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00004",
+        "KA-00005",
+        "KA-00006",
+        "KA-00008",
+        "KA-00009",
+        "KA-00010",
+        "KA-00020",
+        "KA-00021"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0008",
+      "name": "Cancel flight",
+      "central_ka_id": "KA-00008",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00004",
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00009",
+        "KA-00019"
+      ]
+    },
+    {
+      "pattern_id": "PAT-0009",
+      "name": "Refunds and Compensation",
+      "central_ka_id": "KA-00009",
+      "member_ka_ids": [
+        "KA-00001",
+        "KA-00003",
+        "KA-00004",
+        "KA-00005",
+        "KA-00006",
+        "KA-00007",
+        "KA-00008",
+        "KA-00010",
+        "KA-00019"
+      ]
+    }
+  ]
+}

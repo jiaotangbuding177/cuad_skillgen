@@ -1,0 +1,26 @@
+{
+  "num_simulations": 1,
+  "num_tasks": 1,
+  "mean_reward": 1.0,
+  "strict_success_rate": 1.0,
+  "pass_at_k": 1.0,
+  "pass_power_k": 1.0,
+  "reward_components": {
+    "ENV_ASSERTION": 1.0
+  },
+  "mean_agent_cost": 0.01,
+  "mean_duration_seconds": 12.5,
+  "rows": [
+    {
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "trial": 0,
+      "reward": 1.0,
+      "breakdown": {
+        "ENV_ASSERTION": 1.0
+      },
+      "agent_cost": 0.01,
+      "duration": 12.5,
+      "termination_reason": "agent_stop"
+    }
+  ]
+}

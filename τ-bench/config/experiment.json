@@ -1,0 +1,61 @@
+{
+  "benchmark": "tau3-bench",
+  "main_protocol": {
+    "retail": "test",
+    "airline": "test",
+    "telecom": "test",
+    "banking_knowledge": "base"
+  },
+  "methods": [
+    "no_skill",
+    "raw_policy_rag",
+    "native_prompt_skill",
+    "schema_prompt_skill",
+    "summary2skill",
+    "document_tool_maker",
+    "evoskill_compiler",
+    "graph_evoskill_compiler",
+    "tool_schema_compiler",
+    "a2sc",
+    "g_a2sc"
+  ],
+  "ablation_methods": [
+    "a2sc_no_typed_atoms",
+    "a2sc_no_tool_binding",
+    "a2sc_no_local_motifs"
+  ],
+  "seeds": [11, 23, 42],
+  "num_trials": 1,
+  "max_steps": 100,
+  "temperature": 0.0,
+  "runtime": {
+    "mode": "hard_progressive_advisory",
+    "skill_top_k": 4,
+    "atom_top_k": 6,
+    "rule_top_k": 3,
+    "workflow_top_k": 3,
+    "pattern_top_k": 3,
+    "max_context_chars": 12000,
+    "max_item_chars": 1800,
+    "history_messages": 6,
+    "graph_traversal": false,
+    "max_catalog_chars": 12000,
+    "max_module_chars": 9000,
+    "max_active_modules": 2
+  },
+  "telecom_policy": "manual",
+  "banking_retrieval": {
+    "config": "bm25",
+    "top_k": 10
+  },
+  "causal_constants": [
+    "runtime model",
+    "user simulator model",
+    "task split and task IDs",
+    "tool schemas",
+    "runtime adapter",
+    "retrieval budget",
+    "seed schedule",
+    "max turns"
+  ]
+}

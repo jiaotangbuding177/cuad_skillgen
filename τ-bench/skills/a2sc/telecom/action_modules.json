@@ -1,0 +1,1936 @@
+{
+  "modules": [
+    {
+      "module_id": "telecom.can_send_mms",
+      "name": "Can Send Mms",
+      "description": "Use for tasks involving can send mms; the declared tool actor is user.",
+      "required_tools": [
+        "can_send_mms"
+      ],
+      "primary_tool": "can_send_mms",
+      "actor": "user",
+      "instructions": "# Can Send Mms\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks if the default messaging app can send MMS messages.\n\n## Preconditions\n- Checks if the default messaging app can send MMS messages. [ATOM-3870613f44]\n- `can_send_mms()` tool on the user's phone can be used to check if the user is facing an MMS issue. [ATOM-8936a234b8]\n- **can_send_mms** - Checks if the messaging app can send MMS messages. [ATOM-f1440526a4]\n- **Wi-Fi Calling Configuration**: In some cases, how Wi-Fi Calling is configured can affect MMS, especially if your carrier doesn't support MMS over Wi-Fi.. [ATOM-7424f59b8e]\n\n## Actor constraints\n- The can_send_mms tool is owned by the user actor. [ATOM-85bfc4778e]\n\n## Communication\n- This section explains for agents how to troubleshoot Multimedia Messaging Service (MMS), which allows users to send and receive messages containing pictures, videos, or audio. [ATOM-b875ba65f2]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-3870613f44",
+        "ATOM-85bfc4778e",
+        "ATOM-8936a234b8",
+        "ATOM-f1440526a4",
+        "ATOM-005c8bdf0f",
+        "ATOM-b875ba65f2",
+        "ATOM-39970bd67d",
+        "ATOM-3b3c2b6e06",
+        "ATOM-7424f59b8e"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-3870613f44",
+        "ATOM-7424f59b8e",
+        "ATOM-8936a234b8",
+        "ATOM-f1440526a4"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-85bfc4778e",
+          "kind": "actor",
+          "tool": "can_send_mms",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_apn_settings",
+      "name": "Check Apn Settings",
+      "description": "Use for tasks involving check apn settings; the declared tool actor is user.",
+      "required_tools": [
+        "check_apn_settings"
+      ],
+      "primary_tool": "check_apn_settings",
+      "actor": "user",
+      "instructions": "# Check Apn Settings\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks the technical APN settings your phone uses to connect to your carrier's mobile data network. Shows current APN name and MMSC URL for picture messaging.\n\n## Preconditions\n- If `check_apn_settings()` shows \"Incorrect\", guide the user to use `reset_apn_settings()` to reset the APN settings. [ATOM-a7069da6a5]\n- If `check_apn_settings()` shows MMSC URL is not set, guide the user to use `reset_apn_settings()` to reset the APN settings. [ATOM-aefcb7a14b]\n\n## Actor constraints\n- The check_apn_settings tool is owned by the user actor. [ATOM-f82d5dcbe9]\n- After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply. [ATOM-4a17843804]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-15469c148a",
+        "ATOM-2a4ed0e713",
+        "ATOM-f82d5dcbe9",
+        "ATOM-3ed9731b84",
+        "ATOM-a7069da6a5",
+        "ATOM-aefcb7a14b",
+        "ATOM-3cd213894a",
+        "ATOM-4a17843804",
+        "ATOM-352271b71f",
+        "ATOM-b53327cc3b",
+        "ATOM-1280d8d1e0",
+        "ATOM-02ba62d82a"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-a7069da6a5",
+        "ATOM-aefcb7a14b"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-f82d5dcbe9",
+          "kind": "actor",
+          "tool": "check_apn_settings",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_app_permissions",
+      "name": "Check App Permissions",
+      "description": "Use for tasks involving check app permissions; the declared tool actor is user.",
+      "required_tools": [
+        "check_app_permissions"
+      ],
+      "primary_tool": "check_app_permissions",
+      "actor": "user",
+      "instructions": "# Check App Permissions\n\nActor: `user`\n\nParameters: app_name\n\nPurpose: Checks what permissions a specific app currently has. Shows if the app has access to features like storage, camera, location, etc.\n\n## Preconditions\n- Shows if the app has access to features like storage, camera, location, etc. [ATOM-f7584d7fac]\n- If `check_app_permissions(app_name=\"messaging\")` shows \"storage\" and \"sms\" permissions are not listed as granted, guide the user to use `grant_app_permission(app_name=\"messaging\", permission=\"storage\")` and `grant_app_permission(app_name=\"messaging\", permission=\"sms\")` to grant the necessary permissions. [ATOM-1f19dfeb9d]\n- Shows if the app has access to features like storage, camera, location, etc.. [ATOM-79057b82f5]\n- The check_app_permissions tool requires the app_name argument. [ATOM-1536bdd625]\n\n## Actor constraints\n- The check_app_permissions tool is owned by the user actor. [ATOM-9996333f0e]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-1536bdd625",
+        "ATOM-9996333f0e",
+        "ATOM-dbcd1f47bc",
+        "ATOM-f7584d7fac",
+        "ATOM-1f19dfeb9d",
+        "ATOM-ca1e372782",
+        "ATOM-b1244b801d",
+        "ATOM-3702da140b",
+        "ATOM-79057b82f5",
+        "ATOM-6decceba79"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-1536bdd625",
+        "ATOM-1f19dfeb9d",
+        "ATOM-79057b82f5",
+        "ATOM-f7584d7fac"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-9996333f0e",
+          "kind": "actor",
+          "tool": "check_app_permissions",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_app_status",
+      "name": "Check App Status",
+      "description": "Use for tasks involving check app status; the declared tool actor is user.",
+      "required_tools": [
+        "check_app_status"
+      ],
+      "primary_tool": "check_app_status",
+      "actor": "user",
+      "instructions": "# Check App Status\n\nActor: `user`\n\nParameters: app_name\n\nPurpose: Checks detailed information about a specific app. Shows its permissions and background data usage settings.\n\n## Preconditions\n- If `check_app_permissions(app_name=\"messaging\")` shows \"storage\" and \"sms\" permissions are not listed as granted, guide the user to use `grant_app_permission(app_name=\"messaging\", permission=\"storage\")` and `grant_app_permission(app_name=\"messaging\", permission=\"sms\")` to grant the necessary permissions. [ATOM-1f19dfeb9d]\n- **can_send_mms** - Checks if the messaging app can send MMS messages. [ATOM-f1440526a4]\n- Shows if the app has access to features like storage, camera, location, etc.. [ATOM-79057b82f5]\n- The check_app_status tool requires the app_name argument. [ATOM-151e3d0885]\n\n## Actor constraints\n- The check_app_status tool is owned by the user actor. [ATOM-47dcc1e4c3]\n\n## Communication\n- Checks detailed information about a specific app. [ATOM-8b77feaa82]\n- **check_app_status** - Checks detailed information about a specific app. [ATOM-97c7502f6f]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0636bd66db",
+        "ATOM-151e3d0885",
+        "ATOM-47dcc1e4c3",
+        "ATOM-8b77feaa82",
+        "ATOM-97c7502f6f",
+        "ATOM-ca1e372782",
+        "ATOM-3702da140b",
+        "ATOM-1f19dfeb9d",
+        "ATOM-b1244b801d",
+        "ATOM-f1440526a4",
+        "ATOM-6decceba79",
+        "ATOM-79057b82f5"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-151e3d0885",
+        "ATOM-1f19dfeb9d",
+        "ATOM-79057b82f5",
+        "ATOM-f1440526a4"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-47dcc1e4c3",
+          "kind": "actor",
+          "tool": "check_app_status",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_data_restriction_status",
+      "name": "Check Data Restriction Status",
+      "description": "Use for tasks involving check data restriction status; the declared tool actor is user.",
+      "required_tools": [
+        "check_data_restriction_status"
+      ],
+      "primary_tool": "check_data_restriction_status",
+      "actor": "user",
+      "instructions": "# Check Data Restriction Status\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks if your phone has any data-limiting features active. Shows if Data Saver mode is on.\n\n## Preconditions\n- Checks if your phone has any data-limiting features active. [ATOM-19b3cc3611]\n- Shows if Data Saver mode is on. [ATOM-2a0e46745a]\n- **check_data_restriction_status** - Checks if your phone has any data-limiting features active. [ATOM-205bbb0764]\n- If `check_data_restriction_status()` shows \"Data Saver mode is ON\", guide the user to use `toggle_data_saver_mode()` to turn it OFF. [ATOM-44c0327391]\n\n## Actor constraints\n- The check_data_restriction_status tool is owned by the user actor. [ATOM-6c9070a435]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-19b3cc3611",
+        "ATOM-2a0e46745a",
+        "ATOM-6c9070a435",
+        "ATOM-205bbb0764",
+        "ATOM-44c0327391"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-19b3cc3611",
+        "ATOM-205bbb0764",
+        "ATOM-2a0e46745a",
+        "ATOM-44c0327391"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-6c9070a435",
+          "kind": "actor",
+          "tool": "check_data_restriction_status",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_installed_apps",
+      "name": "Check Installed Apps",
+      "description": "Use for tasks involving check installed apps; the declared tool actor is user.",
+      "required_tools": [
+        "check_installed_apps"
+      ],
+      "primary_tool": "check_installed_apps",
+      "actor": "user",
+      "instructions": "# Check Installed Apps\n\nActor: `user`\n\nParameters: none\n\nPurpose: Returns the name of all installed apps on the phone.\n\n## Actor constraints\n- The check_installed_apps tool is owned by the user actor. [ATOM-4c958c91c4]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-4c958c91c4",
+        "ATOM-93c293f314",
+        "ATOM-a9646e725f"
+      ],
+      "precondition_atom_ids": [],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-4c958c91c4",
+          "kind": "actor",
+          "tool": "check_installed_apps",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_network_mode_preference",
+      "name": "Check Network Mode Preference",
+      "description": "Use for tasks involving check network mode preference; the declared tool actor is user.",
+      "required_tools": [
+        "check_network_mode_preference"
+      ],
+      "primary_tool": "check_network_mode_preference",
+      "actor": "user",
+      "instructions": "# Check Network Mode Preference\n\nActor: `user`\n\nParameters: none\n\nPurpose: Shows the current network mode preference.\n\n## Preconditions\n- If `check_network_mode_preference()` shows \"2G\" or \"3G\", guide the user to use `set_network_mode_preference(mode: str)` with the mode `\"4g_5g_preferred\"` to allow the phone to connect to 5G. [ATOM-358e65b33c]\n- Shows if Wi-Fi is turned on, which network you're connected to (if any), and the signal strength.. [ATOM-20bab3cb44]\n\n## Actor constraints\n- The check_network_mode_preference tool is owned by the user actor. [ATOM-76c32fd6fa]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-76c32fd6fa",
+        "ATOM-e0a4772fa1",
+        "ATOM-358e65b33c",
+        "ATOM-7d248f1051",
+        "ATOM-b801359935",
+        "ATOM-20bab3cb44"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-20bab3cb44",
+        "ATOM-358e65b33c"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-76c32fd6fa",
+          "kind": "actor",
+          "tool": "check_network_mode_preference",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_network_status",
+      "name": "Check Network Status",
+      "description": "Use for tasks involving check network status; the declared tool actor is user.",
+      "required_tools": [
+        "check_network_status"
+      ],
+      "primary_tool": "check_network_status",
+      "actor": "user",
+      "instructions": "# Check Network Status\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks your phone's connection status to cellular networks and Wi-Fi. Shows airplane mode status, signal strength, network type, whether mobile data is enabled, and whether data roaming is enabled.\n\n## Preconditions\n- If `check_network_status()` shows mobile data is disabled, guide the user to use `toggle_data()` to turn mobile data ON. [ATOM-45659acefd]\n- You can check if Airplane Mode is ON by using `check_status_bar()` or `check_network_status()`. [ATOM-6db8aa2bc2]\n- If `check_network_status()` shows \"2G\", guide the user to use `set_network_mode_preference(mode: str)` to switch to a network mode that includes 3G, 4G, or 5G (e.g., `\"4g_5g_preferred\"` or `\"4g_only\"`). [ATOM-f631e09d12]\n\n## Actor constraints\n- The check_network_status tool is owned by the user actor. [ATOM-9165cd2bec]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-2562908982",
+        "ATOM-2cfe84ccfc",
+        "ATOM-9165cd2bec",
+        "ATOM-0fd3c09f48",
+        "ATOM-45659acefd",
+        "ATOM-6db8aa2bc2",
+        "ATOM-f631e09d12",
+        "ATOM-629284ddc2",
+        "ATOM-2aab1b8ff0",
+        "ATOM-b801359935",
+        "ATOM-f4c108941f",
+        "ATOM-ecbb734325"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-45659acefd",
+        "ATOM-6db8aa2bc2",
+        "ATOM-f631e09d12"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-9165cd2bec",
+          "kind": "actor",
+          "tool": "check_network_status",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_payment_request",
+      "name": "Check Payment Request",
+      "description": "Use for tasks involving check payment request; the declared tool actor is user.",
+      "required_tools": [
+        "check_payment_request"
+      ],
+      "primary_tool": "check_payment_request",
+      "actor": "user",
+      "instructions": "# Check Payment Request\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks if the agent has sent you a payment request.\n\n## Preconditions\n- Checks if the agent has sent you a payment request. [ATOM-2bd119b2f7]\n- You should always check that the bill is overdue before sending a payment request. [ATOM-9597ec3b44]\n- If the user accepts the payment request, use the make_payment tool to make the payment.. [ATOM-b339cfadde]\n- The send payement request tool will not check if the bill is overdue. [ATOM-d29efe9c81]\n\n## Actor constraints\n- The check_payment_request tool is owned by the user actor. [ATOM-1b8d83f2a1]\n\n## Exceptions\n- You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. [ATOM-00a7e81d24]\n\n## Communication\n- Inform the user that a payment request has been sent. [ATOM-068fd84271]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-1b8d83f2a1",
+        "ATOM-2bd119b2f7",
+        "ATOM-72e42221cd",
+        "ATOM-068fd84271",
+        "ATOM-9597ec3b44",
+        "ATOM-ec9f91837b",
+        "ATOM-b339cfadde",
+        "ATOM-d29efe9c81",
+        "ATOM-42eae58ddf",
+        "ATOM-00a7e81d24"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2bd119b2f7",
+        "ATOM-9597ec3b44",
+        "ATOM-b339cfadde",
+        "ATOM-d29efe9c81"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-00a7e81d24"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-1b8d83f2a1",
+          "kind": "actor",
+          "tool": "check_payment_request",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_sim_status",
+      "name": "Check Sim Status",
+      "description": "Use for tasks involving check sim status; the declared tool actor is user.",
+      "required_tools": [
+        "check_sim_status"
+      ],
+      "primary_tool": "check_sim_status",
+      "actor": "user",
+      "instructions": "# Check Sim Status\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks if your SIM card is working correctly and displays its current status. Shows if the SIM is active, missing, or locked with a PIN or PUK code.\n\n## Preconditions\n- Shows if the SIM is active, missing, or locked with a PIN or PUK code. [ATOM-73438e99ab]\n- Checks if your SIM card is working correctly and displays its current status. [ATOM-af2807c4a7]\n- **check_sim_status** - Checks if your SIM card is working correctly and displays its current status. [ATOM-f0a677e0fa]\n- Shows if the SIM is active, missing, or locked with a PIN or PUK code.. [ATOM-a45b15efa8]\n- If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted. [ATOM-61a1fc6364]\n- If it shows \"Active\", the SIM itself is likely okay. [ATOM-afb4cc9e61]\n\n## Actor constraints\n- The check_sim_status tool is owned by the user actor. [ATOM-87d42c55cf]\n\n## Exceptions\n- If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**. [ATOM-c7cd4d5dbe]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-73438e99ab",
+        "ATOM-87d42c55cf",
+        "ATOM-af2807c4a7",
+        "ATOM-10e2858a5e",
+        "ATOM-f0a677e0fa",
+        "ATOM-a45b15efa8",
+        "ATOM-c7cd4d5dbe",
+        "ATOM-61a1fc6364",
+        "ATOM-afb4cc9e61",
+        "ATOM-b7b1bfb121",
+        "ATOM-a522259ce9",
+        "ATOM-8a1731afaa"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-61a1fc6364",
+        "ATOM-73438e99ab",
+        "ATOM-a45b15efa8",
+        "ATOM-af2807c4a7",
+        "ATOM-afb4cc9e61",
+        "ATOM-f0a677e0fa"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-c7cd4d5dbe"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-87d42c55cf",
+          "kind": "actor",
+          "tool": "check_sim_status",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_status_bar",
+      "name": "Check Status Bar",
+      "description": "Use for tasks involving check status bar; the declared tool actor is user.",
+      "required_tools": [
+        "check_status_bar"
+      ],
+      "primary_tool": "check_status_bar",
+      "actor": "user",
+      "instructions": "# Check Status Bar\n\nActor: `user`\n\nParameters: none\n\nPurpose: Shows what icons are currently visible in your phone's status bar (the area at the top of the screen). Displays network signal strength, mobile data status (enabled, disabled, data saver), Wi-Fi status, and battery level.\n\n## Preconditions\n- You can check if Airplane Mode is ON by using `check_status_bar()` or `check_network_status()`. [ATOM-6db8aa2bc2]\n- `check_status_bar()` can be used to check if the user is facing a service issue. [ATOM-8ee9c78a7f]\n- If there is cellular service, the status bar will return a signal strength indicator. [ATOM-3f2611806c]\n\n## Actor constraints\n- The check_status_bar tool is owned by the user actor. [ATOM-a65b7fece4]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-6148928af5",
+        "ATOM-7961056a59",
+        "ATOM-a65b7fece4",
+        "ATOM-6db8aa2bc2",
+        "ATOM-8ee9c78a7f",
+        "ATOM-a4c9df5597",
+        "ATOM-5506ca847f",
+        "ATOM-3f2611806c"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-3f2611806c",
+        "ATOM-6db8aa2bc2",
+        "ATOM-8ee9c78a7f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-a65b7fece4",
+          "kind": "actor",
+          "tool": "check_status_bar",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_vpn_status",
+      "name": "Check Vpn Status",
+      "description": "Use for tasks involving check vpn status; the declared tool actor is user.",
+      "required_tools": [
+        "check_vpn_status"
+      ],
+      "primary_tool": "check_vpn_status",
+      "actor": "user",
+      "instructions": "# Check Vpn Status\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks if you're using a VPN (Virtual Private Network) connection. Shows if a VPN is active, connected, and displays any available connection details.\n\n## Preconditions\n- Shows if a VPN is active, connected, and displays any available connection details. [ATOM-89cda38d95]\n- Checks if you're using a VPN (Virtual Private Network) connection. [ATOM-b1db9d3e7c]\n- **check_vpn_status** - Checks if you're using a VPN (Virtual Private Network) connection. [ATOM-de9c9c0879]\n- If `check_vpn_status()` shows \"VPN is ON and connected\" and performance level is \"Poor\", guide the user to use `disconnect_vpn()` to disconnect the VPN. [ATOM-f7c71aa005]\n- Shows if a VPN is active, connected, and displays any available connection details.. [ATOM-9012824307]\n\n## Actor constraints\n- The check_vpn_status tool is owned by the user actor. [ATOM-db21520889]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-89cda38d95",
+        "ATOM-b1db9d3e7c",
+        "ATOM-db21520889",
+        "ATOM-de9c9c0879",
+        "ATOM-f7c71aa005",
+        "ATOM-9012824307",
+        "ATOM-6c29508c98",
+        "ATOM-f661d0e4d7",
+        "ATOM-5af3363f00",
+        "ATOM-ab45bceffa",
+        "ATOM-8727d80fdb",
+        "ATOM-253cc7bf21"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-89cda38d95",
+        "ATOM-9012824307",
+        "ATOM-b1db9d3e7c",
+        "ATOM-de9c9c0879",
+        "ATOM-f7c71aa005"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-db21520889",
+          "kind": "actor",
+          "tool": "check_vpn_status",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_wifi_calling_status",
+      "name": "Check Wifi Calling Status",
+      "description": "Use for tasks involving check wifi calling status; the declared tool actor is user.",
+      "required_tools": [
+        "check_wifi_calling_status"
+      ],
+      "primary_tool": "check_wifi_calling_status",
+      "actor": "user",
+      "instructions": "# Check Wifi Calling Status\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks if Wi-Fi Calling is enabled on your device. This feature allows you to make and receive calls over a Wi-Fi network instead of using the cellular network.\n\n## Preconditions\n- Checks if Wi-Fi Calling is enabled on your device. [ATOM-014ca61d54]\n- **check_wifi_calling_status** - Checks if Wi-Fi Calling is enabled on your device. [ATOM-1e1ff7eb94]\n- If `check_wifi_calling_status()` shows \"Wi-Fi Calling is ON\", guide the user to use `toggle_wifi_calling()` to turn it OFF. [ATOM-87de59878f]\n\n## Actor constraints\n- The check_wifi_calling_status tool is owned by the user actor. [ATOM-05353a8533]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-014ca61d54",
+        "ATOM-05353a8533",
+        "ATOM-0f8ef0d549",
+        "ATOM-1e1ff7eb94",
+        "ATOM-87de59878f"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-014ca61d54",
+        "ATOM-1e1ff7eb94",
+        "ATOM-87de59878f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-05353a8533",
+          "kind": "actor",
+          "tool": "check_wifi_calling_status",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.check_wifi_status",
+      "name": "Check Wifi Status",
+      "description": "Use for tasks involving check wifi status; the declared tool actor is user.",
+      "required_tools": [
+        "check_wifi_status"
+      ],
+      "primary_tool": "check_wifi_status",
+      "actor": "user",
+      "instructions": "# Check Wifi Status\n\nActor: `user`\n\nParameters: none\n\nPurpose: Checks your Wi-Fi connection status. Shows if Wi-Fi is turned on, which network you're connected to (if any), and the signal strength.\n\n## Preconditions\n- Shows if Wi-Fi is turned on, which network you're connected to (if any), and the signal strength. [ATOM-033ddc9755]\n\n## Actor constraints\n- The check_wifi_status tool is owned by the user actor. [ATOM-f1e0a3ce32]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-033ddc9755",
+        "ATOM-3b5352279d",
+        "ATOM-f1e0a3ce32",
+        "ATOM-93127797ac"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-033ddc9755"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-f1e0a3ce32",
+          "kind": "actor",
+          "tool": "check_wifi_status",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.connect_vpn",
+      "name": "Connect Vpn",
+      "description": "Use for tasks involving connect vpn; the declared tool actor is user.",
+      "required_tools": [
+        "connect_vpn"
+      ],
+      "primary_tool": "connect_vpn",
+      "actor": "user",
+      "instructions": "# Connect Vpn\n\nActor: `user`\n\nParameters: none\n\nPurpose: Connects to your VPN (Virtual Private Network).\n\n## Preconditions\n- If `check_vpn_status()` shows \"VPN is ON and connected\" and performance level is \"Poor\", guide the user to use `disconnect_vpn()` to disconnect the VPN. [ATOM-f7c71aa005]\n- **check_vpn_status** - Checks if you're using a VPN (Virtual Private Network) connection. [ATOM-de9c9c0879]\n\n## Actor constraints\n- The connect_vpn tool is owned by the user actor. [ATOM-3e444fd226]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-3e444fd226",
+        "ATOM-57050dc4ee",
+        "ATOM-5af3363f00",
+        "ATOM-6c29508c98",
+        "ATOM-f7c71aa005",
+        "ATOM-de9c9c0879",
+        "ATOM-f661d0e4d7"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-de9c9c0879",
+        "ATOM-f7c71aa005"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-3e444fd226",
+          "kind": "actor",
+          "tool": "connect_vpn",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.disable_roaming",
+      "name": "Disable Roaming",
+      "description": "Use for tasks involving disable roaming; the declared tool actor is assistant.",
+      "required_tools": [
+        "disable_roaming"
+      ],
+      "primary_tool": "disable_roaming",
+      "actor": "assistant",
+      "instructions": "# Disable Roaming\n\nActor: `assistant`\n\nParameters: customer_id, line_id\n\nPurpose: Disables international roaming on a line.\n\nArgs:\n    customer_id: ID of the customer who owns the line.\n    line_id: ID of the line to disable roaming for.\n\nReturns:\n    Message indicating the roaming has been enabled.\n\nRaises:\n    ValueError: If customer or line not found.\n\n## Preconditions\n- Raises: ValueError: If customer or line not found. [ATOM-baddf12699]\n- If it is not, you should enable it at no cost for the user. [ATOM-2843488177]\n- If a user is traveling outside their home network, you should check if the line is roaming enabled. [ATOM-72850c8fd1]\n- If a line is roaming enabled, the user can use their phone's data connection in areas outside their home network. [ATOM-569ee865eb]\n- The disable_roaming tool requires the customer_id argument. [ATOM-46bcaa9c39]\n- The disable_roaming tool requires the line_id argument. [ATOM-941049a99e]\n\n## Actor constraints\n- The disable_roaming tool is owned by the assistant actor. [ATOM-0466f3e6c1]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0466f3e6c1",
+        "ATOM-2ef766a822",
+        "ATOM-46bcaa9c39",
+        "ATOM-4f43786dc0",
+        "ATOM-6777bb26f7",
+        "ATOM-941049a99e",
+        "ATOM-baddf12699",
+        "ATOM-d794c275a2",
+        "ATOM-2fa7ef3cc6",
+        "ATOM-2843488177",
+        "ATOM-72850c8fd1",
+        "ATOM-569ee865eb"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2843488177",
+        "ATOM-46bcaa9c39",
+        "ATOM-569ee865eb",
+        "ATOM-72850c8fd1",
+        "ATOM-941049a99e",
+        "ATOM-baddf12699"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-0466f3e6c1",
+          "kind": "actor",
+          "tool": "disable_roaming",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.disconnect_vpn",
+      "name": "Disconnect Vpn",
+      "description": "Use for tasks involving disconnect vpn; the declared tool actor is user.",
+      "required_tools": [
+        "disconnect_vpn"
+      ],
+      "primary_tool": "disconnect_vpn",
+      "actor": "user",
+      "instructions": "# Disconnect Vpn\n\nActor: `user`\n\nParameters: none\n\nPurpose: Disconnects any active VPN (Virtual Private Network) connection. Stops routing your internet traffic through a VPN server, which might affect connection speed or access to content.\n\n## Preconditions\n- If `check_vpn_status()` shows \"VPN is ON and connected\" and performance level is \"Poor\", guide the user to use `disconnect_vpn()` to disconnect the VPN. [ATOM-f7c71aa005]\n- **check_vpn_status** - Checks if you're using a VPN (Virtual Private Network) connection. [ATOM-de9c9c0879]\n\n## Actor constraints\n- The disconnect_vpn tool is owned by the user actor. [ATOM-0ae65db436]\n\n## Soft local continuations\n- Consider `toggle_data` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0ae65db436",
+        "ATOM-7d3510c468",
+        "ATOM-a01eb22839",
+        "ATOM-6c29508c98",
+        "ATOM-f7c71aa005",
+        "ATOM-93e8bb1caa",
+        "ATOM-f661d0e4d7",
+        "ATOM-5af3363f00",
+        "ATOM-de9c9c0879"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-de9c9c0879",
+        "ATOM-f7c71aa005"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-0ae65db436",
+          "kind": "actor",
+          "tool": "disconnect_vpn",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-4d5d72eca9",
+          "kind": "ordering",
+          "before_tool": "disconnect_vpn",
+          "after_tool": "toggle_data",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.enable_roaming",
+      "name": "Enable Roaming",
+      "description": "Use for tasks involving enable roaming; the declared tool actor is assistant.",
+      "required_tools": [
+        "enable_roaming"
+      ],
+      "primary_tool": "enable_roaming",
+      "actor": "assistant",
+      "instructions": "# Enable Roaming\n\nActor: `assistant`\n\nParameters: customer_id, line_id\n\nPurpose: Enables international roaming on a line.\n\nArgs:\n    customer_id: ID of the customer who owns the line.\n    line_id: ID of the line to enable roaming for.\n\nReturns:\n    Message indicating the roaming has been enabled.\n\nRaises:\n    ValueError: If customer or line not found.\n\n## Preconditions\n- Raises: ValueError: If customer or line not found. [ATOM-0d66dc1d3e]\n- If it is not, you should enable it at no cost for the user. [ATOM-2843488177]\n- If a user is traveling outside their home network, you should check if the line is roaming enabled. [ATOM-72850c8fd1]\n- If a line is roaming enabled, the user can use their phone's data connection in areas outside their home network. [ATOM-569ee865eb]\n- The enable_roaming tool requires the line_id argument. [ATOM-36bffca323]\n- The enable_roaming tool requires the customer_id argument. [ATOM-ef77f5597c]\n\n## Actor constraints\n- The enable_roaming tool is owned by the assistant actor. [ATOM-8a085ef01a]\n\n## Soft local continuations\n- Consider `toggle_roaming` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0d66dc1d3e",
+        "ATOM-18ae09d5af",
+        "ATOM-1e355ace75",
+        "ATOM-36bffca323",
+        "ATOM-8a085ef01a",
+        "ATOM-8adfc08dd3",
+        "ATOM-abeb985e3a",
+        "ATOM-ef77f5597c",
+        "ATOM-2fa7ef3cc6",
+        "ATOM-2843488177",
+        "ATOM-72850c8fd1",
+        "ATOM-569ee865eb"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0d66dc1d3e",
+        "ATOM-2843488177",
+        "ATOM-36bffca323",
+        "ATOM-569ee865eb",
+        "ATOM-72850c8fd1",
+        "ATOM-ef77f5597c"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-8a085ef01a",
+          "kind": "actor",
+          "tool": "enable_roaming",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-6c40d66554",
+          "kind": "ordering",
+          "before_tool": "enable_roaming",
+          "after_tool": "toggle_roaming",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-335f331b64",
+          "kind": "ordering",
+          "before_tool": "refuel_data",
+          "after_tool": "enable_roaming",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-d6d1d7913a",
+          "kind": "ordering",
+          "before_tool": "reseat_sim_card",
+          "after_tool": "enable_roaming",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.get_bills_for_customer",
+      "name": "Get Bills For Customer",
+      "description": "Use for tasks involving get bills for customer; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_bills_for_customer"
+      ],
+      "primary_tool": "get_bills_for_customer",
+      "actor": "assistant",
+      "instructions": "# Get Bills For Customer\n\nActor: `assistant`\n\nParameters: customer_id, limit\n\nPurpose: Retrieves a list of the customer's bills, most recent first.\n\nArgs:\n    customer_id: ID of the customer.\n    limit: Maximum number of bills to return.\n\nReturns:\n    List of Bill objects, ordered by issue date (newest first).\n\nRaises:\n    ValueError: If the customer is not found.\n\n## Preconditions\n- Raises: ValueError: If the customer is not found. [ATOM-064febdf4b]\n- The get_bills_for_customer tool requires the customer_id argument. [ATOM-5147f242cc]\n- The get_bills_for_customer tool requires the limit argument. [ATOM-991dd616c6]\n\n## Actor constraints\n- The get_bills_for_customer tool is owned by the assistant actor. [ATOM-16af24433c]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-064febdf4b",
+        "ATOM-16af24433c",
+        "ATOM-2a71a49e2b",
+        "ATOM-50b9309668",
+        "ATOM-5147f242cc",
+        "ATOM-5d9bcc1f6f",
+        "ATOM-991dd616c6",
+        "ATOM-cc596f8c14"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-064febdf4b",
+        "ATOM-5147f242cc",
+        "ATOM-991dd616c6"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-16af24433c",
+          "kind": "actor",
+          "tool": "get_bills_for_customer",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.get_customer_by_id",
+      "name": "Get Customer By Id",
+      "description": "Use for tasks involving get customer by id; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_customer_by_id"
+      ],
+      "primary_tool": "get_customer_by_id",
+      "actor": "assistant",
+      "instructions": "# Get Customer By Id\n\nActor: `assistant`\n\nParameters: customer_id\n\nPurpose: Retrieves a customer directly by their unique ID.\n\nArgs:\n    customer_id: The unique identifier of the customer.\n\nReturns:\n    Customer object if found, None otherwise.\n\n## Preconditions\n- The get_customer_by_id tool requires the customer_id argument. [ATOM-a3dd2d480e]\n\n## Actor constraints\n- The get_customer_by_id tool is owned by the assistant actor. [ATOM-3a8754e2db]\n\n## Exceptions\n- Returns: Customer object if found, None otherwise. [ATOM-5379c852f8]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-3a8754e2db",
+        "ATOM-5379c852f8",
+        "ATOM-5a3e4527ea",
+        "ATOM-94224f2477",
+        "ATOM-a3dd2d480e"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-a3dd2d480e"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-5379c852f8"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-3a8754e2db",
+          "kind": "actor",
+          "tool": "get_customer_by_id",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.get_customer_by_name",
+      "name": "Get Customer By Name",
+      "description": "Use for tasks involving get customer by name; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_customer_by_name"
+      ],
+      "primary_tool": "get_customer_by_name",
+      "actor": "assistant",
+      "instructions": "# Get Customer By Name\n\nActor: `assistant`\n\nParameters: full_name, dob\n\nPurpose: Searches for customers by name and DOB. May return multiple matches if names are similar,\nDOB helps disambiguate.\n\nArgs:\n    full_name: The full name of the customer.\n    dob: Date of birth for verification, in the format YYYY-MM-DD.\n\nReturns:\n    List of matching Customer objects.\n\n## Preconditions\n- May return multiple matches if names are similar, DOB helps disambiguate. [ATOM-b06a951606]\n- Full name with date of birth For name lookup, date of birth is required for verification purposes. [ATOM-e48d770d2a]\n- The get_customer_by_name tool requires the dob argument. [ATOM-f2681b9256]\n- The get_customer_by_name tool requires the full_name argument. [ATOM-f96a160812]\n\n## Actor constraints\n- The get_customer_by_name tool is owned by the assistant actor. [ATOM-7dbc0fb186]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-1566524de5",
+        "ATOM-7a00c11cfe",
+        "ATOM-7dbc0fb186",
+        "ATOM-b06a951606",
+        "ATOM-c09072d58a",
+        "ATOM-c451f82852",
+        "ATOM-f2681b9256",
+        "ATOM-f96a160812",
+        "ATOM-e48d770d2a",
+        "ATOM-352271b71f",
+        "ATOM-a9646e725f",
+        "ATOM-9e261b4854"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-b06a951606",
+        "ATOM-e48d770d2a",
+        "ATOM-f2681b9256",
+        "ATOM-f96a160812"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-7dbc0fb186",
+          "kind": "actor",
+          "tool": "get_customer_by_name",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.get_customer_by_phone",
+      "name": "Get Customer By Phone",
+      "description": "Use for tasks involving get customer by phone; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_customer_by_phone"
+      ],
+      "primary_tool": "get_customer_by_phone",
+      "actor": "assistant",
+      "instructions": "# Get Customer By Phone\n\nActor: `assistant`\n\nParameters: phone_number\n\nPurpose: Finds a customer by their primary contact or line phone number.\n\nArgs:\n    phone_number: The phone number to search for.\n\nReturns:\n    Customer object if found, None otherwise.\n\n## Preconditions\n- If the user's data usage for a line associated with the phone number the user provided exceeds the plan's data limit, data connectivity will be lost. [ATOM-9a14917082]\n- If a line is roaming enabled, the user can use their phone's data connection in areas outside their home network. [ATOM-569ee865eb]\n- The get_customer_by_phone tool requires the phone_number argument. [ATOM-0df966efdb]\n- Apply the plan to the line associated with the phone number the user provided. [ATOM-e34e44e70a]\n- Apply the refueled data to the line associated with the phone number the user provided. [ATOM-6c4298554e]\n- You should check that the line associated with the phone number the user provided is roaming enabled. [ATOM-7978562352]\n\n## Actor constraints\n- The get_customer_by_phone tool is owned by the assistant actor. [ATOM-a9647a82a2]\n\n## Exceptions\n- Returns: Customer object if found, None otherwise. [ATOM-f2051ce017]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0df966efdb",
+        "ATOM-8a7954d091",
+        "ATOM-8d6b8b5b16",
+        "ATOM-a9647a82a2",
+        "ATOM-f2051ce017",
+        "ATOM-e34e44e70a",
+        "ATOM-6c4298554e",
+        "ATOM-9a14917082",
+        "ATOM-569ee865eb",
+        "ATOM-7978562352",
+        "ATOM-b53327cc3b",
+        "ATOM-a9646e725f"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0df966efdb",
+        "ATOM-569ee865eb",
+        "ATOM-6c4298554e",
+        "ATOM-7978562352",
+        "ATOM-9a14917082",
+        "ATOM-e34e44e70a"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-f2051ce017"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-a9647a82a2",
+          "kind": "actor",
+          "tool": "get_customer_by_phone",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.get_data_usage",
+      "name": "Get Data Usage",
+      "description": "Use for tasks involving get data usage; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_data_usage"
+      ],
+      "primary_tool": "get_data_usage",
+      "actor": "assistant",
+      "instructions": "# Get Data Usage\n\nActor: `assistant`\n\nParameters: customer_id, line_id\n\nPurpose: Retrieves current billing cycle data usage for a line, including data\nrefueling amount, data limit, and cycle end date.\n\nArgs:\n    customer_id: ID of the customer who owns the line.\n    line_id: ID of the line to check usage for.\n\nReturns:\n    Dictionary with usage information.\n\nRaises:\n    ValueError: If customer, line, or plan not found.\n\n## Preconditions\n- Raises: ValueError: If customer, line, or plan not found. [ATOM-749104f227]\n- If the user's data usage for a line exceeds the plan's data limit, data connectivity will be lost. [ATOM-cf642716d5]\n- If the user's data usage for a line associated with the phone number the user provided exceeds the plan's data limit, data connectivity will be lost. [ATOM-9a14917082]\n- The get_data_usage tool requires the line_id argument. [ATOM-2b1e8cc071]\n- The get_data_usage tool requires the customer_id argument. [ATOM-f51d1dc2e4]\n\n## Actor constraints\n- The get_data_usage tool is owned by the assistant actor. [ATOM-c8fee2186a]\n\n## Communication\n- Returns: Dictionary with usage information. [ATOM-8ba20849aa]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-2b1e8cc071",
+        "ATOM-62e6ea1fa1",
+        "ATOM-749104f227",
+        "ATOM-8ba20849aa",
+        "ATOM-c8fee2186a",
+        "ATOM-cf2f9c9e2f",
+        "ATOM-db86dcf94d",
+        "ATOM-f51d1dc2e4",
+        "ATOM-cf642716d5",
+        "ATOM-9a14917082",
+        "ATOM-b4735cd999",
+        "ATOM-fdbce16df4"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2b1e8cc071",
+        "ATOM-749104f227",
+        "ATOM-9a14917082",
+        "ATOM-cf642716d5",
+        "ATOM-f51d1dc2e4"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-c8fee2186a",
+          "kind": "actor",
+          "tool": "get_data_usage",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.get_details_by_id",
+      "name": "Get Details By Id",
+      "description": "Use for tasks involving get details by id; the declared tool actor is assistant.",
+      "required_tools": [
+        "get_details_by_id"
+      ],
+      "primary_tool": "get_details_by_id",
+      "actor": "assistant",
+      "instructions": "# Get Details By Id\n\nActor: `assistant`\n\nParameters: id\n\nPurpose: Retrieves the details for a given ID.\nThe ID must be a valid ID for a Customer, Line, Device, Bill, or Plan.\n\nArgs:\n    id: The ID of the object to retrieve.\n\nReturns:\n    The object corresponding to the ID.\n\nRaises:\n    ValueError: If the ID is not found or if the ID format is invalid.\n\n## Preconditions\n- The ID must be a valid ID for a Customer, Line, Device, Bill, or Plan. [ATOM-49069fc946]\n- Raises: ValueError: If the ID is not found or if the ID format is invalid. [ATOM-79d822cfab]\n- The get_details_by_id tool requires the id argument. [ATOM-ae445c1ba1]\n\n## Actor constraints\n- The get_details_by_id tool is owned by the assistant actor. [ATOM-3438a07278]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-1e3d0db53a",
+        "ATOM-3438a07278",
+        "ATOM-49069fc946",
+        "ATOM-79d822cfab",
+        "ATOM-a1aa7b8759",
+        "ATOM-ae445c1ba1",
+        "ATOM-f076949ff4"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-49069fc946",
+        "ATOM-79d822cfab",
+        "ATOM-ae445c1ba1"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-3438a07278",
+          "kind": "actor",
+          "tool": "get_details_by_id",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.grant_app_permission",
+      "name": "Grant App Permission",
+      "description": "Use for tasks involving grant app permission; the declared tool actor is user.",
+      "required_tools": [
+        "grant_app_permission"
+      ],
+      "primary_tool": "grant_app_permission",
+      "actor": "user",
+      "instructions": "# Grant App Permission\n\nActor: `user`\n\nParameters: app_name, permission\n\nPurpose: Gives a specific permission to an app (like access to storage, camera, or location). Required for some app functions to work properly.\n\nArgs:\n    app_name: The name of the app to grant the permission to.\n    permission: The permission to grant, should be lowercase.\n\n## Preconditions\n- Required for some app functions to work properly. [ATOM-e689ba4b67]\n- If `check_app_permissions(app_name=\"messaging\")` shows \"storage\" and \"sms\" permissions are not listed as granted, guide the user to use `grant_app_permission(app_name=\"messaging\", permission=\"storage\")` and `grant_app_permission(app_name=\"messaging\", permission=\"sms\")` to grant the necessary permissions. [ATOM-1f19dfeb9d]\n- The grant_app_permission tool requires the permission argument. [ATOM-6dcba64aa8]\n- The grant_app_permission tool requires the app_name argument. [ATOM-89823da871]\n\n## Actor constraints\n- The grant_app_permission tool is owned by the user actor. [ATOM-d114ff113f]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-3f37e25bec",
+        "ATOM-6dcba64aa8",
+        "ATOM-7cbd4b4188",
+        "ATOM-89823da871",
+        "ATOM-d114ff113f",
+        "ATOM-d67b350065",
+        "ATOM-e689ba4b67",
+        "ATOM-1f19dfeb9d",
+        "ATOM-6decceba79",
+        "ATOM-b1244b801d"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-1f19dfeb9d",
+        "ATOM-6dcba64aa8",
+        "ATOM-89823da871",
+        "ATOM-e689ba4b67"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-d114ff113f",
+          "kind": "actor",
+          "tool": "grant_app_permission",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-3893dc4818",
+          "kind": "ordering",
+          "before_tool": "reboot_device",
+          "after_tool": "grant_app_permission",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.make_payment",
+      "name": "Make Payment",
+      "description": "Use for tasks involving make payment; the declared tool actor is user.",
+      "required_tools": [
+        "make_payment"
+      ],
+      "primary_tool": "make_payment",
+      "actor": "user",
+      "instructions": "# Make Payment\n\nActor: `user`\n\nParameters: none\n\nPurpose: Makes a payment for the bill that the agent has sent you.\n\n## Preconditions\n- If the user accepts the payment request, use the make_payment tool to make the payment.. [ATOM-b339cfadde]\n- You should always check that the bill is overdue before sending a payment request. [ATOM-9597ec3b44]\n- Always check that the bill status is updated to PAID before informing the user that the bill has been paid. [ATOM-037d1602d7]\n\n## Actor constraints\n- The make_payment tool is owned by the user actor. [ATOM-40f043dac6]\n\n## Communication\n- Inform the user that a payment request has been sent. [ATOM-068fd84271]\n\n## Soft local continuations\n- Consider `resume_line` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-40f043dac6",
+        "ATOM-9fe6b18ff3",
+        "ATOM-b339cfadde",
+        "ATOM-42eae58ddf",
+        "ATOM-147edcdc6d",
+        "ATOM-068fd84271",
+        "ATOM-9597ec3b44",
+        "ATOM-ec9f91837b",
+        "ATOM-037d1602d7",
+        "ATOM-31083e0e9c",
+        "ATOM-e94572f35f",
+        "ATOM-03244f19a0"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-037d1602d7",
+        "ATOM-9597ec3b44",
+        "ATOM-b339cfadde"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-40f043dac6",
+          "kind": "actor",
+          "tool": "make_payment",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-0c990abc52",
+          "kind": "ordering",
+          "before_tool": "make_payment",
+          "after_tool": "resume_line",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-6a674b25f1",
+          "kind": "ordering",
+          "before_tool": "send_payment_request",
+          "after_tool": "make_payment",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.reboot_device",
+      "name": "Reboot Device",
+      "description": "Use for tasks involving reboot device; the declared tool actor is user.",
+      "required_tools": [
+        "reboot_device"
+      ],
+      "primary_tool": "reboot_device",
+      "actor": "user",
+      "instructions": "# Reboot Device\n\nActor: `user`\n\nParameters: none\n\nPurpose: Restarts your phone completely. This can help resolve many temporary software glitches by refreshing all running services and connections.\n\n## Actor constraints\n- The reboot_device tool is owned by the user actor. [ATOM-c4d3efbb56]\n- After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply. [ATOM-4a17843804]\n- After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply. [ATOM-7a38240422]\n\n## Verification\n- After you resume the line, the user will have to reboot their device to get service. [ATOM-1703c850c9]\n\n## Soft local continuations\n- Consider `grant_app_permission` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-6b950f3b94",
+        "ATOM-b7a2f1c001",
+        "ATOM-c4d3efbb56",
+        "ATOM-2f150c2273",
+        "ATOM-4a17843804",
+        "ATOM-7a38240422",
+        "ATOM-1703c850c9"
+      ],
+      "precondition_atom_ids": [],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-1703c850c9"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-c4d3efbb56",
+          "kind": "actor",
+          "tool": "reboot_device",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-00322f1782",
+          "kind": "ordering",
+          "before_tool": "reset_apn_settings",
+          "after_tool": "reboot_device",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-3893dc4818",
+          "kind": "ordering",
+          "before_tool": "reboot_device",
+          "after_tool": "grant_app_permission",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-63f9641c4e",
+          "kind": "ordering",
+          "before_tool": "resume_line",
+          "after_tool": "reboot_device",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.refuel_data",
+      "name": "Refuel Data",
+      "description": "Use for tasks involving refuel data; the declared tool actor is assistant.",
+      "required_tools": [
+        "refuel_data"
+      ],
+      "primary_tool": "refuel_data",
+      "actor": "assistant",
+      "instructions": "# Refuel Data\n\nActor: `assistant`\n\nParameters: customer_id, line_id, gb_amount\n\nPurpose: Refuels data for a specific line, adding to the customer's bill.\nChecks: Line status must be Active, Customer owns the line.\nLogic: Adds data to the line and charges customer based on the plan's refueling rate.\n\nArgs:\n    customer_id: ID of the customer who owns the line.\n    line_id: ID of the line to refuel data for.\n    gb_amount: Amount of data to add in gigabytes.\n\nReturns:\n    Dictionary with success status, message, charge amount, and updated line if applicable.\n\nRaises:\n    ValueError: If customer, line, or plan not found, or if checks fail.\n\n## Preconditions\n- Checks: Line status must be Active, Customer owns the line. [ATOM-0cd7a7427b]\n- Returns: Dictionary with success status, message, charge amount, and updated line if applicable. [ATOM-c50966ecd5]\n- The refuel_data tool requires the line_id argument. [ATOM-2a8fee0695]\n- The refuel_data tool requires the customer_id argument. [ATOM-e162eae31c]\n- The refuel_data tool requires the gb_amount argument. [ATOM-ec651ee64f]\n\n## Actor constraints\n- The refuel_data tool is owned by the assistant actor. [ATOM-26449fecdb]\n\n## Exceptions\n- Raises: ValueError: If customer, line, or plan not found, or if checks fail. [ATOM-bce41427fb]\n\n## Soft local continuations\n- Consider `enable_roaming` after this action when relevant.\n- Consider `reseat_sim_card` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0cd7a7427b",
+        "ATOM-1e034c5e4c",
+        "ATOM-26449fecdb",
+        "ATOM-2a8fee0695",
+        "ATOM-444c6f2c7d",
+        "ATOM-4a35339427",
+        "ATOM-67074befea",
+        "ATOM-6c52288479",
+        "ATOM-bce41427fb",
+        "ATOM-c50966ecd5",
+        "ATOM-e162eae31c",
+        "ATOM-ec651ee64f"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0cd7a7427b",
+        "ATOM-2a8fee0695",
+        "ATOM-c50966ecd5",
+        "ATOM-e162eae31c",
+        "ATOM-ec651ee64f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-bce41427fb"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-26449fecdb",
+          "kind": "actor",
+          "tool": "refuel_data",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-7b19b85a68",
+          "kind": "ordering",
+          "before_tool": "toggle_data",
+          "after_tool": "refuel_data",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-335f331b64",
+          "kind": "ordering",
+          "before_tool": "refuel_data",
+          "after_tool": "enable_roaming",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-86ff82912e",
+          "kind": "ordering",
+          "before_tool": "refuel_data",
+          "after_tool": "reseat_sim_card",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-1c14118c55",
+          "kind": "ordering",
+          "before_tool": "toggle_data_saver_mode",
+          "after_tool": "refuel_data",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.reseat_sim_card",
+      "name": "Reseat Sim Card",
+      "description": "Use for tasks involving reseat sim card; the declared tool actor is user.",
+      "required_tools": [
+        "reseat_sim_card"
+      ],
+      "primary_tool": "reseat_sim_card",
+      "actor": "user",
+      "instructions": "# Reseat Sim Card\n\nActor: `user`\n\nParameters: none\n\nPurpose: Simulates removing and reinserting your SIM card. This can help resolve recognition issues.\n\n## Preconditions\n- If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted. [ATOM-61a1fc6364]\n- **check_sim_status** - Checks if your SIM card is working correctly and displays its current status. [ATOM-f0a677e0fa]\n- If it shows \"Active\", the SIM itself is likely okay. [ATOM-afb4cc9e61]\n\n## Actor constraints\n- The reseat_sim_card tool is owned by the user actor. [ATOM-a6134382e5]\n\n## Communication\n- The SIM card is the physical card that contains the user's information and allows the phone to connect to the cellular network. [ATOM-74bc483010]\n\n## Soft local continuations\n- Consider `enable_roaming` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-6a667bfca1",
+        "ATOM-6d456324fc",
+        "ATOM-a6134382e5",
+        "ATOM-61a1fc6364",
+        "ATOM-8a1731afaa",
+        "ATOM-44eacdd0ed",
+        "ATOM-a522259ce9",
+        "ATOM-2aab1b8ff0",
+        "ATOM-10e2858a5e",
+        "ATOM-74bc483010",
+        "ATOM-f0a677e0fa",
+        "ATOM-afb4cc9e61"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-61a1fc6364",
+        "ATOM-afb4cc9e61",
+        "ATOM-f0a677e0fa"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-a6134382e5",
+          "kind": "actor",
+          "tool": "reseat_sim_card",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-86ff82912e",
+          "kind": "ordering",
+          "before_tool": "refuel_data",
+          "after_tool": "reseat_sim_card",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-d6d1d7913a",
+          "kind": "ordering",
+          "before_tool": "reseat_sim_card",
+          "after_tool": "enable_roaming",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.reset_apn_settings",
+      "name": "Reset Apn Settings",
+      "description": "Use for tasks involving reset apn settings; the declared tool actor is user.",
+      "required_tools": [
+        "reset_apn_settings"
+      ],
+      "primary_tool": "reset_apn_settings",
+      "actor": "user",
+      "instructions": "# Reset Apn Settings\n\nActor: `user`\n\nParameters: none\n\nPurpose: Resets your APN settings to the default settings.\n\n## Preconditions\n- If `check_apn_settings()` shows \"Incorrect\", guide the user to use `reset_apn_settings()` to reset the APN settings. [ATOM-a7069da6a5]\n- If `check_apn_settings()` shows MMSC URL is not set, guide the user to use `reset_apn_settings()` to reset the APN settings. [ATOM-aefcb7a14b]\n\n## Actor constraints\n- The reset_apn_settings tool is owned by the user actor. [ATOM-5bafe658c5]\n- After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply. [ATOM-7a38240422]\n- After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply. [ATOM-4a17843804]\n\n## Soft local continuations\n- Consider `reboot_device` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-45fa63f179",
+        "ATOM-5bafe658c5",
+        "ATOM-02ba62d82a",
+        "ATOM-a7069da6a5",
+        "ATOM-aefcb7a14b",
+        "ATOM-b53327cc3b",
+        "ATOM-3cd213894a",
+        "ATOM-3ed9731b84",
+        "ATOM-7a38240422",
+        "ATOM-4a17843804",
+        "ATOM-352271b71f",
+        "ATOM-1280d8d1e0"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-a7069da6a5",
+        "ATOM-aefcb7a14b"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-5bafe658c5",
+          "kind": "actor",
+          "tool": "reset_apn_settings",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-00322f1782",
+          "kind": "ordering",
+          "before_tool": "reset_apn_settings",
+          "after_tool": "reboot_device",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-f8602bafb0",
+          "kind": "ordering",
+          "before_tool": "toggle_wifi_calling",
+          "after_tool": "reset_apn_settings",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.resume_line",
+      "name": "Resume Line",
+      "description": "Use for tasks involving resume line; the declared tool actor is assistant.",
+      "required_tools": [
+        "resume_line"
+      ],
+      "primary_tool": "resume_line",
+      "actor": "assistant",
+      "instructions": "# Resume Line\n\nActor: `assistant`\n\nParameters: customer_id, line_id\n\nPurpose: Resumes a suspended line.\nChecks: Line status must be Suspended or Pending Activation.\nLogic: Sets line status to Active, clears suspension_start_date.\n\nArgs:\n    customer_id: ID of the customer who owns the line.\n    line_id: ID of the line to resume.\n\nReturns:\n    Dictionary with success status, message, and updated line if applicable.\n\nRaises:\n    ValueError: If customer or line not found, or if line is not suspended or pending activation.\n\n## Preconditions\n- Returns: Dictionary with success status, message, and updated line if applicable. [ATOM-786469ef40]\n- Checks: Line status must be Suspended or Pending Activation. [ATOM-bf12b7526a]\n- Raises: ValueError: If customer or line not found, or if line is not suspended or pending activation. [ATOM-da2d32fb73]\n- suspension start date (if applicable) There are four line status types: **Active**, **Suspended**, **Pending Activation**, and **Closed**. [ATOM-2e5305b9a8]\n- The resume_line tool requires the line_id argument. [ATOM-2ab83f556b]\n- The resume_line tool requires the customer_id argument. [ATOM-e1f39face8]\n\n## Actor constraints\n- The resume_line tool is owned by the assistant actor. [ATOM-139b587f86]\n\n## Verification\n- After you resume the line, the user will have to reboot their device to get service. [ATOM-1703c850c9]\n\n## Soft local continuations\n- Consider `reboot_device` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-139b587f86",
+        "ATOM-2ab83f556b",
+        "ATOM-4017a0008e",
+        "ATOM-7387ffc2f1",
+        "ATOM-772a69ca2f",
+        "ATOM-786469ef40",
+        "ATOM-bf0e7f0daf",
+        "ATOM-bf12b7526a",
+        "ATOM-da2d32fb73",
+        "ATOM-e1f39face8",
+        "ATOM-1703c850c9",
+        "ATOM-2e5305b9a8"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2ab83f556b",
+        "ATOM-2e5305b9a8",
+        "ATOM-786469ef40",
+        "ATOM-bf12b7526a",
+        "ATOM-da2d32fb73",
+        "ATOM-e1f39face8"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [
+        "ATOM-1703c850c9"
+      ],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-139b587f86",
+          "kind": "actor",
+          "tool": "resume_line",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-0c990abc52",
+          "kind": "ordering",
+          "before_tool": "make_payment",
+          "after_tool": "resume_line",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-63f9641c4e",
+          "kind": "ordering",
+          "before_tool": "resume_line",
+          "after_tool": "reboot_device",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.run_speed_test",
+      "name": "Run Speed Test",
+      "description": "Use for tasks involving run speed test; the declared tool actor is user.",
+      "required_tools": [
+        "run_speed_test"
+      ],
+      "primary_tool": "run_speed_test",
+      "actor": "user",
+      "instructions": "# Run Speed Test\n\nActor: `user`\n\nParameters: none\n\nPurpose: Measures your current internet connection speed (download speed). Provides information about connection quality and what activities it can support.\n\n## Preconditions\n- If data is available, a speed test will also return the data speed. [ATOM-76e1ab1f58]\n- Provides information about connection quality and what activities it can support. [ATOM-8802725414]\n\n## Actor constraints\n- The run_speed_test tool is owned by the user actor. [ATOM-2c930ce389]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-2c930ce389",
+        "ATOM-46c264862e",
+        "ATOM-8802725414",
+        "ATOM-3ffa262266",
+        "ATOM-c2ce22c271",
+        "ATOM-0943907abb",
+        "ATOM-76e1ab1f58"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-76e1ab1f58",
+        "ATOM-8802725414"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-2c930ce389",
+          "kind": "actor",
+          "tool": "run_speed_test",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.send_payment_request",
+      "name": "Send Payment Request",
+      "description": "Use for tasks involving send payment request; the declared tool actor is assistant.",
+      "required_tools": [
+        "send_payment_request"
+      ],
+      "primary_tool": "send_payment_request",
+      "actor": "assistant",
+      "instructions": "# Send Payment Request\n\nActor: `assistant`\n\nParameters: customer_id, bill_id\n\nPurpose: Sends a payment request to the customer for a specific bill.\nChecks:\n    - Customer exists\n    - Bill exists and belongs to the customer\n    - No other bills are already awaiting payment for this customer\nLogic: Sets bill status to AWAITING_PAYMENT and notifies customer.\nWarning: This method does not check if the bill is already PAID.\nAlways check the bill status before calling this method.\n\nArgs:\n    customer_id: ID of the customer who owns the bill.\n    bill_id: ID of the bill to send payment request for.\n\nReturns:\n    Message indicating the payment request has been sent.\n\nRaises:\n    ValueError: If customer not found, bill not found, or if another bill is already awaiting payment.\n\n## Preconditions\n- Raises: ValueError: If customer not found, bill not found, or if another bill is already awaiting payment. [ATOM-0acb1a568b]\n- Warning: This method does not check if the bill is already PAID. [ATOM-816ae647b9]\n- Always check the bill status before calling this method. [ATOM-e21130d536]\n- The send_payment_request tool requires the customer_id argument. [ATOM-adffb2ee56]\n- The send_payment_request tool requires the bill_id argument. [ATOM-e0c40e18c1]\n\n## Actor constraints\n- The send_payment_request tool is owned by the assistant actor. [ATOM-ecb33c2859]\n\n## Soft local continuations\n- Consider `make_payment` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0acb1a568b",
+        "ATOM-135f65099d",
+        "ATOM-39fd5ba171",
+        "ATOM-46e3a2e7b7",
+        "ATOM-5a539069b5",
+        "ATOM-816ae647b9",
+        "ATOM-9614181f9a",
+        "ATOM-9d78e25173",
+        "ATOM-adffb2ee56",
+        "ATOM-e0c40e18c1",
+        "ATOM-e21130d536",
+        "ATOM-ecb33c2859"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0acb1a568b",
+        "ATOM-816ae647b9",
+        "ATOM-adffb2ee56",
+        "ATOM-e0c40e18c1",
+        "ATOM-e21130d536"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-ecb33c2859",
+          "kind": "actor",
+          "tool": "send_payment_request",
+          "actor": "assistant"
+        },
+        {
+          "requirement_id": "MOTIF-6a674b25f1",
+          "kind": "ordering",
+          "before_tool": "send_payment_request",
+          "after_tool": "make_payment",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.set_apn_settings",
+      "name": "Set Apn Settings",
+      "description": "Use for tasks involving set apn settings; the declared tool actor is user.",
+      "required_tools": [
+        "set_apn_settings"
+      ],
+      "primary_tool": "set_apn_settings",
+      "actor": "user",
+      "instructions": "# Set Apn Settings\n\nActor: `user`\n\nParameters: apn_settings\n\nPurpose: Sets the APN settings for the phone.\n\n## Preconditions\n- If `check_apn_settings()` shows \"Incorrect\", guide the user to use `reset_apn_settings()` to reset the APN settings. [ATOM-a7069da6a5]\n- If `check_apn_settings()` shows MMSC URL is not set, guide the user to use `reset_apn_settings()` to reset the APN settings. [ATOM-aefcb7a14b]\n- The set_apn_settings tool requires the apn_settings argument. [ATOM-2ee99a1b85]\n\n## Actor constraints\n- The set_apn_settings tool is owned by the user actor. [ATOM-c0b50a0dd5]\n- After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply. [ATOM-7a38240422]\n- After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply. [ATOM-4a17843804]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-2ee99a1b85",
+        "ATOM-c0b50a0dd5",
+        "ATOM-eed2373646",
+        "ATOM-02ba62d82a",
+        "ATOM-a7069da6a5",
+        "ATOM-aefcb7a14b",
+        "ATOM-b53327cc3b",
+        "ATOM-3cd213894a",
+        "ATOM-7a38240422",
+        "ATOM-352271b71f",
+        "ATOM-4a17843804",
+        "ATOM-3ed9731b84"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2ee99a1b85",
+        "ATOM-a7069da6a5",
+        "ATOM-aefcb7a14b"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-c0b50a0dd5",
+          "kind": "actor",
+          "tool": "set_apn_settings",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.set_network_mode_preference",
+      "name": "Set Network Mode Preference",
+      "description": "Use for tasks involving set network mode preference; the declared tool actor is user.",
+      "required_tools": [
+        "set_network_mode_preference"
+      ],
+      "primary_tool": "set_network_mode_preference",
+      "actor": "user",
+      "instructions": "# Set Network Mode Preference\n\nActor: `user`\n\nParameters: mode\n\nPurpose: Changes the type of cellular network your phone prefers to connect to (e.g., 5G, LTE/4G, 3G). Higher-speed networks (LTE/5G) provide faster data but may use more battery.\n\n## Preconditions\n- If `check_network_mode_preference()` shows \"2G\" or \"3G\", guide the user to use `set_network_mode_preference(mode: str)` with the mode `\"4g_5g_preferred\"` to allow the phone to connect to 5G. [ATOM-358e65b33c]\n- If `check_network_status()` shows \"2G\", guide the user to use `set_network_mode_preference(mode: str)` to switch to a network mode that includes 3G, 4G, or 5G (e.g., `\"4g_5g_preferred\"` or `\"4g_only\"`). [ATOM-f631e09d12]\n- The set_network_mode_preference tool requires the mode argument. [ATOM-3ce5c91244]\n- Higher-speed networks (LTE/5G) provide faster data but may use more battery. [ATOM-9264fd8d80]\n\n## Actor constraints\n- The set_network_mode_preference tool is owned by the user actor. [ATOM-016f8dcac2]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-016f8dcac2",
+        "ATOM-3ce5c91244",
+        "ATOM-8b72a20cd1",
+        "ATOM-9264fd8d80",
+        "ATOM-358e65b33c",
+        "ATOM-ecbb734325",
+        "ATOM-f631e09d12",
+        "ATOM-7d248f1051",
+        "ATOM-b801359935",
+        "ATOM-0fa2a0515f",
+        "ATOM-5a6ee39618",
+        "ATOM-425ef6f13c"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-358e65b33c",
+        "ATOM-3ce5c91244",
+        "ATOM-9264fd8d80",
+        "ATOM-f631e09d12"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-016f8dcac2",
+          "kind": "actor",
+          "tool": "set_network_mode_preference",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-df058483d6",
+          "kind": "ordering",
+          "before_tool": "toggle_airplane_mode",
+          "after_tool": "set_network_mode_preference",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.suspend_line",
+      "name": "Suspend Line",
+      "description": "Use for tasks involving suspend line; the declared tool actor is assistant.",
+      "required_tools": [
+        "suspend_line"
+      ],
+      "primary_tool": "suspend_line",
+      "actor": "assistant",
+      "instructions": "# Suspend Line\n\nActor: `assistant`\n\nParameters: customer_id, line_id, reason\n\nPurpose: Suspends a specific line (max 6 months).\nChecks: Line status must be Active.\nLogic: Sets line status to Suspended, records suspension_start_date.\n\nArgs:\n    customer_id: ID of the customer who owns the line.\n    line_id: ID of the line to suspend.\n    reason: Reason for suspension.\n\nReturns:\n    Dictionary with success status, message, and updated line if applicable.\n\nRaises:\n    ValueError: If customer or line not found, or if line is not active.\n\n## Preconditions\n- Raises: ValueError: If customer or line not found, or if line is not active. [ATOM-2017d4f5b2]\n- Checks: Line status must be Active. [ATOM-e6919d2a06]\n- Returns: Dictionary with success status, message, and updated line if applicable. [ATOM-e9efd02554]\n- The suspend_line tool requires the reason argument. [ATOM-19da36176c]\n- The suspend_line tool requires the customer_id argument. [ATOM-dd8a996dfa]\n- The suspend_line tool requires the line_id argument. [ATOM-f519ff72e8]\n\n## Actor constraints\n- The suspend_line tool is owned by the assistant actor. [ATOM-d7d213f28f]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-19da36176c",
+        "ATOM-2017d4f5b2",
+        "ATOM-46c9dbd14a",
+        "ATOM-4e88960ed4",
+        "ATOM-9c8561b009",
+        "ATOM-c63b108549",
+        "ATOM-d7d213f28f",
+        "ATOM-dd8a996dfa",
+        "ATOM-e6919d2a06",
+        "ATOM-e9efd02554",
+        "ATOM-f519ff72e8",
+        "ATOM-fddd24b9cf"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-19da36176c",
+        "ATOM-2017d4f5b2",
+        "ATOM-dd8a996dfa",
+        "ATOM-e6919d2a06",
+        "ATOM-e9efd02554",
+        "ATOM-f519ff72e8"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-d7d213f28f",
+          "kind": "actor",
+          "tool": "suspend_line",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.toggle_airplane_mode",
+      "name": "Toggle Airplane Mode",
+      "description": "Use for tasks involving toggle airplane mode; the declared tool actor is user.",
+      "required_tools": [
+        "toggle_airplane_mode"
+      ],
+      "primary_tool": "toggle_airplane_mode",
+      "actor": "user",
+      "instructions": "# Toggle Airplane Mode\n\nActor: `user`\n\nParameters: none\n\nPurpose: Toggles Airplane Mode ON or OFF. When ON, it disconnects all wireless communications including cellular, Wi-Fi, and Bluetooth.\nReturns the new state of airplane_mode.\n\n## Preconditions\n- If it is ON, guide the user to use `toggle_airplane_mode()` to turn it OFF. [ATOM-6390191c26]\n- If it is enabled, it will prevent any cellular connection. [ATOM-0740aabb26]\n\n## Actor constraints\n- The toggle_airplane_mode tool is owned by the user actor. [ATOM-722221a0b5]\n\n## Communication\n- When ON, it disconnects all wireless communications including cellular, Wi-Fi, and Bluetooth. [ATOM-2ee2eb0ad6]\n\n## Soft local continuations\n- Consider `set_network_mode_preference` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-21f80b2d04",
+        "ATOM-2ee2eb0ad6",
+        "ATOM-722221a0b5",
+        "ATOM-b5d040ec0e",
+        "ATOM-3195b943e6",
+        "ATOM-6390191c26",
+        "ATOM-40df000672",
+        "ATOM-9cc09c1b89",
+        "ATOM-b421bf605e",
+        "ATOM-3105758d71",
+        "ATOM-0740aabb26",
+        "ATOM-b1219bb456"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-0740aabb26",
+        "ATOM-6390191c26"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-722221a0b5",
+          "kind": "actor",
+          "tool": "toggle_airplane_mode",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-df058483d6",
+          "kind": "ordering",
+          "before_tool": "toggle_airplane_mode",
+          "after_tool": "set_network_mode_preference",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.toggle_data",
+      "name": "Toggle Data",
+      "description": "Use for tasks involving toggle data; the declared tool actor is user.",
+      "required_tools": [
+        "toggle_data"
+      ],
+      "primary_tool": "toggle_data",
+      "actor": "user",
+      "instructions": "# Toggle Data\n\nActor: `user`\n\nParameters: none\n\nPurpose: Toggles your phone's mobile data connection ON or OFF. Controls whether your phone can use cellular data for internet access when Wi-Fi is unavailable.\nReturns the new data connection status.\n\n## Preconditions\n- If `check_data_restriction_status()` shows \"Data Saver mode is ON\", guide the user to use `toggle_data_saver_mode()` to turn it OFF. [ATOM-44c0327391]\n- If `check_network_status()` shows mobile data is disabled, guide the user to use `toggle_data()` to turn mobile data ON. [ATOM-45659acefd]\n\n## Actor constraints\n- The toggle_data tool is owned by the user actor. [ATOM-ba11ae1fb7]\n\n## Communication\n- This section explains for agents how a user's phone uses mobile data for internet access when Wi-Fi is unavailable, and details troubleshooting for common connectivity and speed issues. [ATOM-6a5a17b939]\n- Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" and \"Understanding and Troubleshooting Your Phone's Mobile Data\" sections for more information. [ATOM-228a05f62a]\n\n## Soft local continuations\n- Consider `refuel_data` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0d4b3a8939",
+        "ATOM-11e8c5efe7",
+        "ATOM-ba11ae1fb7",
+        "ATOM-c42960f5fb",
+        "ATOM-44c0327391",
+        "ATOM-45659acefd",
+        "ATOM-7835ad50ba",
+        "ATOM-a4b811a84f",
+        "ATOM-b5aefc438a",
+        "ATOM-6a5a17b939",
+        "ATOM-f4c108941f",
+        "ATOM-228a05f62a"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-44c0327391",
+        "ATOM-45659acefd"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-ba11ae1fb7",
+          "kind": "actor",
+          "tool": "toggle_data",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-7b19b85a68",
+          "kind": "ordering",
+          "before_tool": "toggle_data",
+          "after_tool": "refuel_data",
+          "soft": true
+        },
+        {
+          "requirement_id": "MOTIF-4d5d72eca9",
+          "kind": "ordering",
+          "before_tool": "disconnect_vpn",
+          "after_tool": "toggle_data",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.toggle_data_saver_mode",
+      "name": "Toggle Data Saver Mode",
+      "description": "Use for tasks involving toggle data saver mode; the declared tool actor is user.",
+      "required_tools": [
+        "toggle_data_saver_mode"
+      ],
+      "primary_tool": "toggle_data_saver_mode",
+      "actor": "user",
+      "instructions": "# Toggle Data Saver Mode\n\nActor: `user`\n\nParameters: none\n\nPurpose: Toggles Data Saver mode ON or OFF. When ON, it reduces data usage, which may affect data speed.\nReturns the new data saver mode status.\n\n## Preconditions\n- If `check_data_restriction_status()` shows \"Data Saver mode is ON\", guide the user to use `toggle_data_saver_mode()` to turn it OFF. [ATOM-44c0327391]\n- Shows if Data Saver mode is on and whether background data usage is restricted globally.. [ATOM-ece51e2987]\n\n## Actor constraints\n- The toggle_data_saver_mode tool is owned by the user actor. [ATOM-87542a2c06]\n\n## Soft local continuations\n- Consider `refuel_data` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-524a5f1311",
+        "ATOM-804753dc3b",
+        "ATOM-87542a2c06",
+        "ATOM-fef512244d",
+        "ATOM-44c0327391",
+        "ATOM-7835ad50ba",
+        "ATOM-fa33b9b8fa",
+        "ATOM-b5b1543ef1",
+        "ATOM-ece51e2987",
+        "ATOM-de4bce849e"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-44c0327391",
+        "ATOM-ece51e2987"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-87542a2c06",
+          "kind": "actor",
+          "tool": "toggle_data_saver_mode",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-1c14118c55",
+          "kind": "ordering",
+          "before_tool": "toggle_data_saver_mode",
+          "after_tool": "refuel_data",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.toggle_roaming",
+      "name": "Toggle Roaming",
+      "description": "Use for tasks involving toggle roaming; the declared tool actor is user.",
+      "required_tools": [
+        "toggle_roaming"
+      ],
+      "primary_tool": "toggle_roaming",
+      "actor": "user",
+      "instructions": "# Toggle Roaming\n\nActor: `user`\n\nParameters: none\n\nPurpose: Toggles Data Roaming ON or OFF. When ON, your phone can use data networks in areas outside your carrier's coverage.\nReturns the new data roaming status.\n\n## Preconditions\n- If the user is outside their carrier's primary coverage area (roaming) and mobile data isn't working, guide them to use `toggle_roaming()` to ensure Data Roaming is ON. [ATOM-2cdcc7220e]\n- If a line is roaming enabled, the user can use their phone's data connection in areas outside their home network. [ATOM-569ee865eb]\n- If it is not, the user will not be able to use their phone's data connection in areas outside their home network. [ATOM-b1fca9024d]\n- If a user is traveling outside their home network, you should check if the line is roaming enabled. [ATOM-72850c8fd1]\n\n## Actor constraints\n- The toggle_roaming tool is owned by the user actor. [ATOM-e65cfd4c76]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-2a5dfcf642",
+        "ATOM-e65cfd4c76",
+        "ATOM-f4c9491b54",
+        "ATOM-fdf48fc2e3",
+        "ATOM-01d4f796e7",
+        "ATOM-2cdcc7220e",
+        "ATOM-8a16a26257",
+        "ATOM-569ee865eb",
+        "ATOM-56dd53d3be",
+        "ATOM-b1fca9024d",
+        "ATOM-0afbffe039",
+        "ATOM-72850c8fd1"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-2cdcc7220e",
+        "ATOM-569ee865eb",
+        "ATOM-72850c8fd1",
+        "ATOM-b1fca9024d"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-e65cfd4c76",
+          "kind": "actor",
+          "tool": "toggle_roaming",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-6c40d66554",
+          "kind": "ordering",
+          "before_tool": "enable_roaming",
+          "after_tool": "toggle_roaming",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.toggle_wifi",
+      "name": "Toggle Wifi",
+      "description": "Use for tasks involving toggle wifi; the declared tool actor is user.",
+      "required_tools": [
+        "toggle_wifi"
+      ],
+      "primary_tool": "toggle_wifi",
+      "actor": "user",
+      "instructions": "# Toggle Wifi\n\nActor: `user`\n\nParameters: none\n\nPurpose: Toggles your phone's Wi-Fi radio ON or OFF. Controls whether your phone can discover and connect to wireless networks for internet access.\nReturns the new Wi-Fi status.\n\n## Preconditions\n- If `check_wifi_calling_status()` shows \"Wi-Fi Calling is ON\", guide the user to use `toggle_wifi_calling()` to turn it OFF. [ATOM-87de59878f]\n\n## Actor constraints\n- The toggle_wifi tool is owned by the user actor. [ATOM-bcae4e5780]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-52d5a17097",
+        "ATOM-697215568e",
+        "ATOM-bcae4e5780",
+        "ATOM-ebce8d67b7",
+        "ATOM-87de59878f",
+        "ATOM-a2c2779167",
+        "ATOM-fb7b599026"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-87de59878f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-bcae4e5780",
+          "kind": "actor",
+          "tool": "toggle_wifi",
+          "actor": "user"
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.toggle_wifi_calling",
+      "name": "Toggle Wifi Calling",
+      "description": "Use for tasks involving toggle wifi calling; the declared tool actor is user.",
+      "required_tools": [
+        "toggle_wifi_calling"
+      ],
+      "primary_tool": "toggle_wifi_calling",
+      "actor": "user",
+      "instructions": "# Toggle Wifi Calling\n\nActor: `user`\n\nParameters: none\n\nPurpose: Toggles Wi-Fi Calling ON or OFF. This feature allows you to make and receive calls over Wi-Fi instead of the cellular network, which can help in areas with weak cellular signal.\nReturns the new Wi-Fi Calling status.\n\n## Preconditions\n- If `check_wifi_calling_status()` shows \"Wi-Fi Calling is ON\", guide the user to use `toggle_wifi_calling()` to turn it OFF. [ATOM-87de59878f]\n\n## Actor constraints\n- The toggle_wifi_calling tool is owned by the user actor. [ATOM-3d1281ccc2]\n\n## Soft local continuations\n- Consider `reset_apn_settings` after this action when relevant.\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-0834a4c735",
+        "ATOM-0ea7f73b8a",
+        "ATOM-364bcf4373",
+        "ATOM-3d1281ccc2",
+        "ATOM-87de59878f",
+        "ATOM-fb7b599026"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-87de59878f"
+      ],
+      "prohibition_atom_ids": [],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-3d1281ccc2",
+          "kind": "actor",
+          "tool": "toggle_wifi_calling",
+          "actor": "user"
+        },
+        {
+          "requirement_id": "MOTIF-f8602bafb0",
+          "kind": "ordering",
+          "before_tool": "toggle_wifi_calling",
+          "after_tool": "reset_apn_settings",
+          "soft": true
+        }
+      ],
+      "method": "a2sc"
+    },
+    {
+      "module_id": "telecom.transfer_to_human_agents",
+      "name": "Transfer To Human Agents",
+      "description": "Use for tasks involving transfer to human agents; the declared tool actor is assistant.",
+      "required_tools": [
+        "transfer_to_human_agents"
+      ],
+      "primary_tool": "transfer_to_human_agents",
+      "actor": "assistant",
+      "instructions": "# Transfer To Human Agents\n\nActor: `assistant`\n\nParameters: summary\n\nPurpose: Transfer the user to a human agent, with a summary of the user's issue.\nOnly transfer if\n -  the user explicitly asks for a human agent\n -  given the policy and the available tools, you cannot solve the user's issue.\n\nArgs:\n    summary: A summary of the user's issue.\n\nReturns:\n    A message indicating the user has been transferred to a human agent.\n\n## Preconditions\n- The transfer_to_human_agents tool requires the summary argument. [ATOM-e1d653f91f]\n\n## Prohibitions\n- given the policy and the available tools, you cannot solve the user's issue. [ATOM-a709264679]\n\n## Actor constraints\n- The transfer_to_human_agents tool is owned by the assistant actor. [ATOM-9eed494a42]\n\n## Exceptions\n- Returns: A message indicating the user has been transferred to a human agent. [ATOM-12de65d5c0]\n- the user explicitly asks for a human agent. [ATOM-9df9bcd3e3]\n- Transfer the user to a human agent, with a summary of the user's issue. [ATOM-d2c4ba9845]\n- To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. [ATOM-a59fbf657e]\n- You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. [ATOM-00a7e81d24]\n\nPolicy atoms override training-derived ordering hints. Use only tools exposed by the environment.",
+      "source_atom_ids": [
+        "ATOM-12de65d5c0",
+        "ATOM-66891ef2bb",
+        "ATOM-9df9bcd3e3",
+        "ATOM-9eed494a42",
+        "ATOM-a709264679",
+        "ATOM-d2c4ba9845",
+        "ATOM-e1d653f91f",
+        "ATOM-a59fbf657e",
+        "ATOM-00a7e81d24"
+      ],
+      "precondition_atom_ids": [
+        "ATOM-e1d653f91f"
+      ],
+      "prohibition_atom_ids": [
+        "ATOM-a709264679"
+      ],
+      "verification_atom_ids": [],
+      "exception_atom_ids": [
+        "ATOM-00a7e81d24",
+        "ATOM-12de65d5c0",
+        "ATOM-9df9bcd3e3",
+        "ATOM-a59fbf657e",
+        "ATOM-d2c4ba9845"
+      ],
+      "trace_requirements": [
+        {
+          "requirement_id": "ATOM-9eed494a42",
+          "kind": "actor",
+          "tool": "transfer_to_human_agents",
+          "actor": "assistant"
+        }
+      ],
+      "method": "a2sc"
+    }
+  ]
+}

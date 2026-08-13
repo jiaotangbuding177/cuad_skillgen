@@ -1,0 +1,656 @@
+{
+  "runtime": "package_v1",
+  "domain": "retail",
+  "query": "customer wants to cancel a pending order and asks about payment refund",
+  "config": {
+    "mode": "package_v1",
+    "skill_top_k": 4,
+    "atom_top_k": 6,
+    "rule_top_k": 3,
+    "workflow_top_k": 3,
+    "pattern_top_k": 3,
+    "max_context_chars": 12000,
+    "max_item_chars": 1800,
+    "history_messages": 6,
+    "graph_traversal": false
+  },
+  "methods": [
+    {
+      "method": "raw_policy_rag",
+      "profile": [
+        "atom",
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 14,
+        "atom": 28,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "atom": 6
+      },
+      "context_chars": 7945,
+      "items": [
+        {
+          "item_id": "SK-0012",
+          "lane": "skill",
+          "title": "Modify items",
+          "source": "SKILL.md",
+          "score": 7.191455,
+          "chars": 801
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "Modify items",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 8.298099,
+          "chars": 845
+        },
+        {
+          "item_id": "SK-0009",
+          "lane": "skill",
+          "title": "Cancel pending order",
+          "source": "SKILL.md",
+          "score": 6.163691,
+          "chars": 540
+        },
+        {
+          "item_id": "KA-00007",
+          "lane": "atom",
+          "title": "Cancel pending order",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 7.471026,
+          "chars": 584
+        },
+        {
+          "item_id": "SK-0011",
+          "lane": "skill",
+          "title": "Modify payment",
+          "source": "SKILL.md",
+          "score": 5.788227,
+          "chars": 472
+        },
+        {
+          "item_id": "KA-00009",
+          "lane": "atom",
+          "title": "Modify payment",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 7.310904,
+          "chars": 516
+        },
+        {
+          "item_id": "SK-0013",
+          "lane": "skill",
+          "title": "Return delivered order",
+          "source": "SKILL.md",
+          "score": 5.374912,
+          "chars": 557
+        },
+        {
+          "item_id": "KA-00014",
+          "lane": "atom",
+          "title": "cancel_pending_order",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 7.117997,
+          "chars": 943
+        },
+        {
+          "item_id": "KA-00001",
+          "lane": "atom",
+          "title": "Retail agent policy",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 5.975284,
+          "chars": 1777
+        },
+        {
+          "item_id": "KA-00025",
+          "lane": "atom",
+          "title": "modify_pending_order_payment",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 5.775209,
+          "chars": 910
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "native_prompt_skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 14,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4
+      },
+      "context_chars": 2672,
+      "items": [
+        {
+          "item_id": "SK-0011",
+          "lane": "skill",
+          "title": "Modify items",
+          "source": "SKILL.md",
+          "score": 7.432465,
+          "chars": 801
+        },
+        {
+          "item_id": "SK-0010",
+          "lane": "skill",
+          "title": "Modify payment",
+          "source": "SKILL.md",
+          "score": 5.950809,
+          "chars": 472
+        },
+        {
+          "item_id": "SK-0008",
+          "lane": "skill",
+          "title": "Cancel pending order",
+          "source": "SKILL.md",
+          "score": 5.622728,
+          "chars": 540
+        },
+        {
+          "item_id": "SK-0013",
+          "lane": "skill",
+          "title": "Exchange delivered order",
+          "source": "SKILL.md",
+          "score": 5.425921,
+          "chars": 859
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "schema_prompt_skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 16,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4
+      },
+      "context_chars": 2672,
+      "items": [
+        {
+          "item_id": "SK-0013",
+          "lane": "skill",
+          "title": "Modify items",
+          "source": "SKILL.md",
+          "score": 8.137266,
+          "chars": 801
+        },
+        {
+          "item_id": "SK-0012",
+          "lane": "skill",
+          "title": "Modify payment",
+          "source": "SKILL.md",
+          "score": 6.577677,
+          "chars": 472
+        },
+        {
+          "item_id": "SK-0010",
+          "lane": "skill",
+          "title": "Cancel pending order",
+          "source": "SKILL.md",
+          "score": 6.452905,
+          "chars": 540
+        },
+        {
+          "item_id": "SK-0015",
+          "lane": "skill",
+          "title": "Exchange delivered order",
+          "source": "SKILL.md",
+          "score": 5.950419,
+          "chars": 859
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "summary2skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 3,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 3
+      },
+      "context_chars": 3971,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Policy summary",
+          "source": "SKILL.md",
+          "score": 13.999343,
+          "chars": 1854
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Retail τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.228737,
+          "chars": 250
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Training workflow summaries",
+          "source": "SKILL.md",
+          "score": 0.122213,
+          "chars": 1867
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "document_tool_maker",
+      "profile": [
+        "skill",
+        "tool_atom"
+      ],
+      "lane_counts": {
+        "skill": 15,
+        "atom": 16,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "atom": 6
+      },
+      "context_chars": 8442,
+      "items": [
+        {
+          "item_id": "SK-0013",
+          "lane": "skill",
+          "title": "Modify items",
+          "source": "SKILL.md",
+          "score": 7.855729,
+          "chars": 801
+        },
+        {
+          "item_id": "KA-00014",
+          "lane": "atom",
+          "title": "cancel_pending_order",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 8.837041,
+          "chars": 943
+        },
+        {
+          "item_id": "SK-0012",
+          "lane": "skill",
+          "title": "Modify payment",
+          "source": "SKILL.md",
+          "score": 6.374594,
+          "chars": 472
+        },
+        {
+          "item_id": "KA-00025",
+          "lane": "atom",
+          "title": "modify_pending_order_payment",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 7.463526,
+          "chars": 910
+        },
+        {
+          "item_id": "SK-0010",
+          "lane": "skill",
+          "title": "Cancel pending order",
+          "source": "SKILL.md",
+          "score": 6.075733,
+          "chars": 540
+        },
+        {
+          "item_id": "KA-00024",
+          "lane": "atom",
+          "title": "modify_pending_order_items",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 5.892809,
+          "chars": 1327
+        },
+        {
+          "item_id": "SK-0015",
+          "lane": "skill",
+          "title": "Exchange delivered order",
+          "source": "SKILL.md",
+          "score": 5.755685,
+          "chars": 859
+        },
+        {
+          "item_id": "KA-00027",
+          "lane": "atom",
+          "title": "return_delivered_order_items",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 5.295248,
+          "chars": 1125
+        },
+        {
+          "item_id": "KA-00016",
+          "lane": "atom",
+          "title": "find_user_id_by_name_zip",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 4.407584,
+          "chars": 658
+        },
+        {
+          "item_id": "KA-00023",
+          "lane": "atom",
+          "title": "modify_pending_order_address",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 4.305069,
+          "chars": 807
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "evoskill_compiler",
+      "profile": [
+        "atom",
+        "rule",
+        "skill",
+        "workflow"
+      ],
+      "lane_counts": {
+        "skill": 4,
+        "atom": 28,
+        "rule": 12,
+        "workflow": 52,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "rule": 3,
+        "atom": 6
+      },
+      "context_chars": 10353,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Knowledge atoms",
+          "source": "SKILL.md",
+          "score": 13.98139,
+          "chars": 1855
+        },
+        {
+          "item_id": "POL-0010",
+          "lane": "rule",
+          "title": "Modify items",
+          "source": "KA-00010",
+          "score": 6.351343,
+          "chars": 801
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "Modify items",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 8.298099,
+          "chars": 845
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Governance rules",
+          "source": "SKILL.md",
+          "score": 5.097827,
+          "chars": 630
+        },
+        {
+          "item_id": "POL-0007",
+          "lane": "rule",
+          "title": "Cancel pending order",
+          "source": "KA-00007",
+          "score": 5.165757,
+          "chars": 540
+        },
+        {
+          "item_id": "KA-00007",
+          "lane": "atom",
+          "title": "Cancel pending order",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 7.471026,
+          "chars": 584
+        },
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Runtime strategy",
+          "source": "SKILL.md",
+          "score": 0.778833,
+          "chars": 226
+        },
+        {
+          "item_id": "POL-0009",
+          "lane": "rule",
+          "title": "Modify payment",
+          "source": "KA-00009",
+          "score": 4.979185,
+          "chars": 472
+        },
+        {
+          "item_id": "KA-00009",
+          "lane": "atom",
+          "title": "Modify payment",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 7.310904,
+          "chars": 516
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Retail τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.617704,
+          "chars": 254
+        },
+        {
+          "item_id": "KA-00014",
+          "lane": "atom",
+          "title": "cancel_pending_order",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 7.117997,
+          "chars": 943
+        },
+        {
+          "item_id": "KA-00001",
+          "lane": "atom",
+          "title": "Retail agent policy",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 5.975284,
+          "chars": 1777
+        },
+        {
+          "item_id": "KA-00025",
+          "lane": "atom",
+          "title": "modify_pending_order_payment",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 5.775209,
+          "chars": 910
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "graph_evoskill_compiler",
+      "profile": [
+        "atom",
+        "pattern",
+        "rule",
+        "skill",
+        "workflow"
+      ],
+      "lane_counts": {
+        "skill": 15,
+        "atom": 28,
+        "rule": 12,
+        "workflow": 52,
+        "pattern": 12
+      },
+      "lane_hits": {
+        "skill": 4,
+        "rule": 3,
+        "atom": 6,
+        "pattern": 3
+      },
+      "context_chars": 9240,
+      "items": [
+        {
+          "item_id": "SK-0015",
+          "lane": "skill",
+          "title": "Governance",
+          "source": "SKILL.md",
+          "score": 6.811891,
+          "chars": 396
+        },
+        {
+          "item_id": "POL-0010",
+          "lane": "rule",
+          "title": "Modify items",
+          "source": "KA-00010",
+          "score": 6.351343,
+          "chars": 801
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "Modify items",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 8.298099,
+          "chars": 845
+        },
+        {
+          "item_id": "PAT-0007",
+          "lane": "pattern",
+          "title": "Cancel pending order",
+          "source": "KA-00007",
+          "score": 6.354814,
+          "chars": 237
+        },
+        {
+          "item_id": "SK-0008",
+          "lane": "skill",
+          "title": "PAT-0007: Cancel pending order",
+          "source": "SKILL.md",
+          "score": 5.804675,
+          "chars": 259
+        },
+        {
+          "item_id": "POL-0007",
+          "lane": "rule",
+          "title": "Cancel pending order",
+          "source": "KA-00007",
+          "score": 5.165757,
+          "chars": 540
+        },
+        {
+          "item_id": "KA-00007",
+          "lane": "atom",
+          "title": "Cancel pending order",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 7.471026,
+          "chars": 584
+        },
+        {
+          "item_id": "PAT-0008",
+          "lane": "pattern",
+          "title": "Modify pending order",
+          "source": "KA-00008",
+          "score": 3.298627,
+          "chars": 257
+        },
+        {
+          "item_id": "SK-0009",
+          "lane": "skill",
+          "title": "PAT-0008: Modify pending order",
+          "source": "SKILL.md",
+          "score": 3.186819,
+          "chars": 279
+        },
+        {
+          "item_id": "POL-0009",
+          "lane": "rule",
+          "title": "Modify payment",
+          "source": "KA-00009",
+          "score": 4.979185,
+          "chars": 472
+        },
+        {
+          "item_id": "KA-00009",
+          "lane": "atom",
+          "title": "Modify payment",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 7.310904,
+          "chars": 516
+        },
+        {
+          "item_id": "PAT-0009",
+          "lane": "pattern",
+          "title": "Modify payment",
+          "source": "KA-00009",
+          "score": 3.163188,
+          "chars": 201
+        },
+        {
+          "item_id": "SK-0010",
+          "lane": "skill",
+          "title": "PAT-0009: Modify payment",
+          "source": "SKILL.md",
+          "score": 2.685332,
+          "chars": 223
+        },
+        {
+          "item_id": "KA-00014",
+          "lane": "atom",
+          "title": "cancel_pending_order",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 7.117997,
+          "chars": 943
+        },
+        {
+          "item_id": "KA-00001",
+          "lane": "atom",
+          "title": "Retail agent policy",
+          "source": "vendor/tau3-bench/data/tau2/domains/retail/policy.md",
+          "score": 5.975284,
+          "chars": 1777
+        },
+        {
+          "item_id": "KA-00025",
+          "lane": "atom",
+          "title": "modify_pending_order_payment",
+          "source": "vendor/tau3-bench/src/tau2/domains/retail/tools.py",
+          "score": 5.775209,
+          "chars": 910
+        }
+      ],
+      "graph_traversal_enabled": false
+    }
+  ],
+  "note": "Offline deterministic retrieval audit; not an Agent benchmark result."
+}

@@ -1,0 +1,616 @@
+{
+  "runtime": "package_v1",
+  "domain": "airline",
+  "query": "customer wants to change a flight reservation and baggage",
+  "config": {
+    "mode": "package_v1",
+    "skill_top_k": 4,
+    "atom_top_k": 6,
+    "rule_top_k": 3,
+    "workflow_top_k": 3,
+    "pattern_top_k": 3,
+    "max_context_chars": 12000,
+    "max_item_chars": 1800,
+    "history_messages": 6,
+    "graph_traversal": false
+  },
+  "methods": [
+    {
+      "method": "raw_policy_rag",
+      "profile": [
+        "atom",
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 10,
+        "atom": 23,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "atom": 5
+      },
+      "context_chars": 11772,
+      "items": [
+        {
+          "item_id": "SK-0008",
+          "lane": "skill",
+          "title": "Modify flight",
+          "source": "SKILL.md",
+          "score": 5.722921,
+          "chars": 1706
+        },
+        {
+          "item_id": "KA-00007",
+          "lane": "atom",
+          "title": "Modify flight",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 7.274466,
+          "chars": 1751
+        },
+        {
+          "item_id": "SK-0007",
+          "lane": "skill",
+          "title": "Book flight",
+          "source": "SKILL.md",
+          "score": 4.594071,
+          "chars": 1697
+        },
+        {
+          "item_id": "KA-00009",
+          "lane": "atom",
+          "title": "Refunds and Compensation",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 6.30751,
+          "chars": 1010
+        },
+        {
+          "item_id": "SK-0010",
+          "lane": "skill",
+          "title": "Refunds and Compensation",
+          "source": "SKILL.md",
+          "score": 4.531542,
+          "chars": 965
+        },
+        {
+          "item_id": "KA-00008",
+          "lane": "atom",
+          "title": "Cancel flight",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 5.644632,
+          "chars": 999
+        },
+        {
+          "item_id": "SK-0009",
+          "lane": "skill",
+          "title": "Cancel flight",
+          "source": "SKILL.md",
+          "score": 4.443617,
+          "chars": 954
+        },
+        {
+          "item_id": "KA-00006",
+          "lane": "atom",
+          "title": "Book flight",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 5.230306,
+          "chars": 1742
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "book_reservation",
+          "source": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+          "score": 4.93091,
+          "chars": 948
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "native_prompt_skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 10,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4
+      },
+      "context_chars": 5322,
+      "items": [
+        {
+          "item_id": "SK-0007",
+          "lane": "skill",
+          "title": "Modify flight",
+          "source": "SKILL.md",
+          "score": 5.365382,
+          "chars": 1706
+        },
+        {
+          "item_id": "SK-0009",
+          "lane": "skill",
+          "title": "Refunds and Compensation",
+          "source": "SKILL.md",
+          "score": 4.491295,
+          "chars": 965
+        },
+        {
+          "item_id": "SK-0006",
+          "lane": "skill",
+          "title": "Book flight",
+          "source": "SKILL.md",
+          "score": 4.34048,
+          "chars": 1697
+        },
+        {
+          "item_id": "SK-0008",
+          "lane": "skill",
+          "title": "Cancel flight",
+          "source": "SKILL.md",
+          "score": 3.944179,
+          "chars": 954
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "schema_prompt_skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 12,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4
+      },
+      "context_chars": 5322,
+      "items": [
+        {
+          "item_id": "SK-0009",
+          "lane": "skill",
+          "title": "Modify flight",
+          "source": "SKILL.md",
+          "score": 6.239079,
+          "chars": 1706
+        },
+        {
+          "item_id": "SK-0011",
+          "lane": "skill",
+          "title": "Refunds and Compensation",
+          "source": "SKILL.md",
+          "score": 5.074399,
+          "chars": 965
+        },
+        {
+          "item_id": "SK-0008",
+          "lane": "skill",
+          "title": "Book flight",
+          "source": "SKILL.md",
+          "score": 4.926485,
+          "chars": 1697
+        },
+        {
+          "item_id": "SK-0010",
+          "lane": "skill",
+          "title": "Cancel flight",
+          "source": "SKILL.md",
+          "score": 4.67772,
+          "chars": 954
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "summary2skill",
+      "profile": [
+        "skill"
+      ],
+      "lane_counts": {
+        "skill": 3,
+        "atom": 0,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 3
+      },
+      "context_chars": 3972,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Policy summary",
+          "source": "SKILL.md",
+          "score": 6.666674,
+          "chars": 1854
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Airline τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.219724,
+          "chars": 251
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Training workflow summaries",
+          "source": "SKILL.md",
+          "score": 0.144763,
+          "chars": 1867
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "document_tool_maker",
+      "profile": [
+        "skill",
+        "tool_atom"
+      ],
+      "lane_counts": {
+        "skill": 11,
+        "atom": 14,
+        "rule": 0,
+        "workflow": 0,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "atom": 6
+      },
+      "context_chars": 9221,
+      "items": [
+        {
+          "item_id": "SK-0009",
+          "lane": "skill",
+          "title": "Modify flight",
+          "source": "SKILL.md",
+          "score": 5.851208,
+          "chars": 1706
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "book_reservation",
+          "source": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+          "score": 4.881333,
+          "chars": 948
+        },
+        {
+          "item_id": "SK-0011",
+          "lane": "skill",
+          "title": "Refunds and Compensation",
+          "source": "SKILL.md",
+          "score": 4.783643,
+          "chars": 965
+        },
+        {
+          "item_id": "KA-00020",
+          "lane": "atom",
+          "title": "update_reservation_baggages",
+          "source": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+          "score": 4.291033,
+          "chars": 859
+        },
+        {
+          "item_id": "SK-0008",
+          "lane": "skill",
+          "title": "Book flight",
+          "source": "SKILL.md",
+          "score": 4.695235,
+          "chars": 1697
+        },
+        {
+          "item_id": "KA-00021",
+          "lane": "atom",
+          "title": "update_reservation_flights",
+          "source": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+          "score": 3.038953,
+          "chars": 915
+        },
+        {
+          "item_id": "SK-0010",
+          "lane": "skill",
+          "title": "Cancel flight",
+          "source": "SKILL.md",
+          "score": 4.361674,
+          "chars": 954
+        },
+        {
+          "item_id": "KA-00011",
+          "lane": "atom",
+          "title": "calculate",
+          "source": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+          "score": 2.844797,
+          "chars": 421
+        },
+        {
+          "item_id": "KA-00019",
+          "lane": "atom",
+          "title": "transfer_to_human_agents",
+          "source": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+          "score": 2.795025,
+          "chars": 457
+        },
+        {
+          "item_id": "KA-00023",
+          "lane": "atom",
+          "title": "get_flight_status",
+          "source": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+          "score": 2.082582,
+          "chars": 299
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "evoskill_compiler",
+      "profile": [
+        "atom",
+        "rule",
+        "skill",
+        "workflow"
+      ],
+      "lane_counts": {
+        "skill": 4,
+        "atom": 23,
+        "rule": 9,
+        "workflow": 19,
+        "pattern": 0
+      },
+      "lane_hits": {
+        "skill": 4,
+        "rule": 3,
+        "atom": 4
+      },
+      "context_chars": 11878,
+      "items": [
+        {
+          "item_id": "SK-0002",
+          "lane": "skill",
+          "title": "Knowledge atoms",
+          "source": "SKILL.md",
+          "score": 7.659121,
+          "chars": 1855
+        },
+        {
+          "item_id": "POL-0007",
+          "lane": "rule",
+          "title": "Modify flight",
+          "source": "KA-00007",
+          "score": 5.274628,
+          "chars": 1706
+        },
+        {
+          "item_id": "KA-00007",
+          "lane": "atom",
+          "title": "Modify flight",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 7.274466,
+          "chars": 1751
+        },
+        {
+          "item_id": "SK-0003",
+          "lane": "skill",
+          "title": "Governance rules",
+          "source": "SKILL.md",
+          "score": 2.76935,
+          "chars": 466
+        },
+        {
+          "item_id": "POL-0006",
+          "lane": "rule",
+          "title": "Book flight",
+          "source": "KA-00006",
+          "score": 4.281018,
+          "chars": 1697
+        },
+        {
+          "item_id": "KA-00009",
+          "lane": "atom",
+          "title": "Refunds and Compensation",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 6.30751,
+          "chars": 1010
+        },
+        {
+          "item_id": "SK-0004",
+          "lane": "skill",
+          "title": "Runtime strategy",
+          "source": "SKILL.md",
+          "score": 0.228277,
+          "chars": 226
+        },
+        {
+          "item_id": "POL-0009",
+          "lane": "rule",
+          "title": "Refunds and Compensation",
+          "source": "KA-00009",
+          "score": 4.273501,
+          "chars": 965
+        },
+        {
+          "item_id": "KA-00008",
+          "lane": "atom",
+          "title": "Cancel flight",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 5.644632,
+          "chars": 999
+        },
+        {
+          "item_id": "SK-0001",
+          "lane": "skill",
+          "title": "Airline τ³ SOP Skill",
+          "source": "SKILL.md",
+          "score": 0.178646,
+          "chars": 255
+        },
+        {
+          "item_id": "KA-00010",
+          "lane": "atom",
+          "title": "book_reservation",
+          "source": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+          "score": 4.93091,
+          "chars": 948
+        }
+      ],
+      "graph_traversal_enabled": false
+    },
+    {
+      "method": "graph_evoskill_compiler",
+      "profile": [
+        "atom",
+        "pattern",
+        "rule",
+        "skill",
+        "workflow"
+      ],
+      "lane_counts": {
+        "skill": 12,
+        "atom": 23,
+        "rule": 9,
+        "workflow": 19,
+        "pattern": 9
+      },
+      "lane_hits": {
+        "skill": 4,
+        "rule": 3,
+        "atom": 4,
+        "pattern": 3
+      },
+      "context_chars": 11223,
+      "items": [
+        {
+          "item_id": "SK-0012",
+          "lane": "skill",
+          "title": "Governance",
+          "source": "SKILL.md",
+          "score": 3.86299,
+          "chars": 289
+        },
+        {
+          "item_id": "POL-0007",
+          "lane": "rule",
+          "title": "Modify flight",
+          "source": "KA-00007",
+          "score": 5.274628,
+          "chars": 1706
+        },
+        {
+          "item_id": "KA-00007",
+          "lane": "atom",
+          "title": "Modify flight",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 7.274466,
+          "chars": 1751
+        },
+        {
+          "item_id": "PAT-0005",
+          "lane": "pattern",
+          "title": "Reservation",
+          "source": "KA-00005",
+          "score": 2.633226,
+          "chars": 168
+        },
+        {
+          "item_id": "SK-0006",
+          "lane": "skill",
+          "title": "PAT-0005: Reservation",
+          "source": "SKILL.md",
+          "score": 2.316045,
+          "chars": 190
+        },
+        {
+          "item_id": "POL-0006",
+          "lane": "rule",
+          "title": "Book flight",
+          "source": "KA-00006",
+          "score": 4.281018,
+          "chars": 1697
+        },
+        {
+          "item_id": "KA-00009",
+          "lane": "atom",
+          "title": "Refunds and Compensation",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 6.30751,
+          "chars": 1010
+        },
+        {
+          "item_id": "PAT-0009",
+          "lane": "pattern",
+          "title": "Refunds and Compensation",
+          "source": "KA-00009",
+          "score": 2.49174,
+          "chars": 181
+        },
+        {
+          "item_id": "SK-0010",
+          "lane": "skill",
+          "title": "PAT-0009: Refunds and Compensation",
+          "source": "SKILL.md",
+          "score": 1.427014,
+          "chars": 203
+        },
+        {
+          "item_id": "POL-0009",
+          "lane": "rule",
+          "title": "Refunds and Compensation",
+          "source": "KA-00009",
+          "score": 4.273501,
+          "chars": 965
+        },
+        {
+          "item_id": "KA-00008",
+          "lane": "atom",
+          "title": "Cancel flight",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 5.644632,
+          "chars": 999
+        },
+        {
+          "item_id": "PAT-0008",
+          "lane": "pattern",
+          "title": "Cancel flight",
+          "source": "KA-00008",
+          "score": 1.140725,
+          "chars": 150
+        },
+        {
+          "item_id": "SK-0009",
+          "lane": "skill",
+          "title": "PAT-0008: Cancel flight",
+          "source": "SKILL.md",
+          "score": 1.235828,
+          "chars": 172
+        },
+        {
+          "item_id": "KA-00006",
+          "lane": "atom",
+          "title": "Book flight",
+          "source": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+          "score": 5.230306,
+          "chars": 1742
+        }
+      ],
+      "graph_traversal_enabled": false
+    }
+  ],
+  "note": "Offline deterministic retrieval audit; not an Agent benchmark result."
+}

@@ -1,0 +1,2674 @@
+{
+  "atoms": [
+    {
+      "atom_id": "ATOM-015fc1a76a",
+      "type": "fact",
+      "subject": "send_certificate",
+      "text": "Args: user_id: The ID of the user to book the reservation, such as 'sara_doe_496'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "send_certificate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-020129020e",
+      "type": "escalation",
+      "subject": "Modify flight",
+      "text": "Even a human agent cannot modify the number of passengers.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-033b36cccf",
+      "type": "fact",
+      "subject": "update_reservation_baggages",
+      "text": "payment_id: The payment id stored in user profile, such as 'credit_card_7815826', 'gift_card_7815826', 'certificate_7815826'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-036e03786a",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "payment_methods: An array of objects containing details about each payment method.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-043453d02d",
+      "type": "required_input",
+      "subject": "update_reservation_flights",
+      "text": "The update_reservation_flights tool requires the reservation_id argument.",
+      "object": "reservation_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-05289003b2",
+      "type": "communication_requirement",
+      "subject": "Reservation",
+      "text": "travel insurance information There are two types of trip: **one way** and **round trip**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Reservation",
+        "line_start": 49,
+        "line_end": 62
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-060de95486",
+      "type": "fact",
+      "subject": "update_reservation_baggages",
+      "text": "Returns: The updated reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-06a52f7012",
+      "type": "fact",
+      "subject": "Flight",
+      "text": "There are three cabin classes: **basic economy**, **economy**, **business**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Flight",
+        "line_start": 33,
+        "line_end": 48
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-06d86e942f",
+      "type": "precondition",
+      "subject": "Airline Agent Policy",
+      "text": "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-08bca5db26",
+      "type": "fact",
+      "subject": "calculate",
+      "text": "Calculate the result of a mathematical expression.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0d03d2ed86",
+      "type": "precondition",
+      "subject": "Cancel flight",
+      "text": "If the user doesn't know their reservation id, the agent should help locate it using available tools.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0ea681bd57",
+      "type": "required_input",
+      "subject": "update_reservation_baggages",
+      "text": "The update_reservation_baggages tool requires the reservation_id argument.",
+      "object": "reservation_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0fa034c331",
+      "type": "permission",
+      "subject": "Modify flight",
+      "text": "In other cases, all reservations, including basic economy, can change cabin without changing the flights..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-10d54892b8",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "3 free checked bags for each business passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-117027bf9f",
+      "type": "fact",
+      "subject": "User",
+      "text": "Each user has a profile containing:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "User",
+        "line_start": 19,
+        "line_end": 32
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-11d3ae909d",
+      "type": "escalation",
+      "subject": "Cancel flight",
+      "text": "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons) If any portion of the flight has already been flown, the agent cannot help and transfer is needed.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-11f4a56507",
+      "type": "required_input",
+      "subject": "update_reservation_baggages",
+      "text": "The update_reservation_baggages tool requires the nonfree_baggages argument.",
+      "object": "nonfree_baggages",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-12c7426f48",
+      "type": "fact",
+      "subject": "Cancel flight",
+      "text": "It is a business flight.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-12de65d5c0",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "Returns: A message indicating the user has been transferred to a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-15782611df",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the insurance argument.",
+      "object": "insurance",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1840456a0b",
+      "type": "required_input",
+      "subject": "search_onestop_flight",
+      "text": "The search_onestop_flight tool requires the date argument.",
+      "object": "date",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-19a6723959",
+      "type": "permission",
+      "subject": "Modify flight",
+      "text": "Other reservations can be modified without changing the origin, destination, and trip type..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1a27b13e20",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "3 free checked bag for each economy passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1c0504f12a",
+      "type": "fact",
+      "subject": "update_reservation_baggages",
+      "text": "nonfree_baggages: The updated number of non-free baggage items included in the reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1f6adffab6",
+      "type": "precondition",
+      "subject": "send_certificate",
+      "text": "Raises: ValueError: If the user is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "send_certificate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1f9c6f2a1a",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "If the booking user is a gold member:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-207f297b5f",
+      "type": "precondition",
+      "subject": "update_reservation_baggages",
+      "text": "ValueError: If the gift card balance is not enough.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-20beff55f6",
+      "type": "precondition",
+      "subject": "update_reservation_flights",
+      "text": "Raises: ValueError: If the reservation is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2186e8f248",
+      "type": "fact",
+      "subject": "send_certificate",
+      "text": "amount: The amount of the certificate to send.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "send_certificate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-22233662e6",
+      "type": "actor_constraint",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-25697299b5",
+      "type": "fact",
+      "subject": "send_certificate",
+      "text": "Send a certificate to a user.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "send_certificate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-25848da59b",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "1 free checked bag for each basic economy passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-25f7380261",
+      "type": "actor_constraint",
+      "subject": "update_reservation_baggages",
+      "text": "The update_reservation_baggages tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-27c33841c9",
+      "type": "prohibition",
+      "subject": "Book flight",
+      "text": "Each reservation can have at most five passengers.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-282cf6b618",
+      "type": "fact",
+      "subject": "search_onestop_flight",
+      "text": "date: The date of the flight in the format 'YYYY-MM-DD', such as '2024-05-01'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2be0f5b132",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "Args: user_id: The ID of the user to book the reservation such as 'sara_doe_496'`.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2c02c8d8ff",
+      "type": "fact",
+      "subject": "search_direct_flight",
+      "text": "date: The date of the flight in the format 'YYYY-MM-DD', such as '2024-01-01'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-30b72d75f7",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "The agent should then ask for the trip type, origin, destination.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3132a91ce7",
+      "type": "fact",
+      "subject": "get_reservation_details",
+      "text": "Returns: The reservation details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_reservation_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-33dc900f7b",
+      "type": "fact",
+      "subject": "search_onestop_flight",
+      "text": "Search for one-stop flights between two cities on a specific date.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-348cac8859",
+      "type": "fact",
+      "subject": "get_user_details",
+      "text": "Get the details of a user, including their reservations.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3707bfd0e2",
+      "type": "fact",
+      "subject": "update_reservation_passengers",
+      "text": "Args: reservation_id: The reservation ID, such as 'ZFA04Y'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3776077d83",
+      "type": "fact",
+      "subject": "get_reservation_details",
+      "text": "Get the details of a reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_reservation_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-38afee3330",
+      "type": "fact",
+      "subject": "Refunds and Compensation",
+      "text": "Do not offer compensation for any other reason than the ones listed above.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Refunds and Compensation",
+        "line_start": 154,
+        "line_end": 167
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3a17529eb1",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "nonfree_baggages: The number of non-free baggage items to book the reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3bdddb90bc",
+      "type": "fact",
+      "subject": "list_all_airports",
+      "text": "Returns: A dictionary mapping IATA codes to AirportInfo objects.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "list_all_airports"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3dcd41a77d",
+      "type": "confirmation",
+      "subject": "Refunds and Compensation",
+      "text": "If the user complains about delayed flights in a reservation and wants to change or cancel the reservation, the agent can offer a certificate as a gesture after confirming the facts and changing or cancelling the reservation, with the amount being $50 times the number of passengers.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Refunds and Compensation",
+        "line_start": 154,
+        "line_end": 167
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3f6217c01b",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "0 free checked bag for each basic economy passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3fc61d8453",
+      "type": "communication_requirement",
+      "subject": "update_reservation_baggages",
+      "text": "Update the baggage information of a reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-40c3b0322f",
+      "type": "permission",
+      "subject": "Airline Agent Policy",
+      "text": "As an airline agent, you can help users **book**, **modify**, or **cancel** flight reservations.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4124a8d86d",
+      "type": "fact",
+      "subject": "get_flight_status",
+      "text": "Returns: The status of the flight.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_flight_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4228afbeed",
+      "type": "fact",
+      "subject": "cancel_reservation",
+      "text": "Returns: The updated reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "cancel_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4351ca7f9e",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the nonfree_baggages argument.",
+      "object": "nonfree_baggages",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-459af37ea8",
+      "type": "required_input",
+      "subject": "search_direct_flight",
+      "text": "The search_direct_flight tool requires the origin argument.",
+      "object": "origin",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-46ae1242fd",
+      "type": "fact",
+      "subject": "cancel_reservation",
+      "text": "Cancel the whole reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "cancel_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-481b32746b",
+      "type": "precondition",
+      "subject": "update_reservation_flights",
+      "text": "Even if the a flight segment is not changed, it should still be included in the array.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-489f8b098b",
+      "type": "precondition",
+      "subject": "Cancel flight",
+      "text": "First, the agent must obtain the user id and reservation id.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-48a5df5779",
+      "type": "precondition",
+      "subject": "cancel_reservation",
+      "text": "Raises: ValueError: If the reservation is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "cancel_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-48bb7687ef",
+      "type": "required_input",
+      "subject": "update_reservation_passengers",
+      "text": "The update_reservation_passengers tool requires the reservation_id argument.",
+      "object": "reservation_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-48e422a0c9",
+      "type": "fact",
+      "subject": "update_reservation_flights",
+      "text": "Args: reservation_id: The reservation ID, such as 'ZFA04Y'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4a0469fed3",
+      "type": "fact",
+      "subject": "Flight",
+      "text": "**basic economy** is its own class, completely distinct from **economy**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Flight",
+        "line_start": 33,
+        "line_end": 48
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4a5623f249",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "The remaining amount of a travel certificate is not refundable.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4a9aff409c",
+      "type": "fact",
+      "subject": "Airline Agent Policy",
+      "text": "The current time is 2024-05-15 15:00:00 EST.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4afa62c5cd",
+      "type": "fact",
+      "subject": "update_reservation_passengers",
+      "text": "passengers: An array of objects containing details about each passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4c0233eb9a",
+      "type": "prohibition",
+      "subject": "Modify flight",
+      "text": "The user cannot add insurance after initial booking.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4d4f952c02",
+      "type": "fact",
+      "subject": "Airline Agent Policy",
+      "text": "You should deny user requests that are against this policy.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4f27ea57d7",
+      "type": "fact",
+      "subject": "Modify flight",
+      "text": "Change baggage and insurance: .",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4f65aec289",
+      "type": "actor_constraint",
+      "subject": "cancel_reservation",
+      "text": "The cancel_reservation tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "cancel_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-52ac470391",
+      "type": "fact",
+      "subject": "send_certificate",
+      "text": "Returns: A message indicating the certificate was sent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "send_certificate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-543ab6c4b7",
+      "type": "required_input",
+      "subject": "search_direct_flight",
+      "text": "The search_direct_flight tool requires the date argument.",
+      "object": "date",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-55483c1ca6",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the passengers argument.",
+      "object": "passengers",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-55e4ca386a",
+      "type": "actor_constraint",
+      "subject": "get_user_details",
+      "text": "The get_user_details tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-568d1c30e1",
+      "type": "fact",
+      "subject": "update_reservation_flights",
+      "text": "payment_id: The payment id stored in user profile, such as 'credit_card_7815826', 'gift_card_7815826', 'certificate_7815826'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-59dfcfebf6",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "All payment methods must already be in user profile for safety reasons.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5b60daafde",
+      "type": "confirmation",
+      "subject": "Airline Agent Policy",
+      "text": "Before taking any actions that update the booking database (booking, modifying flights, editing baggage, changing cabin class, or updating passenger information), you must list the action details and obtain explicit user confirmation (yes) to proceed.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5bd4bf60d3",
+      "type": "fact",
+      "subject": "calculate",
+      "text": "Args: expression: The mathematical expression to calculate, such as '2 + 2'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5cf5f784f3",
+      "type": "required_input",
+      "subject": "Airline Agent Policy",
+      "text": "You should not provide any information, knowledge, or procedures not provided by the user or available tools, or give subjective recommendations or comments.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5de98791d4",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "origin: The IATA code for the origin city such as 'SFO'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5e48d3d330",
+      "type": "actor_constraint",
+      "subject": "calculate",
+      "text": "The calculate tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-5f8bfe8fb3",
+      "type": "precondition",
+      "subject": "update_reservation_baggages",
+      "text": "ValueError: If the payment method is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5fa60754c2",
+      "type": "required_input",
+      "subject": "Book flight",
+      "text": "The agent needs to collect the first name, last name, and date of birth for each passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-618774c368",
+      "type": "precondition",
+      "subject": "Modify flight",
+      "text": "If the user doesn't know their reservation id, the agent should help locate it using available tools.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6213ed6030",
+      "type": "actor_constraint",
+      "subject": "get_flight_status",
+      "text": "The get_flight_status tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_flight_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-62c51ba669",
+      "type": "fact",
+      "subject": "Cancel flight",
+      "text": "The booking was made within the last 24 hrs.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-65cd15915b",
+      "type": "actor_constraint",
+      "subject": "update_reservation_passengers",
+      "text": "The update_reservation_passengers tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-66891ef2bb",
+      "type": "fact",
+      "subject": "transfer_to_human_agents",
+      "text": "Args: summary: A summary of the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-668e12c721",
+      "type": "confirmation",
+      "subject": "Refunds and Compensation",
+      "text": "If the user complains about cancelled flights in a reservation, the agent can offer a certificate as a gesture after confirming the facts, with the amount being $100 times the number of passengers..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Refunds and Compensation",
+        "line_start": 154,
+        "line_end": 167
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-67237fecd8",
+      "type": "required_input",
+      "subject": "update_reservation_baggages",
+      "text": "The update_reservation_baggages tool requires the payment_id argument.",
+      "object": "payment_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-6806fab2a1",
+      "type": "required_input",
+      "subject": "get_flight_status",
+      "text": "The get_flight_status tool requires the flight_number argument.",
+      "object": "flight_number",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_flight_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-6870e08545",
+      "type": "actor_constraint",
+      "subject": "Modify flight",
+      "text": "The user must provide their user id.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-68a1301994",
+      "type": "fact",
+      "subject": "Flight",
+      "text": "Each flight has the following attributes:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Flight",
+        "line_start": 33,
+        "line_end": 48
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-68c5e8b248",
+      "type": "required_input",
+      "subject": "update_reservation_baggages",
+      "text": "The update_reservation_baggages tool requires the total_baggages argument.",
+      "object": "total_baggages",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-69e2b0db33",
+      "type": "required_input",
+      "subject": "calculate",
+      "text": "The calculate tool requires the expression argument.",
+      "object": "expression",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-6af9c6572a",
+      "type": "fact",
+      "subject": "search_direct_flight",
+      "text": "Returns: The direct flights between the two cities on the specific date.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6b0d60c57f",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "1 free checked bag for each economy passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6c0b8a89ec",
+      "type": "required_input",
+      "subject": "send_certificate",
+      "text": "The send_certificate tool requires the amount argument.",
+      "object": "amount",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "send_certificate"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-6c7675639a",
+      "type": "permission",
+      "subject": "Modify flight",
+      "text": "The user can add but not remove checked bags..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6d23271322",
+      "type": "precondition",
+      "subject": "Modify flight",
+      "text": "First, the agent must obtain the user id and reservation id.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7202c1e0db",
+      "type": "precondition",
+      "subject": "update_reservation_passengers",
+      "text": "ValueError: If the number of passengers does not match.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-72e4d69e80",
+      "type": "fact",
+      "subject": "calculate",
+      "text": "Returns: The result of the mathematical expression.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7565826959",
+      "type": "fact",
+      "subject": "search_direct_flight",
+      "text": "Args: origin: The origin city airport in three letters, such as 'JFK'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7635f2a424",
+      "type": "fact",
+      "subject": "Airline Agent Policy",
+      "text": "You also handle **refunds and compensation**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-766b230f21",
+      "type": "prohibition",
+      "subject": "Modify flight",
+      "text": "Cabin cannot be changed if any flight in the reservation has already been flown..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-77232aed7f",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "4 free checked bags for each business passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-774939c285",
+      "type": "communication_requirement",
+      "subject": "update_reservation_flights",
+      "text": "Update the flight information of a reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-787ac0e5d1",
+      "type": "escalation",
+      "subject": "Airline Agent Policy",
+      "text": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-78c37bc7e6",
+      "type": "fact",
+      "subject": "get_user_details",
+      "text": "Args: user_id: The user ID, such as 'sara_doe_496'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-78cfc7f160",
+      "type": "permission",
+      "subject": "Modify flight",
+      "text": "Some flight segments can be kept, but their prices will not be updated based on the current price..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-78d3bc297f",
+      "type": "precondition",
+      "subject": "Flight",
+      "text": "If the status is **available**, the flight has not taken off, available seats and prices are listed..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Flight",
+        "line_start": 33,
+        "line_end": 48
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7cf2fbf1e5",
+      "type": "fact",
+      "subject": "search_direct_flight",
+      "text": "destination: The destination city airport in three letters, such as 'LAX'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-81382b4deb",
+      "type": "fact",
+      "subject": "search_onestop_flight",
+      "text": "Args: origin: The origin city airport in three letters, such as 'JFK'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-82943efeba",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "insurance: Whether the reservation has insurance.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-83c42b2e24",
+      "type": "fact",
+      "subject": "Cancel flight",
+      "text": "The flight is cancelled by airline.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-86fdadaa48",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the origin argument.",
+      "object": "origin",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-874c8a8c26",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "Cabin class must be the same across all the flights in a reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-87817a0c36",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "Each extra baggage is 50 dollars.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-896ad146d7",
+      "type": "precondition",
+      "subject": "update_reservation_flights",
+      "text": "ValueError: If the payment method is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8aff132389",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "Do not add checked bags that the user does not need.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8f3f135205",
+      "type": "communication_requirement",
+      "subject": "update_reservation_passengers",
+      "text": "Update the passenger information of a reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8fb91c8928",
+      "type": "required_input",
+      "subject": "cancel_reservation",
+      "text": "The cancel_reservation tool requires the reservation_id argument.",
+      "object": "reservation_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "cancel_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-9110e765df",
+      "type": "escalation",
+      "subject": "Airline Agent Policy",
+      "text": "To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-912e539883",
+      "type": "fact",
+      "subject": "Flight",
+      "text": "Seat availability and prices are listed for each cabin class.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Flight",
+        "line_start": 33,
+        "line_end": 48
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-915667fb2b",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-93728f7e15",
+      "type": "actor_constraint",
+      "subject": "update_reservation_flights",
+      "text": "The update_reservation_flights tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-938fa30207",
+      "type": "permission",
+      "subject": "Flight",
+      "text": "scheduled departure and arrival time (local time) A flight can be available at multiple dates.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Flight",
+        "line_start": 33,
+        "line_end": 48
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-94a974abe0",
+      "type": "precondition",
+      "subject": "get_user_details",
+      "text": "Raises: ValueError: If the user is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9561f6daae",
+      "type": "actor_constraint",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-97cf4fa54a",
+      "type": "precondition",
+      "subject": "Cancel flight",
+      "text": "The API does not check that cancellation rules are met, so the agent must make sure the rules apply before calling the API!",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-98e2927a93",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "flight_type: The type of flight such as 'one_way' or 'round_trip'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9934b632b5",
+      "type": "actor_constraint",
+      "subject": "Cancel flight",
+      "text": "The user must provide their user id.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-993a6b2e68",
+      "type": "prohibition",
+      "subject": "Modify flight",
+      "text": "Basic economy flights cannot be modified..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9a2749bb6f",
+      "type": "precondition",
+      "subject": "update_reservation_passengers",
+      "text": "Raises: ValueError: If the reservation is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9d6ba529b8",
+      "type": "prohibition",
+      "subject": "Modify flight",
+      "text": "The user can modify passengers but cannot modify the number of passengers..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9df9bcd3e3",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "the user explicitly asks for a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9ed01a5dd3",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "The travel insurance is 30 dollars per passenger and enables full refund if the user needs to cancel the flight given health or weather reasons.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a0bf8fc687",
+      "type": "precondition",
+      "subject": "get_reservation_details",
+      "text": "Raises: ValueError: If the reservation is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_reservation_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a15000d4f0",
+      "type": "fact",
+      "subject": "User",
+      "text": "reservation numbers There are three types of payment methods: **credit card**, **gift card**, **travel certificate**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "User",
+        "line_start": 19,
+        "line_end": 32
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a1df230424",
+      "type": "actor_constraint",
+      "subject": "get_reservation_details",
+      "text": "The get_reservation_details tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_reservation_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a26fc15b42",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "2 free checked bags for each business passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a29508cf04",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the total_baggages argument.",
+      "object": "total_baggages",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a3c7ba6cb2",
+      "type": "fact",
+      "subject": "Airline Agent Policy",
+      "text": "PLEASE HOLD ON.' to the user.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a59bf14327",
+      "type": "actor_constraint",
+      "subject": "search_onestop_flight",
+      "text": "The search_onestop_flight tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a627a6b55a",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the cabin argument.",
+      "object": "cabin",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a6a85f0f7c",
+      "type": "precondition",
+      "subject": "update_reservation_flights",
+      "text": "ValueError: If the user is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a6f76da81d",
+      "type": "precondition",
+      "subject": "update_reservation_baggages",
+      "text": "ValueError: If the user is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a709264679",
+      "type": "prohibition",
+      "subject": "transfer_to_human_agents",
+      "text": "given the policy and the available tools, you cannot solve the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a71ebdb48e",
+      "type": "precondition",
+      "subject": "update_reservation_flights",
+      "text": "ValueError: If the gift card balance is not enough.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a8b98bbda8",
+      "type": "postcondition",
+      "subject": "Modify flight",
+      "text": "If the price after cabin change is higher than the original price, the user is required to pay for the difference..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-aaf2ff15c4",
+      "type": "prohibition",
+      "subject": "update_reservation_baggages",
+      "text": "ValueError: If the certificate cannot be used to update reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ab63e25722",
+      "type": "actor_constraint",
+      "subject": "search_direct_flight",
+      "text": "The search_direct_flight tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-aba5b6abf3",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "passengers: An array of objects containing details about each passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ac22ba0c20",
+      "type": "permission",
+      "subject": "calculate",
+      "text": "The expression can contain numbers, operators (+, -, *, /), parentheses, and spaces.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-aea7780a89",
+      "type": "prohibition",
+      "subject": "Flight",
+      "text": "If the status is **delayed** or **on time**, the flight has not taken off, cannot be booked..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Flight",
+        "line_start": 33,
+        "line_end": 48
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b1b4798155",
+      "type": "fact",
+      "subject": "User",
+      "text": "There are three membership levels: **regular**, **silver**, **gold**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "User",
+        "line_start": 19,
+        "line_end": 32
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b1ed90e9d4",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "If the booking user is a silver member:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b29ff6c226",
+      "type": "precondition",
+      "subject": "Refunds and Compensation",
+      "text": "Only compensate if the user is a silver/gold member or has travel insurance or flies business..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Refunds and Compensation",
+        "line_start": 154,
+        "line_end": 167
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b3cb852fc7",
+      "type": "fact",
+      "subject": "search_direct_flight",
+      "text": "Search for direct flights between two cities on a specific date.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b71eb06713",
+      "type": "precondition",
+      "subject": "Modify flight",
+      "text": "Cabin class must remain the same across all the flights in the same reservation; changing cabin for just one flight segment is not possible..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b7ad3bea20",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "The agent must first obtain the user id from the user.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b7f83deea8",
+      "type": "permission",
+      "subject": "Book flight",
+      "text": "Checked bag allowance: .",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b8bf8728b5",
+      "type": "required_input",
+      "subject": "search_direct_flight",
+      "text": "The search_direct_flight tool requires the destination argument.",
+      "object": "destination",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_direct_flight"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-baf1f8694e",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "Book a reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-bd7d8b1375",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "total_baggages: The total number of baggage items to book the reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-be89b5462f",
+      "type": "exception",
+      "subject": "Cancel flight",
+      "text": "Otherwise, flight can be cancelled if any of the following is true:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c010b91d25",
+      "type": "fact",
+      "subject": "Reservation",
+      "text": "Each reservation specifies the following:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Reservation",
+        "line_start": 49,
+        "line_end": 62
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c1df373191",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "2 free checked bag for each basic economy passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c1e6e639db",
+      "type": "fact",
+      "subject": "update_reservation_passengers",
+      "text": "Returns: The updated reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c38007303f",
+      "type": "precondition",
+      "subject": "Modify flight",
+      "text": "The API does not check these for the agent, so the agent must make sure the rules apply before calling the API!",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c45b71129e",
+      "type": "prohibition",
+      "subject": "Book flight",
+      "text": "Each reservation can use at most one travel certificate, at most one credit card, and at most three gift cards.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c465a3f462",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the payment_methods argument.",
+      "object": "payment_methods",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c4cf41da95",
+      "type": "required_input",
+      "subject": "send_certificate",
+      "text": "The send_certificate tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "send_certificate"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c4e61d7133",
+      "type": "fact",
+      "subject": "get_flight_status",
+      "text": "Get the status of a flight.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_flight_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c5f8e71754",
+      "type": "fact",
+      "subject": "cancel_reservation",
+      "text": "Args: reservation_id: The reservation ID, such as 'ZFA04Y'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "cancel_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c724ec8102",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the destination argument.",
+      "object": "destination",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c89a0ec139",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the flight_type argument.",
+      "object": "flight_type",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-cbad5c957b",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "destination: The IATA code for the destination city such as 'JFK'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-cd69e74715",
+      "type": "fact",
+      "subject": "Modify flight",
+      "text": "Change passengers:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-cdd6becdde",
+      "type": "postcondition",
+      "subject": "Modify flight",
+      "text": "If the price after cabin change is lower than the original price, the user is should be refunded the difference.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d07aaa3496",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "The agent should ask if the user wants to buy the travel insurance..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d07dbd81a4",
+      "type": "required_input",
+      "subject": "book_reservation",
+      "text": "The book_reservation tool requires the flights argument.",
+      "object": "flights",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d0c3981fcf",
+      "type": "required_input",
+      "subject": "get_user_details",
+      "text": "The get_user_details tool requires the user_id argument.",
+      "object": "user_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d101d9ec40",
+      "type": "fact",
+      "subject": "update_reservation_baggages",
+      "text": "Args: reservation_id: The reservation ID, such as 'ZFA04Y' total_baggages: The updated total number of baggage items included in the reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d2a8fbe9fb",
+      "type": "precondition",
+      "subject": "update_reservation_baggages",
+      "text": "Raises: ValueError: If the reservation is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_baggages"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d2c1489beb",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "cabin: The cabin class such as 'basic_economy', 'economy', or 'business'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d2c4ba9845",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "Transfer the user to a human agent, with a summary of the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d39bc56688",
+      "type": "actor_constraint",
+      "subject": "send_certificate",
+      "text": "The send_certificate tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "send_certificate"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d6ee06e60c",
+      "type": "fact",
+      "subject": "get_flight_status",
+      "text": "date: The date of the flight.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_flight_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d9c4089b0c",
+      "type": "fact",
+      "subject": "Cancel flight",
+      "text": "The user has travel insurance and the reason for cancellation is covered by insurance.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d9d834f43f",
+      "type": "fact",
+      "subject": "get_user_details",
+      "text": "Returns: The user details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_user_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-db1ea18bb7",
+      "type": "precondition",
+      "subject": "Modify flight",
+      "text": "If the flights are changed, the user needs to provide a single gift card or credit card for payment or refund method.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-dc6554c235",
+      "type": "prohibition",
+      "subject": "update_reservation_flights",
+      "text": "ValueError: If the certificate cannot be used to update reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-dca37103df",
+      "type": "prohibition",
+      "subject": "Flight",
+      "text": "If the status is **flying**, the flight has taken off but not landed, cannot be booked.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Flight",
+        "line_start": 33,
+        "line_end": 48
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-de66d9e1d9",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "All passengers must fly the same flights in the same cabin.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-dfdb2e9bb6",
+      "type": "required_input",
+      "subject": "get_flight_status",
+      "text": "The get_flight_status tool requires the date argument.",
+      "object": "date",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_flight_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e0383ce4c4",
+      "type": "precondition",
+      "subject": "Refunds and Compensation",
+      "text": "Do not compensate if the user is regular member and has no travel insurance and flies (basic) economy.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Refunds and Compensation",
+        "line_start": 154,
+        "line_end": 167
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e047319316",
+      "type": "confirmation",
+      "subject": "Refunds and Compensation",
+      "text": "Always confirms the facts before offering compensation.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Refunds and Compensation",
+        "line_start": 154,
+        "line_end": 167
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e18e912ef8",
+      "type": "required_input",
+      "subject": "search_onestop_flight",
+      "text": "The search_onestop_flight tool requires the origin argument.",
+      "object": "origin",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e1d653f91f",
+      "type": "required_input",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool requires the summary argument.",
+      "object": "summary",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e42e8d5bbd",
+      "type": "fact",
+      "subject": "get_flight_status",
+      "text": "Args: flight_number: The flight number.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_flight_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e469c1995c",
+      "type": "required_input",
+      "subject": "update_reservation_flights",
+      "text": "The update_reservation_flights tool requires the cabin argument.",
+      "object": "cabin",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e4fafebef0",
+      "type": "precondition",
+      "subject": "calculate",
+      "text": "Raises: ValueError: If the expression is invalid.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "calculate"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e59c4bd358",
+      "type": "precondition",
+      "subject": "Book flight",
+      "text": "If the booking user is a regular member:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e5f743b425",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "Travel insurance: .",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e64e3637ad",
+      "type": "fact",
+      "subject": "list_all_airports",
+      "text": "Returns a list of all available airports.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "list_all_airports"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e72b1fe9d1",
+      "type": "fact",
+      "subject": "update_reservation_flights",
+      "text": "cabin: The cabin class of the reservation flights: An array of objects containing details about each piece of flight in the ENTIRE new reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ea51313b1f",
+      "type": "fact",
+      "subject": "Book flight",
+      "text": "2 free checked bag for each economy passenger.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Book flight",
+        "line_start": 63,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ea90e69281",
+      "type": "fact",
+      "subject": "update_reservation_flights",
+      "text": "Returns: The updated reservation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ed13d24c3c",
+      "type": "precondition",
+      "subject": "get_flight_status",
+      "text": "Raises: ValueError: If the flight is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_flight_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-eec6e236d0",
+      "type": "precondition",
+      "subject": "Airline Agent Policy",
+      "text": "If you respond to the user, you should not make a tool call at the same time.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Airline Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f1621cd56c",
+      "type": "precondition",
+      "subject": "Modify flight",
+      "text": "The payment method must already be in user profile for safety reasons.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Modify flight",
+        "line_start": 103,
+        "line_end": 132
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f2b4325bf9",
+      "type": "fact",
+      "subject": "search_onestop_flight",
+      "text": "destination: The destination city airport in three letters, such as 'LAX'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f4936054be",
+      "type": "fact",
+      "subject": "book_reservation",
+      "text": "flights: An array of objects containing details about each piece of flight.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "book_reservation"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f668ae720b",
+      "type": "required_input",
+      "subject": "get_reservation_details",
+      "text": "The get_reservation_details tool requires the reservation_id argument.",
+      "object": "reservation_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_reservation_details"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f7305da893",
+      "type": "fact",
+      "subject": "get_reservation_details",
+      "text": "Args: reservation_id: The reservation ID, such as '8JX2WO'.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "get_reservation_details"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f78cb1b650",
+      "type": "fact",
+      "subject": "search_onestop_flight",
+      "text": "Returns: A list of pairs of DirectFlight objects.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f927792cac",
+      "type": "required_input",
+      "subject": "search_onestop_flight",
+      "text": "The search_onestop_flight tool requires the destination argument.",
+      "object": "destination",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "search_onestop_flight"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f962e923b8",
+      "type": "actor_constraint",
+      "subject": "list_all_airports",
+      "text": "The list_all_airports tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "list_all_airports"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-fb7d129b0d",
+      "type": "required_input",
+      "subject": "update_reservation_flights",
+      "text": "The update_reservation_flights tool requires the payment_id argument.",
+      "object": "payment_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-fc2ad72407",
+      "type": "required_input",
+      "subject": "update_reservation_flights",
+      "text": "The update_reservation_flights tool requires the flights argument.",
+      "object": "flights",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_flights"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-fc8b31ced2",
+      "type": "fact",
+      "subject": "Cancel flight",
+      "text": "The refund will go to original payment methods within 5 to 7 business days.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Cancel flight",
+        "line_start": 133,
+        "line_end": 153
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-fd2d7fc576",
+      "type": "required_input",
+      "subject": "update_reservation_passengers",
+      "text": "The update_reservation_passengers tool requires the passengers argument.",
+      "object": "passengers",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/airline/tools.py",
+        "title": "update_reservation_passengers"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-fecbd4c8b7",
+      "type": "exception",
+      "subject": "Refunds and Compensation",
+      "text": "Do not proactively offer a compensation unless the user explicitly asks for one.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/airline/policy.md",
+        "title": "Refunds and Compensation",
+        "line_start": 154,
+        "line_end": 167
+      },
+      "origin": "policy"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "modules": [
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_001",
+      "name": "Retail τ³ SOP Skill",
+      "description": "graph evoskill compiler guidance section about Retail τ³ SOP Skill.",
+      "required_tools": [],
+      "instructions": "# Retail τ³ SOP Skill\n\n> Method: `graph_evoskill_compiler`. Compile-time sources are frozen τ³-bench policy, tool contracts, knowledge documents where applicable, and training tasks only where an official train split exists.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_002",
+      "name": "PAT-0001: Retail agent policy",
+      "description": "graph evoskill compiler guidance section about PAT-0001: Retail agent policy.",
+      "required_tools": [],
+      "instructions": "# PAT-0001: Retail agent policy\n\nCentral atom `KA-00001`; related atoms: KA-00004, KA-00005, KA-00006, KA-00007, KA-00008, KA-00010, KA-00011, KA-00012, KA-00014, KA-00015, KA-00016, KA-00023, KA-00024, KA-00025, KA-00026, KA-00027, KA-00028.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_003",
+      "name": "PAT-0002: Domain basic",
+      "description": "graph evoskill compiler guidance section about PAT-0002: Domain basic.",
+      "required_tools": [],
+      "instructions": "# PAT-0002: Domain basic\n\nCentral atom `KA-00002`; related atoms: KA-00022.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_004",
+      "name": "PAT-0003: User",
+      "description": "graph evoskill compiler guidance section about PAT-0003: User.",
+      "required_tools": [],
+      "instructions": "# PAT-0003: User\n\nCentral atom `KA-00003`; related atoms: KA-00004, KA-00005, KA-00010, KA-00011, KA-00012, KA-00022.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_005",
+      "name": "PAT-0004: Product",
+      "description": "graph evoskill compiler guidance section about PAT-0004: Product.",
+      "required_tools": [],
+      "instructions": "# PAT-0004: Product\n\nCentral atom `KA-00004`; related atoms: KA-00001, KA-00003, KA-00005, KA-00008, KA-00010, KA-00012, KA-00015, KA-00020, KA-00022, KA-00024, KA-00027.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_006",
+      "name": "PAT-0005: Order",
+      "description": "graph evoskill compiler guidance section about PAT-0005: Order.",
+      "required_tools": [],
+      "instructions": "# PAT-0005: Order\n\nCentral atom `KA-00005`; related atoms: KA-00001, KA-00003, KA-00004, KA-00006, KA-00007, KA-00008, KA-00009, KA-00010, KA-00011, KA-00012, KA-00014, KA-00015, KA-00022, KA-00024, KA-00025, KA-00027.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_007",
+      "name": "PAT-0006: Generic action rules",
+      "description": "graph evoskill compiler guidance section about PAT-0006: Generic action rules.",
+      "required_tools": [],
+      "instructions": "# PAT-0006: Generic action rules\n\nCentral atom `KA-00006`; related atoms: KA-00001, KA-00005, KA-00007, KA-00008, KA-00009, KA-00010, KA-00011, KA-00012, KA-00015, KA-00022, KA-00024.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_008",
+      "name": "PAT-0007: Cancel pending order",
+      "description": "graph evoskill compiler guidance section about PAT-0007: Cancel pending order.",
+      "required_tools": [],
+      "instructions": "# PAT-0007: Cancel pending order\n\nCentral atom `KA-00007`; related atoms: KA-00001, KA-00005, KA-00006, KA-00008, KA-00009, KA-00010, KA-00011, KA-00012, KA-00014, KA-00015, KA-00023, KA-00024, KA-00025, KA-00026, KA-00027.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_009",
+      "name": "PAT-0008: Modify pending order",
+      "description": "graph evoskill compiler guidance section about PAT-0008: Modify pending order.",
+      "required_tools": [],
+      "instructions": "# PAT-0008: Modify pending order\n\nCentral atom `KA-00008`; related atoms: KA-00001, KA-00004, KA-00005, KA-00006, KA-00007, KA-00009, KA-00010, KA-00011, KA-00012, KA-00014, KA-00015, KA-00022, KA-00023, KA-00024, KA-00025, KA-00027, KA-00028.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_010",
+      "name": "PAT-0009: Modify payment",
+      "description": "graph evoskill compiler guidance section about PAT-0009: Modify payment.",
+      "required_tools": [],
+      "instructions": "# PAT-0009: Modify payment\n\nCentral atom `KA-00009`; related atoms: KA-00005, KA-00006, KA-00007, KA-00008, KA-00010, KA-00011, KA-00012, KA-00014, KA-00015, KA-00024, KA-00025, KA-00027.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_011",
+      "name": "PAT-0010: Modify items",
+      "description": "graph evoskill compiler guidance section about PAT-0010: Modify items.",
+      "required_tools": [],
+      "instructions": "# PAT-0010: Modify items\n\nCentral atom `KA-00010`; related atoms: KA-00001, KA-00003, KA-00004, KA-00005, KA-00006, KA-00007, KA-00008, KA-00009, KA-00011, KA-00012, KA-00014, KA-00015, KA-00016, KA-00022, KA-00023, KA-00024, KA-00025, KA-00027, KA-00028.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_012",
+      "name": "PAT-0011: Return delivered order",
+      "description": "graph evoskill compiler guidance section about PAT-0011: Return delivered order.",
+      "required_tools": [],
+      "instructions": "# PAT-0011: Return delivered order\n\nCentral atom `KA-00011`; related atoms: KA-00001, KA-00003, KA-00005, KA-00006, KA-00007, KA-00008, KA-00009, KA-00010, KA-00012, KA-00014, KA-00015, KA-00016, KA-00024, KA-00025, KA-00027.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_013",
+      "name": "PAT-0012: Exchange delivered order",
+      "description": "graph evoskill compiler guidance section about PAT-0012: Exchange delivered order.",
+      "required_tools": [],
+      "instructions": "# PAT-0012: Exchange delivered order\n\nCentral atom `KA-00012`; related atoms: KA-00001, KA-00003, KA-00004, KA-00005, KA-00006, KA-00007, KA-00008, KA-00009, KA-00010, KA-00011, KA-00014, KA-00015, KA-00016, KA-00022, KA-00024, KA-00025, KA-00027.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_014",
+      "name": "Runtime boundary",
+      "description": "graph evoskill compiler guidance section about Runtime boundary.",
+      "required_tools": [],
+      "instructions": "# Runtime boundary\n\nThe graph changes compile-time organization only. Runtime tools, environment, task evaluator and retrieval budget remain fixed.",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    },
+    {
+      "module_id": "retail.graph_evoskill_compiler.section_015",
+      "name": "Governance",
+      "description": "graph evoskill compiler guidance section about Governance.",
+      "required_tools": [],
+      "instructions": "# Governance\n\n- `POL-0001` Retail agent policy\n- `POL-0002` Domain basic\n- `POL-0003` User\n- `POL-0004` Product\n- `POL-0005` Order\n- `POL-0006` Generic action rules\n- `POL-0007` Cancel pending order\n- `POL-0008` Modify pending order\n- `POL-0009` Modify payment\n- `POL-0010` Modify items\n- `POL-0011` Return delivered order\n- `POL-0012` Exchange delivered order",
+      "source_atom_ids": [],
+      "trace_requirements": [],
+      "method": "graph_evoskill_compiler"
+    }
+  ]
+}

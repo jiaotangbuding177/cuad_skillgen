@@ -1,0 +1,887 @@
+{
+  "patterns": [
+    {
+      "workflow_id": "WF-0001",
+      "steps": [
+        "assistant:transfer_to_human_agents"
+      ],
+      "training_frequency": 8,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0002",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0003",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:toggle_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0004",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0005",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0006",
+      "steps": [
+        "assistant:refuel_data",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0007",
+      "steps": [
+        "user:toggle_data",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0008",
+      "steps": [
+        "user:toggle_data_saver_mode",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0009",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0010",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0011",
+      "steps": [
+        "user:disconnect_vpn",
+        "user:toggle_data_saver_mode",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0012",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0013",
+      "steps": [
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0014",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:toggle_data_saver_mode",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0015",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_data",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0016",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "assistant:refuel_data",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0017",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "assistant:refuel_data",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0018",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "user:toggle_data",
+        "user:toggle_data_saver_mode"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0019",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0020",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "user:toggle_data_saver_mode",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0021",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_data_saver_mode",
+        "assistant:refuel_data",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0022",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:toggle_data",
+        "user:toggle_data_saver_mode",
+        "assistant:refuel_data",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0023",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0024",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "user:toggle_data_saver_mode",
+        "assistant:refuel_data",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0025",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_data",
+        "user:toggle_data_saver_mode",
+        "assistant:refuel_data",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0026",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "user:toggle_data",
+        "user:toggle_data_saver_mode",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0027",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "user:toggle_data",
+        "user:toggle_data_saver_mode",
+        "assistant:refuel_data",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0028",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:disconnect_vpn",
+        "user:toggle_data",
+        "user:toggle_data_saver_mode",
+        "assistant:refuel_data",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0029",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0030",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:reset_apn_settings",
+        "user:reboot_device"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0031",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0032",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "assistant:send_payment_request",
+        "user:make_payment",
+        "assistant:resume_line",
+        "user:reboot_device",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0033",
+      "steps": [
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "assistant:send_payment_request",
+        "user:make_payment",
+        "assistant:resume_line",
+        "user:reboot_device",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0034",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "assistant:send_payment_request",
+        "user:make_payment",
+        "assistant:resume_line",
+        "user:reboot_device",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0035",
+      "steps": [
+        "user:grant_app_permission",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0036",
+      "steps": [
+        "user:grant_app_permission",
+        "user:grant_app_permission",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0037",
+      "steps": [
+        "user:set_network_mode_preference",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0038",
+      "steps": [
+        "user:set_network_mode_preference",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0039",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0040",
+      "steps": [
+        "user:grant_app_permission",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0041",
+      "steps": [
+        "user:grant_app_permission",
+        "user:grant_app_permission",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0042",
+      "steps": [
+        "user:toggle_wifi_calling",
+        "user:toggle_data",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0043",
+      "steps": [
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:toggle_data",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0044",
+      "steps": [
+        "user:grant_app_permission",
+        "assistant:refuel_data",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0045",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0046",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0047",
+      "steps": [
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:reseat_sim_card",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0048",
+      "steps": [
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0049",
+      "steps": [
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "assistant:refuel_data"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0050",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:grant_app_permission",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0051",
+      "steps": [
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0052",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0053",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:grant_app_permission",
+        "user:grant_app_permission",
+        "assistant:refuel_data",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0054",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:toggle_data",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0055",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0056",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "user:reseat_sim_card",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0057",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:grant_app_permission",
+        "user:grant_app_permission",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0058",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0059",
+      "steps": [
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0060",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0061",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0062",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0063",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0064",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0065",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0066",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    },
+    {
+      "workflow_id": "WF-0067",
+      "steps": [
+        "user:toggle_airplane_mode",
+        "user:set_network_mode_preference",
+        "user:toggle_wifi_calling",
+        "user:reset_apn_settings",
+        "user:reboot_device",
+        "user:grant_app_permission",
+        "user:grant_app_permission",
+        "user:toggle_data",
+        "assistant:refuel_data",
+        "user:reseat_sim_card",
+        "assistant:enable_roaming",
+        "user:toggle_roaming"
+      ],
+      "training_frequency": 1,
+      "source": "tasks/train.jsonl",
+      "warning": "Reference trajectory is not necessarily the unique correct path."
+    }
+  ]
+}

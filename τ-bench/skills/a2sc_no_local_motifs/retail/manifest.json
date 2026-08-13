@@ -1,0 +1,30 @@
+{
+  "benchmark": "tau3-bench",
+  "method": "a2sc_no_local_motifs",
+  "domain": "retail",
+  "compiler_backend": "deterministic_bootstrap",
+  "effective_compiler_backend": "deterministic_structured",
+  "model": null,
+  "input_hash": "1a00fcefa247fb6a3bffc0d8b3028a4dacb3796e2d5db4c9b1c14abe40ba0e47",
+  "compiler_code_hash": "d1c67980895b00d3a3f68836623b6e65c8a049db2334905c765b15f56c2c5667",
+  "uses_train_tasks": true,
+  "uses_held_out_tasks": false,
+  "counts": {
+    "policy_sections": 12,
+    "tools": 16,
+    "knowledge_documents": 0,
+    "knowledge_atoms": 28,
+    "typed_atoms": 260,
+    "tool_cards": 16,
+    "local_motifs": 0,
+    "action_modules": 16,
+    "workflow_patterns": 52,
+    "graph_patterns": 0,
+    "semantic_graph_edges": 0
+  },
+  "package_contract": "action_modules.v2",
+  "package_contract_hash": "a764bf4ea93d78d8b9c04aed58bb055476293b95f7c2e86686827d7ba7c5ddd0",
+  "runtime_graph_traversal": false,
+  "llm": {},
+  "duration_seconds": 0.0494
+}

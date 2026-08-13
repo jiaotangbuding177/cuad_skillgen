@@ -1,0 +1,902 @@
+{
+  "offline_ready": true,
+  "live_execution_ready": false,
+  "formal_results_ready": false,
+  "checks": [
+    {
+      "check": "source_manifest",
+      "ok": true,
+      "detail": "frozen source manifest"
+    },
+    {
+      "check": "upstream_commit",
+      "ok": true,
+      "detail": "668d3bcd135c02aa3438f987ef45735b7c163ee3"
+    },
+    {
+      "check": "data:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\data\\processed\\retail\\manifest.json"
+    },
+    {
+      "check": "data:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\data\\processed\\airline\\manifest.json"
+    },
+    {
+      "check": "data:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\data\\processed\\telecom\\manifest.json"
+    },
+    {
+      "check": "data:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\data\\processed\\banking_knowledge\\manifest.json"
+    },
+    {
+      "check": "skill:no_skill:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\no_skill\\retail"
+    },
+    {
+      "check": "package_v1:no_skill:retail",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:no_skill:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\no_skill\\\\retail', 'package_hash': '9be434159b845e302182c7e3e43b5aec3af336fc8f5130f95e34b472ecaf6438', 'method': 'no_skill', 'domain': 'retail', 'module_count': 0, 'catalog_chars': 163, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:no_skill:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\no_skill\\airline"
+    },
+    {
+      "check": "package_v1:no_skill:airline",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:no_skill:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\no_skill\\\\airline', 'package_hash': '660ca84e5e51fc416d494d84eff48b1359ac1fbed53bc23492653c4797d47284', 'method': 'no_skill', 'domain': 'airline', 'module_count': 0, 'catalog_chars': 163, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:no_skill:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\no_skill\\telecom"
+    },
+    {
+      "check": "package_v1:no_skill:telecom",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:no_skill:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\no_skill\\\\telecom', 'package_hash': '5f7544ff1e14becc089cc2350052bb3483d1cde0093eb25b2b0ba48d0b6f8f01', 'method': 'no_skill', 'domain': 'telecom', 'module_count': 0, 'catalog_chars': 163, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:no_skill:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\no_skill\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:no_skill:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:no_skill:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\no_skill\\\\banking_knowledge', 'package_hash': '31142e5e1b07484d057e34e51316bf045634d8deaa7d18c3c6de5a741ffcfaba', 'method': 'no_skill', 'domain': 'banking_knowledge', 'module_count': 0, 'catalog_chars': 163, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:raw_policy_rag:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\raw_policy_rag\\retail"
+    },
+    {
+      "check": "package_v1:raw_policy_rag:retail",
+      "ok": true,
+      "detail": "{'skill': 14, 'atom': 28, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:raw_policy_rag:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\raw_policy_rag\\\\retail', 'package_hash': '3f72fe9d7da1ee5e9e760e7b20ef1ecf81fc3d8c27a721d1e608e301c458b111', 'method': 'raw_policy_rag', 'domain': 'retail', 'module_count': 12, 'catalog_chars': 2141, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:raw_policy_rag:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\raw_policy_rag\\airline"
+    },
+    {
+      "check": "package_v1:raw_policy_rag:airline",
+      "ok": true,
+      "detail": "{'skill': 10, 'atom': 23, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:raw_policy_rag:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\raw_policy_rag\\\\airline', 'package_hash': '6ae1f017886aa1b4078db2527992dd80f3f009a905ec80e74c44c4c379223189', 'method': 'raw_policy_rag', 'domain': 'airline', 'module_count': 9, 'catalog_chars': 1615, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:raw_policy_rag:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\raw_policy_rag\\telecom"
+    },
+    {
+      "check": "package_v1:raw_policy_rag:telecom",
+      "ok": true,
+      "detail": "{'skill': 49, 'atom': 94, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:raw_policy_rag:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\raw_policy_rag\\\\telecom', 'package_hash': 'ce244d60d99d37aacd07df41d4e0a60ca7fbefcfc94094192b3b3d4610387faf', 'method': 'raw_policy_rag', 'domain': 'telecom', 'module_count': 51, 'catalog_chars': 9597, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:raw_policy_rag:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\raw_policy_rag\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:raw_policy_rag:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 4, 'atom': 23, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:raw_policy_rag:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\raw_policy_rag\\\\banking_knowledge', 'package_hash': '44e1c09611fd80981ee06558d3b832dde4cb549a28cca553d64e725c0ae47843', 'method': 'raw_policy_rag', 'domain': 'banking_knowledge', 'module_count': 2, 'catalog_chars': 539, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:native_prompt_skill:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\native_prompt_skill\\retail"
+    },
+    {
+      "check": "package_v1:native_prompt_skill:retail",
+      "ok": true,
+      "detail": "{'skill': 14, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:native_prompt_skill:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\native_prompt_skill\\\\retail', 'package_hash': 'e65fe640c3a3a4254e9871c396df20768ab79f74b354a6a930269d41ef33b2e9', 'method': 'native_prompt_skill', 'domain': 'retail', 'module_count': 14, 'catalog_chars': 2935, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:native_prompt_skill:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\native_prompt_skill\\airline"
+    },
+    {
+      "check": "package_v1:native_prompt_skill:airline",
+      "ok": true,
+      "detail": "{'skill': 10, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:native_prompt_skill:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\native_prompt_skill\\\\airline', 'package_hash': '9213dd2672be69ae10995264329b123e052dfa865ac9f7928b2454a8aa3d2742', 'method': 'native_prompt_skill', 'domain': 'airline', 'module_count': 10, 'catalog_chars': 2117, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:native_prompt_skill:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\native_prompt_skill\\telecom"
+    },
+    {
+      "check": "package_v1:native_prompt_skill:telecom",
+      "ok": true,
+      "detail": "{'skill': 49, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:native_prompt_skill:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\native_prompt_skill\\\\telecom', 'package_hash': 'a780b788579f8009047ac6fb948765f662d40b4976c69cc202965ccaa2d28443', 'method': 'native_prompt_skill', 'domain': 'telecom', 'module_count': 50, 'catalog_chars': 11039, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:native_prompt_skill:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\native_prompt_skill\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:native_prompt_skill:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 4, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:native_prompt_skill:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\native_prompt_skill\\\\banking_knowledge', 'package_hash': '4e76d0518f6c6b9177dfb3dc440680a04d27e54af0327c06e0a28330b1bd45aa', 'method': 'native_prompt_skill', 'domain': 'banking_knowledge', 'module_count': 4, 'catalog_chars': 1037, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:schema_prompt_skill:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\schema_prompt_skill\\retail"
+    },
+    {
+      "check": "package_v1:schema_prompt_skill:retail",
+      "ok": true,
+      "detail": "{'skill': 16, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:schema_prompt_skill:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\schema_prompt_skill\\\\retail', 'package_hash': '889a4ede549a6b7e2aa29d1f7b25a3f64cdaef2b6d3921f59dc1e71910df1394', 'method': 'schema_prompt_skill', 'domain': 'retail', 'module_count': 16, 'catalog_chars': 3319, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:schema_prompt_skill:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\schema_prompt_skill\\airline"
+    },
+    {
+      "check": "package_v1:schema_prompt_skill:airline",
+      "ok": true,
+      "detail": "{'skill': 12, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:schema_prompt_skill:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\schema_prompt_skill\\\\airline', 'package_hash': 'f72be79208536f41bdb4e054649f4318a1247146948e51f0589f889f00f1c20f', 'method': 'schema_prompt_skill', 'domain': 'airline', 'module_count': 12, 'catalog_chars': 2503, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:schema_prompt_skill:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\schema_prompt_skill\\telecom"
+    },
+    {
+      "check": "package_v1:schema_prompt_skill:telecom",
+      "ok": true,
+      "detail": "{'skill': 51, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:schema_prompt_skill:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\schema_prompt_skill\\\\telecom', 'package_hash': 'fb563cbe418190a2c44e033ed3fdbc94b6201813bfedd6fd018398a9ca8212b1', 'method': 'schema_prompt_skill', 'domain': 'telecom', 'module_count': 52, 'catalog_chars': 11425, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:schema_prompt_skill:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\schema_prompt_skill\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:schema_prompt_skill:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 6, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:schema_prompt_skill:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\schema_prompt_skill\\\\banking_knowledge', 'package_hash': '7f99b7abe81f2f775d3a259d21e54212fc79f3a36903ac814ee182edee6dd5c1', 'method': 'schema_prompt_skill', 'domain': 'banking_knowledge', 'module_count': 6, 'catalog_chars': 1443, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:summary2skill:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\summary2skill\\retail"
+    },
+    {
+      "check": "package_v1:summary2skill:retail",
+      "ok": true,
+      "detail": "{'skill': 3, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:summary2skill:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\summary2skill\\\\retail', 'package_hash': '910ca88098431cd7d0e0020321c30ca000714adeb374447c5ce3e93ef97e6ba4', 'method': 'summary2skill', 'domain': 'retail', 'module_count': 3, 'catalog_chars': 754, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:summary2skill:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\summary2skill\\airline"
+    },
+    {
+      "check": "package_v1:summary2skill:airline",
+      "ok": true,
+      "detail": "{'skill': 3, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:summary2skill:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\summary2skill\\\\airline', 'package_hash': '34800b9bfb2b223056b233416a4cc62c5b8e2590b01471b9560f3fcbbc0e82c8', 'method': 'summary2skill', 'domain': 'airline', 'module_count': 3, 'catalog_chars': 759, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:summary2skill:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\summary2skill\\telecom"
+    },
+    {
+      "check": "package_v1:summary2skill:telecom",
+      "ok": true,
+      "detail": "{'skill': 3, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:summary2skill:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\summary2skill\\\\telecom', 'package_hash': '7c453794c8ea027fed3368f02b11e8fcbd9b0824b178f7a3f6f13b6c2d3fa77d', 'method': 'summary2skill', 'domain': 'telecom', 'module_count': 5, 'catalog_chars': 1185, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:summary2skill:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\summary2skill\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:summary2skill:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 3, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:summary2skill:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\summary2skill\\\\banking_knowledge', 'package_hash': '8742c66ce494c20d67295148400688a2850aac0d20beaa6aae82c36ee8277926', 'method': 'summary2skill', 'domain': 'banking_knowledge', 'module_count': 3, 'catalog_chars': 809, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:document_tool_maker:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\document_tool_maker\\retail"
+    },
+    {
+      "check": "package_v1:document_tool_maker:retail",
+      "ok": true,
+      "detail": "{'skill': 15, 'atom': 16, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:document_tool_maker:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\document_tool_maker\\\\retail', 'package_hash': 'f270a1db635d5333dcfb2dc34e8cc137833f5ffe9f05721273ab3d25de47badf', 'method': 'document_tool_maker', 'domain': 'retail', 'module_count': 16, 'catalog_chars': 4671, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:document_tool_maker:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\document_tool_maker\\airline"
+    },
+    {
+      "check": "package_v1:document_tool_maker:airline",
+      "ok": true,
+      "detail": "{'skill': 11, 'atom': 14, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:document_tool_maker:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\document_tool_maker\\\\airline', 'package_hash': 'c03c6ceea4bfb59cdf15573397b2d9e74cf053683be1e57834770075bc4635e3', 'method': 'document_tool_maker', 'domain': 'airline', 'module_count': 14, 'catalog_chars': 4023, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:document_tool_maker:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\document_tool_maker\\telecom"
+    },
+    {
+      "check": "package_v1:document_tool_maker:telecom",
+      "ok": true,
+      "detail": "{'skill': 50, 'atom': 43, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:document_tool_maker:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\document_tool_maker\\\\telecom', 'package_hash': 'a41fe6be66da3d90872e35759443a3cd975d5fe263e33f314242364325d44124', 'method': 'document_tool_maker', 'domain': 'telecom', 'module_count': 43, 'catalog_chars': 11449, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:document_tool_maker:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\document_tool_maker\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:document_tool_maker:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 5, 'atom': 21, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:document_tool_maker:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\document_tool_maker\\\\banking_knowledge', 'package_hash': 'c24d3d98bf61d2a73cc179e319cea69fd7bc018469721b9db808d4ca7182d8ea', 'method': 'document_tool_maker', 'domain': 'banking_knowledge', 'module_count': 21, 'catalog_chars': 6509, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:evoskill_compiler:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\evoskill_compiler\\retail"
+    },
+    {
+      "check": "package_v1:evoskill_compiler:retail",
+      "ok": true,
+      "detail": "{'skill': 4, 'atom': 28, 'rule': 12, 'workflow': 52, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:evoskill_compiler:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\evoskill_compiler\\\\retail', 'package_hash': '7ff3bcf7f3848032c8fb764b1bd537c13aacbf108b52678d18756023cf15c2a2', 'method': 'evoskill_compiler', 'domain': 'retail', 'module_count': 5, 'catalog_chars': 1186, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:evoskill_compiler:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\evoskill_compiler\\airline"
+    },
+    {
+      "check": "package_v1:evoskill_compiler:airline",
+      "ok": true,
+      "detail": "{'skill': 4, 'atom': 23, 'rule': 9, 'workflow': 19, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:evoskill_compiler:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\evoskill_compiler\\\\airline', 'package_hash': '205a80988eeee7367b43f317a9460f5ee42798e5149ccd6c7cb134cf36696833', 'method': 'evoskill_compiler', 'domain': 'airline', 'module_count': 5, 'catalog_chars': 1193, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:evoskill_compiler:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\evoskill_compiler\\telecom"
+    },
+    {
+      "check": "package_v1:evoskill_compiler:telecom",
+      "ok": true,
+      "detail": "{'skill': 4, 'atom': 94, 'rule': 51, 'workflow': 67, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:evoskill_compiler:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\evoskill_compiler\\\\telecom', 'package_hash': '5e4a38aa053b4ecba7306d72ba5e08b022b40ec384c1a4c81ee5c13638ee5172', 'method': 'evoskill_compiler', 'domain': 'telecom', 'module_count': 8, 'catalog_chars': 1835, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:evoskill_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\evoskill_compiler\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:evoskill_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 4, 'atom': 23, 'rule': 2, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:evoskill_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\evoskill_compiler\\\\banking_knowledge', 'package_hash': 'cac3329d9e92549b1939d7800ecf8ab23623a22aad98fabed501364ead9b35c4', 'method': 'evoskill_compiler', 'domain': 'banking_knowledge', 'module_count': 4, 'catalog_chars': 1021, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:graph_evoskill_compiler:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\graph_evoskill_compiler\\retail"
+    },
+    {
+      "check": "package_v1:graph_evoskill_compiler:retail",
+      "ok": true,
+      "detail": "{'skill': 15, 'atom': 28, 'rule': 12, 'workflow': 52, 'pattern': 12}"
+    },
+    {
+      "check": "progressive_v2:graph_evoskill_compiler:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\graph_evoskill_compiler\\\\retail', 'package_hash': '22a70fa6b2e3d161611f45a13aec2ec4130c1b046796da96db088d2b61d0535c', 'method': 'graph_evoskill_compiler', 'domain': 'retail', 'module_count': 15, 'catalog_chars': 3506, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': ['knowledge_graph.json', 'pattern_cards.json'], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:graph_evoskill_compiler:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\graph_evoskill_compiler\\airline"
+    },
+    {
+      "check": "package_v1:graph_evoskill_compiler:airline",
+      "ok": true,
+      "detail": "{'skill': 12, 'atom': 23, 'rule': 9, 'workflow': 19, 'pattern': 9}"
+    },
+    {
+      "check": "progressive_v2:graph_evoskill_compiler:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\graph_evoskill_compiler\\\\airline', 'package_hash': '59cc4299914ab5a41829494027435d2c40c5067e1c165b3895f3fa4617f6450a', 'method': 'graph_evoskill_compiler', 'domain': 'airline', 'module_count': 12, 'catalog_chars': 2799, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': ['knowledge_graph.json', 'pattern_cards.json'], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:graph_evoskill_compiler:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\graph_evoskill_compiler\\telecom"
+    },
+    {
+      "check": "package_v1:graph_evoskill_compiler:telecom",
+      "ok": true,
+      "detail": "{'skill': 54, 'atom': 94, 'rule': 51, 'workflow': 67, 'pattern': 51}"
+    },
+    {
+      "check": "progressive_v2:graph_evoskill_compiler:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\graph_evoskill_compiler\\\\telecom', 'package_hash': '86c9c7a60c0ba43fb4426a40e03e9c8bca63f25cf140e5e7c41b03c07e0b12c8', 'method': 'graph_evoskill_compiler', 'domain': 'telecom', 'module_count': 54, 'catalog_chars': 7260, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': ['knowledge_graph.json', 'pattern_cards.json'], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:graph_evoskill_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\graph_evoskill_compiler\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:graph_evoskill_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 5, 'atom': 23, 'rule': 2, 'workflow': 0, 'pattern': 2}"
+    },
+    {
+      "check": "progressive_v2:graph_evoskill_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\graph_evoskill_compiler\\\\banking_knowledge', 'package_hash': '16a6b7172cd7e7b783f22f9391b167f8d3d01510c3ba3c6a98112e826d56363c', 'method': 'graph_evoskill_compiler', 'domain': 'banking_knowledge', 'module_count': 5, 'catalog_chars': 1339, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': ['knowledge_graph.json', 'pattern_cards.json'], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:tool_schema_compiler:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\tool_schema_compiler\\retail"
+    },
+    {
+      "check": "package_v1:tool_schema_compiler:retail",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:tool_schema_compiler:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\tool_schema_compiler\\\\retail', 'package_hash': 'de9128673b1eeab5b4eba7e6e38a00b8cf3f4dbcbba50c50e950e230bb0e1355', 'method': 'tool_schema_compiler', 'domain': 'retail', 'module_count': 16, 'catalog_chars': 4671, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:tool_schema_compiler:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\tool_schema_compiler\\airline"
+    },
+    {
+      "check": "package_v1:tool_schema_compiler:airline",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:tool_schema_compiler:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\tool_schema_compiler\\\\airline', 'package_hash': '832af3ca65d216ba46db1a9e8fe4c308eab42e8a24e70a83c047994a1caf8ea2', 'method': 'tool_schema_compiler', 'domain': 'airline', 'module_count': 14, 'catalog_chars': 4023, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:tool_schema_compiler:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\tool_schema_compiler\\telecom"
+    },
+    {
+      "check": "package_v1:tool_schema_compiler:telecom",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:tool_schema_compiler:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\tool_schema_compiler\\\\telecom', 'package_hash': '5d68750a21fd4c29bdb3f002b0dffc658029219ee6c10439881e4fa2191d64fb', 'method': 'tool_schema_compiler', 'domain': 'telecom', 'module_count': 43, 'catalog_chars': 11449, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:tool_schema_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\tool_schema_compiler\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:tool_schema_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:tool_schema_compiler:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\tool_schema_compiler\\\\banking_knowledge', 'package_hash': '6dec5782ce10e6f3e6275078a275fde634d152e4541f22c2b8615eb3373f667d', 'method': 'tool_schema_compiler', 'domain': 'banking_knowledge', 'module_count': 21, 'catalog_chars': 6509, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc\\retail"
+    },
+    {
+      "check": "package_v1:a2sc:retail",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc\\\\retail', 'package_hash': 'dc87003aa3d7258d27ee252aecdfddea585b39bff26ea3d4e247099c251c3269', 'method': 'a2sc', 'domain': 'retail', 'module_count': 16, 'catalog_chars': 5204, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc\\airline"
+    },
+    {
+      "check": "package_v1:a2sc:airline",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc\\\\airline', 'package_hash': 'e2bd608cbd165d697ec7bc7982f8d71a44a9975682591d3f145b97f2fc5876c8', 'method': 'a2sc', 'domain': 'airline', 'module_count': 14, 'catalog_chars': 4138, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc\\telecom"
+    },
+    {
+      "check": "package_v1:a2sc:telecom",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc\\\\telecom', 'package_hash': 'de01e62af44583bf0981cf494beed582b5b0bac56a94663e14197896d05d2050', 'method': 'a2sc', 'domain': 'telecom', 'module_count': 43, 'catalog_chars': 11449, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:a2sc:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc\\\\banking_knowledge', 'package_hash': '84daa0c04eae3d4fd12e750923bf056e837334ce03ae0cde6fd32e92316eb0d4', 'method': 'a2sc', 'domain': 'banking_knowledge', 'module_count': 21, 'catalog_chars': 6509, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:g_a2sc:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\g_a2sc\\retail"
+    },
+    {
+      "check": "package_v1:g_a2sc:retail",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:g_a2sc:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\g_a2sc\\\\retail', 'package_hash': 'e63bfb6b3405ae84f33404c62e03999037a2058944c0f6a06a6fadec8216d3e7', 'method': 'g_a2sc', 'domain': 'retail', 'module_count': 16, 'catalog_chars': 5204, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': ['knowledge_graph.json'], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:g_a2sc:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\g_a2sc\\airline"
+    },
+    {
+      "check": "package_v1:g_a2sc:airline",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:g_a2sc:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\g_a2sc\\\\airline', 'package_hash': 'b650aa1f77dd472b5acc79e8a5f96cd38f93e28c4b718454be779e13eade6bef', 'method': 'g_a2sc', 'domain': 'airline', 'module_count': 14, 'catalog_chars': 4138, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': ['knowledge_graph.json'], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:g_a2sc:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\g_a2sc\\telecom"
+    },
+    {
+      "check": "package_v1:g_a2sc:telecom",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:g_a2sc:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\g_a2sc\\\\telecom', 'package_hash': 'c2102e7444a0312f1171fc1d0712b82315bf8da92930e0868315bd6a472fa44c', 'method': 'g_a2sc', 'domain': 'telecom', 'module_count': 43, 'catalog_chars': 11449, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': ['knowledge_graph.json'], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:g_a2sc:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\g_a2sc\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:g_a2sc:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:g_a2sc:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\g_a2sc\\\\banking_knowledge', 'package_hash': '5eb8846137b39f4271d2a946bd9036e58a653b22bbaeded4ae4c578129676746', 'method': 'g_a2sc', 'domain': 'banking_knowledge', 'module_count': 21, 'catalog_chars': 6509, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': ['knowledge_graph.json'], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_typed_atoms:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_typed_atoms\\retail"
+    },
+    {
+      "check": "package_v1:a2sc_no_typed_atoms:retail",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_typed_atoms:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_typed_atoms\\\\retail', 'package_hash': '7359086964b5032ddbc8f8587100ae69aca3ed6b881a30110abe83cb91992875', 'method': 'a2sc_no_typed_atoms', 'domain': 'retail', 'module_count': 12, 'catalog_chars': 2141, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_typed_atoms:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_typed_atoms\\airline"
+    },
+    {
+      "check": "package_v1:a2sc_no_typed_atoms:airline",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_typed_atoms:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_typed_atoms\\\\airline', 'package_hash': '08b22f4b115e7024da9982963b7c3fc20d59c6a782654b30f9f81639053e04e4', 'method': 'a2sc_no_typed_atoms', 'domain': 'airline', 'module_count': 9, 'catalog_chars': 1615, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_typed_atoms:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_typed_atoms\\telecom"
+    },
+    {
+      "check": "package_v1:a2sc_no_typed_atoms:telecom",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_typed_atoms:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_typed_atoms\\\\telecom', 'package_hash': '8315d2915f2a8ef8ecb91894b1f6cc5eebfc7ee62c1cd75f6e6233f783835b42', 'method': 'a2sc_no_typed_atoms', 'domain': 'telecom', 'module_count': 51, 'catalog_chars': 9597, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_typed_atoms:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_typed_atoms\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:a2sc_no_typed_atoms:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_typed_atoms:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_typed_atoms\\\\banking_knowledge', 'package_hash': '6391ec133cea3a1968dde1ae8e4aaeffc1e2f5058f15d17ab72a0e68f4fa9d83', 'method': 'a2sc_no_typed_atoms', 'domain': 'banking_knowledge', 'module_count': 2, 'catalog_chars': 539, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_tool_binding:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_tool_binding\\retail"
+    },
+    {
+      "check": "package_v1:a2sc_no_tool_binding:retail",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_tool_binding:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_tool_binding\\\\retail', 'package_hash': '4cb1503eddf6f7d05d398de581350c2296f9b0bb1ce4ac7cfb7ae3d0ff0ccb19', 'method': 'a2sc_no_tool_binding', 'domain': 'retail', 'module_count': 12, 'catalog_chars': 2635, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_tool_binding:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_tool_binding\\airline"
+    },
+    {
+      "check": "package_v1:a2sc_no_tool_binding:airline",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_tool_binding:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_tool_binding\\\\airline', 'package_hash': '8ae2437dc8469b8b5864e4129cf33b44ca7ed41387e7962d1c1566d84e8d19a2', 'method': 'a2sc_no_tool_binding', 'domain': 'airline', 'module_count': 12, 'catalog_chars': 2647, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_tool_binding:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_tool_binding\\telecom"
+    },
+    {
+      "check": "package_v1:a2sc_no_tool_binding:telecom",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_tool_binding:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_tool_binding\\\\telecom', 'package_hash': 'b8d821b9c4808902e874bcf4cb33ffd395a04389b957fc92e4d18b5f8ccd23d4', 'method': 'a2sc_no_tool_binding', 'domain': 'telecom', 'module_count': 14, 'catalog_chars': 3039, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_tool_binding:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_tool_binding\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:a2sc_no_tool_binding:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_tool_binding:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_tool_binding\\\\banking_knowledge', 'package_hash': 'b8dd35fd22c741c090d002ee47e700a35af675407d003975f9ba7786dbd85c36', 'method': 'a2sc_no_tool_binding', 'domain': 'banking_knowledge', 'module_count': 11, 'catalog_chars': 2573, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_local_motifs:retail",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_local_motifs\\retail"
+    },
+    {
+      "check": "package_v1:a2sc_no_local_motifs:retail",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_local_motifs:retail",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_local_motifs\\\\retail', 'package_hash': '4497352eba537483ee7d8c89fb4fbcb8d7940ee9baaeacb84b206c97d02ecbda', 'method': 'a2sc_no_local_motifs', 'domain': 'retail', 'module_count': 16, 'catalog_chars': 4671, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_local_motifs:airline",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_local_motifs\\airline"
+    },
+    {
+      "check": "package_v1:a2sc_no_local_motifs:airline",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_local_motifs:airline",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_local_motifs\\\\airline', 'package_hash': 'b37d852e9711f98f1e5d147248f8fc558b22eae48f33b009bf58b984dcdb096e', 'method': 'a2sc_no_local_motifs', 'domain': 'airline', 'module_count': 14, 'catalog_chars': 4023, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_local_motifs:telecom",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_local_motifs\\telecom"
+    },
+    {
+      "check": "package_v1:a2sc_no_local_motifs:telecom",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_local_motifs:telecom",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_local_motifs\\\\telecom', 'package_hash': 'f0e2bfd4ef859f9baad948c89922f89a27386558d7d094b223ed201942ac9146', 'method': 'a2sc_no_local_motifs', 'domain': 'telecom', 'module_count': 43, 'catalog_chars': 11449, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "skill:a2sc_no_local_motifs:banking_knowledge",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\skills\\a2sc_no_local_motifs\\banking_knowledge"
+    },
+    {
+      "check": "package_v1:a2sc_no_local_motifs:banking_knowledge",
+      "ok": true,
+      "detail": "{'skill': 2, 'atom': 0, 'rule': 0, 'workflow': 0, 'pattern': 0}"
+    },
+    {
+      "check": "progressive_v2:a2sc_no_local_motifs:banking_knowledge",
+      "ok": true,
+      "detail": "{'package_root': 'D:\\\\skillgen\\\\τ-bench\\\\skills\\\\a2sc_no_local_motifs\\\\banking_knowledge', 'package_hash': 'fe27b6adc78fe1af96c550f5b6b858e3f24a509cb789951b20bdac07c34d7a3d', 'method': 'a2sc_no_local_motifs', 'domain': 'banking_knowledge', 'module_count': 21, 'catalog_chars': 6509, 'config': {'max_catalog_chars': 12000, 'max_module_chars': 9000, 'max_active_modules': 2}, 'graph_traversal_enabled': False, 'ignored_compile_time_files': [], 'contract': 'action_modules.v2'}"
+    },
+    {
+      "check": "formal_skill_packages",
+      "ok": false,
+      "detail": "0/56"
+    },
+    {
+      "check": "python_3_12_runtime",
+      "ok": true,
+      "detail": "D:\\skillgen\\τ-bench\\vendor\\tau3-bench\\.venv\\Scripts\\python.exe"
+    },
+    {
+      "check": "tau3_import",
+      "ok": true,
+      "detail": "tau2-ok"
+    },
+    {
+      "check": "live_model_credentials",
+      "ok": false,
+      "detail": "none detected"
+    },
+    {
+      "check": "live_results_exist",
+      "ok": false,
+      "detail": "0 results.json"
+    }
+  ]
+}

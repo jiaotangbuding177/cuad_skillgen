@@ -1,0 +1,5684 @@
+{
+  "atoms": [
+    {
+      "atom_id": "ATOM-005c8bdf0f",
+      "type": "fact",
+      "subject": "Verifying APN (MMSC URL) for MMS",
+      "text": "Without a correct MMSC URL, the user will not be able to send or receive MMS messages.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Verifying APN (MMSC URL) for MMS",
+        "line_start": 194,
+        "line_end": 199
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-00a7e81d24",
+      "type": "escalation",
+      "subject": "Telecom Agent Policy",
+      "text": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-014ca61d54",
+      "type": "precondition",
+      "subject": "check_wifi_calling_status",
+      "text": "Checks if Wi-Fi Calling is enabled on your device.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_wifi_calling_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-016f8dcac2",
+      "type": "actor_constraint",
+      "subject": "set_network_mode_preference",
+      "text": "The set_network_mode_preference tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "set_network_mode_preference"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-01d4f796e7",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**toggle_roaming** - Turns Data Roaming ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-02ba62d82a",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**reset_apn_settings** - Resets your APN settings to the default settings..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-03244f19a0",
+      "type": "fact",
+      "subject": "Overdue Bill Payment",
+      "text": "This will change the status of the bill to AWAITING PAYMENT..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-033ddc9755",
+      "type": "precondition",
+      "subject": "check_wifi_status",
+      "text": "Shows if Wi-Fi is turned on, which network you're connected to (if any), and the signal strength.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_wifi_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0368b897b9",
+      "type": "fact",
+      "subject": "Addressing Data Roaming Problems",
+      "text": "when traveling abroad).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Addressing Data Roaming Problems",
+        "line_start": 136,
+        "line_end": 141
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-037d1602d7",
+      "type": "precondition",
+      "subject": "Overdue Bill Payment",
+      "text": "Always check that the bill status is updated to PAID before informing the user that the bill has been paid.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-03f8c8a235",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Network signal strength (\"📵 No Signal\", \"📶¹ Poor\", \"📶² Fair\", \"📶³ Good\", \"📶⁴ Excellent\").",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0466f3e6c1",
+      "type": "actor_constraint",
+      "subject": "disable_roaming",
+      "text": "The disable_roaming tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "disable_roaming"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-05353a8533",
+      "type": "actor_constraint",
+      "subject": "check_wifi_calling_status",
+      "text": "The check_wifi_calling_status tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_wifi_calling_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0636bd66db",
+      "type": "fact",
+      "subject": "check_app_status",
+      "text": "Shows its permissions and background data usage settings.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_app_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-064febdf4b",
+      "type": "precondition",
+      "subject": "get_bills_for_customer",
+      "text": "Raises: ValueError: If the customer is not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-068fd84271",
+      "type": "communication_requirement",
+      "subject": "Overdue Bill Payment",
+      "text": "Inform the user that a payment request has been sent.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0740aabb26",
+      "type": "precondition",
+      "subject": "Airplane Mode",
+      "text": "If it is enabled, it will prevent any cellular connection.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Airplane Mode",
+        "line_start": 74,
+        "line_end": 78
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-07d5c49f6f",
+      "type": "confirmation",
+      "subject": "Data Refueling",
+      "text": "Confirm the price.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Refueling",
+        "line_start": 130,
+        "line_end": 140
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0834a4c735",
+      "type": "permission",
+      "subject": "toggle_wifi_calling",
+      "text": "This feature allows you to make and receive calls over Wi-Fi instead of the cellular network, which can help in areas with weak cellular signal.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_wifi_calling"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0943907abb",
+      "type": "fact",
+      "subject": "Diagnosing Mobile Data Issues",
+      "text": "When mobile data is unavailable a speed test should return 'no connection'.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnosing Mobile Data Issues",
+        "line_start": 122,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0aa381d86a",
+      "type": "fact",
+      "subject": "Change Plan",
+      "text": "To do so you need to follow these steps.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Change Plan",
+        "line_start": 141,
+        "line_end": 151
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0acb1a568b",
+      "type": "precondition",
+      "subject": "send_payment_request",
+      "text": "Raises: ValueError: If customer not found, bill not found, or if another bill is already awaiting payment.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0ae65db436",
+      "type": "actor_constraint",
+      "subject": "disconnect_vpn",
+      "text": "The disconnect_vpn tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "disconnect_vpn"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0afbffe039",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "Data Roaming is turned OFF on the phone..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0ba5a9593a",
+      "type": "fact",
+      "subject": "Plan",
+      "text": "data limit (in GB).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Plan",
+        "line_start": 60,
+        "line_end": 67
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0bd143b366",
+      "type": "precondition",
+      "subject": "What the user can do on their device",
+      "text": "You must understand those well since as part of technical support you will have to help the customer perform series of actions",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "What the user can do on their device",
+        "line_start": 11,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0cd7a7427b",
+      "type": "precondition",
+      "subject": "refuel_data",
+      "text": "Checks: Line status must be Active, Customer owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0d4b3a8939",
+      "type": "permission",
+      "subject": "toggle_data",
+      "text": "Controls whether your phone can use cellular data for internet access when Wi-Fi is unavailable.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0d66dc1d3e",
+      "type": "precondition",
+      "subject": "enable_roaming",
+      "text": "Raises: ValueError: If customer or line not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "enable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0dca85fae5",
+      "type": "fact",
+      "subject": "Data Plan Limits Reached",
+      "text": "Change to a plan with more data..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Data Plan Limits Reached",
+        "line_start": 151,
+        "line_end": 158
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0df04798e1",
+      "type": "precondition",
+      "subject": "Unsuitable Network Technology for MMS",
+      "text": "MMS requires at least a 3G network connection; 2G networks are generally not suitable.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Unsuitable Network Technology for MMS",
+        "line_start": 189,
+        "line_end": 193
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0df966efdb",
+      "type": "required_input",
+      "subject": "get_customer_by_phone",
+      "text": "The get_customer_by_phone tool requires the phone_number argument.",
+      "object": "phone_number",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-0ea7f73b8a",
+      "type": "fact",
+      "subject": "toggle_wifi_calling",
+      "text": "Toggles Wi-Fi Calling ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_wifi_calling"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0f8ef0d549",
+      "type": "permission",
+      "subject": "check_wifi_calling_status",
+      "text": "This feature allows you to make and receive calls over a Wi-Fi network instead of using the cellular network.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_wifi_calling_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-0fa2a0515f",
+      "type": "fact",
+      "subject": "Optimizing Network Mode Preferences",
+      "text": "Network mode preferences are the settings that determine the type of cellular network the phone will connect to.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Optimizing Network Mode Preferences",
+        "line_start": 159,
+        "line_end": 163
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-0fd3c09f48",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_network_status** - Checks your phone's connection status to cellular networks and Wi-Fi.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-10e2858a5e",
+      "type": "fact",
+      "subject": "SIM Card Issues",
+      "text": "Use `check_sim_status()` to check the status of the SIM card.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "SIM Card Issues",
+        "line_start": 79,
+        "line_end": 87
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-11b9116a3f",
+      "type": "precondition",
+      "subject": "Telecom Agent Policy",
+      "text": "You should only make one tool call at a time, and if you make a tool call, you should not respond to the user simultaneously.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-11e8c5efe7",
+      "type": "fact",
+      "subject": "toggle_data",
+      "text": "Toggles your phone's mobile data connection ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1280d8d1e0",
+      "type": "fact",
+      "subject": "Common MMS Issues and Causes",
+      "text": "**Incorrect APN Settings**: Specifically, a missing or incorrect MMSC URL..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common MMS Issues and Causes",
+        "line_start": 174,
+        "line_end": 180
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-12de65d5c0",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "Returns: A message indicating the user has been transferred to a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-135f65099d",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "Bill exists and belongs to the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-139b587f86",
+      "type": "actor_constraint",
+      "subject": "resume_line",
+      "text": "The resume_line tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-147edcdc6d",
+      "type": "fact",
+      "subject": "Overdue Bill Payment",
+      "text": "Check the bill status to make sure it is overdue..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-151e3d0885",
+      "type": "required_input",
+      "subject": "check_app_status",
+      "text": "The check_app_status tool requires the app_name argument.",
+      "object": "app_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_app_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1536bdd625",
+      "type": "required_input",
+      "subject": "check_app_permissions",
+      "text": "The check_app_permissions tool requires the app_name argument.",
+      "object": "app_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_app_permissions"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-15469c148a",
+      "type": "fact",
+      "subject": "check_apn_settings",
+      "text": "Shows current APN name and MMSC URL for picture messaging.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_apn_settings"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1566524de5",
+      "type": "fact",
+      "subject": "get_customer_by_name",
+      "text": "Returns: List of matching Customer objects.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-16af24433c",
+      "type": "actor_constraint",
+      "subject": "get_bills_for_customer",
+      "text": "The get_bills_for_customer tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1703c850c9",
+      "type": "postcondition",
+      "subject": "Line Suspension",
+      "text": "After you resume the line, the user will have to reboot their device to get service.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line Suspension",
+        "line_start": 119,
+        "line_end": 129
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-178b7fdd94",
+      "type": "postcondition",
+      "subject": "Overdue Bill Payment",
+      "text": "After the payment is made, the bill status will be updated to PAID..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-18ae09d5af",
+      "type": "fact",
+      "subject": "enable_roaming",
+      "text": "Enables international roaming on a line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "enable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-197af07d2d",
+      "type": "precondition",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "Required for some app functions to work properly..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-19b3cc3611",
+      "type": "precondition",
+      "subject": "check_data_restriction_status",
+      "text": "Checks if your phone has any data-limiting features active.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_data_restriction_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-19da36176c",
+      "type": "required_input",
+      "subject": "suspend_line",
+      "text": "The suspend_line tool requires the reason argument.",
+      "object": "reason",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1a5073cf7b",
+      "type": "permission",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "This feature allows you to make and receive calls over Wi-Fi instead of the cellular network, which can help in areas with weak cellular signal..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1ab88876f1",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Wi-Fi status (\"📡 Connected to [SSID]\" or \"📡 Enabled\").",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1b8d83f2a1",
+      "type": "actor_constraint",
+      "subject": "check_payment_request",
+      "text": "The check_payment_request tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_payment_request"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-1bfd5e7c98",
+      "type": "required_input",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Provides information about connection quality and what activities it can support.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1c030d02b6",
+      "type": "fact",
+      "subject": "Verifying APN (MMSC URL) for MMS",
+      "text": "MMSC is the Multimedia Messaging Service Center.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Verifying APN (MMSC URL) for MMS",
+        "line_start": 194,
+        "line_end": 199
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1c4a02f48b",
+      "type": "fact",
+      "subject": "Change Plan",
+      "text": "Calculate the price of the new plan..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Change Plan",
+        "line_start": 141,
+        "line_end": 151
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1e034c5e4c",
+      "type": "fact",
+      "subject": "refuel_data",
+      "text": "gb_amount: Amount of data to add in gigabytes.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1e1ff7eb94",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_wifi_calling_status** - Checks if Wi-Fi Calling is enabled on your device.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-1e355ace75",
+      "type": "fact",
+      "subject": "enable_roaming",
+      "text": "line_id: ID of the line to enable roaming for.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "enable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1e3d0db53a",
+      "type": "fact",
+      "subject": "get_details_by_id",
+      "text": "Returns: The object corresponding to the ID.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-1f19dfeb9d",
+      "type": "precondition",
+      "subject": "Messaging App Lacks Necessary Permissions",
+      "text": "If `check_app_permissions(app_name=\"messaging\")` shows \"storage\" and \"sms\" permissions are not listed as granted, guide the user to use `grant_app_permission(app_name=\"messaging\", permission=\"storage\")` and `grant_app_permission(app_name=\"messaging\", permission=\"sms\")` to grant the necessary permissions.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Messaging App Lacks Necessary Permissions",
+        "line_start": 204,
+        "line_end": 206
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2017d4f5b2",
+      "type": "precondition",
+      "subject": "suspend_line",
+      "text": "Raises: ValueError: If customer or line not found, or if line is not active.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-205720d885",
+      "type": "precondition",
+      "subject": "Line",
+      "text": "device ID (if applicable).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line",
+        "line_start": 43,
+        "line_end": 59
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-205bbb0764",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_data_restriction_status** - Checks if your phone has any data-limiting features active.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-20bab3cb44",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows if Wi-Fi is turned on, which network you're connected to (if any), and the signal strength..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2147e72f4e",
+      "type": "fact",
+      "subject": "Line",
+      "text": "contract end date.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line",
+        "line_start": 43,
+        "line_end": 59
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-21a59cf1fc",
+      "type": "required_input",
+      "subject": "Introduction",
+      "text": "It provides detailed procedures and troubleshooting steps to assist users experiencing common issues with their phone's cellular service, mobile data connectivity, and Multimedia Messaging Service (MMS).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Introduction",
+        "line_start": 1,
+        "line_end": 10
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-21f80b2d04",
+      "type": "fact",
+      "subject": "toggle_airplane_mode",
+      "text": "Toggles Airplane Mode ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_airplane_mode"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-228a05f62a",
+      "type": "communication_requirement",
+      "subject": "Prerequisites for MMS",
+      "text": "Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" and \"Understanding and Troubleshooting Your Phone's Mobile Data\" sections for more information.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Prerequisites for MMS",
+        "line_start": 170,
+        "line_end": 173
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-253cc7bf21",
+      "type": "permission",
+      "subject": "VPN Connection Issues",
+      "text": "However in some cases, a VPN can cause speed to drop significantly.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "VPN Connection Issues",
+        "line_start": 146,
+        "line_end": 150
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2562908982",
+      "type": "fact",
+      "subject": "check_network_status",
+      "text": "Shows airplane mode status, signal strength, network type, whether mobile data is enabled, and whether data roaming is enabled.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_network_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-26449fecdb",
+      "type": "actor_constraint",
+      "subject": "refuel_data",
+      "text": "The refuel_data tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-275b2f3b5c",
+      "type": "precondition",
+      "subject": "Line Suspension",
+      "text": "You are not allowed to lift the suspension if the line's contract end date is in the past, even if the user has paid all their overdue bills.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line Suspension",
+        "line_start": 119,
+        "line_end": 129
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-27cde4e806",
+      "type": "precondition",
+      "subject": "Prerequisites for Mobile Data",
+      "text": "Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" guide if the user does not have service.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Prerequisites for Mobile Data",
+        "line_start": 106,
+        "line_end": 108
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2843488177",
+      "type": "precondition",
+      "subject": "Data Roaming",
+      "text": "If it is not, you should enable it at no cost for the user.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Roaming",
+        "line_start": 152,
+        "line_end": 156
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2a0e46745a",
+      "type": "precondition",
+      "subject": "check_data_restriction_status",
+      "text": "Shows if Data Saver mode is on.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_data_restriction_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2a4ed0e713",
+      "type": "fact",
+      "subject": "check_apn_settings",
+      "text": "Checks the technical APN settings your phone uses to connect to your carrier's mobile data network.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_apn_settings"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2a5dfcf642",
+      "type": "permission",
+      "subject": "toggle_roaming",
+      "text": "When ON, your phone can use data networks in areas outside your carrier's coverage.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2a71a49e2b",
+      "type": "fact",
+      "subject": "get_bills_for_customer",
+      "text": "Retrieves a list of the customer's bills, most recent first.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2a8fee0695",
+      "type": "required_input",
+      "subject": "refuel_data",
+      "text": "The refuel_data tool requires the line_id argument.",
+      "object": "line_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-2aab1b8ff0",
+      "type": "fact",
+      "subject": "Introduction",
+      "text": "**Understanding and Troubleshooting Your Phone's Cellular Service**: Addresses issues related to network connection, signal strength, and SIM card problems..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Introduction",
+        "line_start": 1,
+        "line_end": 10
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2ab83f556b",
+      "type": "required_input",
+      "subject": "resume_line",
+      "text": "The resume_line tool requires the line_id argument.",
+      "object": "line_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-2aec9610e8",
+      "type": "escalation",
+      "subject": "Device",
+      "text": "last eSIM transfer date",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Device",
+        "line_start": 68,
+        "line_end": 78
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2b1e8cc071",
+      "type": "required_input",
+      "subject": "get_data_usage",
+      "text": "The get_data_usage tool requires the line_id argument.",
+      "object": "line_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_data_usage"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-2b576a85bd",
+      "type": "fact",
+      "subject": "Line",
+      "text": "data usage (in GB).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line",
+        "line_start": 43,
+        "line_end": 59
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2bd119b2f7",
+      "type": "precondition",
+      "subject": "check_payment_request",
+      "text": "Checks if the agent has sent you a payment request.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2c930ce389",
+      "type": "actor_constraint",
+      "subject": "run_speed_test",
+      "text": "The run_speed_test tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "run_speed_test"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-2cdcc7220e",
+      "type": "precondition",
+      "subject": "Addressing Data Roaming Problems",
+      "text": "If the user is outside their carrier's primary coverage area (roaming) and mobile data isn't working, guide them to use `toggle_roaming()` to ensure Data Roaming is ON.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Addressing Data Roaming Problems",
+        "line_start": 136,
+        "line_end": 141
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2ced10c6fc",
+      "type": "fact",
+      "subject": "Common MMS Issues and Causes",
+      "text": "**Connected to 2G Network**: 2G networks are generally not suitable for MMS..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common MMS Issues and Causes",
+        "line_start": 174,
+        "line_end": 180
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2cfe84ccfc",
+      "type": "fact",
+      "subject": "check_network_status",
+      "text": "Checks your phone's connection status to cellular networks and Wi-Fi.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_network_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2e5305b9a8",
+      "type": "precondition",
+      "subject": "Line",
+      "text": "suspension start date (if applicable) There are four line status types: **Active**, **Suspended**, **Pending Activation**, and **Closed**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line",
+        "line_start": 43,
+        "line_end": 59
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2e8b4824cb",
+      "type": "fact",
+      "subject": "Ensuring Basic Connectivity for MMS",
+      "text": "Successful MMS messaging relies on fundamental service and data connectivity.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Ensuring Basic Connectivity for MMS",
+        "line_start": 185,
+        "line_end": 188
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2ee2eb0ad6",
+      "type": "communication_requirement",
+      "subject": "toggle_airplane_mode",
+      "text": "When ON, it disconnects all wireless communications including cellular, Wi-Fi, and Bluetooth.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_airplane_mode"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2ee99a1b85",
+      "type": "required_input",
+      "subject": "set_apn_settings",
+      "text": "The set_apn_settings tool requires the apn_settings argument.",
+      "object": "apn_settings",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "set_apn_settings"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-2ef766a822",
+      "type": "fact",
+      "subject": "disable_roaming",
+      "text": "Args: customer_id: ID of the customer who owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "disable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-2f150c2273",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**reboot_device** - Restarts your phone completely.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-2fa7ef3cc6",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "The line is not roaming enabled..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3105758d71",
+      "type": "fact",
+      "subject": "Airplane Mode",
+      "text": "Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" section for instructions on how to check and turn off Airplane Mode.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Airplane Mode",
+        "line_start": 129,
+        "line_end": 131
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-31083e0e9c",
+      "type": "fact",
+      "subject": "Overdue Bill Payment",
+      "text": "Check the bill amount due.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3195b943e6",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**toggle_airplane_mode** - Turns Airplane Mode ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-326e7641b4",
+      "type": "fact",
+      "subject": "Common MMS Issues and Causes",
+      "text": "* **No Cellular Service or Mobile Data Off/Not Working**: The most common reasons.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common MMS Issues and Causes",
+        "line_start": 174,
+        "line_end": 180
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-32ede81b19",
+      "type": "postcondition",
+      "subject": "Line Suspension",
+      "text": "If the line is suspended and the agent can lift the suspension (per general policy), verify if service is restored..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Line Suspension",
+        "line_start": 93,
+        "line_end": 99
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3438a07278",
+      "type": "actor_constraint",
+      "subject": "get_details_by_id",
+      "text": "The get_details_by_id tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-352271b71f",
+      "type": "fact",
+      "subject": "Incorrect APN Settings",
+      "text": "Access Point Name (APN) settings are crucial for network connectivity.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Incorrect APN Settings",
+        "line_start": 88,
+        "line_end": 92
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-35366abec7",
+      "type": "permission",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "Controls whether your phone can discover and connect to wireless networks for internet access..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-355ae9f439",
+      "type": "required_input",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "Higher-speed networks (5G, 4G) provide faster data but may use more battery..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-358e65b33c",
+      "type": "precondition",
+      "subject": "Optimizing Network Mode Preferences",
+      "text": "If `check_network_mode_preference()` shows \"2G\" or \"3G\", guide the user to use `set_network_mode_preference(mode: str)` with the mode `\"4g_5g_preferred\"` to allow the phone to connect to 5G.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Optimizing Network Mode Preferences",
+        "line_start": 159,
+        "line_end": 163
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-35e1975836",
+      "type": "permission",
+      "subject": "Telecom Agent Policy",
+      "text": "As a telecom agent, you can help users with **technical support**, **overdue bill payment**, **line suspension**, and **plan options**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-364bcf4373",
+      "type": "fact",
+      "subject": "toggle_wifi_calling",
+      "text": "Returns the new Wi-Fi Calling status.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_wifi_calling"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-36bffca323",
+      "type": "required_input",
+      "subject": "enable_roaming",
+      "text": "The enable_roaming tool requires the line_id argument.",
+      "object": "line_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "enable_roaming"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3702da140b",
+      "type": "fact",
+      "subject": "Messaging App Lacks Necessary Permissions",
+      "text": "The messaging app needs specific permissions to handle media and send messages.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Messaging App Lacks Necessary Permissions",
+        "line_start": 204,
+        "line_end": 206
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3870613f44",
+      "type": "precondition",
+      "subject": "can_send_mms",
+      "text": "Checks if the default messaging app can send MMS messages.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "can_send_mms"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-39970bd67d",
+      "type": "permission",
+      "subject": "Investigating Wi-Fi Calling Interference with MMS",
+      "text": "Wi-Fi Calling settings can sometimes conflict with MMS functionality.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Investigating Wi-Fi Calling Interference with MMS",
+        "line_start": 200,
+        "line_end": 203
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-39fd5ba171",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "bill_id: ID of the bill to send payment request for.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3a2a184d8f",
+      "type": "actor_constraint",
+      "subject": "Prerequisites for MMS",
+      "text": "For MMS to work, the user must have cellular service and mobile data (any speed).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Prerequisites for MMS",
+        "line_start": 170,
+        "line_end": 173
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3a8754e2db",
+      "type": "actor_constraint",
+      "subject": "get_customer_by_id",
+      "text": "The get_customer_by_id tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3b3c2b6e06",
+      "type": "permission",
+      "subject": "Ensuring Basic Connectivity for MMS",
+      "text": "First, ensure the user can make calls and that their mobile data is working for other apps (e.g., browsing the web).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Ensuring Basic Connectivity for MMS",
+        "line_start": 185,
+        "line_end": 188
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3b4abd7acb",
+      "type": "fact",
+      "subject": "Change Plan",
+      "text": "Make sure you know what line the user wants to change the plan for..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Change Plan",
+        "line_start": 141,
+        "line_end": 151
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3b5352279d",
+      "type": "fact",
+      "subject": "check_wifi_status",
+      "text": "Checks your Wi-Fi connection status.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_wifi_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3cd213894a",
+      "type": "fact",
+      "subject": "Verifying APN (MMSC URL) for MMS",
+      "text": "Those are specified as part of the APN settings.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Verifying APN (MMSC URL) for MMS",
+        "line_start": 194,
+        "line_end": 199
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3ce5c91244",
+      "type": "required_input",
+      "subject": "set_network_mode_preference",
+      "text": "The set_network_mode_preference tool requires the mode argument.",
+      "object": "mode",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "set_network_mode_preference"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3cef449e5e",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "method type (Credit Card, Debit Card, PayPal).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Payment Method",
+        "line_start": 37,
+        "line_end": 42
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3d1281ccc2",
+      "type": "actor_constraint",
+      "subject": "toggle_wifi_calling",
+      "text": "The toggle_wifi_calling tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_wifi_calling"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3d1f0da1e6",
+      "type": "fact",
+      "subject": "Line",
+      "text": "last SIM replacement date.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line",
+        "line_start": 43,
+        "line_end": 59
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3d58f907cb",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "Common reasons include:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3e063d0483",
+      "type": "postcondition",
+      "subject": "Line Suspension",
+      "text": "You are allowed to lift the suspension after the user has paid all their overdue bills.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line Suspension",
+        "line_start": 119,
+        "line_end": 129
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3e444fd226",
+      "type": "actor_constraint",
+      "subject": "connect_vpn",
+      "text": "The connect_vpn tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "connect_vpn"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-3ed9731b84",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_apn_settings** - Checks the technical APN settings your phone uses to connect to your carrier's mobile data network.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3f2611806c",
+      "type": "precondition",
+      "subject": "Diagnosing Service Issues",
+      "text": "If there is cellular service, the status bar will return a signal strength indicator.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnosing Service Issues",
+        "line_start": 69,
+        "line_end": 72
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-3f37e25bec",
+      "type": "fact",
+      "subject": "grant_app_permission",
+      "text": "permission: The permission to grant, should be lowercase.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "grant_app_permission"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-3ffa262266",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**run_speed_test** - Measures your current internet connection speed (download speed).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4017a0008e",
+      "type": "fact",
+      "subject": "resume_line",
+      "text": "Logic: Sets line status to Active, clears suspension_start_date.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-40df000672",
+      "type": "fact",
+      "subject": "Common Service Issues and Their Causes",
+      "text": "**Airplane Mode is ON**: This disables all wireless radios, including cellular..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Service Issues and Their Causes",
+        "line_start": 58,
+        "line_end": 68
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-40f043dac6",
+      "type": "actor_constraint",
+      "subject": "make_payment",
+      "text": "The make_payment tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "make_payment"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-425ef6f13c",
+      "type": "permission",
+      "subject": "Mobile Data Disabled",
+      "text": "Mobile data switch allows the phone to connect to the internet using the carrier's cellular network.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Mobile Data Disabled",
+        "line_start": 132,
+        "line_end": 135
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-42eae58ddf",
+      "type": "permission",
+      "subject": "Overdue Bill Payment",
+      "text": "You can help the user make a payment for an overdue bill.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4373b4f5bf",
+      "type": "fact",
+      "subject": "Data Plan Limits Reached",
+      "text": "Each plan specify the maxium data usage per month.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Data Plan Limits Reached",
+        "line_start": 151,
+        "line_end": 158
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-444c6f2c7d",
+      "type": "fact",
+      "subject": "refuel_data",
+      "text": "Refuels data for a specific line, adding to the customer's bill.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-44c0327391",
+      "type": "precondition",
+      "subject": "Data Saver Mode",
+      "text": "If `check_data_restriction_status()` shows \"Data Saver mode is ON\", guide the user to use `toggle_data_saver_mode()` to turn it OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Data Saver Mode",
+        "line_start": 142,
+        "line_end": 145
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-44eacdd0ed",
+      "type": "fact",
+      "subject": "Common Service Issues and Their Causes",
+      "text": "**SIM Card Problems**:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Service Issues and Their Causes",
+        "line_start": 58,
+        "line_end": 68
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-45659acefd",
+      "type": "precondition",
+      "subject": "Mobile Data Disabled",
+      "text": "If `check_network_status()` shows mobile data is disabled, guide the user to use `toggle_data()` to turn mobile data ON.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Mobile Data Disabled",
+        "line_start": 132,
+        "line_end": 135
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-45fa63f179",
+      "type": "fact",
+      "subject": "reset_apn_settings",
+      "text": "Resets your APN settings to the default settings.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "reset_apn_settings"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4645aa53fa",
+      "type": "fact",
+      "subject": "Introduction",
+      "text": "This document serves as a comprehensive guide for technical support agents.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Introduction",
+        "line_start": 1,
+        "line_end": 10
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-46bcaa9c39",
+      "type": "required_input",
+      "subject": "disable_roaming",
+      "text": "The disable_roaming tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "disable_roaming"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-46c264862e",
+      "type": "fact",
+      "subject": "run_speed_test",
+      "text": "Measures your current internet connection speed (download speed).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "run_speed_test"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-46c9dbd14a",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "Suspends a specific line (max 6 months).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-46e3a2e7b7",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "No other bills are already awaiting payment for this customer Logic: Sets bill status to AWAITING_PAYMENT and notifies customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-47dcc1e4c3",
+      "type": "actor_constraint",
+      "subject": "check_app_status",
+      "text": "The check_app_status tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_app_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-49069fc946",
+      "type": "precondition",
+      "subject": "get_details_by_id",
+      "text": "The ID must be a valid ID for a Customer, Line, Device, Bill, or Plan.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-49767fc83f",
+      "type": "fact",
+      "subject": "Telecom Agent Policy",
+      "text": "The current time is 2025-02-25 12:08:00 EST.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-49d092cbe6",
+      "type": "communication_requirement",
+      "subject": "Customer Lookup",
+      "text": "You can look up customer information using:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer Lookup",
+        "line_start": 92,
+        "line_end": 101
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4a17843804",
+      "type": "actor_constraint",
+      "subject": "Verifying APN (MMSC URL) for MMS",
+      "text": "After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Verifying APN (MMSC URL) for MMS",
+        "line_start": 194,
+        "line_end": 199
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-4a35339427",
+      "type": "fact",
+      "subject": "refuel_data",
+      "text": "line_id: ID of the line to refuel data for.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4c958c91c4",
+      "type": "actor_constraint",
+      "subject": "check_installed_apps",
+      "text": "The check_installed_apps tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_installed_apps"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-4e88960ed4",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "Logic: Sets line status to Suspended, records suspension_start_date.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-4f43786dc0",
+      "type": "fact",
+      "subject": "disable_roaming",
+      "text": "line_id: ID of the line to disable roaming for.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "disable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-50b9309668",
+      "type": "fact",
+      "subject": "get_bills_for_customer",
+      "text": "Returns: List of Bill objects, ordered by issue date (newest first).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5147f242cc",
+      "type": "required_input",
+      "subject": "get_bills_for_customer",
+      "text": "The get_bills_for_customer tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-514b8ecf9b",
+      "type": "fact",
+      "subject": "Data Plan Limits Reached",
+      "text": "Add more data to the line by \"refueling\" data at a price per GB specified by the plan.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Data Plan Limits Reached",
+        "line_start": 151,
+        "line_end": 158
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-524a5f1311",
+      "type": "permission",
+      "subject": "toggle_data_saver_mode",
+      "text": "When ON, it reduces data usage, which may affect data speed.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_data_saver_mode"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-52d5a17097",
+      "type": "fact",
+      "subject": "toggle_wifi",
+      "text": "Toggles your phone's Wi-Fi radio ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_wifi"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5379c852f8",
+      "type": "exception",
+      "subject": "get_customer_by_id",
+      "text": "Returns: Customer object if found, None otherwise.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-53851725a1",
+      "type": "fact",
+      "subject": "Data Refueling",
+      "text": "To refuel data you should:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Refueling",
+        "line_start": 130,
+        "line_end": 140
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5403b1df7a",
+      "type": "fact",
+      "subject": "Plan",
+      "text": "Each plan specifies:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Plan",
+        "line_start": 60,
+        "line_end": 67
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5492c8be75",
+      "type": "permission",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "**Data Plan Limits Reached**: The user may have used up their monthly data allowance, and the carrier has slowed down or cut off data..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5506ca847f",
+      "type": "fact",
+      "subject": "What is Mobile Data?",
+      "text": "The status bar usually shows icons like \"5G\", \"LTE\", \"4G\", \"3G\", \"H+\", or \"E\" to indicate an active mobile data connection and its type.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "What is Mobile Data?",
+        "line_start": 103,
+        "line_end": 105
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-556bff3fbc",
+      "type": "fact",
+      "subject": "Line",
+      "text": "last plan change date.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line",
+        "line_start": 43,
+        "line_end": 59
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-56804160bc",
+      "type": "permission",
+      "subject": "Overdue Bill Payment",
+      "text": "A user can only have one bill in the AWAITING PAYMENT status at a time..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-569ee865eb",
+      "type": "precondition",
+      "subject": "Data Roaming",
+      "text": "If a line is roaming enabled, the user can use their phone's data connection in areas outside their home network.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Roaming",
+        "line_start": 152,
+        "line_end": 156
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-56dd53d3be",
+      "type": "permission",
+      "subject": "Addressing Data Roaming Problems",
+      "text": "Data roaming allows the user to use their phone's data connection in areas outside their home network (e.g.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Addressing Data Roaming Problems",
+        "line_start": 136,
+        "line_end": 141
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-57050dc4ee",
+      "type": "fact",
+      "subject": "connect_vpn",
+      "text": "Connects to your VPN (Virtual Private Network).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "connect_vpn"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5a3e4527ea",
+      "type": "fact",
+      "subject": "get_customer_by_id",
+      "text": "Retrieves a customer directly by their unique ID.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5a539069b5",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "Sends a payment request to the customer for a specific bill.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-5a6ee39618",
+      "type": "permission",
+      "subject": "What is Mobile Data?",
+      "text": "Mobile data allows the phone to connect to the internet using the carrier's cellular network.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "What is Mobile Data?",
+        "line_start": 103,
+        "line_end": 105
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5af3363f00",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**connect_vpn** - Connects to your VPN (Virtual Private Network)..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-5bafe658c5",
+      "type": "actor_constraint",
+      "subject": "reset_apn_settings",
+      "text": "The reset_apn_settings tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "reset_apn_settings"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-5d9bcc1f6f",
+      "type": "fact",
+      "subject": "get_bills_for_customer",
+      "text": "Args: customer_id: ID of the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-608bbe92c5",
+      "type": "permission",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Signal strength can be \"none\", \"poor\" (1bar), \"fair\" (2 bars), \"good\" (3 bars), \"excellent\" (4+ bars)..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-613cd5c659",
+      "type": "fact",
+      "subject": "Bill",
+      "text": "Each bill contains:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Bill",
+        "line_start": 79,
+        "line_end": 91
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6148928af5",
+      "type": "fact",
+      "subject": "check_status_bar",
+      "text": "Displays network signal strength, mobile data status (enabled, disabled, data saver), Wi-Fi status, and battery level.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_status_bar"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-61a1fc6364",
+      "type": "precondition",
+      "subject": "SIM Card Issues",
+      "text": "If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "SIM Card Issues",
+        "line_start": 79,
+        "line_end": 87
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-629284ddc2",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows airplane mode status, signal strength, network type, whether mobile data is enabled, and whether data roaming is enabled.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-62e6ea1fa1",
+      "type": "fact",
+      "subject": "get_data_usage",
+      "text": "line_id: ID of the line to check usage for.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_data_usage"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6365f1046e",
+      "type": "fact",
+      "subject": "Verifying APN (MMSC URL) for MMS",
+      "text": "Incorrect MMSC URL, are a very common cause of MMS issues.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Verifying APN (MMSC URL) for MMS",
+        "line_start": 194,
+        "line_end": 199
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6390191c26",
+      "type": "precondition",
+      "subject": "Airplane Mode",
+      "text": "If it is ON, guide the user to use `toggle_airplane_mode()` to turn it OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Airplane Mode",
+        "line_start": 74,
+        "line_end": 78
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-647a901d81",
+      "type": "permission",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "This can help resolve recognition issues..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-65aa5ab680",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "expiration date (MM/YYYY format)",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Payment Method",
+        "line_start": 37,
+        "line_end": 42
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-66891ef2bb",
+      "type": "fact",
+      "subject": "transfer_to_human_agents",
+      "text": "Args: summary: A summary of the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-67074befea",
+      "type": "fact",
+      "subject": "refuel_data",
+      "text": "Args: customer_id: ID of the customer who owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6777bb26f7",
+      "type": "fact",
+      "subject": "disable_roaming",
+      "text": "Disables international roaming on a line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "disable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-697215568e",
+      "type": "fact",
+      "subject": "toggle_wifi",
+      "text": "Returns the new Wi-Fi status.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_wifi"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6a5a17b939",
+      "type": "communication_requirement",
+      "subject": "Understanding and Troubleshooting Your Phone's Mobile Data",
+      "text": "This section explains for agents how a user's phone uses mobile data for internet access when Wi-Fi is unavailable, and details troubleshooting for common connectivity and speed issues.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Understanding and Troubleshooting Your Phone's Mobile Data",
+        "line_start": 100,
+        "line_end": 102
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6a667bfca1",
+      "type": "permission",
+      "subject": "reseat_sim_card",
+      "text": "This can help resolve recognition issues.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "reseat_sim_card"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6b950f3b94",
+      "type": "permission",
+      "subject": "reboot_device",
+      "text": "This can help resolve many temporary software glitches by refreshing all running services and connections.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "reboot_device"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6c1d5dc0ac",
+      "type": "permission",
+      "subject": "Optimizing Network Mode Preferences",
+      "text": "Using older modes like 2G/3G can significantly limit speed.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Optimizing Network Mode Preferences",
+        "line_start": 159,
+        "line_end": 163
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6c29508c98",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**disconnect_vpn** - Disconnects any active VPN (Virtual Private Network) connection.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6c4298554e",
+      "type": "required_input",
+      "subject": "Data Refueling",
+      "text": "Apply the refueled data to the line associated with the phone number the user provided.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Refueling",
+        "line_start": 130,
+        "line_end": 140
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6c52288479",
+      "type": "fact",
+      "subject": "refuel_data",
+      "text": "Logic: Adds data to the line and charges customer based on the plan's refueling rate.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6c9070a435",
+      "type": "actor_constraint",
+      "subject": "check_data_restriction_status",
+      "text": "The check_data_restriction_status tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_data_restriction_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-6d456324fc",
+      "type": "fact",
+      "subject": "reseat_sim_card",
+      "text": "Simulates removing and reinserting your SIM card.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "reseat_sim_card"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-6db8aa2bc2",
+      "type": "precondition",
+      "subject": "Airplane Mode",
+      "text": "You can check if Airplane Mode is ON by using `check_status_bar()` or `check_network_status()`.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Airplane Mode",
+        "line_start": 74,
+        "line_end": 78
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6dcba64aa8",
+      "type": "required_input",
+      "subject": "grant_app_permission",
+      "text": "The grant_app_permission tool requires the permission argument.",
+      "object": "permission",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "grant_app_permission"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-6decceba79",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**grant_app_permission** - Gives a specific permission to an app (like access to storage, camera, or location).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6e4b363cf7",
+      "type": "precondition",
+      "subject": "Line Suspension",
+      "text": "Investigate if the line is suspended.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Line Suspension",
+        "line_start": 93,
+        "line_end": 99
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6f29767d2e",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Battery level (\"🔋 [percentage]%\").",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-6fda08e7fb",
+      "type": "fact",
+      "subject": "What the user can do on their device",
+      "text": "Here are the actions a user is able to take on their device.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "What the user can do on their device",
+        "line_start": 11,
+        "line_end": 14
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-705284080a",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "**Roaming Issues (When User is Abroad)**:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-722221a0b5",
+      "type": "actor_constraint",
+      "subject": "toggle_airplane_mode",
+      "text": "The toggle_airplane_mode tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_airplane_mode"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-72850c8fd1",
+      "type": "precondition",
+      "subject": "Data Roaming",
+      "text": "If a user is traveling outside their home network, you should check if the line is roaming enabled.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Roaming",
+        "line_start": 152,
+        "line_end": 156
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-72e42221cd",
+      "type": "fact",
+      "subject": "Overdue Bill Payment",
+      "text": "Check their payment requests using the check_payment_request tool..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-73438e99ab",
+      "type": "precondition",
+      "subject": "check_sim_status",
+      "text": "Shows if the SIM is active, missing, or locked with a PIN or PUK code.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_sim_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7387ffc2f1",
+      "type": "fact",
+      "subject": "resume_line",
+      "text": "Args: customer_id: ID of the customer who owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-73ad32de3f",
+      "type": "precondition",
+      "subject": "Understanding and Troubleshooting Your Phone's Cellular Service",
+      "text": "Good cellular service is required for calls, texts, and mobile data.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Understanding and Troubleshooting Your Phone's Cellular Service",
+        "line_start": 55,
+        "line_end": 57
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-740e725422",
+      "type": "permission",
+      "subject": "Line Suspension",
+      "text": "A line can be suspended for the following reasons:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line Suspension",
+        "line_start": 119,
+        "line_end": 129
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7424f59b8e",
+      "type": "precondition",
+      "subject": "Common MMS Issues and Causes",
+      "text": "**Wi-Fi Calling Configuration**: In some cases, how Wi-Fi Calling is configured can affect MMS, especially if your carrier doesn't support MMS over Wi-Fi..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common MMS Issues and Causes",
+        "line_start": 174,
+        "line_end": 180
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-749104f227",
+      "type": "precondition",
+      "subject": "get_data_usage",
+      "text": "Raises: ValueError: If customer, line, or plan not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_data_usage"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-74bc483010",
+      "type": "communication_requirement",
+      "subject": "SIM Card Issues",
+      "text": "The SIM card is the physical card that contains the user's information and allows the phone to connect to the cellular network.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "SIM Card Issues",
+        "line_start": 79,
+        "line_end": 87
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-76770a9883",
+      "type": "permission",
+      "subject": "Data Refueling",
+      "text": "You can add more data to the line by \"refueling\" data at a price per GB specified by the plan.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Refueling",
+        "line_start": 130,
+        "line_end": 140
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-76c32fd6fa",
+      "type": "actor_constraint",
+      "subject": "check_network_mode_preference",
+      "text": "The check_network_mode_preference tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_network_mode_preference"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-76e1ab1f58",
+      "type": "precondition",
+      "subject": "Diagnosing Mobile Data Issues",
+      "text": "If data is available, a speed test will also return the data speed.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnosing Mobile Data Issues",
+        "line_start": 122,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-772a69ca2f",
+      "type": "fact",
+      "subject": "resume_line",
+      "text": "line_id: ID of the line to resume.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7835ad50ba",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**toggle_data_saver_mode** - Turns Data Saver mode ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-786469ef40",
+      "type": "precondition",
+      "subject": "resume_line",
+      "text": "Returns: Dictionary with success status, message, and updated line if applicable.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-787b185219",
+      "type": "fact",
+      "subject": "What is Mobile Data?",
+      "text": "This enables browsing websites, using apps, streaming video, and sending/receiving emails when not connected to Wi-Fi.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "What is Mobile Data?",
+        "line_start": 103,
+        "line_end": 105
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-787e6eb61a",
+      "type": "fact",
+      "subject": "Data Plan Limits Reached",
+      "text": "Refer to the general policy for guidelines on those options.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Data Plan Limits Reached",
+        "line_start": 151,
+        "line_end": 158
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-79057b82f5",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows if the app has access to features like storage, camera, location, etc..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7961056a59",
+      "type": "fact",
+      "subject": "check_status_bar",
+      "text": "Shows what icons are currently visible in your phone's status bar (the area at the top of the screen).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_status_bar"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7978562352",
+      "type": "required_input",
+      "subject": "Addressing Data Roaming Problems",
+      "text": "You should check that the line associated with the phone number the user provided is roaming enabled.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Addressing Data Roaming Problems",
+        "line_start": 136,
+        "line_end": 141
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-79d822cfab",
+      "type": "precondition",
+      "subject": "get_details_by_id",
+      "text": "Raises: ValueError: If the ID is not found or if the ID format is invalid.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7a00c11cfe",
+      "type": "fact",
+      "subject": "get_customer_by_name",
+      "text": "Searches for customers by name and DOB.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7a38240422",
+      "type": "actor_constraint",
+      "subject": "Incorrect APN Settings",
+      "text": "After resetting the APN settings, the user must be instructed to use `reboot_device()` for the changes to apply.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Incorrect APN Settings",
+        "line_start": 88,
+        "line_end": 92
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7a736f79a2",
+      "type": "precondition",
+      "subject": "Technical Support",
+      "text": "You must first identify the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Technical Support",
+        "line_start": 157,
+        "line_end": 159
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7bc56d5db0",
+      "type": "fact",
+      "subject": "Addressing Data Roaming Problems",
+      "text": "Refer to the general policy for guidelines on enabling roaming.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Addressing Data Roaming Problems",
+        "line_start": 136,
+        "line_end": 141
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7cbd4b4188",
+      "type": "fact",
+      "subject": "grant_app_permission",
+      "text": "Args: app_name: The name of the app to grant the permission to.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "grant_app_permission"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7d248f1051",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_network_mode_preference** - Checks your phone's network mode preference.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-7d3510c468",
+      "type": "fact",
+      "subject": "disconnect_vpn",
+      "text": "Disconnects any active VPN (Virtual Private Network) connection.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "disconnect_vpn"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-7dbc0fb186",
+      "type": "actor_constraint",
+      "subject": "get_customer_by_name",
+      "text": "The get_customer_by_name tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-804753dc3b",
+      "type": "fact",
+      "subject": "toggle_data_saver_mode",
+      "text": "Returns the new data saver mode status.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_data_saver_mode"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-816ae647b9",
+      "type": "precondition",
+      "subject": "send_payment_request",
+      "text": "Warning: This method does not check if the bill is already PAID.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-81b53162b4",
+      "type": "fact",
+      "subject": "Line Suspension",
+      "text": "The user has an overdue bill..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line Suspension",
+        "line_start": 119,
+        "line_end": 129
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-843b13d560",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "**Bad Network Preferences**: The phone is set to an older network technology like 2G/3G.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-850267c75d",
+      "type": "fact",
+      "subject": "Device",
+      "text": "device type (phone, tablet, router, watch, other).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Device",
+        "line_start": 68,
+        "line_end": 78
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-85bfc4778e",
+      "type": "actor_constraint",
+      "subject": "can_send_mms",
+      "text": "The can_send_mms tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "can_send_mms"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-8727d80fdb",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "VPN status (\"🔒 VPN Connected\" when connected).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-87542a2c06",
+      "type": "actor_constraint",
+      "subject": "toggle_data_saver_mode",
+      "text": "The toggle_data_saver_mode tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_data_saver_mode"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-87d42c55cf",
+      "type": "actor_constraint",
+      "subject": "check_sim_status",
+      "text": "The check_sim_status tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_sim_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-87de59878f",
+      "type": "precondition",
+      "subject": "Investigating Wi-Fi Calling Interference with MMS",
+      "text": "If `check_wifi_calling_status()` shows \"Wi-Fi Calling is ON\", guide the user to use `toggle_wifi_calling()` to turn it OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Investigating Wi-Fi Calling Interference with MMS",
+        "line_start": 200,
+        "line_end": 203
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8802725414",
+      "type": "required_input",
+      "subject": "run_speed_test",
+      "text": "Provides information about connection quality and what activities it can support.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "run_speed_test"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-88833846c3",
+      "type": "precondition",
+      "subject": "Common Service Issues and Their Causes",
+      "text": "If the user is experiencing service problems, here are some common causes:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Service Issues and Their Causes",
+        "line_start": 58,
+        "line_end": 68
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8899de6386",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "line IDs associated with their account.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8936a234b8",
+      "type": "precondition",
+      "subject": "Diagnosing MMS Issues",
+      "text": "`can_send_mms()` tool on the user's phone can be used to check if the user is facing an MMS issue.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnosing MMS Issues",
+        "line_start": 181,
+        "line_end": 183
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-89823da871",
+      "type": "required_input",
+      "subject": "grant_app_permission",
+      "text": "The grant_app_permission tool requires the app_name argument.",
+      "object": "app_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "grant_app_permission"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-89cda38d95",
+      "type": "precondition",
+      "subject": "check_vpn_status",
+      "text": "Shows if a VPN is active, connected, and displays any available connection details.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_vpn_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8a085ef01a",
+      "type": "actor_constraint",
+      "subject": "enable_roaming",
+      "text": "The enable_roaming tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "enable_roaming"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-8a16a26257",
+      "type": "permission",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "When ON, roaming is enabled and your phone can use data networks in areas outside your carrier's coverage..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8a1731afaa",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**reseat_sim_card** - Simulates removing and reinserting your SIM card.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8a7954d091",
+      "type": "fact",
+      "subject": "get_customer_by_phone",
+      "text": "Args: phone_number: The phone number to search for.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8adfc08dd3",
+      "type": "fact",
+      "subject": "enable_roaming",
+      "text": "Returns: Message indicating the roaming has been enabled.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "enable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8b38c1d270",
+      "type": "fact",
+      "subject": "Change Plan",
+      "text": "Gather available plans.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Change Plan",
+        "line_start": 141,
+        "line_end": 151
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8b72a20cd1",
+      "type": "fact",
+      "subject": "set_network_mode_preference",
+      "text": "Changes the type of cellular network your phone prefers to connect to (e.g., 5G, LTE/4G, 3G).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "set_network_mode_preference"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8b77feaa82",
+      "type": "communication_requirement",
+      "subject": "check_app_status",
+      "text": "Checks detailed information about a specific app.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_app_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8ba20849aa",
+      "type": "communication_requirement",
+      "subject": "get_data_usage",
+      "text": "Returns: Dictionary with usage information.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_data_usage"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8d01cf6365",
+      "type": "communication_requirement",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "When ON, it disconnects all wireless communications including cellular, Wi-Fi, and Bluetooth..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8d6b8b5b16",
+      "type": "fact",
+      "subject": "get_customer_by_phone",
+      "text": "Finds a customer by their primary contact or line phone number.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-8ee9c78a7f",
+      "type": "precondition",
+      "subject": "Diagnosing Service Issues",
+      "text": "`check_status_bar()` can be used to check if the user is facing a service issue.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnosing Service Issues",
+        "line_start": 69,
+        "line_end": 72
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-8f45fd45aa",
+      "type": "fact",
+      "subject": "Telecom Agent Policy",
+      "text": "You should deny user requests that are against this policy.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9012824307",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows if a VPN is active, connected, and displays any available connection details..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9165cd2bec",
+      "type": "actor_constraint",
+      "subject": "check_network_status",
+      "text": "The check_network_status tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_network_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-9264fd8d80",
+      "type": "required_input",
+      "subject": "set_network_mode_preference",
+      "text": "Higher-speed networks (LTE/5G) provide faster data but may use more battery.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "set_network_mode_preference"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-93127797ac",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_wifi_status** - Checks your Wi-Fi connection status.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-93c293f314",
+      "type": "fact",
+      "subject": "check_installed_apps",
+      "text": "Returns the name of all installed apps on the phone.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_installed_apps"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-93e8bb1caa",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "Stops routing your internet traffic through a VPN server, which might affect connection speed or access to content..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-941049a99e",
+      "type": "required_input",
+      "subject": "disable_roaming",
+      "text": "The disable_roaming tool requires the line_id argument.",
+      "object": "line_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "disable_roaming"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-94224f2477",
+      "type": "fact",
+      "subject": "get_customer_by_id",
+      "text": "Args: customer_id: The unique identifier of the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-94da53fe4a",
+      "type": "precondition",
+      "subject": "Unsuitable Network Technology for MMS",
+      "text": "MMS has specific network requirements; older technologies like 2G are insufficient.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Unsuitable Network Technology for MMS",
+        "line_start": 189,
+        "line_end": 193
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9597ec3b44",
+      "type": "precondition",
+      "subject": "Overdue Bill Payment",
+      "text": "You should always check that the bill is overdue before sending a payment request.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9614181f9a",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "Args: customer_id: ID of the customer who owns the bill.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-97c7502f6f",
+      "type": "communication_requirement",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_app_status** - Checks detailed information about a specific app.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9845f8f888",
+      "type": "fact",
+      "subject": "Diagnosing Mobile Data Issues",
+      "text": "Any speed below 'Excellent' is considered slow.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnosing Mobile Data Issues",
+        "line_start": 122,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-98cfaf4f42",
+      "type": "fact",
+      "subject": "What is MMS?",
+      "text": "When a user sends a photo to a friend via their messaging app, they're typically using MMS.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "What is MMS?",
+        "line_start": 167,
+        "line_end": 169
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-991dd616c6",
+      "type": "required_input",
+      "subject": "get_bills_for_customer",
+      "text": "The get_bills_for_customer tool requires the limit argument.",
+      "object": "limit",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-9996333f0e",
+      "type": "actor_constraint",
+      "subject": "check_app_permissions",
+      "text": "The check_app_permissions tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_app_permissions"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-9a14917082",
+      "type": "precondition",
+      "subject": "Data Plan Limits Reached",
+      "text": "If the user's data usage for a line associated with the phone number the user provided exceeds the plan's data limit, data connectivity will be lost.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Data Plan Limits Reached",
+        "line_start": 151,
+        "line_end": 158
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9c8561b009",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "reason: Reason for suspension.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9cc09c1b89",
+      "type": "fact",
+      "subject": "Airplane Mode",
+      "text": "Airplane Mode is a feature that disables all wireless radios, including cellular.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Airplane Mode",
+        "line_start": 74,
+        "line_end": 78
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9d72629c59",
+      "type": "fact",
+      "subject": "Introduction",
+      "text": "The main sections covered are:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Introduction",
+        "line_start": 1,
+        "line_end": 10
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9d78e25173",
+      "type": "fact",
+      "subject": "send_payment_request",
+      "text": "Returns: Message indicating the payment request has been sent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9d9ab7f82e",
+      "type": "fact",
+      "subject": "Common Service Issues and Their Causes",
+      "text": "Locked due to incorrect PIN/PUK entries..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Service Issues and Their Causes",
+        "line_start": 58,
+        "line_end": 68
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9df9bcd3e3",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "the user explicitly asks for a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-9e261b4854",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows current APN name and MMSC URL for picture messaging..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-9eed494a42",
+      "type": "actor_constraint",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-9fe6b18ff3",
+      "type": "fact",
+      "subject": "make_payment",
+      "text": "Makes a payment for the bill that the agent has sent you.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "make_payment"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a01eb22839",
+      "type": "fact",
+      "subject": "disconnect_vpn",
+      "text": "Stops routing your internet traffic through a VPN server, which might affect connection speed or access to content.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "disconnect_vpn"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a1aa7b8759",
+      "type": "fact",
+      "subject": "get_details_by_id",
+      "text": "Args: id: The ID of the object to retrieve.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a2c2779167",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**toggle_wifi** - Turns your phone's Wi-Fi radio ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a3dd2d480e",
+      "type": "required_input",
+      "subject": "get_customer_by_id",
+      "text": "The get_customer_by_id tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a45b15efa8",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows if the SIM is active, missing, or locked with a PIN or PUK code..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a4b811a84f",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**toggle_data** - Turns your phone's mobile data connection ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a4c9df5597",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_status_bar** - Shows what icons are currently visible in your phone's status bar (the area at the top of the screen).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a522259ce9",
+      "type": "permission",
+      "subject": "SIM Card Issues",
+      "text": "Problems with the SIM card can lead to a complete loss of service.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "SIM Card Issues",
+        "line_start": 79,
+        "line_end": 87
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a59fbf657e",
+      "type": "escalation",
+      "subject": "Telecom Agent Policy",
+      "text": "To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a6134382e5",
+      "type": "actor_constraint",
+      "subject": "reseat_sim_card",
+      "text": "The reseat_sim_card tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "reseat_sim_card"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a65b7fece4",
+      "type": "actor_constraint",
+      "subject": "check_status_bar",
+      "text": "The check_status_bar tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_status_bar"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-a6daae45be",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "**Mobile Data is Turned OFF**: The main switch for mobile data might be disabled in the phone's settings..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a6e22d084d",
+      "type": "fact",
+      "subject": "Device",
+      "text": "IMEI number (optional).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Device",
+        "line_start": 68,
+        "line_end": 78
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a7054b5099",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "Each payment method includes:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Payment Method",
+        "line_start": 37,
+        "line_end": 42
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a7069da6a5",
+      "type": "precondition",
+      "subject": "Incorrect APN Settings",
+      "text": "If `check_apn_settings()` shows \"Incorrect\", guide the user to use `reset_apn_settings()` to reset the APN settings.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Incorrect APN Settings",
+        "line_start": 88,
+        "line_end": 92
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a709264679",
+      "type": "prohibition",
+      "subject": "transfer_to_human_agents",
+      "text": "given the policy and the available tools, you cannot solve the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-a794591c6a",
+      "type": "fact",
+      "subject": "Bill",
+      "text": "status There are five bill status types: **Draft**, **Issued**, **Paid**, **Overdue**, **Awaiting Payment**, and **Disputed**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Bill",
+        "line_start": 79,
+        "line_end": 91
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a7afd9a952",
+      "type": "fact",
+      "subject": "Common Service Issues and Their Causes",
+      "text": "**Incorrect Network Settings**: APN settings might be incorrect resulting in a loss of service..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Service Issues and Their Causes",
+        "line_start": 58,
+        "line_end": 68
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a8ab600591",
+      "type": "fact",
+      "subject": "Common Service Issues and Their Causes",
+      "text": "Not inserted or improperly seated..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Service Issues and Their Causes",
+        "line_start": 58,
+        "line_end": 68
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a9646e725f",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_installed_apps** - Returns the name of all installed apps on the phone..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-a9647a82a2",
+      "type": "actor_constraint",
+      "subject": "get_customer_by_phone",
+      "text": "The get_customer_by_phone tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ab45bceffa",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "**VPN Issues**: An active VPN connection might be slow or misconfigured, affecting data speeds or connectivity..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ab604b0646",
+      "type": "fact",
+      "subject": "Introduction",
+      "text": "The manual is structured to help agents efficiently diagnose and resolve problems by outlining how these services work, common issues, and the tools available for resolution.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Introduction",
+        "line_start": 1,
+        "line_end": 10
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-abeb985e3a",
+      "type": "fact",
+      "subject": "enable_roaming",
+      "text": "Args: customer_id: ID of the customer who owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "enable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ac9114b66d",
+      "type": "fact",
+      "subject": "Line Suspension",
+      "text": "When a line is suspended, the user will not have service.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line Suspension",
+        "line_start": 119,
+        "line_end": 129
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-adffb2ee56",
+      "type": "required_input",
+      "subject": "send_payment_request",
+      "text": "The send_payment_request tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ae445c1ba1",
+      "type": "required_input",
+      "subject": "get_details_by_id",
+      "text": "The get_details_by_id tool requires the id argument.",
+      "object": "id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ae7e297016",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Network technology (e.g., \"5G\", \"4G\", etc.).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-aefcb7a14b",
+      "type": "precondition",
+      "subject": "Verifying APN (MMSC URL) for MMS",
+      "text": "If `check_apn_settings()` shows MMSC URL is not set, guide the user to use `reset_apn_settings()` to reset the APN settings.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Verifying APN (MMSC URL) for MMS",
+        "line_start": 194,
+        "line_end": 199
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-af2807c4a7",
+      "type": "precondition",
+      "subject": "check_sim_status",
+      "text": "Checks if your SIM card is working correctly and displays its current status.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_sim_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-afb4cc9e61",
+      "type": "precondition",
+      "subject": "SIM Card Issues",
+      "text": "If it shows \"Active\", the SIM itself is likely okay.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "SIM Card Issues",
+        "line_start": 79,
+        "line_end": 87
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b06a951606",
+      "type": "precondition",
+      "subject": "get_customer_by_name",
+      "text": "May return multiple matches if names are similar, DOB helps disambiguate.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b0ee714213",
+      "type": "fact",
+      "subject": "Data Plan Limits Reached",
+      "text": "The user has 2 options:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Data Plan Limits Reached",
+        "line_start": 151,
+        "line_end": 158
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b0f186e92c",
+      "type": "permission",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "When ON, it reduces data usage, which may affect data speed..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b1219bb456",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Airplane mode status (\"✈️ Airplane Mode\" when enabled).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b121f27090",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "last extension date (for payment extensions).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b1244b801d",
+      "type": "fact",
+      "subject": "Common MMS Issues and Causes",
+      "text": "**App Permissions**: The messaging app needs permission to access storage (for the media files) and usually SMS functionalities.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common MMS Issues and Causes",
+        "line_start": 174,
+        "line_end": 180
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b1db9d3e7c",
+      "type": "precondition",
+      "subject": "check_vpn_status",
+      "text": "Checks if you're using a VPN (Virtual Private Network) connection.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_vpn_status"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b1fca9024d",
+      "type": "precondition",
+      "subject": "Addressing Data Roaming Problems",
+      "text": "If it is not, the user will not be able to use their phone's data connection in areas outside their home network.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Addressing Data Roaming Problems",
+        "line_start": 136,
+        "line_end": 141
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b31c45eaa2",
+      "type": "fact",
+      "subject": "Line",
+      "text": "Each line has the following attributes:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line",
+        "line_start": 43,
+        "line_end": 59
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b339cfadde",
+      "type": "precondition",
+      "subject": "Overdue Bill Payment",
+      "text": "If the user accepts the payment request, use the make_payment tool to make the payment..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b363fb42df",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "Even with cellular service, mobile data problems might occur.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b3d53b971f",
+      "type": "fact",
+      "subject": "Bill",
+      "text": "line items (charges, fees, credits).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Bill",
+        "line_start": 79,
+        "line_end": 91
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b421bf605e",
+      "type": "fact",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "**Airplane Mode is ON**: Disables all wireless connections, including mobile data..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b4735cd999",
+      "type": "fact",
+      "subject": "Data Refueling",
+      "text": "Each plan specify the maxium data usage per month.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Refueling",
+        "line_start": 130,
+        "line_end": 140
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b521bdf793",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows its permissions and background data usage settings..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b53327cc3b",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**set_apn_settings** - Sets the APN settings for the phone..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b5aefc438a",
+      "type": "permission",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "Controls whether your phone can use cellular data for internet access when Wi-Fi is unavailable..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b5b1543ef1",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Data saver status (\"🔽 Data Saver\" when enabled).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b5d040ec0e",
+      "type": "fact",
+      "subject": "toggle_airplane_mode",
+      "text": "Returns the new state of airplane_mode.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_airplane_mode"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b6ad6e2adb",
+      "type": "permission",
+      "subject": "Change Plan",
+      "text": "You can help the user change to a different plan.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Change Plan",
+        "line_start": 141,
+        "line_end": 151
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b6f3e848b9",
+      "type": "fact",
+      "subject": "Line Suspension",
+      "text": "Refer to the general agent policy for guidelines on handling line suspensions..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Line Suspension",
+        "line_start": 93,
+        "line_end": 99
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b7a2f1c001",
+      "type": "fact",
+      "subject": "reboot_device",
+      "text": "Restarts your phone completely.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "reboot_device"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-b7b1bfb121",
+      "type": "fact",
+      "subject": "SIM Card Issues",
+      "text": "The most common issue is that the SIM card is not properly seated or the user has entered the wrong PIN or PUK code.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "SIM Card Issues",
+        "line_start": 79,
+        "line_end": 87
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b801359935",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows the type of cellular network your phone prefers to connect to (e.g., 5G, 4G, 3G, 2G)..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b875ba65f2",
+      "type": "communication_requirement",
+      "subject": "Understanding and Troubleshooting MMS (Picture/Video Messaging)",
+      "text": "This section explains for agents how to troubleshoot Multimedia Messaging Service (MMS), which allows users to send and receive messages containing pictures, videos, or audio.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Understanding and Troubleshooting MMS (Picture/Video Messaging)",
+        "line_start": 164,
+        "line_end": 166
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-b934a842f9",
+      "type": "fact",
+      "subject": "Device",
+      "text": "activation status.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Device",
+        "line_start": 68,
+        "line_end": 78
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ba11ae1fb7",
+      "type": "actor_constraint",
+      "subject": "toggle_data",
+      "text": "The toggle_data tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_data"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ba5a9f8c08",
+      "type": "fact",
+      "subject": "Verifying APN (MMSC URL) for MMS",
+      "text": "It is the server that handles MMS messages.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Verifying APN (MMSC URL) for MMS",
+        "line_start": 194,
+        "line_end": 199
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-bacef913e0",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "Each customer has a profile containing:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-baddf12699",
+      "type": "precondition",
+      "subject": "disable_roaming",
+      "text": "Raises: ValueError: If customer or line not found.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "disable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-bc305ab2f1",
+      "type": "precondition",
+      "subject": "Ensuring Basic Connectivity for MMS",
+      "text": "Refer to the \"Understanding and Troubleshooting Your Phone's Cellular Service\" and \"Understanding and Troubleshooting Your Phone's Mobile Data\" sections if needed.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Ensuring Basic Connectivity for MMS",
+        "line_start": 185,
+        "line_end": 188
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-bcae4e5780",
+      "type": "actor_constraint",
+      "subject": "toggle_wifi",
+      "text": "The toggle_wifi tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_wifi"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-bce41427fb",
+      "type": "exception",
+      "subject": "refuel_data",
+      "text": "Raises: ValueError: If customer, line, or plan not found, or if checks fail.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-bdb273fd2c",
+      "type": "escalation",
+      "subject": "Line Suspension",
+      "text": "If the suspension cannot be lifted by the agent (e.g., due to contract end date as mentioned in general policy, or other reasons not resolvable by the agent), **escalate to technical support**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Line Suspension",
+        "line_start": 93,
+        "line_end": 99
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-bf0e7f0daf",
+      "type": "fact",
+      "subject": "resume_line",
+      "text": "Resumes a suspended line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-bf12b7526a",
+      "type": "precondition",
+      "subject": "resume_line",
+      "text": "Checks: Line status must be Suspended or Pending Activation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c09072d58a",
+      "type": "fact",
+      "subject": "get_customer_by_name",
+      "text": "Args: full_name: The full name of the customer.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c0b50a0dd5",
+      "type": "actor_constraint",
+      "subject": "set_apn_settings",
+      "text": "The set_apn_settings tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "set_apn_settings"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c0fbc64c69",
+      "type": "actor_constraint",
+      "subject": "Prerequisites for Mobile Data",
+      "text": "For mobile data to work, the user must first have **cellular service**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Prerequisites for Mobile Data",
+        "line_start": 106,
+        "line_end": 108
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c24737f0ae",
+      "type": "fact",
+      "subject": "Change Plan",
+      "text": "Ask the user to select one..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Change Plan",
+        "line_start": 141,
+        "line_end": 151
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c2ce22c271",
+      "type": "permission",
+      "subject": "Diagnosing Mobile Data Issues",
+      "text": "`run_speed_test()` can be used to check for potential issues with mobile data.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnosing Mobile Data Issues",
+        "line_start": 122,
+        "line_end": 127
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c303d49e03",
+      "type": "permission",
+      "subject": "What is MMS?",
+      "text": "MMS is an extension of SMS (text messaging) that allows for multimedia content.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "What is MMS?",
+        "line_start": 167,
+        "line_end": 169
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c42960f5fb",
+      "type": "fact",
+      "subject": "toggle_data",
+      "text": "Returns the new data connection status.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c451f82852",
+      "type": "fact",
+      "subject": "get_customer_by_name",
+      "text": "dob: Date of birth for verification, in the format YYYY-MM-DD.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c4d3efbb56",
+      "type": "actor_constraint",
+      "subject": "reboot_device",
+      "text": "The reboot_device tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "reboot_device"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c50966ecd5",
+      "type": "precondition",
+      "subject": "refuel_data",
+      "text": "Returns: Dictionary with success status, message, charge amount, and updated line if applicable.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c63b108549",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "Args: customer_id: ID of the customer who owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-c7cd4d5dbe",
+      "type": "escalation",
+      "subject": "SIM Card Issues",
+      "text": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "SIM Card Issues",
+        "line_start": 79,
+        "line_end": 87
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c7d6ade5b6",
+      "type": "required_input",
+      "subject": "Telecom Agent Policy",
+      "text": "You should not provide any information, knowledge, or procedures not provided by the user or available tools, or give subjective recommendations or comments.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-c8fee2186a",
+      "type": "actor_constraint",
+      "subject": "get_data_usage",
+      "text": "The get_data_usage tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_data_usage"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-c9678e1413",
+      "type": "permission",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "This can help resolve many temporary software glitches by refreshing all running services and connections.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ca1344dc93",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "address (street, city, state, zip code).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ca1e372782",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_app_permissions** - Checks what permissions a specific app currently has.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-cc596f8c14",
+      "type": "fact",
+      "subject": "get_bills_for_customer",
+      "text": "limit: Maximum number of bills to return.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_bills_for_customer"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-cca539a921",
+      "type": "fact",
+      "subject": "Data Roaming",
+      "text": "We offer data roaming to users who are traveling outside their home network.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Roaming",
+        "line_start": 152,
+        "line_end": 156
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-cf2f9c9e2f",
+      "type": "fact",
+      "subject": "get_data_usage",
+      "text": "Retrieves current billing cycle data usage for a line, including data refueling amount, data limit, and cycle end date.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_data_usage"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-cf642716d5",
+      "type": "precondition",
+      "subject": "Data Refueling",
+      "text": "If the user's data usage for a line exceeds the plan's data limit, data connectivity will be lost.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Refueling",
+        "line_start": 130,
+        "line_end": 140
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d114ff113f",
+      "type": "actor_constraint",
+      "subject": "grant_app_permission",
+      "text": "The grant_app_permission tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "grant_app_permission"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d29efe9c81",
+      "type": "precondition",
+      "subject": "Overdue Bill Payment",
+      "text": "The send payement request tool will not check if the bill is overdue.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d2c4ba9845",
+      "type": "escalation",
+      "subject": "transfer_to_human_agents",
+      "text": "Transfer the user to a human agent, with a summary of the user's issue.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d2f060d0a9",
+      "type": "fact",
+      "subject": "Payment Method",
+      "text": "account number last 4 digits.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Payment Method",
+        "line_start": 37,
+        "line_end": 42
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d46727e4bb",
+      "type": "fact",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Mobile data status (\"📱 Data Enabled\" or \"📵 Data Disabled\").",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d481b35240",
+      "type": "fact",
+      "subject": "Data Refueling",
+      "text": "Ask them how much data they want to refuel.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Refueling",
+        "line_start": 130,
+        "line_end": 140
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d4cd087629",
+      "type": "precondition",
+      "subject": "Telecom Agent Policy",
+      "text": "If you respond to the user, you should not make a tool call at the same time.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d67b350065",
+      "type": "fact",
+      "subject": "grant_app_permission",
+      "text": "Gives a specific permission to an app (like access to storage, camera, or location).",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "grant_app_permission"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d794c275a2",
+      "type": "fact",
+      "subject": "disable_roaming",
+      "text": "Returns: Message indicating the roaming has been enabled.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "disable_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-d7d213f28f",
+      "type": "actor_constraint",
+      "subject": "suspend_line",
+      "text": "The suspend_line tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-d8d97207ac",
+      "type": "fact",
+      "subject": "Bill",
+      "text": "billing period (start and end dates).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Bill",
+        "line_start": 79,
+        "line_end": 91
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-d8db26104f",
+      "type": "permission",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Download speed can be \"unknown\", \"very poor\", \"poor\", \"fair\", \"good\", or \"excellent\"..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-da2d32fb73",
+      "type": "precondition",
+      "subject": "resume_line",
+      "text": "Raises: ValueError: If customer or line not found, or if line is not suspended or pending activation.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-db21520889",
+      "type": "actor_constraint",
+      "subject": "check_vpn_status",
+      "text": "The check_vpn_status tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_vpn_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-db86dcf94d",
+      "type": "fact",
+      "subject": "get_data_usage",
+      "text": "Args: customer_id: ID of the customer who owns the line.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_data_usage"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-dbcd1f47bc",
+      "type": "fact",
+      "subject": "check_app_permissions",
+      "text": "Checks what permissions a specific app currently has.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_app_permissions"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-dbf8fff56c",
+      "type": "permission",
+      "subject": "Data Refueling",
+      "text": "The maximum amount of data that can be refueled is 2GB.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Data Refueling",
+        "line_start": 130,
+        "line_end": 140
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-dcb6cf82e7",
+      "type": "fact",
+      "subject": "Introduction",
+      "text": "**Understanding and Troubleshooting MMS (Picture/Video Messaging)**: Covers issues related to sending and receiving multimedia messages.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Introduction",
+        "line_start": 1,
+        "line_end": 10
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-dd8a996dfa",
+      "type": "required_input",
+      "subject": "suspend_line",
+      "text": "The suspend_line tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-de4bce849e",
+      "type": "permission",
+      "subject": "Common Mobile Data Issues and Causes",
+      "text": "**Data Saver Mode is ON**: This feature restricts background data usage and can make some apps or services seem slow or unresponsive to save data..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Mobile Data Issues and Causes",
+        "line_start": 109,
+        "line_end": 121
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-de9c9c0879",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_vpn_status** - Checks if you're using a VPN (Virtual Private Network) connection.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-deadcf32ab",
+      "type": "confirmation",
+      "subject": "Change Plan",
+      "text": "Confirm the price..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Change Plan",
+        "line_start": 141,
+        "line_end": 151
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e02e33d990",
+      "type": "permission",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "This feature allows you to make and receive calls over a Wi-Fi network instead of using the cellular network..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e0a4772fa1",
+      "type": "fact",
+      "subject": "check_network_mode_preference",
+      "text": "Shows the current network mode preference.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_network_mode_preference"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e0c40e18c1",
+      "type": "required_input",
+      "subject": "send_payment_request",
+      "text": "The send_payment_request tool requires the bill_id argument.",
+      "object": "bill_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e162eae31c",
+      "type": "required_input",
+      "subject": "refuel_data",
+      "text": "The refuel_data tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e1d653f91f",
+      "type": "required_input",
+      "subject": "transfer_to_human_agents",
+      "text": "The transfer_to_human_agents tool requires the summary argument.",
+      "object": "summary",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "transfer_to_human_agents"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e1f39face8",
+      "type": "required_input",
+      "subject": "resume_line",
+      "text": "The resume_line tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "resume_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e21130d536",
+      "type": "precondition",
+      "subject": "send_payment_request",
+      "text": "Always check the bill status before calling this method.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e2e0dd441a",
+      "type": "precondition",
+      "subject": "Unsuitable Network Technology for MMS",
+      "text": "This section explains how to check the network type and change it if necessary.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Unsuitable Network Technology for MMS",
+        "line_start": 189,
+        "line_end": 193
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e34e44e70a",
+      "type": "required_input",
+      "subject": "Change Plan",
+      "text": "Apply the plan to the line associated with the phone number the user provided.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Change Plan",
+        "line_start": 141,
+        "line_end": 151
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e39b4c3c65",
+      "type": "fact",
+      "subject": "Line Suspension",
+      "text": "The line's contract end date is in the past.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line Suspension",
+        "line_start": 119,
+        "line_end": 129
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e48d770d2a",
+      "type": "precondition",
+      "subject": "Customer Lookup",
+      "text": "Full name with date of birth For name lookup, date of birth is required for verification purposes.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer Lookup",
+        "line_start": 92,
+        "line_end": 101
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e65cfd4c76",
+      "type": "actor_constraint",
+      "subject": "toggle_roaming",
+      "text": "The toggle_roaming tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_roaming"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-e689ba4b67",
+      "type": "precondition",
+      "subject": "grant_app_permission",
+      "text": "Required for some app functions to work properly.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "grant_app_permission"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e6919d2a06",
+      "type": "precondition",
+      "subject": "suspend_line",
+      "text": "Checks: Line status must be Active.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-e78ce55661",
+      "type": "fact",
+      "subject": "Telecom Agent Policy",
+      "text": "PLEASE HOLD ON.' to the user.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e94572f35f",
+      "type": "fact",
+      "subject": "Overdue Bill Payment",
+      "text": "To do so you need to follow these steps:.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-e9efd02554",
+      "type": "precondition",
+      "subject": "suspend_line",
+      "text": "Returns: Dictionary with success status, message, and updated line if applicable.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ebce8d67b7",
+      "type": "permission",
+      "subject": "toggle_wifi",
+      "text": "Controls whether your phone can discover and connect to wireless networks for internet access.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_wifi"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ec651ee64f",
+      "type": "required_input",
+      "subject": "refuel_data",
+      "text": "The refuel_data tool requires the gb_amount argument.",
+      "object": "gb_amount",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "refuel_data"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ec9f91837b",
+      "type": "fact",
+      "subject": "Overdue Bill Payment",
+      "text": "Send the user a payment request for the overdue bill..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Overdue Bill Payment",
+        "line_start": 102,
+        "line_end": 118
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ecb33c2859",
+      "type": "actor_constraint",
+      "subject": "send_payment_request",
+      "text": "The send_payment_request tool is owned by the assistant actor.",
+      "object": "assistant",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "send_payment_request"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-ecbb734325",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**set_network_mode_preference** - Changes the type of cellular network your phone prefers to connect to (e.g., 5G, 4G, 3G).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ece51e2987",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "Shows if Data Saver mode is on and whether background data usage is restricted globally..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ee94e77279",
+      "type": "fact",
+      "subject": "Line",
+      "text": "data refueling (in GB).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Line",
+        "line_start": 43,
+        "line_end": 59
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-eed2373646",
+      "type": "fact",
+      "subject": "set_apn_settings",
+      "text": "Sets the APN settings for the phone.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "set_apn_settings"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ef77f5597c",
+      "type": "required_input",
+      "subject": "enable_roaming",
+      "text": "The enable_roaming tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "enable_roaming"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f04cef67f2",
+      "type": "fact",
+      "subject": "Plan",
+      "text": "data refueling price per GB",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Plan",
+        "line_start": 60,
+        "line_end": 67
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f076949ff4",
+      "type": "fact",
+      "subject": "get_details_by_id",
+      "text": "Retrieves the details for a given ID.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_details_by_id"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f0a677e0fa",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**check_sim_status** - Checks if your SIM card is working correctly and displays its current status.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f1440526a4",
+      "type": "precondition",
+      "subject": "Diagnostic Actions (Read-only)",
+      "text": "**can_send_mms** - Checks if the messaging app can send MMS messages.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Diagnostic Actions (Read-only)",
+        "line_start": 15,
+        "line_end": 38
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f18d9b61cc",
+      "type": "escalation",
+      "subject": "Telecom Agent Policy",
+      "text": "You should try your best to resolve the issue for the user before transferring the user to a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Telecom Agent Policy",
+        "line_start": 1,
+        "line_end": 16
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f1e0a3ce32",
+      "type": "actor_constraint",
+      "subject": "check_wifi_status",
+      "text": "The check_wifi_status tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_wifi_status"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f2051ce017",
+      "type": "exception",
+      "subject": "get_customer_by_phone",
+      "text": "Returns: Customer object if found, None otherwise.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_phone"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f2681b9256",
+      "type": "required_input",
+      "subject": "get_customer_by_name",
+      "text": "The get_customer_by_name tool requires the dob argument.",
+      "object": "dob",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f2a9e53ae4",
+      "type": "required_input",
+      "subject": "Understanding and Troubleshooting Your Phone's Cellular Service",
+      "text": "This section details for agents how a user's phone connects to the cellular network (often referred to as \"service\") and provides procedures to troubleshoot common issues.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Understanding and Troubleshooting Your Phone's Cellular Service",
+        "line_start": 55,
+        "line_end": 57
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f4c108941f",
+      "type": "fact",
+      "subject": "Introduction",
+      "text": "**Understanding and Troubleshooting Your Phone's Mobile Data**: Focuses on problems with internet access via the cellular network, including speed and connectivity..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Introduction",
+        "line_start": 1,
+        "line_end": 10
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f4c9491b54",
+      "type": "fact",
+      "subject": "toggle_roaming",
+      "text": "Toggles Data Roaming ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f519ff72e8",
+      "type": "required_input",
+      "subject": "suspend_line",
+      "text": "The suspend_line tool requires the line_id argument.",
+      "object": "line_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f51d1dc2e4",
+      "type": "required_input",
+      "subject": "get_data_usage",
+      "text": "The get_data_usage tool requires the customer_id argument.",
+      "object": "customer_id",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_data_usage"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f631e09d12",
+      "type": "precondition",
+      "subject": "Unsuitable Network Technology for MMS",
+      "text": "If `check_network_status()` shows \"2G\", guide the user to use `set_network_mode_preference(mode: str)` to switch to a network mode that includes 3G, 4G, or 5G (e.g., `\"4g_5g_preferred\"` or `\"4g_only\"`).",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Unsuitable Network Technology for MMS",
+        "line_start": 189,
+        "line_end": 193
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f661d0e4d7",
+      "type": "permission",
+      "subject": "VPN Connection Issues",
+      "text": "VPN (Virtual Private Network) is a feature that encrypts internet traffic and can help improve data speeds and security.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "VPN Connection Issues",
+        "line_start": 146,
+        "line_end": 150
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f7584d7fac",
+      "type": "precondition",
+      "subject": "check_app_permissions",
+      "text": "Shows if the app has access to features like storage, camera, location, etc.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_app_permissions"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-f7abf136d0",
+      "type": "postcondition",
+      "subject": "Ensuring Basic Connectivity for MMS",
+      "text": "This section covers verifying these prerequisites.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Ensuring Basic Connectivity for MMS",
+        "line_start": 185,
+        "line_end": 188
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f7c71aa005",
+      "type": "precondition",
+      "subject": "VPN Connection Issues",
+      "text": "If `check_vpn_status()` shows \"VPN is ON and connected\" and performance level is \"Poor\", guide the user to use `disconnect_vpn()` to disconnect the VPN.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "VPN Connection Issues",
+        "line_start": 146,
+        "line_end": 150
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f82d5dcbe9",
+      "type": "actor_constraint",
+      "subject": "check_apn_settings",
+      "text": "The check_apn_settings tool is owned by the user actor.",
+      "object": "user",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "check_apn_settings"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-f841aa1caa",
+      "type": "escalation",
+      "subject": "Introduction",
+      "text": "Make sure you try all the possible ways to resolve the user's issue before transferring to a human agent.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Introduction",
+        "line_start": 1,
+        "line_end": 10
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-f96a160812",
+      "type": "required_input",
+      "subject": "get_customer_by_name",
+      "text": "The get_customer_by_name tool requires the full_name argument.",
+      "object": "full_name",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "get_customer_by_name"
+      },
+      "origin": "tool_schema"
+    },
+    {
+      "atom_id": "ATOM-fa33b9b8fa",
+      "type": "permission",
+      "subject": "Data Saver Mode",
+      "text": "Data Saver mode is a feature that restricts background data usage and can affect data speeds.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Data Saver Mode",
+        "line_start": 142,
+        "line_end": 145
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-fb7b599026",
+      "type": "fact",
+      "subject": "Fix Actions (Write/Modify)",
+      "text": "**toggle_wifi_calling** - Turns Wi-Fi Calling ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Fix Actions (Write/Modify)",
+        "line_start": 39,
+        "line_end": 54
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-fdb75768be",
+      "type": "fact",
+      "subject": "Common MMS Issues and Causes",
+      "text": "MMS relies on these..",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common MMS Issues and Causes",
+        "line_start": 174,
+        "line_end": 180
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-fdbce16df4",
+      "type": "fact",
+      "subject": "Customer",
+      "text": "goodwill credit usage for the year There are four account status types: **Active**, **Suspended**, **Pending Verification**, and **Closed**.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/main_policy.md",
+        "title": "Customer",
+        "line_start": 19,
+        "line_end": 36
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-fddd24b9cf",
+      "type": "fact",
+      "subject": "suspend_line",
+      "text": "line_id: ID of the line to suspend.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/tools.py",
+        "title": "suspend_line"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-fdf48fc2e3",
+      "type": "fact",
+      "subject": "toggle_roaming",
+      "text": "Returns the new data roaming status.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_roaming"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-fef512244d",
+      "type": "fact",
+      "subject": "toggle_data_saver_mode",
+      "text": "Toggles Data Saver mode ON or OFF.",
+      "source": {
+        "file": "vendor/tau3-bench/src/tau2/domains/telecom/user_tools.py",
+        "title": "toggle_data_saver_mode"
+      },
+      "origin": "tool_description"
+    },
+    {
+      "atom_id": "ATOM-ff8e2cb580",
+      "type": "precondition",
+      "subject": "Line Suspension",
+      "text": "If the line is suspended, the user will not have cellular service.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Line Suspension",
+        "line_start": 93,
+        "line_end": 99
+      },
+      "origin": "policy"
+    },
+    {
+      "atom_id": "ATOM-ffd439158c",
+      "type": "fact",
+      "subject": "Common Service Issues and Their Causes",
+      "text": "**Carrier Issues**: Your line might be inactive due to billing problems.",
+      "source": {
+        "file": "vendor/tau3-bench/data/tau2/domains/telecom/tech_support_manual.md",
+        "title": "Common Service Issues and Their Causes",
+        "line_start": 58,
+        "line_end": 68
+      },
+      "origin": "policy"
+    }
+  ]
+}

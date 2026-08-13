@@ -1,0 +1,64 @@
+{
+  "motifs": [
+    {
+      "motif_id": "MOTIF-e31dffd306",
+      "type": "PRECEDES",
+      "before_actor": "assistant",
+      "before_tool": "get_user_details",
+      "after_actor": "assistant",
+      "after_tool": "get_reservation_details",
+      "support": 7,
+      "confidence": 1.0,
+      "source": "tasks/train.jsonl",
+      "warning": "A local training motif is a soft ordering hint and never overrides policy."
+    },
+    {
+      "motif_id": "MOTIF-87face1a7a",
+      "type": "PRECEDES",
+      "before_actor": "assistant",
+      "before_tool": "update_reservation_flights",
+      "after_actor": "assistant",
+      "after_tool": "update_reservation_baggages",
+      "support": 2,
+      "confidence": 0.5,
+      "source": "tasks/train.jsonl",
+      "warning": "A local training motif is a soft ordering hint and never overrides policy."
+    },
+    {
+      "motif_id": "MOTIF-7849845b63",
+      "type": "PRECEDES",
+      "before_actor": "assistant",
+      "before_tool": "cancel_reservation",
+      "after_actor": "assistant",
+      "after_tool": "book_reservation",
+      "support": 2,
+      "confidence": 0.3333,
+      "source": "tasks/train.jsonl",
+      "warning": "A local training motif is a soft ordering hint and never overrides policy."
+    },
+    {
+      "motif_id": "MOTIF-d3082131a2",
+      "type": "PRECEDES",
+      "before_actor": "assistant",
+      "before_tool": "get_reservation_details",
+      "after_actor": "assistant",
+      "after_tool": "search_direct_flight",
+      "support": 2,
+      "confidence": 0.0588,
+      "source": "tasks/train.jsonl",
+      "warning": "A local training motif is a soft ordering hint and never overrides policy."
+    },
+    {
+      "motif_id": "MOTIF-f0bf9d10c7",
+      "type": "PRECEDES",
+      "before_actor": "assistant",
+      "before_tool": "get_reservation_details",
+      "after_actor": "assistant",
+      "after_tool": "cancel_reservation",
+      "support": 2,
+      "confidence": 0.0588,
+      "source": "tasks/train.jsonl",
+      "warning": "A local training motif is a soft ordering hint and never overrides policy."
+    }
+  ]
+}

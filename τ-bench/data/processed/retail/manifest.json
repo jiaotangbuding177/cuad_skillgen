@@ -1,0 +1,45 @@
+{
+  "benchmark": "tau3-bench",
+  "domain": "retail",
+  "task_counts": {
+    "train": 74,
+    "test": 40,
+    "base": 114
+  },
+  "primary_protocol": "test",
+  "compilation_sources": [
+    "documents/policy_sections.jsonl",
+    "documents/tool_catalog.json",
+    "tasks/train.jsonl"
+  ],
+  "held_out_from_compilation": [
+    "tasks/test.jsonl",
+    "tasks/base.jsonl"
+  ],
+  "policy_sections": 12,
+  "tools": 16,
+  "knowledge_documents": 0,
+  "reference_action_distribution": {
+    "calculate": 13,
+    "cancel_pending_order": 25,
+    "exchange_delivered_order_items": 35,
+    "find_user_id_by_email": 14,
+    "find_user_id_by_name_zip": 61,
+    "get_item_details": 3,
+    "get_order_details": 168,
+    "get_product_details": 54,
+    "get_user_details": 57,
+    "modify_pending_order_address": 24,
+    "modify_pending_order_items": 39,
+    "modify_pending_order_payment": 1,
+    "modify_user_address": 11,
+    "return_delivered_order_items": 41,
+    "transfer_to_human_agents": 4
+  },
+  "reward_basis_distribution": {
+    "DB": 114,
+    "NL_ASSERTION": 112
+  },
+  "task_source_sha256": "f44563d8f36362e2dc58282bb02cfb85010d22f27d9439808758d3e9b2bc16d2",
+  "warning": "Reference actions define a target state, not a unique required trajectory, unless ACTION is in reward_basis."
+}

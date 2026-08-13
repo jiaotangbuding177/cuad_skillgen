@@ -1,0 +1,691 @@
+{
+  "patterns": [
+    {
+      "workflow_id": "WF-001",
+      "actions": [
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 98,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-002",
+      "actions": [
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 87,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-003",
+      "actions": [
+        "cancel_pending_order"
+      ],
+      "training_frequency": 81,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-004",
+      "actions": [
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 68,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-005",
+      "actions": [
+        "modify_pending_order_payment",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 14,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-006",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 13,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-007",
+      "actions": [
+        "cancel_pending_order",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 9,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-008",
+      "actions": [
+        "cancel_pending_order",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 6,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-009",
+      "actions": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 6,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-010",
+      "actions": [
+        "return_delivered_order_items",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 6,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-011",
+      "actions": [
+        "exchange_delivered_order_items",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 5,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-012",
+      "actions": [
+        "modify_pending_order_items",
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 5,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-013",
+      "actions": [
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 5,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-014",
+      "actions": [
+        "exchange_delivered_order_items",
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 5,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-015",
+      "actions": [
+        "modify_pending_order_items",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 4,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-016",
+      "actions": [
+        "cancel_pending_order",
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 4,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-017",
+      "actions": [
+        "exchange_delivered_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 4,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-018",
+      "actions": [
+        "return_delivered_order_items",
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 4,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-019",
+      "actions": [
+        "exchange_delivered_order_items",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 4,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-020",
+      "actions": [
+        "return_delivered_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 3,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-021",
+      "actions": [
+        "cancel_pending_order",
+        "cancel_pending_order",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 3,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-022",
+      "actions": [
+        "modify_pending_order_items",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 3,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-023",
+      "actions": [
+        "return_delivered_order_items",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 3,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-024",
+      "actions": [
+        "modify_pending_order_items",
+        "return_delivered_order_items",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 3,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-025",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 3,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-026",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 3,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-027",
+      "actions": [
+        "modify_pending_order_items",
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-028",
+      "actions": [
+        "cancel_pending_order",
+        "cancel_pending_order",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-029",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "return_delivered_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-030",
+      "actions": [
+        "cancel_pending_order",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-031",
+      "actions": [
+        "cancel_pending_order",
+        "modify_pending_order_payment",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-032",
+      "actions": [
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-033",
+      "actions": [
+        "return_delivered_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-034",
+      "actions": [
+        "modify_pending_order_items",
+        "return_delivered_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-035",
+      "actions": [
+        "exchange_delivered_order_items",
+        "cancel_pending_order",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 2,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-036",
+      "actions": [
+        "cancel_pending_order",
+        "cancel_pending_order",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-037",
+      "actions": [
+        "cancel_pending_order",
+        "cancel_pending_order",
+        "modify_pending_order_address",
+        "modify_pending_order_payment",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-038",
+      "actions": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-039",
+      "actions": [
+        "modify_pending_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-040",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-041",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-042",
+      "actions": [
+        "exchange_delivered_order_items",
+        "modify_pending_order_items",
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-043",
+      "actions": [
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-044",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_payment",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-045",
+      "actions": [
+        "cancel_pending_order",
+        "modify_pending_order_payment",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-046",
+      "actions": [
+        "exchange_delivered_order_items",
+        "modify_pending_order_items",
+        "cancel_pending_order",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-047",
+      "actions": [
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-048",
+      "actions": [
+        "return_delivered_order_items",
+        "return_delivered_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-049",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-050",
+      "actions": [
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "return_delivered_order_items",
+        "modify_pending_order_items",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-051",
+      "actions": [
+        "cancel_pending_order",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "cancel_pending_order",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-052",
+      "actions": [
+        "exchange_delivered_order_items",
+        "return_delivered_order_items",
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-053",
+      "actions": [
+        "return_delivered_order_items",
+        "return_delivered_order_items",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-054",
+      "actions": [
+        "cancel_pending_order",
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-055",
+      "actions": [
+        "cancel_pending_order",
+        "modify_pending_order_items",
+        "return_delivered_order_items",
+        "modify_pending_order_items",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-056",
+      "actions": [
+        "modify_pending_order_address",
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "return_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-057",
+      "actions": [
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-058",
+      "actions": [
+        "return_delivered_order_items",
+        "return_delivered_order_items",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-059",
+      "actions": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "return_delivered_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-060",
+      "actions": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-061",
+      "actions": [
+        "modify_pending_order_payment",
+        "modify_pending_order_address",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-062",
+      "actions": [
+        "exchange_delivered_order_items",
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-063",
+      "actions": [
+        "return_delivered_order_items",
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-064",
+      "actions": [
+        "modify_pending_order_payment",
+        "modify_pending_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_payment",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-065",
+      "actions": [
+        "cancel_pending_order",
+        "return_delivered_order_items",
+        "exchange_delivered_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_payment",
+        "modify_pending_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-066",
+      "actions": [
+        "modify_pending_order_items",
+        "cancel_pending_order",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-067",
+      "actions": [
+        "cancel_pending_order",
+        "modify_pending_order_items",
+        "cancel_pending_order",
+        "cancel_pending_order"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    },
+    {
+      "workflow_id": "WF-068",
+      "actions": [
+        "exchange_delivered_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "exchange_delivered_order_items"
+      ],
+      "training_frequency": 1,
+      "provenance": "tasks/train.jsonl"
+    }
+  ]
+}

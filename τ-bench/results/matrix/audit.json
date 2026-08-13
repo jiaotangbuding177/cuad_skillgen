@@ -1,0 +1,34 @@
+{
+  "units": [
+    {
+      "run_id": "audit-evoskill_compiler-telecom-s42",
+      "status": "planned",
+      "returncode": 0,
+      "command": [
+        "D:\\skillgen\\τ-bench\\vendor\\tau3-bench\\.venv\\Scripts\\python.exe",
+        "D:\\skillgen\\τ-bench\\scripts\\run_agent_runtime.py",
+        "--method",
+        "evoskill_compiler",
+        "--domain",
+        "telecom",
+        "--agent-model",
+        "placeholder-agent",
+        "--user-model",
+        "placeholder-user",
+        "--split",
+        "test",
+        "--seed",
+        "42",
+        "--num-trials",
+        "1",
+        "--max-concurrency",
+        "4",
+        "--run-id",
+        "audit-evoskill_compiler-telecom-s42",
+        "--num-tasks",
+        "1",
+        "--dry-run"
+      ]
+    }
+  ]
+}

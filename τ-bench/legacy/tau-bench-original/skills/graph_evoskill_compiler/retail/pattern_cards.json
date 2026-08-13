@@ -1,0 +1,252 @@
+{
+  "patterns": [
+    {
+      "pattern_id": "PAT-001",
+      "name": "Retail agent policy",
+      "central_ka_id": "KA-0001",
+      "member_ka_ids": [
+        "KA-0002",
+        "KA-0003",
+        "KA-0004",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0008",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013"
+      ],
+      "tools": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "find_user_id_by_email",
+        "find_user_id_by_name_zip",
+        "get_order_details",
+        "get_product_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items",
+        "transfer_to_human_agents"
+      ]
+    },
+    {
+      "pattern_id": "PAT-002",
+      "name": "Domain basic",
+      "central_ka_id": "KA-0002",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0003",
+        "KA-0004",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0008",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013"
+      ],
+      "tools": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "find_user_id_by_email",
+        "get_order_details",
+        "get_product_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items"
+      ]
+    },
+    {
+      "pattern_id": "PAT-003",
+      "name": "Cancel pending order",
+      "central_ka_id": "KA-0003",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0004",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0008",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013"
+      ],
+      "tools": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "get_order_details",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "return_delivered_order_items"
+      ]
+    },
+    {
+      "pattern_id": "PAT-004",
+      "name": "Modify pending order",
+      "central_ka_id": "KA-0004",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0003",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0008",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013"
+      ],
+      "tools": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "get_order_details",
+        "get_product_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items"
+      ]
+    },
+    {
+      "pattern_id": "PAT-005",
+      "name": "Modify payment",
+      "central_ka_id": "KA-0005",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0003",
+        "KA-0004",
+        "KA-0006",
+        "KA-0007",
+        "KA-0008",
+        "KA-0009",
+        "KA-0012",
+        "KA-0017",
+        "KA-0018",
+        "KA-0019"
+      ],
+      "tools": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "get_order_details",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items"
+      ]
+    },
+    {
+      "pattern_id": "PAT-006",
+      "name": "Modify items",
+      "central_ka_id": "KA-0006",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0003",
+        "KA-0004",
+        "KA-0005",
+        "KA-0007",
+        "KA-0008",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0014"
+      ],
+      "tools": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "get_order_details",
+        "get_product_details",
+        "get_user_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items"
+      ]
+    },
+    {
+      "pattern_id": "PAT-007",
+      "name": "Return delivered order",
+      "central_ka_id": "KA-0007",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0003",
+        "KA-0004",
+        "KA-0005",
+        "KA-0006",
+        "KA-0008",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013"
+      ],
+      "tools": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "find_user_id_by_email",
+        "get_order_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "return_delivered_order_items"
+      ]
+    },
+    {
+      "pattern_id": "PAT-008",
+      "name": "Exchange delivered order",
+      "central_ka_id": "KA-0008",
+      "member_ka_ids": [
+        "KA-0001",
+        "KA-0002",
+        "KA-0003",
+        "KA-0004",
+        "KA-0005",
+        "KA-0006",
+        "KA-0007",
+        "KA-0009",
+        "KA-0010",
+        "KA-0011",
+        "KA-0012",
+        "KA-0013"
+      ],
+      "tools": [
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "find_user_id_by_email",
+        "get_order_details",
+        "get_product_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "simulations": [
+    {
+      "id": "synthetic-sim-001",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "trial": 0,
+      "duration": 12.5,
+      "agent_cost": 0.01,
+      "termination_reason": "agent_stop",
+      "messages": [
+        {
+          "role": "assistant",
+          "content": null,
+          "raw_data": {
+            "skillgen_package_retrieval": {
+              "query": "mobile data abroad",
+              "items": [{"item_id": "KA-00014", "lane": "atom", "score": 2.5, "chars": 300}],
+              "context_chars": 300,
+              "budget_chars": 12000,
+              "package_hash": "synthetic-package"
+            }
+          },
+          "tool_calls": [
+            {"id": "c1", "name": "get_customer_by_phone", "arguments": {"phone_number": "555-123-2002"}, "requestor": "assistant"}
+          ]
+        },
+        {"id": "c1", "role": "tool", "requestor": "assistant", "content": "C1001", "error": false},
+        {
+          "role": "user",
+          "content": null,
+          "tool_calls": [
+            {"id": "c2", "name": "toggle_data_saver_mode", "arguments": {}, "requestor": "user"},
+            {"id": "c3", "name": "toggle_roaming", "arguments": {}, "requestor": "user"},
+            {"id": "c4", "name": "run_speed_test", "arguments": {}, "requestor": "user"}
+          ]
+        },
+        {"id": "c2", "role": "tool", "requestor": "user", "content": "off", "error": false},
+        {"id": "c3", "role": "tool", "requestor": "user", "content": "on", "error": false},
+        {"id": "c4", "role": "tool", "requestor": "user", "content": "200 Mbps excellent", "error": false}
+      ],
+      "reward_info": {
+        "reward": 1.0,
+        "db_check": {"db_match": true, "db_reward": 1.0},
+        "env_assertions": [
+          {"met": true, "reward": 1.0},
+          {"met": true, "reward": 1.0}
+        ],
+        "action_checks": [],
+        "nl_assertions": [],
+        "communicate_checks": [],
+        "reward_basis": ["ENV_ASSERTION"],
+        "reward_breakdown": {"ENV_ASSERTION": 1.0}
+      }
+    }
+  ]
+}
